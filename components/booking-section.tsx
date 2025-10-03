@@ -43,15 +43,15 @@ export function BookingSection() {
             </button>
           </div>
 
-          <div className="animate-scale-in stagger-1 flex justify-center lg:justify-end">
-            <div className="relative">
-              <img
-                src="/casawee.png"
-                alt="Plateforme de réservation Sacré-Cœur"
-                className="w-[400px] h-[600px] lg:w-[450px] lg:h-[650px] object-cover rounded-[3rem] shadow-2xl hover:scale-105 transition-transform duration-300"
-              />
+            <div className="animate-gentle-scale stagger-1 flex justify-center lg:justify-end">
+              <div className="relative">
+                <img
+                  src="/casawee.png"
+                  alt="Plateforme de réservation Sacré-Cœur"
+                  className="w-[400px] h-[600px] lg:w-[450px] lg:h-[650px] object-cover rounded-[3rem] shadow-2xl hover-scale-subtle transition-smooth"
+                />
+              </div>
             </div>
-          </div>
         </div>
       </div>
     </section>

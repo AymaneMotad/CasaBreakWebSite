@@ -1,10 +1,17 @@
 import Image from "next/image"
 import Link from "next/link"
 import { Accessibility, Eye, Ear, Heart, MapPin, Phone } from "lucide-react"
+import { Navigation } from "@/components/navigation"
+import { Footer } from "@/components/footer"
+import { Breadcrumb } from "@/components/breadcrumb"
 
 export default function HandicapesPage() {
   return (
     <main className="min-h-screen bg-off-white">
+      <Navigation />
+      <div className="max-w-[1400px] mx-auto px-6 lg:px-12 py-8">
+        <Breadcrumb items={[{ label: "Handicapés", href: "/visiter/handicapes" }]} />
+      </div>
       {/* Hero Section */}
       <section className="relative h-[60vh] flex items-center justify-center overflow-hidden">
         <Image src="/accessible-cathedral-entrance-with-wheelchair-ramp.jpg" alt="Accessibilité" fill className="object-cover" priority />
@@ -291,6 +298,7 @@ export default function HandicapesPage() {
           visuel, auditif, mental). Nous sommes régulièrement audités pour maintenir nos standards d'accessibilité.
         </p>
       </section>
+      <Footer />
     </main>
   )
 }

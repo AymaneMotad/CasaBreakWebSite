@@ -60,7 +60,7 @@ export function Navigation() {
         <div className="flex items-center justify-between h-20 lg:h-24">
           <Link
             href="/"
-            className={`text-sm lg:text-base font-sans tracking-[0.2em] uppercase transition-colors hover:scale-105 ${
+            className={`text-sm lg:text-base font-sans tracking-[0.2em] uppercase transition-all duration-300 hover:scale-105 text-enhanced ${
               isScrolled ? "text-charcoal hover:text-charcoal/80" : "text-off-white hover:text-off-white/80"
             }`}
           >
@@ -90,7 +90,7 @@ export function Navigation() {
                 </button>
 
                 {item.submenu && (
-                  <div className="absolute top-full left-0 pt-2 opacity-0 invisible group-hover:opacity-100 group-hover:visible transition-all duration-300">
+                  <div className="absolute top-full left-0 pt-2 opacity-0 invisible group-hover:opacity-100 group-hover:visible transition-all duration-300 z-[60]">
                     <div className="w-64 bg-off-white shadow-xl border border-charcoal/10 overflow-hidden">
                       {item.submenu.map((subItem) => (
                         <Link
@@ -107,8 +107,10 @@ export function Navigation() {
               </div>
             ))}
 
-            <Link
-              href="/ticket"
+            <a
+              href="https://tickets.sacrecoeur-casa.ma"
+              target="_blank"
+              rel="noopener noreferrer"
               className="relative px-6 py-3 text-xs font-sans font-semibold tracking-[0.15em] uppercase bg-gradient-to-br from-charcoal to-charcoal/90 text-off-white border-2 border-charcoal/30 hover:border-charcoal/50 hover:shadow-xl hover:shadow-charcoal/20 hover:scale-105 transition-all duration-300 overflow-hidden group"
               style={{
                 clipPath: 'polygon(8px 0%, 100% 0%, calc(100% - 8px) 100%, 0% 100%)',
@@ -121,7 +123,7 @@ export function Navigation() {
               </span>
               <div className="absolute inset-0 bg-gradient-to-br from-warm-terracotta to-charcoal opacity-0 group-hover:opacity-100 transition-opacity duration-300" 
                    style={{ clipPath: 'polygon(8px 0%, 100% 0%, calc(100% - 8px) 100%, 0% 100%)' }} />
-            </Link>
+            </a>
           </div>
 
           {/* Mobile Menu Button */}
@@ -174,8 +176,10 @@ export function Navigation() {
                 )}
               </div>
             ))}
-            <Link
-              href="/ticket"
+            <a
+              href="https://tickets.sacrecoeur-casa.ma"
+              target="_blank"
+              rel="noopener noreferrer"
               className="block mt-4 px-6 py-4 text-center text-xs font-sans font-semibold tracking-[0.15em] uppercase bg-gradient-to-r from-charcoal to-charcoal/90 text-off-white shadow-lg hover:shadow-xl hover:scale-105 transition-all duration-300"
               onClick={() => setIsOpen(false)}
             >
@@ -183,7 +187,7 @@ export function Navigation() {
                 <Ticket className="w-3 h-3" />
                 Ticket
               </div>
-            </Link>
+            </a>
           </div>
         )}
       </div>

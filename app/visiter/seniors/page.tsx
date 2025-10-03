@@ -1,10 +1,17 @@
 import Image from "next/image"
 import Link from "next/link"
 import { Heart, Clock, Coffee, Accessibility, Users, Euro } from "lucide-react"
+import { Navigation } from "@/components/navigation"
+import { Footer } from "@/components/footer"
+import { Breadcrumb } from "@/components/breadcrumb"
 
 export default function SeniorsPage() {
   return (
     <main className="min-h-screen bg-off-white">
+      <Navigation />
+      <div className="max-w-[1400px] mx-auto px-6 lg:px-12 py-8">
+        <Breadcrumb items={[{ label: "Seniors", href: "/visiter/seniors" }]} />
+      </div>
       {/* Hero Section */}
       <section className="relative h-[60vh] flex items-center justify-center overflow-hidden">
         <Image src="/senior-visitors-enjoying-peaceful-cathedral-interi.jpg" alt="Visiteurs seniors" fill className="object-cover" priority />
@@ -242,6 +249,7 @@ export default function SeniorsPage() {
           Réserver maintenant
         </Link>
       </section>
+      <Footer />
     </main>
   )
 }

@@ -4,22 +4,22 @@ export function MagazineSection() {
       <div className="max-w-[1400px] mx-auto px-6 lg:px-12">
         {/* First Block - Image Left, Text Right */}
         <div className="grid lg:grid-cols-2 gap-12 lg:gap-20 items-center mb-32">
-          <div className="animate-slide-in-left">
+          <div className="animate-gentle-fade-in">
             <img
               src="/classical-music-concert-cathedral-performance.jpg"
               alt="Concert at Ex Sacré-Cœur"
-              className="w-full h-[500px] object-cover rounded-lg hover-scale"
+              className="w-full h-[500px] object-cover rounded-lg hover-scale-subtle transition-smooth"
             />
           </div>
-          <div className="animate-slide-in-right">
-            <h2 className="font-serif font-normal text-4xl lg:text-5xl text-charcoal mb-6 leading-tight">
+          <div className="animate-gentle-fade-in stagger-1">
+            <h2 className="font-serif font-normal text-4xl lg:text-5xl text-charcoal mb-6 leading-tight text-enhanced">
               Un chef-d'œuvre architectural
             </h2>
-            <p className="font-sans text-base lg:text-lg text-charcoal/70 leading-relaxed mb-4">
+            <p className="font-sans text-base lg:text-lg text-charcoal/70 leading-relaxed mb-4 text-readable">
               L'Ex Sacré-Cœur de Casablanca, érigé en 1930, incarne l'élégance de l'architecture Art Déco. Ses lignes
               épurées et sa façade blanche immaculée en font un monument emblématique de la ville.
             </p>
-            <p className="font-sans text-base lg:text-lg text-charcoal/70 leading-relaxed">
+            <p className="font-sans text-base lg:text-lg text-charcoal/70 leading-relaxed text-readable">
               Aujourd'hui transformé en centre culturel, il accueille expositions, concerts et événements qui célèbrent
               le patrimoine marocain et international.
             </p>

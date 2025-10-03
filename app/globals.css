@@ -121,3 +121,123 @@
     @apply bg-background text-foreground;
   }
 }
+
+/* Enhanced Animations - Subtle & Performance Optimized */
+@keyframes gentleFadeInUp {
+  from {
+    opacity: 0;
+    transform: translateY(20px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+@keyframes gentleScaleIn {
+  from {
+    opacity: 0;
+    transform: scale(0.95);
+  }
+  to {
+    opacity: 1;
+    transform: scale(1);
+  }
+}
+
+@keyframes subtleFloat {
+  0%, 100% {
+    transform: translateY(0px);
+  }
+  50% {
+    transform: translateY(-3px);
+  }
+}
+
+@keyframes gentlePulse {
+  0%, 100% {
+    opacity: 1;
+  }
+  50% {
+    opacity: 0.8;
+  }
+}
+
+/* Enhanced Animation Classes */
+.animate-gentle-fade-in {
+  animation: gentleFadeInUp 0.6s ease-out forwards;
+  opacity: 0;
+}
+
+.animate-gentle-scale {
+  animation: gentleScaleIn 0.5s ease-out forwards;
+  opacity: 0;
+}
+
+.animate-subtle-float {
+  animation: subtleFloat 4s ease-in-out infinite;
+}
+
+.animate-gentle-pulse {
+  animation: gentlePulse 3s ease-in-out infinite;
+}
+
+/* Improved Hover Effects */
+.hover-lift-subtle {
+  transition: transform 0.2s ease, box-shadow 0.2s ease;
+}
+
+.hover-lift-subtle:hover {
+  transform: translateY(-2px);
+  box-shadow: 0 8px 25px rgba(0, 0, 0, 0.1);
+}
+
+.hover-scale-subtle {
+  transition: transform 0.2s ease;
+}
+
+.hover-scale-subtle:hover {
+  transform: scale(1.02);
+}
+
+/* Enhanced Typography */
+.text-enhanced {
+  font-feature-settings: "kern" 1, "liga" 1;
+  text-rendering: optimizeLegibility;
+}
+
+.text-readable {
+  line-height: 1.7;
+  max-width: 65ch;
+}
+
+/* Improved Focus States */
+.focus-enhanced:focus {
+  outline: 2px solid #ff6b9d;
+  outline-offset: 2px;
+  border-radius: 4px;
+}
+
+/* Staggered Animation Delays */
+.stagger-1 { animation-delay: 0.1s; }
+.stagger-2 { animation-delay: 0.2s; }
+.stagger-3 { animation-delay: 0.3s; }
+.stagger-4 { animation-delay: 0.4s; }
+.stagger-5 { animation-delay: 0.5s; }
+
+/* Reduced Motion Support */
+@media (prefers-reduced-motion: reduce) {
+  .animate-gentle-fade-in,
+  .animate-gentle-scale,
+  .animate-subtle-float,
+  .animate-gentle-pulse {
+    animation: none;
+    opacity: 1;
+    transform: none;
+  }
+  
+  .hover-lift-subtle:hover,
+  .hover-scale-subtle:hover {
+    transform: none;
+  }
+}
