@@ -3,7 +3,7 @@
 import type React from "react"
 
 import { useState, useEffect } from "react"
-import { Menu, X, ChevronDown } from "lucide-react"
+import { Menu, X, ChevronDown, Ticket } from "lucide-react"
 import Link from "next/link"
 
 export function Navigation() {
@@ -60,8 +60,8 @@ export function Navigation() {
         <div className="flex items-center justify-between h-20 lg:h-24">
           <Link
             href="/"
-            className={`text-sm lg:text-base font-sans tracking-[0.2em] uppercase transition-colors ${
-              isScrolled ? "text-charcoal" : "text-off-white"
+            className={`text-sm lg:text-base font-sans tracking-[0.2em] uppercase transition-colors hover:scale-105 ${
+              isScrolled ? "text-charcoal hover:text-charcoal/80" : "text-off-white hover:text-off-white/80"
             }`}
           >
             Sacré-Cœur
@@ -109,10 +109,18 @@ export function Navigation() {
 
             <Link
               href="/ticket"
-              className="relative px-8 py-3.5 text-xs font-sans tracking-[0.15em] uppercase bg-gradient-to-r from-vibrant-pink via-[#ff6b9d] to-warm-terracotta text-off-white hover:shadow-2xl hover:shadow-vibrant-pink/30 hover:scale-105 transition-all duration-300 overflow-hidden group"
+              className="relative px-6 py-3 text-xs font-sans font-semibold tracking-[0.15em] uppercase bg-gradient-to-br from-charcoal to-charcoal/90 text-off-white border-2 border-charcoal/30 hover:border-charcoal/50 hover:shadow-xl hover:shadow-charcoal/20 hover:scale-105 transition-all duration-300 overflow-hidden group"
+              style={{
+                clipPath: 'polygon(8px 0%, 100% 0%, calc(100% - 8px) 100%, 0% 100%)',
+                borderRadius: '4px'
+              }}
             >
-              <span className="relative z-10">Ticket</span>
-              <div className="absolute inset-0 bg-gradient-to-r from-warm-terracotta to-vibrant-pink opacity-0 group-hover:opacity-100 transition-opacity duration-300" />
+              <span className="relative z-10 flex items-center gap-2">
+                <Ticket className="w-3 h-3" />
+                Ticket
+              </span>
+              <div className="absolute inset-0 bg-gradient-to-br from-warm-terracotta to-charcoal opacity-0 group-hover:opacity-100 transition-opacity duration-300" 
+                   style={{ clipPath: 'polygon(8px 0%, 100% 0%, calc(100% - 8px) 100%, 0% 100%)' }} />
             </Link>
           </div>
 
@@ -168,10 +176,13 @@ export function Navigation() {
             ))}
             <Link
               href="/ticket"
-              className="block mt-4 px-6 py-4 text-center text-xs font-sans tracking-[0.15em] uppercase bg-gradient-to-r from-vibrant-pink via-[#ff6b9d] to-warm-terracotta text-off-white shadow-lg"
+              className="block mt-4 px-6 py-4 text-center text-xs font-sans font-semibold tracking-[0.15em] uppercase bg-gradient-to-r from-charcoal to-charcoal/90 text-off-white shadow-lg hover:shadow-xl hover:scale-105 transition-all duration-300"
               onClick={() => setIsOpen(false)}
             >
-              Ticket
+              <div className="flex items-center justify-center gap-2">
+                <Ticket className="w-3 h-3" />
+                Ticket
+              </div>
             </Link>
           </div>
         )}

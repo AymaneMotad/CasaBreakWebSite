@@ -1,5 +1,6 @@
 import { Navigation } from "@/components/navigation"
 import { Footer } from "@/components/footer"
+import { Breadcrumb } from "@/components/breadcrumb"
 import Image from "next/image"
 
 export default function HistoirePage() {
@@ -7,8 +8,19 @@ export default function HistoirePage() {
     <main className="min-h-screen bg-off-white">
       <Navigation />
 
+      {/* Breadcrumb */}
+      <div className="pt-24 pb-8 bg-off-white">
+        <div className="max-w-[1400px] mx-auto px-6 lg:px-12">
+          <Breadcrumb 
+            items={[
+              { label: "Histoire", href: "/decouvrir/histoire" }
+            ]} 
+          />
+        </div>
+      </div>
+
       {/* Hero Section */}
-      <section className="relative h-[60vh] flex items-center justify-center overflow-hidden">
+      <section className="relative h-[50vh] flex items-center justify-center overflow-hidden">
         <Image
           src="/vintage-black-and-white-photo-of-cathedral-constru.jpg"
           alt="Construction historique du Sacré-Cœur"

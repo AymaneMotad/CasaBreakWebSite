@@ -1,5 +1,6 @@
 import { Navigation } from "@/components/navigation"
 import { Footer } from "@/components/footer"
+import { Breadcrumb } from "@/components/breadcrumb"
 import Image from "next/image"
 
 export default function ArchitecturePage() {
@@ -34,8 +35,19 @@ export default function ArchitecturePage() {
     <main className="min-h-screen bg-off-white">
       <Navigation />
 
+      {/* Breadcrumb */}
+      <div className="pt-24 pb-8 bg-off-white">
+        <div className="max-w-[1400px] mx-auto px-6 lg:px-12">
+          <Breadcrumb 
+            items={[
+              { label: "Architecture", href: "/decouvrir/architecture" }
+            ]} 
+          />
+        </div>
+      </div>
+
       {/* Hero Section */}
-      <section className="relative h-[70vh] flex items-center justify-center overflow-hidden">
+      <section className="relative h-[60vh] flex items-center justify-center overflow-hidden">
         <Image
           src="/cathedral-architecture-exterior-dramatic-angle-cas.jpg"
           alt="Architecture du Sacré-Cœur"

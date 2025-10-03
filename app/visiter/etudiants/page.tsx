@@ -1,12 +1,28 @@
 import Image from "next/image"
 import Link from "next/link"
 import { GraduationCap, BookOpen, Camera, Palette, Users, Euro } from "lucide-react"
+import { Navigation } from "@/components/navigation"
+import { Footer } from "@/components/footer"
+import { Breadcrumb } from "@/components/breadcrumb"
 
 export default function EtudiantsPage() {
   return (
     <main className="min-h-screen bg-off-white">
+      <Navigation />
+
+      {/* Breadcrumb */}
+      <div className="pt-24 pb-8 bg-off-white">
+        <div className="max-w-[1400px] mx-auto px-6 lg:px-12">
+          <Breadcrumb 
+            items={[
+              { label: "Étudiants", href: "/visiter/etudiants" }
+            ]} 
+          />
+        </div>
+      </div>
+
       {/* Hero Section */}
-      <section className="relative h-[60vh] flex items-center justify-center overflow-hidden">
+      <section className="relative h-[50vh] flex items-center justify-center overflow-hidden">
         <Image src="/students-sketching-cathedral-architecture-with-not.jpg" alt="Étudiants visitant" fill className="object-cover" priority />
         <div className="absolute inset-0 bg-charcoal/40" />
         <div className="relative z-10 text-center px-6">

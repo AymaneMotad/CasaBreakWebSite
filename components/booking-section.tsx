@@ -45,20 +45,11 @@ export function BookingSection() {
 
           <div className="animate-scale-in stagger-1 flex justify-center lg:justify-end">
             <div className="relative">
-              <div className="w-[280px] h-[560px] bg-gradient-to-br from-terracotta to-pink-vibrant rounded-[3rem] p-3 shadow-2xl">
-                <div className="w-full h-full bg-off-white rounded-[2.5rem] overflow-hidden">
-                  <div className="p-6 space-y-4">
-                    <div className="h-8 bg-charcoal/5 rounded-full w-3/4" />
-                    <div className="h-32 bg-gradient-to-br from-pink-vibrant/20 to-terracotta/20 rounded-2xl" />
-                    <div className="space-y-2">
-                      <div className="h-4 bg-charcoal/5 rounded-full" />
-                      <div className="h-4 bg-charcoal/5 rounded-full w-5/6" />
-                    </div>
-                    <div className="h-24 bg-charcoal/5 rounded-2xl" />
-                    <div className="h-12 bg-charcoal rounded-full" />
-                  </div>
-                </div>
-              </div>
+              <img
+                src="/casawee.png"
+                alt="Plateforme de réservation Sacré-Cœur"
+                className="w-[400px] h-[600px] lg:w-[450px] lg:h-[650px] object-cover rounded-[3rem] shadow-2xl hover:scale-105 transition-transform duration-300"
+              />
             </div>
           </div>
         </div>

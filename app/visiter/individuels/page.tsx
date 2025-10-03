@@ -1,5 +1,6 @@
 import { Navigation } from "@/components/navigation"
 import { Footer } from "@/components/footer"
+import { Breadcrumb } from "@/components/breadcrumb"
 import Image from "next/image"
 import { Clock, Camera, Headphones, MapPin, Users, Calendar } from "lucide-react"
 
@@ -41,8 +42,19 @@ export default function IndividuelsPage() {
     <main className="min-h-screen bg-off-white">
       <Navigation />
 
+      {/* Breadcrumb */}
+      <div className="pt-24 pb-8 bg-off-white">
+        <div className="max-w-[1400px] mx-auto px-6 lg:px-12">
+          <Breadcrumb 
+            items={[
+              { label: "Individuels et familles", href: "/visiter/individuels" }
+            ]} 
+          />
+        </div>
+      </div>
+
       {/* Hero Section */}
-      <section className="relative h-[60vh] flex items-center justify-center overflow-hidden">
+      <section className="relative h-[50vh] flex items-center justify-center overflow-hidden">
         <Image
           src="/family-visiting-cathedral-interior-together-casabl.jpg"
           alt="Visite individuelle et familiale"

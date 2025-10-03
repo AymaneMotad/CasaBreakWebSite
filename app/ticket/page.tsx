@@ -1,12 +1,28 @@
 import Image from "next/image"
 import Link from "next/link"
 import { Ticket, Clock, Calendar, Users, CreditCard, Smartphone } from "lucide-react"
+import { Navigation } from "@/components/navigation"
+import { Footer } from "@/components/footer"
+import { Breadcrumb } from "@/components/breadcrumb"
 
 export default function TicketPage() {
   return (
     <main className="min-h-screen bg-off-white">
+      <Navigation />
+
+      {/* Breadcrumb */}
+      <div className="pt-24 pb-8 bg-off-white">
+        <div className="max-w-[1400px] mx-auto px-6 lg:px-12">
+          <Breadcrumb 
+            items={[
+              { label: "Billets", href: "/ticket" }
+            ]} 
+          />
+        </div>
+      </div>
+
       {/* Hero Section */}
-      <section className="relative h-[70vh] flex items-center justify-center overflow-hidden">
+      <section className="relative h-[60vh] flex items-center justify-center overflow-hidden">
         <Image src="/placeholder.svg?height=900&width=1600" alt="Billets" fill className="object-cover" priority />
         <div className="absolute inset-0 bg-gradient-to-b from-vibrant-pink/40 to-warm-terracotta/40" />
         <div className="relative z-10 text-center px-6">
@@ -256,6 +272,8 @@ export default function TicketPage() {
           </Link>
         </div>
       </section>
+
+      <Footer />
     </main>
   )
 }
