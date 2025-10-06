@@ -29,6 +29,43 @@ export default function HistoirePage() {
           priority
         />
         <div className="absolute inset-0 bg-gradient-to-b from-charcoal/60 via-charcoal/40 to-charcoal/60" />
+        
+        {/* Moroccan Artistic Elements */}
+        <div className="absolute inset-0 z-5">
+          {/* Top decorative border */}
+          <div className="absolute top-0 left-0 right-0 h-1 bg-gradient-to-r from-transparent via-vibrant-pink/50 to-transparent"></div>
+          <div className="absolute top-2 left-0 right-0 h-px bg-gradient-to-r from-transparent via-warm-terracotta/40 to-transparent"></div>
+          
+          {/* Corner geometric patterns */}
+          <div className="absolute top-8 left-8 w-16 h-16 opacity-25">
+            <svg viewBox="0 0 64 64" className="w-full h-full text-vibrant-pink/50">
+              <path d="M8 8 L56 8 L56 56 L8 56 Z M16 16 L48 16 L48 48 L16 48 Z" fill="none" stroke="currentColor" strokeWidth="1.5"/>
+              <path d="M24 24 L40 24 L40 40 L24 40 Z" fill="currentColor" opacity="0.3"/>
+            </svg>
+          </div>
+          
+          <div className="absolute top-8 right-8 w-16 h-16 opacity-25">
+            <svg viewBox="0 0 64 64" className="w-full h-full text-warm-terracotta/50">
+              <path d="M8 8 L56 8 L56 56 L8 56 Z M16 16 L48 16 L48 48 L16 48 Z" fill="none" stroke="currentColor" strokeWidth="1.5"/>
+              <path d="M24 24 L40 24 L40 40 L24 40 Z" fill="currentColor" opacity="0.3"/>
+            </svg>
+          </div>
+          
+          {/* Side decorative lines */}
+          <div className="absolute left-0 top-1/4 bottom-1/4 w-1 bg-gradient-to-b from-transparent via-vibrant-pink/30 to-transparent"></div>
+          <div className="absolute right-0 top-1/4 bottom-1/4 w-1 bg-gradient-to-b from-transparent via-warm-terracotta/30 to-transparent"></div>
+          
+          {/* Bottom decorative elements */}
+          <div className="absolute bottom-8 left-1/2 -translate-x-1/2 w-32 h-8 opacity-20">
+            <svg viewBox="0 0 128 32" className="w-full h-full text-vibrant-pink/40">
+              <path d="M8 16 Q32 4, 56 16 Q80 28, 104 16 Q112 12, 120 16" fill="none" stroke="currentColor" strokeWidth="2"/>
+              <circle cx="32" cy="16" r="2" fill="currentColor"/>
+              <circle cx="64" cy="16" r="2" fill="currentColor"/>
+              <circle cx="96" cy="16" r="2" fill="currentColor"/>
+            </svg>
+          </div>
+        </div>
+        
         <div className="relative z-10 text-center px-6">
           <div className="animate-gentle-fade-in">
             <div className="inline-block px-4 py-2 bg-gradient-to-r from-vibrant-pink/20 to-warm-terracotta/20 backdrop-blur-sm border border-off-white/20 rounded-full mb-8">
@@ -47,8 +84,54 @@ export default function HistoirePage() {
       </section>
 
       {/* Timeline Section */}
-      <section className="py-24 bg-gradient-to-b from-off-white to-charcoal/5">
-        <div className="max-w-[1400px] mx-auto px-6 lg:px-12">
+      <section className="py-24 bg-gradient-to-b from-off-white to-charcoal/5 relative overflow-hidden">
+        {/* Moroccan Artistic Elements */}
+        <div className="absolute inset-0 pointer-events-none">
+          {/* Top decorative elements */}
+          <div className="absolute top-0 left-1/4 right-1/4 h-1 bg-gradient-to-r from-transparent via-vibrant-pink/35 to-transparent"></div>
+          <div className="absolute top-4 left-1/3 right-1/3 h-px bg-gradient-to-r from-transparent via-warm-terracotta/25 to-transparent"></div>
+          
+          {/* Corner geometric patterns */}
+          <div className="absolute top-16 left-16 w-12 h-12 opacity-18">
+            <svg viewBox="0 0 48 48" className="w-full h-full text-vibrant-pink/35">
+              <path d="M6 6 L42 6 L42 42 L6 42 Z M12 12 L36 12 L36 36 L12 36 Z" fill="none" stroke="currentColor" strokeWidth="1.5"/>
+              <path d="M18 18 L30 18 L30 30 L18 30 Z" fill="currentColor" opacity="0.3"/>
+            </svg>
+          </div>
+          
+          <div className="absolute top-16 right-16 w-12 h-12 opacity-18">
+            <svg viewBox="0 0 48 48" className="w-full h-full text-warm-terracotta/35">
+              <path d="M6 6 L42 6 L42 42 L6 42 Z M12 12 L36 12 L36 36 L12 36 Z" fill="none" stroke="currentColor" strokeWidth="1.5"/>
+              <path d="M18 18 L30 18 L30 30 L18 30 Z" fill="currentColor" opacity="0.3"/>
+            </svg>
+          </div>
+          
+          {/* Side decorative lines */}
+          <div className="absolute left-0 top-1/4 bottom-1/4 w-1 bg-gradient-to-b from-transparent via-vibrant-pink/20 to-transparent"></div>
+          <div className="absolute right-0 top-1/4 bottom-1/4 w-1 bg-gradient-to-b from-transparent via-warm-terracotta/20 to-transparent"></div>
+          
+          {/* Center decorative pattern */}
+          <div className="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-28 h-14 opacity-12">
+            <svg viewBox="0 0 112 56" className="w-full h-full text-vibrant-pink/25">
+              <path d="M8 28 Q28 14, 48 28 Q68 42, 88 28 Q96 24, 104 28" fill="none" stroke="currentColor" strokeWidth="1.5"/>
+              <circle cx="28" cy="28" r="2" fill="currentColor"/>
+              <circle cx="56" cy="28" r="2" fill="currentColor"/>
+              <circle cx="84" cy="28" r="2" fill="currentColor"/>
+            </svg>
+          </div>
+          
+          {/* Bottom decorative elements */}
+          <div className="absolute bottom-8 left-1/2 -translate-x-1/2 w-32 h-8 opacity-10">
+            <svg viewBox="0 0 128 32" className="w-full h-full text-warm-terracotta/25">
+              <path d="M8 16 Q32 4, 56 16 Q80 28, 104 16 Q112 12, 120 16" fill="none" stroke="currentColor" strokeWidth="1.5"/>
+              <circle cx="32" cy="16" r="1.5" fill="currentColor"/>
+              <circle cx="64" cy="16" r="1.5" fill="currentColor"/>
+              <circle cx="96" cy="16" r="1.5" fill="currentColor"/>
+            </svg>
+          </div>
+        </div>
+        
+        <div className="max-w-[1400px] mx-auto px-6 lg:px-12 relative z-10">
           <div className="text-center mb-20">
             <h2 className="font-serif text-5xl md:text-6xl text-charcoal mb-8 animate-gentle-fade-in">
               Chronologie Historique
@@ -159,8 +242,44 @@ export default function HistoirePage() {
       </section>
 
       {/* Heritage Section */}
-      <section className="bg-charcoal py-20 lg:py-32">
-        <div className="max-w-[1000px] mx-auto px-6 lg:px-12 text-center">
+      <section className="bg-charcoal py-20 lg:py-32 relative overflow-hidden">
+        {/* Moroccan Artistic Elements */}
+        <div className="absolute inset-0 pointer-events-none">
+          {/* Top decorative border */}
+          <div className="absolute top-0 left-1/3 right-1/3 h-1 bg-gradient-to-r from-transparent via-vibrant-pink/50 to-transparent"></div>
+          <div className="absolute top-2 left-1/3 right-1/3 h-px bg-gradient-to-r from-transparent via-warm-terracotta/35 to-transparent"></div>
+          
+          {/* Corner geometric patterns */}
+          <div className="absolute top-16 left-16 w-14 h-14 opacity-20">
+            <svg viewBox="0 0 56 56" className="w-full h-full text-vibrant-pink/40">
+              <path d="M7 7 L49 7 L49 49 L7 49 Z M14 14 L42 14 L42 42 L14 42 Z" fill="none" stroke="currentColor" strokeWidth="1.5"/>
+              <path d="M21 21 L35 21 L35 35 L21 35 Z" fill="currentColor" opacity="0.3"/>
+            </svg>
+          </div>
+          
+          <div className="absolute top-16 right-16 w-14 h-14 opacity-20">
+            <svg viewBox="0 0 56 56" className="w-full h-full text-warm-terracotta/40">
+              <path d="M7 7 L49 7 L49 49 L7 49 Z M14 14 L42 14 L42 42 L14 42 Z" fill="none" stroke="currentColor" strokeWidth="1.5"/>
+              <path d="M21 21 L35 21 L35 35 L21 35 Z" fill="currentColor" opacity="0.3"/>
+            </svg>
+          </div>
+          
+          {/* Side decorative elements */}
+          <div className="absolute left-0 top-1/4 bottom-1/4 w-1 bg-gradient-to-b from-transparent via-vibrant-pink/30 to-transparent"></div>
+          <div className="absolute right-0 top-1/4 bottom-1/4 w-1 bg-gradient-to-b from-transparent via-warm-terracotta/30 to-transparent"></div>
+          
+          {/* Bottom decorative pattern */}
+          <div className="absolute bottom-12 left-1/2 -translate-x-1/2 w-40 h-10 opacity-15">
+            <svg viewBox="0 0 160 40" className="w-full h-full text-vibrant-pink/40">
+              <path d="M8 20 Q40 8, 72 20 Q104 32, 136 20 Q144 16, 152 20" fill="none" stroke="currentColor" strokeWidth="2"/>
+              <circle cx="40" cy="20" r="2" fill="currentColor"/>
+              <circle cx="80" cy="20" r="2" fill="currentColor"/>
+              <circle cx="120" cy="20" r="2" fill="currentColor"/>
+            </svg>
+          </div>
+        </div>
+        
+        <div className="max-w-[1000px] mx-auto px-6 lg:px-12 text-center relative z-10">
           <h2 className="font-serif text-4xl lg:text-6xl text-off-white mb-8 animate-fade-in-up">
             Un Patrimoine Architectural Exceptionnel
           </h2>
