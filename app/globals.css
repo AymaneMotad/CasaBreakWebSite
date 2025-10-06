@@ -163,6 +163,33 @@
   }
 }
 
+@keyframes spinSlow {
+  from {
+    transform: rotate(0deg);
+  }
+  to {
+    transform: rotate(360deg);
+  }
+}
+
+@keyframes spinReverse {
+  from {
+    transform: rotate(360deg);
+  }
+  to {
+    transform: rotate(0deg);
+  }
+}
+
+@keyframes rotate3D {
+  from {
+    transform: rotateY(0deg) rotateX(10deg);
+  }
+  to {
+    transform: rotateY(360deg) rotateX(10deg);
+  }
+}
+
 /* Enhanced Animation Classes */
 .animate-gentle-fade-in {
   animation: gentleFadeInUp 0.6s ease-out forwards;
@@ -180,6 +207,18 @@
 
 .animate-gentle-pulse {
   animation: gentlePulse 3s ease-in-out infinite;
+}
+
+.animate-spin-slow {
+  animation: spinSlow 20s linear infinite !important;
+}
+
+.animate-spin-reverse {
+  animation: spinReverse 15s linear infinite !important;
+}
+
+.perspective-1000 {
+  perspective: 1000px;
 }
 
 /* Improved Hover Effects */

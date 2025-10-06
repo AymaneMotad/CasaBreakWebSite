@@ -1,5 +1,6 @@
 import { Navigation } from "@/components/navigation"
 import { HeroSection } from "@/components/hero-section"
+import { SpinningCathedral } from "@/components/spinning-cathedral"
 import { MagazineSection } from "@/components/magazine-section"
 import { HeritageSection } from "@/components/heritage-section"
 import { PracticalInfoSection } from "@/components/practical-info-section"
@@ -13,6 +14,7 @@ export default function Home() {
     <main className="min-h-screen">
       <Navigation />
       <HeroSection />
+      <SpinningCathedral />
       <MagazineSection />
       <HeritageSection />
       <PracticalInfoSection />
