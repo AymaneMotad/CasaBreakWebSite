@@ -60,11 +60,11 @@ export function Navigation() {
         <div className="flex items-center justify-between h-20 lg:h-24">
           <Link
             href="/"
-            className={`text-sm lg:text-base font-sans tracking-[0.2em] uppercase transition-all duration-300 hover:scale-105 text-enhanced ${
+            className={`text-lg lg:text-xl font-serif font-normal tracking-wide transition-all duration-500 hover:scale-105 text-enhanced ${
               isScrolled ? "text-charcoal hover:text-charcoal/80" : "text-off-white hover:text-off-white/80"
             }`}
           >
-            Sacré-Cœur
+            Ex Sacré-Cœur
           </Link>
 
           {/* Desktop Navigation */}
@@ -73,10 +73,10 @@ export function Navigation() {
               <div key={item.label} className="relative group">
                 <button
                   onClick={(e) => handleDropdownClick(e, !!item.submenu)}
-                  className={`text-xs font-sans tracking-wider uppercase transition-all duration-300 relative flex items-center gap-1 after:absolute after:bottom-0 after:left-0 after:w-0 after:h-[1px] after:transition-all after:duration-300 hover:after:w-full ${
+                  className={`text-sm font-sans tracking-wide transition-all duration-500 relative flex items-center gap-2 after:absolute after:bottom-0 after:left-0 after:w-0 after:h-[2px] after:transition-all after:duration-500 hover:after:w-full ${
                     isScrolled
-                      ? "text-charcoal/60 hover:text-charcoal after:bg-charcoal"
-                      : "text-off-white/70 hover:text-off-white after:bg-off-white"
+                      ? "text-charcoal/70 hover:text-charcoal after:bg-gradient-to-r after:from-vibrant-pink after:to-warm-terracotta"
+                      : "text-off-white/80 hover:text-off-white after:bg-gradient-to-r after:from-vibrant-pink after:to-warm-terracotta"
                   }`}
                 >
                   {item.submenu ? (
@@ -90,17 +90,29 @@ export function Navigation() {
                 </button>
 
                 {item.submenu && (
-                  <div className="absolute top-full left-0 pt-2 opacity-0 invisible group-hover:opacity-100 group-hover:visible transition-all duration-300 z-[9999]">
-                    <div className="w-64 bg-off-white shadow-2xl border border-charcoal/20 rounded-lg overflow-hidden backdrop-blur-sm">
-                      {item.submenu.map((subItem) => (
-                        <Link
-                          key={subItem.href}
-                          href={subItem.href}
-                          className="block px-6 py-4 text-sm font-sans tracking-wide text-charcoal hover:text-charcoal hover:bg-charcoal/5 transition-all duration-200 border-b border-charcoal/10 last:border-b-0 font-medium"
-                        >
-                          {subItem.label}
-                        </Link>
-                      ))}
+                  <div className="absolute top-full left-0 pt-4 opacity-0 invisible group-hover:opacity-100 group-hover:visible transition-all duration-500 z-[9999] transform translate-y-3 group-hover:translate-y-0">
+                    <div className="w-72 bg-white/98 backdrop-blur-xl shadow-2xl border border-charcoal/10 rounded-2xl overflow-hidden">
+                      <div className="absolute inset-0 bg-gradient-to-br from-white/98 to-off-white/95 backdrop-blur-lg"></div>
+                      <div className="relative">
+                        <div className="px-6 py-3 bg-gradient-to-r from-vibrant-pink/10 to-warm-terracotta/10 border-b border-charcoal/5">
+                          <span className="text-xs font-sans tracking-wider uppercase text-charcoal/60 font-medium">
+                            {item.label}
+                          </span>
+                        </div>
+                        {item.submenu.map((subItem, index) => (
+                          <Link
+                            key={subItem.href}
+                            href={subItem.href}
+                            className="block px-6 py-4 text-sm font-sans tracking-wide text-charcoal/80 hover:text-charcoal/90 hover:bg-gradient-to-r hover:from-charcoal/5 hover:to-charcoal/10 transition-all duration-300 border-b border-charcoal/5 last:border-b-0 font-medium relative z-10 hover:shadow-md group/item"
+                            style={{ animationDelay: `${index * 75}ms` }}
+                          >
+                            <span className="flex items-center gap-3">
+                              <div className="w-1.5 h-1.5 bg-gradient-to-r from-vibrant-pink to-warm-terracotta rounded-full opacity-60 group-hover/item:opacity-100 transition-opacity duration-300"></div>
+                              {subItem.label}
+                            </span>
+                          </Link>
+                        ))}
+                      </div>
                     </div>
                   </div>
                 )}
@@ -111,18 +123,13 @@ export function Navigation() {
               href="https://tickets.sacrecoeur-casa.ma"
               target="_blank"
               rel="noopener noreferrer"
-              className="relative px-6 py-3 text-xs font-sans font-semibold tracking-[0.15em] uppercase bg-gradient-to-br from-charcoal to-charcoal/90 text-off-white border-2 border-charcoal/30 hover:border-charcoal/50 hover:shadow-xl hover:shadow-charcoal/20 hover:scale-105 transition-all duration-300 overflow-hidden group"
-              style={{
-                clipPath: 'polygon(8px 0%, 100% 0%, calc(100% - 8px) 100%, 0% 100%)',
-                borderRadius: '4px'
-              }}
+              className="relative px-8 py-4 text-sm font-sans font-medium tracking-wide uppercase bg-gradient-to-r from-vibrant-pink to-warm-terracotta text-off-white border-2 border-charcoal hover:border-charcoal/80 hover:shadow-xl hover:shadow-vibrant-pink/25 hover:scale-105 transition-all duration-500 overflow-hidden group rounded-lg"
             >
-              <span className="relative z-10 flex items-center gap-2">
-                <Ticket className="w-3 h-3" />
-                Ticket
+              <span className="relative z-10 flex items-center gap-3">
+                <Ticket className="w-4 h-4" />
+                <span>Ticket</span>
               </span>
-              <div className="absolute inset-0 bg-gradient-to-br from-warm-terracotta to-charcoal opacity-0 group-hover:opacity-100 transition-opacity duration-300" 
-                   style={{ clipPath: 'polygon(8px 0%, 100% 0%, calc(100% - 8px) 100%, 0% 100%)' }} />
+              <div className="absolute inset-0 bg-gradient-to-r from-warm-terracotta to-vibrant-pink opacity-0 group-hover:opacity-100 transition-opacity duration-500 rounded-lg" />
             </a>
           </div>
 
@@ -138,56 +145,77 @@ export function Navigation() {
 
         {/* Mobile Navigation */}
         {isOpen && (
-          <div className="lg:hidden pb-6 border-t border-charcoal/20 bg-off-white/98 backdrop-blur-md shadow-lg animate-gentle-fade-in">
-            {navItems.map((item, index) => (
-              <div key={item.label}>
-                {item.submenu ? (
-                  <button
-                    onClick={() => setOpenDropdown(openDropdown === item.label ? null : item.label)}
-                    className={`w-full text-left py-4 px-6 text-sm font-sans tracking-wide uppercase text-charcoal hover:text-charcoal transition-colors flex items-center justify-between animate-gentle-fade-in stagger-${index + 1} font-medium`}
-                  >
-                    {item.label}
-                    <ChevronDown
-                      className={`h-4 w-4 transition-transform ${openDropdown === item.label ? "rotate-180" : ""}`}
-                    />
-                  </button>
-                ) : (
-                  <Link
-                    href={item.href}
-                    className={`block py-4 px-6 text-sm font-sans tracking-wide uppercase text-charcoal hover:text-charcoal transition-colors animate-gentle-fade-in stagger-${index + 1} font-medium`}
-                    onClick={() => setIsOpen(false)}
-                  >
-                    {item.label}
-                  </Link>
-                )}
-                {item.submenu && openDropdown === item.label && (
-                  <div className="bg-charcoal/5 border-l-4 border-vibrant-pink ml-6 mr-6 mb-2 animate-gentle-fade-in">
-                    {item.submenu.map((subItem) => (
-                      <Link
-                        key={subItem.href}
-                        href={subItem.href}
-                        className="block py-3 px-6 text-sm font-sans text-charcoal hover:text-charcoal hover:bg-charcoal/10 transition-colors font-medium border-b border-charcoal/10 last:border-b-0"
-                        onClick={() => setIsOpen(false)}
-                      >
-                        {subItem.label}
-                      </Link>
-                    ))}
+          <div className="lg:hidden pb-8 border-t border-charcoal/10 bg-white/98 backdrop-blur-xl shadow-2xl animate-gentle-fade-in">
+            <div className="px-6 sm:px-8">
+              {navItems.map((item, index) => (
+                <div key={item.label} className="border-b border-charcoal/5 last:border-b-0">
+                  {item.submenu ? (
+                    <button
+                      onClick={() => setOpenDropdown(openDropdown === item.label ? null : item.label)}
+                      className={`w-full text-left py-6 px-4 text-lg font-sans tracking-wide text-charcoal hover:text-charcoal transition-all duration-300 flex items-center justify-between animate-gentle-fade-in stagger-${index + 1} font-medium touch-manipulation group`}
+                    >
+                      <span className="flex items-center gap-3">
+                        <div className="w-2 h-2 bg-gradient-to-r from-vibrant-pink to-warm-terracotta rounded-full opacity-60 group-hover:opacity-100 transition-opacity duration-300"></div>
+                        {item.label}
+                      </span>
+                      <ChevronDown
+                        className={`h-5 w-5 transition-transform duration-300 ${openDropdown === item.label ? "rotate-180" : ""}`}
+                      />
+                    </button>
+                  ) : (
+                    <Link
+                      href={item.href}
+                      className={`block py-6 px-4 text-lg font-sans tracking-wide text-charcoal hover:text-charcoal transition-all duration-300 animate-gentle-fade-in stagger-${index + 1} font-medium touch-manipulation group`}
+                      onClick={() => setIsOpen(false)}
+                    >
+                      <span className="flex items-center gap-3">
+                        <div className="w-2 h-2 bg-gradient-to-r from-vibrant-pink to-warm-terracotta rounded-full opacity-60 group-hover:opacity-100 transition-opacity duration-300"></div>
+                        {item.label}
+                      </span>
+                    </Link>
+                  )}
+                  {item.submenu && openDropdown === item.label && (
+                    <div className="bg-gradient-to-r from-vibrant-pink/5 to-warm-terracotta/5 border-l-4 border-gradient-to-b from-vibrant-pink to-warm-terracotta mx-6 mb-4 animate-gentle-fade-in shadow-lg rounded-r-xl overflow-hidden">
+                      <div className="px-4 py-2 bg-gradient-to-r from-vibrant-pink/10 to-warm-terracotta/10 border-b border-charcoal/5">
+                        <span className="text-xs font-sans tracking-wider uppercase text-charcoal/60 font-medium">
+                          {item.label}
+                        </span>
+                      </div>
+                      {item.submenu.map((subItem, subIndex) => (
+                        <Link
+                          key={subItem.href}
+                          href={subItem.href}
+                          className="block py-4 px-6 text-sm font-sans text-charcoal/80 hover:text-charcoal/90 hover:bg-gradient-to-r hover:from-charcoal/5 hover:to-charcoal/10 transition-all duration-300 font-medium border-b border-charcoal/5 last:border-b-0 touch-manipulation group/item"
+                          onClick={() => setIsOpen(false)}
+                          style={{ animationDelay: `${subIndex * 100}ms` }}
+                        >
+                          <span className="flex items-center gap-3">
+                            <div className="w-1.5 h-1.5 bg-gradient-to-r from-vibrant-pink to-warm-terracotta rounded-full opacity-60 group-hover/item:opacity-100 transition-opacity duration-300"></div>
+                            {subItem.label}
+                          </span>
+                        </Link>
+                      ))}
+                    </div>
+                  )}
+                </div>
+              ))}
+              
+              {/* Mobile Ticket Button */}
+              <div className="mt-8 px-4">
+                <a
+                  href="https://tickets.sacrecoeur-casa.ma"
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  className="block w-full py-5 px-6 text-center text-base font-sans font-medium tracking-wide uppercase bg-gradient-to-r from-vibrant-pink to-warm-terracotta text-off-white border-2 border-charcoal hover:border-charcoal/80 shadow-lg hover:shadow-xl hover:shadow-vibrant-pink/25 hover:scale-105 transition-all duration-500 rounded-xl touch-manipulation"
+                  onClick={() => setIsOpen(false)}
+                >
+                  <div className="flex items-center justify-center gap-3">
+                    <Ticket className="w-5 h-5" />
+                    <span>Ticket</span>
                   </div>
-                )}
+                </a>
               </div>
-            ))}
-            <a
-              href="https://tickets.sacrecoeur-casa.ma"
-              target="_blank"
-              rel="noopener noreferrer"
-              className="block mt-4 px-6 py-4 text-center text-xs font-sans font-semibold tracking-[0.15em] uppercase bg-gradient-to-r from-charcoal to-charcoal/90 text-off-white shadow-lg hover:shadow-xl hover:scale-105 transition-all duration-300"
-              onClick={() => setIsOpen(false)}
-            >
-              <div className="flex items-center justify-center gap-2">
-                <Ticket className="w-3 h-3" />
-                Ticket
-              </div>
-            </a>
+            </div>
           </div>
         )}
       </div>
