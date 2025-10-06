@@ -18,6 +18,42 @@ export function HeroSection() {
           />
         </video>
         <div className="absolute inset-0 bg-gradient-to-b from-charcoal/40 via-transparent to-charcoal/60" />
+        
+        {/* Moroccan Artistic Elements */}
+        <div className="absolute inset-0 z-10">
+          {/* Top decorative border */}
+          <div className="absolute top-0 left-0 right-0 h-1 bg-gradient-to-r from-transparent via-vibrant-pink/60 to-transparent"></div>
+          <div className="absolute top-2 left-0 right-0 h-px bg-gradient-to-r from-transparent via-warm-terracotta/50 to-transparent"></div>
+          
+          {/* Corner geometric patterns */}
+          <div className="absolute top-8 left-8 w-20 h-20 opacity-40">
+            <svg viewBox="0 0 80 80" className="w-full h-full text-vibrant-pink/60">
+              <path d="M10 10 L70 10 L70 70 L10 70 Z M20 20 L60 20 L60 60 L20 60 Z" fill="none" stroke="currentColor" strokeWidth="1.5"/>
+              <path d="M30 30 L50 30 L50 50 L30 50 Z" fill="currentColor" opacity="0.4"/>
+            </svg>
+          </div>
+          
+          <div className="absolute top-8 right-8 w-20 h-20 opacity-40">
+            <svg viewBox="0 0 80 80" className="w-full h-full text-warm-terracotta/60">
+              <path d="M10 10 L70 10 L70 70 L10 70 Z M20 20 L60 20 L60 60 L20 60 Z" fill="none" stroke="currentColor" strokeWidth="1.5"/>
+              <path d="M30 30 L50 30 L50 50 L30 50 Z" fill="currentColor" opacity="0.4"/>
+            </svg>
+          </div>
+          
+          {/* Side decorative lines */}
+          <div className="absolute left-0 top-1/4 bottom-1/4 w-1 bg-gradient-to-b from-transparent via-vibrant-pink/40 to-transparent"></div>
+          <div className="absolute right-0 top-1/4 bottom-1/4 w-1 bg-gradient-to-b from-transparent via-warm-terracotta/40 to-transparent"></div>
+          
+          {/* Bottom decorative elements */}
+          <div className="absolute bottom-8 left-1/2 -translate-x-1/2 w-40 h-10 opacity-30">
+            <svg viewBox="0 0 160 40" className="w-full h-full text-vibrant-pink/60">
+              <path d="M8 20 Q40 8, 72 20 Q104 32, 136 20 Q144 16, 152 20" fill="none" stroke="currentColor" strokeWidth="2"/>
+              <circle cx="32" cy="20" r="3" fill="currentColor"/>
+              <circle cx="64" cy="20" r="3" fill="currentColor"/>
+              <circle cx="96" cy="20" r="3" fill="currentColor"/>
+            </svg>
+          </div>
+        </div>
       </div>
 
       <div className="relative z-10 max-w-[1400px] mx-auto px-6 lg:px-12 text-center">

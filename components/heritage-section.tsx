@@ -4,8 +4,44 @@ import { BookOpen, Building, Users, Calendar, ArrowRight } from "lucide-react"
 
 export function HeritageSection() {
   return (
-    <section className="py-20 bg-charcoal text-off-white">
-      <div className="max-w-[1400px] mx-auto px-6 lg:px-12">
+    <section className="py-20 bg-charcoal text-off-white relative overflow-hidden">
+      {/* Subtle Moroccan decorative elements */}
+      <div className="absolute inset-0 pointer-events-none">
+        {/* Top decorative border */}
+        <div className="absolute top-0 left-1/3 right-1/3 h-1 bg-gradient-to-r from-transparent via-vibrant-pink/60 to-transparent"></div>
+        <div className="absolute top-2 left-1/3 right-1/3 h-px bg-gradient-to-r from-transparent via-warm-terracotta/40 to-transparent"></div>
+        
+        {/* Corner geometric patterns */}
+        <div className="absolute top-16 left-16 w-16 h-16 opacity-30">
+          <svg viewBox="0 0 64 64" className="w-full h-full text-vibrant-pink/60">
+            <path d="M8 8 L56 8 L56 56 L8 56 Z M16 16 L48 16 L48 48 L16 48 Z" fill="none" stroke="currentColor" strokeWidth="1.5"/>
+            <path d="M24 24 L40 24 L40 40 L24 40 Z" fill="currentColor" opacity="0.4"/>
+          </svg>
+        </div>
+        
+        <div className="absolute top-16 right-16 w-16 h-16 opacity-30">
+          <svg viewBox="0 0 64 64" className="w-full h-full text-warm-terracotta/60">
+            <path d="M8 8 L56 8 L56 56 L8 56 Z M16 16 L48 16 L48 48 L16 48 Z" fill="none" stroke="currentColor" strokeWidth="1.5"/>
+            <path d="M24 24 L40 24 L40 40 L24 40 Z" fill="currentColor" opacity="0.4"/>
+          </svg>
+        </div>
+        
+        {/* Side decorative elements */}
+        <div className="absolute left-0 top-1/4 bottom-1/4 w-1 bg-gradient-to-b from-transparent via-vibrant-pink/40 to-transparent"></div>
+        <div className="absolute right-0 top-1/4 bottom-1/4 w-1 bg-gradient-to-b from-transparent via-warm-terracotta/40 to-transparent"></div>
+        
+        {/* Bottom decorative pattern */}
+        <div className="absolute bottom-12 left-1/2 -translate-x-1/2 w-48 h-12 opacity-25">
+          <svg viewBox="0 0 192 48" className="w-full h-full text-vibrant-pink/60">
+            <path d="M8 24 Q48 8, 88 24 Q128 40, 168 24 Q176 20, 184 24" fill="none" stroke="currentColor" strokeWidth="2"/>
+            <circle cx="48" cy="24" r="3" fill="currentColor"/>
+            <circle cx="96" cy="24" r="3" fill="currentColor"/>
+            <circle cx="144" cy="24" r="3" fill="currentColor"/>
+          </svg>
+        </div>
+      </div>
+      
+      <div className="max-w-[1400px] mx-auto px-6 lg:px-12 relative z-10">
         <div className="text-center mb-16">
           <h2 className="font-serif text-4xl md:text-5xl mb-6 animate-gentle-fade-in">
             Un patrimoine à découvrir

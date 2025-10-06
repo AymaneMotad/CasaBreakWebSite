@@ -2,8 +2,54 @@ import { Clock, MapPin, Users, Phone, Calendar, Euro } from "lucide-react"
 
 export function PracticalInfoSection() {
   return (
-    <section className="py-24 bg-gradient-to-b from-off-white to-charcoal/5">
-      <div className="max-w-[1400px] mx-auto px-6 lg:px-12">
+    <section className="py-24 bg-gradient-to-b from-off-white to-charcoal/5 relative overflow-hidden">
+      {/* Moroccan Artistic Elements */}
+      <div className="absolute inset-0 pointer-events-none">
+        {/* Top decorative elements */}
+        <div className="absolute top-0 left-1/4 right-1/4 h-1 bg-gradient-to-r from-transparent via-vibrant-pink/40 to-transparent"></div>
+        <div className="absolute top-4 left-1/3 right-1/3 h-px bg-gradient-to-r from-transparent via-warm-terracotta/30 to-transparent"></div>
+        
+        {/* Corner geometric patterns */}
+        <div className="absolute top-16 left-16 w-14 h-14 opacity-20">
+          <svg viewBox="0 0 56 56" className="w-full h-full text-vibrant-pink/40">
+            <path d="M7 7 L49 7 L49 49 L7 49 Z M14 14 L42 14 L42 42 L14 42 Z" fill="none" stroke="currentColor" strokeWidth="1.5"/>
+            <path d="M21 21 L35 21 L35 35 L21 35 Z" fill="currentColor" opacity="0.3"/>
+          </svg>
+        </div>
+        
+        <div className="absolute top-16 right-16 w-14 h-14 opacity-20">
+          <svg viewBox="0 0 56 56" className="w-full h-full text-warm-terracotta/40">
+            <path d="M7 7 L49 7 L49 49 L7 49 Z M14 14 L42 14 L42 42 L14 42 Z" fill="none" stroke="currentColor" strokeWidth="1.5"/>
+            <path d="M21 21 L35 21 L35 35 L21 35 Z" fill="currentColor" opacity="0.3"/>
+          </svg>
+        </div>
+        
+        {/* Side decorative lines */}
+        <div className="absolute left-0 top-1/4 bottom-1/4 w-1 bg-gradient-to-b from-transparent via-vibrant-pink/25 to-transparent"></div>
+        <div className="absolute right-0 top-1/4 bottom-1/4 w-1 bg-gradient-to-b from-transparent via-warm-terracotta/25 to-transparent"></div>
+        
+        {/* Center decorative pattern */}
+        <div className="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-32 h-16 opacity-15">
+          <svg viewBox="0 0 128 64" className="w-full h-full text-vibrant-pink/30">
+            <path d="M8 32 Q32 16, 56 32 Q80 48, 104 32 Q112 28, 120 32" fill="none" stroke="currentColor" strokeWidth="1.5"/>
+            <circle cx="32" cy="32" r="2" fill="currentColor"/>
+            <circle cx="64" cy="32" r="2" fill="currentColor"/>
+            <circle cx="96" cy="32" r="2" fill="currentColor"/>
+          </svg>
+        </div>
+        
+        {/* Bottom decorative elements */}
+        <div className="absolute bottom-8 left-1/2 -translate-x-1/2 w-40 h-8 opacity-12">
+          <svg viewBox="0 0 160 32" className="w-full h-full text-warm-terracotta/40">
+            <path d="M8 16 Q40 4, 72 16 Q104 28, 136 16 Q144 12, 152 16" fill="none" stroke="currentColor" strokeWidth="1.5"/>
+            <circle cx="40" cy="16" r="1.5" fill="currentColor"/>
+            <circle cx="80" cy="16" r="1.5" fill="currentColor"/>
+            <circle cx="120" cy="16" r="1.5" fill="currentColor"/>
+          </svg>
+        </div>
+      </div>
+      
+      <div className="max-w-[1400px] mx-auto px-6 lg:px-12 relative z-10">
         {/* Header Section */}
         <div className="text-center mb-20">
           <div className="inline-block px-6 py-3 bg-gradient-to-r from-vibrant-pink/10 to-warm-terracotta/10 border border-vibrant-pink/20 rounded-full mb-8 animate-gentle-fade-in">

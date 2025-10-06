@@ -1,7 +1,42 @@
 export function MagazineSection() {
   return (
-    <section className="py-24 lg:py-32 bg-off-white">
-      <div className="max-w-[1400px] mx-auto px-6 lg:px-12">
+    <section className="py-24 lg:py-32 bg-off-white relative overflow-hidden">
+      {/* Subtle Moroccan decorative elements */}
+      <div className="absolute inset-0 pointer-events-none">
+        {/* Top decorative border */}
+        <div className="absolute top-0 left-1/4 right-1/4 h-1 bg-gradient-to-r from-transparent via-vibrant-pink/50 to-transparent"></div>
+        
+        {/* Corner geometric accents */}
+        <div className="absolute top-12 left-12 w-12 h-12 opacity-25">
+          <svg viewBox="0 0 48 48" className="w-full h-full text-vibrant-pink/50">
+            <path d="M6 6 L42 6 L42 42 L6 42 Z M12 12 L36 12 L36 36 L12 36 Z" fill="none" stroke="currentColor" strokeWidth="1.5"/>
+            <path d="M18 18 L30 18 L30 30 L18 30 Z" fill="currentColor" opacity="0.4"/>
+          </svg>
+        </div>
+        
+        <div className="absolute top-12 right-12 w-12 h-12 opacity-25">
+          <svg viewBox="0 0 48 48" className="w-full h-full text-warm-terracotta/50">
+            <path d="M6 6 L42 6 L42 42 L6 42 Z M12 12 L36 12 L36 36 L12 36 Z" fill="none" stroke="currentColor" strokeWidth="1.5"/>
+            <path d="M18 18 L30 18 L30 30 L18 30 Z" fill="currentColor" opacity="0.4"/>
+          </svg>
+        </div>
+        
+        {/* Side decorative lines */}
+        <div className="absolute left-0 top-1/3 bottom-1/3 w-1 bg-gradient-to-b from-transparent via-vibrant-pink/30 to-transparent"></div>
+        <div className="absolute right-0 top-1/3 bottom-1/3 w-1 bg-gradient-to-b from-transparent via-warm-terracotta/30 to-transparent"></div>
+        
+        {/* Bottom decorative pattern */}
+        <div className="absolute bottom-8 left-1/2 -translate-x-1/2 w-32 h-8 opacity-20">
+          <svg viewBox="0 0 128 32" className="w-full h-full text-vibrant-pink/50">
+            <path d="M8 16 Q32 4, 56 16 Q80 28, 104 16 Q112 12, 120 16" fill="none" stroke="currentColor" strokeWidth="2"/>
+            <circle cx="32" cy="16" r="2" fill="currentColor"/>
+            <circle cx="64" cy="16" r="2" fill="currentColor"/>
+            <circle cx="96" cy="16" r="2" fill="currentColor"/>
+          </svg>
+        </div>
+      </div>
+      
+      <div className="max-w-[1400px] mx-auto px-6 lg:px-12 relative z-10">
         {/* First Block - Image Left, Text Right */}
         <div className="grid lg:grid-cols-2 gap-12 lg:gap-20 items-center mb-32">
           <div className="animate-gentle-fade-in">
