@@ -9,8 +9,10 @@ export default function HandicapesPage() {
   return (
     <main className="min-h-screen bg-off-white">
       <Navigation />
-      <div className="max-w-[1400px] mx-auto px-6 lg:px-12 py-8">
-        <Breadcrumb items={[{ label: "Handicapés", href: "/visiter/handicapes" }]} />
+      <div className="pt-32 pb-8 bg-off-white">
+        <div className="max-w-[1400px] mx-auto px-6 lg:px-12">
+          <Breadcrumb items={[{ label: "Handicapés", href: "/visiter/handicapes" }]} />
+        </div>
       </div>
       {/* Hero Section */}
       <section className="relative h-[60vh] flex items-center justify-center overflow-hidden">

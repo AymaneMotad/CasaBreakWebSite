@@ -90,13 +90,13 @@ export function Navigation() {
                 </button>
 
                 {item.submenu && (
-                  <div className="absolute top-full left-0 pt-2 opacity-0 invisible group-hover:opacity-100 group-hover:visible transition-all duration-300 z-[60]">
-                    <div className="w-64 bg-off-white shadow-xl border border-charcoal/10 overflow-hidden">
+                  <div className="absolute top-full left-0 pt-2 opacity-0 invisible group-hover:opacity-100 group-hover:visible transition-all duration-300 z-[9999]">
+                    <div className="w-64 bg-off-white shadow-2xl border border-charcoal/20 rounded-lg overflow-hidden backdrop-blur-sm">
                       {item.submenu.map((subItem) => (
                         <Link
                           key={subItem.href}
                           href={subItem.href}
-                          className="block px-6 py-4 text-xs font-sans tracking-wide text-charcoal/60 hover:text-charcoal hover:bg-charcoal/5 transition-all duration-200 border-b border-charcoal/5 last:border-b-0"
+                          className="block px-6 py-4 text-sm font-sans tracking-wide text-charcoal hover:text-charcoal hover:bg-charcoal/5 transition-all duration-200 border-b border-charcoal/10 last:border-b-0 font-medium"
                         >
                           {subItem.label}
                         </Link>
@@ -138,13 +138,13 @@ export function Navigation() {
 
         {/* Mobile Navigation */}
         {isOpen && (
-          <div className="lg:hidden pb-6 border-t border-charcoal/10 bg-off-white animate-fade-in">
+          <div className="lg:hidden pb-6 border-t border-charcoal/20 bg-off-white/98 backdrop-blur-md shadow-lg animate-gentle-fade-in">
             {navItems.map((item, index) => (
               <div key={item.label}>
                 {item.submenu ? (
                   <button
                     onClick={() => setOpenDropdown(openDropdown === item.label ? null : item.label)}
-                    className={`w-full text-left py-4 text-sm font-sans tracking-wide uppercase text-charcoal/60 hover:text-charcoal transition-colors flex items-center justify-between animate-fade-in-up stagger-${index + 1}`}
+                    className={`w-full text-left py-4 px-6 text-sm font-sans tracking-wide uppercase text-charcoal hover:text-charcoal transition-colors flex items-center justify-between animate-gentle-fade-in stagger-${index + 1} font-medium`}
                   >
                     {item.label}
                     <ChevronDown
@@ -154,19 +154,19 @@ export function Navigation() {
                 ) : (
                   <Link
                     href={item.href}
-                    className={`block py-4 text-sm font-sans tracking-wide uppercase text-charcoal/60 hover:text-charcoal transition-colors animate-fade-in-up stagger-${index + 1}`}
+                    className={`block py-4 px-6 text-sm font-sans tracking-wide uppercase text-charcoal hover:text-charcoal transition-colors animate-gentle-fade-in stagger-${index + 1} font-medium`}
                     onClick={() => setIsOpen(false)}
                   >
                     {item.label}
                   </Link>
                 )}
                 {item.submenu && openDropdown === item.label && (
-                  <div className="pl-4 space-y-2 pb-2 animate-fade-in">
+                  <div className="bg-charcoal/5 border-l-4 border-vibrant-pink ml-6 mr-6 mb-2 animate-gentle-fade-in">
                     {item.submenu.map((subItem) => (
                       <Link
                         key={subItem.href}
                         href={subItem.href}
-                        className="block py-2 text-xs font-sans text-charcoal/50 hover:text-charcoal transition-colors"
+                        className="block py-3 px-6 text-sm font-sans text-charcoal hover:text-charcoal hover:bg-charcoal/10 transition-colors font-medium border-b border-charcoal/10 last:border-b-0"
                         onClick={() => setIsOpen(false)}
                       >
                         {subItem.label}

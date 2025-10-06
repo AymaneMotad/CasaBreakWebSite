@@ -10,7 +10,7 @@ export default function ReserverPage() {
       <Navigation />
 
       {/* Breadcrumb */}
-      <div className="pt-24 pb-8 bg-off-white">
+      <div className="pt-32 pb-8 bg-off-white">
         <div className="max-w-[1400px] mx-auto px-6 lg:px-12">
           <Breadcrumb 
             items={[

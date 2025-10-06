@@ -95,7 +95,7 @@ export default function EvenementsPage() {
       <Navigation />
 
       {/* Breadcrumb */}
-      <div className="pt-24 pb-8 bg-off-white">
+      <div className="pt-32 pb-8 bg-off-white">
         <div className="max-w-[1400px] mx-auto px-6 lg:px-12">
           <Breadcrumb 
             items={[
@@ -106,79 +106,105 @@ export default function EvenementsPage() {
       </div>
 
       {/* Hero Section */}
-      <section className="relative h-[60vh] flex items-center justify-center overflow-hidden">
-        <Image src="/placeholder.svg?height=900&width=1600" alt="Événements" fill className="object-cover" priority />
-        <div className="absolute inset-0 bg-gradient-to-b from-charcoal/60 to-charcoal/40" />
+      <section className="relative h-[70vh] flex items-center justify-center overflow-hidden">
+        <Image 
+          src="/classical-music-concert-cathedral-performance.jpg" 
+          alt="Événements au Sacré-Cœur" 
+          fill 
+          className="object-cover animate-subtle-float" 
+          priority 
+        />
+        <div className="absolute inset-0 bg-gradient-to-b from-charcoal/60 via-charcoal/40 to-charcoal/60" />
         <div className="relative z-10 text-center px-6">
-          <h1 className="font-serif text-6xl md:text-8xl text-off-white mb-6 animate-fade-in-up text-balance">
+          <div className="animate-gentle-fade-in">
+            <div className="inline-block px-4 py-2 bg-gradient-to-r from-vibrant-pink/20 to-warm-terracotta/20 backdrop-blur-sm border border-off-white/20 rounded-full mb-8">
+              <span className="text-off-white/90 text-sm font-sans tracking-wider uppercase">
+                Programmation Culturelle
+              </span>
+            </div>
+          </div>
+          <h1 className="font-serif text-6xl md:text-8xl lg:text-9xl text-off-white mb-6 animate-gentle-fade-in stagger-1 text-enhanced">
             Événements
           </h1>
-          <p className="font-sans text-base md:text-lg text-off-white/90 tracking-wider uppercase animate-fade-in-up stagger-1 max-w-2xl mx-auto">
+          <p className="font-sans text-lg md:text-xl text-off-white/90 max-w-3xl mx-auto leading-relaxed animate-gentle-fade-in stagger-2 text-readable">
             Concerts, expositions, ateliers et festivals au cœur du patrimoine
           </p>
         </div>
       </section>
 
       {/* Upcoming Events */}
-      <section className="max-w-[1400px] mx-auto px-6 lg:px-12 py-20">
-        <div className="flex items-center justify-between mb-16">
-          <h2 className="font-serif text-4xl md:text-5xl text-charcoal animate-fade-in-up">Événements à venir</h2>
-          <Link
-            href="/ticket"
-            className="hidden md:inline-block px-8 py-3 bg-gradient-to-r from-vibrant-pink to-warm-terracotta text-off-white text-xs font-sans tracking-wider uppercase hover:shadow-xl transition-all animate-fade-in-up stagger-1"
-          >
-            Réserver
-          </Link>
-        </div>
-
-        <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-8">
-          {upcomingEvents.map((event, index) => (
-            <div
-              key={event.title}
-              className={`group bg-off-white shadow-lg hover:shadow-2xl transition-all duration-300 overflow-hidden animate-fade-in-up stagger-${index + 1}`}
-            >
-              <div className="relative h-[250px] overflow-hidden">
-                <Image
-                  src={event.image || "/placeholder.svg"}
-                  alt={event.title}
-                  fill
-                  className="object-cover group-hover:scale-110 transition-transform duration-500"
-                />
-                <div className="absolute top-4 left-4 px-4 py-2 bg-vibrant-pink text-off-white text-xs font-sans tracking-wider uppercase">
-                  {event.category}
-                </div>
-              </div>
-              <div className="p-6">
-                <h3 className="font-serif text-xl text-charcoal mb-3 group-hover:text-vibrant-pink transition-colors">
-                  {event.title}
-                </h3>
-                <div className="space-y-2 mb-4 text-sm font-sans text-charcoal/60">
-                  <div className="flex items-center gap-2">
-                    <Calendar className="h-4 w-4 text-vibrant-pink" />
-                    <span>{event.date}</span>
-                  </div>
-                  <div className="flex items-center gap-2">
-                    <Clock className="h-4 w-4 text-vibrant-pink" />
-                    <span>{event.time}</span>
-                  </div>
-                  <div className="flex items-center gap-2">
-                    <MapPin className="h-4 w-4 text-vibrant-pink" />
-                    <span>Sacré-Cœur Casablanca</span>
-                  </div>
-                </div>
-                <p className="font-sans text-sm text-charcoal/70 leading-relaxed mb-4">{event.description}</p>
-                <div className="flex items-center justify-between">
-                  <span className="font-serif text-lg text-charcoal">{event.price}</span>
-                  <Link
-                    href="/ticket"
-                    className="px-6 py-2 bg-charcoal text-off-white text-xs font-sans tracking-wider uppercase hover:bg-charcoal/90 transition-colors"
-                  >
-                    Billets
-                  </Link>
-                </div>
-              </div>
+      <section className="py-24 bg-gradient-to-b from-off-white to-charcoal/5">
+        <div className="max-w-[1400px] mx-auto px-6 lg:px-12">
+          <div className="text-center mb-20">
+            <h2 className="font-serif text-5xl md:text-6xl text-charcoal mb-8 animate-gentle-fade-in">
+              Événements à venir
+            </h2>
+            <p className="font-sans text-xl text-charcoal/70 max-w-3xl mx-auto leading-relaxed animate-gentle-fade-in stagger-1">
+              Découvrez notre programmation culturelle et réservez votre place pour des expériences uniques
+            </p>
+            <div className="mt-8 animate-gentle-fade-in stagger-2">
+              <Link
+                href="https://tickets.sacrecoeur-casa.ma"
+                target="_blank"
+                rel="noopener noreferrer"
+                className="inline-block px-8 py-4 bg-gradient-to-r from-vibrant-pink to-warm-terracotta text-off-white text-sm font-sans tracking-wider uppercase hover:shadow-xl hover:scale-105 transition-all duration-300 rounded-lg"
+              >
+                Réserver maintenant
+              </Link>
             </div>
-          ))}
+          </div>
+
+          <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-8">
+            {upcomingEvents.map((event, index) => (
+              <div
+                key={event.title}
+                className={`group bg-off-white rounded-2xl shadow-lg hover:shadow-2xl transition-all duration-300 overflow-hidden animate-gentle-fade-in stagger-${index + 1} hover-lift-subtle`}
+              >
+                <div className="relative h-[300px] overflow-hidden">
+                  <Image
+                    src={event.image || "/placeholder.svg"}
+                    alt={event.title}
+                    fill
+                    className="object-cover group-hover:scale-110 transition-transform duration-500"
+                  />
+                  <div className="absolute top-4 left-4 px-4 py-2 bg-gradient-to-r from-vibrant-pink to-warm-terracotta text-off-white text-xs font-sans tracking-wider uppercase rounded-full">
+                    {event.category}
+                  </div>
+                </div>
+                <div className="p-8">
+                  <h3 className="font-serif text-2xl text-charcoal mb-4 group-hover:text-vibrant-pink transition-colors">
+                    {event.title}
+                  </h3>
+                  <div className="space-y-3 mb-6 text-sm font-sans text-charcoal/60">
+                    <div className="flex items-center gap-3">
+                      <Calendar className="h-5 w-5 text-vibrant-pink" />
+                      <span className="font-medium">{event.date}</span>
+                    </div>
+                    <div className="flex items-center gap-3">
+                      <Clock className="h-5 w-5 text-warm-terracotta" />
+                      <span className="font-medium">{event.time}</span>
+                    </div>
+                    <div className="flex items-center gap-3">
+                      <MapPin className="h-5 w-5 text-charcoal/40" />
+                      <span className="font-medium">Sacré-Cœur Casablanca</span>
+                    </div>
+                  </div>
+                  <p className="font-sans text-sm text-charcoal/70 leading-relaxed mb-6 text-readable">{event.description}</p>
+                  <div className="flex items-center justify-between">
+                    <span className="font-serif text-2xl text-charcoal font-semibold">{event.price}</span>
+                    <Link
+                      href="https://tickets.sacrecoeur-casa.ma"
+                      target="_blank"
+                      rel="noopener noreferrer"
+                      className="px-6 py-3 bg-gradient-to-r from-vibrant-pink to-warm-terracotta text-off-white text-xs font-sans tracking-wider uppercase hover:shadow-xl hover:scale-105 transition-all duration-300 rounded-lg"
+                    >
+                      Réserver
+                    </Link>
+                  </div>
+                </div>
+              </div>
+            ))}
+          </div>
         </div>
       </section>
 

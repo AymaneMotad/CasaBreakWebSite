@@ -36,7 +36,7 @@ export default function ArchitecturePage() {
       <Navigation />
 
       {/* Breadcrumb */}
-      <div className="pt-24 pb-8 bg-off-white">
+      <div className="pt-32 pb-8 bg-off-white">
         <div className="max-w-[1400px] mx-auto px-6 lg:px-12">
           <Breadcrumb 
             items={[
@@ -47,20 +47,27 @@ export default function ArchitecturePage() {
       </div>
 
       {/* Hero Section */}
-      <section className="relative h-[60vh] flex items-center justify-center overflow-hidden">
+      <section className="relative h-[70vh] flex items-center justify-center overflow-hidden">
         <Image
           src="/cathedral-architecture-exterior-dramatic-angle-cas.jpg"
           alt="Architecture du Sacré-Cœur"
           fill
-          className="object-cover"
+          className="object-cover animate-subtle-float"
           priority
         />
-        <div className="absolute inset-0 bg-gradient-to-b from-charcoal/60 to-charcoal/20" />
+        <div className="absolute inset-0 bg-gradient-to-b from-charcoal/60 via-charcoal/40 to-charcoal/60" />
         <div className="relative z-10 text-center px-6">
-          <h1 className="font-serif text-5xl md:text-7xl lg:text-9xl text-off-white mb-6 animate-fade-in-up">
+          <div className="animate-gentle-fade-in">
+            <div className="inline-block px-4 py-2 bg-gradient-to-r from-vibrant-pink/20 to-warm-terracotta/20 backdrop-blur-sm border border-off-white/20 rounded-full mb-8">
+              <span className="text-off-white/90 text-sm font-sans tracking-wider uppercase">
+                Architecture Art Déco
+              </span>
+            </div>
+          </div>
+          <h1 className="font-serif text-6xl md:text-8xl lg:text-9xl text-off-white mb-6 animate-gentle-fade-in stagger-1 text-enhanced">
             Architecture
           </h1>
-          <p className="font-sans text-sm md:text-base lg:text-lg tracking-wider text-off-white/90 max-w-2xl mx-auto animate-fade-in-up delay-100">
+          <p className="font-sans text-lg md:text-xl text-off-white/90 max-w-3xl mx-auto leading-relaxed animate-gentle-fade-in stagger-2 text-readable">
             Un chef-d'œuvre de l'Art Déco marocain alliant tradition gothique et modernité
           </p>
         </div>

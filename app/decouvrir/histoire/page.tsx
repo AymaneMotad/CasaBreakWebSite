@@ -9,7 +9,7 @@ export default function HistoirePage() {
       <Navigation />
 
       {/* Breadcrumb */}
-      <div className="pt-24 pb-8 bg-off-white">
+      <div className="pt-32 pb-8 bg-off-white">
         <div className="max-w-[1400px] mx-auto px-6 lg:px-12">
           <Breadcrumb 
             items={[
@@ -20,99 +20,139 @@ export default function HistoirePage() {
       </div>
 
       {/* Hero Section */}
-      <section className="relative h-[50vh] flex items-center justify-center overflow-hidden">
+      <section className="relative h-[60vh] flex items-center justify-center overflow-hidden">
         <Image
           src="/vintage-black-and-white-photo-of-cathedral-constru.jpg"
           alt="Construction historique du Sacré-Cœur"
           fill
-          className="object-cover grayscale"
+          className="object-cover grayscale animate-subtle-float"
           priority
         />
-        <div className="absolute inset-0 bg-charcoal/40" />
+        <div className="absolute inset-0 bg-gradient-to-b from-charcoal/60 via-charcoal/40 to-charcoal/60" />
         <div className="relative z-10 text-center px-6">
-          <h1 className="font-serif text-5xl md:text-7xl lg:text-8xl text-off-white mb-4 animate-fade-in-up">
+          <div className="animate-gentle-fade-in">
+            <div className="inline-block px-4 py-2 bg-gradient-to-r from-vibrant-pink/20 to-warm-terracotta/20 backdrop-blur-sm border border-off-white/20 rounded-full mb-8">
+              <span className="text-off-white/90 text-sm font-sans tracking-wider uppercase">
+                Patrimoine Historique
+              </span>
+            </div>
+          </div>
+          <h1 className="font-serif text-6xl md:text-8xl lg:text-9xl text-off-white mb-6 animate-gentle-fade-in stagger-1 text-enhanced">
             Histoire
           </h1>
-          <p className="font-sans text-sm md:text-base tracking-wider uppercase text-off-white/80 animate-fade-in-up delay-100">
-            Un monument emblématique de Casablanca
+          <p className="font-sans text-lg md:text-xl text-off-white/90 max-w-2xl mx-auto leading-relaxed animate-gentle-fade-in stagger-2 text-readable">
+            Un monument emblématique de Casablanca qui raconte l'histoire d'une époque
           </p>
         </div>
       </section>
 
       {/* Timeline Section */}
-      <section className="max-w-[1200px] mx-auto px-6 lg:px-12 py-20 lg:py-32">
-        <div className="space-y-24">
-          {/* 1930 */}
-          <div className="grid md:grid-cols-2 gap-12 items-center">
-            <div className="animate-fade-in-up">
-              <span className="font-serif text-6xl lg:text-8xl text-vibrant-pink">1930</span>
-              <h2 className="font-serif text-3xl lg:text-5xl text-charcoal mt-4 mb-6">La Conception</h2>
-              <p className="font-sans text-base lg:text-lg text-charcoal/70 leading-relaxed">
-                Le projet du Sacré-Cœur de Casablanca naît dans le contexte du protectorat français. Conçu par
-                l'architecte Paul Tournon, le bâtiment devait incarner la grandeur et la modernité de l'époque Art Déco
-                tout en respectant les traditions architecturales gothiques.
-              </p>
-            </div>
-            <div className="relative h-[400px] animate-fade-in-up delay-100">
-              <Image src="/architectural-blueprints-art-deco-cathedral-1930s.jpg" alt="Plans architecturaux 1930" fill className="object-cover" />
-            </div>
+      <section className="py-24 bg-gradient-to-b from-off-white to-charcoal/5">
+        <div className="max-w-[1400px] mx-auto px-6 lg:px-12">
+          <div className="text-center mb-20">
+            <h2 className="font-serif text-5xl md:text-6xl text-charcoal mb-8 animate-gentle-fade-in">
+              Chronologie Historique
+            </h2>
+            <p className="font-sans text-xl text-charcoal/70 max-w-3xl mx-auto leading-relaxed animate-gentle-fade-in stagger-1">
+              Découvrez les étapes clés qui ont façonné l'histoire de ce monument emblématique
+            </p>
           </div>
+          
+          <div className="space-y-32">
+            {/* 1930 */}
+            <div className="grid lg:grid-cols-2 gap-16 items-center">
+              <div className="animate-gentle-fade-in">
+                <div className="inline-block px-6 py-3 bg-gradient-to-r from-vibrant-pink/10 to-warm-terracotta/10 border border-vibrant-pink/20 rounded-full mb-8">
+                  <span className="text-charcoal/80 text-sm font-sans tracking-wider uppercase">Époque de Conception</span>
+                </div>
+                <span className="font-serif text-7xl lg:text-9xl text-vibrant-pink block mb-6">1930</span>
+                <h3 className="font-serif text-4xl lg:text-6xl text-charcoal mb-8">La Conception</h3>
+                <p className="font-sans text-lg text-charcoal/70 leading-relaxed text-readable">
+                  Le projet du Sacré-Cœur de Casablanca naît dans le contexte du protectorat français. Conçu par
+                  l'architecte Paul Tournon, le bâtiment devait incarner la grandeur et la modernité de l'époque Art Déco
+                  tout en respectant les traditions architecturales gothiques.
+                </p>
+              </div>
+              <div className="relative h-[500px] animate-gentle-fade-in stagger-1">
+                <Image 
+                  src="/architectural-blueprints-art-deco-cathedral-1930s.jpg" 
+                  alt="Plans architecturaux 1930" 
+                  fill 
+                  className="object-cover rounded-2xl shadow-2xl hover-scale-subtle transition-smooth" 
+                />
+              </div>
+            </div>
 
-          {/* 1930-1953 */}
-          <div className="grid md:grid-cols-2 gap-12 items-center">
-            <div className="relative h-[400px] order-2 md:order-1 animate-fade-in-up delay-100">
-              <Image
-                src="/cathedral-construction-workers-1940s-casablanca.jpg"
-                alt="Construction du Sacré-Cœur"
-                fill
-                className="object-cover grayscale"
-              />
+            {/* 1930-1953 */}
+            <div className="grid lg:grid-cols-2 gap-16 items-center">
+              <div className="relative h-[500px] animate-gentle-fade-in">
+                <Image
+                  src="/cathedral-construction-workers-1940s-casablanca.jpg"
+                  alt="Construction du Sacré-Cœur"
+                  fill
+                  className="object-cover grayscale rounded-2xl shadow-2xl hover-scale-subtle transition-smooth"
+                />
+              </div>
+              <div className="animate-gentle-fade-in stagger-1">
+                <div className="inline-block px-6 py-3 bg-gradient-to-r from-warm-terracotta/10 to-charcoal/10 border border-warm-terracotta/20 rounded-full mb-8">
+                  <span className="text-charcoal/80 text-sm font-sans tracking-wider uppercase">Période de Construction</span>
+                </div>
+                <span className="font-serif text-7xl lg:text-9xl text-warm-terracotta block mb-6">1930-1953</span>
+                <h3 className="font-serif text-4xl lg:text-6xl text-charcoal mb-8">La Construction</h3>
+                <p className="font-sans text-lg text-charcoal/70 leading-relaxed text-readable">
+                  La construction s'étend sur plus de deux décennies, interrompue par la Seconde Guerre mondiale. Les deux
+                  tours jumelles de 50 mètres de hauteur deviennent progressivement un repère emblématique du paysage
+                  urbain de Casablanca, visible depuis le port et le centre-ville.
+                </p>
+              </div>
             </div>
-            <div className="order-1 md:order-2 animate-fade-in-up">
-              <span className="font-serif text-6xl lg:text-8xl text-warm-terracotta">1930-1953</span>
-              <h2 className="font-serif text-3xl lg:text-5xl text-charcoal mt-4 mb-6">La Construction</h2>
-              <p className="font-sans text-base lg:text-lg text-charcoal/70 leading-relaxed">
-                La construction s'étend sur plus de deux décennies, interrompue par la Seconde Guerre mondiale. Les deux
-                tours jumelles de 50 mètres de hauteur deviennent progressivement un repère emblématique du paysage
-                urbain de Casablanca, visible depuis le port et le centre-ville.
-              </p>
-            </div>
-          </div>
 
-          {/* 1956 */}
-          <div className="grid md:grid-cols-2 gap-12 items-center">
-            <div className="animate-fade-in-up">
-              <span className="font-serif text-6xl lg:text-8xl text-vibrant-pink">1956</span>
-              <h2 className="font-serif text-3xl lg:text-5xl text-charcoal mt-4 mb-6">L'Indépendance</h2>
-              <p className="font-sans text-base lg:text-lg text-charcoal/70 leading-relaxed">
-                Avec l'indépendance du Maroc, le Sacré-Cœur cesse progressivement ses fonctions religieuses. Cette
-                période marque un tournant dans l'histoire du bâtiment, qui commence sa transformation vers un nouveau
-                destin culturel et patrimonial.
-              </p>
+            {/* 1956 */}
+            <div className="grid lg:grid-cols-2 gap-16 items-center">
+              <div className="animate-gentle-fade-in">
+                <div className="inline-block px-6 py-3 bg-gradient-to-r from-vibrant-pink/10 to-warm-terracotta/10 border border-vibrant-pink/20 rounded-full mb-8">
+                  <span className="text-charcoal/80 text-sm font-sans tracking-wider uppercase">Indépendance du Maroc</span>
+                </div>
+                <span className="font-serif text-7xl lg:text-9xl text-vibrant-pink block mb-6">1956</span>
+                <h3 className="font-serif text-4xl lg:text-6xl text-charcoal mb-8">L'Indépendance</h3>
+                <p className="font-sans text-lg text-charcoal/70 leading-relaxed text-readable">
+                  Avec l'indépendance du Maroc, le Sacré-Cœur cesse progressivement ses fonctions religieuses. Cette
+                  période marque un tournant dans l'histoire du bâtiment, qui commence sa transformation vers un nouveau
+                  destin culturel et patrimonial.
+                </p>
+              </div>
+              <div className="relative h-[500px] animate-gentle-fade-in stagger-1">
+                <Image
+                  src="/morocco-independence-1956-celebration-casablanca.jpg"
+                  alt="Indépendance du Maroc 1956"
+                  fill
+                  className="object-cover grayscale rounded-2xl shadow-2xl hover-scale-subtle transition-smooth"
+                />
+              </div>
             </div>
-            <div className="relative h-[400px] animate-fade-in-up delay-100">
-              <Image
-                src="/morocco-independence-1956-celebration-casablanca.jpg"
-                alt="Indépendance du Maroc 1956"
-                fill
-                className="object-cover grayscale"
-              />
-            </div>
-          </div>
 
-          {/* Aujourd'hui */}
-          <div className="grid md:grid-cols-2 gap-12 items-center">
-            <div className="relative h-[400px] order-2 md:order-1 animate-fade-in-up delay-100">
-              <Image src="/modern-cultural-center-art-exhibition-morocco.jpg" alt="Le Sacré-Cœur aujourd'hui" fill className="object-cover" />
-            </div>
-            <div className="order-1 md:order-2 animate-fade-in-up">
-              <span className="font-serif text-6xl lg:text-8xl text-warm-terracotta">Aujourd'hui</span>
-              <h2 className="font-serif text-3xl lg:text-5xl text-charcoal mt-4 mb-6">Un Héritage Vivant</h2>
-              <p className="font-sans text-base lg:text-lg text-charcoal/70 leading-relaxed">
-                Aujourd'hui, l'ex-cathédrale Sacré-Cœur est devenue un centre culturel dynamique, accueillant des
-                expositions d'art, des concerts et des événements culturels. Ce monument historique continue d'inspirer
-                et de rassembler les Casablancais et les visiteurs du monde entier.
-              </p>
+            {/* Aujourd'hui */}
+            <div className="grid lg:grid-cols-2 gap-16 items-center">
+              <div className="relative h-[500px] animate-gentle-fade-in">
+                <Image 
+                  src="/modern-cultural-center-art-exhibition-morocco.jpg" 
+                  alt="Le Sacré-Cœur aujourd'hui" 
+                  fill 
+                  className="object-cover rounded-2xl shadow-2xl hover-scale-subtle transition-smooth" 
+                />
+              </div>
+              <div className="animate-gentle-fade-in stagger-1">
+                <div className="inline-block px-6 py-3 bg-gradient-to-r from-warm-terracotta/10 to-vibrant-pink/10 border border-warm-terracotta/20 rounded-full mb-8">
+                  <span className="text-charcoal/80 text-sm font-sans tracking-wider uppercase">Époque Contemporaine</span>
+                </div>
+                <span className="font-serif text-7xl lg:text-9xl text-warm-terracotta block mb-6">Aujourd'hui</span>
+                <h3 className="font-serif text-4xl lg:text-6xl text-charcoal mb-8">Un Héritage Vivant</h3>
+                <p className="font-sans text-lg text-charcoal/70 leading-relaxed text-readable">
+                  Aujourd'hui, l'ex-cathédrale Sacré-Cœur est devenue un centre culturel dynamique, accueillant des
+                  expositions d'art, des concerts et des événements culturels. Ce monument historique continue d'inspirer
+                  et de rassembler les Casablancais et les visiteurs du monde entier.
+                </p>
+              </div>
             </div>
           </div>
         </div>
