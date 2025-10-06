@@ -58,41 +58,58 @@ export function SpinningCathedral() {
                     borderRadius: '8px'
                   }}
                 >
-                  {/* Twin Towers */}
+                  {/* Twin Towers with Distinctive Cathedral Lines */}
                   <div className="absolute top-0 left-1/4 w-1/4 h-2/3 bg-gradient-to-b from-charcoal to-charcoal/90 shadow-lg rounded-t-lg">
-                    {/* Tower Spire */}
-                    <div className="absolute top-0 left-1/2 -translate-x-1/2 w-0 h-0 border-l-6 border-r-6 border-b-8 border-l-transparent border-r-transparent border-b-charcoal"></div>
-                    {/* Tower Windows */}
-                    <div className="absolute top-1/4 left-1/2 -translate-x-1/2 w-4 h-6 bg-gradient-to-b from-charcoal/40 to-charcoal/20 rounded-sm"></div>
-                    <div className="absolute top-1/2 left-1/2 -translate-x-1/2 w-4 h-6 bg-gradient-to-b from-charcoal/40 to-charcoal/20 rounded-sm"></div>
-                    <div className="absolute top-3/4 left-1/2 -translate-x-1/2 w-4 h-6 bg-gradient-to-b from-charcoal/40 to-charcoal/20 rounded-sm"></div>
+                    {/* Tower Spire - More Prominent */}
+                    <div className="absolute top-0 left-1/2 -translate-x-1/2 w-0 h-0 border-l-8 border-r-8 border-b-12 border-l-transparent border-r-transparent border-b-charcoal"></div>
+                    {/* Tower Windows - Gothic Arches */}
+                    <div className="absolute top-1/4 left-1/2 -translate-x-1/2 w-5 h-8 bg-gradient-to-b from-charcoal/50 to-charcoal/30 rounded-t-full border border-charcoal/60"></div>
+                    <div className="absolute top-1/2 left-1/2 -translate-x-1/2 w-5 h-8 bg-gradient-to-b from-charcoal/50 to-charcoal/30 rounded-t-full border border-charcoal/60"></div>
+                    <div className="absolute top-3/4 left-1/2 -translate-x-1/2 w-5 h-8 bg-gradient-to-b from-charcoal/50 to-charcoal/30 rounded-t-full border border-charcoal/60"></div>
+                    {/* Tower Base - Cathedral Foundation */}
+                    <div className="absolute bottom-0 left-0 right-0 h-3 bg-gradient-to-b from-charcoal/95 to-charcoal/80 border-t-2 border-charcoal/60"></div>
                   </div>
                   
                   <div className="absolute top-0 right-1/4 w-1/4 h-2/3 bg-gradient-to-b from-charcoal to-charcoal/90 shadow-lg rounded-t-lg">
-                    {/* Tower Spire */}
-                    <div className="absolute top-0 left-1/2 -translate-x-1/2 w-0 h-0 border-l-6 border-r-6 border-b-8 border-l-transparent border-r-transparent border-b-charcoal"></div>
-                    {/* Tower Windows */}
-                    <div className="absolute top-1/4 left-1/2 -translate-x-1/2 w-4 h-6 bg-gradient-to-b from-charcoal/40 to-charcoal/20 rounded-sm"></div>
-                    <div className="absolute top-1/2 left-1/2 -translate-x-1/2 w-4 h-6 bg-gradient-to-b from-charcoal/40 to-charcoal/20 rounded-sm"></div>
-                    <div className="absolute top-3/4 left-1/2 -translate-x-1/2 w-4 h-6 bg-gradient-to-b from-charcoal/40 to-charcoal/20 rounded-sm"></div>
+                    {/* Tower Spire - More Prominent */}
+                    <div className="absolute top-0 left-1/2 -translate-x-1/2 w-0 h-0 border-l-8 border-r-8 border-b-12 border-l-transparent border-r-transparent border-b-charcoal"></div>
+                    {/* Tower Windows - Gothic Arches */}
+                    <div className="absolute top-1/4 left-1/2 -translate-x-1/2 w-5 h-8 bg-gradient-to-b from-charcoal/50 to-charcoal/30 rounded-t-full border border-charcoal/60"></div>
+                    <div className="absolute top-1/2 left-1/2 -translate-x-1/2 w-5 h-8 bg-gradient-to-b from-charcoal/50 to-charcoal/30 rounded-t-full border border-charcoal/60"></div>
+                    <div className="absolute top-3/4 left-1/2 -translate-x-1/2 w-5 h-8 bg-gradient-to-b from-charcoal/50 to-charcoal/30 rounded-t-full border border-charcoal/60"></div>
+                    {/* Tower Base - Cathedral Foundation */}
+                    <div className="absolute bottom-0 left-0 right-0 h-3 bg-gradient-to-b from-charcoal/95 to-charcoal/80 border-t-2 border-charcoal/60"></div>
                   </div>
                   
-                  {/* Central Nave */}
+                  {/* Central Nave - More Cathedral-like */}
                   <div className="absolute top-2/3 left-1/4 right-1/4 h-1/3 bg-gradient-to-b from-charcoal/95 to-charcoal/80 shadow-lg rounded-lg">
-                    {/* Rose Window */}
-                    <div className="absolute top-1/4 left-1/2 -translate-x-1/2 w-12 h-12 bg-gradient-to-br from-vibrant-pink/60 to-warm-terracotta/60 rounded-full border-4 border-charcoal/80 shadow-xl">
-                      <div className="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-8 h-8 bg-gradient-to-br from-vibrant-pink/40 to-warm-terracotta/40 rounded-full"></div>
-                      <div className="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-3 h-3 bg-charcoal/60 rounded-full"></div>
+                    {/* Gothic Arch Windows on Sides */}
+                    <div className="absolute top-1/6 left-1/6 w-3 h-6 bg-gradient-to-b from-charcoal/60 to-charcoal/40 rounded-t-full border border-charcoal/70"></div>
+                    <div className="absolute top-1/6 right-1/6 w-3 h-6 bg-gradient-to-b from-charcoal/60 to-charcoal/40 rounded-t-full border border-charcoal/70"></div>
+                    
+                    {/* Rose Window - More Prominent */}
+                    <div className="absolute top-1/4 left-1/2 -translate-x-1/2 w-14 h-14 bg-gradient-to-br from-vibrant-pink/70 to-warm-terracotta/70 rounded-full border-4 border-charcoal/90 shadow-2xl">
+                      <div className="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-10 h-10 bg-gradient-to-br from-vibrant-pink/50 to-warm-terracotta/50 rounded-full border-2 border-charcoal/80"></div>
+                      <div className="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-4 h-4 bg-charcoal/70 rounded-full"></div>
+                      {/* Rose Window Petals */}
+                      <div className="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-2 h-2 bg-vibrant-pink/60 rounded-full"></div>
                     </div>
                     
-                    {/* Gothic Portal */}
-                    <div className="absolute bottom-0 left-1/2 -translate-x-1/2 w-10 h-16 bg-gradient-to-b from-charcoal/90 to-charcoal/70 rounded-t-lg shadow-lg">
-                      {/* Door Arch */}
-                      <div className="absolute top-0 left-1/2 -translate-x-1/2 w-8 h-8 bg-gradient-to-b from-charcoal/60 to-charcoal/40 rounded-t-full"></div>
-                      {/* Door */}
-                      <div className="absolute bottom-0 left-1/2 -translate-x-1/2 w-6 h-10 bg-gradient-to-b from-charcoal to-charcoal/80 rounded-t-lg"></div>
+                    {/* Gothic Portal - More Cathedral-like */}
+                    <div className="absolute bottom-0 left-1/2 -translate-x-1/2 w-12 h-18 bg-gradient-to-b from-charcoal/95 to-charcoal/75 rounded-t-lg shadow-xl border-2 border-charcoal/80">
+                      {/* Door Arch - More Prominent */}
+                      <div className="absolute top-0 left-1/2 -translate-x-1/2 w-10 h-10 bg-gradient-to-b from-charcoal/70 to-charcoal/50 rounded-t-full border-2 border-charcoal/80"></div>
+                      {/* Door with Cathedral Details */}
+                      <div className="absolute bottom-0 left-1/2 -translate-x-1/2 w-8 h-12 bg-gradient-to-b from-charcoal to-charcoal/90 rounded-t-lg border-2 border-charcoal/70">
+                        {/* Door Panels */}
+                        <div className="absolute top-2 left-1/2 -translate-x-1/2 w-6 h-8 border border-charcoal/60 rounded"></div>
+                        <div className="absolute bottom-2 left-1/2 -translate-x-1/2 w-6 h-4 border border-charcoal/60 rounded"></div>
+                      </div>
                     </div>
                   </div>
+                  
+                  {/* Cathedral Roof Line - More Distinctive */}
+                  <div className="absolute top-2/3 left-1/4 right-1/4 h-2 bg-gradient-to-r from-charcoal/80 to-charcoal/60 border-b-2 border-charcoal/70"></div>
                 </div>
 
                 {/* Back Face */}
@@ -118,10 +135,24 @@ export function SpinningCathedral() {
                     borderRadius: '8px'
                   }}
                 >
-                  {/* Side Tower */}
-                  <div className="absolute top-0 left-1/3 w-1/3 h-2/3 bg-gradient-to-b from-charcoal/90 to-charcoal/70 shadow-lg rounded-t-lg"></div>
-                  {/* Side Main Building */}
-                  <div className="absolute top-2/3 left-1/4 right-1/4 h-1/3 bg-gradient-to-b from-charcoal/85 to-charcoal/65 shadow-lg rounded-lg"></div>
+                  {/* Side Tower with Cathedral Details */}
+                  <div className="absolute top-0 left-1/3 w-1/3 h-2/3 bg-gradient-to-b from-charcoal/90 to-charcoal/70 shadow-lg rounded-t-lg">
+                    {/* Tower Spire */}
+                    <div className="absolute top-0 left-1/2 -translate-x-1/2 w-0 h-0 border-l-6 border-r-6 border-b-10 border-l-transparent border-r-transparent border-b-charcoal/90"></div>
+                    {/* Side Tower Windows */}
+                    <div className="absolute top-1/3 left-1/2 -translate-x-1/2 w-4 h-6 bg-gradient-to-b from-charcoal/50 to-charcoal/30 rounded-t-full border border-charcoal/60"></div>
+                    <div className="absolute top-2/3 left-1/2 -translate-x-1/2 w-4 h-6 bg-gradient-to-b from-charcoal/50 to-charcoal/30 rounded-t-full border border-charcoal/60"></div>
+                  </div>
+                  
+                  {/* Side Main Building with Cathedral Lines */}
+                  <div className="absolute top-2/3 left-1/4 right-1/4 h-1/3 bg-gradient-to-b from-charcoal/85 to-charcoal/65 shadow-lg rounded-lg">
+                    {/* Side Windows */}
+                    <div className="absolute top-1/4 left-1/3 w-2 h-5 bg-gradient-to-b from-charcoal/60 to-charcoal/40 rounded-t-full border border-charcoal/70"></div>
+                    <div className="absolute top-1/4 right-1/3 w-2 h-5 bg-gradient-to-b from-charcoal/60 to-charcoal/40 rounded-t-full border border-charcoal/70"></div>
+                    {/* Flying Buttress */}
+                    <div className="absolute top-1/2 left-0 w-2 h-8 bg-gradient-to-b from-charcoal/80 to-charcoal/60 border-r border-charcoal/70"></div>
+                    <div className="absolute top-1/2 right-0 w-2 h-8 bg-gradient-to-b from-charcoal/80 to-charcoal/60 border-l border-charcoal/70"></div>
+                  </div>
                 </div>
 
                 {/* Right Side */}
@@ -132,10 +163,24 @@ export function SpinningCathedral() {
                     borderRadius: '8px'
                   }}
                 >
-                  {/* Side Tower */}
-                  <div className="absolute top-0 right-1/3 w-1/3 h-2/3 bg-gradient-to-b from-charcoal/90 to-charcoal/70 shadow-lg rounded-t-lg"></div>
-                  {/* Side Main Building */}
-                  <div className="absolute top-2/3 left-1/4 right-1/4 h-1/3 bg-gradient-to-b from-charcoal/85 to-charcoal/65 shadow-lg rounded-lg"></div>
+                  {/* Side Tower with Cathedral Details */}
+                  <div className="absolute top-0 right-1/3 w-1/3 h-2/3 bg-gradient-to-b from-charcoal/90 to-charcoal/70 shadow-lg rounded-t-lg">
+                    {/* Tower Spire */}
+                    <div className="absolute top-0 left-1/2 -translate-x-1/2 w-0 h-0 border-l-6 border-r-6 border-b-10 border-l-transparent border-r-transparent border-b-charcoal/90"></div>
+                    {/* Side Tower Windows */}
+                    <div className="absolute top-1/3 left-1/2 -translate-x-1/2 w-4 h-6 bg-gradient-to-b from-charcoal/50 to-charcoal/30 rounded-t-full border border-charcoal/60"></div>
+                    <div className="absolute top-2/3 left-1/2 -translate-x-1/2 w-4 h-6 bg-gradient-to-b from-charcoal/50 to-charcoal/30 rounded-t-full border border-charcoal/60"></div>
+                  </div>
+                  
+                  {/* Side Main Building with Cathedral Lines */}
+                  <div className="absolute top-2/3 left-1/4 right-1/4 h-1/3 bg-gradient-to-b from-charcoal/85 to-charcoal/65 shadow-lg rounded-lg">
+                    {/* Side Windows */}
+                    <div className="absolute top-1/4 left-1/3 w-2 h-5 bg-gradient-to-b from-charcoal/60 to-charcoal/40 rounded-t-full border border-charcoal/70"></div>
+                    <div className="absolute top-1/4 right-1/3 w-2 h-5 bg-gradient-to-b from-charcoal/60 to-charcoal/40 rounded-t-full border border-charcoal/70"></div>
+                    {/* Flying Buttress */}
+                    <div className="absolute top-1/2 left-0 w-2 h-8 bg-gradient-to-b from-charcoal/80 to-charcoal/60 border-r border-charcoal/70"></div>
+                    <div className="absolute top-1/2 right-0 w-2 h-8 bg-gradient-to-b from-charcoal/80 to-charcoal/60 border-l border-charcoal/70"></div>
+                  </div>
                 </div>
 
                 {/* Top Face */}

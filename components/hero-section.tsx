@@ -7,17 +7,25 @@ export function HeroSection() {
           muted
           loop
           playsInline
-          className="w-full h-full object-cover grayscale opacity-60"
+          className="w-full h-full object-cover animate-gentle-float"
         >
           <source src="http://casaevents.ma/wp-content/uploads/2025/10/WhatsApp-Video-2025-10-02-at-11.13.41.mp4" type="video/mp4" />
           {/* Fallback image for browsers that don't support video */}
           <img
             src="/sacre-coeur-cathedral-casablanca-white-art-deco-bu.jpg"
             alt="Ex Sacré Coeur Cathedral"
-            className="w-full h-full object-cover grayscale opacity-60"
+            className="w-full h-full object-cover animate-gentle-float"
           />
         </video>
-        <div className="absolute inset-0 bg-gradient-to-b from-charcoal/40 via-transparent to-charcoal/60" />
+        
+        {/* Subtle video enhancement - lighter overlay */}
+        <div className="absolute inset-0 bg-gradient-to-b from-charcoal/20 via-transparent to-charcoal/30" />
+        
+        {/* Color enhancement overlay - subtle */}
+        <div className="absolute inset-0 bg-gradient-to-br from-vibrant-pink/8 via-transparent to-warm-terracotta/8 mix-blend-overlay" />
+        
+        {/* Dynamic light effect - gentle */}
+        <div className="absolute inset-0 bg-gradient-to-r from-transparent via-off-white/3 to-transparent animate-gentle-float" />
         
         {/* Moroccan Artistic Elements */}
         <div className="absolute inset-0 z-10">
@@ -42,34 +50,39 @@ export function HeroSection() {
         </div>
       </div>
 
-      <div className="relative z-10 max-w-[1400px] mx-auto px-6 lg:px-12 text-center">
-        <div className="animate-gentle-fade-in">
-          <div className="inline-block px-4 py-2 bg-gradient-to-r from-vibrant-pink/20 to-warm-terracotta/20 backdrop-blur-sm border border-off-white/20 rounded-full mb-8">
-            <span className="text-off-white/90 text-sm font-sans tracking-wider uppercase">
+      <div className="relative z-20 max-w-[1400px] mx-auto px-6 lg:px-12 text-center">
+        {/* Enhanced text contrast background */}
+        <div className="absolute inset-0 bg-gradient-to-b from-charcoal/60 via-charcoal/40 to-charcoal/70 rounded-2xl backdrop-blur-sm" />
+        
+        <div className="relative z-10 animate-gentle-fade-in">
+          <div className="inline-block px-6 py-3 bg-gradient-to-r from-vibrant-pink/30 to-warm-terracotta/30 backdrop-blur-md border-2 border-off-white/40 rounded-full mb-8 shadow-2xl">
+            <span className="text-off-white text-sm font-sans tracking-wider uppercase font-semibold drop-shadow-lg">
               Patrimoine Culturel • Depuis 1930
             </span>
           </div>
         </div>
         
-        <h1 className="font-serif font-normal text-6xl md:text-7xl lg:text-8xl text-off-white mb-6 leading-[0.95] tracking-tight animate-gentle-fade-in stagger-1 text-enhanced">
-          A taste of Casablanca
+        <h1 className="relative z-10 font-serif font-normal text-6xl md:text-7xl lg:text-8xl text-off-white mb-6 leading-[0.95] tracking-tight animate-gentle-fade-in stagger-1 text-enhanced drop-shadow-2xl">
+          <span className="bg-gradient-to-b from-off-white to-off-white/90 bg-clip-text text-transparent">
+            A taste of Casablanca
+          </span>
         </h1>
         
-        <p className="font-sans text-lg md:text-xl text-off-white/80 max-w-2xl mx-auto leading-relaxed animate-gentle-fade-in stagger-2 text-readable mb-8">
+        <p className="relative z-10 font-sans text-lg md:text-xl text-off-white max-w-2xl mx-auto leading-relaxed animate-gentle-fade-in stagger-2 text-readable mb-8 drop-shadow-xl">
           Découvrez l'Ex Sacré-Cœur, joyau architectural Art Déco au cœur de Casablanca. 
           Un monument historique transformé en centre culturel vibrant.
         </p>
 
-        <div className="flex flex-col sm:flex-row gap-4 justify-center items-center animate-gentle-fade-in stagger-3">
+        <div className="relative z-10 flex flex-col sm:flex-row gap-4 justify-center items-center animate-gentle-fade-in stagger-3">
           <a
             href="/visiter/individuels"
-            className="px-8 py-4 bg-gradient-to-r from-vibrant-pink to-warm-terracotta text-off-white text-sm font-sans tracking-wider uppercase hover:shadow-xl hover:scale-105 transition-all duration-300 rounded-md"
+            className="px-8 py-4 bg-gradient-to-r from-vibrant-pink to-warm-terracotta text-off-white text-sm font-sans tracking-wider uppercase hover:shadow-xl hover:scale-105 transition-all duration-300 rounded-md shadow-lg border-2 border-vibrant-pink/20"
           >
             Découvrir
           </a>
           <a
             href="/decouvrir/histoire"
-            className="px-8 py-4 bg-transparent border-2 border-off-white/30 text-off-white text-sm font-sans tracking-wider uppercase hover:bg-off-white/10 hover:border-off-white/50 transition-all duration-300 rounded-md"
+            className="px-8 py-4 bg-transparent border-2 border-off-white/50 text-off-white text-sm font-sans tracking-wider uppercase hover:bg-off-white/20 hover:border-off-white/70 transition-all duration-300 rounded-md backdrop-blur-sm shadow-lg"
           >
             Notre Histoire
           </a>
