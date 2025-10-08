@@ -211,7 +211,7 @@ export default function GroupesPage() {
               </div>
               <Link
                 href="/reserver"
-                className="block mt-8 text-center px-8 py-4 bg-gradient-to-r from-vibrant-pink to-warm-terracotta text-off-white text-xs font-sans tracking-wider uppercase hover:shadow-xl transition-all"
+                className="block mt-8 text-center px-8 py-4 bg-gradient-to-r from-blue-500 to-blue-700 text-white text-xs font-sans tracking-wider uppercase hover:shadow-xl transition-all rounded-lg"
               >
                 Demander un devis
               </Link>

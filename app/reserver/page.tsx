@@ -374,7 +374,7 @@ export default function ReserverPage() {
             <div className="text-center animate-fade-in-up stagger-9">
               <button
                 type="submit"
-                className="px-16 py-5 bg-gradient-to-r from-vibrant-pink to-warm-terracotta text-off-white text-sm font-sans tracking-[0.15em] uppercase hover:shadow-2xl hover:scale-105 transition-all duration-300"
+                className="px-16 py-5 bg-gradient-to-r from-blue-500 to-blue-700 text-white text-sm font-sans tracking-[0.15em] uppercase hover:shadow-2xl hover:scale-105 transition-all duration-300 rounded-lg"
               >
                 Envoyer la demande
               </button>

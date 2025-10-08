@@ -74,7 +74,7 @@ export function HeritageSection() {
             </p>
             <Link
               href="/decouvrir/architecture"
-              className="inline-flex items-center gap-2 px-6 py-3 bg-gradient-to-r from-vibrant-pink to-warm-terracotta text-off-white text-sm font-sans tracking-wider uppercase hover:shadow-xl hover:scale-105 transition-all duration-300 rounded-md"
+              className="inline-flex items-center gap-2 px-6 py-3 bg-gradient-to-r from-blue-500 to-blue-700 text-white text-sm font-sans tracking-wider uppercase hover:shadow-xl hover:scale-105 transition-all duration-300 rounded-lg"
             >
               Explorer l'architecture
               <ArrowRight className="h-4 w-4" />
@@ -137,7 +137,7 @@ export function HeritageSection() {
             <div className="flex flex-col sm:flex-row gap-4 justify-center">
               <Link
                 href="/evenements"
-                className="px-8 py-4 bg-gradient-to-r from-vibrant-pink to-warm-terracotta text-off-white text-sm font-sans tracking-wider uppercase hover:shadow-xl hover:scale-105 transition-all duration-300 rounded-md"
+                className="px-8 py-4 bg-gradient-to-r from-blue-500 to-blue-700 text-white text-sm font-sans tracking-wider uppercase hover:shadow-xl hover:scale-105 transition-all duration-300 rounded-lg"
               >
                 Voir les événements
               </Link>

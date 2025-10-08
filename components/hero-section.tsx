@@ -77,7 +77,7 @@ export function HeroSection() {
         <div className="relative z-10 flex flex-col sm:flex-row gap-4 justify-center items-center animate-gentle-fade-in stagger-3">
           <a
             href="/visiter/individuels"
-            className="px-8 py-4 bg-gradient-to-r from-vibrant-pink to-warm-terracotta text-off-white text-sm font-sans tracking-wider uppercase hover:shadow-xl hover:scale-105 transition-all duration-300 rounded-md shadow-lg border-2 border-vibrant-pink/20"
+            className="px-8 py-4 bg-gradient-to-r from-blue-500 to-blue-700 text-white text-sm font-sans tracking-wider uppercase hover:shadow-xl hover:scale-105 transition-all duration-300 rounded-lg shadow-lg border-2 border-blue-600"
           >
             Découvrir
           </a>

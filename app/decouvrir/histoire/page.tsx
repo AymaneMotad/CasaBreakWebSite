@@ -296,8 +296,8 @@ export default function HistoirePage() {
                 <div className="inline-block px-6 py-3 bg-gradient-to-r from-vibrant-pink/10 to-warm-terracotta/10 border border-vibrant-pink/20 rounded-full mb-8">
                   <span className="text-charcoal/80 text-sm font-sans tracking-wider uppercase">Renaissance d'un joyau</span>
                 </div>
-                <span className="font-serif text-7xl lg:text-9xl text-vibrant-pink block mb-6">Aujourd'hui</span>
-                <h3 className="font-serif text-4xl lg:text-6xl text-charcoal mb-8">Renaissance d'un joyau patrimonial</h3>
+                <span className="font-serif text-6xl lg:text-7xl text-vibrant-pink block mb-6">Aujourd'hui</span>
+                <h3 className="font-serif text-3xl lg:text-5xl text-charcoal mb-8">Renaissance d'un joyau patrimonial</h3>
                 <p className="font-sans text-lg text-charcoal/70 leading-relaxed text-readable mb-4">
                   Le site du Sacré-Cœur renaît aujourd'hui comme un véritable centre culturel, artistique et touristique, symbole de la vitalité et du renouveau de Casablanca. Ce lieu emblématique se transforme en un espace de rencontre entre mémoire et modernité, où se croisent le patrimoine, l'art, l'innovation et la citoyenneté.
                 </p>
@@ -307,7 +307,7 @@ export default function HistoirePage() {
               </div>
               <div className="relative h-[500px] animate-gentle-fade-in stagger-1">
                 <Image 
-                  src="/site-map-images/histoire-optimized/2a1_H1-1014_147P471.jpg" 
+                  src="/site-map-images/architecture-optimized/Eglise-du-Sacre-Coeur-2-1-461x1024.jpeg" 
                   alt="Le Sacré-Cœur aujourd'hui" 
                   fill 
                   className="object-cover rounded-2xl shadow-2xl hover-scale-subtle transition-smooth" 
@@ -359,7 +359,7 @@ export default function HistoirePage() {
         <div className="max-w-[1000px] mx-auto px-6 lg:px-12 text-center relative z-10">
           <a
             href="/decouvrir/architecture"
-            className="inline-block px-8 py-4 text-xs font-sans tracking-wider uppercase bg-gradient-to-r from-vibrant-pink to-warm-terracotta text-off-white hover:shadow-lg hover:scale-105 transition-all duration-300 animate-fade-in-up"
+            className="inline-block px-8 py-4 text-xs font-sans tracking-wider uppercase bg-gradient-to-r from-blue-500 to-blue-700 text-white hover:shadow-lg hover:scale-105 transition-all duration-300 animate-fade-in-up rounded-lg"
           >
             Découvrir l'Architecture
           </a>

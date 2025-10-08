@@ -202,7 +202,7 @@ export default function EtudiantsPage() {
           </p>
           <Link
             href="/reserver"
-            className="inline-block px-12 py-4 bg-gradient-to-r from-vibrant-pink to-warm-terracotta text-off-white text-sm font-sans tracking-wider uppercase hover:shadow-2xl hover:scale-105 transition-all duration-300 animate-fade-in-up stagger-2"
+            className="inline-block px-12 py-4 bg-gradient-to-r from-blue-500 to-blue-700 text-white text-sm font-sans tracking-wider uppercase hover:shadow-2xl hover:scale-105 transition-all duration-300 animate-fade-in-up stagger-2 rounded-lg"
           >
             Réserver maintenant
           </Link>
