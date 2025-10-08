@@ -43,7 +43,7 @@ export function Navigation() {
   }
 
   return (
-    <nav className="fixed top-0 left-0 right-0 z-50 bg-gray-50 shadow-sm transition-all duration-500">
+    <nav className="fixed top-0 left-0 right-0 z-50 bg-white shadow-sm transition-all duration-500">
       <div className="max-w-[1600px] mx-auto px-6 lg:px-12">
         <div className="flex items-center justify-between h-24 lg:h-28 py-3">
           <Link
@@ -51,11 +51,11 @@ export function Navigation() {
             className="transition-all duration-500 hover:scale-105 flex items-center"
           >
             <Image 
-              src="/sacre-logo.png" 
+              src="/sacre-logo.svg" 
               alt="Casablanca Sacré-Cœur" 
-              width={600} 
-              height={180}
-              className="h-full w-auto max-h-20 lg:max-h-24"
+              width={595} 
+              height={393}
+              className="h-20 lg:h-24 w-auto"
               priority
             />
           </Link>
