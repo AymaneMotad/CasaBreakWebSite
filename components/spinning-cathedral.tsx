@@ -23,7 +23,7 @@ export function SpinningCathedral() {
         <div className="absolute top-0 left-1/4 right-1/4 h-px bg-gradient-to-r from-transparent via-vibrant-pink/30 to-transparent"></div>
         
         {/* Side decorative lines */}
-        <div className="absolute left-0 top-1/3 bottom-1/3 w-px bg-gradient-to-b from-transparent via-vibrant-pink/20 to-transparent"></div>
+        <div className="absolute left-0 top-1/3 bottom-1/3 w-px bg-gradient-to-b from-transparent via-blue-500/18 to-transparent"></div>
         <div className="absolute right-0 top-1/3 bottom-1/3 w-px bg-gradient-to-b from-transparent via-warm-terracotta/20 to-transparent"></div>
         
         {/* Bottom decorative elements */}

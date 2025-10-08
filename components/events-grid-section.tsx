@@ -1,34 +1,34 @@
 export function EventsGridSection() {
   const events = [
     {
-      image: "/classical-music-concert-cathedral-performance.jpg",
-      title: "Concert Classique",
-      description: "Soirée Mozart sous les voûtes",
+      image: "/site-map-images/evenements-optimized/soiree/evenement - soiree 1.jpg",
+      title: "Soirée Inauguration",
+      description: "Événement culturel au Sacré-Cœur",
     },
     {
-      image: "/art-exhibition-contemporary-gallery-cathedral.jpg",
-      title: "Exposition d'Art Moderne",
-      description: "Artistes marocains contemporains",
+      image: "/site-map-images/evenements-optimized/smart-city/evenement-smartcity1.jpg",
+      title: "Smart City 2025",
+      description: "Innovation et technologie",
     },
     {
-      image: "/heritage-workshop-restoration-architecture.jpg",
-      title: "Conférence Architecture",
-      description: "L'Art Déco au Maroc",
+      image: "/site-map-images/evenements-optimized/soiree/evenement - soiree 3.jpg",
+      title: "Soirée Culturelle",
+      description: "Expérience artistique unique",
     },
     {
-      image: "/architectural-tour-guide-cathedral-interior.jpg",
+      image: "/site-map-images/architecture-optimized/Eglise-du-Sacre-Coeur-9-1024x768.jpeg",
       title: "Visite Guidée",
       description: "Découverte du patrimoine",
     },
     {
-      image: "/photographer-cathedral-architecture-natural-light.jpg",
-      title: "Atelier Photographie",
-      description: "Capturer l'architecture",
+      image: "/site-map-images/evenements-optimized/soiree/evenement - soiree 5.jpg",
+      title: "Événement Premium",
+      description: "Expérience exclusive",
     },
     {
-      image: "/classical-music-concert-cathedral-performance.jpg",
-      title: "Festival de Musique",
-      description: "Trois jours de concerts",
+      image: "/site-map-images/evenements-optimized/smart-city/evenement-smartcity2.jpg",
+      title: "Forum Innovation",
+      description: "Conférences et networking",
     },
   ]
 
@@ -37,7 +37,7 @@ export function EventsGridSection() {
       {/* Moroccan Artistic Elements */}
       <div className="absolute inset-0 pointer-events-none">
         {/* Top decorative border */}
-        <div className="absolute top-0 left-1/5 right-1/5 h-1 bg-gradient-to-r from-transparent via-vibrant-pink/50 to-transparent"></div>
+        <div className="absolute top-0 left-1/5 right-1/5 h-1 bg-gradient-to-r from-transparent via-blue-500/40 to-transparent"></div>
         <div className="absolute top-3 left-1/4 right-1/4 h-px bg-gradient-to-r from-transparent via-warm-terracotta/40 to-transparent"></div>
         
         {/* Corner geometric patterns */}

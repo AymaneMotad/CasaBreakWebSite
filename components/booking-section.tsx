@@ -6,7 +6,7 @@ export function BookingSection() {
       {/* Moroccan Artistic Elements */}
       <div className="absolute inset-0 pointer-events-none">
         {/* Top decorative border */}
-        <div className="absolute top-0 left-1/6 right-1/6 h-1 bg-gradient-to-r from-transparent via-vibrant-pink/45 to-transparent"></div>
+        <div className="absolute top-0 left-1/6 right-1/6 h-1 bg-gradient-to-r from-transparent via-blue-500/35 to-transparent"></div>
         <div className="absolute top-3 left-1/5 right-1/5 h-px bg-gradient-to-r from-transparent via-warm-terracotta/35 to-transparent"></div>
         
         {/* Corner geometric patterns */}
@@ -30,7 +30,7 @@ export function BookingSection() {
         
         {/* Center decorative pattern */}
         <div className="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-28 h-14 opacity-16">
-          <svg viewBox="0 0 112 56" className="w-full h-full text-vibrant-pink/35">
+          <svg viewBox="0 0 112 56" className="w-full h-full text-blue-500/30">
             <path d="M8 28 Q28 14, 48 28 Q68 42, 88 28 Q96 24, 104 28" fill="none" stroke="currentColor" strokeWidth="1.5"/>
             <circle cx="28" cy="28" r="2" fill="currentColor"/>
             <circle cx="56" cy="28" r="2" fill="currentColor"/>

@@ -24,7 +24,7 @@ export function NewsletterSection() {
         
         {/* Side decorative lines */}
         <div className="absolute left-0 top-1/3 bottom-1/3 w-1 bg-gradient-to-b from-transparent via-vibrant-pink/25 to-transparent"></div>
-        <div className="absolute right-0 top-1/3 bottom-1/3 w-1 bg-gradient-to-b from-transparent via-warm-terracotta/25 to-transparent"></div>
+        <div className="absolute right-0 top-1/3 bottom-1/3 w-1 bg-gradient-to-b from-transparent via-blue-500/20 to-transparent"></div>
         
         {/* Center decorative pattern */}
         <div className="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-20 h-10 opacity-12">

@@ -22,7 +22,7 @@ export function HeroSection() {
         <div className="absolute inset-0 bg-gradient-to-b from-charcoal/20 via-transparent to-charcoal/30" />
         
         {/* Color enhancement overlay - subtle */}
-        <div className="absolute inset-0 bg-gradient-to-br from-vibrant-pink/8 via-transparent to-warm-terracotta/8 mix-blend-overlay" />
+        <div className="absolute inset-0 bg-gradient-to-br from-vibrant-pink/8 via-blue-500/4 to-warm-terracotta/8 mix-blend-overlay" />
         
         {/* Dynamic light effect - gentle */}
         <div className="absolute inset-0 bg-gradient-to-r from-transparent via-off-white/3 to-transparent animate-gentle-float" />
@@ -31,7 +31,7 @@ export function HeroSection() {
         <div className="absolute inset-0 z-10">
           {/* Top decorative border */}
           <div className="absolute top-0 left-0 right-0 h-1 bg-gradient-to-r from-transparent via-vibrant-pink/60 to-transparent"></div>
-          <div className="absolute top-2 left-0 right-0 h-px bg-gradient-to-r from-transparent via-warm-terracotta/50 to-transparent"></div>
+          <div className="absolute top-2 left-0 right-0 h-px bg-gradient-to-r from-transparent via-blue-500/35 to-transparent"></div>
           
           
           {/* Side decorative lines */}

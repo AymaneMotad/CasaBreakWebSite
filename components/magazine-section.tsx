@@ -22,7 +22,7 @@ export function MagazineSection() {
         </div>
         
         {/* Side decorative lines */}
-        <div className="absolute left-0 top-1/3 bottom-1/3 w-1 bg-gradient-to-b from-transparent via-vibrant-pink/30 to-transparent"></div>
+        <div className="absolute left-0 top-1/3 bottom-1/3 w-1 bg-gradient-to-b from-transparent via-blue-500/25 to-transparent"></div>
         <div className="absolute right-0 top-1/3 bottom-1/3 w-1 bg-gradient-to-b from-transparent via-warm-terracotta/30 to-transparent"></div>
         
         {/* Bottom decorative pattern */}
