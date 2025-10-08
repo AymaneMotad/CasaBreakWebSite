@@ -64,9 +64,7 @@ export function HeroSection() {
         
        
 
-        <h1 className="relative z-10 font-serif font-normal text-4xl md:text-5xl lg:text-6xl text-off-white mb-6 leading-tight tracking-wide animate-gentle-fade-in stagger-1 drop-shadow-2xl">
-          A taste of Casablanca
-        </h1>
+      
         
         
         <p className="relative z-10 font-sans text-lg md:text-xl text-off-white max-w-2xl mx-auto leading-relaxed animate-gentle-fade-in stagger-2 text-readable mb-8 drop-shadow-xl">

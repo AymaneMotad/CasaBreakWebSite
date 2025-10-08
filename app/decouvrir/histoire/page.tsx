@@ -155,25 +155,31 @@ export default function HistoirePage() {
                   La construction de l'église du Sacré-Cœur est lancée sous le protectorat français, à l'initiative de la communauté catholique de Casablanca. Elle témoigne de la volonté de cette communauté d'affirmer sa présence dans une ville en pleine mutation. L'objectif est d'ériger un lieu de culte majeur au cœur d'une cité en plein essor, reflet du développement urbain rapide et du dynamisme de la métropole. Ce projet s'inscrit ainsi dans le contexte de l'expansion de Casablanca, où la modernité et la foi se rejoignent pour donner naissance à un monument emblématique de son époque.
                 </p>
               </div>
-              <div className="relative h-[500px] animate-gentle-fade-in stagger-1">
-                <Image 
-                  src="/site-map-images/histoire-optimized/1A1_H1-2563_8W.jpg" 
-                  alt="Plans architecturaux 1923" 
-                  fill 
-                  className="object-cover rounded-2xl shadow-2xl hover-scale-subtle transition-smooth" 
-                />
+              <div className="animate-gentle-fade-in stagger-1">
+                <div className="relative h-[500px]">
+                  <Image 
+                    src="/site-map-images/histoire-optimized/1A1_H1-2563_8W.jpg" 
+                    alt="Plans architecturaux 1923" 
+                    fill 
+                    className="object-cover rounded-2xl shadow-2xl hover-scale-subtle transition-smooth" 
+                  />
+                </div>
+                <p className="text-xs text-charcoal/50 mt-3 font-sans italic">Photo issue du Fonds Flandrin, collection privée de la Fondation Banque Populaire</p>
               </div>
             </div>
 
             {/* 1930 */}
             <div className="grid lg:grid-cols-2 gap-16 items-center">
-              <div className="relative h-[500px] animate-gentle-fade-in">
-                <Image
-                  src="/site-map-images/histoire-optimized/1A1_H1-4-156P341.jpg"
-                  alt="Construction du Sacré-Cœur"
-                  fill
-                  className="object-cover grayscale rounded-2xl shadow-2xl hover-scale-subtle transition-smooth"
-                />
+              <div className="animate-gentle-fade-in">
+                <div className="relative h-[500px]">
+                  <Image
+                    src="/site-map-images/histoire-optimized/1A1_H1-4-156P341.jpg"
+                    alt="Construction du Sacré-Cœur"
+                    fill
+                    className="object-cover grayscale rounded-2xl shadow-2xl hover-scale-subtle transition-smooth"
+                  />
+                </div>
+                <p className="text-xs text-charcoal/50 mt-3 font-sans italic">Photo issue du Fonds Flandrin, collection privée de la Fondation Banque Populaire</p>
               </div>
               <div className="animate-gentle-fade-in stagger-1">
                 <div className="inline-block px-6 py-3 bg-gradient-to-r from-warm-terracotta/10 to-charcoal/10 border border-warm-terracotta/20 rounded-full mb-8">
@@ -205,25 +211,31 @@ export default function HistoirePage() {
                   Cependant, loin de tomber dans l'oubli, l'église acquiert un nouveau statut : celui de symbole patrimonial et culturel de Casablanca. Son architecture remarquable et sa place au cœur de la cité en font un lieu chargé d'histoire, témoin du passé colonial mais aussi de l'évolution urbaine et artistique du Maroc moderne.
                 </p>
               </div>
-              <div className="relative h-[500px] animate-gentle-fade-in stagger-1">
-                <Image
-                  src="/site-map-images/histoire-optimized/1A1_H1-52_93p057.jpg"
-                  alt="Indépendance du Maroc 1956"
-                  fill
-                  className="object-cover grayscale rounded-2xl shadow-2xl hover-scale-subtle transition-smooth"
-                />
+              <div className="animate-gentle-fade-in stagger-1">
+                <div className="relative h-[500px]">
+                  <Image
+                    src="/site-map-images/histoire-optimized/1A1_H1-52_93p057.jpg"
+                    alt="Indépendance du Maroc 1956"
+                    fill
+                    className="object-cover grayscale rounded-2xl shadow-2xl hover-scale-subtle transition-smooth"
+                  />
+                </div>
+                <p className="text-xs text-charcoal/50 mt-3 font-sans italic">Photo issue du Fonds Flandrin, collection privée de la Fondation Banque Populaire</p>
               </div>
             </div>
 
             {/* 1976 */}
             <div className="grid lg:grid-cols-2 gap-16 items-center">
-              <div className="relative h-[500px] animate-gentle-fade-in">
-                <Image 
-                  src="/site-map-images/histoire-optimized/1A2_H1-4083_-037.jpg" 
-                  alt="Espace culturel 1976" 
-                  fill 
-                  className="object-cover rounded-2xl shadow-2xl hover-scale-subtle transition-smooth" 
-                />
+              <div className="animate-gentle-fade-in">
+                <div className="relative h-[500px]">
+                  <Image 
+                    src="/site-map-images/histoire-optimized/1A2_H1-4083_-037.jpg" 
+                    alt="Espace culturel 1976" 
+                    fill 
+                    className="object-cover rounded-2xl shadow-2xl hover-scale-subtle transition-smooth" 
+                  />
+                </div>
+                <p className="text-xs text-charcoal/50 mt-3 font-sans italic">Photo issue du Fonds Flandrin, collection privée de la Fondation Banque Populaire</p>
               </div>
               <div className="animate-gentle-fade-in stagger-1">
                 <div className="inline-block px-6 py-3 bg-gradient-to-r from-warm-terracotta/10 to-vibrant-pink/10 border border-warm-terracotta/20 rounded-full mb-8">
@@ -255,25 +267,31 @@ export default function HistoirePage() {
                   Son allure unique attire aujourd'hui architectes, chercheurs et visiteurs du monde entier, fascinés par l'harmonie entre tradition et modernité qu'incarne l'édifice. Véritable repère urbain et culturel, le Sacré-Cœur demeure un symbole fort du patrimoine casablancais et de la richesse de son héritage artistique.
                 </p>
               </div>
-              <div className="relative h-[500px] animate-gentle-fade-in stagger-1">
-                <Image 
-                  src="/site-map-images/histoire-optimized/1A2_H1-4084_185P-038.jpg" 
-                  alt="Patrimoine architectural" 
-                  fill 
-                  className="object-cover rounded-2xl shadow-2xl hover-scale-subtle transition-smooth" 
-                />
+              <div className="animate-gentle-fade-in stagger-1">
+                <div className="relative h-[500px]">
+                  <Image 
+                    src="/site-map-images/histoire-optimized/1A2_H1-4084_185P-038.jpg" 
+                    alt="Patrimoine architectural" 
+                    fill 
+                    className="object-cover rounded-2xl shadow-2xl hover-scale-subtle transition-smooth" 
+                  />
+                </div>
+                <p className="text-xs text-charcoal/50 mt-3 font-sans italic">Photo issue du Fonds Flandrin, collection privée de la Fondation Banque Populaire</p>
               </div>
             </div>
 
             {/* 2010 */}
             <div className="grid lg:grid-cols-2 gap-16 items-center">
-              <div className="relative h-[500px] animate-gentle-fade-in">
-                <Image 
-                  src="/site-map-images/histoire-optimized/1B3_H1-3314-222.jpg" 
-                  alt="Réhabilitation 2010" 
-                  fill 
-                  className="object-cover rounded-2xl shadow-2xl hover-scale-subtle transition-smooth" 
-                />
+              <div className="animate-gentle-fade-in">
+                <div className="relative h-[500px]">
+                  <Image 
+                    src="/site-map-images/histoire-optimized/1B3_H1-3314-222.jpg" 
+                    alt="Réhabilitation 2010" 
+                    fill 
+                    className="object-cover rounded-2xl shadow-2xl hover-scale-subtle transition-smooth" 
+                  />
+                </div>
+                <p className="text-xs text-charcoal/50 mt-3 font-sans italic">Photo issue du Fonds Flandrin, collection privée de la Fondation Banque Populaire</p>
               </div>
               <div className="animate-gentle-fade-in stagger-1">
                 <div className="inline-block px-6 py-3 bg-gradient-to-r from-warm-terracotta/10 to-charcoal/10 border border-warm-terracotta/20 rounded-full mb-8">
@@ -305,12 +323,12 @@ export default function HistoirePage() {
                   En accueillant expositions, événements culturels et initiatives créatives, la cathédrale s'inscrit désormais dans une démarche de valorisation durable du patrimoine casablancais. Elle incarne la volonté de préserver l'histoire tout en la réinventant, offrant à la ville un espace vivant, inspirant et ouvert sur le monde.
                 </p>
               </div>
-              <div className="relative h-[500px] animate-gentle-fade-in stagger-1">
+              <div className="relative h-[600px] animate-gentle-fade-in stagger-1">
                 <Image 
                   src="/site-map-images/architecture-optimized/Eglise-du-Sacre-Coeur-2-1-461x1024.jpeg" 
                   alt="Le Sacré-Cœur aujourd'hui" 
                   fill 
-                  className="object-cover rounded-2xl shadow-2xl hover-scale-subtle transition-smooth" 
+                  className="object-contain rounded-2xl hover-scale-subtle transition-smooth" 
                 />
               </div>
             </div>
