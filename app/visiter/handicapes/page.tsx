@@ -11,7 +11,10 @@ export default function HandicapesPage() {
       <Navigation />
       <div className="pt-32 pb-8 bg-off-white">
         <div className="max-w-[1400px] mx-auto px-6 lg:px-12">
-          <Breadcrumb items={[{ label: "Handicapés", href: "/visiter/handicapes" }]} />
+          <Breadcrumb items={[
+            { label: "Visiter", href: "/visiter/individuels" },
+            { label: "Handicapés", href: "/visiter/handicapes" }
+          ]} />
         </div>
       </div>
       {/* Hero Section */}
@@ -40,20 +43,19 @@ export default function HandicapesPage() {
             />
           </div>
           <div className="animate-fade-in-up stagger-1">
-            <h2 className="font-serif text-4xl md:text-5xl text-charcoal mb-6 text-balance">Bienvenue à tous</h2>
-            <p className="font-sans text-base text-charcoal/70 leading-relaxed mb-6">
-              Le Sacré-Cœur de Casablanca s'engage à offrir une expérience de visite complète et enrichissante à tous
-              les visiteurs, quelles que soient leurs capacités. Notre monument est entièrement accessible et nos
-              équipes sont formées pour vous accompagner.
-            </p>
-            <p className="font-sans text-base text-charcoal/70 leading-relaxed mb-8">
-              Nous proposons des dispositifs adaptés pour les personnes à mobilité réduite, malvoyantes, malentendantes
-              et avec handicap mental.
-            </p>
-            <div className="inline-block px-8 py-4 bg-gradient-to-r from-vibrant-pink to-warm-terracotta text-off-white">
-              <p className="font-serif text-3xl mb-1">Gratuit</p>
-              <p className="font-sans text-xs tracking-wider uppercase">Pour les personnes handicapées</p>
+            <h2 className="font-serif text-4xl md:text-5xl text-charcoal mb-6 text-balance">Accessibilité pour tous</h2>
+            <div className="inline-block px-8 py-4 bg-gradient-to-r from-vibrant-pink to-warm-terracotta text-off-white mb-8 shadow-lg">
+              <p className="font-serif text-4xl mb-1">Gratuit</p>
+              <p className="font-sans text-xs tracking-wider uppercase">Entrée gratuite</p>
             </div>
+            <p className="font-sans text-base text-charcoal/70 leading-relaxed mb-6">
+              L'entrée est gratuite pour les visiteurs à mobilité réduite.
+              Le parcours de visite a été conçu pour être accessible à tous, afin que chacun puisse profiter pleinement de la découverte du monument.
+            </p>
+            <p className="font-sans text-base text-charcoal/70 leading-relaxed">
+              Le Sacré-Cœur de Casablanca s'engage à offrir une expérience de visite complète et enrichissante à tous les visiteurs, quelles que soient leurs capacités.
+              Nous proposons des dispositifs adaptés pour les personnes à mobilité réduite, malvoyantes, malentendantes et avec handicap mental.
+            </p>
           </div>
         </div>
       </section>

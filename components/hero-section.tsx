@@ -12,7 +12,7 @@ export function HeroSection() {
           <source src="http://casaevents.ma/wp-content/uploads/2025/10/WhatsApp-Video-2025-10-02-at-11.13.41.mp4" type="video/mp4" />
           {/* Fallback image for browsers that don't support video */}
           <img
-            src="/sacre-coeur-cathedral-casablanca-white-art-deco-bu.jpg"
+            src="/site-map-images/architecture-optimized/cethedrale image.jpeg"
             alt="Ex Sacré Coeur Cathedral"
             className="w-full h-full object-cover animate-gentle-float"
           />
@@ -62,15 +62,16 @@ export function HeroSection() {
           </div>
         </div>
         
-        <h1 className="relative z-10 font-serif font-normal text-6xl md:text-7xl lg:text-8xl text-off-white mb-6 leading-[0.95] tracking-tight animate-gentle-fade-in stagger-1 text-enhanced drop-shadow-2xl">
-          <span className="bg-gradient-to-b from-off-white to-off-white/90 bg-clip-text text-transparent">
-            A taste of Casablanca
-          </span>
+       
+
+        <h1 className="relative z-10 font-serif font-normal text-4xl md:text-5xl lg:text-6xl text-off-white mb-6 leading-tight tracking-wide animate-gentle-fade-in stagger-1 drop-shadow-2xl">
+          A taste of Casablanca
         </h1>
         
+        
         <p className="relative z-10 font-sans text-lg md:text-xl text-off-white max-w-2xl mx-auto leading-relaxed animate-gentle-fade-in stagger-2 text-readable mb-8 drop-shadow-xl">
-          Découvrez l'Ex Sacré-Cœur, joyau architectural Art Déco au cœur de Casablanca. 
-          Un monument historique transformé en centre culturel vibrant.
+          L'icône du patrimoine casablancais, l'Église du Sacré-Cœur, s'éveille à une nouvelle vie.
+          Désormais centre culturel et espace de création, elle incarne la rencontre entre la mémoire d'hier et la modernité d'aujourd'hui.
         </p>
 
         <div className="relative z-10 flex flex-col sm:flex-row gap-4 justify-center items-center animate-gentle-fade-in stagger-3">

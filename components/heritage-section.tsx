@@ -54,7 +54,7 @@ export function HeritageSection() {
         <div className="grid lg:grid-cols-2 gap-16 items-center mb-20">
           <div className="animate-gentle-fade-in">
             <Image
-              src="/art-deco-cathedral-exterior-casablanca-architectur.jpg"
+              src="/site-map-images/architecture-optimized/Eglise-du-Sacre-Coeur-1-1024x576.jpeg"
               alt="Architecture Art Déco"
               width={600}
               height={400}

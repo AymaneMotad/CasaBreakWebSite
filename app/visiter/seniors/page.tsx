@@ -11,7 +11,10 @@ export default function SeniorsPage() {
       <Navigation />
       <div className="pt-32 pb-8 bg-off-white">
         <div className="max-w-[1400px] mx-auto px-6 lg:px-12">
-          <Breadcrumb items={[{ label: "Seniors", href: "/visiter/seniors" }]} />
+          <Breadcrumb items={[
+            { label: "Visiter", href: "/visiter/individuels" },
+            { label: "Seniors", href: "/visiter/seniors" }
+          ]} />
         </div>
       </div>
       {/* Hero Section */}

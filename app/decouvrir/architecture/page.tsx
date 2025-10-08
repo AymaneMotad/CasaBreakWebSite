@@ -9,25 +9,25 @@ export default function ArchitecturePage() {
       title: "Les Tours Jumelles",
       description:
         "Deux tours de 50 mètres de hauteur dominent le paysage urbain, inspirées des cathédrales gothiques européennes mais réinterprétées dans un style Art Déco épuré.",
-      image: "/twin-towers-cathedral-art-deco-casablanca.jpg",
+      image: "/site-map-images/architecture-optimized/Eglise-du-Sacre-Coeur-10-1-576x1024.jpeg",
     },
     {
       title: "Les Vitraux",
       description:
         "Des vitraux colorés filtrent la lumière naturelle, créant une atmosphère mystique et contemplative. Chaque vitrail raconte une histoire à travers ses motifs géométriques Art Déco.",
-      image: "/colorful-stained-glass-windows-art-deco-cathedral.jpg",
+      image: "/site-map-images/architecture-optimized/Eglise-du-Sacre-Coeur-3-768x1024.jpeg",
     },
     {
       title: "La Nef Centrale",
       description:
         "Un espace monumental de 30 mètres de hauteur, caractérisé par des arcs brisés et des colonnes élancées qui créent une sensation de verticalité et de grandeur.",
-      image: "/cathedral-nave-interior-high-ceiling-columns.jpg",
+      image: "/site-map-images/architecture-optimized/Eglise-du-Sacre-Coeur-8-1-1024x768.jpeg",
     },
     {
       title: "La Façade",
       description:
         "Une façade imposante en pierre blanche qui combine des éléments néo-gothiques avec des détails Art Déco, créant un dialogue unique entre tradition et modernité.",
-      image: "/white-stone-cathedral-facade-art-deco-morocco.jpg",
+      image: "/site-map-images/architecture-optimized/Eglise-du-Sacre-Coeur-1-1024x576.jpeg",
     },
   ]
 
@@ -40,6 +40,7 @@ export default function ArchitecturePage() {
         <div className="max-w-[1400px] mx-auto px-6 lg:px-12">
           <Breadcrumb 
             items={[
+              { label: "Découvrir", href: "/decouvrir/histoire" },
               { label: "Architecture", href: "/decouvrir/architecture" }
             ]} 
           />
@@ -49,7 +50,7 @@ export default function ArchitecturePage() {
       {/* Hero Section */}
       <section className="relative h-[70vh] flex items-center justify-center overflow-hidden">
         <Image
-          src="/cathedral-architecture-exterior-dramatic-angle-cas.jpg"
+          src="/site-map-images/architecture-optimized/cethedrale image.jpeg"
           alt="Architecture du Sacré-Cœur"
           fill
           className="object-cover animate-subtle-float"
@@ -171,6 +172,135 @@ export default function ArchitecturePage() {
               <div className="font-serif text-5xl lg:text-7xl text-vibrant-pink mb-4">1930</div>
               <div className="font-sans text-sm tracking-wider uppercase text-off-white/70">Année de conception</div>
             </div>
+          </div>
+        </div>
+      </section>
+
+      {/* Entre Art Déco et modernisme spirituel */}
+      <section className="py-20 lg:py-32 bg-off-white">
+        <div className="max-w-[1000px] mx-auto px-6 lg:px-12">
+          <h2 className="font-serif text-4xl lg:text-6xl text-charcoal mb-8 animate-fade-in-up text-center">
+            Entre Art Déco et modernisme spirituel
+          </h2>
+          <p className="font-sans text-lg text-charcoal/70 leading-relaxed mb-6 animate-fade-in-up delay-100 text-readable">
+            L'architecture du Sacré-Cœur est une œuvre pionnière du mouvement Art Déco marocain, où se rencontrent spiritualité et innovation technique.
+            Le choix du béton armé matériau novateur à l'époque a permis la création de volumes vertigineux, de voûtes élancées, et d'un espace intérieur d'une légèreté lumineuse exceptionnelle.
+            Les ouvertures rythmées de vitraux laissent pénétrer une lumière filtrée, transformant chaque rayon en une vibration colorée sur les murs blancs.
+          </p>
+        </div>
+      </section>
+
+      {/* Une alliance subtile entre cultures */}
+      <section className="py-20 lg:py-32 bg-charcoal/5">
+        <div className="max-w-[1000px] mx-auto px-6 lg:px-12">
+          <h2 className="font-serif text-4xl lg:text-6xl text-charcoal mb-8 animate-fade-in-up text-center">
+            Une alliance subtile entre cultures
+          </h2>
+          <p className="font-sans text-lg text-charcoal/70 leading-relaxed mb-6 animate-fade-in-up delay-100 text-readable">
+            L'esthétique de l'édifice évoque un dialogue entre les styles européens et arabo-andalous.
+            Les résilles géométriques qui décorent les façades rappellent l'artisanat local, tandis que les deux clochers élancés font écho à l'architecture islamique.
+            Cette hybridation fait du Sacré-Cœur un symbole unique de la Casablanca des années 1930, ville d'échanges et de coexistence culturelle.
+          </p>
+        </div>
+      </section>
+
+      {/* Une restauration respectueuse */}
+      <section className="py-20 lg:py-32 bg-off-white">
+        <div className="max-w-[1000px] mx-auto px-6 lg:px-12">
+          <h2 className="font-serif text-4xl lg:text-6xl text-charcoal mb-8 animate-fade-in-up text-center">
+            Une restauration respectueuse et innovante
+          </h2>
+          <p className="font-sans text-lg text-charcoal/70 leading-relaxed mb-6 animate-fade-in-up delay-100 text-readable">
+            Lors de la rénovation, chaque élément a été traité avec soin : les piliers, voûtes, vitraux et coupoles ont été nettoyés, consolidés et protégés durablement.
+            Une attention particulière a été portée à l'acoustique, avec l'ajout de panneaux absorbants permettant de réduire la réverbération tout en préservant le volume monumental.
+            Les interventions contemporaines, sobres et réversibles, s'intègrent harmonieusement dans la structure originelle, révélant la puissance géométrique et la pureté architecturale de l'édifice.
+          </p>
+        </div>
+      </section>
+
+      {/* Un espace vivant et modulable */}
+      <section className="py-20 lg:py-32 bg-charcoal text-off-white">
+        <div className="max-w-[1000px] mx-auto px-6 lg:px-12">
+          <h2 className="font-serif text-4xl lg:text-6xl mb-8 animate-fade-in-up text-center">
+            Un espace vivant et modulable
+          </h2>
+          <p className="font-sans text-lg text-off-white/80 leading-relaxed mb-6 animate-fade-in-up delay-100 text-readable">
+            Grâce à sa modularité intérieure, l'Ex Sacré-Cœur s'adapte aujourd'hui à de nouvelles fonctions : expositions, concerts, conférences, installations artistiques ou performances.
+            Ses proportions grandioses et sa lumière naturelle offrent un cadre unique où le patrimoine dialogue avec la création contemporaine.
+          </p>
+          <p className="font-sans text-sm text-off-white/60 leading-relaxed animate-fade-in-up delay-200 text-center">
+            Source : A+E Magazine, publié le 20 février 2025. Rénovation et reconversion de l'Église du Sacré-cœur de Casablanca
+          </p>
+        </div>
+      </section>
+
+      {/* Architecture Photo Gallery */}
+      <section className="py-20 lg:py-32 bg-off-white">
+        <div className="max-w-[1600px] mx-auto px-6 lg:px-12">
+          <div className="text-center mb-16">
+            <h2 className="font-serif text-4xl lg:text-6xl text-charcoal mb-6 animate-fade-in-up">
+              Galerie Architecturale
+            </h2>
+            <p className="font-sans text-base lg:text-lg text-charcoal/70 max-w-3xl mx-auto animate-fade-in-up stagger-1">
+              Explorez les détails architecturaux uniques du Sacré-Cœur à travers notre collection de photographies
+            </p>
+          </div>
+
+          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6 lg:gap-8">
+            {[
+              {
+                title: "Vue Extérieure",
+                image: "/site-map-images/architecture-optimized/Eglise-du-Sacre-Coeur-9-1024x768.jpeg",
+              },
+              {
+                title: "Détail Architectural",
+                image: "/site-map-images/architecture-optimized/Eglise-du-Sacre-Coeur-2-1-461x1024.jpeg",
+              },
+              {
+                title: "Perspective Intérieure",
+                image: "/site-map-images/architecture-optimized/IMG-20210712-WA0035-576x1024.jpeg",
+              },
+              {
+                title: "Vue Panoramique",
+                image: "/site-map-images/architecture-optimized/Eglise-du-Sacre-Coeur-6-1024x461.jpeg",
+              },
+              {
+                title: "Élévation",
+                image: "/site-map-images/architecture-optimized/Eglise-du-Sacre-Coeur-7-1024x461.jpeg",
+              },
+              {
+                title: "Détail de Façade",
+                image: "/site-map-images/architecture-optimized/Eglise-du-Sacre-Coeur-4-696x313.jpeg",
+              },
+            ].map((photo, index) => (
+              <div
+                key={photo.title}
+                className={`group relative h-[400px] overflow-hidden shadow-lg hover:shadow-2xl transition-all duration-500 animate-fade-in-up stagger-${index + 1}`}
+              >
+                <Image
+                  src={photo.image}
+                  alt={photo.title}
+                  fill
+                  className="object-cover transition-all duration-700 group-hover:scale-110 group-hover:brightness-105"
+                />
+                <div className="absolute inset-0 bg-gradient-to-t from-charcoal/80 via-charcoal/20 to-transparent opacity-60 group-hover:opacity-80 transition-opacity duration-500"></div>
+                
+                {/* Corner Accents */}
+                <div className="absolute inset-4 border border-off-white/20 opacity-0 group-hover:opacity-100 transition-opacity duration-500">
+                  <div className="absolute top-0 left-0 w-4 h-4 border-t-2 border-l-2 border-vibrant-pink"></div>
+                  <div className="absolute top-0 right-0 w-4 h-4 border-t-2 border-r-2 border-vibrant-pink"></div>
+                  <div className="absolute bottom-0 left-0 w-4 h-4 border-b-2 border-l-2 border-warm-terracotta"></div>
+                  <div className="absolute bottom-0 right-0 w-4 h-4 border-b-2 border-r-2 border-warm-terracotta"></div>
+                </div>
+
+                <div className="absolute bottom-0 left-0 right-0 p-6 transform translate-y-2 group-hover:translate-y-0 transition-transform duration-500">
+                  <div className="w-12 h-px bg-gradient-to-r from-vibrant-pink to-transparent mb-3 opacity-0 group-hover:opacity-100 transition-opacity duration-500"></div>
+                  <h3 className="font-serif text-xl lg:text-2xl text-off-white">
+                    {photo.title}
+                  </h3>
+                </div>
+              </div>
+            ))}
           </div>
         </div>
       </section>

@@ -15,6 +15,7 @@ export default function EtudiantsPage() {
         <div className="max-w-[1400px] mx-auto px-6 lg:px-12">
           <Breadcrumb 
             items={[
+              { label: "Visiter", href: "/visiter/individuels" },
               { label: "Étudiants", href: "/visiter/etudiants" }
             ]} 
           />
@@ -48,20 +49,18 @@ export default function EtudiantsPage() {
           </div>
           <div className="animate-fade-in-up stagger-1">
             <h2 className="font-serif text-4xl md:text-5xl text-charcoal mb-6 text-balance">
-              Un lieu d'apprentissage unique
+              Tarif étudiant préférentiel
             </h2>
-            <p className="font-sans text-base text-charcoal/70 leading-relaxed mb-6">
-              Le Sacré-Cœur de Casablanca est un terrain d'étude exceptionnel pour les étudiants en architecture,
-              histoire de l'art, patrimoine et photographie. Nous proposons des programmes éducatifs adaptés aux cursus
-              universitaires et aux écoles d'art.
-            </p>
-            <p className="font-sans text-base text-charcoal/70 leading-relaxed mb-8">
-              Bénéficiez de tarifs préférentiels et d'un accès privilégié pour vos projets académiques.
-            </p>
-            <div className="inline-block px-8 py-4 bg-gradient-to-r from-vibrant-pink to-warm-terracotta text-off-white">
-              <p className="font-serif text-3xl mb-1">25 MAD</p>
+            <div className="inline-block px-8 py-4 bg-gradient-to-r from-vibrant-pink to-warm-terracotta text-off-white mb-8 shadow-lg">
+              <p className="font-serif text-4xl mb-1">25 MAD</p>
               <p className="font-sans text-xs tracking-wider uppercase">Tarif étudiant</p>
             </div>
+            <p className="font-sans text-base text-charcoal/70 leading-relaxed mb-6">
+              Découvrez la cathédrale à tarif réduit ! Profitez d'un parcours culturel et architectural unique, spécialement pensé pour les étudiants curieux de patrimoine et d'histoire.
+            </p>
+            <p className="font-sans text-base text-charcoal/70 leading-relaxed">
+              Le Sacré-Cœur de Casablanca est un terrain d'étude exceptionnel pour les étudiants en architecture, histoire de l'art, patrimoine et photographie.
+            </p>
           </div>
         </div>
       </section>

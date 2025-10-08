@@ -11,7 +11,10 @@ export default function GroupesPage() {
       <Navigation />
       <div className="pt-32 pb-8 bg-off-white">
         <div className="max-w-[1400px] mx-auto px-6 lg:px-12">
-          <Breadcrumb items={[{ label: "Groupes", href: "/visiter/groupes" }]} />
+          <Breadcrumb items={[
+            { label: "Visiter", href: "/visiter/individuels" },
+            { label: "Groupes", href: "/visiter/groupes" }
+          ]} />
         </div>
       </div>
       {/* Hero Section */}
@@ -33,15 +36,18 @@ export default function GroupesPage() {
         <div className="grid lg:grid-cols-2 gap-16 items-center">
           <div className="animate-fade-in-up">
             <h2 className="font-serif text-4xl md:text-5xl text-charcoal mb-6 text-balance">
-              Une expérience collective inoubliable
+              Découvrez la cathédrale en groupe
             </h2>
+            <div className="inline-block px-8 py-4 bg-gradient-to-r from-vibrant-pink to-warm-terracotta text-off-white mb-8 shadow-lg">
+              <p className="font-serif text-4xl mb-1">35 MAD</p>
+              <p className="font-sans text-xs tracking-wider uppercase">Par personne</p>
+            </div>
             <p className="font-sans text-base text-charcoal/70 leading-relaxed mb-6">
-              Le Sacré-Cœur de Casablanca accueille les groupes pour des visites guidées enrichissantes. Que vous soyez
-              une association, une entreprise, ou un groupe d'amis, nos guides experts vous feront découvrir l'histoire
-              et l'architecture exceptionnelle de ce monument emblématique.
+              Vous souhaitez découvrir la cathédrale entre amis ou en petit groupe (plus de 10 personnes) ?
+              Profitez d'une visite libre ou accompagnée, selon vos envies, pour explorer l'histoire, l'architecture et la symbolique de ce monument emblématique de Casablanca.
             </p>
             <p className="font-sans text-base text-charcoal/70 leading-relaxed">
-              Profitez de tarifs préférentiels et d'une attention personnalisée pour votre groupe.
+              Choisissez le parcours qui vous correspond le mieux, prenez le temps d'admirer les vitraux, les volumes et la lumière, et laissez-vous porter par la magie du lieu.
             </p>
           </div>
           <div className="relative h-[500px] animate-fade-in-up stagger-1">

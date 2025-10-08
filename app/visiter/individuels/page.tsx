@@ -47,6 +47,7 @@ export default function IndividuelsPage() {
         <div className="max-w-[1400px] mx-auto px-6 lg:px-12">
           <Breadcrumb 
             items={[
+              { label: "Visiter", href: "/visiter/individuels" },
               { label: "Individuels et familles", href: "/visiter/individuels" }
             ]} 
           />
@@ -154,7 +155,7 @@ export default function IndividuelsPage() {
               </div>
               <div className="flex items-start gap-4">
                 <div className="w-2 h-2 bg-warm-terracotta rounded-full mt-2" />
-                <p className="font-sans text-sm text-charcoal/70">Tarif famille : 2 adultes + 2 enfants = 150 MAD</p>
+                <p className="font-sans text-sm text-charcoal/70">Tarif famille : 2 adultes + 2 enfants = 120 MAD</p>
               </div>
             </div>
           </div>

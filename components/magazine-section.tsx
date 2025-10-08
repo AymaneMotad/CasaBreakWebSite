@@ -41,7 +41,7 @@ export function MagazineSection() {
         <div className="grid lg:grid-cols-2 gap-12 lg:gap-20 items-center mb-32">
           <div className="animate-gentle-fade-in">
             <img
-              src="/classical-music-concert-cathedral-performance.jpg"
+              src="/site-map-images/architecture-optimized/Eglise-du-Sacre-Coeur-9-1024x768.jpeg"
               alt="Concert at Ex Sacré-Cœur"
               className="w-full h-[500px] object-cover rounded-lg hover-scale-subtle transition-smooth"
             />
@@ -78,7 +78,7 @@ export function MagazineSection() {
           </div>
           <div className="order-1 lg:order-2 animate-slide-in-right stagger-1">
             <img
-              src="/art-exhibition-contemporary-gallery-cathedral.jpg"
+              src="/site-map-images/evenements-optimized/soiree/evenement - soiree 5.jpg"
               alt="Exhibition at Ex Sacré-Cœur"
               className="w-full h-[500px] object-cover rounded-lg hover-scale"
             />
@@ -89,7 +89,7 @@ export function MagazineSection() {
         <div className="grid lg:grid-cols-2 gap-12 lg:gap-20 items-center">
           <div className="animate-slide-in-left stagger-2">
             <img
-              src="/heritage-workshop-restoration-architecture.jpg"
+              src="/site-map-images/histoire-optimized/2a1_H1-1017_176P474 (1).jpg"
               alt="Cultural diversity at Ex Sacré-Cœur"
               className="w-full h-[500px] object-cover rounded-lg hover-scale"
             />
