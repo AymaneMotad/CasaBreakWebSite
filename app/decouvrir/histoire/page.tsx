@@ -146,9 +146,7 @@ export default function HistoirePage() {
             {/* 1923 */}
             <div className="grid lg:grid-cols-2 gap-16 items-center">
               <div className="animate-gentle-fade-in">
-                <div className="inline-block px-6 py-3 bg-gradient-to-r from-vibrant-pink/10 to-warm-terracotta/10 border border-vibrant-pink/20 rounded-full mb-8">
-                  <span className="text-charcoal/80 text-sm font-sans tracking-wider uppercase">Le début d'un projet symbolique</span>
-                </div>
+           
                 <span className="font-serif text-7xl lg:text-9xl text-vibrant-pink block mb-6">1923</span>
                 <h3 className="font-serif text-4xl lg:text-6xl text-charcoal mb-8">Le début d'un projet symbolique</h3>
                 <p className="font-sans text-lg text-charcoal/70 leading-relaxed text-readable">
@@ -182,9 +180,7 @@ export default function HistoirePage() {
                 <p className="text-xs text-charcoal/50 mt-3 font-sans italic">Photo issue du Fonds Flandrin, collection privée de la Fondation Banque Populaire</p>
               </div>
               <div className="animate-gentle-fade-in stagger-1">
-                <div className="inline-block px-6 py-3 bg-gradient-to-r from-warm-terracotta/10 to-charcoal/10 border border-warm-terracotta/20 rounded-full mb-8">
-                  <span className="text-charcoal/80 text-sm font-sans tracking-wider uppercase">L'achèvement d'un chef-d'œuvre</span>
-                </div>
+             
                 <span className="font-serif text-7xl lg:text-9xl text-warm-terracotta block mb-6">1930</span>
                 <h3 className="font-serif text-4xl lg:text-6xl text-charcoal mb-8">L'achèvement d'un chef-d'œuvre architectural</h3>
                 <p className="font-sans text-lg text-charcoal/70 leading-relaxed text-readable mb-4">
@@ -199,9 +195,7 @@ export default function HistoirePage() {
             {/* 1956 */}
             <div className="grid lg:grid-cols-2 gap-16 items-center">
               <div className="animate-gentle-fade-in">
-                <div className="inline-block px-6 py-3 bg-gradient-to-r from-vibrant-pink/10 to-warm-terracotta/10 border border-vibrant-pink/20 rounded-full mb-8">
-                  <span className="text-charcoal/80 text-sm font-sans tracking-wider uppercase">L'indépendance : un tournant</span>
-                </div>
+             
                 <span className="font-serif text-7xl lg:text-9xl text-vibrant-pink block mb-6">1956</span>
                 <h3 className="font-serif text-4xl lg:text-6xl text-charcoal mb-8">L'indépendance du Maroc : un tournant</h3>
                 <p className="font-sans text-lg text-charcoal/70 leading-relaxed text-readable mb-4">
@@ -238,9 +232,7 @@ export default function HistoirePage() {
                 <p className="text-xs text-charcoal/50 mt-3 font-sans italic">Photo issue du Fonds Flandrin, collection privée de la Fondation Banque Populaire</p>
               </div>
               <div className="animate-gentle-fade-in stagger-1">
-                <div className="inline-block px-6 py-3 bg-gradient-to-r from-warm-terracotta/10 to-vibrant-pink/10 border border-warm-terracotta/20 rounded-full mb-8">
-                  <span className="text-charcoal/80 text-sm font-sans tracking-wider uppercase">Changement d'usage</span>
-                </div>
+               
                 <span className="font-serif text-7xl lg:text-9xl text-warm-terracotta block mb-6">1976</span>
                 <h3 className="font-serif text-4xl lg:text-6xl text-charcoal mb-8">Déconsécration et changement d'usage</h3>
                 <p className="font-sans text-lg text-charcoal/70 leading-relaxed text-readable mb-4">
@@ -255,9 +247,7 @@ export default function HistoirePage() {
             {/* 1990-2000 */}
             <div className="grid lg:grid-cols-2 gap-16 items-center">
               <div className="animate-gentle-fade-in">
-                <div className="inline-block px-6 py-3 bg-gradient-to-r from-vibrant-pink/10 to-warm-terracotta/10 border border-vibrant-pink/20 rounded-full mb-8">
-                  <span className="text-charcoal/80 text-sm font-sans tracking-wider uppercase">Reconnaissance patrimoniale</span>
-                </div>
+              
                 <span className="font-serif text-7xl lg:text-9xl text-vibrant-pink block mb-6">1990-2000</span>
                 <h3 className="font-serif text-4xl lg:text-6xl text-charcoal mb-8">Reconnaissance patrimoniale</h3>
                 <p className="font-sans text-lg text-charcoal/70 leading-relaxed text-readable mb-4">
@@ -294,9 +284,7 @@ export default function HistoirePage() {
                 <p className="text-xs text-charcoal/50 mt-3 font-sans italic">Photo issue du Fonds Flandrin, collection privée de la Fondation Banque Populaire</p>
               </div>
               <div className="animate-gentle-fade-in stagger-1">
-                <div className="inline-block px-6 py-3 bg-gradient-to-r from-warm-terracotta/10 to-charcoal/10 border border-warm-terracotta/20 rounded-full mb-8">
-                  <span className="text-charcoal/80 text-sm font-sans tracking-wider uppercase">Début de la réhabilitation</span>
-                </div>
+               
                 <span className="font-serif text-7xl lg:text-9xl text-warm-terracotta block mb-6">2010</span>
                 <h3 className="font-serif text-4xl lg:text-6xl text-charcoal mb-8">Début de la réhabilitation</h3>
                 <p className="font-sans text-lg text-charcoal/70 leading-relaxed text-readable mb-4">
@@ -311,9 +299,7 @@ export default function HistoirePage() {
             {/* Aujourd'hui */}
             <div className="grid lg:grid-cols-2 gap-16 items-center">
               <div className="animate-gentle-fade-in">
-                <div className="inline-block px-6 py-3 bg-gradient-to-r from-vibrant-pink/10 to-warm-terracotta/10 border border-vibrant-pink/20 rounded-full mb-8">
-                  <span className="text-charcoal/80 text-sm font-sans tracking-wider uppercase">Renaissance d'un joyau</span>
-                </div>
+               
                 <span className="font-serif text-6xl lg:text-7xl text-vibrant-pink block mb-6">Aujourd'hui</span>
                 <h3 className="font-serif text-3xl lg:text-5xl text-charcoal mb-8">Renaissance d'un joyau patrimonial</h3>
                 <p className="font-sans text-lg text-charcoal/70 leading-relaxed text-readable mb-4">
