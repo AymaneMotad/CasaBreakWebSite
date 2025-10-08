@@ -3,6 +3,7 @@ import { Calendar, Users, Mail, Phone, User } from "lucide-react"
 import { Navigation } from "@/components/navigation"
 import { Footer } from "@/components/footer"
 import { Breadcrumb } from "@/components/breadcrumb"
+import { AvailabilityCalendar } from "@/components/availability-calendar"
 
 export default function ReserverPage() {
   return (
@@ -247,6 +248,24 @@ export default function ReserverPage() {
               <div className="w-2 h-2 rounded-full bg-warm-terracotta animate-pulse"></div>
               <div className="h-px w-20 bg-gradient-to-r from-transparent via-warm-terracotta/40 to-transparent"></div>
             </div>
+          </div>
+        </div>
+      </section>
+
+      {/* Availability Calendar */}
+      <section className="py-20 lg:py-32 bg-gradient-to-b from-off-white to-cream">
+        <div className="max-w-[1200px] mx-auto px-6 lg:px-12">
+          <div className="text-center mb-12 animate-fade-in-up">
+            <h2 className="font-serif text-4xl md:text-5xl lg:text-6xl text-charcoal mb-6 tracking-tight">
+              Vérifiez nos disponibilités
+            </h2>
+            <p className="font-sans text-lg text-charcoal/70 max-w-3xl mx-auto leading-relaxed">
+              Consultez notre calendrier pour voir les dates disponibles et planifier votre événement au Sacré-Cœur
+            </p>
+          </div>
+          
+          <div className="animate-fade-in-up stagger-1">
+            <AvailabilityCalendar />
           </div>
         </div>
       </section>

@@ -39,11 +39,11 @@ export function MagazineSection() {
       <div className="max-w-[1400px] mx-auto px-6 lg:px-12 relative z-10">
         {/* First Block - Image Left, Text Right */}
         <div className="grid lg:grid-cols-2 gap-12 lg:gap-20 items-center mb-32">
-          <div className="animate-gentle-fade-in">
+          <div className="animate-gentle-fade-in flex justify-center">
             <img
-              src="/site-map-images/architecture-optimized/Eglise-du-Sacre-Coeur-9-1024x768.jpeg"
-              alt="Concert at Ex Sacré-Cœur"
-              className="w-full h-[500px] object-cover rounded-lg hover-scale-subtle transition-smooth"
+              src="/sacrefront.png"
+              alt="Façade du Sacré-Cœur de Casablanca"
+              className="w-full max-w-none h-[650px] object-contain rounded-lg hover-scale-subtle transition-smooth"
             />
           </div>
           <div className="animate-gentle-fade-in stagger-1">
