@@ -6,9 +6,9 @@ import Image from "next/image"
 export default function ArchitecturePage() {
   const features = [
     {
-      title: "Les Tours Jumelles",
+      title: "Entre Art Déco et modernisme spirituel",
       description:
-        "Deux tours de 50 mètres de hauteur dominent le paysage urbain, inspirées des cathédrales gothiques européennes mais réinterprétées dans un style Art Déco épuré.",
+        "L'architecture du Sacré-Cœur est une œuvre pionnière du mouvement Art Déco marocain, où se rencontrent spiritualité et innovation technique. Le choix du béton armé matériau novateur à l'époque a permis la création de volumes vertigineux, de voûtes élancées, et d'un espace intérieur d'une légèreté lumineuse exceptionnelle. Les ouvertures rythmées de vitraux laissent pénétrer une lumière filtrée, transformant chaque rayon en une vibration colorée sur les murs blancs.",
       image: "/site-map-images/architecture-optimized/Eglise-du-Sacre-Coeur-10-1-576x1024.jpeg",
     },
     {
@@ -111,21 +111,8 @@ export default function ArchitecturePage() {
         </div>
       </section>
 
-      {/* Introduction */}
-      <section className="max-w-[1000px] mx-auto px-6 lg:px-12 py-20 lg:py-32 text-center">
-        <h2 className="font-serif text-4xl lg:text-6xl text-charcoal mb-8 animate-fade-in-up">
-          Un Dialogue Entre Époques
-        </h2>
-        <p className="font-sans text-base lg:text-lg text-charcoal/70 leading-relaxed animate-fade-in-up delay-100">
-          Conçu par l'architecte Paul Tournon, le Sacré-Cœur de Casablanca représente une synthèse remarquable entre
-          l'architecture gothique traditionnelle et l'esthétique Art Déco des années 1930. Chaque élément architectural
-          a été pensé pour créer un espace à la fois spirituel et moderne, reflétant l'esprit d'une époque de
-          transformation.
-        </p>
-      </section>
-
       {/* Architectural Features */}
-      <section className="max-w-[1400px] mx-auto px-6 lg:px-12 pb-20 lg:pb-32">
+      <section className="max-w-[1400px] mx-auto px-6 lg:px-12 py-20 lg:py-32">
         <div className="space-y-32">
           {features.map((feature, index) => (
             <div
@@ -173,20 +160,6 @@ export default function ArchitecturePage() {
               <div className="font-sans text-sm tracking-wider uppercase text-off-white/70">Année de conception</div>
             </div>
           </div>
-        </div>
-      </section>
-
-      {/* Entre Art Déco et modernisme spirituel */}
-      <section className="py-20 lg:py-32 bg-off-white">
-        <div className="max-w-[1000px] mx-auto px-6 lg:px-12">
-          <h2 className="font-serif text-4xl lg:text-6xl text-charcoal mb-8 animate-fade-in-up text-center">
-            Entre Art Déco et modernisme spirituel
-          </h2>
-          <p className="font-sans text-lg text-charcoal/70 leading-relaxed mb-6 animate-fade-in-up delay-100 text-readable">
-            L'architecture du Sacré-Cœur est une œuvre pionnière du mouvement Art Déco marocain, où se rencontrent spiritualité et innovation technique.
-            Le choix du béton armé matériau novateur à l'époque a permis la création de volumes vertigineux, de voûtes élancées, et d'un espace intérieur d'une légèreté lumineuse exceptionnelle.
-            Les ouvertures rythmées de vitraux laissent pénétrer une lumière filtrée, transformant chaque rayon en une vibration colorée sur les murs blancs.
-          </p>
         </div>
       </section>
 
