@@ -1,9 +1,8 @@
 import Image from "next/image"
-import { Calendar, Users, Mail, Phone, User } from "lucide-react"
+import { Calendar, Users, Mail, Phone, User, Key, UsersRound, Volume2, Sofa, Shield, Sparkles, ParkingCircle, Headphones } from "lucide-react"
 import { Navigation } from "@/components/navigation"
 import { Footer } from "@/components/footer"
 import { Breadcrumb } from "@/components/breadcrumb"
-import { AvailabilityCalendar } from "@/components/availability-calendar"
 
 export default function ReserverPage() {
   return (
@@ -252,24 +251,6 @@ export default function ReserverPage() {
         </div>
       </section>
 
-      {/* Availability Calendar */}
-      <section className="py-20 lg:py-32 bg-gradient-to-b from-off-white to-cream">
-        <div className="max-w-[1200px] mx-auto px-6 lg:px-12">
-          <div className="text-center mb-12 animate-fade-in-up">
-            <h2 className="font-serif text-4xl md:text-5xl lg:text-6xl text-charcoal mb-6 tracking-tight">
-              Vérifiez nos disponibilités
-            </h2>
-            <p className="font-sans text-lg text-charcoal/70 max-w-3xl mx-auto leading-relaxed">
-              Consultez notre calendrier pour voir les dates disponibles et planifier votre événement au Sacré-Cœur
-            </p>
-          </div>
-          
-          <div className="animate-fade-in-up stagger-1">
-            <AvailabilityCalendar />
-          </div>
-        </div>
-      </section>
-
       {/* Booking Form */}
       <section className="max-w-[1000px] mx-auto px-6 lg:px-12 py-20">
         <div className="bg-charcoal/5 p-10 lg:p-16">
@@ -391,13 +372,15 @@ export default function ReserverPage() {
             </div>
 
             <div className="text-center animate-fade-in-up stagger-9">
+              <p className="font-sans text-xs text-charcoal/60 mb-6 max-w-2xl mx-auto leading-relaxed">
+                Réservez le Sacré-Cœur pour votre événement ! Contactez notre équipe pour organiser votre événement au Sacré-Cœur et profitez d'un cadre prestigieux au cœur de Casablanca.
+              </p>
               <button
                 type="submit"
                 className="px-16 py-5 bg-gradient-to-r from-blue-500 to-blue-700 text-white text-sm font-sans tracking-[0.15em] uppercase hover:shadow-2xl hover:scale-105 transition-all duration-300 rounded-lg"
               >
-                Envoyer la demande
+                Réserver maintenant
               </button>
-              <p className="font-sans text-xs text-charcoal/50 mt-6">Nous vous répondrons dans les 48 heures</p>
             </div>
           </form>
         </div>
@@ -409,19 +392,25 @@ export default function ReserverPage() {
           <h2 className="font-serif text-4xl md:text-5xl mb-16 text-center animate-fade-in-up">Services inclus</h2>
           <div className="grid md:grid-cols-2 lg:grid-cols-4 gap-8">
             {[
-              "Accès exclusif aux espaces",
-              "Équipe d'accueil dédiée",
-              "Système son et éclairage",
-              "Mobilier et décoration de base",
-              "Sécurité et surveillance",
-              "Nettoyage après événement",
-              "Parking privatisé",
-              "Assistance technique",
-            ].map((service, index) => (
-              <div key={service} className={`text-center p-6 bg-off-white/5 animate-fade-in-up stagger-${index + 1}`}>
-                <p className="font-sans text-sm">{service}</p>
-              </div>
-            ))}
+              { icon: Key, text: "Accès exclusif aux espaces" },
+              { icon: UsersRound, text: "Équipe d'accueil dédiée" },
+              { icon: Volume2, text: "Système son et éclairage" },
+              { icon: Sofa, text: "Mobilier et décoration de base" },
+              { icon: Shield, text: "Sécurité et surveillance" },
+              { icon: Sparkles, text: "Nettoyage après événement" },
+              { icon: ParkingCircle, text: "Parking privatisé" },
+              { icon: Headphones, text: "Assistance technique" },
+            ].map((service, index) => {
+              const Icon = service.icon
+              return (
+                <div key={service.text} className={`text-center p-6 bg-off-white/5 rounded-lg hover:bg-off-white/10 transition-colors animate-fade-in-up stagger-${index + 1}`}>
+                  <div className="flex justify-center mb-4">
+                    <Icon className="w-8 h-8 text-blue-400" />
+                  </div>
+                  <p className="font-sans text-sm">{service.text}</p>
+                </div>
+              )
+            })}
           </div>
         </div>
       </section>
