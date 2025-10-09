@@ -55,11 +55,8 @@ export default function EtudiantsPage() {
               <p className="font-serif text-4xl mb-1">25 MAD</p>
               <p className="font-sans text-xs tracking-wider uppercase">Tarif étudiant</p>
             </div>
-            <p className="font-sans text-base text-charcoal/70 leading-relaxed mb-6">
-              Découvrez la cathédrale à tarif réduit ! Profitez d'un parcours culturel et architectural unique, spécialement pensé pour les étudiants curieux de patrimoine et d'histoire.
-            </p>
             <p className="font-sans text-base text-charcoal/70 leading-relaxed">
-              Le Sacré-Cœur de Casablanca est un terrain d'étude exceptionnel pour les étudiants en architecture, histoire de l'art, patrimoine et photographie.
+              Découvrez la cathédrale à tarif réduit ! Profitez d'un parcours culturel et architectural unique, spécialement pensé pour les étudiants curieux de patrimoine et d'histoire.
             </p>
           </div>
         </div>

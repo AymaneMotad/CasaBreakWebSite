@@ -377,7 +377,7 @@ export default function HistoirePage() {
               </h2>
               
               <p className="font-sans text-lg text-charcoal/70 leading-relaxed mb-8">
-                Plongez dans les détails architecturaux exceptionnels de l'Ex Sacré-Cœur. 
+                Plongez dans les détails architecturaux exceptionnels de l'Ex église Sacré-Cœur. 
                 Découvrez comment l'Art Déco et le modernisme se rencontrent dans ce chef-d'œuvre unique.
               </p>
 
@@ -399,7 +399,7 @@ export default function HistoirePage() {
               <div className="relative h-[400px] lg:h-[450px] rounded-2xl overflow-hidden shadow-2xl group">
                 <Image
                   src="/site-map-images/architecture-optimized/cethedrale image.jpeg"
-                  alt="Architecture de l'Ex Sacré-Cœur"
+                  alt="Architecture de l'Ex église Sacré-Cœur"
                   fill
                   className="object-cover transition-transform duration-700 group-hover:scale-105"
                 />

@@ -38,11 +38,11 @@ export default function ReserverPage() {
 
       {/* Hero Section */}
       <section className="relative h-[50vh] flex items-center justify-center overflow-hidden">
-        <Image src="/site-map-images/reserver sacre coeur/reserver sacre coeur - ferrari /reserver sacre coeur - ferrari 1.jpeg" alt="Réserver" fill className="object-cover" priority />
+        <Image src="/reserve.png" alt="Réserver l'Ex église Sacré-Cœur" fill className="object-cover" priority />
         <div className="absolute inset-0 bg-charcoal/50" />
         <div className="relative z-10 text-center px-6">
           <h1 className="font-serif text-5xl md:text-7xl text-off-white mb-4 animate-fade-in-up text-balance">
-            Réserver l'Ex Sacré-Cœur
+            Réserver l'Ex église Sacré-Cœur
           </h1>
           <p className="font-sans text-sm md:text-base text-off-white/90 tracking-wider uppercase animate-fade-in-up stagger-1">
             Un lieu d'exception pour vos événements
@@ -100,7 +100,7 @@ export default function ReserverPage() {
               Découvrez nos espaces
             </h2>
             <p className="font-sans text-lg md:text-xl text-charcoal/70 max-w-3xl mx-auto leading-relaxed">
-              Une visite immersive de l'Ex Sacré-Cœur, un lieu d'exception pour vos événements les plus prestigieux
+              Une visite immersive de l'Ex église Sacré-Cœur, un lieu d'exception pour vos événements les plus prestigieux
             </p>
             <div className="inline-flex items-center gap-2 mt-6">
               <div className="h-px w-12 bg-gradient-to-r from-transparent to-warm-terracotta/60"></div>
@@ -226,7 +226,7 @@ export default function ReserverPage() {
               Ils nous ont fait confiance
             </h2>
             <p className="font-sans text-base sm:text-lg md:text-xl text-off-white/90 max-w-3xl mx-auto leading-relaxed px-4">
-              Des marques prestigieuses et institutions de renom ont choisi l'Ex Sacré-Cœur pour leurs événements d'exception
+              Des marques prestigieuses et institutions de renom ont choisi l'Ex église Sacré-Cœur pour leurs événements d'exception
             </p>
             <div className="inline-flex items-center gap-3 mt-6">
               <div className="h-px w-12 bg-gradient-to-r from-transparent to-warm-terracotta/60"></div>
@@ -463,7 +463,7 @@ export default function ReserverPage() {
 
             <div className="text-center animate-fade-in-up stagger-9">
               <p className="font-sans text-xs text-charcoal/60 mb-6 max-w-2xl mx-auto leading-relaxed">
-                Réservez l'Ex Sacré-Cœur pour votre événement ! Contactez notre équipe pour organiser votre événement à l'Ex Sacré-Cœur et profitez d'un cadre prestigieux au cœur de Casablanca.
+                Réservez l'Ex église Sacré-Cœur pour votre événement ! Contactez notre équipe pour organiser votre événement à l'Ex église Sacré-Cœur et profitez d'un cadre prestigieux au cœur de Casablanca.
               </p>
               <button
                 type="submit"

@@ -218,7 +218,7 @@ export function SpinningCathedral() {
               Un Monument au Cœur de Casablanca
             </h2>
             <p className="font-sans text-lg text-charcoal/70 leading-relaxed animate-gentle-fade-in stagger-1">
-              Découvrez l'histoire fascinante de l'Ex Sacré-Cœur, un joyau architectural Art Déco 
+              Découvrez l'histoire fascinante de l'Ex église Sacré-Cœur, un joyau architectural Art Déco 
               qui continue d'inspirer et de rassembler les Casablancais et les visiteurs du monde entier.
             </p>
           </div>

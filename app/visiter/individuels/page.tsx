@@ -181,13 +181,24 @@ export default function IndividuelsPage() {
             </div>
             <div className="bg-off-white p-8 animate-fade-in-up delay-100">
               <h3 className="font-serif text-2xl text-charcoal mb-4">Tarifs</h3>
-              <p className="font-sans text-sm text-charcoal/70 leading-relaxed">
-                Adulte : 50 MAD
-                <br />
-                Enfant (6-12 ans) : 25 MAD
-                <br />
-                Gratuit pour les moins de 6 ans
-              </p>
+              <div className="space-y-4 font-sans text-sm text-charcoal/70 leading-relaxed">
+                <div>
+                  <p className="font-semibold text-charcoal">Adultes : 50 MAD</p>
+                  <p className="text-xs text-charcoal/60 mt-1">Découvrez la cathédrale librement et profitez d'un moment de culture et de contemplation au cœur de Casablanca.</p>
+                </div>
+                <div>
+                  <p className="font-semibold text-charcoal">Enfants (6 à 12 ans) : 25 MAD</p>
+                  <p className="text-xs text-charcoal/60 mt-1">Un parcours adapté aux plus jeunes pour éveiller leur curiosité autour du patrimoine et de l'architecture.</p>
+                </div>
+                <div>
+                  <p className="font-semibold text-charcoal">Gratuit pour les moins de 6 ans</p>
+                  <p className="text-xs text-charcoal/60 mt-1">L'accès est libre pour les tout-petits accompagnés d'un adulte.</p>
+                </div>
+                <div>
+                  <p className="font-semibold text-charcoal">Pack famille – 2 adultes + 2 enfants : 120 MAD</p>
+                  <p className="text-xs text-charcoal/60 mt-1">Une offre avantageuse pour partager une expérience culturelle en famille à tarif réduit.</p>
+                </div>
+              </div>
             </div>
           </div>
           <a

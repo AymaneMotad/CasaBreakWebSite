@@ -53,7 +53,7 @@ export function NewsletterSection() {
         </h2>
         <p className="font-sans text-lg text-charcoal/70 leading-relaxed mb-12 animate-fade-in-up stagger-1">
           Inscrivez-vous à notre newsletter pour recevoir les dernières actualités sur nos événements, expositions et
-          activités culturelles à l'Ex Sacré-Cœur de Casablanca.
+          activités culturelles à l'Ex église Sacré-Cœur de Casablanca.
         </p>
 
         <form className="flex flex-col sm:flex-row gap-4 max-w-lg mx-auto animate-scale-in stagger-2">

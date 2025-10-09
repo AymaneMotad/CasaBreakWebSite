@@ -123,7 +123,7 @@ export default function EvenementsPage() {
               Événements passés
             </h2>
             <p className="font-sans text-lg md:text-xl text-charcoal/70 max-w-3xl mx-auto leading-relaxed animate-fade-in-up stagger-1">
-              Revivez les moments marquants qui ont fait vibrer l'Ex Sacré-Cœur
+              Revivez les moments marquants qui ont fait vibrer l'Ex église Sacré-Cœur
             </p>
           </div>
 

@@ -1,6 +1,6 @@
 import Image from "next/image"
 import Link from "next/link"
-import { Users, Calendar, Clock, Euro, Phone } from "lucide-react"
+import { Calendar, Phone } from "lucide-react"
 import { Navigation } from "@/components/navigation"
 import { Footer } from "@/components/footer"
 import { Breadcrumb } from "@/components/breadcrumb"
@@ -40,10 +40,10 @@ export default function GroupesPage() {
             </h2>
             <div className="inline-block px-8 py-4 bg-gradient-to-r from-vibrant-pink to-warm-terracotta text-off-white mb-8 shadow-lg">
               <p className="font-serif text-4xl mb-1">35 MAD</p>
-              <p className="font-sans text-xs tracking-wider uppercase">Par personne</p>
+              <p className="font-sans text-xs tracking-wider uppercase">Par personne (plus de 10 personnes)</p>
             </div>
             <p className="font-sans text-base text-charcoal/70 leading-relaxed mb-6">
-              Vous souhaitez découvrir la cathédrale entre amis ou en petit groupe (plus de 10 personnes) ?
+              Vous souhaitez découvrir la cathédrale entre amis ou en petit groupe (plus de 10 personnes) ? 
               Profitez d'une visite libre ou accompagnée, selon vos envies, pour explorer l'histoire, l'architecture et la symbolique de ce monument emblématique de Casablanca.
             </p>
             <p className="font-sans text-base text-charcoal/70 leading-relaxed">
@@ -52,98 +52,6 @@ export default function GroupesPage() {
           </div>
           <div className="relative h-[500px] animate-fade-in-up stagger-1">
             <Image src="/tour-guide-explaining-cathedral-architecture-to-gr.jpg" alt="Guide avec groupe" fill className="object-cover shadow-2xl" />
-          </div>
-        </div>
-      </section>
-
-      {/* Group Packages */}
-      <section className="bg-charcoal/5 py-20">
-        <div className="max-w-[1400px] mx-auto px-6 lg:px-12">
-          <h2 className="font-serif text-4xl md:text-5xl text-charcoal mb-16 text-center animate-fade-in-up">
-            Nos formules de groupe
-          </h2>
-          <div className="grid md:grid-cols-3 gap-8">
-            {[
-              {
-                title: "Visite Découverte",
-                duration: "1h30",
-                size: "10-25 personnes",
-                price: "40 MAD/pers",
-                features: [
-                  "Visite guidée complète",
-                  "Histoire et architecture",
-                  "Accès aux tours",
-                  "Documentation incluse",
-                ],
-              },
-              {
-                title: "Visite Premium",
-                duration: "2h30",
-                size: "10-30 personnes",
-                price: "65 MAD/pers",
-                features: [
-                  "Visite guidée approfondie",
-                  "Accès zones privées",
-                  "Démonstration orgue",
-                  "Pause café incluse",
-                ],
-                featured: true,
-              },
-              {
-                title: "Visite Sur Mesure",
-                duration: "Flexible",
-                size: "30+ personnes",
-                price: "Sur devis",
-                features: [
-                  "Programme personnalisé",
-                  "Thématiques spécifiques",
-                  "Horaires adaptés",
-                  "Services additionnels",
-                ],
-              },
-            ].map((pkg, index) => (
-              <div
-                key={pkg.title}
-                className={`bg-off-white p-8 shadow-lg hover:shadow-2xl transition-all duration-300 animate-fade-in-up stagger-${index + 1} ${
-                  pkg.featured ? "ring-2 ring-vibrant-pink transform scale-105" : ""
-                }`}
-              >
-                {pkg.featured && (
-                  <div className="inline-block px-4 py-1 bg-gradient-to-r from-vibrant-pink to-warm-terracotta text-off-white text-xs font-sans tracking-wider uppercase mb-4">
-                    Populaire
-                  </div>
-                )}
-                <h3 className="font-serif text-2xl text-charcoal mb-4">{pkg.title}</h3>
-                <div className="space-y-3 mb-6 text-sm font-sans text-charcoal/60">
-                  <div className="flex items-center gap-2">
-                    <Clock className="h-4 w-4" />
-                    <span>{pkg.duration}</span>
-                  </div>
-                  <div className="flex items-center gap-2">
-                    <Users className="h-4 w-4" />
-                    <span>{pkg.size}</span>
-                  </div>
-                  <div className="flex items-center gap-2">
-                    <Euro className="h-4 w-4" />
-                    <span className="font-serif text-lg text-charcoal">{pkg.price}</span>
-                  </div>
-                </div>
-                <ul className="space-y-2 mb-8">
-                  {pkg.features.map((feature) => (
-                    <li key={feature} className="text-sm font-sans text-charcoal/70 flex items-start gap-2">
-                      <span className="text-vibrant-pink mt-1">•</span>
-                      {feature}
-                    </li>
-                  ))}
-                </ul>
-                <Link
-                  href="/reserver"
-                  className="block text-center px-6 py-3 bg-charcoal text-off-white text-xs font-sans tracking-wider uppercase hover:bg-charcoal/90 transition-colors"
-                >
-                  Réserver
-                </Link>
-              </div>
-            ))}
           </div>
         </div>
       </section>

@@ -53,7 +53,7 @@ export function BookingSection() {
         <div className="grid lg:grid-cols-2 gap-12 lg:gap-20 items-center">
           <div className="animate-fade-in-up">
             <h2 className="font-serif font-normal text-5xl lg:text-6xl text-charcoal mb-8 leading-tight">
-              Voulez-vous réserver les billets pour vos prochains événements à l'Ex Sacré-Cœur ?
+              Voulez-vous réserver les billets pour vos prochains événements à l'Ex église Sacré-Cœur ?
             </h2>
             <p className="font-sans text-lg text-charcoal/70 leading-relaxed mb-8">
               Découvrez notre plateforme de réservation en ligne pour accéder facilement aux concerts, expositions et

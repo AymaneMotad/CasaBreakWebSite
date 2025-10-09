@@ -55,7 +55,7 @@ export function HeritageSection() {
           <div className="animate-gentle-fade-in stagger-1">
             <h3 className="font-serif text-3xl mb-6">Mémoire de Casablanca</h3>
             <p className="font-sans text-base text-off-white/80 leading-relaxed mb-8">
-              Au centre de Casablanca, l'Ex Sacré-Cœur incarne le lien entre tradition et modernité. Construit dans les années 1930, ce monument emblématique témoigne de la richesse culturelle et architecturale de la ville. Transformé au fil des décennies, il a su préserver son authenticité tout en se réinventant en espace de création et de partage. Lieu de mémoire devenu lieu de vie, il illustre la capacité de Casablanca à faire dialoguer passé et avenir.
+              Au centre de Casablanca, l'Ex église Sacré-Cœur incarne le lien entre tradition et modernité. Construit dans les années 1930, ce monument emblématique témoigne de la richesse culturelle et architecturale de la ville. Transformé au fil des décennies, il a su préserver son authenticité tout en se réinventant en espace de création et de partage. Lieu de mémoire devenu lieu de vie, il illustre la capacité de Casablanca à faire dialoguer passé et avenir.
             </p>
             <Link
               href="/decouvrir/histoire"
