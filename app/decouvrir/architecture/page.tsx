@@ -10,7 +10,7 @@ export default function ArchitecturePage() {
       title: "Entre Art Déco et modernisme spirituel",
       description:
         "L'architecture de l'Ex église Sacré-Cœur est une œuvre pionnière du mouvement Art Déco marocain, où se rencontrent spiritualité et innovation technique. Le choix du béton armé matériau novateur à l'époque a permis la création de volumes vertigineux, de voûtes élancées, et d'un espace intérieur d'une légèreté lumineuse exceptionnelle. Les ouvertures rythmées de vitraux laissent pénétrer une lumière filtrée, transformant chaque rayon en une vibration colorée sur les murs blancs.",
-      image: "/site-map-images/architecture-optimized/Eglise-du-Sacre-Coeur-10-1-576x1024.jpeg",
+      image: "/archi-2.png",
       audioText: "L'architecture de l'Ex église Sacré-Cœur est une œuvre pionnière du mouvement Art Déco marocain, où se rencontrent spiritualité et innovation technique. Le choix du béton armé matériau novateur à l'époque a permis la création de volumes vertigineux, de voûtes élancées, et d'un espace intérieur d'une légèreté lumineuse exceptionnelle. Les ouvertures rythmées de vitraux laissent pénétrer une lumière filtrée, transformant chaque rayon en une vibration colorée sur les murs blancs.",
     },
     {
@@ -24,7 +24,7 @@ export default function ArchitecturePage() {
       title: "Une restauration respectueuse et innovante",
       description:
         "Lors de la rénovation, chaque élément a été traité avec soin : les piliers, voûtes, vitraux et coupoles ont été nettoyés, consolidés et protégés durablement. Une attention particulière a été portée à l'acoustique, avec l'ajout de panneaux absorbants permettant de réduire la réverbération tout en préservant le volume monumental. Les interventions contemporaines, sobres et réversibles, s'intègrent harmonieusement dans la structure originelle, révélant la puissance géométrique et la pureté architecturale de l'édifice.",
-      image: "/site-map-images/architecture-optimized/Eglise-du-Sacre-Coeur-8-1-1024x768.jpeg",
+      image: "/archi-3.png",
       audioText: "Lors de la rénovation, chaque élément a été traité avec soin : les piliers, voûtes, vitraux et coupoles ont été nettoyés, consolidés et protégés durablement. Une attention particulière a été portée à l'acoustique, avec l'ajout de panneaux absorbants permettant de réduire la réverbération tout en préservant le volume monumental. Les interventions contemporaines, sobres et réversibles, s'intègrent harmonieusement dans la structure originelle, révélant la puissance géométrique et la pureté architecturale de l'édifice.",
     },
     {
