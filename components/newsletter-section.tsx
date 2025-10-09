@@ -64,7 +64,7 @@ export function NewsletterSection() {
           />
           <button
             type="submit"
-            className="px-8 py-4 bg-charcoal text-off-white font-sans text-sm tracking-wide uppercase rounded-md hover:bg-charcoal/90 transition-all duration-300 hover:scale-105 whitespace-nowrap"
+            className="px-8 py-4 bg-gradient-to-r from-blue-500 to-blue-700 text-white font-sans text-sm tracking-wide uppercase rounded-md hover:shadow-xl hover:scale-105 transition-all duration-300 whitespace-nowrap border-2 border-blue-600"
           >
             S'inscrire
           </button>

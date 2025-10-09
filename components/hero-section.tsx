@@ -1,6 +1,6 @@
 export function HeroSection() {
   return (
-    <section className="relative min-h-screen flex items-center justify-center bg-charcoal overflow-hidden">
+    <section className="relative min-h-[110vh] lg:min-h-[120vh] flex items-center justify-center bg-charcoal overflow-hidden pt-32 lg:pt-40">
       <div className="absolute inset-0 z-0">
         <video
           autoPlay
