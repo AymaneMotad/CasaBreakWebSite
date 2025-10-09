@@ -42,41 +42,26 @@ export function HeritageSection() {
       </div>
       
       <div className="max-w-[1400px] mx-auto px-6 lg:px-12 relative z-10">
-        <div className="text-center mb-16">
-          <h2 className="font-serif text-4xl md:text-5xl mb-6 animate-gentle-fade-in">
-            Un patrimoine à découvrir
-          </h2>
-          <p className="font-sans text-lg text-off-white/80 max-w-2xl mx-auto animate-gentle-fade-in stagger-1">
-            Explorez l'histoire, l'architecture et les trésors de l'Ex Sacré-Cœur de Casablanca
-          </p>
-        </div>
-
         <div className="grid lg:grid-cols-2 gap-16 items-center mb-20">
           <div className="animate-gentle-fade-in">
             <Image
               src="/site-map-images/architecture-optimized/Eglise-du-Sacre-Coeur-1-1024x576.jpeg"
-              alt="Architecture Art Déco"
+              alt="Ex Sacré-Cœur de Casablanca"
               width={600}
               height={400}
               className="w-full h-[400px] object-cover rounded-lg shadow-2xl"
             />
           </div>
           <div className="animate-gentle-fade-in stagger-1">
-            <h3 className="font-serif text-3xl mb-6">Architecture Art Déco</h3>
-            <p className="font-sans text-base text-off-white/80 leading-relaxed mb-6">
-              Construit en 1930, l'Ex Sacré-Cœur représente l'apogée de l'architecture Art Déco au Maroc. 
-              Ses lignes épurées, ses motifs géométriques et sa façade blanche immaculée en font un 
-              monument emblématique de Casablanca.
-            </p>
+            <h3 className="font-serif text-3xl mb-6">Mémoire de Casablanca</h3>
             <p className="font-sans text-base text-off-white/80 leading-relaxed mb-8">
-              Découvrez les secrets de sa construction, ses influences architecturales et son évolution 
-              à travers les décennies.
+              Au centre de Casablanca, l'Ex Sacré-Cœur incarne le lien entre tradition et modernité. Construit dans les années 1930, ce monument emblématique témoigne de la richesse culturelle et architecturale de la ville. Transformé au fil des décennies, il a su préserver son authenticité tout en se réinventant en espace de création et de partage. Lieu de mémoire devenu lieu de vie, il illustre la capacité de Casablanca à faire dialoguer passé et avenir.
             </p>
             <Link
-              href="/decouvrir/architecture"
+              href="/decouvrir/histoire"
               className="inline-flex items-center gap-2 px-6 py-3 bg-gradient-to-r from-blue-500 to-blue-700 text-white text-sm font-sans tracking-wider uppercase hover:shadow-xl hover:scale-105 transition-all duration-300 rounded-lg"
             >
-              Explorer l'architecture
+              Explorer l'histoire
               <ArrowRight className="h-4 w-4" />
             </Link>
           </div>

@@ -80,7 +80,7 @@ export default function HistoirePage() {
             Histoire
           </h1>
           <p className="font-sans text-lg md:text-xl text-off-white/90 max-w-2xl mx-auto leading-relaxed animate-gentle-fade-in stagger-2 text-readable">
-            Un monument emblématique de Casablanca qui raconte l'histoire d'une époque
+            Un monument emblématique de Casablanca qui raconte l'histoire de la ville à travers le 21ème siècle
           </p>
         </div>
       </section>

@@ -18,8 +18,8 @@ export function Footer() {
               Monument historique Art Déco et espace culturel au cœur de Casablanca depuis 1930.
             </p>
             <div className="font-sans text-sm text-off-white/70">
-              <p className="mb-1">Boulevard Rachidi</p>
-              <p className="mb-1">Casablanca, Maroc</p>
+              <p className="mb-1">Angle rue d'Alger et boulevard Rachidi</p>
+              <p className="mb-1">quartier Gautier, Casablanca 20250</p>
               <p>+212 522 XXX XXX</p>
             </div>
           </div>
