@@ -277,7 +277,7 @@ export default function HistoirePage() {
               <div className="animate-gentle-fade-in stagger-1">
                 <div className="relative h-[500px]">
                   <Image 
-                    src="/site-map-images/histoire-optimized/1A2_H1-4084_185P-038.jpg" 
+                    src="/histoire-1.png" 
                     alt="Patrimoine architectural" 
                     fill 
                     className="object-cover rounded-2xl shadow-2xl hover-scale-subtle transition-smooth" 
@@ -296,7 +296,7 @@ export default function HistoirePage() {
               <div className="animate-gentle-fade-in">
                 <div className="relative h-[500px]">
                   <Image 
-                    src="/site-map-images/histoire-optimized/1B3_H1-3314-222.jpg" 
+                    src="/histoire-2.png" 
                     alt="Réhabilitation 2010" 
                     fill 
                     className="object-cover rounded-2xl shadow-2xl hover-scale-subtle transition-smooth" 
@@ -337,7 +337,7 @@ export default function HistoirePage() {
               <div className="animate-gentle-fade-in stagger-1">
                 <div className="relative h-[500px] bg-charcoal/5 rounded-2xl overflow-hidden shadow-2xl">
                   <Image 
-                    src="/site-map-images/architecture-optimized/Eglise-du-Sacre-Coeur-2-1-461x1024.jpeg" 
+                    src="/histoire-3.png" 
                     alt="Le Sacré-Cœur aujourd'hui" 
                     fill 
                     className="object-contain hover-scale-subtle transition-smooth" 
