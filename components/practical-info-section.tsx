@@ -1,4 +1,4 @@
-import { Clock, MapPin, Users, Phone, Calendar, Euro } from "lucide-react"
+import { Clock, MapPin, Users, Phone, Calendar, Coins } from "lucide-react"
 
 export function PracticalInfoSection() {
   return (
@@ -65,84 +65,96 @@ export function PracticalInfoSection() {
           </p>
         </div>
 
-        {/* Main Info Grid */}
-        <div className="grid lg:grid-cols-3 gap-8 mb-20">
+        {/* Main Info Grid - Premium Minimal Design */}
+        <div className="grid lg:grid-cols-3 gap-8 mb-20 max-w-[1200px] mx-auto">
           {/* Opening Hours */}
-          <div className="group bg-off-white p-10 rounded-2xl shadow-lg hover:shadow-2xl transition-all duration-300 animate-gentle-fade-in hover-lift-subtle">
-            <div className="flex items-center gap-4 mb-8">
-              <div className="p-3 bg-gradient-to-br from-vibrant-pink to-warm-terracotta rounded-xl">
-                <Clock className="h-8 w-8 text-off-white" />
+          <div className="group relative animate-gentle-fade-in bg-gradient-to-br from-white via-blue-500/[0.03] to-white border border-blue-500/20 hover:border-blue-500/40 shadow-sm hover:shadow-lg hover:shadow-blue-500/10 transition-all duration-500 overflow-hidden">
+            <div className="absolute inset-0 bg-gradient-to-br from-blue-500/[0.08] via-transparent to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-700"></div>
+            <div className="relative p-10">
+              <div className="flex items-center gap-4 mb-12 pb-6 border-b border-blue-500/30">
+                <div className="p-2.5 bg-gradient-to-br from-blue-500/15 to-blue-500/10 rounded-lg shadow-sm">
+                  <Clock className="h-6 w-6 text-blue-600" />
+                </div>
+                <h3 className="font-serif text-2xl text-blue-600 tracking-tight font-medium">Horaires</h3>
               </div>
-              <h3 className="font-serif text-2xl text-charcoal">Horaires d'ouverture</h3>
-            </div>
-            <div className="space-y-6">
-              <div className="border-l-4 border-vibrant-pink pl-6">
-                <p className="font-semibold text-charcoal text-lg mb-2">Mardi - Dimanche</p>
-                <p className="font-sans text-charcoal/70">9h00 - 18h00</p>
-              </div>
-              <div className="border-l-4 border-warm-terracotta pl-6">
-                <p className="font-semibold text-charcoal text-lg mb-2">Dernière entrée</p>
-                <p className="font-sans text-charcoal/70">30 minutes avant la fermeture</p>
-              </div>
-              <div className="border-l-4 border-charcoal/30 pl-6">
-                <p className="font-semibold text-charcoal text-lg mb-2">Fermé le lundi</p>
-                <p className="font-sans text-charcoal/70">Entretien et maintenance</p>
+              <div className="space-y-6">
+                <div className="flex justify-between items-baseline">
+                  <span className="font-sans text-sm text-charcoal/50 uppercase tracking-wider">Mardi - Dimanche</span>
+                  <span className="font-sans text-lg text-charcoal font-light">9h - 18h</span>
+                </div>
+                <div className="h-px bg-charcoal/5"></div>
+                <div className="flex justify-between items-baseline">
+                  <span className="font-sans text-sm text-charcoal/50 uppercase tracking-wider">Dernière entrée</span>
+                  <span className="font-sans text-lg text-charcoal font-light">17h30</span>
+                </div>
+                <div className="h-px bg-charcoal/5"></div>
+                <div className="flex justify-between items-baseline">
+                  <span className="font-sans text-sm text-charcoal/50 uppercase tracking-wider">Fermé</span>
+                  <span className="font-sans text-lg text-charcoal font-light">Lundi</span>
+                </div>
               </div>
             </div>
           </div>
 
           {/* Access & Transport */}
-          <div className="group bg-off-white p-10 rounded-2xl shadow-lg hover:shadow-2xl transition-all duration-300 animate-gentle-fade-in stagger-1 hover-lift-subtle">
-            <div className="flex items-center gap-4 mb-8">
-              <div className="p-3 bg-gradient-to-br from-warm-terracotta to-charcoal rounded-xl">
-                <MapPin className="h-8 w-8 text-off-white" />
+          <div className="group relative animate-gentle-fade-in stagger-1 bg-gradient-to-br from-white via-blue-500/[0.03] to-white border border-blue-500/20 hover:border-blue-500/40 shadow-sm hover:shadow-lg hover:shadow-blue-500/10 transition-all duration-500 overflow-hidden">
+            <div className="absolute inset-0 bg-gradient-to-br from-blue-500/[0.08] via-transparent to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-700"></div>
+            <div className="relative p-10">
+              <div className="flex items-center gap-4 mb-12 pb-6 border-b border-blue-500/30">
+                <div className="p-2.5 bg-gradient-to-br from-blue-500/15 to-blue-500/10 rounded-lg shadow-sm">
+                  <MapPin className="h-6 w-6 text-blue-600" />
+                </div>
+                <h3 className="font-serif text-2xl text-blue-600 tracking-tight font-medium">Accès</h3>
               </div>
-              <h3 className="font-serif text-2xl text-charcoal">Accès et transports</h3>
-            </div>
-            <div className="space-y-6">
-              <div className="border-l-4 border-vibrant-pink pl-6">
-                <p className="font-semibold text-charcoal text-lg mb-2">Adresse</p>
-                <p className="font-sans text-charcoal/70">Ex Sacré-Cœur, Casablanca</p>
-              </div>
-              <div className="border-l-4 border-warm-terracotta pl-6">
-                <p className="font-semibold text-charcoal text-lg mb-2">Tramway</p>
-                <p className="font-sans text-charcoal/70">Ligne T1 - Arrêt Sacré-Cœur</p>
-              </div>
-              <div className="border-l-4 border-charcoal/30 pl-6">
-                <p className="font-semibold text-charcoal text-lg mb-2">Bus</p>
-                <p className="font-sans text-charcoal/70">Lignes 1, 3, 5, 7</p>
-              </div>
-              <div className="border-l-4 border-vibrant-pink pl-6">
-                <p className="font-semibold text-charcoal text-lg mb-2">Parking</p>
-                <p className="font-sans text-charcoal/70">Gratuit sur place</p>
+              <div className="space-y-6">
+                <div>
+                  <span className="font-sans text-sm text-charcoal/50 uppercase tracking-wider block mb-2">Adresse</span>
+                  <span className="font-sans text-base text-charcoal font-light">Ex Sacré-Cœur, Casablanca</span>
+                </div>
+                <div className="h-px bg-charcoal/5"></div>
+                <div>
+                  <span className="font-sans text-sm text-charcoal/50 uppercase tracking-wider block mb-2">Tramway</span>
+                  <span className="font-sans text-base text-charcoal font-light">Ligne T1 - Arrêt Sacré-Cœur</span>
+                </div>
+                <div className="h-px bg-charcoal/5"></div>
+                <div>
+                  <span className="font-sans text-sm text-charcoal/50 uppercase tracking-wider block mb-2">Parking</span>
+                  <span className="font-sans text-base text-charcoal font-light">Gratuit sur place</span>
+                </div>
               </div>
             </div>
           </div>
 
           {/* Pricing */}
-          <div className="group bg-gradient-to-br from-charcoal to-charcoal/90 p-10 rounded-2xl shadow-lg hover:shadow-2xl transition-all duration-300 animate-gentle-fade-in stagger-2 hover-lift-subtle text-off-white">
-            <div className="flex items-center gap-4 mb-8">
-              <div className="p-3 bg-gradient-to-br from-vibrant-pink to-warm-terracotta rounded-xl">
-                <Euro className="h-8 w-8 text-off-white" />
+          <div className="group relative animate-gentle-fade-in stagger-2 bg-gradient-to-br from-white via-blue-500/[0.03] to-white border border-blue-500/20 hover:border-blue-500/40 shadow-sm hover:shadow-lg hover:shadow-blue-500/10 transition-all duration-500 overflow-hidden">
+            <div className="absolute inset-0 bg-gradient-to-br from-blue-500/[0.08] via-transparent to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-700"></div>
+            <div className="relative p-10">
+              <div className="flex items-center gap-4 mb-12 pb-6 border-b border-blue-500/30">
+                <div className="p-2.5 bg-gradient-to-br from-blue-500/15 to-blue-500/10 rounded-lg shadow-sm">
+                  <Coins className="h-6 w-6 text-blue-600" />
+                </div>
+                <h3 className="font-serif text-2xl text-blue-600 tracking-tight font-medium">Tarifs</h3>
               </div>
-              <h3 className="font-serif text-2xl">Tarifs</h3>
-            </div>
-            <div className="space-y-6">
-              <div className="border-l-4 border-vibrant-pink pl-6">
-                <p className="font-semibold text-lg mb-2">Adulte</p>
-                <p className="font-serif text-2xl text-vibrant-pink">50 MAD</p>
-              </div>
-              <div className="border-l-4 border-warm-terracotta pl-6">
-                <p className="font-semibold text-lg mb-2">Étudiant</p>
-                <p className="font-serif text-2xl text-warm-terracotta">25 MAD</p>
-              </div>
-              <div className="border-l-4 border-off-white/30 pl-6">
-                <p className="font-semibold text-lg mb-2">Senior (60+)</p>
-                <p className="font-serif text-2xl text-off-white">35 MAD</p>
-              </div>
-              <div className="border-l-4 border-vibrant-pink pl-6">
-                <p className="font-semibold text-lg mb-2">Handicapé</p>
-                <p className="font-serif text-2xl text-vibrant-pink">Gratuit</p>
+              <div className="space-y-6">
+                <div className="flex justify-between items-baseline group/item">
+                  <span className="font-sans text-sm text-charcoal/50 uppercase tracking-wider">Adulte</span>
+                  <span className="font-serif text-2xl text-blue-600 font-light group-hover/item:scale-105 transition-transform">50<span className="text-base ml-1">DH</span></span>
+                </div>
+                <div className="h-px bg-charcoal/5"></div>
+                <div className="flex justify-between items-baseline group/item">
+                  <span className="font-sans text-sm text-charcoal/50 uppercase tracking-wider">Étudiant</span>
+                  <span className="font-serif text-2xl text-blue-600 font-light group-hover/item:scale-105 transition-transform">25<span className="text-base ml-1">DH</span></span>
+                </div>
+                <div className="h-px bg-charcoal/5"></div>
+                <div className="flex justify-between items-baseline group/item">
+                  <span className="font-sans text-sm text-charcoal/50 uppercase tracking-wider">Senior (60+)</span>
+                  <span className="font-serif text-2xl text-blue-600 font-light group-hover/item:scale-105 transition-transform">35<span className="text-base ml-1">DH</span></span>
+                </div>
+                <div className="h-px bg-charcoal/5"></div>
+                <div className="flex justify-between items-baseline group/item">
+                  <span className="font-sans text-sm text-charcoal/50 uppercase tracking-wider">Handicapé</span>
+                  <span className="font-serif text-xl text-blue-600 font-light group-hover/item:scale-105 transition-transform italic">Gratuit</span>
+                </div>
               </div>
             </div>
           </div>

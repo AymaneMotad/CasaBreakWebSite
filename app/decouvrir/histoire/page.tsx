@@ -1,6 +1,7 @@
 import { Navigation } from "@/components/navigation"
 import { Footer } from "@/components/footer"
 import { Breadcrumb } from "@/components/breadcrumb"
+import { TextToSpeechPlayer } from "@/components/text-to-speech-player"
 import Image from "next/image"
 
 export default function HistoirePage() {
@@ -163,6 +164,10 @@ export default function HistoirePage() {
                   />
                 </div>
                 <p className="text-xs text-charcoal/50 mt-3 font-sans italic">Photo issue du Fonds Flandrin, collection privée de la Fondation Banque Populaire</p>
+                <TextToSpeechPlayer 
+                  text="La construction de l'église du Sacré-Cœur est lancée sous le protectorat français, à l'initiative de la communauté catholique de Casablanca. Elle témoigne de la volonté de cette communauté d'affirmer sa présence dans une ville en pleine mutation. L'objectif est d'ériger un lieu de culte majeur au cœur d'une cité en plein essor, reflet du développement urbain rapide et du dynamisme de la métropole. Ce projet s'inscrit ainsi dans le contexte de l'expansion de Casablanca, où la modernité et la foi se rejoignent pour donner naissance à un monument emblématique de son époque."
+                  title="Écouter l'histoire de 1923"
+                />
               </div>
             </div>
 
@@ -178,6 +183,10 @@ export default function HistoirePage() {
                   />
                 </div>
                 <p className="text-xs text-charcoal/50 mt-3 font-sans italic">Photo issue du Fonds Flandrin, collection privée de la Fondation Banque Populaire</p>
+                <TextToSpeechPlayer 
+                  text="L'inauguration officielle de l'église du Sacré-Cœur marque une étape majeure dans l'histoire architecturale et culturelle de Casablanca. Conçue par l'architecte Paul Tournon, l'édifice se distingue par son caractère avant-gardiste, fruit d'un savant mariage entre l'art gothique et l'art déco, un style alors inédit en Afrique du Nord. Par ses voûtes élancées, ses vitraux aux motifs géométriques et ses façades épurées, l'église incarne la modernité et l'élégance caractéristiques de la Casablanca des années 1930. Ce chef-d'œuvre architectural témoigne du raffinement esthétique de son époque et de la volonté de faire du Sacré-Cœur un symbole fort de la ville, à la croisée entre tradition religieuse et innovation urbaine."
+                  title="Écouter l'histoire de 1930"
+                />
               </div>
               <div className="animate-gentle-fade-in stagger-1">
              
@@ -215,6 +224,10 @@ export default function HistoirePage() {
                   />
                 </div>
                 <p className="text-xs text-charcoal/50 mt-3 font-sans italic">Photo issue du Fonds Flandrin, collection privée de la Fondation Banque Populaire</p>
+                <TextToSpeechPlayer 
+                  text="Après l'indépendance du Maroc, la fréquentation de l'église du Sacré-Cœur connaît une baisse progressive. Peu à peu, l'édifice perd sa fonction religieuse initiale, conséquence directe des transformations sociales et démographiques de la ville. Cependant, loin de tomber dans l'oubli, l'église acquiert un nouveau statut : celui de symbole patrimonial et culturel de Casablanca. Son architecture remarquable et sa place au cœur de la cité en font un lieu chargé d'histoire, témoin du passé colonial mais aussi de l'évolution urbaine et artistique du Maroc moderne."
+                  title="Écouter l'histoire de 1956"
+                />
               </div>
             </div>
 
@@ -230,6 +243,10 @@ export default function HistoirePage() {
                   />
                 </div>
                 <p className="text-xs text-charcoal/50 mt-3 font-sans italic">Photo issue du Fonds Flandrin, collection privée de la Fondation Banque Populaire</p>
+                <TextToSpeechPlayer 
+                  text="L'église du Sacré-Cœur est officiellement désacralisée, marquant la fin de son usage religieux. Ce changement lui offre une nouvelle vie en tant qu'espace culturel et d'exposition, ouvert à la création et au dialogue artistique. Dès lors, le monument accueille divers événements tels que des concerts, des salons, des projections et de nombreuses manifestations culturelles. Ce renouveau transforme l'édifice en un lieu vivant et inclusif, où patrimoine et modernité se rencontrent, faisant du Sacré-Cœur un symbole de la vitalité culturelle de Casablanca."
+                  title="Écouter l'histoire de 1976"
+                />
               </div>
               <div className="animate-gentle-fade-in stagger-1">
                
@@ -267,6 +284,10 @@ export default function HistoirePage() {
                   />
                 </div>
                 <p className="text-xs text-charcoal/50 mt-3 font-sans italic">Photo issue du Fonds Flandrin, collection privée de la Fondation Banque Populaire</p>
+                <TextToSpeechPlayer 
+                  text="Classée parmi les monuments emblématiques du patrimoine architectural de Casablanca, l'église du Sacré-Cœur occupe une place particulière dans l'histoire de la ville. Par sa structure audacieuse en béton armé et son style néo-gothique revisité, elle témoigne du génie architectural et de l'esprit novateur de son époque. Son allure unique attire aujourd'hui architectes, chercheurs et visiteurs du monde entier, fascinés par l'harmonie entre tradition et modernité qu'incarne l'édifice. Véritable repère urbain et culturel, le Sacré-Cœur demeure un symbole fort du patrimoine casablancais et de la richesse de son héritage artistique."
+                  title="Écouter l'histoire de 1990-2000"
+                />
               </div>
             </div>
 
@@ -282,6 +303,10 @@ export default function HistoirePage() {
                   />
                 </div>
                 <p className="text-xs text-charcoal/50 mt-3 font-sans italic">Photo issue du Fonds Flandrin, collection privée de la Fondation Banque Populaire</p>
+                <TextToSpeechPlayer 
+                  text="Des travaux de restauration et de sécurisation sont entrepris afin de préserver l'église du Sacré-Cœur, fragilisée par le temps et les années d'exposition aux éléments. Ces interventions visent à sauvegarder la solidité de l'édifice tout en respectant son architecture d'origine, symbole fort du patrimoine casablancais. Parallèlement, une volonté claire émerge : celle de redonner vie à ce monument historique en le transformant en un véritable centre de créativité et de dialogue culturel. L'objectif est d'en faire un lieu ouvert à tous, où se rencontrent les arts, les idées et les générations, perpétuant ainsi l'esprit vivant et inspirant du Sacré-Cœur."
+                  title="Écouter l'histoire de 2010"
+                />
               </div>
               <div className="animate-gentle-fade-in stagger-1">
                
@@ -309,12 +334,18 @@ export default function HistoirePage() {
                   En accueillant expositions, événements culturels et initiatives créatives, la cathédrale s'inscrit désormais dans une démarche de valorisation durable du patrimoine casablancais. Elle incarne la volonté de préserver l'histoire tout en la réinventant, offrant à la ville un espace vivant, inspirant et ouvert sur le monde.
                 </p>
               </div>
-              <div className="relative h-[600px] animate-gentle-fade-in stagger-1">
-                <Image 
-                  src="/site-map-images/architecture-optimized/Eglise-du-Sacre-Coeur-2-1-461x1024.jpeg" 
-                  alt="Le Sacré-Cœur aujourd'hui" 
-                  fill 
-                  className="object-contain rounded-2xl hover-scale-subtle transition-smooth" 
+              <div className="animate-gentle-fade-in stagger-1">
+                <div className="relative h-[600px]">
+                  <Image 
+                    src="/site-map-images/architecture-optimized/Eglise-du-Sacre-Coeur-2-1-461x1024.jpeg" 
+                    alt="Le Sacré-Cœur aujourd'hui" 
+                    fill 
+                    className="object-contain rounded-2xl hover-scale-subtle transition-smooth" 
+                  />
+                </div>
+                <TextToSpeechPlayer 
+                  text="Le site du Sacré-Cœur renaît aujourd'hui comme un véritable centre culturel, artistique et touristique, symbole de la vitalité et du renouveau de Casablanca. Ce lieu emblématique se transforme en un espace de rencontre entre mémoire et modernité, où se croisent le patrimoine, l'art, l'innovation et la citoyenneté. En accueillant expositions, événements culturels et initiatives créatives, la cathédrale s'inscrit désormais dans une démarche de valorisation durable du patrimoine casablancais. Elle incarne la volonté de préserver l'histoire tout en la réinventant, offrant à la ville un espace vivant, inspirant et ouvert sur le monde."
+                  title="Écouter l'histoire d'aujourd'hui"
                 />
               </div>
             </div>

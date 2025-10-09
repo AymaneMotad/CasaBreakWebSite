@@ -1,6 +1,7 @@
 import { Navigation } from "@/components/navigation"
 import { Footer } from "@/components/footer"
 import { Breadcrumb } from "@/components/breadcrumb"
+import { TextToSpeechPlayer } from "@/components/text-to-speech-player"
 import Image from "next/image"
 
 export default function ArchitecturePage() {
@@ -10,24 +11,28 @@ export default function ArchitecturePage() {
       description:
         "L'architecture du Sacré-Cœur est une œuvre pionnière du mouvement Art Déco marocain, où se rencontrent spiritualité et innovation technique. Le choix du béton armé matériau novateur à l'époque a permis la création de volumes vertigineux, de voûtes élancées, et d'un espace intérieur d'une légèreté lumineuse exceptionnelle. Les ouvertures rythmées de vitraux laissent pénétrer une lumière filtrée, transformant chaque rayon en une vibration colorée sur les murs blancs.",
       image: "/site-map-images/architecture-optimized/Eglise-du-Sacre-Coeur-10-1-576x1024.jpeg",
+      audioText: "L'architecture du Sacré-Cœur est une œuvre pionnière du mouvement Art Déco marocain, où se rencontrent spiritualité et innovation technique. Le choix du béton armé matériau novateur à l'époque a permis la création de volumes vertigineux, de voûtes élancées, et d'un espace intérieur d'une légèreté lumineuse exceptionnelle. Les ouvertures rythmées de vitraux laissent pénétrer une lumière filtrée, transformant chaque rayon en une vibration colorée sur les murs blancs.",
     },
     {
-      title: "Les Vitraux",
+      title: "Une alliance subtile entre cultures",
       description:
-        "Des vitraux colorés filtrent la lumière naturelle, créant une atmosphère mystique et contemplative. Chaque vitrail raconte une histoire à travers ses motifs géométriques Art Déco.",
+        "L'esthétique de l'édifice évoque un dialogue entre les styles européens et arabo-andalous. Les résilles géométriques qui décorent les façades rappellent l'artisanat local, tandis que les deux clochers élancés font écho à l'architecture islamique. Cette hybridation fait du Sacré-Cœur un symbole unique de la Casablanca des années 1930, ville d'échanges et de coexistence culturelle.",
       image: "/site-map-images/architecture-optimized/Eglise-du-Sacre-Coeur-3-768x1024.jpeg",
+      audioText: "L'esthétique de l'édifice évoque un dialogue entre les styles européens et arabo-andalous. Les résilles géométriques qui décorent les façades rappellent l'artisanat local, tandis que les deux clochers élancés font écho à l'architecture islamique. Cette hybridation fait du Sacré-Cœur un symbole unique de la Casablanca des années 1930, ville d'échanges et de coexistence culturelle.",
     },
     {
-      title: "La Nef Centrale",
+      title: "Une restauration respectueuse et innovante",
       description:
-        "Un espace monumental de 30 mètres de hauteur, caractérisé par des arcs brisés et des colonnes élancées qui créent une sensation de verticalité et de grandeur.",
+        "Lors de la rénovation, chaque élément a été traité avec soin : les piliers, voûtes, vitraux et coupoles ont été nettoyés, consolidés et protégés durablement. Une attention particulière a été portée à l'acoustique, avec l'ajout de panneaux absorbants permettant de réduire la réverbération tout en préservant le volume monumental. Les interventions contemporaines, sobres et réversibles, s'intègrent harmonieusement dans la structure originelle, révélant la puissance géométrique et la pureté architecturale de l'édifice.",
       image: "/site-map-images/architecture-optimized/Eglise-du-Sacre-Coeur-8-1-1024x768.jpeg",
+      audioText: "Lors de la rénovation, chaque élément a été traité avec soin : les piliers, voûtes, vitraux et coupoles ont été nettoyés, consolidés et protégés durablement. Une attention particulière a été portée à l'acoustique, avec l'ajout de panneaux absorbants permettant de réduire la réverbération tout en préservant le volume monumental. Les interventions contemporaines, sobres et réversibles, s'intègrent harmonieusement dans la structure originelle, révélant la puissance géométrique et la pureté architecturale de l'édifice.",
     },
     {
-      title: "La Façade",
+      title: "Un espace vivant et modulable",
       description:
-        "Une façade imposante en pierre blanche qui combine des éléments néo-gothiques avec des détails Art Déco, créant un dialogue unique entre tradition et modernité.",
+        "Grâce à sa modularité intérieure, l'Ex Sacré-Cœur s'adapte aujourd'hui à de nouvelles fonctions : expositions, concerts, conférences, installations artistiques ou performances. Ses proportions grandioses et sa lumière naturelle offrent un cadre unique où le patrimoine dialogue avec la création contemporaine.",
       image: "/site-map-images/architecture-optimized/Eglise-du-Sacre-Coeur-1-1024x576.jpeg",
+      audioText: "Grâce à sa modularité intérieure, l'Ex Sacré-Cœur s'adapte aujourd'hui à de nouvelles fonctions : expositions, concerts, conférences, installations artistiques ou performances. Ses proportions grandioses et sa lumière naturelle offrent un cadre unique où le patrimoine dialogue avec la création contemporaine.",
     },
   ]
 
@@ -125,14 +130,18 @@ export default function ArchitecturePage() {
                 <h3 className="font-serif text-3xl lg:text-5xl text-charcoal mb-6">{feature.title}</h3>
                 <p className="font-sans text-base lg:text-lg text-charcoal/70 leading-relaxed">{feature.description}</p>
               </div>
-              <div
-                className={`relative h-[400px] lg:h-[500px] ${index % 2 === 1 ? "md:order-1" : ""} animate-fade-in-up delay-100`}
-              >
-                <Image
-                  src={feature.image || "/placeholder.svg"}
-                  alt={feature.title}
-                  fill
-                  className="object-cover hover:scale-105 transition-transform duration-700"
+              <div className={`${index % 2 === 1 ? "md:order-1" : ""} animate-fade-in-up delay-100`}>
+                <div className="relative h-[400px] lg:h-[500px]">
+                  <Image
+                    src={feature.image || "/placeholder.svg"}
+                    alt={feature.title}
+                    fill
+                    className="object-cover hover:scale-105 transition-transform duration-700"
+                  />
+                </div>
+                <TextToSpeechPlayer 
+                  text={feature.audioText}
+                  title={`Écouter: ${feature.title}`}
                 />
               </div>
             </div>
@@ -163,45 +172,10 @@ export default function ArchitecturePage() {
         </div>
       </section>
 
-      {/* Une alliance subtile entre cultures */}
-      <section className="py-20 lg:py-32 bg-charcoal/5">
+      {/* Source Attribution */}
+      <section className="py-12 bg-charcoal/5">
         <div className="max-w-[1000px] mx-auto px-6 lg:px-12">
-          <h2 className="font-serif text-4xl lg:text-6xl text-charcoal mb-8 animate-fade-in-up text-center">
-            Une alliance subtile entre cultures
-          </h2>
-          <p className="font-sans text-lg text-charcoal/70 leading-relaxed mb-6 animate-fade-in-up delay-100 text-readable">
-            L'esthétique de l'édifice évoque un dialogue entre les styles européens et arabo-andalous.
-            Les résilles géométriques qui décorent les façades rappellent l'artisanat local, tandis que les deux clochers élancés font écho à l'architecture islamique.
-            Cette hybridation fait du Sacré-Cœur un symbole unique de la Casablanca des années 1930, ville d'échanges et de coexistence culturelle.
-          </p>
-        </div>
-      </section>
-
-      {/* Une restauration respectueuse */}
-      <section className="py-20 lg:py-32 bg-off-white">
-        <div className="max-w-[1000px] mx-auto px-6 lg:px-12">
-          <h2 className="font-serif text-4xl lg:text-6xl text-charcoal mb-8 animate-fade-in-up text-center">
-            Une restauration respectueuse et innovante
-          </h2>
-          <p className="font-sans text-lg text-charcoal/70 leading-relaxed mb-6 animate-fade-in-up delay-100 text-readable">
-            Lors de la rénovation, chaque élément a été traité avec soin : les piliers, voûtes, vitraux et coupoles ont été nettoyés, consolidés et protégés durablement.
-            Une attention particulière a été portée à l'acoustique, avec l'ajout de panneaux absorbants permettant de réduire la réverbération tout en préservant le volume monumental.
-            Les interventions contemporaines, sobres et réversibles, s'intègrent harmonieusement dans la structure originelle, révélant la puissance géométrique et la pureté architecturale de l'édifice.
-          </p>
-        </div>
-      </section>
-
-      {/* Un espace vivant et modulable */}
-      <section className="py-20 lg:py-32 bg-charcoal text-off-white">
-        <div className="max-w-[1000px] mx-auto px-6 lg:px-12">
-          <h2 className="font-serif text-4xl lg:text-6xl mb-8 animate-fade-in-up text-center">
-            Un espace vivant et modulable
-          </h2>
-          <p className="font-sans text-lg text-off-white/80 leading-relaxed mb-6 animate-fade-in-up delay-100 text-readable">
-            Grâce à sa modularité intérieure, l'Ex Sacré-Cœur s'adapte aujourd'hui à de nouvelles fonctions : expositions, concerts, conférences, installations artistiques ou performances.
-            Ses proportions grandioses et sa lumière naturelle offrent un cadre unique où le patrimoine dialogue avec la création contemporaine.
-          </p>
-          <p className="font-sans text-sm text-off-white/60 leading-relaxed animate-fade-in-up delay-200 text-center">
+          <p className="font-sans text-sm text-charcoal/60 leading-relaxed text-center">
             Source : A+E Magazine, publié le 20 février 2025. Rénovation et reconversion de l'Église du Sacré-cœur de Casablanca
           </p>
         </div>

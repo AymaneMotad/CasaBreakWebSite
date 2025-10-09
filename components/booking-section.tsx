@@ -84,7 +84,7 @@ export function BookingSection() {
               </div>
             </div>
 
-            <button className="px-8 py-4 bg-charcoal text-off-white font-sans text-sm tracking-wide uppercase rounded-md hover:bg-charcoal/90 transition-all duration-300 hover:scale-105">
+            <button className="px-8 py-4 bg-blue-600 text-white font-sans text-sm tracking-wide uppercase rounded-md hover:bg-blue-700 transition-all duration-300 hover:scale-105">
               Réserver maintenant
             </button>
           </div>
