@@ -89,7 +89,7 @@ export function MagazineSection() {
         <div className="grid lg:grid-cols-2 gap-12 lg:gap-20 items-center">
           <div className="animate-slide-in-left stagger-2">
             <img
-              src="/site-map-images/architecture-optimized/Eglise-du-Sacre-Coeur-9-1024x768.jpeg"
+              src="/reserve.png"
               alt="Cultural diversity at Ex Sacré-Cœur"
               className="w-full h-[500px] object-cover rounded-lg hover-scale"
             />
