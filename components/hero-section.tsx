@@ -51,42 +51,43 @@ export function HeroSection() {
       </div>
 
       <div className="relative z-20 max-w-[1400px] mx-auto px-6 lg:px-12 text-center">
-        {/* Enhanced text contrast background */}
-        <div className="absolute inset-0 bg-gradient-to-b from-charcoal/60 via-charcoal/40 to-charcoal/70 rounded-2xl backdrop-blur-sm" />
         
-        <div className="relative z-10 animate-gentle-fade-in">
-          <div className="inline-block px-6 py-3 bg-gradient-to-r from-vibrant-pink/30 to-warm-terracotta/30 backdrop-blur-md border-2 border-off-white/40 rounded-full mb-8 shadow-2xl">
-            <span className="text-off-white text-sm font-sans tracking-wider uppercase font-semibold drop-shadow-lg">
+        {/* Patrimoine badge - positioned to overlap container */}
+        <div className="relative z-30 animate-gentle-fade-in -mb-6">
+          <div className="inline-block px-6 py-3 bg-gradient-to-r from-blue-500 to-blue-700 border-2 border-blue-600 rounded-full shadow-2xl">
+            <span className="text-white text-sm font-sans tracking-wider uppercase font-semibold drop-shadow-lg">
               Patrimoine Culturel • Depuis 1930
             </span>
           </div>
         </div>
         
-       
+        {/* Enhanced text contrast background container */}
+        <div className="relative bg-gradient-to-b from-charcoal/60 via-charcoal/40 to-charcoal/70 rounded-2xl backdrop-blur-sm pt-16 pb-12">
+          
+          <h1 className="relative z-10 font-serif font-normal text-4xl md:text-5xl lg:text-6xl text-off-white mb-6 leading-tight tracking-wide animate-gentle-fade-in stagger-1 drop-shadow-2xl">
+          Un joyau patrimonial au cœur de Casablanca
+          </h1>
+          
+          
+          <p className="relative z-10 font-sans text-lg md:text-xl text-off-white max-w-2xl mx-auto leading-relaxed animate-gentle-fade-in stagger-2 text-readable mb-12 drop-shadow-xl">
+            L'icône du patrimoine casablancais, l'Église du Sacré-Cœur, s'éveille à une nouvelle vie.
+            Désormais centre culturel et espace de création, elle incarne la rencontre entre la mémoire d'hier et la modernité d'aujourd'hui.
+          </p>
 
-        <h1 className="relative z-10 font-serif font-normal text-4xl md:text-5xl lg:text-6xl text-off-white mb-6 leading-tight tracking-wide animate-gentle-fade-in stagger-1 drop-shadow-2xl">
-        Un joyau patrimonial au cœur de Casablanca
-        </h1>
-        
-        
-        <p className="relative z-10 font-sans text-lg md:text-xl text-off-white max-w-2xl mx-auto leading-relaxed animate-gentle-fade-in stagger-2 text-readable mb-8 drop-shadow-xl">
-          L'icône du patrimoine casablancais, l'Église du Sacré-Cœur, s'éveille à une nouvelle vie.
-          Désormais centre culturel et espace de création, elle incarne la rencontre entre la mémoire d'hier et la modernité d'aujourd'hui.
-        </p>
-
-        <div className="relative z-10 flex flex-col sm:flex-row gap-4 justify-center items-center animate-gentle-fade-in stagger-3">
-          <a
-            href="/visiter/individuels"
-            className="px-8 py-4 bg-gradient-to-r from-blue-500 to-blue-700 text-white text-sm font-sans tracking-wider uppercase hover:shadow-xl hover:scale-105 transition-all duration-300 rounded-lg shadow-lg border-2 border-blue-600"
-          >
-            Découvrir
-          </a>
-          <a
-            href="/decouvrir/histoire"
-            className="px-8 py-4 bg-transparent border-2 border-off-white/50 text-off-white text-sm font-sans tracking-wider uppercase hover:bg-off-white/20 hover:border-off-white/70 transition-all duration-300 rounded-md backdrop-blur-sm shadow-lg"
-          >
-            Notre Histoire
-          </a>
+          <div className="relative z-10 flex flex-col sm:flex-row gap-6 justify-center items-center animate-gentle-fade-in stagger-3">
+            <a
+              href="/visiter/individuels"
+              className="px-10 py-4 bg-gradient-to-r from-blue-500 to-blue-700 text-white text-sm font-sans tracking-wider uppercase hover:shadow-xl hover:scale-105 transition-all duration-300 rounded-lg shadow-lg border-2 border-blue-600 font-semibold"
+            >
+              Découvrir
+            </a>
+            <a
+              href="/decouvrir/histoire"
+              className="px-10 py-4 bg-transparent border-2 border-off-white/60 text-off-white text-sm font-sans tracking-wider uppercase hover:bg-off-white/20 hover:border-off-white/80 transition-all duration-300 rounded-lg backdrop-blur-sm shadow-lg font-semibold"
+            >
+              Notre Histoire
+            </a>
+          </div>
         </div>
       </div>
 
