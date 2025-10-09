@@ -15,7 +15,7 @@ const bodoniModa = Bodoni_Moda({
 })
 
 export const metadata: Metadata = {
-  title: "Ex Sacré Cœur - Casablanca",
+  title: "Ex Sacré-Cœur - Casablanca",
   description: "Historic Art Deco cathedral in Casablanca - Cultural heritage site and exhibition space",
   generator: "v0.app",
 }

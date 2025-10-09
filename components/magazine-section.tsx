@@ -99,7 +99,7 @@ export function MagazineSection() {
               Un symbole de la diversité culturelle
             </h2>
             <p className="font-sans text-base lg:text-lg text-charcoal/70 leading-relaxed mb-4">
-              L'église du Sacré-Cœur témoigne de la richesse du patrimoine culturel de Casablanca. Elle représente un
+              L'église Ex Sacré-Cœur témoigne de la richesse du patrimoine culturel de Casablanca. Elle représente un
               pont entre les cultures, les époques et les communautés.
             </p>
             <p className="font-sans text-base lg:text-lg text-charcoal/70 leading-relaxed">

@@ -9,16 +9,16 @@ export default function ArchitecturePage() {
     {
       title: "Entre Art Déco et modernisme spirituel",
       description:
-        "L'architecture du Sacré-Cœur est une œuvre pionnière du mouvement Art Déco marocain, où se rencontrent spiritualité et innovation technique. Le choix du béton armé matériau novateur à l'époque a permis la création de volumes vertigineux, de voûtes élancées, et d'un espace intérieur d'une légèreté lumineuse exceptionnelle. Les ouvertures rythmées de vitraux laissent pénétrer une lumière filtrée, transformant chaque rayon en une vibration colorée sur les murs blancs.",
+        "L'architecture de l'Ex Sacré-Cœur est une œuvre pionnière du mouvement Art Déco marocain, où se rencontrent spiritualité et innovation technique. Le choix du béton armé matériau novateur à l'époque a permis la création de volumes vertigineux, de voûtes élancées, et d'un espace intérieur d'une légèreté lumineuse exceptionnelle. Les ouvertures rythmées de vitraux laissent pénétrer une lumière filtrée, transformant chaque rayon en une vibration colorée sur les murs blancs.",
       image: "/site-map-images/architecture-optimized/Eglise-du-Sacre-Coeur-10-1-576x1024.jpeg",
-      audioText: "L'architecture du Sacré-Cœur est une œuvre pionnière du mouvement Art Déco marocain, où se rencontrent spiritualité et innovation technique. Le choix du béton armé matériau novateur à l'époque a permis la création de volumes vertigineux, de voûtes élancées, et d'un espace intérieur d'une légèreté lumineuse exceptionnelle. Les ouvertures rythmées de vitraux laissent pénétrer une lumière filtrée, transformant chaque rayon en une vibration colorée sur les murs blancs.",
+      audioText: "L'architecture de l'Ex Sacré-Cœur est une œuvre pionnière du mouvement Art Déco marocain, où se rencontrent spiritualité et innovation technique. Le choix du béton armé matériau novateur à l'époque a permis la création de volumes vertigineux, de voûtes élancées, et d'un espace intérieur d'une légèreté lumineuse exceptionnelle. Les ouvertures rythmées de vitraux laissent pénétrer une lumière filtrée, transformant chaque rayon en une vibration colorée sur les murs blancs.",
     },
     {
       title: "Une alliance subtile entre cultures",
       description:
-        "L'esthétique de l'édifice évoque un dialogue entre les styles européens et arabo-andalous. Les résilles géométriques qui décorent les façades rappellent l'artisanat local, tandis que les deux clochers élancés font écho à l'architecture islamique. Cette hybridation fait du Sacré-Cœur un symbole unique de la Casablanca des années 1930, ville d'échanges et de coexistence culturelle.",
+        "L'esthétique de l'édifice évoque un dialogue entre les styles européens et arabo-andalous. Les résilles géométriques qui décorent les façades rappellent l'artisanat local, tandis que les deux clochers élancés font écho à l'architecture islamique. Cette hybridation fait de l'Ex Sacré-Cœur un symbole unique de la Casablanca des années 1930, ville d'échanges et de coexistence culturelle.",
       image: "/site-map-images/architecture-optimized/Eglise-du-Sacre-Coeur-3-768x1024.jpeg",
-      audioText: "L'esthétique de l'édifice évoque un dialogue entre les styles européens et arabo-andalous. Les résilles géométriques qui décorent les façades rappellent l'artisanat local, tandis que les deux clochers élancés font écho à l'architecture islamique. Cette hybridation fait du Sacré-Cœur un symbole unique de la Casablanca des années 1930, ville d'échanges et de coexistence culturelle.",
+      audioText: "L'esthétique de l'édifice évoque un dialogue entre les styles européens et arabo-andalous. Les résilles géométriques qui décorent les façades rappellent l'artisanat local, tandis que les deux clochers élancés font écho à l'architecture islamique. Cette hybridation fait de l'Ex Sacré-Cœur un symbole unique de la Casablanca des années 1930, ville d'échanges et de coexistence culturelle.",
     },
     {
       title: "Une restauration respectueuse et innovante",
@@ -189,7 +189,7 @@ export default function ArchitecturePage() {
               Galerie Architecturale
             </h2>
             <p className="font-sans text-base lg:text-lg text-charcoal/70 max-w-3xl mx-auto animate-fade-in-up stagger-1">
-              Explorez les détails architecturaux uniques du Sacré-Cœur à travers notre collection de photographies
+              Explorez les détails architecturaux uniques de l'Ex Sacré-Cœur à travers notre collection de photographies
             </p>
           </div>
 
@@ -258,7 +258,7 @@ export default function ArchitecturePage() {
           Visitez ce Chef-d'Œuvre
         </h2>
         <p className="font-sans text-base lg:text-lg text-charcoal/70 leading-relaxed mb-12 animate-fade-in-up delay-100">
-          Découvrez l'architecture exceptionnelle du Sacré-Cœur lors d'une visite guidée ou en autonomie
+          Découvrez l'architecture exceptionnelle de l'Ex Sacré-Cœur lors d'une visite guidée ou en autonomie
         </p>
         <a
           href="/visiter/individuels"

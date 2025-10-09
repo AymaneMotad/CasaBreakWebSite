@@ -42,7 +42,7 @@ export default function ReserverPage() {
         <div className="absolute inset-0 bg-charcoal/50" />
         <div className="relative z-10 text-center px-6">
           <h1 className="font-serif text-5xl md:text-7xl text-off-white mb-4 animate-fade-in-up text-balance">
-            Réserver le Sacré-Cœur
+            Réserver l'Ex Sacré-Cœur
           </h1>
           <p className="font-sans text-sm md:text-base text-off-white/90 tracking-wider uppercase animate-fade-in-up stagger-1">
             Un lieu d'exception pour vos événements
@@ -100,7 +100,7 @@ export default function ReserverPage() {
               Découvrez nos espaces
             </h2>
             <p className="font-sans text-lg md:text-xl text-charcoal/70 max-w-3xl mx-auto leading-relaxed">
-              Une visite immersive du Sacré-Cœur, un lieu d'exception pour vos événements les plus prestigieux
+              Une visite immersive de l'Ex Sacré-Cœur, un lieu d'exception pour vos événements les plus prestigieux
             </p>
             <div className="inline-flex items-center gap-2 mt-6">
               <div className="h-px w-12 bg-gradient-to-r from-transparent to-warm-terracotta/60"></div>
@@ -463,7 +463,7 @@ export default function ReserverPage() {
 
             <div className="text-center animate-fade-in-up stagger-9">
               <p className="font-sans text-xs text-charcoal/60 mb-6 max-w-2xl mx-auto leading-relaxed">
-                Réservez le Sacré-Cœur pour votre événement ! Contactez notre équipe pour organiser votre événement au Sacré-Cœur et profitez d'un cadre prestigieux au cœur de Casablanca.
+                Réservez l'Ex Sacré-Cœur pour votre événement ! Contactez notre équipe pour organiser votre événement à l'Ex Sacré-Cœur et profitez d'un cadre prestigieux au cœur de Casablanca.
               </p>
               <button
                 type="submit"
@@ -488,7 +488,7 @@ export default function ReserverPage() {
               { icon: Sofa, text: "Mobilier et décoration de base" },
               { icon: Shield, text: "Sécurité et surveillance" },
               { icon: Sparkles, text: "Nettoyage après événement" },
-              { icon: ParkingCircle, text: "Parking privatisé" },
+              { icon: ParkingCircle, text: "Parking privé" },
               { icon: Headphones, text: "Assistance technique" },
             ].map((service, index) => {
               const Icon = service.icon

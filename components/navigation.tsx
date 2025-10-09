@@ -33,7 +33,7 @@ export function Navigation() {
       ],
     },
     { label: "Événements", href: "/evenements" },
-    { label: "Réserver Sacré Cœur", href: "/reserver" },
+    { label: "Réserver Ex Sacré-Cœur", href: "/reserver" },
   ]
 
   const handleDropdownClick = (e: React.MouseEvent, hasSubmenu: boolean) => {
