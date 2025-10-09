@@ -222,16 +222,6 @@ export default function ReserverPage() {
                     <p className="font-sans text-sm sm:text-base text-white/95 tracking-wide uppercase font-medium drop-shadow-[0_2px_8px_rgba(0,0,0,0.8)]">
                       {event.subtitle}
                     </p>
-                    
-                    {/* Hover Effect - Additional Info */}
-                    <div className="mt-3 opacity-0 group-hover:opacity-100 transition-opacity duration-500">
-                      <div className="flex items-center gap-2 text-vibrant-pink/90 text-xs uppercase tracking-wider">
-                        <span>Voir plus</span>
-                        <svg className="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                          <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M9 5l7 7-7 7" />
-                        </svg>
-                      </div>
-                    </div>
                   </div>
                 </div>
               </div>
