@@ -79,7 +79,7 @@ export function BookingSection() {
                 <MapPin className="w-6 h-6 text-terracotta mt-1 flex-shrink-0" />
                 <div>
                   <h3 className="font-sans font-medium text-charcoal mb-1">Accès facilité</h3>
-                  <p className="font-sans text-sm text-charcoal/60">Plan et informations pratiques</p>
+                  <p className="font-sans text-sm text-charcoal/60">Accès et informations pratiques</p>
                 </div>
               </div>
             </div>

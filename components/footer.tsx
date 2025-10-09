@@ -1,3 +1,5 @@
+import Image from "next/image"
+
 export function Footer() {
   return (
     <footer className="bg-gradient-to-b from-charcoal via-charcoal/98 to-charcoal/90 text-off-white py-16 lg:py-20 relative overflow-hidden">
@@ -13,7 +15,13 @@ export function Footer() {
         <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-12 mb-12">
           {/* About Section */}
           <div>
-            <h3 className="font-serif text-2xl mb-4">Ex Sacré-Cœur</h3>
+            <Image 
+              src="/sacre-logo.svg" 
+              alt="l'Ex église Sacré-Cœur" 
+              width={595} 
+              height={393}
+              className="h-20 w-auto mb-4"
+            />
             <p className="font-sans text-sm text-off-white/70 leading-relaxed mb-4">
               Monument historique Art Déco et espace culturel au cœur de Casablanca depuis 1930.
             </p>
@@ -72,7 +80,7 @@ export function Footer() {
               </li>
               <li>
                 <a href="/visiter/handicapes" className="text-off-white/70 hover:text-off-white transition-colors">
-                  Accessibilité
+                  Visiteurs à mobilité réduite
                 </a>
               </li>
             </ul>
@@ -135,18 +143,10 @@ export function Footer() {
 
         {/* Bottom Bar */}
         <div className="pt-8 border-t border-off-white/10">
-          <div className="flex flex-col md:flex-row justify-between items-center gap-4">
+          <div className="text-center">
             <p className="font-sans text-xs text-off-white/50 tracking-wide">
-              © {new Date().getFullYear()} Ex Sacré-Cœur Casablanca. Tous droits réservés.
+              © {new Date().getFullYear()} l'Ex église Sacré-Cœur Casablanca. Tous droits réservés.
             </p>
-            <div className="flex gap-6 font-sans text-xs text-off-white/50">
-              <a href="/mentions-legales" className="hover:text-off-white transition-colors">
-                Mentions légales
-              </a>
-              <a href="/politique-confidentialite" className="hover:text-off-white transition-colors">
-                Politique de confidentialité
-              </a>
-            </div>
           </div>
         </div>
       </div>

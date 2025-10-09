@@ -4,10 +4,9 @@ import { SpinningCathedral } from "@/components/spinning-cathedral"
 import { MagazineSection } from "@/components/magazine-section"
 import { HeritageSection } from "@/components/heritage-section"
 import { PracticalInfoSection } from "@/components/practical-info-section"
-import { EventsGridSection } from "@/components/events-grid-section"
 import { AvailabilityCalendar } from "@/components/availability-calendar"
 import { BookingSection } from "@/components/booking-section"
-import { NewsletterSection } from "@/components/newsletter-section"
+// import { NewsletterSection } from "@/components/newsletter-section"
 import { Footer } from "@/components/footer"
 
 export default function Home() {
@@ -19,7 +18,6 @@ export default function Home() {
       <MagazineSection />
       <HeritageSection />
       <PracticalInfoSection />
-      <EventsGridSection />
       
       {/* Availability Calendar Section */}
       <section className="py-24 lg:py-32 bg-gradient-to-b from-off-white to-cream">
@@ -40,7 +38,7 @@ export default function Home() {
       </section>
       
       <BookingSection />
-      <NewsletterSection />
+      {/* <NewsletterSection /> */}
       <Footer />
     </main>
   )

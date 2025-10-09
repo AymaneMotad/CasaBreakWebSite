@@ -166,29 +166,6 @@ export default function EvenementsPage() {
         </div>
       </section>
 
-      {/* Newsletter */}
-      <section className="bg-gradient-to-r from-vibrant-pink to-warm-terracotta text-off-white py-20">
-        <div className="max-w-[800px] mx-auto px-6 text-center">
-          <h2 className="font-serif text-4xl md:text-5xl mb-6 animate-fade-in-up">Restez informé</h2>
-          <p className="font-sans text-base mb-10 animate-fade-in-up stagger-1">
-            Inscrivez-vous à notre newsletter pour recevoir le programme des événements
-          </p>
-          <form className="flex flex-col sm:flex-row gap-4 max-w-md mx-auto animate-fade-in-up stagger-2">
-            <input
-              type="email"
-              placeholder="Votre email"
-              className="flex-1 px-6 py-4 text-charcoal font-sans text-sm focus:outline-none focus:ring-2 focus:ring-off-white"
-            />
-            <button
-              type="submit"
-              className="px-8 py-4 bg-charcoal text-off-white text-xs font-sans tracking-wider uppercase hover:bg-charcoal/90 transition-colors"
-            >
-              S'inscrire
-            </button>
-          </form>
-        </div>
-      </section>
-
       <Footer />
     </main>
   )
