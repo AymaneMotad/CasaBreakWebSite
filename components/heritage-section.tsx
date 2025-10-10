@@ -45,8 +45,8 @@ export function HeritageSection() {
         <div className="grid lg:grid-cols-2 gap-16 items-center mb-20">
           <div className="animate-gentle-fade-in">
             <Image
-              src="/site-map-images/architecture-optimized/Eglise-du-Sacre-Coeur-1-1024x576.jpeg"
-              alt="Ex Sacré-Cœur de Casablanca"
+              src="/site-map-images/histoire-optimized/1A1_H1-19_136p.jpg"
+              alt="Ex Sacré-Cœur de Casablanca - Histoire"
               width={600}
               height={400}
               className="w-full h-[400px] object-cover rounded-lg shadow-2xl"
