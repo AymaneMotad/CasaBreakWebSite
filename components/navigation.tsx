@@ -6,10 +6,12 @@ import { useState } from "react"
 import { Menu, X, ChevronDown, Ticket } from "lucide-react"
 import Link from "next/link"
 import Image from "next/image"
+import { usePathname } from "next/navigation"
 
 export function Navigation() {
   const [isOpen, setIsOpen] = useState(false)
   const [openDropdown, setOpenDropdown] = useState<string | null>(null)
+  const pathname = usePathname()
 
   const navItems = [
     { label: "Accueil", href: "/" },
@@ -42,6 +44,15 @@ export function Navigation() {
     }
   }
 
+  const isActive = (href: string) => {
+    if (href === "/") return pathname === "/"
+    return pathname.startsWith(href)
+  }
+
+  const isParentActive = (submenu?: { href: string }[]) => {
+    return submenu?.some((item) => pathname.startsWith(item.href)) || false
+  }
+
   return (
     <nav className="fixed top-0 left-0 right-0 z-50 bg-white shadow-sm transition-all duration-500">
       <div className="max-w-[1600px] mx-auto px-6 lg:px-12">
@@ -66,7 +77,11 @@ export function Navigation() {
               <div key={item.label} className="relative group">
                 <button
                   onClick={(e) => handleDropdownClick(e, !!item.submenu)}
-                  className="text-sm font-sans tracking-wide transition-all duration-500 relative flex items-center gap-2 text-charcoal/70 hover:text-charcoal after:absolute after:bottom-0 after:left-0 after:w-0 after:h-[2px] after:transition-all after:duration-500 hover:after:w-full after:bg-gradient-to-r after:from-vibrant-pink after:to-warm-terracotta"
+                  className={`
+                    text-sm font-sans tracking-wide transition-all duration-500 relative flex items-center gap-2
+                    ${isActive(item.href) || isParentActive(item.submenu) ? 'text-blue-600 font-semibold after:w-full' : 'text-charcoal/70 hover:text-charcoal after:w-0'}
+                    after:absolute after:bottom-0 after:left-0 after:h-[2px] after:transition-all after:duration-500 hover:after:w-full after:bg-gradient-to-r after:from-vibrant-pink after:to-warm-terracotta
+                  `}
                 >
                   {item.submenu ? (
                     <>
@@ -85,7 +100,10 @@ export function Navigation() {
                         <Link
                           key={subItem.href}
                           href={subItem.href}
-                          className="block px-5 py-3 text-sm font-sans text-charcoal/80 hover:text-charcoal hover:bg-charcoal/5 transition-all duration-200"
+                          className={`
+                            block px-5 py-3 text-sm font-sans transition-all duration-200
+                            ${isActive(subItem.href) ? 'text-blue-600 bg-blue-50 font-semibold' : 'text-charcoal/80 hover:text-charcoal hover:bg-charcoal/5'}
+                          `}
                         >
                           {subItem.label}
                         </Link>
@@ -129,10 +147,17 @@ export function Navigation() {
                   {item.submenu ? (
                     <button
                       onClick={() => setOpenDropdown(openDropdown === item.label ? null : item.label)}
-                      className={`w-full text-left py-6 px-4 text-lg font-sans tracking-wide text-charcoal hover:text-charcoal transition-all duration-300 flex items-center justify-between animate-gentle-fade-in stagger-${index + 1} font-medium touch-manipulation group`}
+                      className={`
+                        w-full text-left py-6 px-4 text-lg font-sans tracking-wide transition-all duration-300 
+                        flex items-center justify-between animate-gentle-fade-in stagger-${index + 1} font-medium touch-manipulation group
+                        ${isParentActive(item.submenu) ? 'text-blue-600 bg-blue-50' : 'text-charcoal hover:text-charcoal'}
+                      `}
                     >
                       <span className="flex items-center gap-3">
-                        <div className="w-2 h-2 bg-gradient-to-r from-vibrant-pink to-warm-terracotta rounded-full opacity-60 group-hover:opacity-100 transition-opacity duration-300"></div>
+                        <div className={`
+                          w-2 h-2 bg-gradient-to-r from-vibrant-pink to-warm-terracotta rounded-full transition-opacity duration-300
+                          ${isParentActive(item.submenu) ? 'opacity-100' : 'opacity-60 group-hover:opacity-100'}
+                        `}></div>
                         {item.label}
                       </span>
                       <ChevronDown
@@ -142,11 +167,18 @@ export function Navigation() {
                   ) : (
                     <Link
                       href={item.href}
-                      className={`block py-6 px-4 text-lg font-sans tracking-wide text-charcoal hover:text-charcoal transition-all duration-300 animate-gentle-fade-in stagger-${index + 1} font-medium touch-manipulation group`}
+                      className={`
+                        block py-6 px-4 text-lg font-sans tracking-wide transition-all duration-300 
+                        animate-gentle-fade-in stagger-${index + 1} font-medium touch-manipulation group
+                        ${isActive(item.href) ? 'text-blue-600 bg-blue-50' : 'text-charcoal hover:text-charcoal'}
+                      `}
                       onClick={() => setIsOpen(false)}
                     >
                       <span className="flex items-center gap-3">
-                        <div className="w-2 h-2 bg-gradient-to-r from-vibrant-pink to-warm-terracotta rounded-full opacity-60 group-hover:opacity-100 transition-opacity duration-300"></div>
+                        <div className={`
+                          w-2 h-2 bg-gradient-to-r from-vibrant-pink to-warm-terracotta rounded-full transition-opacity duration-300
+                          ${isActive(item.href) ? 'opacity-100' : 'opacity-60 group-hover:opacity-100'}
+                        `}></div>
                         {item.label}
                       </span>
                     </Link>
@@ -157,7 +189,10 @@ export function Navigation() {
                         <Link
                           key={subItem.href}
                           href={subItem.href}
-                          className="block py-3 px-5 text-sm font-sans text-charcoal/80 hover:text-charcoal hover:bg-charcoal/10 transition-all duration-200 border-b border-charcoal/10 last:border-b-0"
+                          className={`
+                            block py-3 px-5 text-sm font-sans transition-all duration-200 border-b border-charcoal/10 last:border-b-0
+                            ${isActive(subItem.href) ? 'text-blue-600 bg-blue-50 font-semibold' : 'text-charcoal/80 hover:text-charcoal hover:bg-charcoal/10'}
+                          `}
                           onClick={() => setIsOpen(false)}
                         >
                           {subItem.label}

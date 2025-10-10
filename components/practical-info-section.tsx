@@ -1,4 +1,5 @@
 import { Clock, MapPin, Users, Phone, Calendar, Coins } from "lucide-react"
+import { CopyButton } from "./copy-button"
 
 export function PracticalInfoSection() {
   return (
@@ -152,7 +153,7 @@ export function PracticalInfoSection() {
                 </div>
                 <div className="h-px bg-charcoal/5"></div>
                 <div className="flex justify-between items-baseline group/item">
-                  <span className="font-sans text-sm text-charcoal/50 uppercase tracking-wider">Handicapé</span>
+                  <span className="font-sans text-sm text-charcoal/50 uppercase tracking-wider">Mobilité réduite</span>
                   <span className="font-serif text-xl text-blue-600 font-light group-hover/item:scale-105 transition-transform italic">Gratuit</span>
                 </div>
               </div>
@@ -199,19 +200,25 @@ export function PracticalInfoSection() {
               Des questions sur votre visite ? Notre équipe est là pour vous accompagner et personnaliser votre expérience.
             </p>
             <div className="space-y-4 mb-8">
-              <div className="flex items-center gap-4 p-4 bg-off-white/10 rounded-lg">
-                <Phone className="h-5 w-5 text-vibrant-pink" />
-                <div>
-                  <p className="font-semibold">Téléphone</p>
-                  <p className="text-off-white/80">+212 522 27 45 78</p>
+              <div className="flex items-center justify-between gap-4 p-4 bg-off-white/10 rounded-lg">
+                <div className="flex items-center gap-4">
+                  <Phone className="h-5 w-5 text-vibrant-pink" />
+                  <div>
+                    <p className="font-semibold">Téléphone</p>
+                    <p className="text-off-white/80">+212 522 27 45 78</p>
+                  </div>
                 </div>
+                <CopyButton text="+212522274578" label="numéro de téléphone" />
               </div>
-              <div className="flex items-center gap-4 p-4 bg-off-white/10 rounded-lg">
-                <Users className="h-5 w-5 text-warm-terracotta" />
-                <div>
-                  <p className="font-semibold">Email</p>
-                  <p className="text-off-white/80">info@sacrecoeur-casa.ma</p>
+              <div className="flex items-center justify-between gap-4 p-4 bg-off-white/10 rounded-lg">
+                <div className="flex items-center gap-4">
+                  <Users className="h-5 w-5 text-warm-terracotta" />
+                  <div>
+                    <p className="font-semibold">Email</p>
+                    <p className="text-off-white/80">info@sacrecoeur-casa.ma</p>
+                  </div>
                 </div>
+                <CopyButton text="info@sacrecoeur-casa.ma" label="email" />
               </div>
             </div>
             <a

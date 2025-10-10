@@ -1,6 +1,6 @@
 "use client"
 
-import Image from "next/image"
+import { VideoPlayer } from "./video-player"
 
 export function SpinningCathedral() {
   return (
@@ -47,16 +47,11 @@ export function SpinningCathedral() {
         {/* 3D Video Section */}
         <div className="animate-fade-in-up stagger-1">
           <div className="w-full max-w-3xl mx-auto">
-            <video
-              autoPlay
-              loop
-              muted
-              playsInline
-              className="w-full h-auto"
-            >
-              <source src="/videos/animated-enhanced.mp4" type="video/mp4" />
-              Votre navigateur ne supporte pas la lecture de vidéos.
-            </video>
+            <VideoPlayer
+              src="/videos/animated-enhanced.mp4"
+              className="w-full h-auto rounded-lg shadow-2xl"
+              showControls={true}
+            />
           </div>
         </div>
       </div>

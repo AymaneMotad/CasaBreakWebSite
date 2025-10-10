@@ -1,6 +1,6 @@
-import Image from "next/image"
 import Link from "next/link"
 import { BookOpen, Building, Users, Calendar, ArrowRight } from "lucide-react"
+import { ImageLightbox } from "./image-lightbox"
 
 export function HeritageSection() {
   return (
@@ -44,7 +44,7 @@ export function HeritageSection() {
       <div className="max-w-[1400px] mx-auto px-6 lg:px-12 relative z-10">
         <div className="grid lg:grid-cols-2 gap-16 items-center mb-20">
           <div className="animate-gentle-fade-in">
-            <Image
+            <ImageLightbox
               src="/site-map-images/histoire-optimized/1A1_H1-19_136p.jpg"
               alt="Ex Sacré-Cœur de Casablanca - Histoire"
               width={600}
@@ -93,19 +93,24 @@ export function HeritageSection() {
           ].map((item, index) => (
             <div
               key={item.title}
-              className={`bg-gradient-to-br ${item.color} p-8 rounded-lg text-off-white animate-gentle-fade-in stagger-${index + 1}`}
+              className={`
+                bg-gradient-to-br ${item.color} p-8 rounded-lg text-off-white 
+                animate-gentle-fade-in stagger-${index + 1}
+                hover:shadow-2xl hover:-translate-y-1 transition-all duration-300
+                group
+              `}
             >
-              <item.icon className="h-10 w-10 mb-6" />
+              <item.icon className="h-10 w-10 mb-6 group-hover:scale-110 transition-transform duration-300" />
               <h3 className="font-serif text-2xl mb-4">{item.title}</h3>
               <p className="font-sans text-sm leading-relaxed mb-6 text-off-white/90">
                 {item.description}
               </p>
               <Link
                 href={item.link}
-                className="inline-flex items-center gap-2 text-sm font-sans tracking-wider uppercase hover:scale-105 transition-transform"
+                className="inline-flex items-center gap-2 text-sm font-sans tracking-wider uppercase hover:gap-3 transition-all duration-300"
               >
                 En savoir plus
-                <ArrowRight className="h-4 w-4" />
+                <ArrowRight className="h-4 w-4 group-hover:translate-x-1 transition-transform" />
               </Link>
             </div>
           ))}

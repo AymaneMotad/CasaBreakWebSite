@@ -79,6 +79,7 @@ export function AvailabilityCalendar() {
       <div
         key={day}
         className={`
+          relative group
           aspect-square p-2 rounded-lg border transition-all duration-300
           ${isPast ? 'bg-gray-100 text-gray-400 border-gray-200' : 
             event ? 
@@ -107,6 +108,24 @@ export function AvailabilityCalendar() {
             </div>
           )}
         </div>
+
+        {/* Tooltip */}
+        {!isPast && (
+          <div className="absolute bottom-full left-1/2 -translate-x-1/2 mb-2 px-3 py-2 bg-charcoal text-white text-xs font-sans rounded-lg shadow-xl opacity-0 invisible group-hover:opacity-100 group-hover:visible transition-all duration-200 whitespace-nowrap z-10 pointer-events-none">
+            {event ? (
+              <div>
+                <p className="font-semibold">{event.title}</p>
+                <p className="text-xs opacity-75">
+                  {event.type === 'private' ? 'Événement privé' : 'Événement public'}
+                </p>
+              </div>
+            ) : (
+              <p>Cliquez pour réserver cette date</p>
+            )}
+            {/* Arrow */}
+            <div className="absolute top-full left-1/2 -translate-x-1/2 w-0 h-0 border-l-4 border-r-4 border-t-4 border-transparent border-t-charcoal"></div>
+          </div>
+        )}
       </div>
     )
   }

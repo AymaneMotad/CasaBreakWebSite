@@ -269,12 +269,59 @@
   border-radius: 4px;
 }
 
+/* Enhanced Global Focus Indicators */
+*:focus-visible {
+  outline: 3px solid #3b82f6;
+  outline-offset: 3px;
+  border-radius: 4px;
+  transition: outline 0.2s ease;
+}
+
+button:focus-visible,
+a:focus-visible,
+input:focus-visible,
+textarea:focus-visible {
+  outline: 3px solid #3b82f6;
+  outline-offset: 3px;
+}
+
+/* Skip to content link */
+.skip-to-content {
+  position: absolute;
+  top: -100px;
+  left: 0;
+  background: #3b82f6;
+  color: white;
+  padding: 1rem 2rem;
+  z-index: 10000;
+  font-weight: 600;
+  border-radius: 0 0 0.5rem 0;
+}
+
+.skip-to-content:focus {
+  top: 0;
+}
+
 /* Staggered Animation Delays */
 .stagger-1 { animation-delay: 0.1s; }
 .stagger-2 { animation-delay: 0.2s; }
 .stagger-3 { animation-delay: 0.3s; }
 .stagger-4 { animation-delay: 0.4s; }
 .stagger-5 { animation-delay: 0.5s; }
+
+/* Shimmer Animation for Skeletons */
+@keyframes shimmer {
+  0% {
+    background-position: -200% 0;
+  }
+  100% {
+    background-position: 200% 0;
+  }
+}
+
+.animate-shimmer {
+  animation: shimmer 2s infinite linear;
+}
 
 /* Reduced Motion Support */
 @media (prefers-reduced-motion: reduce) {

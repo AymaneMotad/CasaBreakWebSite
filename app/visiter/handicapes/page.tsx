@@ -13,7 +13,7 @@ export default function HandicapesPage() {
         <div className="max-w-[1400px] mx-auto px-6 lg:px-12">
           <Breadcrumb items={[
             { label: "Visiter", href: "/visiter/individuels" },
-            { label: "Handicapés", href: "/visiter/handicapes" }
+            { label: "Visiteurs à mobilité réduite", href: "/visiter/handicapes" }
           ]} />
         </div>
       </div>
@@ -54,7 +54,7 @@ export default function HandicapesPage() {
             </p>
             <p className="font-sans text-base text-charcoal/70 leading-relaxed">
               Le Sacré-Cœur de Casablanca s'engage à offrir une expérience de visite complète et enrichissante à tous les visiteurs, quelles que soient leurs capacités.
-              Nous proposons des dispositifs adaptés pour les personnes à mobilité réduite, malvoyantes, malentendantes et avec handicap mental.
+              Nous proposons des dispositifs adaptés pour les personnes à mobilité réduite, malvoyantes, malentendantes et avec déficience cognitive.
             </p>
           </div>
         </div>
@@ -106,7 +106,7 @@ export default function HandicapesPage() {
               },
               {
                 icon: Heart,
-                title: "Handicap mental",
+                title: "Déficience cognitive",
                 features: [
                   "Visites adaptées FALC*",
                   "Parcours simplifié",
@@ -256,7 +256,7 @@ export default function HandicapesPage() {
                 </p>
                 <p>
                   <strong className="text-off-white">Accompagnateurs :</strong> Entrée gratuite pour un accompagnateur
-                  par personne handicapée.
+                  par visiteur à mobilité réduite.
                 </p>
                 <p>
                   <strong className="text-off-white">Matériel personnel :</strong> Vous pouvez apporter votre propre
@@ -298,8 +298,8 @@ export default function HandicapesPage() {
       <section className="max-w-[1000px] mx-auto px-6 py-20 text-center">
         <h2 className="font-serif text-3xl text-charcoal mb-8 animate-fade-in-up">Certifications et labels</h2>
         <p className="font-sans text-sm text-charcoal/70 leading-relaxed mb-8 animate-fade-in-up stagger-1">
-          Le Sacré-Cœur de Casablanca est labellisé "Tourisme & Handicap" pour les quatre familles de handicap (moteur,
-          visuel, auditif, mental). Nous sommes régulièrement audités pour maintenir nos standards d'accessibilité.
+          Le Sacré-Cœur de Casablanca est labellisé "Tourisme & Handicap" pour les quatre types de déficiences (motrice,
+          visuelle, auditive, cognitive). Nous sommes régulièrement audités pour maintenir nos standards d'accessibilité.
         </p>
       </section>
       <Footer />

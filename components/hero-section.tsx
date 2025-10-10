@@ -1,34 +1,29 @@
+"use client"
+
+import { VideoPlayer } from "./video-player"
+
 export function HeroSection() {
   return (
     <section className="relative min-h-[110vh] lg:min-h-[120vh] flex items-center justify-center bg-charcoal overflow-hidden pt-32 lg:pt-40">
       <div className="absolute inset-0 z-0">
-        <video
-          autoPlay
-          muted
-          loop
-          playsInline
+        <VideoPlayer
+          src="http://casaevents.ma/wp-content/uploads/2025/10/WhatsApp-Video-2025-10-02-at-11.13.41.mp4"
+          poster="/site-map-images/architecture-optimized/cethedrale image.jpeg"
           className="w-full h-full object-cover animate-gentle-float"
-        >
-          <source src="http://casaevents.ma/wp-content/uploads/2025/10/WhatsApp-Video-2025-10-02-at-11.13.41.mp4" type="video/mp4" />
-          {/* Fallback image for browsers that don't support video */}
-          <img
-            src="/site-map-images/architecture-optimized/cethedrale image.jpeg"
-            alt="Ex Sacré Coeur Cathedral"
-            className="w-full h-full object-cover animate-gentle-float"
-          />
-        </video>
+          showControls={true}
+        />
         
-        {/* Subtle video enhancement - lighter overlay */}
-        <div className="absolute inset-0 bg-gradient-to-b from-charcoal/20 via-transparent to-charcoal/30" />
+        {/* Subtle video enhancement - lighter overlay (reduced on mobile) */}
+        <div className="absolute inset-0 bg-gradient-to-b from-charcoal/10 via-transparent to-charcoal/15 lg:from-charcoal/20 lg:to-charcoal/30" />
         
-        {/* Color enhancement overlay - subtle */}
-        <div className="absolute inset-0 bg-gradient-to-br from-vibrant-pink/8 via-blue-500/4 to-warm-terracotta/8 mix-blend-overlay" />
+        {/* Color enhancement overlay - subtle (only on desktop) */}
+        <div className="absolute inset-0 hidden lg:block bg-gradient-to-br from-vibrant-pink/8 via-blue-500/4 to-warm-terracotta/8 mix-blend-overlay" />
         
-        {/* Dynamic light effect - gentle */}
-        <div className="absolute inset-0 bg-gradient-to-r from-transparent via-off-white/3 to-transparent animate-gentle-float" />
+        {/* Dynamic light effect - gentle (only on desktop) */}
+        <div className="absolute inset-0 hidden lg:block bg-gradient-to-r from-transparent via-off-white/3 to-transparent animate-gentle-float" />
         
-        {/* Moroccan Artistic Elements */}
-        <div className="absolute inset-0 z-10">
+        {/* Moroccan Artistic Elements (more subtle on mobile) */}
+        <div className="absolute inset-0 z-10 opacity-50 lg:opacity-100">
           {/* Top decorative border */}
           <div className="absolute top-0 left-0 right-0 h-1 bg-gradient-to-r from-transparent via-vibrant-pink/60 to-transparent"></div>
           <div className="absolute top-2 left-0 right-0 h-px bg-gradient-to-r from-transparent via-blue-500/35 to-transparent"></div>
@@ -61,8 +56,8 @@ export function HeroSection() {
           </div>
         </div>
         
-        {/* Enhanced text contrast background container */}
-        <div className="relative bg-gradient-to-b from-charcoal/60 via-charcoal/40 to-charcoal/70 rounded-2xl backdrop-blur-sm pt-16 pb-12">
+        {/* Enhanced text contrast background container (lighter on mobile) */}
+        <div className="relative bg-gradient-to-b from-charcoal/40 via-charcoal/30 to-charcoal/50 lg:from-charcoal/60 lg:via-charcoal/40 lg:to-charcoal/70 rounded-2xl backdrop-blur-sm pt-16 pb-12">
           
           <h1 className="relative z-10 font-serif font-normal text-4xl md:text-5xl lg:text-6xl text-off-white mb-6 leading-tight tracking-wide animate-gentle-fade-in stagger-1 drop-shadow-2xl">
           Un joyau patrimonial au cœur de Casablanca

@@ -6,6 +6,9 @@ import { Bodoni_Moda } from "next/font/google"
 import { Analytics } from "@vercel/analytics/next"
 import { Suspense } from "react"
 import "./globals.css"
+import { ToastProvider } from "@/components/toast-notification"
+import { ScrollProgress } from "@/components/scroll-progress"
+import { BackToTop } from "@/components/back-to-top"
 
 const bodoniModa = Bodoni_Moda({
   subsets: ["latin"],
@@ -28,8 +31,12 @@ export default function RootLayout({
   return (
     <html lang="en">
       <body className={`font-sans ${GeistSans.variable} ${GeistMono.variable} ${bodoniModa.variable}`}>
-        <Suspense fallback={null}>{children}</Suspense>
-        <Analytics />
+        <ToastProvider>
+          <ScrollProgress />
+          <Suspense fallback={null}>{children}</Suspense>
+          <BackToTop />
+          <Analytics />
+        </ToastProvider>
       </body>
     </html>
   )
