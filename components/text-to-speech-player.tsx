@@ -65,16 +65,17 @@ export function TextToSpeechPlayer({ text, title }: TextToSpeechPlayerProps) {
     // Get available voices
     const voices = window.speechSynthesis.getVoices()
     
-    // Prioritize high-quality French voices (Google, Microsoft, Apple)
+    // Prioritize high-quality French female voices (Google, Microsoft, Apple)
     const preferredVoiceNames = [
-      'Google français',
-      'Google French',
+      'Amelie',
+      'Amelie (Enhanced)',
+      'Samantha (Enhanced)',
       'Microsoft Hortense - French (France)',
       'Microsoft Denise - French (France)',
-      'Thomas',
-      'Amelie',
-      'Samantha (Enhanced)',
-      'Amelie (Enhanced)'
+      'Microsoft Julie - French (France)',
+      'Aurelie',
+      'Google français',
+      'Google French'
     ]
     
     // Try to find a preferred high-quality voice first
