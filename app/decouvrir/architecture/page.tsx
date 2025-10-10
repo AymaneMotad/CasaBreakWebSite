@@ -56,7 +56,7 @@ export default function ArchitecturePage() {
       <section className="relative h-[70vh] flex items-center justify-center overflow-hidden">
         <Image
           src="/site-map-images/architecture-optimized/cethedrale image.jpeg"
-          alt="Architecture du Sacré-Cœur"
+          alt="Architecture de l'Ex église Sacré-Cœur"
           fill
           className="object-cover animate-subtle-float"
           priority

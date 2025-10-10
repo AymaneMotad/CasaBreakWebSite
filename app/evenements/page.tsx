@@ -50,7 +50,7 @@ export default function EvenementsPage() {
       <section className="relative h-[70vh] flex items-center justify-center overflow-hidden">
         <Image 
           src="/site-map-images/evenements-optimized/soiree/evenement - soiree 1.jpg" 
-          alt="Événements au Sacré-Cœur" 
+          alt="Événements à l'Ex église Sacré-Cœur" 
           fill 
           className="object-cover animate-subtle-float" 
           priority 

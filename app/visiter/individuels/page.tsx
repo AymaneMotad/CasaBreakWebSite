@@ -69,7 +69,7 @@ export default function IndividuelsPage() {
             Individuels et Familles
           </h1>
           <p className="font-sans text-sm md:text-base lg:text-lg tracking-wide text-off-white/90 animate-fade-in-up delay-100">
-            Découvrez le Sacré-Cœur à votre rythme, seul ou en famille
+            Découvrez l'Ex église Sacré-Cœur à votre rythme, seul ou en famille
           </p>
         </div>
       </section>
@@ -81,7 +81,7 @@ export default function IndividuelsPage() {
             Une Expérience Personnalisée
           </h2>
           <p className="font-sans text-base lg:text-lg text-charcoal/70 leading-relaxed animate-fade-in-up delay-100">
-            Que vous soyez seul, en couple ou en famille, le Sacré-Cœur vous accueille pour une visite libre ou guidée.
+            Que vous soyez seul, en couple ou en famille, l'Ex église Sacré-Cœur vous accueille pour une visite libre ou guidée.
             Explorez ce monument historique à votre rythme et laissez-vous inspirer par son architecture exceptionnelle
             et son atmosphère unique.
           </p>
@@ -106,7 +106,7 @@ export default function IndividuelsPage() {
             <div className="animate-fade-in-up">
               <h2 className="font-serif text-4xl lg:text-5xl text-off-white mb-6">Visite Libre</h2>
               <p className="font-sans text-base lg:text-lg text-off-white/70 leading-relaxed mb-8">
-                Explorez le Sacré-Cœur à votre propre rythme. Des panneaux informatifs en français et en arabe vous
+                Explorez l'Ex église Sacré-Cœur à votre propre rythme. Des panneaux informatifs en français et en arabe vous
                 guident à travers l'histoire et l'architecture du monument. Prenez le temps de contempler les vitraux,
                 d'admirer les voûtes et de ressentir l'atmosphère unique de ce lieu.
               </p>
@@ -147,7 +147,7 @@ export default function IndividuelsPage() {
             <div className="space-y-4">
               <div className="flex items-start gap-4">
                 <div className="w-2 h-2 bg-warm-terracotta rounded-full mt-2" />
-                <p className="font-sans text-sm text-charcoal/70">Livret-jeu "Les Mystères du Sacré-Cœur" (6-12 ans)</p>
+                <p className="font-sans text-sm text-charcoal/70">Livret-jeu "Les Mystères de l'Ex église Sacré-Cœur" (6-12 ans)</p>
               </div>
               <div className="flex items-start gap-4">
                 <div className="w-2 h-2 bg-warm-terracotta rounded-full mt-2" />

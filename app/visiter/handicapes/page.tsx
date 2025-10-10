@@ -53,7 +53,7 @@ export default function HandicapesPage() {
               Le parcours de visite a été conçu pour être accessible à tous, afin que chacun puisse profiter pleinement de la découverte du monument.
             </p>
             <p className="font-sans text-base text-charcoal/70 leading-relaxed">
-              Le Sacré-Cœur de Casablanca s'engage à offrir une expérience de visite complète et enrichissante à tous les visiteurs, quelles que soient leurs capacités.
+              L'Ex église Sacré-Cœur de Casablanca s'engage à offrir une expérience de visite complète et enrichissante à tous les visiteurs, quelles que soient leurs capacités.
               Nous proposons des dispositifs adaptés pour les personnes à mobilité réduite, malvoyantes, malentendantes et avec déficience cognitive.
             </p>
           </div>
@@ -298,7 +298,7 @@ export default function HandicapesPage() {
       <section className="max-w-[1000px] mx-auto px-6 py-20 text-center">
         <h2 className="font-serif text-3xl text-charcoal mb-8 animate-fade-in-up">Certifications et labels</h2>
         <p className="font-sans text-sm text-charcoal/70 leading-relaxed mb-8 animate-fade-in-up stagger-1">
-          Le Sacré-Cœur de Casablanca est labellisé "Tourisme & Handicap" pour les quatre types de déficiences (motrice,
+          L'Ex église Sacré-Cœur de Casablanca est labellisé "Tourisme & Handicap" pour les quatre types de déficiences (motrice,
           visuelle, auditive, cognitive). Nous sommes régulièrement audités pour maintenir nos standards d'accessibilité.
         </p>
       </section>

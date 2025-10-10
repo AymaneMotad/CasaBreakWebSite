@@ -58,7 +58,7 @@ export default function ReserverPage() {
               Un espace d'exception pour vos événements
             </h2>
             <p className="font-sans text-base text-charcoal/70 leading-relaxed mb-6">
-              L'Ex Sacré-Cœur de Casablanca s'impose aujourd'hui comme un lieu emblématique pour les événements professionnels, culturels et institutionnels.
+              L'Ex église Sacré-Cœur de Casablanca s'impose aujourd'hui comme un lieu emblématique pour les événements professionnels, culturels et institutionnels.
               Grâce à son architecture monumentale, sa localisation centrale et ses espaces modulables, il offre un cadre unique pour accueillir conférences, forums, lancements, expositions ou soirées de prestige.
             </p>
             <p className="font-sans text-base text-charcoal/70 leading-relaxed">

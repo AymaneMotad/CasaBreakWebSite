@@ -110,7 +110,7 @@ export function PracticalInfoSection() {
               <div className="space-y-6">
                 <div>
                   <span className="font-sans text-sm text-charcoal/50 uppercase tracking-wider block mb-2">Adresse</span>
-                  <span className="font-sans text-base text-charcoal font-light">Ex Sacré-Cœur, Casablanca</span>
+                  <span className="font-sans text-base text-charcoal font-light">L'Ex Église Sacré-Cœur, Casablanca</span>
                 </div>
                 <div className="h-px bg-charcoal/5"></div>
                 <div>

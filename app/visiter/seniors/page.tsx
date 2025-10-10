@@ -39,7 +39,7 @@ export default function SeniorsPage() {
               Une visite adaptée à votre rythme
             </h2>
             <p className="font-sans text-base text-charcoal/70 leading-relaxed mb-6">
-              Le Sacré-Cœur de Casablanca accueille les visiteurs seniors dans un cadre confortable et serein. Nos
+              L'Ex église Sacré-Cœur de Casablanca accueille les visiteurs seniors dans un cadre confortable et serein. Nos
               visites sont spécialement conçues pour respecter votre rythme, avec des pauses régulières et des sièges
               disponibles tout au long du parcours.
             </p>
