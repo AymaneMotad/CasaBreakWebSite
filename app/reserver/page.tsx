@@ -42,7 +42,7 @@ export default function ReserverPage() {
         <div className="absolute inset-0 bg-charcoal/50" />
         <div className="relative z-10 text-center px-6">
           <h1 className="font-serif text-5xl md:text-7xl text-off-white mb-4 animate-fade-in-up text-balance">
-            Réserver l'Ex église Sacré-Cœur
+            Réserver l'Ex Église Sacré-Cœur
           </h1>
           <p className="font-sans text-sm md:text-base text-off-white/90 tracking-wider uppercase animate-fade-in-up stagger-1">
             Un lieu d'exception pour vos événements
