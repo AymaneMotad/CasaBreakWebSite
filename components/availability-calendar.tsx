@@ -71,26 +71,26 @@ export function AvailabilityCalendar() {
     const isToday = new Date().toDateString() === date.toDateString()
 
     calendarDays.push(
-      <div
-        key={day}
-        className={`
-          relative group
-          aspect-square p-2 rounded-lg border transition-all duration-300
-          ${isPast ? 'bg-gray-100 text-gray-400 border-gray-200' : 
-            event ? 
-              event.type === 'private' ? 'bg-gradient-to-br from-charcoal/10 to-charcoal/5 border-charcoal/30 text-charcoal' :
-              'bg-gradient-to-br from-vibrant-pink/10 to-warm-terracotta/10 border-vibrant-pink/30 text-charcoal'
-            : 'bg-gradient-to-br from-blue-500/5 to-blue-600/5 border-blue-500/20 hover:border-blue-500/50 hover:shadow-lg cursor-pointer text-charcoal'
-          }
-          ${isToday ? 'ring-2 ring-blue-500' : ''}
-        `}
-      >
+        <div
+          key={day}
+          className={`
+            relative group
+            aspect-square p-1 rounded border transition-all duration-300
+            ${isPast ? 'bg-gray-100 text-gray-400 border-gray-200' : 
+              event ? 
+                event.type === 'private' ? 'bg-gradient-to-br from-charcoal/10 to-charcoal/5 border-charcoal/30 text-charcoal' :
+                'bg-gradient-to-br from-vibrant-pink/10 to-warm-terracotta/10 border-vibrant-pink/30 text-charcoal'
+              : 'bg-gradient-to-br from-blue-500/5 to-blue-600/5 border-blue-500/20 hover:border-blue-500/50 hover:shadow-lg cursor-pointer text-charcoal'
+            }
+            ${isToday ? 'ring-1 ring-blue-500' : ''}
+          `}
+        >
         <div className="flex flex-col h-full">
-          <span className={`text-sm font-sans ${isToday ? 'font-bold' : ''}`}>{day}</span>
+          <span className={`text-xs font-sans ${isToday ? 'font-bold' : ''}`}>{day}</span>
           {event && !isPast && (
-            <div className="mt-1 flex-1">
+            <div className="mt-0.5 flex-1">
               <div className={`
-                text-[10px] font-sans leading-tight
+                text-[8px] font-sans leading-tight
                 ${event.type === 'private' ? 'text-charcoal/70' : 'text-vibrant-pink'}
               `}>
                 {event.title}
@@ -99,7 +99,7 @@ export function AvailabilityCalendar() {
           )}
           {!event && !isPast && (
             <div className="mt-auto">
-              <div className="text-[9px] text-blue-600 font-sans uppercase tracking-wider">Disponible</div>
+              <div className="text-[7px] text-blue-600 font-sans uppercase tracking-wider">Disponible</div>
             </div>
           )}
         </div>
@@ -126,62 +126,62 @@ export function AvailabilityCalendar() {
   }
 
   return (
-    <div className="bg-white rounded-2xl shadow-xl p-6 lg:p-8">
+    <div className="bg-white rounded-xl shadow-lg p-4 lg:p-6 max-w-2xl mx-auto">
       {/* Header */}
-      <div className="flex items-center justify-between mb-8">
+      <div className="flex items-center justify-between mb-4">
         <button
           onClick={previousMonth}
-          className="p-2 hover:bg-gray-100 rounded-lg transition-colors"
+          className="p-1.5 hover:bg-gray-100 rounded-lg transition-colors"
           aria-label="Mois précédent"
         >
-          <ChevronLeft className="w-5 h-5 text-charcoal" />
+          <ChevronLeft className="w-4 h-4 text-charcoal" />
         </button>
         
-        <h3 className="font-serif text-2xl lg:text-3xl text-charcoal">
+        <h3 className="font-serif text-lg lg:text-xl text-charcoal">
           {monthNames[currentDate.getMonth()]} {currentDate.getFullYear()}
         </h3>
         
         <button
           onClick={nextMonth}
-          className="p-2 hover:bg-gray-100 rounded-lg transition-colors"
+          className="p-1.5 hover:bg-gray-100 rounded-lg transition-colors"
           aria-label="Mois suivant"
         >
-          <ChevronRight className="w-5 h-5 text-charcoal" />
+          <ChevronRight className="w-4 h-4 text-charcoal" />
         </button>
       </div>
 
       {/* Day names */}
-      <div className="grid grid-cols-7 gap-2 mb-2">
+      <div className="grid grid-cols-7 gap-1 mb-2">
         {dayNames.map(day => (
-          <div key={day} className="text-center text-sm font-sans text-charcoal/60 uppercase tracking-wider">
+          <div key={day} className="text-center text-xs font-sans text-charcoal/60 uppercase tracking-wider">
             {day}
           </div>
         ))}
       </div>
 
       {/* Calendar grid */}
-      <div className="grid grid-cols-7 gap-2">
+      <div className="grid grid-cols-7 gap-1">
         {calendarDays}
       </div>
 
       {/* Legend */}
-      <div className="mt-8 pt-6 border-t border-gray-200">
-        <p className="text-xs font-sans text-charcoal/60 uppercase tracking-wider mb-4">Légende</p>
-        <div className="grid sm:grid-cols-3 gap-4">
-          <div className="flex items-center gap-2">
-            <div className="w-4 h-4 rounded bg-gradient-to-br from-blue-500/20 to-blue-600/20 border border-blue-500/30" />
-            <span className="text-sm font-sans text-charcoal/70">Disponible</span>
+      <div className="mt-4 pt-4 border-t border-gray-200">
+        <p className="text-[10px] font-sans text-charcoal/60 uppercase tracking-wider mb-3">Légende</p>
+        <div className="grid sm:grid-cols-3 gap-2">
+          <div className="flex items-center gap-1.5">
+            <div className="w-3 h-3 rounded bg-gradient-to-br from-blue-500/20 to-blue-600/20 border border-blue-500/30" />
+            <span className="text-[10px] font-sans text-charcoal/70">Disponible</span>
           </div>
-          <div className="flex items-center gap-2">
-            <div className="w-4 h-4 rounded bg-gradient-to-br from-vibrant-pink/20 to-warm-terracotta/20 border border-vibrant-pink/30" />
-            <span className="text-sm font-sans text-charcoal/70">Événement Public</span>
+          <div className="flex items-center gap-1.5">
+            <div className="w-3 h-3 rounded bg-gradient-to-br from-vibrant-pink/20 to-warm-terracotta/20 border border-vibrant-pink/30" />
+            <span className="text-[10px] font-sans text-charcoal/70">Événement Public</span>
           </div>
-          <div className="flex items-center gap-2">
-            <div className="w-4 h-4 rounded bg-gradient-to-br from-charcoal/20 to-charcoal/10 border border-charcoal/30" />
-            <span className="text-sm font-sans text-charcoal/70">Réservé</span>
+          <div className="flex items-center gap-1.5">
+            <div className="w-3 h-3 rounded bg-gradient-to-br from-charcoal/20 to-charcoal/10 border border-charcoal/30" />
+            <span className="text-[10px] font-sans text-charcoal/70">Réservé</span>
           </div>
         </div>
-        <p className="text-xs font-sans text-charcoal/50 italic mt-4">
+        <p className="text-[9px] font-sans text-charcoal/50 italic mt-2">
           * Cliquez sur une date disponible pour faire une demande de réservation
         </p>
       </div>
