@@ -152,7 +152,7 @@ export default function HistoirePage() {
           
           <div className="space-y-32">
             {/* 1923 */}
-            <div className="grid lg:grid-cols-2 gap-16 items-center">
+            <div className="grid lg:grid-cols-2 gap-16 items-start">
               <div className="animate-gentle-fade-in">
            
                 <span className="font-serif text-7xl lg:text-9xl text-vibrant-pink block mb-6">1923</span>
@@ -179,7 +179,7 @@ export default function HistoirePage() {
             </div>
 
             {/* 1930 */}
-            <div className="grid lg:grid-cols-2 gap-16 items-center">
+            <div className="grid lg:grid-cols-2 gap-16 items-start">
               <div className="animate-gentle-fade-in">
                 <div className="relative h-[500px]">
                   <Image
@@ -209,7 +209,7 @@ export default function HistoirePage() {
             </div>
 
             {/* 1956 */}
-            <div className="grid lg:grid-cols-2 gap-16 items-center">
+            <div className="grid lg:grid-cols-2 gap-16 items-start">
               <div className="animate-gentle-fade-in">
              
                 <span className="font-serif text-7xl lg:text-9xl text-vibrant-pink block mb-6">1956</span>
@@ -239,7 +239,7 @@ export default function HistoirePage() {
             </div>
 
             {/* 1976 */}
-            <div className="grid lg:grid-cols-2 gap-16 items-center">
+            <div className="grid lg:grid-cols-2 gap-16 items-start">
               <div className="animate-gentle-fade-in">
                 <div className="relative h-[500px]">
                   <Image 
@@ -269,7 +269,7 @@ export default function HistoirePage() {
             </div>
 
             {/* 1990-2000 */}
-            <div className="grid lg:grid-cols-2 gap-16 items-center">
+            <div className="grid lg:grid-cols-2 gap-16 items-start">
               <div className="animate-gentle-fade-in">
               
                 <span className="font-serif text-7xl lg:text-9xl text-vibrant-pink block mb-6">1990-2000</span>
@@ -299,7 +299,7 @@ export default function HistoirePage() {
             </div>
 
             {/* 2010 */}
-            <div className="grid lg:grid-cols-2 gap-16 items-center">
+            <div className="grid lg:grid-cols-2 gap-16 items-start">
               <div className="animate-gentle-fade-in">
                 <div className="relative h-[500px]">
                   <Image 
@@ -329,7 +329,7 @@ export default function HistoirePage() {
             </div>
 
             {/* Aujourd'hui */}
-            <div className="grid lg:grid-cols-2 gap-16 items-center">
+            <div className="grid lg:grid-cols-2 gap-16 items-start">
               <div className="animate-gentle-fade-in">
                
                 <span className="font-serif text-6xl lg:text-7xl text-vibrant-pink block mb-6">Aujourd'hui</span>
