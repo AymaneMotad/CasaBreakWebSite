@@ -9,7 +9,7 @@ export default function IndividuelsPage() {
     {
       icon: Clock,
       title: "Meilleurs moments",
-      description: "Visitez en matinée pour une expérience plus calme et contemplative",
+      description: "Visitez à tout moment pour une expérience apaisante et inspirante",
     },
     {
       icon: Camera,
@@ -178,81 +178,7 @@ export default function IndividuelsPage() {
         </div>
       </section>
 
-      {/* Self-Guided Tour */}
-      <section className="bg-gradient-to-br from-charcoal via-charcoal/95 to-charcoal/90 py-24 lg:py-32 relative overflow-hidden">
-        <div className="absolute inset-0 bg-gradient-to-br from-vibrant-pink/5 via-transparent to-warm-terracotta/5"></div>
-        <div className="max-w-[1400px] mx-auto px-6 lg:px-12 relative">
-          <div className="grid lg:grid-cols-2 gap-16 lg:gap-20 items-center">
-            <div className="animate-fade-in-up">
-              <div className="inline-block px-6 py-3 bg-gradient-to-r from-vibrant-pink/20 to-warm-terracotta/20 rounded-full mb-8">
-                <span className="font-sans text-sm font-medium text-vibrant-pink tracking-wider uppercase">Découverte</span>
-              </div>
-              <h2 className="font-serif text-5xl lg:text-7xl text-off-white mb-8 tracking-tight">Visite Libre</h2>
-              <p className="font-sans text-lg lg:text-xl text-off-white/80 leading-relaxed mb-10">
-                Explorez l'Ex église Sacré-Cœur à votre propre rythme. Des panneaux informatifs en français et en arabe vous
-                guident à travers l'histoire et l'architecture du monument.
-              </p>
-              <div className="space-y-6">
-                <div className="flex items-start gap-4 group">
-                  <div className="w-3 h-3 bg-gradient-to-r from-vibrant-pink to-warm-terracotta rounded-full mt-2 group-hover:scale-125 transition-transform duration-300" />
-                  <p className="font-sans text-base text-off-white/80 group-hover:text-off-white transition-colors">Accès libre pendant les horaires d'ouverture</p>
-                </div>
-                <div className="flex items-start gap-4 group">
-                  <div className="w-3 h-3 bg-gradient-to-r from-vibrant-pink to-warm-terracotta rounded-full mt-2 group-hover:scale-125 transition-transform duration-300" />
-                  <p className="font-sans text-base text-off-white/80 group-hover:text-off-white transition-colors">Plan du monument fourni à l'entrée</p>
-                </div>
-                <div className="flex items-start gap-4 group">
-                  <div className="w-3 h-3 bg-gradient-to-r from-vibrant-pink to-warm-terracotta rounded-full mt-2 group-hover:scale-125 transition-transform duration-300" />
-                  <p className="font-sans text-base text-off-white/80 group-hover:text-off-white transition-colors">Audio-guide disponible en location (30 MAD)</p>
-                </div>
-              </div>
-            </div>
-            <div className="relative h-[500px] lg:h-[600px] animate-fade-in-up delay-100 rounded-3xl overflow-hidden shadow-2xl">
-              <Image src="https://images.unsplash.com/photo-1507003211169-0a1dd7228f2d?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=2070&q=80" alt="Visite libre" fill className="object-cover" />
-              <div className="absolute inset-0 bg-gradient-to-t from-charcoal/20 to-transparent"></div>
-            </div>
-          </div>
-        </div>
-      </section>
 
-      {/* Family Activities */}
-      <section className="bg-gradient-to-br from-off-white via-white to-off-white py-24 lg:py-32">
-        <div className="max-w-[1400px] mx-auto px-6 lg:px-12">
-          <div className="grid lg:grid-cols-2 gap-16 lg:gap-20 items-center">
-            <div className="relative h-[500px] lg:h-[600px] animate-fade-in-up rounded-3xl overflow-hidden shadow-2xl">
-              <Image src="https://images.unsplash.com/photo-1544716278-ca5e3f4abd8c?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=2070&q=80" alt="Activités familiales" fill className="object-cover" />
-              <div className="absolute inset-0 bg-gradient-to-t from-charcoal/20 to-transparent"></div>
-            </div>
-            <div className="animate-fade-in-up delay-100">
-              <div className="inline-block px-6 py-3 bg-gradient-to-r from-warm-terracotta/10 to-vibrant-pink/10 rounded-full mb-8">
-                <span className="font-sans text-sm font-medium text-warm-terracotta tracking-wider uppercase">Activités</span>
-              </div>
-              <h2 className="font-serif text-5xl lg:text-7xl text-charcoal mb-8 tracking-tight">Activités Familiales</h2>
-              <p className="font-sans text-lg lg:text-xl text-charcoal/70 leading-relaxed mb-10">
-                Des activités spécialement conçues pour les familles avec enfants, étudiants et seniors.
-              </p>
-              <div className="space-y-6">
-                <div className="flex items-start gap-4 group">
-                  <div className="w-3 h-3 bg-gradient-to-r from-warm-terracotta to-vibrant-pink rounded-full mt-2 group-hover:scale-125 transition-transform duration-300" />
-                  <p className="font-sans text-base text-charcoal/70 group-hover:text-charcoal transition-colors">Livret-jeu "Les Mystères de l'Ex église Sacré-Cœur" (6-12 ans)</p>
-                </div>
-                <div className="flex items-start gap-4 group">
-                  <div className="w-3 h-3 bg-gradient-to-r from-warm-terracotta to-vibrant-pink rounded-full mt-2 group-hover:scale-125 transition-transform duration-300" />
-                  <p className="font-sans text-base text-charcoal/70 group-hover:text-charcoal transition-colors">Programmes éducatifs pour étudiants</p>
-                </div>
-                <div className="flex items-start gap-4 group">
-                  <div className="w-3 h-3 bg-gradient-to-r from-warm-terracotta to-vibrant-pink rounded-full mt-2 group-hover:scale-125 transition-transform duration-300" />
-                  <p className="font-sans text-base text-charcoal/70 group-hover:text-charcoal transition-colors">Visites adaptées pour seniors</p>
-                </div>
-                <div className="flex items-start gap-4 group">
-                  <div className="w-3 h-3 bg-gradient-to-r from-warm-terracotta to-vibrant-pink rounded-full mt-2 group-hover:scale-125 transition-transform duration-300" />
-                  <p className="font-sans text-base text-charcoal/70 group-hover:text-charcoal transition-colors">Équipements d'accessibilité complets</p>
-                </div>
-              </div>
-            </div>
-          </div>
-        </div>
-      </section>
 
       {/* Practical Info */}
       <section className="bg-gradient-to-br from-vibrant-pink/5 via-off-white to-warm-terracotta/5 py-24 lg:py-32">

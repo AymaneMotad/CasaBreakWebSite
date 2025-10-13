@@ -61,16 +61,13 @@ export default function GroupesPage() {
               <div>
                 <h3 className="font-serif text-xl text-charcoal mb-3">Réservation</h3>
                 <p className="font-sans text-sm text-charcoal/70 leading-relaxed">
-                  Les visites de groupe doivent être réservées au moins 2 mois à l'avance. Contactez-nous par
-                  téléphone ou via notre formulaire en ligne pour organiser votre visite.
+                  Contactez-nous par téléphone ou via notre formulaire en ligne pour organiser votre visite.
                 </p>
               </div>
               <div>
                 <h3 className="font-serif text-xl text-charcoal mb-3">Horaires disponibles</h3>
                 <p className="font-sans text-sm text-charcoal/70 leading-relaxed">
                   Mardi - Dimanche : 9h00 - 18h00
-                  <br />
-                  Créneaux : 9h, 11h, 14h, 16h
                   <br />
                   Fermé le lundi
                 </p>
@@ -79,8 +76,6 @@ export default function GroupesPage() {
                 <h3 className="font-serif text-xl text-charcoal mb-3">Langues disponibles</h3>
                 <p className="font-sans text-sm text-charcoal/70 leading-relaxed">
                   Français, Arabe, Anglais
-                  <br />
-                  Autres langues sur demande
                 </p>
               </div>
               <div>

@@ -255,7 +255,7 @@ export default function ArchitecturePage() {
       {/* CTA Section */}
       <section className="max-w-[1000px] mx-auto px-6 lg:px-12 py-20 lg:py-32 text-center">
         <h2 className="font-serif text-4xl lg:text-6xl text-charcoal mb-8 animate-fade-in-up">
-          Visitez ce Chef-d'Œuvre
+          Visiter l'Ex Église Sacré-Cœur
         </h2>
         <p className="font-sans text-base lg:text-lg text-charcoal/70 leading-relaxed mb-12 animate-fade-in-up delay-100">
           Découvrez l'architecture exceptionnelle de l'Ex église Sacré-Cœur lors d'une visite guidée ou en autonomie
@@ -264,7 +264,7 @@ export default function ArchitecturePage() {
           href="/visiter/individuels"
           className="inline-block px-8 py-4 text-xs font-sans tracking-wider uppercase bg-gradient-to-r from-blue-500 to-blue-700 text-white hover:shadow-lg hover:scale-105 transition-all duration-300 animate-fade-in-up delay-200 rounded-lg"
         >
-          Planifier ma visite
+          Visiter maintenant
         </a>
       </section>
 
