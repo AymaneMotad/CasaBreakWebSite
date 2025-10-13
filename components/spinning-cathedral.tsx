@@ -4,7 +4,7 @@ import { VideoPlayer } from "./video-player"
 
 export function SpinningCathedral() {
   return (
-    <section className="py-16 lg:py-24 bg-gradient-to-b from-off-white to-cream relative overflow-hidden">
+    <section className="py-16 lg:py-24 bg-white relative overflow-hidden">
       {/* Moroccan Artistic Elements */}
       <div className="absolute inset-0 pointer-events-none">
         {/* Top decorative border */}
@@ -48,8 +48,8 @@ export function SpinningCathedral() {
         <div className="animate-fade-in-up stagger-1">
           <div className="w-full max-w-3xl mx-auto">
             <VideoPlayer
-              src="/videos/animated-enhanced.mp4"
-              className="w-full h-auto rounded-lg shadow-2xl"
+              src="/videos/sacreloop.mp4"
+              className="w-full h-auto rounded-lg"
               showControls={true}
             />
           </div>

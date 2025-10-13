@@ -32,7 +32,7 @@ export function Navigation() {
       ],
     },
     { label: "Événements", href: "/evenements" },
-    { label: "Réserver l'Ex Église Sacré-Cœur", href: "/reserver" },
+    { label: "Réserver votre espace", href: "/reserver" },
   ]
 
   const handleDropdownClick = (e: React.MouseEvent, hasSubmenu: boolean) => {

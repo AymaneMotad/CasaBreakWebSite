@@ -129,6 +129,10 @@ export default function ArchitecturePage() {
               <div className={`${index % 2 === 1 ? "md:order-2" : ""} animate-fade-in-up`}>
                 <h3 className="font-serif text-3xl lg:text-5xl text-charcoal mb-6">{feature.title}</h3>
                 <p className="font-sans text-base lg:text-lg text-charcoal/70 leading-relaxed">{feature.description}</p>
+                <TextToSpeechPlayer 
+                  text={feature.audioText}
+                  title={`Écouter: ${feature.title}`}
+                />
               </div>
               <div className={`${index % 2 === 1 ? "md:order-1" : ""} animate-fade-in-up delay-100`}>
                 <div className="relative h-[400px] lg:h-[500px]">
@@ -139,10 +143,6 @@ export default function ArchitecturePage() {
                     className="object-cover hover:scale-105 transition-transform duration-700"
                   />
                 </div>
-                <TextToSpeechPlayer 
-                  text={feature.audioText}
-                  title={`Écouter: ${feature.title}`}
-                />
               </div>
             </div>
           ))}

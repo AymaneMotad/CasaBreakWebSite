@@ -38,10 +38,6 @@ export default function GroupesPage() {
             <h2 className="font-serif text-4xl md:text-5xl text-charcoal mb-6 text-balance">
               Découvrez l'Ex Église Sacré-Cœur en groupe
             </h2>
-            <div className="inline-block px-8 py-4 bg-gradient-to-r from-vibrant-pink to-warm-terracotta text-off-white mb-8 shadow-lg">
-              <p className="font-serif text-4xl mb-1">35 MAD</p>
-              <p className="font-sans text-xs tracking-wider uppercase">Par personne (plus de 10 personnes)</p>
-            </div>
             <p className="font-sans text-base text-charcoal/70 leading-relaxed mb-6">
               Vous souhaitez découvrir l'Ex Église Sacré-Cœur entre amis ou en petit groupe (plus de 10 personnes) ? 
               Profitez d'une visite libre ou accompagnée, selon vos envies, pour explorer l'histoire, l'architecture et la symbolique de ce monument emblématique de Casablanca.
@@ -65,7 +61,7 @@ export default function GroupesPage() {
               <div>
                 <h3 className="font-serif text-xl text-charcoal mb-3">Réservation</h3>
                 <p className="font-sans text-sm text-charcoal/70 leading-relaxed">
-                  Les visites de groupe doivent être réservées au moins 2 semaines à l'avance. Contactez-nous par
+                  Les visites de groupe doivent être réservées au moins 2 mois à l'avance. Contactez-nous par
                   téléphone ou via notre formulaire en ligne pour organiser votre visite.
                 </p>
               </div>
