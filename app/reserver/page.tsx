@@ -319,11 +319,7 @@ export default function ReserverPage() {
                       </p>
                       
                       {/* Enhanced Hover Effect - Additional Info */}
-                      <div className="opacity-0 group-hover:opacity-100 transition-all duration-500 transform translate-y-4 group-hover:translate-y-0">
-                        <p className="font-sans text-sm text-white/80 leading-relaxed">
-                          Un événement d'exception dans un cadre architectural unique
-                        </p>
-                      </div>
+                     
                     </div>
                   </div>
                   
