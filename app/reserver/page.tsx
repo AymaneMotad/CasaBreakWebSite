@@ -42,8 +42,7 @@ export default function ReserverPage() {
         <div className="absolute inset-0 bg-charcoal/50" />
         <div className="relative z-10 text-center px-6">
           <h1 className="font-serif text-5xl md:text-7xl text-off-white mb-4 animate-fade-in-up text-balance">
-            
-            Réserver l'Ex Église Sacré-Cœur
+            Réserver votre espace
           </h1>
           <p className="font-sans text-sm md:text-base text-off-white/90 tracking-wider uppercase animate-fade-in-up stagger-1">
             Un lieu d'exception pour vos événements
@@ -98,7 +97,7 @@ export default function ReserverPage() {
               <div className="h-px w-16 bg-gradient-to-l from-transparent to-vibrant-pink"></div>
             </div>
             <h2 className="font-serif text-4xl md:text-6xl lg:text-7xl text-charcoal mb-6 tracking-tight">
-              Découvrez nos espaces
+              Une soirée mémorable marquant la renaissance d'un lieu emblématique au cœur de Casablanca.
             </h2>
             <p className="font-sans text-lg md:text-xl text-charcoal/70 max-w-3xl mx-auto leading-relaxed">
               Une visite immersive de l'Ex église Sacré-Cœur, un lieu d'exception pour vos événements les plus prestigieux

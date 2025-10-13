@@ -48,7 +48,7 @@ export function SpinningCathedral() {
         <div className="animate-fade-in-up stagger-1">
           <div className="w-full max-w-3xl mx-auto">
             <VideoPlayer
-              src="/videos/sacreloop.mp4"
+              src="/videos/animated-enhanced.mp4"
               className="w-full h-auto rounded-lg"
               showControls={true}
             />
