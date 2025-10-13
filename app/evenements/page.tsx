@@ -80,13 +80,7 @@ export default function EvenementsPage() {
         </div>
         
         <div className="relative z-10 text-center px-6">
-          <div className="animate-gentle-fade-in">
-            <div className="inline-block px-4 py-2 bg-gradient-to-r from-vibrant-pink/20 to-warm-terracotta/20 backdrop-blur-sm border border-off-white/20 rounded-full mb-8">
-              <span className="text-off-white/90 text-sm font-sans tracking-wider uppercase">
-                Programmation Culturelle
-              </span>
-            </div>
-          </div>
+       
           <h1 className="font-serif text-6xl md:text-8xl lg:text-9xl text-off-white mb-6 animate-gentle-fade-in stagger-1 text-enhanced">
             Événements
           </h1>

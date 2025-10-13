@@ -78,14 +78,7 @@ export default function GroupesPage() {
                   Français, Arabe, Anglais
                 </p>
               </div>
-              <div>
-                <h3 className="font-serif text-xl text-charcoal mb-3">Services additionnels</h3>
-                <ul className="space-y-2 font-sans text-sm text-charcoal/70">
-                  <li>• Audioguides multilingues</li>
-                  <li>• Espace de restauration privatisable</li>
-                  <li>• Boutique de souvenirs</li>
-                </ul>
-              </div>
+            
             </div>
           </div>
           <div className="space-y-8 animate-fade-in-up stagger-1">
@@ -96,14 +89,14 @@ export default function GroupesPage() {
                   <Phone className="h-5 w-5 text-vibrant-pink mt-0.5" />
                   <div>
                     <p className="font-medium text-charcoal">Téléphone</p>
-                    <p>+212 522 27 45 78</p>
+                    <p>+212 522 227 745</p>
                   </div>
                 </div>
                 <div className="flex items-start gap-3">
                   <Calendar className="h-5 w-5 text-vibrant-pink mt-0.5" />
                   <div>
                     <p className="font-medium text-charcoal">Email</p>
-                    <p>groupes@sacrecoeur-casa.ma</p>
+                    <p>contact@casaevents.ma</p>
                   </div>
                 </div>
               </div>
