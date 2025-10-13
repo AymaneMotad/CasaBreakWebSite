@@ -88,7 +88,7 @@ export default function IndividuelsPage() {
       {/* Hero Section */}
       <section className="relative h-[50vh] flex items-center justify-center overflow-hidden">
         <Image
-          src="/family-visiting-cathedral-interior-together-casabl.jpg"
+          src="https://images.unsplash.com/photo-1558618666-fcd25c85cd64?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=2070&q=80"
           alt="Visite individuelle et familiale"
           fill
           className="object-cover"
@@ -106,12 +106,15 @@ export default function IndividuelsPage() {
       </section>
 
       {/* Introduction */}
-      <section className="max-w-[1000px] mx-auto px-6 lg:px-12 py-20 lg:py-32">
-        <div className="text-center mb-20">
-          <h2 className="font-serif text-4xl lg:text-6xl text-charcoal mb-8 animate-fade-in-up">
+      <section className="max-w-[1400px] mx-auto px-6 lg:px-12 py-24 lg:py-32">
+        <div className="text-center mb-24">
+          <div className="inline-block px-6 py-3 bg-gradient-to-r from-vibrant-pink/10 to-warm-terracotta/10 rounded-full mb-8 animate-fade-in-up">
+            <span className="font-sans text-sm font-medium text-vibrant-pink tracking-wider uppercase">Découvrez</span>
+          </div>
+          <h2 className="font-serif text-5xl lg:text-7xl text-charcoal mb-8 animate-fade-in-up delay-100 tracking-tight">
             Une Expérience Personnalisée
           </h2>
-          <p className="font-sans text-base lg:text-lg text-charcoal/70 leading-relaxed animate-fade-in-up delay-100">
+          <p className="font-sans text-lg lg:text-xl text-charcoal/70 leading-relaxed max-w-4xl mx-auto animate-fade-in-up delay-200">
             Que vous soyez seul, en couple, en famille, étudiant, senior ou visiteur à mobilité réduite, 
             l'Ex église Sacré-Cœur vous accueille avec des services adaptés à vos besoins.
           </p>
@@ -120,9 +123,11 @@ export default function IndividuelsPage() {
         {/* Tips Grid */}
         <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-8 lg:gap-12">
           {tips.map((tip, index) => (
-            <div key={tip.title} className={`animate-fade-in-up delay-${index * 100}`}>
-              <tip.icon className="h-10 w-10 text-vibrant-pink mb-4" />
-              <h3 className="font-serif text-2xl text-charcoal mb-3">{tip.title}</h3>
+            <div key={tip.title} className={`group bg-white/50 backdrop-blur-sm border border-charcoal/5 rounded-2xl p-8 hover:shadow-xl hover:shadow-vibrant-pink/10 transition-all duration-500 animate-fade-in-up delay-${index * 100} hover:-translate-y-2`}>
+              <div className="w-16 h-16 bg-gradient-to-br from-vibrant-pink/10 to-warm-terracotta/10 rounded-2xl flex items-center justify-center mb-6 group-hover:scale-110 transition-transform duration-300">
+                <tip.icon className="h-8 w-8 text-vibrant-pink" />
+              </div>
+              <h3 className="font-serif text-2xl text-charcoal mb-4">{tip.title}</h3>
               <p className="font-sans text-sm text-charcoal/70 leading-relaxed">{tip.description}</p>
             </div>
           ))}
@@ -130,30 +135,43 @@ export default function IndividuelsPage() {
       </section>
 
       {/* Visitor Types */}
-      <section className="bg-charcoal/5 py-20 lg:py-32">
-        <div className="max-w-[1200px] mx-auto px-6 lg:px-12">
-          <h2 className="font-serif text-4xl lg:text-5xl text-charcoal mb-16 text-center animate-fade-in-up">
-            Formules de Visite
-          </h2>
-          <div className="grid md:grid-cols-2 gap-8">
+      <section className="bg-gradient-to-br from-charcoal/3 via-off-white to-charcoal/5 py-24 lg:py-32">
+        <div className="max-w-[1400px] mx-auto px-6 lg:px-12">
+          <div className="text-center mb-20">
+            <div className="inline-block px-6 py-3 bg-gradient-to-r from-blue-500/10 to-vibrant-pink/10 rounded-full mb-8 animate-fade-in-up">
+              <span className="font-sans text-sm font-medium text-blue-600 tracking-wider uppercase">Formules</span>
+            </div>
+            <h2 className="font-serif text-5xl lg:text-7xl text-charcoal mb-8 animate-fade-in-up delay-100 tracking-tight">
+              Formules de Visite
+            </h2>
+            <p className="font-sans text-lg lg:text-xl text-charcoal/70 leading-relaxed max-w-3xl mx-auto animate-fade-in-up delay-200">
+              Choisissez la formule qui correspond le mieux à votre profil et vos besoins
+            </p>
+          </div>
+          <div className="grid md:grid-cols-2 gap-8 lg:gap-12">
             {visitorTypes.map((type, index) => (
-              <div key={type.title} className={`bg-off-white p-8 shadow-lg hover:shadow-2xl transition-all duration-300 animate-fade-in-up stagger-${index + 1}`}>
-                <div className="flex items-center gap-4 mb-6">
-                  <type.icon className="h-12 w-12 text-vibrant-pink" />
-                  <div>
-                    <h3 className="font-serif text-2xl text-charcoal">{type.title}</h3>
-                    <p className="font-serif text-3xl text-vibrant-pink font-bold">{type.price}</p>
+              <div key={type.title} className={`group relative bg-white rounded-3xl p-10 shadow-lg hover:shadow-2xl transition-all duration-500 animate-fade-in-up stagger-${index + 1} hover:-translate-y-2 overflow-hidden`}>
+                <div className="absolute inset-0 bg-gradient-to-br from-vibrant-pink/5 via-transparent to-warm-terracotta/5 opacity-0 group-hover:opacity-100 transition-opacity duration-500"></div>
+                <div className="relative">
+                  <div className="flex items-center gap-6 mb-8">
+                    <div className="w-20 h-20 bg-gradient-to-br from-vibrant-pink/10 to-warm-terracotta/10 rounded-2xl flex items-center justify-center group-hover:scale-110 transition-transform duration-300">
+                      <type.icon className="h-10 w-10 text-vibrant-pink" />
+                    </div>
+                    <div>
+                      <h3 className="font-serif text-3xl text-charcoal mb-2">{type.title}</h3>
+                      <p className="font-serif text-4xl text-vibrant-pink font-bold">{type.price}</p>
+                    </div>
                   </div>
+                  <p className="font-sans text-base text-charcoal/70 leading-relaxed mb-8">{type.description}</p>
+                  <ul className="space-y-3">
+                    {type.features.map((feature, featureIndex) => (
+                      <li key={featureIndex} className="flex items-start gap-3">
+                        <div className="w-2 h-2 bg-vibrant-pink rounded-full mt-2 flex-shrink-0"></div>
+                        <span className="font-sans text-sm text-charcoal/70">{feature}</span>
+                      </li>
+                    ))}
+                  </ul>
                 </div>
-                <p className="font-sans text-sm text-charcoal/70 leading-relaxed mb-6">{type.description}</p>
-                <ul className="space-y-2">
-                  {type.features.map((feature, featureIndex) => (
-                    <li key={featureIndex} className="flex items-start gap-2">
-                      <span className="text-vibrant-pink mt-1">•</span>
-                      <span className="font-sans text-sm text-charcoal/70">{feature}</span>
-                    </li>
-                  ))}
-                </ul>
               </div>
             ))}
           </div>
@@ -161,64 +179,75 @@ export default function IndividuelsPage() {
       </section>
 
       {/* Self-Guided Tour */}
-      <section className="bg-charcoal py-20 lg:py-32">
-        <div className="max-w-[1200px] mx-auto px-6 lg:px-12">
-          <div className="grid md:grid-cols-2 gap-12 lg:gap-20 items-center">
+      <section className="bg-gradient-to-br from-charcoal via-charcoal/95 to-charcoal/90 py-24 lg:py-32 relative overflow-hidden">
+        <div className="absolute inset-0 bg-gradient-to-br from-vibrant-pink/5 via-transparent to-warm-terracotta/5"></div>
+        <div className="max-w-[1400px] mx-auto px-6 lg:px-12 relative">
+          <div className="grid lg:grid-cols-2 gap-16 lg:gap-20 items-center">
             <div className="animate-fade-in-up">
-              <h2 className="font-serif text-4xl lg:text-5xl text-off-white mb-6">Visite Libre</h2>
-              <p className="font-sans text-base lg:text-lg text-off-white/70 leading-relaxed mb-8">
+              <div className="inline-block px-6 py-3 bg-gradient-to-r from-vibrant-pink/20 to-warm-terracotta/20 rounded-full mb-8">
+                <span className="font-sans text-sm font-medium text-vibrant-pink tracking-wider uppercase">Découverte</span>
+              </div>
+              <h2 className="font-serif text-5xl lg:text-7xl text-off-white mb-8 tracking-tight">Visite Libre</h2>
+              <p className="font-sans text-lg lg:text-xl text-off-white/80 leading-relaxed mb-10">
                 Explorez l'Ex église Sacré-Cœur à votre propre rythme. Des panneaux informatifs en français et en arabe vous
                 guident à travers l'histoire et l'architecture du monument.
               </p>
-              <div className="space-y-4">
-                <div className="flex items-start gap-4">
-                  <div className="w-2 h-2 bg-vibrant-pink rounded-full mt-2" />
-                  <p className="font-sans text-sm text-off-white/70">Accès libre pendant les horaires d'ouverture</p>
+              <div className="space-y-6">
+                <div className="flex items-start gap-4 group">
+                  <div className="w-3 h-3 bg-gradient-to-r from-vibrant-pink to-warm-terracotta rounded-full mt-2 group-hover:scale-125 transition-transform duration-300" />
+                  <p className="font-sans text-base text-off-white/80 group-hover:text-off-white transition-colors">Accès libre pendant les horaires d'ouverture</p>
                 </div>
-                <div className="flex items-start gap-4">
-                  <div className="w-2 h-2 bg-vibrant-pink rounded-full mt-2" />
-                  <p className="font-sans text-sm text-off-white/70">Plan du monument fourni à l'entrée</p>
+                <div className="flex items-start gap-4 group">
+                  <div className="w-3 h-3 bg-gradient-to-r from-vibrant-pink to-warm-terracotta rounded-full mt-2 group-hover:scale-125 transition-transform duration-300" />
+                  <p className="font-sans text-base text-off-white/80 group-hover:text-off-white transition-colors">Plan du monument fourni à l'entrée</p>
                 </div>
-                <div className="flex items-start gap-4">
-                  <div className="w-2 h-2 bg-vibrant-pink rounded-full mt-2" />
-                  <p className="font-sans text-sm text-off-white/70">Audio-guide disponible en location (30 MAD)</p>
+                <div className="flex items-start gap-4 group">
+                  <div className="w-3 h-3 bg-gradient-to-r from-vibrant-pink to-warm-terracotta rounded-full mt-2 group-hover:scale-125 transition-transform duration-300" />
+                  <p className="font-sans text-base text-off-white/80 group-hover:text-off-white transition-colors">Audio-guide disponible en location (30 MAD)</p>
                 </div>
               </div>
             </div>
-            <div className="relative h-[400px] lg:h-[500px] animate-fade-in-up delay-100">
-              <Image src="/person-exploring-cathedral-interior-alone-peaceful.jpg" alt="Visite libre" fill className="object-cover" />
+            <div className="relative h-[500px] lg:h-[600px] animate-fade-in-up delay-100 rounded-3xl overflow-hidden shadow-2xl">
+              <Image src="https://images.unsplash.com/photo-1507003211169-0a1dd7228f2d?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=2070&q=80" alt="Visite libre" fill className="object-cover" />
+              <div className="absolute inset-0 bg-gradient-to-t from-charcoal/20 to-transparent"></div>
             </div>
           </div>
         </div>
       </section>
 
       {/* Family Activities */}
-      <section className="max-w-[1200px] mx-auto px-6 lg:px-12 py-20 lg:py-32">
-        <div className="grid md:grid-cols-2 gap-12 lg:gap-20 items-center">
-          <div className="relative h-[400px] lg:h-[500px] animate-fade-in-up">
-            <Image src="/children-family-activity-cathedral-educational-fun.jpg" alt="Activités familiales" fill className="object-cover" />
-          </div>
-          <div className="animate-fade-in-up delay-100">
-            <h2 className="font-serif text-4xl lg:text-5xl text-charcoal mb-6">Activités Familiales</h2>
-            <p className="font-sans text-base lg:text-lg text-charcoal/70 leading-relaxed mb-8">
-              Des activités spécialement conçues pour les familles avec enfants, étudiants et seniors.
-            </p>
-            <div className="space-y-4">
-              <div className="flex items-start gap-4">
-                <div className="w-2 h-2 bg-warm-terracotta rounded-full mt-2" />
-                <p className="font-sans text-sm text-charcoal/70">Livret-jeu "Les Mystères de l'Ex église Sacré-Cœur" (6-12 ans)</p>
+      <section className="bg-gradient-to-br from-off-white via-white to-off-white py-24 lg:py-32">
+        <div className="max-w-[1400px] mx-auto px-6 lg:px-12">
+          <div className="grid lg:grid-cols-2 gap-16 lg:gap-20 items-center">
+            <div className="relative h-[500px] lg:h-[600px] animate-fade-in-up rounded-3xl overflow-hidden shadow-2xl">
+              <Image src="https://images.unsplash.com/photo-1544716278-ca5e3f4abd8c?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=2070&q=80" alt="Activités familiales" fill className="object-cover" />
+              <div className="absolute inset-0 bg-gradient-to-t from-charcoal/20 to-transparent"></div>
+            </div>
+            <div className="animate-fade-in-up delay-100">
+              <div className="inline-block px-6 py-3 bg-gradient-to-r from-warm-terracotta/10 to-vibrant-pink/10 rounded-full mb-8">
+                <span className="font-sans text-sm font-medium text-warm-terracotta tracking-wider uppercase">Activités</span>
               </div>
-              <div className="flex items-start gap-4">
-                <div className="w-2 h-2 bg-warm-terracotta rounded-full mt-2" />
-                <p className="font-sans text-sm text-charcoal/70">Programmes éducatifs pour étudiants</p>
-              </div>
-              <div className="flex items-start gap-4">
-                <div className="w-2 h-2 bg-warm-terracotta rounded-full mt-2" />
-                <p className="font-sans text-sm text-charcoal/70">Visites adaptées pour seniors</p>
-              </div>
-              <div className="flex items-start gap-4">
-                <div className="w-2 h-2 bg-warm-terracotta rounded-full mt-2" />
-                <p className="font-sans text-sm text-charcoal/70">Équipements d'accessibilité complets</p>
+              <h2 className="font-serif text-5xl lg:text-7xl text-charcoal mb-8 tracking-tight">Activités Familiales</h2>
+              <p className="font-sans text-lg lg:text-xl text-charcoal/70 leading-relaxed mb-10">
+                Des activités spécialement conçues pour les familles avec enfants, étudiants et seniors.
+              </p>
+              <div className="space-y-6">
+                <div className="flex items-start gap-4 group">
+                  <div className="w-3 h-3 bg-gradient-to-r from-warm-terracotta to-vibrant-pink rounded-full mt-2 group-hover:scale-125 transition-transform duration-300" />
+                  <p className="font-sans text-base text-charcoal/70 group-hover:text-charcoal transition-colors">Livret-jeu "Les Mystères de l'Ex église Sacré-Cœur" (6-12 ans)</p>
+                </div>
+                <div className="flex items-start gap-4 group">
+                  <div className="w-3 h-3 bg-gradient-to-r from-warm-terracotta to-vibrant-pink rounded-full mt-2 group-hover:scale-125 transition-transform duration-300" />
+                  <p className="font-sans text-base text-charcoal/70 group-hover:text-charcoal transition-colors">Programmes éducatifs pour étudiants</p>
+                </div>
+                <div className="flex items-start gap-4 group">
+                  <div className="w-3 h-3 bg-gradient-to-r from-warm-terracotta to-vibrant-pink rounded-full mt-2 group-hover:scale-125 transition-transform duration-300" />
+                  <p className="font-sans text-base text-charcoal/70 group-hover:text-charcoal transition-colors">Visites adaptées pour seniors</p>
+                </div>
+                <div className="flex items-start gap-4 group">
+                  <div className="w-3 h-3 bg-gradient-to-r from-warm-terracotta to-vibrant-pink rounded-full mt-2 group-hover:scale-125 transition-transform duration-300" />
+                  <p className="font-sans text-base text-charcoal/70 group-hover:text-charcoal transition-colors">Équipements d'accessibilité complets</p>
+                </div>
               </div>
             </div>
           </div>
@@ -226,58 +255,82 @@ export default function IndividuelsPage() {
       </section>
 
       {/* Practical Info */}
-      <section className="bg-vibrant-pink/5 py-20 lg:py-32">
-        <div className="max-w-[1000px] mx-auto px-6 lg:px-12 text-center">
-          <h2 className="font-serif text-4xl lg:text-6xl text-charcoal mb-12 animate-fade-in-up">
-            Informations Pratiques
-          </h2>
-          <div className="grid md:grid-cols-2 gap-8 text-left">
-            <div className="bg-off-white p-8 animate-fade-in-up">
-              <h3 className="font-serif text-2xl text-charcoal mb-4">Horaires</h3>
-              <p className="font-sans text-sm text-charcoal/70 leading-relaxed">
-                Mardi - Dimanche : 9h00 - 18h00
-                <br />
-                Fermé le lundi
-                <br />
-                Dernière entrée : 17h30
-              </p>
+      <section className="bg-gradient-to-br from-vibrant-pink/5 via-off-white to-warm-terracotta/5 py-24 lg:py-32">
+        <div className="max-w-[1400px] mx-auto px-6 lg:px-12">
+          <div className="text-center mb-20">
+            <div className="inline-block px-6 py-3 bg-gradient-to-r from-vibrant-pink/10 to-warm-terracotta/10 rounded-full mb-8 animate-fade-in-up">
+              <span className="font-sans text-sm font-medium text-vibrant-pink tracking-wider uppercase">Informations</span>
             </div>
-            <div className="bg-off-white p-8 animate-fade-in-up delay-100">
-              <h3 className="font-serif text-2xl text-charcoal mb-4">Tarifs</h3>
-              <div className="space-y-3 font-sans text-sm text-charcoal/70 leading-relaxed">
-                <div className="flex justify-between">
-                  <span>Adultes :</span>
+            <h2 className="font-serif text-5xl lg:text-7xl text-charcoal mb-8 animate-fade-in-up delay-100 tracking-tight">
+              Informations Pratiques
+            </h2>
+            <p className="font-sans text-lg lg:text-xl text-charcoal/70 leading-relaxed max-w-3xl mx-auto animate-fade-in-up delay-200">
+              Tout ce que vous devez savoir pour préparer votre visite
+            </p>
+          </div>
+          <div className="grid lg:grid-cols-2 gap-12">
+            <div className="bg-white/80 backdrop-blur-sm border border-charcoal/5 rounded-3xl p-10 shadow-lg hover:shadow-xl transition-all duration-500 animate-fade-in-up group">
+              <div className="w-16 h-16 bg-gradient-to-br from-vibrant-pink/10 to-warm-terracotta/10 rounded-2xl flex items-center justify-center mb-8 group-hover:scale-110 transition-transform duration-300">
+                <Clock className="h-8 w-8 text-vibrant-pink" />
+              </div>
+              <h3 className="font-serif text-3xl text-charcoal mb-6">Horaires</h3>
+              <div className="space-y-4 font-sans text-base text-charcoal/70 leading-relaxed">
+                <div className="flex justify-between items-center py-2 border-b border-charcoal/10">
+                  <span>Mardi - Dimanche</span>
+                  <span className="font-semibold text-charcoal">9h00 - 18h00</span>
+                </div>
+                <div className="flex justify-between items-center py-2 border-b border-charcoal/10">
+                  <span>Lundi</span>
+                  <span className="font-semibold text-charcoal/60">Fermé</span>
+                </div>
+                <div className="flex justify-between items-center py-2">
+                  <span>Dernière entrée</span>
+                  <span className="font-semibold text-charcoal">17h30</span>
+                </div>
+              </div>
+            </div>
+            <div className="bg-white/80 backdrop-blur-sm border border-charcoal/5 rounded-3xl p-10 shadow-lg hover:shadow-xl transition-all duration-500 animate-fade-in-up delay-100 group">
+              <div className="w-16 h-16 bg-gradient-to-br from-warm-terracotta/10 to-vibrant-pink/10 rounded-2xl flex items-center justify-center mb-8 group-hover:scale-110 transition-transform duration-300">
+                <Euro className="h-8 w-8 text-warm-terracotta" />
+              </div>
+              <h3 className="font-serif text-3xl text-charcoal mb-6">Tarifs</h3>
+              <div className="space-y-4 font-sans text-base text-charcoal/70 leading-relaxed">
+                <div className="flex justify-between items-center py-2 border-b border-charcoal/10">
+                  <span>Adultes</span>
                   <span className="font-semibold text-charcoal">50 MAD</span>
                 </div>
-                <div className="flex justify-between">
-                  <span>Étudiants :</span>
+                <div className="flex justify-between items-center py-2 border-b border-charcoal/10">
+                  <span>Étudiants</span>
                   <span className="font-semibold text-charcoal">25 MAD</span>
                 </div>
-                <div className="flex justify-between">
-                  <span>Seniors (60+) :</span>
+                <div className="flex justify-between items-center py-2 border-b border-charcoal/10">
+                  <span>Seniors (60+)</span>
                   <span className="font-semibold text-charcoal">35 MAD</span>
                 </div>
-                <div className="flex justify-between">
-                  <span>Enfants (6-12 ans) :</span>
+                <div className="flex justify-between items-center py-2 border-b border-charcoal/10">
+                  <span>Enfants (6-12 ans)</span>
                   <span className="font-semibold text-charcoal">25 MAD</span>
                 </div>
-                <div className="flex justify-between">
-                  <span>Accessibilité :</span>
+                <div className="flex justify-between items-center py-2 border-b border-charcoal/10">
+                  <span>Accessibilité</span>
                   <span className="font-semibold text-vibrant-pink">Gratuit</span>
                 </div>
-                <div className="flex justify-between">
-                  <span>Pack famille :</span>
+                <div className="flex justify-between items-center py-2">
+                  <span>Pack famille</span>
                   <span className="font-semibold text-charcoal">120 MAD</span>
                 </div>
               </div>
             </div>
           </div>
-          <a
-            href="/ticket"
-            className="inline-block mt-12 px-8 py-4 text-xs font-sans tracking-wider uppercase bg-gradient-to-r from-blue-500 to-blue-700 text-white hover:shadow-lg hover:scale-105 transition-all duration-300 animate-fade-in-up delay-200 rounded-lg"
-          >
-            Réserver ma visite
-          </a>
+          <div className="text-center mt-16">
+            <a
+              href="/ticket"
+              className="inline-flex items-center gap-4 px-12 py-6 text-sm font-sans tracking-wider uppercase bg-gradient-to-r from-blue-500 to-blue-700 text-white hover:shadow-2xl hover:shadow-blue-500/25 hover:scale-105 transition-all duration-500 animate-fade-in-up delay-200 rounded-2xl group"
+            >
+              <Calendar className="w-5 h-5 group-hover:scale-110 transition-transform duration-300" />
+              <span>Réserver ma visite</span>
+            </a>
+          </div>
         </div>
       </section>
 
