@@ -29,7 +29,7 @@ export default function IndividuelsPage() {
     {
       icon: Users,
       title: "Visites en famille",
-      description: "Activités ludiques disponibles pour les enfants de 6 à 12 ans",
+      description: "Un moment de partage et de découverte pour toute la famille",
     },
     {
       icon: Calendar,
