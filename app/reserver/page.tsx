@@ -42,6 +42,7 @@ export default function ReserverPage() {
         <div className="absolute inset-0 bg-charcoal/50" />
         <div className="relative z-10 text-center px-6">
           <h1 className="font-serif text-5xl md:text-7xl text-off-white mb-4 animate-fade-in-up text-balance">
+            
             Réserver l'Ex Église Sacré-Cœur
           </h1>
           <p className="font-sans text-sm md:text-base text-off-white/90 tracking-wider uppercase animate-fade-in-up stagger-1">
@@ -118,7 +119,7 @@ export default function ReserverPage() {
               <div className="absolute top-0 right-0 w-24 h-24 border-r-2 border-t-2 border-vibrant-pink opacity-40"></div>
               <div className="absolute bottom-0 left-0 w-24 h-24 border-l-2 border-b-2 border-warm-terracotta opacity-40"></div>
               <div className="absolute bottom-0 right-0 w-24 h-24 border-r-2 border-b-2 border-warm-terracotta opacity-40"></div>
-              
+
               {/* Glowing Border Effect */}
               <div className="absolute inset-0 bg-gradient-to-r from-vibrant-pink/10 via-transparent to-warm-terracotta/10 blur-2xl"></div>
 
@@ -127,7 +128,7 @@ export default function ReserverPage() {
                 {/* Premium Border with Multiple Layers */}
                 <div className="absolute -inset-4 bg-gradient-to-br from-vibrant-pink/20 via-transparent to-warm-terracotta/20 rounded-2xl blur-xl"></div>
                 <div className="absolute -inset-2 bg-gradient-to-tr from-charcoal/10 via-charcoal/5 to-charcoal/10 rounded-xl"></div>
-                
+
                 {/* Main Video Container */}
                 <div className="relative aspect-video rounded-xl overflow-hidden shadow-[0_20px_60px_rgba(0,0,0,0.3)] bg-charcoal group cursor-pointer" onClick={togglePlay}>
                   {/* Video Element */}
@@ -140,18 +141,18 @@ export default function ReserverPage() {
                     <source src="/videos/sacre-video.mp4" type="video/mp4" />
                     Votre navigateur ne supporte pas la lecture de vidéos.
                   </video>
-                  
+
                   {/* Custom Play/Pause Button Overlay */}
                   <div className="absolute inset-0 flex items-center justify-center transition-all duration-300 pointer-events-none">
                     <div className={`transition-all duration-500 ${isPlaying ? 'opacity-0 scale-75' : 'opacity-100 scale-100 group-hover:scale-110'}`}>
                       {/* Outer Glow Ring */}
                       <div className="absolute inset-0 bg-gradient-to-br from-vibrant-pink/30 to-warm-terracotta/30 rounded-full blur-2xl scale-150"></div>
-                      
+
                       {/* Button Background */}
                       <div className="relative w-24 h-24 lg:w-32 lg:h-32 rounded-full bg-gradient-to-br from-white/95 to-white/90 shadow-2xl flex items-center justify-center backdrop-blur-sm border-4 border-white/50 transition-all duration-300 group-hover:shadow-[0_0_60px_rgba(236,72,153,0.6)]">
                         {/* Inner Button Ring */}
                         <div className="absolute inset-3 rounded-full border-2 border-vibrant-pink/20"></div>
-                        
+
                         {/* Play/Pause Icon */}
                         {isPlaying ? (
                           <Pause className="w-10 h-10 lg:w-12 lg:h-12 text-charcoal fill-charcoal" />
@@ -161,11 +162,11 @@ export default function ReserverPage() {
                       </div>
                     </div>
                   </div>
-                  
+
                   {/* Elegant Overlay Frame */}
                   <div className="absolute inset-0 border-4 border-white/5 rounded-xl pointer-events-none"></div>
                   <div className="absolute inset-0 border border-white/10 rounded-xl pointer-events-none"></div>
-                  
+
                   {/* Cinematic Vignette Effect */}
                   <div className={`absolute inset-0 bg-gradient-to-t from-black/40 via-transparent to-black/20 pointer-events-none rounded-xl transition-opacity duration-500 ${isPlaying ? 'opacity-0' : 'opacity-100'}`}></div>
                 </div>
@@ -239,16 +240,52 @@ export default function ReserverPage() {
           <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-4 lg:gap-6">
             {[
               {
-                title: "Soirée Inauguration",
-                subtitle: "Cultural Event",
-                image: "/site-map-images/evenements-optimized/soiree/evenement - soiree 2.jpg",
+                title: "Ferrari Launch",
+                subtitle: "Luxury Automotive",
+                image: "/site-map-images/reserver sacre coeur/reserver sacre coeur - ferrari /reserver sacre coeur - ferrari 1.jpeg",
                 span: "md:col-span-2 md:row-span-2",
               },
               {
-                title: "Casablanca Smart City",
-                subtitle: "Technology Event",
-                image: "/site-map-images/evenements-optimized/smart-city/evenement-smartcity2.jpg",
+                title: "Ferrari Showcase",
+                subtitle: "Premium Exhibition",
+                image: "/site-map-images/reserver sacre coeur/reserver sacre coeur - ferrari /reserver sacre coeur - ferrari 2.jpeg",
+                span: "",
+              },
+              {
+                title: "Ferrari Presentation",
+                subtitle: "Brand Experience",
+                image: "/site-map-images/reserver sacre coeur/reserver sacre coeur - ferrari /reserver sacre coeur - ferrari 3.jpeg",
+                span: "",
+              },
+              {
+                title: "Casa Arab Festival",
+                subtitle: "Cultural Event",
+                image: "/site-map-images/reserver sacre coeur/casa arab festival/WhatsApp Image 2025-10-02 at 11.26.11 AM.jpeg",
+                span: "",
+              },
+              {
+                title: "Arab Festival",
+                subtitle: "Heritage Celebration",
+                image: "/site-map-images/reserver sacre coeur/casa arab festival/WhatsApp Image 2025-10-02 at 11.26.11 AM-2.jpeg",
+                span: "",
+              },
+              {
+                title: "Ram Visa Partnership",
+                subtitle: "Corporate Event",
+                image: "/site-map-images/reserver sacre coeur/coebranding ram visa/WhatsApp Image 2025-10-02 at 12.02.47 PM.jpeg",
                 span: "md:col-span-2",
+              },
+              {
+                title: "Ferrari Exhibition",
+                subtitle: "Exclusive Launch",
+                image: "/site-map-images/reserver sacre coeur/reserver sacre coeur - ferrari /reserver sacre coeur - ferrari 4.jpeg",
+                span: "",
+              },
+              {
+                title: "Ram Visa Gala",
+                subtitle: "Premium Launch",
+                image: "/site-map-images/reserver sacre coeur/coebranding ram visa/WhatsApp Image 2025-10-02 at 12.02.47 PM-2.jpeg",
+                span: "",
               },
             ].map((event, index) => (
               <div
@@ -264,24 +301,24 @@ export default function ReserverPage() {
                     className="object-cover transition-all duration-700 ease-out group-hover:scale-105 group-hover:brightness-105"
                   />
                 </div>
-                
+
                 {/* Strong Dark Overlay for Text Readability */}
                 <div className="absolute inset-0 bg-gradient-to-t from-black/95 via-black/60 to-black/20 group-hover:from-black/98 group-hover:via-black/70 transition-all duration-500"></div>
-                
+
                 {/* Accent Border - Always Visible */}
                 <div className="absolute inset-0 border-2 border-off-white/10 group-hover:border-vibrant-pink/40 transition-all duration-500 rounded-lg"></div>
-                
+
                 {/* Text Content - Always Clearly Visible */}
                 <div className="absolute inset-0 flex flex-col justify-end p-6 lg:p-8 z-10">
                   <div className="transform transition-all duration-500">
                     {/* Accent Line */}
                     <div className="w-16 h-0.5 bg-gradient-to-r from-vibrant-pink via-vibrant-pink to-transparent mb-4 group-hover:w-20 transition-all duration-500"></div>
-                    
+
                     {/* Title - Large, Bold, White */}
                     <h3 className="font-serif text-2xl sm:text-3xl lg:text-4xl text-white font-bold mb-2 leading-tight drop-shadow-[0_4px_12px_rgba(0,0,0,0.9)]">
                       {event.title}
                     </h3>
-                    
+
                     {/* Subtitle - Clean, Visible */}
                     <p className="font-sans text-sm sm:text-base text-white/95 tracking-wide uppercase font-medium drop-shadow-[0_2px_8px_rgba(0,0,0,0.8)]">
                       {event.subtitle}
