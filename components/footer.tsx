@@ -149,7 +149,7 @@ export function Footer() {
                 </svg>
               </a>
               <a
-                href="https://instagram.com"
+                href="https://www.instagram.com/sacre_coeur_casa/"
                 target="_blank"
                 rel="noopener noreferrer"
                 className="text-off-white/60 hover:text-vibrant-pink transition-colors"

@@ -172,7 +172,7 @@ export default function HandicapesPage() {
             <h3 className="font-serif text-2xl text-charcoal mb-4">Visite Tactile</h3>
             <p className="font-sans text-sm text-charcoal/70 leading-relaxed mb-6">
               Pour les personnes aveugles ou malvoyantes. Découverte par le toucher des éléments architecturaux,
-              sculptures et maquettes. Durée : 2 heures.
+              sculptures et maquettes. Durée : 1 heure.
             </p>
             <ul className="space-y-2 mb-6 font-sans text-sm text-charcoal/70">
               <li className="flex items-start gap-2">
@@ -205,7 +205,7 @@ export default function HandicapesPage() {
             <h3 className="font-serif text-2xl text-charcoal mb-4">Visite LSF</h3>
             <p className="font-sans text-sm text-charcoal/70 leading-relaxed mb-6">
               Visite guidée en Langue des Signes Française et Marocaine. Découverte complète de l'histoire et de
-              l'architecture. Durée : 1h30.
+              l'architecture. Durée : 1h.
             </p>
             <ul className="space-y-2 mb-6 font-sans text-sm text-charcoal/70">
               <li className="flex items-start gap-2">

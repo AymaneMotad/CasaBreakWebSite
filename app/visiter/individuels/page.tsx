@@ -9,7 +9,7 @@ export default function IndividuelsPage() {
     {
       icon: Clock,
       title: "Meilleurs moments",
-      description: "Visitez tôt le matin ou en fin d'après-midi pour profiter de la lumière naturelle optimale",
+      description: "Visitez en matinée pour une expérience plus calme et contemplative",
     },
     {
       icon: Camera,
@@ -24,7 +24,7 @@ export default function IndividuelsPage() {
     {
       icon: MapPin,
       title: "Durée de visite",
-      description: "Comptez 1h30 à 2h pour une visite complète et contemplative",
+      description: "Ouvert de 9h à 18h - Comptez 1h pour une visite complète et contemplative",
     },
     {
       icon: Users,

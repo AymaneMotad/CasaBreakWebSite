@@ -126,7 +126,7 @@ export default function SeniorsPage() {
             <ul className="space-y-4 mb-8 font-sans text-sm text-charcoal/70">
               <li className="flex items-start gap-3">
                 <span className="text-vibrant-pink mt-1">•</span>
-                <span>Visite guidée à rythme adapté (1h30)</span>
+                <span>Visite guidée à rythme adapté (1h)</span>
               </li>
               <li className="flex items-start gap-3">
                 <span className="text-vibrant-pink mt-1">•</span>

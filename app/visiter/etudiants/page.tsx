@@ -80,7 +80,7 @@ export default function EtudiantsPage() {
                 icon: Palette,
                 title: "Histoire de l'Art",
                 description: "Vitraux, sculptures, fresques. Contexte artistique du début du XXe siècle.",
-                duration: "2 heures",
+                duration: "1 heure",
               },
               {
                 icon: BookOpen,
@@ -99,13 +99,13 @@ export default function EtudiantsPage() {
                 icon: Users,
                 title: "Sociologie & Anthropologie",
                 description: "Rôle social et culturel, diversité religieuse, patrimoine vivant.",
-                duration: "2 heures",
+                duration: "1 heure",
               },
               {
                 icon: BookOpen,
                 title: "Histoire Coloniale",
                 description: "Contexte historique, architecture coloniale, Casablanca au XXe siècle.",
-                duration: "2 heures",
+                duration: "1 heure",
               },
             ].map((program, index) => (
               <div
