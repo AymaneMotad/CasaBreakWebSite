@@ -56,7 +56,7 @@ export default function EtudiantsPage() {
               <p className="font-sans text-xs tracking-wider uppercase">Tarif étudiant</p>
             </div>
             <p className="font-sans text-base text-charcoal/70 leading-relaxed">
-              Découvrez la cathédrale à tarif réduit ! Profitez d'un parcours culturel et architectural unique, spécialement pensé pour les étudiants curieux de patrimoine et d'histoire.
+              Découvrez l'Ex Église Sacré-Cœur à tarif réduit ! Profitez d'un parcours culturel et architectural unique, spécialement pensé pour les étudiants curieux de patrimoine et d'histoire.
             </p>
           </div>
         </div>

@@ -184,7 +184,7 @@ export default function IndividuelsPage() {
               <div className="space-y-4 font-sans text-sm text-charcoal/70 leading-relaxed">
                 <div>
                   <p className="font-semibold text-charcoal">Adultes : 50 MAD</p>
-                  <p className="text-xs text-charcoal/60 mt-1">Découvrez la cathédrale librement et profitez d'un moment de culture et de contemplation au cœur de Casablanca.</p>
+                  <p className="text-xs text-charcoal/60 mt-1">Découvrez l'Ex Église Sacré-Cœur librement et profitez d'un moment de culture et de contemplation au cœur de Casablanca.</p>
                 </div>
                 <div>
                   <p className="font-semibold text-charcoal">Enfants (6 à 12 ans) : 25 MAD</p>

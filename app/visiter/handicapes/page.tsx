@@ -177,7 +177,7 @@ export default function HandicapesPage() {
             <ul className="space-y-2 mb-6 font-sans text-sm text-charcoal/70">
               <li className="flex items-start gap-2">
                 <span className="text-vibrant-pink mt-1">•</span>
-                <span>Maquettes en relief de la cathédrale</span>
+                <span>Maquettes en relief de l'Ex Église Sacré-Cœur</span>
               </li>
               <li className="flex items-start gap-2">
                 <span className="text-vibrant-pink mt-1">•</span>

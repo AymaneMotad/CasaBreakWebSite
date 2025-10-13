@@ -36,14 +36,14 @@ export default function GroupesPage() {
         <div className="grid lg:grid-cols-2 gap-16 items-center">
           <div className="animate-fade-in-up">
             <h2 className="font-serif text-4xl md:text-5xl text-charcoal mb-6 text-balance">
-              Découvrez la cathédrale en groupe
+              Découvrez l'Ex Église Sacré-Cœur en groupe
             </h2>
             <div className="inline-block px-8 py-4 bg-gradient-to-r from-vibrant-pink to-warm-terracotta text-off-white mb-8 shadow-lg">
               <p className="font-serif text-4xl mb-1">35 MAD</p>
               <p className="font-sans text-xs tracking-wider uppercase">Par personne (plus de 10 personnes)</p>
             </div>
             <p className="font-sans text-base text-charcoal/70 leading-relaxed mb-6">
-              Vous souhaitez découvrir la cathédrale entre amis ou en petit groupe (plus de 10 personnes) ? 
+              Vous souhaitez découvrir l'Ex Église Sacré-Cœur entre amis ou en petit groupe (plus de 10 personnes) ? 
               Profitez d'une visite libre ou accompagnée, selon vos envies, pour explorer l'histoire, l'architecture et la symbolique de ce monument emblématique de Casablanca.
             </p>
             <p className="font-sans text-base text-charcoal/70 leading-relaxed">
