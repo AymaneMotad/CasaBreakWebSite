@@ -122,7 +122,7 @@ export default function ArchitecturePage() {
           {features.map((feature, index) => (
             <div
               key={feature.title}
-              className={`grid md:grid-cols-2 gap-12 lg:gap-20 items-center ${
+              className={`grid md:grid-cols-2 gap-12 lg:gap-20 items-start ${
                 index % 2 === 1 ? "md:flex-row-reverse" : ""
               }`}
             >
