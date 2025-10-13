@@ -1,4 +1,4 @@
-import { Clock, MapPin, Users, Phone, Calendar, Coins } from "lucide-react"
+import { Clock, MapPin, Users, Phone, Calendar, Coins, Train } from "lucide-react"
 import { CopyButton } from "./copy-button"
 
 export function PracticalInfoSection() {
@@ -110,7 +110,18 @@ export function PracticalInfoSection() {
               <div className="space-y-6">
                 <div>
                   <span className="font-sans text-sm text-charcoal/50 uppercase tracking-wider block mb-2">Adresse</span>
-                  <span className="font-sans text-base text-charcoal font-light">L'Ex Église Sacré-Cœur, Casablanca</span>
+                  <span className="font-sans text-base text-charcoal font-light">
+                    Angle rue d'Alger et boulevard Rachidi<br />
+                    Quartier Gautier, Casablanca 20250
+                  </span>
+                </div>
+                <div className="h-px bg-charcoal/5"></div>
+                <div className="flex items-center gap-3">
+                  <Train className="h-4 w-4 text-blue-600" />
+                  <div>
+                    <span className="font-sans text-sm text-charcoal/50 uppercase tracking-wider block mb-1">Tramway</span>
+                    <span className="font-sans text-base text-charcoal font-light">Place Mohammed V</span>
+                  </div>
                 </div>
               </div>
             </div>
@@ -143,7 +154,7 @@ export function PracticalInfoSection() {
                 </div>
                 <div className="h-px bg-charcoal/5"></div>
                 <div className="flex justify-between items-baseline group/item">
-                  <span className="font-sans text-sm text-charcoal/50 uppercase tracking-wider">Mobilité réduite</span>
+                  <span className="font-sans text-sm text-charcoal/50 uppercase tracking-wider">Visiteurs à mobilité réduite</span>
                   <span className="font-serif text-xl text-blue-600 font-light group-hover/item:scale-105 transition-transform italic">Gratuit</span>
                 </div>
                 <div className="h-px bg-charcoal/5"></div>

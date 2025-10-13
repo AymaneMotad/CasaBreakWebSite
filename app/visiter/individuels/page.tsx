@@ -62,7 +62,7 @@ export default function IndividuelsPage() {
     },
     {
       icon: Accessibility,
-      title: "Accessibilité",
+      title: "Visiteurs à mobilité réduite",
       price: "Gratuit",
       description: "Entrée gratuite avec équipements adaptés pour tous",
       features: ["Entrée gratuite", "Visites tactiles", "Visites LSF", "Équipements PMR", "Accompagnateur gratuit"]
