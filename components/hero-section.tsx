@@ -74,13 +74,13 @@ export function HeroSection() {
               href="/visiter/individuels"
               className="px-10 py-4 bg-gradient-to-r from-blue-500 to-blue-700 text-white text-sm font-sans tracking-wider uppercase hover:shadow-xl hover:scale-105 transition-all duration-300 rounded-lg shadow-lg border-2 border-blue-600 font-semibold"
             >
-              Découvrir
+              Visiter
             </a>
             <a
               href="/decouvrir/histoire"
               className="px-10 py-4 bg-transparent border-2 border-off-white/60 text-off-white text-sm font-sans tracking-wider uppercase hover:bg-off-white/20 hover:border-off-white/80 transition-all duration-300 rounded-lg backdrop-blur-sm shadow-lg font-semibold"
             >
-              Notre Histoire
+              Découvrir
             </a>
           </div>
         </div>
