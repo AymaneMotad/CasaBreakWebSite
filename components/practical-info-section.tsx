@@ -163,29 +163,32 @@ export function PracticalInfoSection() {
 
         {/* Action Cards */}
         <div className="grid lg:grid-cols-2 gap-8">
-          <div className="group bg-gradient-to-br from-vibrant-pink to-warm-terracotta p-12 rounded-2xl text-off-white shadow-2xl hover:shadow-3xl transition-all duration-300 animate-gentle-fade-in hover-scale-subtle">
-            <div className="flex items-center gap-4 mb-8">
-              <div className="p-4 bg-off-white/20 rounded-xl">
-                <Calendar className="h-8 w-8" />
+          <div className="group relative bg-gradient-to-br from-white via-blue-500/[0.03] to-white border border-blue-500/20 hover:border-blue-500/40 shadow-sm hover:shadow-lg hover:shadow-blue-500/10 transition-all duration-500 overflow-hidden animate-gentle-fade-in hover-scale-subtle">
+            <div className="absolute inset-0 bg-gradient-to-br from-blue-500/[0.08] via-transparent to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-700"></div>
+            <div className="relative p-12">
+              <div className="flex items-center gap-4 mb-8">
+                <div className="p-4 bg-gradient-to-br from-blue-500/15 to-blue-500/10 rounded-xl shadow-sm">
+                  <Calendar className="h-8 w-8 text-blue-600" />
+                </div>
+                <h3 className="font-serif text-3xl text-charcoal tracking-tight font-medium">Réserver votre visite</h3>
               </div>
-              <h3 className="font-serif text-3xl">Réserver votre visite</h3>
-            </div>
-            <p className="font-sans text-lg mb-8 leading-relaxed text-off-white/90">
-              Réservez votre créneau de visite pour éviter l'attente et profiter pleinement de votre découverte du patrimoine Art Déco.
-            </p>
-            <div className="flex flex-col sm:flex-row gap-4">
-              <a
-                href="/visiter/individuels"
-                className="inline-flex items-center justify-center px-8 py-4 bg-off-white text-charcoal text-sm font-sans tracking-wider uppercase hover:bg-off-white/90 transition-colors rounded-lg font-semibold"
-              >
-                Réserver maintenant
-              </a>
-              <a
-                href="/visiter/groupes"
-                className="inline-flex items-center justify-center px-8 py-4 bg-transparent border-2 border-off-white/30 text-off-white text-sm font-sans tracking-wider uppercase hover:bg-off-white/10 hover:border-off-white/50 transition-all duration-300 rounded-lg"
-              >
-                Visite de groupe
-              </a>
+              <p className="font-sans text-lg mb-8 leading-relaxed text-charcoal/70">
+                Réservez votre créneau de visite pour éviter l'attente et profiter pleinement de votre découverte du patrimoine Art Déco.
+              </p>
+              <div className="flex flex-col sm:flex-row gap-4">
+                <a
+                  href="/visiter/individuels"
+                  className="inline-flex items-center justify-center px-8 py-4 bg-gradient-to-r from-blue-500 to-blue-700 text-white text-sm font-sans tracking-wider uppercase hover:shadow-xl hover:scale-105 transition-all duration-300 rounded-lg font-semibold"
+                >
+                  Réserver maintenant
+                </a>
+                <a
+                  href="/visiter/groupes"
+                  className="inline-flex items-center justify-center px-8 py-4 bg-transparent border-2 border-blue-500/30 text-blue-600 text-sm font-sans tracking-wider uppercase hover:bg-blue-500/10 hover:border-blue-500/50 transition-all duration-300 rounded-lg font-semibold"
+                >
+                  Visite de groupe
+                </a>
+              </div>
             </div>
           </div>
 
