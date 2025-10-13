@@ -82,7 +82,7 @@ export default function GroupesPage() {
               <div>
                 <h3 className="font-serif text-xl text-charcoal mb-3">Langues disponibles</h3>
                 <p className="font-sans text-sm text-charcoal/70 leading-relaxed">
-                  Français, Arabe, Anglais, Espagnol
+                  Français, Arabe, Anglais
                   <br />
                   Autres langues sur demande
                 </p>
@@ -93,7 +93,6 @@ export default function GroupesPage() {
                   <li>• Audioguides multilingues</li>
                   <li>• Espace de restauration privatisable</li>
                   <li>• Boutique de souvenirs</li>
-                  <li>• Parking pour autocars</li>
                 </ul>
               </div>
             </div>

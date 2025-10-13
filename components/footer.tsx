@@ -12,7 +12,7 @@ export function Footer() {
 
       <div className="max-w-[1400px] mx-auto px-6 lg:px-12 relative z-10">
         {/* Main Footer Content */}
-        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-5 gap-12 mb-12">
+        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-5 gap-16 mb-16">
           {/* About Section */}
           <div>
             <Image 
@@ -29,15 +29,24 @@ export function Footer() {
             <p className="font-sans text-sm text-off-white/70 leading-relaxed mb-4">
               Monument historique Art Déco et espace culturel au cœur de Casablanca depuis 1930.
             </p>
-            <div className="font-sans text-sm text-off-white/70">
-              <p className="mb-1">Angle rue d'Alger et boulevard Rachidi</p>
-              <p className="mb-1">quartier Gautier, Casablanca 20250</p>
-              <p>+212 522 XXX XXX</p>
+            <div className="space-y-6">
+              <div>
+                <h5 className="font-sans text-xs uppercase tracking-wider text-blue-400 mb-3">Adresse</h5>
+                <p className="font-sans text-sm text-off-white/80 leading-relaxed">
+                  Angle rue d'Alger et boulevard Rachidi<br />
+                  Quartier Gautier, Casablanca 20250
+                </p>
+              </div>
+              <div>
+                <h5 className="font-sans text-xs uppercase tracking-wider text-blue-400 mb-3">Contact</h5>
+                <p className="font-sans text-sm text-off-white/80 mb-2">Tél : +212 522 227 745</p>
+                <p className="font-sans text-sm text-off-white/80">contact@casaevents.ma</p>
+              </div>
             </div>
             
             {/* Map */}
-            <div className="mt-8">
-              <h4 className="font-sans text-xs uppercase tracking-wider mb-4 text-blue-400">Localisation</h4>
+            <div className="mt-12">
+              <h4 className="font-sans text-xs uppercase tracking-wider mb-6 text-blue-400">Localisation</h4>
               <div className="w-full h-40 rounded-xl overflow-hidden shadow-xl border border-off-white/10">
                 <iframe
                   src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3323.123456789!2d-7.619123456789!3d33.592123456789!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x0%3A0x0!2zMzPCsDM1JzMxLjYiTiA3wrAzNycxMC44Ilc!5e0!3m2!1sen!2sma!4v1234567890123!5m2!1sen!2sma"
@@ -59,8 +68,8 @@ export function Footer() {
 
           {/* Découvrir */}
           <div>
-            <h4 className="font-sans text-sm uppercase tracking-wider mb-4 text-blue-400">Découvrir</h4>
-            <ul className="space-y-2 font-sans text-sm">
+            <h4 className="font-sans text-sm uppercase tracking-wider mb-6 text-blue-400">Découvrir</h4>
+            <ul className="space-y-3 font-sans text-sm">
               <li>
                 <a href="/decouvrir/histoire" className="text-off-white/70 hover:text-off-white transition-colors">
                   Histoire
@@ -77,8 +86,8 @@ export function Footer() {
 
           {/* Visiter */}
           <div>
-            <h4 className="font-sans text-sm uppercase tracking-wider mb-4 text-blue-400">Visiter</h4>
-            <ul className="space-y-2 font-sans text-sm">
+            <h4 className="font-sans text-sm uppercase tracking-wider mb-6 text-blue-400">Visiter</h4>
+            <ul className="space-y-3 font-sans text-sm">
               <li>
                 <a href="/visiter/individuels" className="text-off-white/70 hover:text-off-white transition-colors">
                   Visiteurs Individuels
@@ -109,8 +118,8 @@ export function Footer() {
 
           {/* Événements */}
           <div>
-            <h4 className="font-sans text-sm uppercase tracking-wider mb-4 text-blue-400">Événements</h4>
-            <ul className="space-y-2 font-sans text-sm">
+            <h4 className="font-sans text-sm uppercase tracking-wider mb-6 text-blue-400">Événements</h4>
+            <ul className="space-y-3 font-sans text-sm">
               <li>
                 <a href="/evenements" className="text-off-white/70 hover:text-off-white transition-colors">
                   Nos Événements

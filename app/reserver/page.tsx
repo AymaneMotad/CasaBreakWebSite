@@ -489,7 +489,6 @@ export default function ReserverPage() {
               { icon: Sofa, text: "Mobilier et décoration de base" },
               { icon: Shield, text: "Sécurité et surveillance" },
               { icon: Sparkles, text: "Nettoyage après événement" },
-              { icon: ParkingCircle, text: "Parking privé" },
               { icon: Headphones, text: "Assistance technique" },
             ].map((service, index) => {
               const Icon = service.icon

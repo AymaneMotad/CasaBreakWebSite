@@ -112,16 +112,6 @@ export function PracticalInfoSection() {
                   <span className="font-sans text-sm text-charcoal/50 uppercase tracking-wider block mb-2">Adresse</span>
                   <span className="font-sans text-base text-charcoal font-light">L'Ex Église Sacré-Cœur, Casablanca</span>
                 </div>
-                <div className="h-px bg-charcoal/5"></div>
-                <div>
-                  <span className="font-sans text-sm text-charcoal/50 uppercase tracking-wider block mb-2">Tramway</span>
-                  <span className="font-sans text-base text-charcoal font-light">Ligne T1 - Arrêt Sacré-Cœur</span>
-                </div>
-                <div className="h-px bg-charcoal/5"></div>
-                <div>
-                  <span className="font-sans text-sm text-charcoal/50 uppercase tracking-wider block mb-2">Parking</span>
-                  <span className="font-sans text-base text-charcoal font-light">Gratuit sur place</span>
-                </div>
               </div>
             </div>
           </div>
@@ -213,20 +203,20 @@ export function PracticalInfoSection() {
                   <Phone className="h-5 w-5 text-vibrant-pink" />
                   <div>
                     <p className="font-semibold">Téléphone</p>
-                    <p className="text-off-white/80">+212 522 27 45 78</p>
+                    <p className="text-off-white/80">+212 522 227 745</p>
                   </div>
                 </div>
-                <CopyButton text="+212522274578" label="numéro de téléphone" />
+                <CopyButton text="+212522227745" label="numéro de téléphone" />
               </div>
               <div className="flex items-center justify-between gap-4 p-4 bg-off-white/10 rounded-lg">
                 <div className="flex items-center gap-4">
                   <Users className="h-5 w-5 text-warm-terracotta" />
                   <div>
                     <p className="font-semibold">Email</p>
-                    <p className="text-off-white/80">info@sacrecoeur-casa.ma</p>
+                    <p className="text-off-white/80">contact@casaevents.ma</p>
                   </div>
                 </div>
-                <CopyButton text="info@sacrecoeur-casa.ma" label="email" />
+                <CopyButton text="contact@casaevents.ma" label="email" />
               </div>
             </div>
             <a

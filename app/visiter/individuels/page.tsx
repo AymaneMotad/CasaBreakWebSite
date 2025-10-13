@@ -19,7 +19,7 @@ export default function IndividuelsPage() {
     {
       icon: Headphones,
       title: "Audio-guide",
-      description: "Audio-guides disponibles en français, arabe, anglais et espagnol",
+      description: "Audio-guides disponibles en français, arabe et anglais",
     },
     {
       icon: MapPin,
