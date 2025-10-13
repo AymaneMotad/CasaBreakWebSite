@@ -156,6 +156,11 @@ export function PracticalInfoSection() {
                   <span className="font-sans text-sm text-charcoal/50 uppercase tracking-wider">Mobilité réduite</span>
                   <span className="font-serif text-xl text-blue-600 font-light group-hover/item:scale-105 transition-transform italic">Gratuit</span>
                 </div>
+                <div className="h-px bg-charcoal/5"></div>
+                <div className="flex justify-between items-baseline group/item">
+                  <span className="font-sans text-sm text-charcoal/50 uppercase tracking-wider">Résidents au Maroc</span>
+                  <span className="font-serif text-xl text-blue-600 font-light group-hover/item:scale-105 transition-transform italic">Gratuit</span>
+                </div>
               </div>
             </div>
           </div>
