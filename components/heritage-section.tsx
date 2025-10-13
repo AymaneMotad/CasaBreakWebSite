@@ -51,7 +51,7 @@ export function HeritageSection() {
               height={400}
               className="w-full h-[400px] object-cover rounded-lg shadow-2xl"
             />
-            <p className="font-sans text-xs text-off-white/60 mt-3 text-center italic">
+            <p className="font-sans text-[10px] text-off-white/60 mt-3 text-center italic">
               Photo issue du Fonds Flandrin, collection privée de la Fondation Banque Populaire
             </p>
           </div>

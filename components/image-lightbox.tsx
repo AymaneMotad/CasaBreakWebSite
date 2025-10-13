@@ -41,8 +41,20 @@ export function ImageLightbox({ src, alt, width, height, className }: ImageLight
           className={className}
         />
         {/* Zoom overlay */}
-        <div className="absolute inset-0 bg-charcoal/60 opacity-0 group-hover:opacity-100 transition-opacity duration-300 flex items-center justify-center">
-          <div className="bg-white/20 backdrop-blur-sm p-3 rounded-full">
+        <div 
+          className="absolute inset-0 bg-charcoal/60 opacity-0 group-hover:opacity-100 transition-opacity duration-300 flex items-center justify-center"
+          style={{
+            backgroundColor: 'rgba(0, 0, 0, 0.6)'
+          }}
+        >
+          <div 
+            className="bg-white/20 backdrop-blur-sm p-3 rounded-full"
+            style={{
+              backgroundColor: 'rgba(255, 255, 255, 0.2)',
+              backdropFilter: 'blur(4px)',
+              WebkitBackdropFilter: 'blur(4px)'
+            }}
+          >
             <ZoomIn className="h-8 w-8 text-white" />
           </div>
         </div>
@@ -52,6 +64,12 @@ export function ImageLightbox({ src, alt, width, height, className }: ImageLight
       {isOpen && (
         <div
           className="fixed inset-0 z-[9999] bg-charcoal/95 backdrop-blur-sm flex items-center justify-center p-4 animate-fade-in"
+          style={{
+            backgroundColor: 'rgba(0, 0, 0, 0.95)',
+            backdropFilter: 'blur(4px)',
+            WebkitBackdropFilter: 'blur(4px)',
+            filter: 'blur(0px)'
+          }}
           onClick={() => setIsOpen(false)}
         >
           {/* Close button */}
