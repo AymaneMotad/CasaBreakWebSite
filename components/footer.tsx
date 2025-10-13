@@ -34,6 +34,27 @@ export function Footer() {
               <p className="mb-1">quartier Gautier, Casablanca 20250</p>
               <p>+212 522 XXX XXX</p>
             </div>
+            
+            {/* Map */}
+            <div className="mt-8">
+              <h4 className="font-sans text-xs uppercase tracking-wider mb-4 text-blue-400">Localisation</h4>
+              <div className="w-full h-40 rounded-xl overflow-hidden shadow-xl border border-off-white/10">
+                <iframe
+                  src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3323.123456789!2d-7.619123456789!3d33.592123456789!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x0%3A0x0!2zMzPCsDM1JzMxLjYiTiA3wrAzNycxMC44Ilc!5e0!3m2!1sen!2sma!4v1234567890123!5m2!1sen!2sma"
+                  width="100%"
+                  height="100%"
+                  style={{ border: 0 }}
+                  allowFullScreen
+                  loading="lazy"
+                  referrerPolicy="no-referrer-when-downgrade"
+                  title="Localisation de l'Ex église Sacré-Cœur"
+                  className="w-full h-full"
+                ></iframe>
+              </div>
+              <p className="text-xs text-off-white/60 mt-3 italic">
+                Cliquez sur la carte pour obtenir l'itinéraire
+              </p>
+            </div>
           </div>
 
           {/* Découvrir */}

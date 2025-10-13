@@ -75,13 +75,6 @@ export function BookingSection() {
                   <p className="font-sans text-sm text-charcoal/60">Confirmation immédiate par email</p>
                 </div>
               </div>
-              <div className="flex items-start gap-4">
-                <MapPin className="w-6 h-6 text-terracotta mt-1 flex-shrink-0" />
-                <div>
-                  <h3 className="font-sans font-medium text-charcoal mb-1">Accès facilité</h3>
-                  <p className="font-sans text-sm text-charcoal/60">Accès et informations pratiques</p>
-                </div>
-              </div>
             </div>
 
             <button className="px-8 py-4 bg-blue-600 text-white font-sans text-sm tracking-wide uppercase rounded-md hover:bg-blue-700 transition-all duration-300 hover:scale-105 shadow-lg">
