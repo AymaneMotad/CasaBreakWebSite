@@ -2,7 +2,7 @@ import { Navigation } from "@/components/navigation"
 import { Footer } from "@/components/footer"
 import { Breadcrumb } from "@/components/breadcrumb"
 import Image from "next/image"
-import { Clock, Camera, Headphones, MapPin, Users, Calendar } from "lucide-react"
+import { Clock, Camera, Headphones, MapPin, Users, Calendar, GraduationCap, Heart, Accessibility, Euro } from "lucide-react"
 
 export default function IndividuelsPage() {
   const tips = [
@@ -36,6 +36,37 @@ export default function IndividuelsPage() {
       title: "Réservation",
       description: "Réservation recommandée mais pas obligatoire pour les individuels",
     },
+  ]
+
+  const visitorTypes = [
+    {
+      icon: Users,
+      title: "Individuels & Familles",
+      price: "50 MAD",
+      description: "Visite libre ou guidée pour découvrir l'Ex Église Sacré-Cœur à votre rythme",
+      features: ["Visite libre", "Audio-guide disponible", "Livret-jeu pour enfants", "Pack famille : 120 MAD (2 adultes + 2 enfants)"]
+    },
+    {
+      icon: GraduationCap,
+      title: "Étudiants",
+      price: "25 MAD",
+      description: "Tarif préférentiel avec programmes éducatifs adaptés",
+      features: ["Tarif réduit sur présentation carte étudiante", "Programmes spécialisés", "Documentation académique", "Autorisation photo pour projets"]
+    },
+    {
+      icon: Heart,
+      title: "Seniors (60+)",
+      price: "35 MAD",
+      description: "Visite adaptée à votre rythme avec services dédiés",
+      features: ["Visite à rythme adapté", "Pauses régulières", "Sièges disponibles", "Espace détente avec boissons"]
+    },
+    {
+      icon: Accessibility,
+      title: "Accessibilité",
+      price: "Gratuit",
+      description: "Entrée gratuite avec équipements adaptés pour tous",
+      features: ["Entrée gratuite", "Visites tactiles", "Visites LSF", "Équipements PMR", "Accompagnateur gratuit"]
+    }
   ]
 
   return (
@@ -81,9 +112,8 @@ export default function IndividuelsPage() {
             Une Expérience Personnalisée
           </h2>
           <p className="font-sans text-base lg:text-lg text-charcoal/70 leading-relaxed animate-fade-in-up delay-100">
-            Que vous soyez seul, en couple ou en famille, l'Ex église Sacré-Cœur vous accueille pour une visite libre ou guidée.
-            Explorez ce monument historique à votre rythme et laissez-vous inspirer par son architecture exceptionnelle
-            et son atmosphère unique.
+            Que vous soyez seul, en couple, en famille, étudiant, senior ou visiteur à mobilité réduite, 
+            l'Ex église Sacré-Cœur vous accueille avec des services adaptés à vos besoins.
           </p>
         </div>
 
@@ -99,6 +129,37 @@ export default function IndividuelsPage() {
         </div>
       </section>
 
+      {/* Visitor Types */}
+      <section className="bg-charcoal/5 py-20 lg:py-32">
+        <div className="max-w-[1200px] mx-auto px-6 lg:px-12">
+          <h2 className="font-serif text-4xl lg:text-5xl text-charcoal mb-16 text-center animate-fade-in-up">
+            Formules de Visite
+          </h2>
+          <div className="grid md:grid-cols-2 gap-8">
+            {visitorTypes.map((type, index) => (
+              <div key={type.title} className={`bg-off-white p-8 shadow-lg hover:shadow-2xl transition-all duration-300 animate-fade-in-up stagger-${index + 1}`}>
+                <div className="flex items-center gap-4 mb-6">
+                  <type.icon className="h-12 w-12 text-vibrant-pink" />
+                  <div>
+                    <h3 className="font-serif text-2xl text-charcoal">{type.title}</h3>
+                    <p className="font-serif text-3xl text-vibrant-pink font-bold">{type.price}</p>
+                  </div>
+                </div>
+                <p className="font-sans text-sm text-charcoal/70 leading-relaxed mb-6">{type.description}</p>
+                <ul className="space-y-2">
+                  {type.features.map((feature, featureIndex) => (
+                    <li key={featureIndex} className="flex items-start gap-2">
+                      <span className="text-vibrant-pink mt-1">•</span>
+                      <span className="font-sans text-sm text-charcoal/70">{feature}</span>
+                    </li>
+                  ))}
+                </ul>
+              </div>
+            ))}
+          </div>
+        </div>
+      </section>
+
       {/* Self-Guided Tour */}
       <section className="bg-charcoal py-20 lg:py-32">
         <div className="max-w-[1200px] mx-auto px-6 lg:px-12">
@@ -107,8 +168,7 @@ export default function IndividuelsPage() {
               <h2 className="font-serif text-4xl lg:text-5xl text-off-white mb-6">Visite Libre</h2>
               <p className="font-sans text-base lg:text-lg text-off-white/70 leading-relaxed mb-8">
                 Explorez l'Ex église Sacré-Cœur à votre propre rythme. Des panneaux informatifs en français et en arabe vous
-                guident à travers l'histoire et l'architecture du monument. Prenez le temps de contempler les vitraux,
-                d'admirer les voûtes et de ressentir l'atmosphère unique de ce lieu.
+                guident à travers l'histoire et l'architecture du monument.
               </p>
               <div className="space-y-4">
                 <div className="flex items-start gap-4">
@@ -141,8 +201,7 @@ export default function IndividuelsPage() {
           <div className="animate-fade-in-up delay-100">
             <h2 className="font-serif text-4xl lg:text-5xl text-charcoal mb-6">Activités Familiales</h2>
             <p className="font-sans text-base lg:text-lg text-charcoal/70 leading-relaxed mb-8">
-              Nous proposons des activités spécialement conçues pour les familles avec enfants. Des livrets-jeux
-              permettent aux plus jeunes de découvrir le monument de manière ludique et éducative.
+              Des activités spécialement conçues pour les familles avec enfants, étudiants et seniors.
             </p>
             <div className="space-y-4">
               <div className="flex items-start gap-4">
@@ -151,11 +210,15 @@ export default function IndividuelsPage() {
               </div>
               <div className="flex items-start gap-4">
                 <div className="w-2 h-2 bg-warm-terracotta rounded-full mt-2" />
-                <p className="font-sans text-sm text-charcoal/70">Ateliers créatifs le week-end (sur réservation)</p>
+                <p className="font-sans text-sm text-charcoal/70">Programmes éducatifs pour étudiants</p>
               </div>
               <div className="flex items-start gap-4">
                 <div className="w-2 h-2 bg-warm-terracotta rounded-full mt-2" />
-                <p className="font-sans text-sm text-charcoal/70">Tarif famille : 2 adultes + 2 enfants = 120 MAD</p>
+                <p className="font-sans text-sm text-charcoal/70">Visites adaptées pour seniors</p>
+              </div>
+              <div className="flex items-start gap-4">
+                <div className="w-2 h-2 bg-warm-terracotta rounded-full mt-2" />
+                <p className="font-sans text-sm text-charcoal/70">Équipements d'accessibilité complets</p>
               </div>
             </div>
           </div>
@@ -172,7 +235,7 @@ export default function IndividuelsPage() {
             <div className="bg-off-white p-8 animate-fade-in-up">
               <h3 className="font-serif text-2xl text-charcoal mb-4">Horaires</h3>
               <p className="font-sans text-sm text-charcoal/70 leading-relaxed">
-                Mardi - Dimanche : 10h00 - 18h00
+                Mardi - Dimanche : 9h00 - 18h00
                 <br />
                 Fermé le lundi
                 <br />
@@ -181,22 +244,30 @@ export default function IndividuelsPage() {
             </div>
             <div className="bg-off-white p-8 animate-fade-in-up delay-100">
               <h3 className="font-serif text-2xl text-charcoal mb-4">Tarifs</h3>
-              <div className="space-y-4 font-sans text-sm text-charcoal/70 leading-relaxed">
-                <div>
-                  <p className="font-semibold text-charcoal">Adultes : 50 MAD</p>
-                  <p className="text-xs text-charcoal/60 mt-1">Découvrez l'Ex Église Sacré-Cœur librement et profitez d'un moment de culture et de contemplation au cœur de Casablanca.</p>
+              <div className="space-y-3 font-sans text-sm text-charcoal/70 leading-relaxed">
+                <div className="flex justify-between">
+                  <span>Adultes :</span>
+                  <span className="font-semibold text-charcoal">50 MAD</span>
                 </div>
-                <div>
-                  <p className="font-semibold text-charcoal">Enfants (6 à 12 ans) : 25 MAD</p>
-                  <p className="text-xs text-charcoal/60 mt-1">Un parcours adapté aux plus jeunes pour éveiller leur curiosité autour du patrimoine et de l'architecture.</p>
+                <div className="flex justify-between">
+                  <span>Étudiants :</span>
+                  <span className="font-semibold text-charcoal">25 MAD</span>
                 </div>
-                <div>
-                  <p className="font-semibold text-charcoal">Gratuit pour les moins de 6 ans</p>
-                  <p className="text-xs text-charcoal/60 mt-1">L'accès est libre pour les tout-petits accompagnés d'un adulte.</p>
+                <div className="flex justify-between">
+                  <span>Seniors (60+) :</span>
+                  <span className="font-semibold text-charcoal">35 MAD</span>
                 </div>
-                <div>
-                  <p className="font-semibold text-charcoal">Pack famille – 2 adultes + 2 enfants : 120 MAD</p>
-                  <p className="text-xs text-charcoal/60 mt-1">Une offre avantageuse pour partager une expérience culturelle en famille à tarif réduit.</p>
+                <div className="flex justify-between">
+                  <span>Enfants (6-12 ans) :</span>
+                  <span className="font-semibold text-charcoal">25 MAD</span>
+                </div>
+                <div className="flex justify-between">
+                  <span>Accessibilité :</span>
+                  <span className="font-semibold text-vibrant-pink">Gratuit</span>
+                </div>
+                <div className="flex justify-between">
+                  <span>Pack famille :</span>
+                  <span className="font-semibold text-charcoal">120 MAD</span>
                 </div>
               </div>
             </div>

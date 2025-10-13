@@ -29,9 +29,6 @@ export function Navigation() {
       submenu: [
         { label: "Individuels et familles", href: "/visiter/individuels" },
         { label: "Groupes", href: "/visiter/groupes" },
-        { label: "Étudiants", href: "/visiter/etudiants" },
-        { label: "Seniors", href: "/visiter/seniors" },
-        { label: "Visiteurs à mobilité réduite", href: "/visiter/handicapes" },
       ],
     },
     { label: "Événements", href: "/evenements" },
