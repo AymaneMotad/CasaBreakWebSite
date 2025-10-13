@@ -32,6 +32,13 @@ export default function HistoirePage() {
         />
         <div className="absolute inset-0 bg-gradient-to-b from-charcoal/60 via-charcoal/40 to-charcoal/60" />
         
+        {/* Photo Credit */}
+        <div className="absolute bottom-4 left-4 z-10">
+          <p className="text-xs text-off-white/60 font-sans italic">
+            Photo issue du Fonds Flandrin, collection privée de la Fondation Banque Populaire
+          </p>
+        </div>
+        
         {/* Moroccan Artistic Elements */}
         <div className="absolute inset-0 z-5">
           {/* Top decorative border */}
