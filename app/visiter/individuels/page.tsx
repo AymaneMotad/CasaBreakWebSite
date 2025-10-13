@@ -44,28 +44,28 @@ export default function IndividuelsPage() {
       title: "Individuels & Familles",
       price: "50 MAD",
       description: "Visite libre ou guidée pour découvrir l'Ex Église Sacré-Cœur à votre rythme",
-      features: ["Visite libre", "Audio-guide disponible", "Livret-jeu pour enfants", "Pack famille : 120 MAD (2 adultes + 2 enfants)"]
+      features: ["Visite libre", "Audio-guide disponible", "Pack famille : 120 MAD (2 adultes + 2 enfants)"]
     },
     {
       icon: GraduationCap,
       title: "Étudiants",
       price: "25 MAD",
       description: "Tarif préférentiel avec programmes éducatifs adaptés",
-      features: ["Tarif réduit sur présentation carte étudiante", "Programmes spécialisés", "Documentation académique", "Autorisation photo pour projets"]
+      features: ["Tarif réduit sur présentation de la carte étudiante.", "Photos autorisées pour projets scolaires."]
     },
     {
       icon: Heart,
       title: "Seniors (60+)",
       price: "35 MAD",
       description: "Visite adaptée à votre rythme avec services dédiés",
-      features: ["Visite à rythme adapté", "Pauses régulières", "Sièges disponibles", "Espace détente avec boissons"]
+      features: ["Visite à rythme adapté", "Pauses régulières", "Sièges disponibles"]
     },
     {
       icon: Accessibility,
       title: "Visiteurs à mobilité réduite",
       price: "Gratuit",
-      description: "Entrée gratuite avec équipements adaptés pour tous",
-      features: ["Entrée gratuite", "Visites tactiles", "Visites LSF", "Équipements PMR", "Accompagnateur gratuit"]
+      description: "Notre équipe est disponible sur place pour offrir toute assistance nécessaire.",
+      features: ["Un passage est aménagé pour faciliter l’accès au monument.", "L’espace principal du Sacré-Cœur est accessible par ce passage dédié."]
     }
   ]
 
