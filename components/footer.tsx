@@ -12,15 +12,19 @@ export function Footer() {
 
       <div className="max-w-[1400px] mx-auto px-6 lg:px-12 relative z-10">
         {/* Main Footer Content */}
-        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-12 mb-12">
+        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-5 gap-12 mb-12">
           {/* About Section */}
           <div>
             <Image 
-              src="/sacre-logo.svg" 
+              src="/sacre-black.svg" 
               alt="l'Ex église Sacré-Cœur" 
               width={595} 
               height={393}
               className="h-20 w-auto mb-4"
+              style={{ 
+                filter: 'brightness(0) invert(1)',
+                WebkitFilter: 'brightness(0) invert(1)'
+              }}
             />
             <p className="font-sans text-sm text-off-white/70 leading-relaxed mb-4">
               Monument historique Art Déco et espace culturel au cœur de Casablanca depuis 1930.
@@ -46,11 +50,7 @@ export function Footer() {
                   Architecture
                 </a>
               </li>
-              <li>
-                <a href="/decouvrir/patrimoine" className="text-off-white/70 hover:text-off-white transition-colors">
-                  Patrimoine
-                </a>
-              </li>
+             
             </ul>
           </div>
 
@@ -86,13 +86,25 @@ export function Footer() {
             </ul>
           </div>
 
+          {/* Événements */}
+          <div>
+            <h4 className="font-sans text-sm uppercase tracking-wider mb-4 text-blue-400">Événements</h4>
+            <ul className="space-y-2 font-sans text-sm">
+              <li>
+                <a href="/evenements" className="text-off-white/70 hover:text-off-white transition-colors">
+                  Nos Événements
+                </a>
+              </li>
+            </ul>
+          </div>
+
           {/* Réserver & Contact */}
           <div>
             <h4 className="font-sans text-sm uppercase tracking-wider mb-4 text-blue-400">Réserver</h4>
             <ul className="space-y-2 font-sans text-sm mb-6">
               <li>
                 <a href="/reserver" className="text-off-white/70 hover:text-off-white transition-colors">
-                  Événements Privés
+                  Réserver l'Ex Église Sacré-Cœur
                 </a>
               </li>
               <li>

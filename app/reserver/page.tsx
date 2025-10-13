@@ -239,52 +239,16 @@ export default function ReserverPage() {
           <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-4 lg:gap-6">
             {[
               {
-                title: "Ferrari Launch",
-                subtitle: "Luxury Automotive",
-                image: "/site-map-images/reserver sacre coeur/reserver sacre coeur - ferrari /reserver sacre coeur - ferrari 1.jpeg",
+                title: "Soirée Inauguration",
+                subtitle: "Cultural Event",
+                image: "/site-map-images/evenements-optimized/soiree/evenement - soiree 2.jpg",
                 span: "md:col-span-2 md:row-span-2",
               },
               {
-                title: "Ferrari Showcase",
-                subtitle: "Premium Exhibition",
-                image: "/site-map-images/reserver sacre coeur/reserver sacre coeur - ferrari /reserver sacre coeur - ferrari 2.jpeg",
-                span: "",
-              },
-              {
-                title: "Ferrari Presentation",
-                subtitle: "Brand Experience",
-                image: "/site-map-images/reserver sacre coeur/reserver sacre coeur - ferrari /reserver sacre coeur - ferrari 3.jpeg",
-                span: "",
-              },
-              {
-                title: "Casa Arab Festival",
-                subtitle: "Cultural Event",
-                image: "/site-map-images/reserver sacre coeur/casa arab festival/WhatsApp Image 2025-10-02 at 11.26.11 AM.jpeg",
-                span: "",
-              },
-              {
-                title: "Arab Festival",
-                subtitle: "Heritage Celebration",
-                image: "/site-map-images/reserver sacre coeur/casa arab festival/WhatsApp Image 2025-10-02 at 11.26.11 AM-2.jpeg",
-                span: "",
-              },
-              {
-                title: "Ram Visa Partnership",
-                subtitle: "Corporate Event",
-                image: "/site-map-images/reserver sacre coeur/coebranding ram visa/WhatsApp Image 2025-10-02 at 12.02.47 PM.jpeg",
+                title: "Casablanca Smart City",
+                subtitle: "Technology Event",
+                image: "/site-map-images/evenements-optimized/smart-city/evenement-smartcity2.jpg",
                 span: "md:col-span-2",
-              },
-              {
-                title: "Ferrari Exhibition",
-                subtitle: "Exclusive Launch",
-                image: "/site-map-images/reserver sacre coeur/reserver sacre coeur - ferrari /reserver sacre coeur - ferrari 4.jpeg",
-                span: "",
-              },
-              {
-                title: "Ram Visa Gala",
-                subtitle: "Premium Launch",
-                image: "/site-map-images/reserver sacre coeur/coebranding ram visa/WhatsApp Image 2025-10-02 at 12.02.47 PM-2.jpeg",
-                span: "",
               },
             ].map((event, index) => (
               <div

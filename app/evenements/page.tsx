@@ -8,26 +8,12 @@ export default function EvenementsPage() {
     {
       title: "Soirée Inauguration",
       image: "/site-map-images/evenements-optimized/soiree/evenement - soiree 2.jpg",
+      description: "Une soirée d'exception marquant l'ouverture officielle de l'Ex église Sacré-Cœur comme espace culturel. Un moment historique célébrant la renaissance de ce monument Art Déco au cœur de Casablanca.",
     },
     {
-      title: "Smart City Expo",
+      title: "Casablanca Smart City",
       image: "/site-map-images/evenements-optimized/smart-city/evenement-smartcity2.jpg",
-    },
-    {
-      title: "Smart City Forum",
-      image: "/site-map-images/evenements-optimized/smart-city/evenement-smart city 3.jpg",
-    },
-    {
-      title: "Soirée Culturelle",
-      image: "/site-map-images/evenements-optimized/soiree/evenement - soiree 3.jpg",
-    },
-    {
-      title: "Smart City Conference",
-      image: "/site-map-images/evenements-optimized/smart-city/evenement-smart city 4.jpg",
-    },
-    {
-      title: "Événement Patrimonial",
-      image: "/site-map-images/evenements-optimized/soiree/evenement - soiree 4.jpg",
+      description: "Un événement technologique d'envergure présentant l'innovation urbaine et les solutions intelligentes pour la ville de demain. L'Ex église Sacré-Cœur accueille les leaders de la transformation digitale.",
     },
   ]
 
@@ -152,11 +138,8 @@ export default function EvenementsPage() {
                     {event.title}
                   </h3>
                   <div className="mt-3 opacity-0 group-hover:opacity-100 transition-opacity duration-500">
-                    <p className="text-vibrant-pink/90 text-xs uppercase tracking-wider flex items-center gap-2">
-                      <span>Voir les photos</span>
-                      <svg className="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                        <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M9 5l7 7-7 7" />
-                      </svg>
+                    <p className="text-white/90 text-sm leading-relaxed drop-shadow-[0_2px_8px_rgba(0,0,0,0.8)]">
+                      {event.description}
                     </p>
                   </div>
                 </div>

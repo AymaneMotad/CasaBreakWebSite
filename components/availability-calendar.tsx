@@ -14,13 +14,8 @@ export function AvailabilityCalendar() {
   
   // Mock events - in production, this would come from an API
   const events: Event[] = [
-    { date: "2025-10-15", title: "Concert Classique", type: "public" },
-    { date: "2025-10-20", title: "Événement Privé", type: "private" },
-    { date: "2025-10-25", title: "Exposition d'Art", type: "public" },
-    { date: "2025-11-05", title: "Conférence Architecture", type: "public" },
-    { date: "2025-11-12", title: "Événement Corporate", type: "private" },
-    { date: "2025-11-18", title: "Festival de Musique", type: "public" },
-    { date: "2025-11-22", title: "Soirée Privée", type: "private" },
+    { date: "2025-10-15", title: "Soirée Inauguration", type: "public" },
+    { date: "2025-10-20", title: "Casablanca Smart City", type: "public" },
   ]
 
   const monthNames = [
