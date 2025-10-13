@@ -1,8 +1,7 @@
 "use client"
 
-import { useState, useEffect } from "react"
 import Image from "next/image"
-import { X, ZoomIn } from "lucide-react"
+import { ZoomIn } from "lucide-react"
 
 interface ImageLightboxProps {
   src: string
@@ -13,90 +12,105 @@ interface ImageLightboxProps {
 }
 
 export function ImageLightbox({ src, alt, width, height, className }: ImageLightboxProps) {
-  const [isOpen, setIsOpen] = useState(false)
-
-  useEffect(() => {
-    if (isOpen) {
-      document.body.style.overflow = "hidden"
-    } else {
-      document.body.style.overflow = "unset"
+  const openLightbox = () => {
+    // Create modal HTML
+    const modal = document.createElement('div')
+    modal.id = 'image-lightbox-modal'
+    modal.style.cssText = `
+      position: fixed;
+      top: 0;
+      left: 0;
+      width: 100%;
+      height: 100%;
+      background-color: rgba(0, 0, 0, 0.95);
+      z-index: 9999;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      padding: 20px;
+      box-sizing: border-box;
+    `
+    
+    // Create close button
+    const closeBtn = document.createElement('button')
+    closeBtn.innerHTML = '×'
+    closeBtn.style.cssText = `
+      position: absolute;
+      top: 20px;
+      right: 20px;
+      background: rgba(255, 255, 255, 0.1);
+      border: none;
+      color: white;
+      font-size: 24px;
+      width: 40px;
+      height: 40px;
+      border-radius: 50%;
+      cursor: pointer;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+    `
+    
+    // Create image
+    const img = document.createElement('img')
+    img.src = src
+    img.alt = alt
+    img.style.cssText = `
+      max-width: 90vw;
+      max-height: 90vh;
+      object-fit: contain;
+      border-radius: 8px;
+      box-shadow: 0 25px 50px -12px rgba(0, 0, 0, 0.5);
+    `
+    
+    // Add elements to modal
+    modal.appendChild(closeBtn)
+    modal.appendChild(img)
+    document.body.appendChild(modal)
+    
+    // Prevent body scroll
+    document.body.style.overflow = 'hidden'
+    
+    // Close functions
+    const closeModal = () => {
+      document.body.removeChild(modal)
+      document.body.style.overflow = ''
     }
-    return () => {
-      document.body.style.overflow = "unset"
+    
+    closeBtn.onclick = closeModal
+    modal.onclick = (e) => {
+      if (e.target === modal) closeModal()
     }
-  }, [isOpen])
+    
+    // Escape key
+    const handleKeydown = (e: KeyboardEvent) => {
+      if (e.key === 'Escape') {
+        closeModal()
+        document.removeEventListener('keydown', handleKeydown)
+      }
+    }
+    document.addEventListener('keydown', handleKeydown)
+  }
 
   return (
-    <>
-      {/* Thumbnail with hover effect */}
-      <div
-        className="relative group cursor-pointer overflow-hidden rounded-lg"
-        onClick={() => setIsOpen(true)}
-      >
-        <Image
-          src={src}
-          alt={alt}
-          width={width || 600}
-          height={height || 400}
-          className={className}
-        />
-        {/* Zoom overlay */}
-        <div 
-          className="absolute inset-0 bg-charcoal/60 opacity-0 group-hover:opacity-100 transition-opacity duration-300 flex items-center justify-center"
-          style={{
-            backgroundColor: 'rgba(0, 0, 0, 0.6)'
-          }}
-        >
-          <div 
-            className="bg-white/20 backdrop-blur-sm p-3 rounded-full"
-            style={{
-              backgroundColor: 'rgba(255, 255, 255, 0.2)',
-              backdropFilter: 'blur(4px)',
-              WebkitBackdropFilter: 'blur(4px)'
-            }}
-          >
-            <ZoomIn className="h-8 w-8 text-white" />
-          </div>
+    <div
+      className="relative group cursor-pointer overflow-hidden rounded-lg"
+      onClick={openLightbox}
+    >
+      <Image
+        src={src}
+        alt={alt}
+        width={width || 600}
+        height={height || 400}
+        className={className}
+      />
+      {/* Zoom overlay */}
+      <div className="absolute inset-0 bg-black/60 opacity-0 group-hover:opacity-100 transition-opacity duration-300 flex items-center justify-center">
+        <div className="bg-white/20 p-3 rounded-full">
+          <ZoomIn className="h-8 w-8 text-white" />
         </div>
       </div>
-
-      {/* Lightbox Modal */}
-      {isOpen && (
-        <div
-          className="fixed inset-0 z-[9999] bg-charcoal/95 backdrop-blur-sm flex items-center justify-center p-4 animate-fade-in"
-          style={{
-            backgroundColor: 'rgba(0, 0, 0, 0.95)',
-            backdropFilter: 'blur(4px)',
-            WebkitBackdropFilter: 'blur(4px)',
-            filter: 'blur(0px)'
-          }}
-          onClick={() => setIsOpen(false)}
-        >
-          {/* Close button */}
-          <button
-            className="absolute top-4 right-4 p-3 bg-white/10 hover:bg-white/20 rounded-full transition-colors"
-            onClick={() => setIsOpen(false)}
-            aria-label="Close lightbox"
-          >
-            <X className="h-6 w-6 text-white" />
-          </button>
-
-          {/* Image */}
-          <div
-            className="relative max-w-7xl max-h-[90vh] animate-gentle-scale"
-            onClick={(e) => e.stopPropagation()}
-          >
-            <Image
-              src={src}
-              alt={alt}
-              width={1920}
-              height={1080}
-              className="w-auto h-auto max-w-full max-h-[90vh] object-contain rounded-lg shadow-2xl"
-            />
-          </div>
-        </div>
-      )}
-    </>
+    </div>
   )
 }
 
