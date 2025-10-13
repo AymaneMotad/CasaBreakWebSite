@@ -26,7 +26,7 @@ export function HistorySection() {
       year: "Aujourd'hui",
       title: "Centre Culturel",
       description:
-        "Le bâtiment est préservé comme monument historique et accueille des événements culturels, expositions d'art et concerts.",
+        "Le bâtiment est préservé comme monument historique et accueille des événements, expositions d'art et concerts.",
     },
   ]
 

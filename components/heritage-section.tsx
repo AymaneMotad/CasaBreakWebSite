@@ -122,9 +122,9 @@ export function HeritageSection() {
         {/* Cultural Events CTA */}
         <div className="mt-20 text-center animate-gentle-fade-in">
           <div className="bg-off-white/10 backdrop-blur-sm border border-off-white/20 rounded-lg p-12">
-            <h3 className="font-serif text-3xl mb-4">Événements culturels</h3>
+            <h3 className="font-serif text-3xl mb-4">Événements</h3>
             <p className="font-sans text-base text-off-white/80 mb-8 max-w-2xl mx-auto">
-              Découvrez notre programmation d'expositions, concerts et événements culturels 
+              Découvrez notre programmation d'expositions, concerts et événements 
               qui font vivre ce patrimoine exceptionnel.
             </p>
             <div className="flex flex-col sm:flex-row gap-4 justify-center">

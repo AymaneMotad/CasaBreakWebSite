@@ -18,7 +18,7 @@ export function IntroSection() {
             </p>
             <p className="font-sans text-lg leading-relaxed text-charcoal/80">
               Désacralisée en 1956 après l'indépendance du Maroc, elle sert aujourd'hui de lieu d'exposition et
-              d'événements culturels, témoignant de l'histoire coloniale et de la richesse architecturale de Casablanca.
+              d'événements, témoignant de l'histoire coloniale et de la richesse architecturale de Casablanca.
             </p>
           </div>
         </div>
