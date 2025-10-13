@@ -62,7 +62,7 @@ export function PracticalInfoSection() {
             Bien préparer sa visite
           </h2>
           <p className="font-sans text-xl text-charcoal/70 max-w-3xl mx-auto leading-relaxed animate-gentle-fade-in stagger-2">
-            Tout ce qu'il faut savoir pour préparer au mieux votre venue à l'Ex église Sacré-Cœur de Casablanca
+          Préparez votre visite à l'Ex église Sacré-Cœur en toute sérénité : retrouvez ici toutes les informations essentielles.
           </p>
         </div>
 

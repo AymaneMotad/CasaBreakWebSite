@@ -56,8 +56,7 @@ export function BookingSection() {
               Voulez-vous réserver les billets pour vos prochains événements à l'Ex église Sacré-Cœur ?
             </h2>
             <p className="font-sans text-lg text-charcoal/70 leading-relaxed mb-8">
-              Découvrez notre plateforme de réservation en ligne pour accéder facilement aux concerts, expositions et
-              visites guidées. Réservez votre place en quelques clics.
+            Découvrez notre plateforme de réservation en ligne et accédez à tous les événements du Sacré-Cœur en un seul clic.
             </p>
 
             <div className="space-y-4 mb-10">

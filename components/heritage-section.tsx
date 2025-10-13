@@ -120,29 +120,7 @@ export function HeritageSection() {
         </div>
 
         {/* Cultural Events CTA */}
-        <div className="mt-20 text-center animate-gentle-fade-in">
-          <div className="bg-off-white/10 backdrop-blur-sm border border-off-white/20 rounded-lg p-12">
-            <h3 className="font-serif text-3xl mb-4">Événements</h3>
-            <p className="font-sans text-base text-off-white/80 mb-8 max-w-2xl mx-auto">
-              Découvrez notre programmation d'expositions, concerts et événements 
-              qui font vivre ce patrimoine exceptionnel.
-            </p>
-            <div className="flex flex-col sm:flex-row gap-4 justify-center">
-              <Link
-                href="/evenements"
-                className="px-8 py-4 bg-gradient-to-r from-blue-500 to-blue-700 text-white text-sm font-sans tracking-wider uppercase hover:shadow-xl hover:scale-105 transition-all duration-300 rounded-lg"
-              >
-                Voir les événements
-              </Link>
-              <Link
-                href="/reserver"
-                className="px-8 py-4 bg-transparent border-2 border-off-white/30 text-off-white text-sm font-sans tracking-wider uppercase hover:bg-off-white/10 hover:border-off-white/50 transition-all duration-300 rounded-md"
-              >
-                Réserver le lieu
-              </Link>
-            </div>
-          </div>
-        </div>
+       
       </div>
     </section>
   )
