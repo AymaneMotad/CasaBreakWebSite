@@ -350,7 +350,7 @@ export default function HistoirePage() {
                     className="object-contain hover-scale-subtle transition-smooth" 
                   />
                 </div>
-                <p className="text-xs text-charcoal/50 mt-3 font-sans italic">L'Ex Sacré-Cœur aujourd'hui</p>
+                
                 <TextToSpeechPlayer 
                   text="Le site du Sacré-Cœur renaît aujourd'hui comme un véritable centre culturel, artistique et touristique, symbole de la vitalité et du renouveau de Casablanca. Ce lieu emblématique se transforme en un espace de rencontre entre mémoire et modernité, où se croisent le patrimoine, l'art, l'innovation et la citoyenneté. En accueillant expositions, événements et initiatives créatives, la cathédrale s'inscrit désormais dans une démarche de valorisation durable du patrimoine casablancais. Elle incarne la volonté de préserver l'histoire tout en la réinventant, offrant à la ville un espace vivant, inspirant et ouvert sur le monde."
                   title="Écouter l'histoire d'aujourd'hui"
