@@ -52,63 +52,128 @@ export default function GroupesPage() {
         </div>
       </section>
 
-      {/* Practical Information */}
-      <section className="max-w-[1400px] mx-auto px-6 lg:px-12 py-20">
-        <div className="grid lg:grid-cols-2 gap-16">
-          <div className="animate-fade-in-up">
-            <h2 className="font-serif text-4xl text-charcoal mb-8">Informations pratiques</h2>
-            <div className="space-y-6">
-              <div>
-                <h3 className="font-serif text-xl text-charcoal mb-3">Réservation</h3>
-                <p className="font-sans text-sm text-charcoal/70 leading-relaxed">
-                  Contactez-nous par téléphone ou via notre formulaire en ligne pour organiser votre visite.
-                </p>
-              </div>
-              <div>
-                <h3 className="font-serif text-xl text-charcoal mb-3">Horaires disponibles</h3>
-                <p className="font-sans text-sm text-charcoal/70 leading-relaxed">
-                  Mardi - Dimanche : 9h00 - 18h00
-                  <br />
-                  Fermé le lundi
-                </p>
-              </div>
-              <div>
-                <h3 className="font-serif text-xl text-charcoal mb-3">Langues disponibles</h3>
-                <p className="font-sans text-sm text-charcoal/70 leading-relaxed">
-                  Français, Arabe, Anglais
-                </p>
-              </div>
-            
-            </div>
+      {/* Practical Information - Enhanced Design */}
+      <section className="py-24 bg-gradient-to-b from-off-white to-charcoal/5 relative overflow-hidden">
+        {/* Decorative Background Elements */}
+        <div className="absolute inset-0 pointer-events-none">
+          <div className="absolute top-0 left-1/4 right-1/4 h-1 bg-gradient-to-r from-transparent via-vibrant-pink/40 to-transparent"></div>
+          <div className="absolute top-4 left-1/3 right-1/3 h-px bg-gradient-to-r from-transparent via-warm-terracotta/30 to-transparent"></div>
+          
+          {/* Corner geometric patterns */}
+          <div className="absolute top-16 left-16 w-14 h-14 opacity-20">
+            <svg viewBox="0 0 56 56" className="w-full h-full text-vibrant-pink/40">
+              <path d="M7 7 L49 7 L49 49 L7 49 Z M14 14 L42 14 L42 42 L14 42 Z" fill="none" stroke="currentColor" strokeWidth="1.5"/>
+              <path d="M21 21 L35 21 L35 35 L21 35 Z" fill="currentColor" opacity="0.3"/>
+            </svg>
           </div>
-          <div className="space-y-8 animate-fade-in-up stagger-1">
-            <div className="bg-charcoal/5 p-8">
-              <h3 className="font-serif text-2xl text-charcoal mb-6">Contactez-nous</h3>
-              <div className="space-y-4 font-sans text-sm text-charcoal/70">
-                <div className="flex items-start gap-3">
-                  <Phone className="h-5 w-5 text-vibrant-pink mt-0.5" />
-                  <div>
-                    <p className="font-medium text-charcoal">Téléphone</p>
-                    <p>+212 522 227 745</p>
+          
+          <div className="absolute top-16 right-16 w-14 h-14 opacity-20">
+            <svg viewBox="0 0 56 56" className="w-full h-full text-warm-terracotta/40">
+              <path d="M7 7 L49 7 L49 49 L7 49 Z M14 14 L42 14 L42 42 L14 42 Z" fill="none" stroke="currentColor" strokeWidth="1.5"/>
+              <path d="M21 21 L35 21 L35 35 L21 35 Z" fill="currentColor" opacity="0.3"/>
+            </svg>
+          </div>
+        </div>
+
+        <div className="max-w-[1400px] mx-auto px-6 lg:px-12 relative z-10">
+          {/* Header Section */}
+          <div className="text-center mb-20">
+            <div className="inline-block px-6 py-3 bg-gradient-to-r from-vibrant-pink/10 to-warm-terracotta/10 border border-vibrant-pink/20 rounded-full mb-8 animate-gentle-fade-in">
+              <span className="text-charcoal/80 text-sm font-sans tracking-wider uppercase">
+                Informations Pratiques
+              </span>
+            </div>
+            <h2 className="font-serif text-5xl md:text-6xl text-charcoal mb-8 animate-gentle-fade-in stagger-1">
+              Informations pratiques
+            </h2>
+            <p className="font-sans text-xl text-charcoal/70 max-w-3xl mx-auto leading-relaxed animate-gentle-fade-in stagger-2">
+              Toutes les informations essentielles pour organiser votre visite de groupe.
+            </p>
+          </div>
+
+          {/* Main Info Grid - Premium Minimal Design */}
+          <div className="grid lg:grid-cols-2 gap-8 mb-20 max-w-[1200px] mx-auto">
+            {/* Booking Information */}
+            <div className="group relative animate-gentle-fade-in bg-gradient-to-br from-white via-blue-500/[0.03] to-white border border-blue-500/20 hover:border-blue-500/40 shadow-sm hover:shadow-lg hover:shadow-blue-500/10 transition-all duration-500 overflow-hidden">
+              <div className="absolute inset-0 bg-gradient-to-br from-blue-500/[0.08] via-transparent to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-700"></div>
+              <div className="relative p-10">
+                <div className="flex items-center gap-4 mb-12 pb-6 border-b border-blue-500/30">
+                  <div className="p-2.5 bg-gradient-to-br from-blue-500/15 to-blue-500/10 rounded-lg shadow-sm">
+                    <Calendar className="h-6 w-6 text-blue-600" />
+                  </div>
+                  <h3 className="font-serif text-2xl text-blue-600 tracking-tight font-medium">Réservation</h3>
+                </div>
+                <div className="space-y-6">
+                  <p className="font-sans text-base text-charcoal/80 leading-relaxed">
+                    Contactez-nous par téléphone ou via notre formulaire en ligne pour organiser votre visite.
+                  </p>
+                </div>
+              </div>
+            </div>
+
+            {/* Opening Hours */}
+            <div className="group relative animate-gentle-fade-in stagger-1 bg-gradient-to-br from-white via-blue-500/[0.03] to-white border border-blue-500/20 hover:border-blue-500/40 shadow-sm hover:shadow-lg hover:shadow-blue-500/10 transition-all duration-500 overflow-hidden">
+              <div className="absolute inset-0 bg-gradient-to-br from-blue-500/[0.08] via-transparent to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-700"></div>
+              <div className="relative p-10">
+                <div className="flex items-center gap-4 mb-12 pb-6 border-b border-blue-500/30">
+                  <div className="p-2.5 bg-gradient-to-br from-blue-500/15 to-blue-500/10 rounded-lg shadow-sm">
+                    <Calendar className="h-6 w-6 text-blue-600" />
+                  </div>
+                  <h3 className="font-serif text-2xl text-blue-600 tracking-tight font-medium">Horaires disponibles</h3>
+                </div>
+                <div className="space-y-6">
+                  <div className="flex justify-between items-baseline">
+                    <span className="font-sans text-sm text-charcoal/50 uppercase tracking-wider">Mardi - Dimanche</span>
+                    <span className="font-sans text-lg text-charcoal font-light">9h00 - 18h00</span>
+                  </div>
+                  <div className="h-px bg-charcoal/5"></div>
+                  <div className="flex justify-between items-baseline">
+                    <span className="font-sans text-sm text-charcoal/50 uppercase tracking-wider">Fermé</span>
+                    <span className="font-sans text-lg text-charcoal font-light">Lundi</span>
                   </div>
                 </div>
-                <div className="flex items-start gap-3">
-                  <Calendar className="h-5 w-5 text-vibrant-pink mt-0.5" />
-                  <div>
-                    <p className="font-medium text-charcoal">Email</p>
-                    <p>contact@casaevents.ma</p>
+              </div>
+            </div>
+          </div>
+
+          {/* Contact Section */}
+          <div className="max-w-[800px] mx-auto">
+            <div className="group bg-gradient-to-br from-charcoal to-charcoal/90 p-12 rounded-2xl text-off-white shadow-2xl hover:shadow-3xl transition-all duration-300 animate-gentle-fade-in hover-scale-subtle">
+              <div className="flex items-center gap-4 mb-8">
+                <div className="p-4 bg-gradient-to-br from-vibrant-pink to-warm-terracotta rounded-xl">
+                  <Phone className="h-8 w-8 text-off-white" />
+                </div>
+                <h3 className="font-serif text-3xl">Nous contacter</h3>
+              </div>
+              <p className="font-sans text-lg mb-8 leading-relaxed text-off-white/90">
+                Des questions sur votre visite de groupe ? Notre équipe est là pour vous accompagner et personnaliser votre expérience.
+              </p>
+              <div className="space-y-4 mb-8">
+                <div className="flex items-center justify-between gap-4 p-4 bg-off-white/10 rounded-lg">
+                  <div className="flex items-center gap-4">
+                    <Phone className="h-5 w-5 text-vibrant-pink" />
+                    <div>
+                      <p className="font-semibold">Téléphone</p>
+                      <p className="text-off-white/80">+212 522 227 745</p>
+                    </div>
+                  </div>
+                </div>
+                <div className="flex items-center justify-between gap-4 p-4 bg-off-white/10 rounded-lg">
+                  <div className="flex items-center gap-4">
+                    <Calendar className="h-5 w-5 text-warm-terracotta" />
+                    <div>
+                      <p className="font-semibold">Email</p>
+                      <p className="text-off-white/80">contact@casaevents.ma</p>
+                    </div>
                   </div>
                 </div>
               </div>
               <Link
                 href="/reserver"
-                className="block mt-8 text-center px-8 py-4 bg-gradient-to-r from-blue-500 to-blue-700 text-white text-xs font-sans tracking-wider uppercase hover:shadow-xl transition-all rounded-lg"
+                className="inline-flex items-center justify-center px-8 py-4 bg-gradient-to-r from-blue-500 to-blue-700 text-white text-sm font-sans tracking-wider uppercase hover:shadow-xl hover:scale-105 transition-all duration-300 rounded-lg font-semibold"
               >
                 Demander un devis
               </Link>
-            </div>
-            <div className="relative h-[300px]">
-              <Image src="/happy-group-photo-in-front-of-cathedral.jpg" alt="Groupe satisfait" fill className="object-cover shadow-xl" />
             </div>
           </div>
         </div>
