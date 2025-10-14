@@ -6,7 +6,7 @@ import { HeritageSection } from "@/components/heritage-section"
 import { PracticalInfoSection } from "@/components/practical-info-section"
 import { AvailabilityCalendar } from "@/components/availability-calendar"
 import { BookingSection } from "@/components/booking-section"
-// import { NewsletterSection } from "@/components/newsletter-section"
+import { NewsletterSection } from "@/components/newsletter-section"
 import { Footer } from "@/components/footer"
 
 export default function Home() {
@@ -38,7 +38,7 @@ export default function Home() {
       </section>
       
       <BookingSection />
-      {/* <NewsletterSection /> */}
+      <NewsletterSection />
       <Footer />
     </main>
   )

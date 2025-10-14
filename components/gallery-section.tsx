@@ -45,7 +45,7 @@ export function GallerySection() {
             {images.map((image, index) => (
               <div
                 key={index}
-                className="group relative overflow-hidden rounded-lg border-2 border-border hover:border-primary/50 transition-all duration-300"
+                className="group relative overflow-hidden rounded-xl border-2 border-border hover:border-primary/50 transition-all duration-300"
               >
                 <img
                   src={image.src || "/placeholder.svg"}

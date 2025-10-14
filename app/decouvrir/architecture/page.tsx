@@ -222,7 +222,7 @@ export default function ArchitecturePage() {
             ].map((photo, index) => (
               <div
                 key={photo.title}
-                className={`group relative h-[400px] overflow-hidden shadow-lg hover:shadow-2xl transition-all duration-500 animate-fade-in-up stagger-${index + 1}`}
+                className={`group relative h-[400px] overflow-hidden rounded-xl shadow-lg hover:shadow-2xl transition-all duration-500 animate-fade-in-up stagger-${index + 1}`}
               >
                 <Image
                   src={photo.image}

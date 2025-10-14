@@ -28,7 +28,7 @@ export function AboutSection() {
             </div>
           </div>
           <div className="relative">
-            <div className="aspect-[3/4] relative rounded-lg overflow-hidden border-2 border-primary/20">
+            <div className="aspect-[3/4] relative rounded-xl overflow-hidden border-2 border-primary/20">
               <img
                 src="/art-deco-cathedral-interior-barrel-vault-archways-.jpg"
                 alt="Interior of Ex Sacré Coeur showing barrel-vaulted nave"

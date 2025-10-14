@@ -43,7 +43,7 @@ export function MagazineSection() {
             <img
               src="/sacrefront.png"
               alt="Façade de l'Ex église Sacré-Cœur de Casablanca"
-              className="w-full max-w-none h-[650px] object-contain rounded-lg hover-scale-subtle transition-smooth"
+              className="w-full max-w-none h-[650px] object-contain rounded-xl hover-scale-subtle transition-smooth"
             />
           </div>
           <div className="animate-gentle-fade-in stagger-1">
@@ -80,7 +80,7 @@ export function MagazineSection() {
             <img
               src="/site-map-images/evenements-optimized/soiree/evenement - soiree 5.jpg"
               alt="Exhibition at l'Ex église Sacré-Cœur"
-              className="w-full h-[500px] object-cover rounded-lg hover-scale"
+              className="w-full h-[500px] object-cover rounded-xl hover-scale"
             />
           </div>
         </div>
@@ -91,7 +91,7 @@ export function MagazineSection() {
             <img
               src="/reserve.png"
               alt="Cultural diversity at l'Ex église Sacré-Cœur"
-              className="w-full h-[500px] object-cover rounded-lg hover-scale"
+              className="w-full h-[500px] object-cover rounded-xl hover-scale"
             />
           </div>
           <div className="animate-slide-in-right stagger-2">

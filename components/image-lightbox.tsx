@@ -94,7 +94,7 @@ export function ImageLightbox({ src, alt, width, height, className }: ImageLight
 
   return (
     <div
-      className="relative group cursor-pointer overflow-hidden rounded-lg"
+      className="relative group cursor-pointer overflow-hidden rounded-xl"
       onClick={openLightbox}
     >
       <Image

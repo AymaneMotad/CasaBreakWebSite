@@ -65,7 +65,7 @@ export function ProgramSection() {
               className="group cursor-pointer animate-fade-in-up"
               style={{ animationDelay: `${index * 0.1}s` }}
             >
-              <div className="relative aspect-[3/4] overflow-hidden mb-6 bg-cream">
+              <div className="relative aspect-[3/4] overflow-hidden rounded-xl mb-6 bg-cream">
                 <img
                   src={activity.image || "/placeholder.svg"}
                   alt={activity.title}
