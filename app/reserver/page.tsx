@@ -506,10 +506,10 @@ export default function ReserverPage() {
             ].map((event, index) => (
               <div
                 key={event.title}
-                className={`group relative h-[350px] rounded-2xl overflow-hidden animate-fade-in-up stagger-${index + 1} transition-all duration-700 hover:scale-[1.02] hover:shadow-2xl hover:shadow-vibrant-pink/20`}
+                className={`group relative h-[350px] rounded-xl overflow-hidden animate-fade-in-up stagger-${index + 1} transition-all duration-700 hover:scale-[1.02] hover:shadow-2xl hover:shadow-vibrant-pink/20`}
               >
                 {/* Premium Container with Enhanced Styling */}
-                <div className="relative h-full w-full overflow-hidden rounded-2xl bg-gradient-to-br from-charcoal/20 to-charcoal/40 backdrop-blur-sm border border-off-white/10 group-hover:border-vibrant-pink/30 transition-all duration-500">
+                <div className="relative h-full w-full overflow-hidden rounded-xl bg-gradient-to-br from-charcoal/20 to-charcoal/40 backdrop-blur-sm border border-off-white/10 group-hover:border-vibrant-pink/30 transition-all duration-500">
                   
                   {/* Image Container */}
                   <div className="absolute inset-0">
@@ -539,10 +539,7 @@ export default function ReserverPage() {
                         {event.title}
                       </h3>
                       
-                      {/* Enhanced Subtitle */}
-                      <p className="font-sans text-sm lg:text-base text-white/90 tracking-wide uppercase font-medium group-hover:text-white transition-colors duration-300 drop-shadow-[0_2px_8px_rgba(0,0,0,0.8)]">
-                        Événement d'exception
-                      </p>
+                     
                       
                       {/* Enhanced Hover Effect - Additional Info */}
                      
