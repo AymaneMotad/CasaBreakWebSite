@@ -135,7 +135,7 @@ export default function ReserverPage() {
                     preload="metadata"
                     onEnded={() => setIsPlaying(false)}
                   >
-                    <source src="/videos/sacre-video.mp4" type="video/mp4" />
+                    <source src="/videos/opening.mp4" type="video/mp4" />
                     Votre navigateur ne supporte pas la lecture de vidéos.
                   </video>
 
