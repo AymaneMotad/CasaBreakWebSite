@@ -5,6 +5,7 @@ import { Calendar, Users, Mail, Phone, User, Key, UsersRound, Volume2, Sofa, Shi
 import { Navigation } from "@/components/navigation"
 import { Footer } from "@/components/footer"
 import { Breadcrumb } from "@/components/breadcrumb"
+import { ImageLightbox } from "@/components/image-lightbox"
 import { useRef, useState } from "react"
 
 export default function ReserverPage() {
@@ -286,24 +287,110 @@ export default function ReserverPage() {
                     className={`group relative h-[350px] rounded-xl overflow-hidden animate-fade-in-up stagger-${index + 1} transition-all duration-700 hover:scale-[1.02] hover:shadow-2xl hover:shadow-vibrant-pink/20`}
                   >
                     {/* Premium Container with Enhanced Styling */}
-                    <div className="relative h-full w-full overflow-hidden rounded-xl bg-gradient-to-br from-charcoal/20 to-charcoal/40 backdrop-blur-sm border border-off-white/10 group-hover:border-vibrant-pink/30 transition-all duration-500">
+                    <div className="relative h-full w-full overflow-hidden rounded-xl border border-off-white/10 group-hover:border-vibrant-pink/30 transition-all duration-500">
                       
-                      {/* Image Container */}
-                      <div className="absolute inset-0">
+                      {/* Clickable Image with Lightbox */}
+                      <div className="absolute inset-0 cursor-pointer" onClick={() => {
+                        // Create modal HTML
+                        const modal = document.createElement('div')
+                        modal.id = 'image-lightbox-modal'
+                        modal.style.cssText = `
+                          position: fixed;
+                          top: 0;
+                          left: 0;
+                          width: 100%;
+                          height: 100%;
+                          background-color: rgba(0, 0, 0, 0.95);
+                          z-index: 9999;
+                          display: flex;
+                          align-items: center;
+                          justify-content: center;
+                          padding: 20px;
+                          box-sizing: border-box;
+                        `
+                        
+                        // Create close button
+                        const closeBtn = document.createElement('button')
+                        closeBtn.innerHTML = '×'
+                        closeBtn.style.cssText = `
+                          position: absolute;
+                          top: 20px;
+                          right: 20px;
+                          background: rgba(255, 255, 255, 0.1);
+                          border: none;
+                          color: white;
+                          font-size: 24px;
+                          width: 40px;
+                          height: 40px;
+                          border-radius: 50%;
+                          cursor: pointer;
+                          display: flex;
+                          align-items: center;
+                          justify-content: center;
+                        `
+                        
+                        // Create image
+                        const img = document.createElement('img')
+                        img.src = item.image
+                        img.alt = item.alt
+                        img.style.cssText = `
+                          max-width: 90vw;
+                          max-height: 90vh;
+                          object-fit: contain;
+                          border-radius: 8px;
+                          box-shadow: 0 25px 50px -12px rgba(0, 0, 0, 0.5);
+                        `
+                        
+                        // Add elements to modal
+                        modal.appendChild(closeBtn)
+                        modal.appendChild(img)
+                        document.body.appendChild(modal)
+                        
+                        // Prevent body scroll
+                        document.body.style.overflow = 'hidden'
+                        
+                        // Close functions
+                        const closeModal = () => {
+                          document.body.removeChild(modal)
+                          document.body.style.overflow = ''
+                        }
+                        
+                        closeBtn.onclick = closeModal
+                        modal.onclick = (e) => {
+                          if (e.target === modal) closeModal()
+                        }
+                        
+                        // Escape key
+                        const handleKeydown = (e: KeyboardEvent) => {
+                          if (e.key === 'Escape') {
+                            closeModal()
+                            document.removeEventListener('keydown', handleKeydown)
+                          }
+                        }
+                        document.addEventListener('keydown', handleKeydown)
+                      }}>
                         <Image
                           src={item.image}
                           alt={item.alt}
                           fill
                           className="object-cover transition-all duration-700 ease-out group-hover:scale-110 group-hover:brightness-110"
                         />
+                        {/* Zoom overlay */}
+                        <div className="absolute inset-0 bg-black/60 opacity-0 group-hover:opacity-100 transition-opacity duration-300 flex items-center justify-center">
+                          <div className="bg-white/20 p-3 rounded-full">
+                            <svg className="h-8 w-8 text-white" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                              <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M21 21l-6-6m2-5a7 7 0 11-14 0 7 7 0 0114 0zM10 7v3m0 0v3m0-3h3m-3 0H7" />
+                            </svg>
+                          </div>
+                        </div>
                       </div>
                       
-                      {/* Sophisticated Overlay with Enhanced Gradient */}
-                      <div className="absolute inset-0 bg-gradient-to-t from-black/95 via-black/50 to-black/20 group-hover:from-black/98 group-hover:via-black/70 transition-all duration-500"></div>
+                      {/* Reduced Overlay with Lighter Gradient */}
+                      <div className="absolute inset-0 bg-gradient-to-t from-black/40 via-black/20 to-black/10 group-hover:from-black/60 group-hover:via-black/30 transition-all duration-500 pointer-events-none"></div>
                       
                       {/* Elegant Corner Accents with Enhanced Animation */}
-                      <div className="absolute top-4 left-4 w-10 h-10 border-l-2 border-t-2 border-vibrant-pink/60 opacity-0 group-hover:opacity-100 transition-all duration-700"></div>
-                      <div className="absolute bottom-4 right-4 w-10 h-10 border-r-2 border-b-2 border-warm-terracotta/60 opacity-0 group-hover:opacity-100 transition-all duration-700"></div>
+                      <div className="absolute top-4 left-4 w-10 h-10 border-l-2 border-t-2 border-vibrant-pink/60 opacity-0 group-hover:opacity-100 transition-all duration-700 pointer-events-none"></div>
+                      <div className="absolute bottom-4 right-4 w-10 h-10 border-r-2 border-b-2 border-warm-terracotta/60 opacity-0 group-hover:opacity-100 transition-all duration-700 pointer-events-none"></div>
                       
                       {/* Enhanced Border Effect with Multiple Layers */}
                       <div className="absolute inset-0 rounded-xl border border-off-white/5 group-hover:border-vibrant-pink/20 transition-all duration-500 pointer-events-none"></div>
