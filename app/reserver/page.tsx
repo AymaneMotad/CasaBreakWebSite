@@ -215,7 +215,7 @@ export default function ReserverPage() {
               <div className="h-px w-16 bg-gradient-to-l from-transparent to-vibrant-pink"></div>
             </div>
             <h2 className="font-serif text-4xl md:text-6xl lg:text-5xl text-charcoal mb-6 tracking-tight">
-              Découvrez notre espace
+              Découvrez nos espaces
             </h2>
             
             <div className="inline-flex items-center gap-2 mt-6">
@@ -248,6 +248,10 @@ export default function ReserverPage() {
               {/* Image Gallery Grid */}
               <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6 lg:gap-8 relative">
                 {[
+                  {
+                    image: "/decouvrer/decouvrer-1.jpg",
+                    alt: "Vue panoramique de l'Ex Église Sacré-Cœur"
+                  },
                   {
                     image: "/decouvrer/decouvrer-3.jpg",
                     alt: "Espace intérieur de l'Ex Église Sacré-Cœur"
