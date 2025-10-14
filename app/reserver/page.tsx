@@ -460,7 +460,7 @@ export default function ReserverPage() {
             
             <h2 className="font-serif text-5xl md:text-7xl lg:text-8xl text-off-white mb-8 tracking-tight leading-[0.9]">
               Ils nous ont fait
-              <span className="block bg-gradient-to-r from-vibrant-pink via-warm-terracotta to-vibrant-pink bg-clip-text text-transparent uppercase font-bold tracking-wider">
+              <span className="block text-4xl md:text-5xl lg:text-6xl bg-gradient-to-r from-vibrant-pink via-warm-terracotta to-vibrant-pink bg-clip-text text-transparent uppercase font-light tracking-[0.15em] leading-[0.8]">
                 confiance
               </span>
             </h2>
