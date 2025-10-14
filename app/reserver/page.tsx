@@ -454,13 +454,8 @@ export default function ReserverPage() {
           {/* Enhanced Header with Elegant Typography */}
           <div className="text-center mb-20 lg:mb-24 animate-fade-in-up">
             <div className="inline-flex items-center gap-4 mb-8">
-              <div className="h-px w-16 bg-gradient-to-r from-transparent to-vibrant-pink/60"></div>
-              <div className="px-6 py-3 bg-gradient-to-r from-vibrant-pink/10 to-warm-terracotta/10 backdrop-blur-sm border border-off-white/20 rounded-full">
-                <span className="text-off-white/90 text-sm font-sans tracking-[0.2em] uppercase font-medium">
-                  Portfolio d'excellence
-                </span>
-              </div>
-              <div className="h-px w-16 bg-gradient-to-l from-transparent to-warm-terracotta/60"></div>
+           
+              
             </div>
             
             <h2 className="font-serif text-5xl md:text-7xl lg:text-8xl text-off-white mb-8 tracking-tight leading-[0.9]">
