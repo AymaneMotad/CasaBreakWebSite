@@ -56,29 +56,29 @@ export function HeroSection() {
           </div>
         </div>
         
-        {/* Enhanced text contrast background container (lighter on mobile) */}
-        <div className="relative bg-gradient-to-b from-charcoal/40 via-charcoal/30 to-charcoal/50 lg:from-charcoal/60 lg:via-charcoal/40 lg:to-charcoal/70 rounded-2xl backdrop-blur-sm pt-16 pb-12">
+        {/* Enhanced text contrast background container (more compact) */}
+        <div className="relative bg-gradient-to-b from-charcoal/40 via-charcoal/30 to-charcoal/50 lg:from-charcoal/60 lg:via-charcoal/40 lg:to-charcoal/70 rounded-2xl backdrop-blur-sm pt-8 pb-8 px-6 lg:px-8 max-w-4xl mx-auto">
           
-          <h1 className="relative z-10 font-serif font-normal text-4xl md:text-5xl lg:text-6xl text-off-white mb-6 leading-tight tracking-wide animate-gentle-fade-in stagger-1 drop-shadow-2xl">
+          <h1 className="relative z-10 font-serif font-normal text-3xl md:text-4xl lg:text-5xl text-off-white mb-4 leading-tight tracking-wide animate-gentle-fade-in stagger-1 drop-shadow-2xl">
           Un joyau patrimonial au cœur de Casablanca
           </h1>
           
           
-          <p className="relative z-10 font-sans text-lg md:text-xl text-off-white max-w-2xl mx-auto leading-relaxed animate-gentle-fade-in stagger-2 text-readable mb-12 drop-shadow-xl">
+          <p className="relative z-10 font-sans text-base md:text-lg text-off-white max-w-xl mx-auto leading-relaxed animate-gentle-fade-in stagger-2 text-readable mb-8 drop-shadow-xl">
             L'icône du patrimoine casablancais, l'Ex Église Sacré-Cœur, s'éveille à une nouvelle vie.
             Désormais centre culturel et espace de création, elle incarne la rencontre entre la mémoire d'hier et la modernité d'aujourd'hui.
           </p>
 
-          <div className="relative z-10 flex flex-col sm:flex-row gap-6 justify-center items-center animate-gentle-fade-in stagger-3">
+          <div className="relative z-10 flex flex-col sm:flex-row gap-4 justify-center items-center animate-gentle-fade-in stagger-3">
             <a
               href="/visiter/individuels"
-              className="px-10 py-4 bg-gradient-to-r from-blue-500 to-blue-700 text-white text-sm font-sans tracking-wider uppercase hover:shadow-xl hover:scale-105 transition-all duration-300 rounded-lg shadow-lg border-2 border-blue-600 font-semibold"
+              className="px-8 py-3 bg-gradient-to-r from-blue-500 to-blue-700 text-white text-sm font-sans tracking-wider uppercase hover:shadow-xl hover:scale-105 transition-all duration-300 rounded-lg shadow-lg border-2 border-blue-600 font-semibold"
             >
               Visiter
             </a>
             <a
               href="/decouvrir/histoire"
-              className="px-10 py-4 bg-transparent border-2 border-off-white/60 text-off-white text-sm font-sans tracking-wider uppercase hover:bg-off-white/20 hover:border-off-white/80 transition-all duration-300 rounded-lg backdrop-blur-sm shadow-lg font-semibold"
+              className="px-8 py-3 bg-transparent border-2 border-off-white/60 text-off-white text-sm font-sans tracking-wider uppercase hover:bg-off-white/20 hover:border-off-white/80 transition-all duration-300 rounded-lg backdrop-blur-sm shadow-lg font-semibold"
             >
               Découvrir
             </a>

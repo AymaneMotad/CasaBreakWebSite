@@ -12,9 +12,9 @@ export function Footer() {
 
       <div className="max-w-[1400px] mx-auto px-6 lg:px-12 relative z-10">
         {/* Main Footer Content */}
-        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-5 gap-16 mb-16">
+        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-6 gap-16 mb-16">
           {/* About Section */}
-          <div>
+          <div className="lg:col-span-2">
             <Image 
               src="/sacre-black.svg" 
               alt="l'Ex église Sacré-Cœur" 
@@ -26,123 +26,25 @@ export function Footer() {
                 WebkitFilter: 'brightness(0) invert(1)'
               }}
             />
-            <p className="font-sans text-sm text-off-white/70 leading-relaxed mb-4">
+            <p className="font-sans text-sm text-off-white/70 leading-relaxed mb-6">
               Monument historique Art Déco et espace culturel au cœur de Casablanca depuis 1930.
             </p>
-            <div className="space-y-6">
+            
+            {/* Contact Info */}
+            <div className="space-y-4 mb-8">
               <div>
-                <h5 className="font-sans text-xs uppercase tracking-wider text-blue-400 mb-3">Adresse</h5>
+                <h5 className="font-sans text-xs uppercase tracking-wider text-blue-400 mb-2">Adresse</h5>
                 <p className="font-sans text-sm text-off-white/80 leading-relaxed">
                   Angle rue d'Alger et boulevard Rachidi<br />
                   Quartier Gautier, Casablanca 20250
                 </p>
               </div>
               <div>
-                <h5 className="font-sans text-xs uppercase tracking-wider text-blue-400 mb-3">Contact</h5>
-                <p className="font-sans text-sm text-off-white/80 mb-2">Tél : +212 522 227 745</p>
+                <h5 className="font-sans text-xs uppercase tracking-wider text-blue-400 mb-2">Contact</h5>
+                <p className="font-sans text-sm text-off-white/80 mb-1">Tél : +212 522 227 745</p>
                 <p className="font-sans text-sm text-off-white/80">contact@casaevents.ma</p>
               </div>
             </div>
-            
-            {/* Map */}
-            <div className="mt-12">
-              <h4 className="font-sans text-xs uppercase tracking-wider mb-6 text-blue-400">Localisation</h4>
-              <div className="w-full h-40 rounded-xl overflow-hidden shadow-xl border border-off-white/10">
-                <iframe
-                  src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3323.123456789!2d-7.619123456789!3d33.592123456789!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x0%3A0x0!2zMzPCsDM1JzMxLjYiTiA3wrAzNycxMC44Ilc!5e0!3m2!1sen!2sma!4v1234567890123!5m2!1sen!2sma"
-                  width="100%"
-                  height="100%"
-                  style={{ border: 0 }}
-                  allowFullScreen
-                  loading="lazy"
-                  referrerPolicy="no-referrer-when-downgrade"
-                  title="Localisation de l'Ex église Sacré-Cœur"
-                  className="w-full h-full"
-                ></iframe>
-              </div>
-              <p className="text-xs text-off-white/60 mt-3 italic">
-                Cliquez sur la carte pour obtenir l'itinéraire
-              </p>
-            </div>
-          </div>
-
-          {/* Découvrir */}
-          <div>
-            <h4 className="font-sans text-sm uppercase tracking-wider mb-6 text-blue-400">Découvrir</h4>
-            <ul className="space-y-3 font-sans text-sm">
-              <li>
-                <a href="/decouvrir/histoire" className="text-off-white/70 hover:text-off-white transition-colors">
-                  Histoire
-                </a>
-              </li>
-              <li>
-                <a href="/decouvrir/architecture" className="text-off-white/70 hover:text-off-white transition-colors">
-                  Architecture
-                </a>
-              </li>
-             
-            </ul>
-          </div>
-
-          {/* Visiter */}
-          <div>
-            <h4 className="font-sans text-sm uppercase tracking-wider mb-6 text-blue-400">Visiter</h4>
-            <ul className="space-y-3 font-sans text-sm">
-              <li>
-                <a href="/visiter/individuels" className="text-off-white/70 hover:text-off-white transition-colors">
-                  Visiteurs Individuels
-                </a>
-              </li>
-              <li>
-                <a href="/visiter/groupes" className="text-off-white/70 hover:text-off-white transition-colors">
-                  Groupes
-                </a>
-              </li>
-              <li>
-                <a href="/visiter/etudiants" className="text-off-white/70 hover:text-off-white transition-colors">
-                  Étudiants
-                </a>
-              </li>
-              <li>
-                <a href="/visiter/seniors" className="text-off-white/70 hover:text-off-white transition-colors">
-                  Seniors
-                </a>
-              </li>
-              <li>
-                <a href="/visiter/handicapes" className="text-off-white/70 hover:text-off-white transition-colors">
-                  Visiteurs à mobilité réduite
-                </a>
-              </li>
-            </ul>
-          </div>
-
-          {/* Événements */}
-          <div>
-            <h4 className="font-sans text-sm uppercase tracking-wider mb-6 text-blue-400">Événements</h4>
-            <ul className="space-y-3 font-sans text-sm">
-              <li>
-                <a href="/evenements" className="text-off-white/70 hover:text-off-white transition-colors">
-                  Nos Événements
-                </a>
-              </li>
-            </ul>
-          </div>
-
-          {/* Réserver & Contact */}
-          <div>
-            <h4 className="font-sans text-sm uppercase tracking-wider mb-4 text-blue-400">Réserver</h4>
-            <ul className="space-y-2 font-sans text-sm mb-6">
-              <li>
-                <a href="/reserver" className="text-off-white/70 hover:text-off-white transition-colors">
-                  Réserver l'Ex Église Sacré-Cœur
-                </a>
-              </li>
-              <li>
-                <a href="/billetterie" className="text-off-white/70 hover:text-off-white transition-colors">
-                  Billetterie
-                </a>
-              </li>
-            </ul>
             
             {/* Social Media */}
             <div className="flex gap-4">
@@ -180,6 +82,81 @@ export function Footer() {
                 </svg>
               </a>
             </div>
+          </div>
+
+          {/* Accueil */}
+          <div>
+            <h4 className="font-sans text-sm uppercase tracking-wider mb-6 text-blue-400">Accueil</h4>
+            <ul className="space-y-3 font-sans text-sm">
+              <li>
+                <a href="/" className="text-off-white/70 hover:text-off-white transition-colors">
+                  Accueil
+                </a>
+              </li>
+            </ul>
+          </div>
+
+          {/* Découvrir */}
+          <div>
+            <h4 className="font-sans text-sm uppercase tracking-wider mb-6 text-blue-400">Découvrir</h4>
+            <ul className="space-y-3 font-sans text-sm">
+              <li>
+                <a href="/decouvrir/histoire" className="text-off-white/70 hover:text-off-white transition-colors">
+                  Histoire
+                </a>
+              </li>
+              <li>
+                <a href="/decouvrir/architecture" className="text-off-white/70 hover:text-off-white transition-colors">
+                  Architecture
+                </a>
+              </li>
+            </ul>
+          </div>
+
+          {/* Visiter */}
+          <div>
+            <h4 className="font-sans text-sm uppercase tracking-wider mb-6 text-blue-400">Visiter</h4>
+            <ul className="space-y-3 font-sans text-sm">
+              <li>
+                <a href="/visiter/individuels" className="text-off-white/70 hover:text-off-white transition-colors">
+                  Individuels et familles
+                </a>
+              </li>
+              <li>
+                <a href="/visiter/groupes" className="text-off-white/70 hover:text-off-white transition-colors">
+                  Groupes
+                </a>
+              </li>
+            </ul>
+          </div>
+
+          {/* Événements */}
+          <div>
+            <h4 className="font-sans text-sm uppercase tracking-wider mb-6 text-blue-400">Événements</h4>
+            <ul className="space-y-3 font-sans text-sm">
+              <li>
+                <a href="/evenements" className="text-off-white/70 hover:text-off-white transition-colors">
+                  Nos Événements
+                </a>
+              </li>
+            </ul>
+          </div>
+
+          {/* Réserver */}
+          <div>
+            <h4 className="font-sans text-sm uppercase tracking-wider mb-6 text-blue-400">Réserver</h4>
+            <ul className="space-y-3 font-sans text-sm">
+              <li>
+                <a href="/reserver" className="text-off-white/70 hover:text-off-white transition-colors">
+                  Réserver votre espace
+                </a>
+              </li>
+              <li>
+                <a href="https://tickets.sacrecoeur-casa.ma" target="_blank" rel="noopener noreferrer" className="text-off-white/70 hover:text-off-white transition-colors">
+                  Billetterie
+                </a>
+              </li>
+            </ul>
           </div>
         </div>
 
