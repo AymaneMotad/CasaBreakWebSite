@@ -484,15 +484,11 @@ export default function ReserverPage() {
                 image: "/site-map-images/reserver sacre coeur/fashion show/fashion-show.jpg"
               },
               {
-                title: "Casa Arab Festival",
+                title: "Casablanca Arab Film Festival",
                 
                 image: "/site-map-images/reserver sacre coeur/casa arab festival/WhatsApp Image 2025-10-02 at 11.26.11 AM.jpeg"
               },
-              {
-                title: "Casablanca Arab Film Festival",
-                
-                image: "/site-map-images/reserver sacre coeur/casa arab festival/WhatsApp Image 2025-10-02 at 11.26.11 AM-2.jpeg"
-              },
+              
               {
                 title: "Co-branding Visa & RAM",
                 
