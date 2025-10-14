@@ -194,6 +194,146 @@ export default function ReserverPage() {
         </div>
       </section>
 
+      {/* Discover Our Spaces Section */}
+      <section className="py-20 lg:py-32 bg-gradient-to-b from-off-white via-off-white to-charcoal/5 relative overflow-hidden">
+        {/* Decorative Background Elements */}
+        <div className="absolute inset-0 opacity-[0.02]">
+          <div className="absolute top-40 left-10 w-96 h-96 border-2 border-vibrant-pink rounded-full"></div>
+          <div className="absolute bottom-20 right-20 w-72 h-72 border-2 border-warm-terracotta rounded-full"></div>
+          <div className="absolute top-60 right-40 w-2 h-2 bg-vibrant-pink rounded-full animate-pulse"></div>
+          <div className="absolute bottom-40 left-60 w-3 h-3 bg-warm-terracotta rounded-full animate-pulse"></div>
+        </div>
+
+        <div className="max-w-[1400px] mx-auto px-6 lg:px-12 relative z-10">
+          {/* Enhanced Header with Decorative Elements */}
+          <div className="text-center mb-16 lg:mb-20 animate-fade-in-up">
+            <div className="inline-flex items-center gap-3 mb-6">
+              <div className="h-px w-16 bg-gradient-to-r from-transparent to-vibrant-pink"></div>
+              <div className="w-2 h-2 rounded-full bg-vibrant-pink animate-pulse"></div>
+              <div className="w-1.5 h-1.5 rounded-full bg-warm-terracotta"></div>
+              <div className="w-2 h-2 rounded-full bg-vibrant-pink animate-pulse"></div>
+              <div className="h-px w-16 bg-gradient-to-l from-transparent to-vibrant-pink"></div>
+            </div>
+            <h2 className="font-serif text-4xl md:text-6xl lg:text-5xl text-charcoal mb-6 tracking-tight">
+              Découvrez notre espace
+            </h2>
+            
+            <div className="inline-flex items-center gap-2 mt-6">
+              <div className="h-px w-12 bg-gradient-to-r from-transparent to-warm-terracotta/60"></div>
+              <div className="w-1.5 h-1.5 rounded-full bg-warm-terracotta"></div>
+              <div className="h-px w-12 bg-gradient-to-l from-transparent to-warm-terracotta/60"></div>
+            </div>
+          </div>
+
+          {/* Description Section */}
+          <div className="text-center mb-16 animate-fade-in-up stagger-1">
+            <p className="font-sans text-xl md:text-2xl text-charcoal/80 max-w-5xl mx-auto leading-relaxed">
+              L'Ex Église Sacré-Cœur met à votre disposition une variété d'espaces, intérieurs comme extérieurs, où chaque détail contribue à la réussite de vos événements.
+            </p>
+          </div>
+
+          {/* Premium Image Gallery Container with Cinematic Styling */}
+          <div className="max-w-[1200px] mx-auto animate-fade-in-up stagger-2">
+            {/* Outer Decorative Frame */}
+            <div className="relative p-8 lg:p-12">
+              {/* Corner Accents - Art Deco Style */}
+              <div className="absolute top-0 left-0 w-24 h-24 border-l-2 border-t-2 border-vibrant-pink opacity-40"></div>
+              <div className="absolute top-0 right-0 w-24 h-24 border-r-2 border-t-2 border-vibrant-pink opacity-40"></div>
+              <div className="absolute bottom-0 left-0 w-24 h-24 border-l-2 border-b-2 border-warm-terracotta opacity-40"></div>
+              <div className="absolute bottom-0 right-0 w-24 h-24 border-r-2 border-b-2 border-warm-terracotta opacity-40"></div>
+
+              {/* Glowing Border Effect */}
+              <div className="absolute inset-0 bg-gradient-to-r from-vibrant-pink/10 via-transparent to-warm-terracotta/10 blur-2xl"></div>
+
+              {/* Image Gallery Grid */}
+              <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6 lg:gap-8 relative">
+                {[
+                  {
+                    image: "/decouvrer/decouvrer-3.jpg",
+                    alt: "Espace intérieur de l'Ex Église Sacré-Cœur"
+                  },
+                  {
+                    image: "/decouvrer/decouvrer-4.jpg",
+                    alt: "Architecture intérieure de l'Ex Église Sacré-Cœur"
+                  },
+                  {
+                    image: "/decouvrer/decouvrer-5.jpg",
+                    alt: "Détails architecturaux de l'Ex Église Sacré-Cœur"
+                  },
+                  {
+                    image: "/decouvrer/decouvrer-6.jpg",
+                    alt: "Perspective intérieure de l'Ex Église Sacré-Cœur"
+                  },
+                  {
+                    image: "/decouvrer/decouvrer-7.jpg",
+                    alt: "Vue d'ensemble de l'Ex Église Sacré-Cœur"
+                  },
+                  {
+                    image: "/decouvrer/decouvrer-8.jpg",
+                    alt: "Espace événementiel de l'Ex Église Sacré-Cœur"
+                  },
+                  {
+                    image: "/decouvrer/decouvrer-9.jpg",
+                    alt: "Architecture extérieure de l'Ex Église Sacré-Cœur"
+                  }
+                ].map((item, index) => (
+                  <div
+                    key={index}
+                    className={`group relative h-[350px] rounded-xl overflow-hidden animate-fade-in-up stagger-${index + 1} transition-all duration-700 hover:scale-[1.02] hover:shadow-2xl hover:shadow-vibrant-pink/20`}
+                  >
+                    {/* Premium Container with Enhanced Styling */}
+                    <div className="relative h-full w-full overflow-hidden rounded-xl bg-gradient-to-br from-charcoal/20 to-charcoal/40 backdrop-blur-sm border border-off-white/10 group-hover:border-vibrant-pink/30 transition-all duration-500">
+                      
+                      {/* Image Container */}
+                      <div className="absolute inset-0">
+                        <Image
+                          src={item.image}
+                          alt={item.alt}
+                          fill
+                          className="object-cover transition-all duration-700 ease-out group-hover:scale-110 group-hover:brightness-110"
+                        />
+                      </div>
+                      
+                      {/* Sophisticated Overlay with Enhanced Gradient */}
+                      <div className="absolute inset-0 bg-gradient-to-t from-black/95 via-black/50 to-black/20 group-hover:from-black/98 group-hover:via-black/70 transition-all duration-500"></div>
+                      
+                      {/* Elegant Corner Accents with Enhanced Animation */}
+                      <div className="absolute top-4 left-4 w-10 h-10 border-l-2 border-t-2 border-vibrant-pink/60 opacity-0 group-hover:opacity-100 transition-all duration-700"></div>
+                      <div className="absolute bottom-4 right-4 w-10 h-10 border-r-2 border-b-2 border-warm-terracotta/60 opacity-0 group-hover:opacity-100 transition-all duration-700"></div>
+                      
+                      {/* Enhanced Border Effect with Multiple Layers */}
+                      <div className="absolute inset-0 rounded-xl border border-off-white/5 group-hover:border-vibrant-pink/20 transition-all duration-500 pointer-events-none"></div>
+                      <div className="absolute inset-0 rounded-xl border border-transparent group-hover:border-vibrant-pink/10 transition-all duration-500 pointer-events-none"></div>
+                    </div>
+                  </div>
+                ))}
+              </div>
+
+              {/* Floating Accent Bars */}
+              <div className="absolute -left-6 top-1/2 -translate-y-1/2 w-1 h-32 bg-gradient-to-b from-transparent via-vibrant-pink to-transparent opacity-60"></div>
+              <div className="absolute -right-6 top-1/2 -translate-y-1/2 w-1 h-32 bg-gradient-to-b from-transparent via-warm-terracotta to-transparent opacity-60"></div>
+            </div>
+          </div>
+
+          {/* Enhanced Bottom Decoration */}
+          <div className="mt-12 text-center">
+            <div className="flex items-center justify-center gap-6">
+              <div className="flex items-center gap-2">
+                <div className="w-8 h-px bg-gradient-to-r from-transparent to-vibrant-pink"></div>
+                <div className="w-2 h-2 rounded-full bg-vibrant-pink"></div>
+              </div>
+              <p className="font-serif text-lg text-charcoal/50 italic">
+                "Des espaces uniques pour des événements d'exception"
+              </p>
+              <div className="flex items-center gap-2">
+                <div className="w-2 h-2 rounded-full bg-warm-terracotta"></div>
+                <div className="w-8 h-px bg-gradient-to-l from-transparent to-warm-terracotta"></div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+
       {/* Past Events - Elegant Portfolio Gallery */}
       <section className="py-24 lg:py-32 bg-gradient-to-b from-charcoal via-charcoal/98 to-charcoal relative overflow-hidden">
         {/* Sophisticated Background Pattern */}
@@ -315,7 +455,7 @@ export default function ReserverPage() {
                       
                       {/* Enhanced Subtitle */}
                       <p className="font-sans text-sm lg:text-base text-white/90 tracking-wide uppercase font-medium group-hover:text-white transition-colors duration-300 drop-shadow-[0_2px_8px_rgba(0,0,0,0.8)]">
-                        {event.subtitle}
+                        Événement d'exception
                       </p>
                       
                       {/* Enhanced Hover Effect - Additional Info */}
