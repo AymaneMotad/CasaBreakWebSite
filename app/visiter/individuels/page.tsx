@@ -211,7 +211,7 @@ export default function IndividuelsPage() {
                 </div>
                 <div className="flex justify-between items-center py-2">
                   <span>Dernière entrée</span>
-                  <span className="font-semibold text-charcoal">18h</span>
+                  <span className="font-semibold text-charcoal">17h</span>
                 </div>
               </div>
             </div>

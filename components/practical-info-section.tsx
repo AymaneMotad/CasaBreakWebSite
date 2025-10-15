@@ -86,7 +86,7 @@ export function PracticalInfoSection() {
                 <div className="h-px bg-charcoal/5"></div>
                 <div className="flex justify-between items-baseline">
                   <span className="font-sans text-sm text-charcoal/50 uppercase tracking-wider">Dernière entrée</span>
-                  <span className="font-sans text-lg text-charcoal font-light">18h</span>
+                  <span className="font-sans text-lg text-charcoal font-light">17h</span>
                 </div>
                 <div className="h-px bg-charcoal/5"></div>
                 <div className="flex justify-between items-baseline">
