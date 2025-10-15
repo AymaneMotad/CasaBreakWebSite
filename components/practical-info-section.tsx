@@ -90,8 +90,8 @@ export function PracticalInfoSection() {
                 </div>
                 <div className="h-px bg-charcoal/5"></div>
                 <div className="flex justify-between items-baseline">
-                  <span className="font-sans text-sm text-charcoal/50 uppercase tracking-wider">Fermé</span>
-                  <span className="font-sans text-lg text-charcoal font-light">Lundi</span>
+                  <span className="font-sans text-sm text-charcoal/50 uppercase tracking-wider">Lundi</span>
+                  <span className="font-sans text-lg text-charcoal font-light">Fermé</span>
                 </div>
               </div>
             </div>
