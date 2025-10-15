@@ -58,14 +58,14 @@ export default function IndividuelsPage() {
       title: "Seniors (60+)",
       price: "35 MAD",
       description: "Visite adaptée à votre rythme avec services dédiés",
-      features: ["Visite à rythme adapté", "Pauses régulières", "Sièges disponibles"]
+      features: ["Visite à rythme adapté", "Pauses régulières", "Le jardin de l’Ex Église Sacré-Cœur est aménagé de bancs pour assurer le confort et l’accueil des visiteurs"]
     },
     {
       icon: Accessibility,
       title: "Visiteurs à mobilité réduite",
       price: "Gratuit",
-      description: "Notre équipe est disponible sur place pour offrir toute assistance nécessaire.",
-      features: ["Un passage est aménagé pour faciliter l’accès au monument.", "L’espace principal du Sacré-Cœur est accessible par ce passage dédié."]
+      description: "Notre équipe est disponible sur place pour offrir toute assistance nécessaire",
+      features: ["Un passage est aménagé pour faciliter l’accès au monument", "Un passage aménagé permet aux personnes à mobilité réduite d’accéder librement au jardin de l’Ex Église Sacré-Cœur"]
     }
   ]
 
