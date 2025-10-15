@@ -100,7 +100,7 @@ export default function EvenementsPage() {
               <div className="h-px w-12 bg-gradient-to-l from-transparent to-vibrant-pink/60"></div>
             </div>
             <h2 className="font-serif text-4xl md:text-5xl lg:text-6xl text-charcoal mb-6 animate-fade-in-up">
-              Événements passés
+              Nos Événements
             </h2>
             <p className="font-sans text-lg md:text-xl text-charcoal/70 max-w-3xl mx-auto leading-relaxed animate-fade-in-up stagger-1">
               Revivez les moments marquants qui ont fait vibrer l'Ex église Sacré-Cœur
