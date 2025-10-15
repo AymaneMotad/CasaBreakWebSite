@@ -490,7 +490,7 @@ export default function ReserverPage() {
               },
               
               {
-                title: "Co-branding Visa & RAM",
+                title: "Co-branding VISA & RAM",
                 
                 image: "/site-map-images/reserver sacre coeur/coebranding ram visa/WhatsApp Image 2025-10-02 at 12.02.47 PM.jpeg"
               },
@@ -575,91 +575,116 @@ export default function ReserverPage() {
             Remplissez ce formulaire et nous vous contacterons dans les 48 heures
           </p>
 
-          <form className="space-y-6">
-            <div className="grid md:grid-cols-2 gap-6">
-              <div className="animate-fade-in-up stagger-2">
-                <label className="block font-sans text-xs text-charcoal/60 uppercase tracking-wider mb-2">
-                  Nom complet *
-                </label>
-                <div className="relative">
-                  <User className="absolute left-4 top-1/2 -translate-y-1/2 h-5 w-5 text-charcoal/30" />
-                  <input
-                    type="text"
-                    required
-                    className="w-full pl-12 pr-4 py-4 bg-off-white border border-charcoal/10 focus:border-vibrant-pink focus:outline-none transition-colors font-sans text-sm"
-                    placeholder="Votre nom"
-                  />
+          <form className="space-y-8">
+            {/* Personal Information Section */}
+            <div className="space-y-6">
+              <h3 className="font-serif text-xl text-charcoal mb-4 animate-fade-in-up">Informations personnelles</h3>
+              
+              <div className="grid grid-cols-1 sm:grid-cols-2 gap-6">
+                <div className="animate-fade-in-up stagger-2">
+                  <label className="block font-sans text-xs text-charcoal/60 uppercase tracking-wider mb-2">
+                    Nom & Prénom *
+                  </label>
+                  <div className="relative">
+                    <User className="absolute left-4 top-1/2 -translate-y-1/2 h-5 w-5 text-charcoal/30" />
+                    <input
+                      type="text"
+                      required
+                      className="w-full pl-12 pr-4 py-4 bg-off-white border border-charcoal/10 focus:border-vibrant-pink focus:outline-none transition-colors font-sans text-sm rounded-lg"
+                      placeholder="Nom & Prénom"
+                    />
+                  </div>
+                </div>
+
+                <div className="animate-fade-in-up stagger-3">
+                  <label className="block font-sans text-xs text-charcoal/60 uppercase tracking-wider mb-2">
+                    Entreprise *
+                  </label>
+                  <div className="relative">
+                    <User className="absolute left-4 top-1/2 -translate-y-1/2 h-5 w-5 text-charcoal/30" />
+                    <input
+                      type="text"
+                      required
+                      className="w-full pl-12 pr-4 py-4 bg-off-white border border-charcoal/10 focus:border-vibrant-pink focus:outline-none transition-colors font-sans text-sm rounded-lg"
+                      placeholder="Nom de l'Entreprise"
+                    />
+                  </div>
                 </div>
               </div>
 
-              <div className="animate-fade-in-up stagger-3">
-                <label className="block font-sans text-xs text-charcoal/60 uppercase tracking-wider mb-2">
-                  Email *
-                </label>
-                <div className="relative">
-                  <Mail className="absolute left-4 top-1/2 -translate-y-1/2 h-5 w-5 text-charcoal/30" />
-                  <input
-                    type="email"
-                    required
-                    className="w-full pl-12 pr-4 py-4 bg-off-white border border-charcoal/10 focus:border-vibrant-pink focus:outline-none transition-colors font-sans text-sm"
-                    placeholder="votre@email.com"
-                  />
+              <div className="grid grid-cols-1 sm:grid-cols-2 gap-6">
+                <div className="animate-fade-in-up stagger-4">
+                  <label className="block font-sans text-xs text-charcoal/60 uppercase tracking-wider mb-2">
+                    Email *
+                  </label>
+                  <div className="relative">
+                    <Mail className="absolute left-4 top-1/2 -translate-y-1/2 h-5 w-5 text-charcoal/30" />
+                    <input
+                      type="email"
+                      required
+                      className="w-full pl-12 pr-4 py-4 bg-off-white border border-charcoal/10 focus:border-vibrant-pink focus:outline-none transition-colors font-sans text-sm rounded-lg"
+                      placeholder="votre@email.com"
+                    />
+                  </div>
+                </div>
+
+                <div className="animate-fade-in-up stagger-5">
+                  <label className="block font-sans text-xs text-charcoal/60 uppercase tracking-wider mb-2">
+                    Téléphone *
+                  </label>
+                  <div className="relative">
+                    <Phone className="absolute left-4 top-1/2 -translate-y-1/2 h-5 w-5 text-charcoal/30" />
+                    <input
+                      type="tel"
+                      required
+                      className="w-full pl-12 pr-4 py-4 bg-off-white border border-charcoal/10 focus:border-vibrant-pink focus:outline-none transition-colors font-sans text-sm rounded-lg"
+                      placeholder="+212 6XX XXX XXX"
+                    />
+                  </div>
                 </div>
               </div>
             </div>
 
-            <div className="grid md:grid-cols-2 gap-6">
-              <div className="animate-fade-in-up stagger-4">
-                <label className="block font-sans text-xs text-charcoal/60 uppercase tracking-wider mb-2">
-                  Téléphone *
-                </label>
-                <div className="relative">
-                  <Phone className="absolute left-4 top-1/2 -translate-y-1/2 h-5 w-5 text-charcoal/30" />
-                  <input
-                    type="tel"
+            {/* Event Information Section */}
+            <div className="space-y-6">
+              <h3 className="font-serif text-xl text-charcoal mb-4 animate-fade-in-up">Détails de l'événement</h3>
+              
+              <div className="grid grid-cols-1 sm:grid-cols-2 gap-6">
+                <div className="animate-fade-in-up stagger-6">
+                  <label className="block font-sans text-xs text-charcoal/60 uppercase tracking-wider mb-2">
+                    Type d'événement *
+                  </label>
+                  <select
                     required
-                    className="w-full pl-12 pr-4 py-4 bg-off-white border border-charcoal/10 focus:border-vibrant-pink focus:outline-none transition-colors font-sans text-sm"
-                    placeholder="+212 6XX XXX XXX"
-                  />
+                    className="w-full px-4 py-4 bg-off-white border border-charcoal/10 focus:border-vibrant-pink focus:outline-none transition-colors font-sans text-sm rounded-lg"
+                  >
+                    <option value="">Sélectionnez...</option>
+                    <option value="festival">Festival</option>
+                    <option value="concert">Concert Privé</option>
+                    <option value="photo">Séance Photo</option>
+                    <option value="tournage">Tournage</option>
+                    <option value="corporate">Événement Corporatif</option>
+                    <option value="exposition">Exposition</option>
+                    <option value="autre">Autre</option>
+                  </select>
+                </div>
+
+                <div className="animate-fade-in-up stagger-7">
+                  <label className="block font-sans text-xs text-charcoal/60 uppercase tracking-wider mb-2">
+                    Date souhaitée *
+                  </label>
+                  <div className="relative">
+                    <Calendar className="absolute left-4 top-1/2 -translate-y-1/2 h-5 w-5 text-charcoal/30" />
+                    <input
+                      type="date"
+                      required
+                      className="w-full pl-12 pr-4 py-4 bg-off-white border border-charcoal/10 focus:border-vibrant-pink focus:outline-none transition-colors font-sans text-sm rounded-lg"
+                    />
+                  </div>
                 </div>
               </div>
 
-              <div className="animate-fade-in-up stagger-5">
-                <label className="block font-sans text-xs text-charcoal/60 uppercase tracking-wider mb-2">
-                  Type d'événement *
-                </label>
-                <select
-                  required
-                  className="w-full px-4 py-4 bg-off-white border border-charcoal/10 focus:border-vibrant-pink focus:outline-none transition-colors font-sans text-sm"
-                >
-                  <option value="">Sélectionnez...</option>
-                  <option value="mariage">Mariage & Cérémonie</option>
-                  <option value="concert">Concert Privé</option>
-                  <option value="photo">Séance Photo</option>
-                  <option value="tournage">Tournage</option>
-                  <option value="corporate">Événement Corporatif</option>
-                  <option value="exposition">Exposition</option>
-                  <option value="autre">Autre</option>
-                </select>
-              </div>
-            </div>
-
-            <div className="grid md:grid-cols-2 gap-6">
-              <div className="animate-fade-in-up stagger-6">
-                <label className="block font-sans text-xs text-charcoal/60 uppercase tracking-wider mb-2">
-                  Date souhaitée *
-                </label>
-                <div className="relative">
-                  <Calendar className="absolute left-4 top-1/2 -translate-y-1/2 h-5 w-5 text-charcoal/30" />
-                  <input
-                    type="date"
-                    required
-                    className="w-full pl-12 pr-4 py-4 bg-off-white border border-charcoal/10 focus:border-vibrant-pink focus:outline-none transition-colors font-sans text-sm"
-                  />
-                </div>
-              </div>
-
-              <div className="animate-fade-in-up stagger-7">
+              <div className="animate-fade-in-up stagger-8">
                 <label className="block font-sans text-xs text-charcoal/60 uppercase tracking-wider mb-2">
                   Nombre de personnes
                 </label>
@@ -667,25 +692,26 @@ export default function ReserverPage() {
                   <Users className="absolute left-4 top-1/2 -translate-y-1/2 h-5 w-5 text-charcoal/30" />
                   <input
                     type="number"
-                    className="w-full pl-12 pr-4 py-4 bg-off-white border border-charcoal/10 focus:border-vibrant-pink focus:outline-none transition-colors font-sans text-sm"
+                    className="w-full pl-12 pr-4 py-4 bg-off-white border border-charcoal/10 focus:border-vibrant-pink focus:outline-none transition-colors font-sans text-sm rounded-lg"
                     placeholder="50"
                   />
                 </div>
               </div>
+
+              <div className="animate-fade-in-up stagger-9">
+                <label className="block font-sans text-xs text-charcoal/60 uppercase tracking-wider mb-2">
+                  Détails de votre projet
+                </label>
+                <textarea
+                  rows={6}
+                  className="w-full px-4 py-4 bg-off-white border border-charcoal/10 focus:border-vibrant-pink focus:outline-none transition-colors font-sans text-sm resize-none rounded-lg"
+                  placeholder="Décrivez votre événement, vos besoins spécifiques, horaires souhaités..."
+                />
+              </div>
             </div>
 
-            <div className="animate-fade-in-up stagger-8">
-              <label className="block font-sans text-xs text-charcoal/60 uppercase tracking-wider mb-2">
-                Détails de votre projet
-              </label>
-              <textarea
-                rows={6}
-                className="w-full px-4 py-4 bg-off-white border border-charcoal/10 focus:border-vibrant-pink focus:outline-none transition-colors font-sans text-sm resize-none"
-                placeholder="Décrivez votre événement, vos besoins spécifiques, horaires souhaités..."
-              />
-            </div>
-
-            <div className="text-center animate-fade-in-up stagger-9">
+            {/* Submit Section */}
+            <div className="text-center animate-fade-in-up stagger-10 pt-6 border-t border-charcoal/10">
               <p className="font-sans text-xs text-charcoal/60 mb-6 max-w-2xl mx-auto leading-relaxed">
                 Réservez l'Ex église Sacré-Cœur pour votre événement ! Contactez notre équipe pour organiser votre événement à l'Ex église Sacré-Cœur et profitez d'un cadre prestigieux au cœur de Casablanca.
               </p>
