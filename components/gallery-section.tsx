@@ -2,7 +2,7 @@ export function GallerySection() {
   const images = [
     {
       src: "/casablanca-sacred-heart-cathedral-exterior-white-b.jpg",
-      alt: "Exterior view of l'Ex église Sacré-Cœur Cathedral",
+      alt: "Exterior view of l'espace sacré coeur Cathedral",
       caption: "The iconic white facade with twin minaret-inspired towers",
     },
     {
@@ -38,7 +38,7 @@ export function GallerySection() {
         <div className="max-w-6xl mx-auto">
           <h2 className="font-serif text-4xl md:text-5xl font-bold text-primary mb-6 text-center">Photo Gallery</h2>
           <p className="text-lg text-muted-foreground mb-12 text-center text-pretty">
-            Explore the architectural beauty and cultural vibrancy of l'Ex église Sacré-Cœur
+            Explore the architectural beauty and cultural vibrancy of l'espace sacré coeur
           </p>
 
           <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-6">

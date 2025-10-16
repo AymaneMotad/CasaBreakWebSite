@@ -39,7 +39,7 @@ export default function ReserverPage() {
 
       {/* Hero Section */}
       <section className="relative h-[50vh] flex items-center justify-center overflow-hidden">
-        <Image src="/reserve.png" alt="Réserver l'Ex église Sacré-Cœur" fill className="object-cover" priority />
+        <Image src="/reserve.png" alt="Réserver l'espace sacré coeur" fill className="object-cover" priority />
         <div className="absolute inset-0 bg-charcoal/50" />
         <div className="relative z-10 text-center px-6">
           <h1 className="font-serif text-5xl md:text-7xl text-off-white mb-4 animate-fade-in-up text-balance">
@@ -59,7 +59,7 @@ export default function ReserverPage() {
               Un espace d'exception pour vos événements
             </h2>
             <p className="font-sans text-base text-charcoal/70 leading-relaxed mb-6">
-            L’Ex Église Sacré-Cœur de Casablanca s’impose aujourd’hui comme un lieu emblématique pour tous types d’événements — professionnels, culturels, institutionnels, artistiques ou privés. Grâce à son architecture monumentale, sa localisation centrale et ses espaces modulables, elle offre un cadre unique, inspirant et prestigieux, adapté à chaque projet.
+            L'espace sacré coeur de Casablanca s’impose aujourd’hui comme un lieu emblématique pour tous types d’événements — professionnels, culturels, institutionnels, artistiques ou privés. Grâce à son architecture monumentale, sa localisation centrale et ses espaces modulables, elle offre un cadre unique, inspirant et prestigieux, adapté à chaque projet.
 
 
 
@@ -106,7 +106,7 @@ export default function ReserverPage() {
               <div className="h-px w-16 bg-gradient-to-l from-transparent to-vibrant-pink"></div>
             </div>
             <h2 className="font-serif text-4xl md:text-6xl lg:text-5xl text-charcoal mb-6 tracking-tight">
-              Revivez l'inauguration du l'Ex Église Sacré-Cœur
+              Revivez l'inauguration du l'espace sacré coeur
             </h2>
             
             <div className="inline-flex items-center gap-2 mt-6">
@@ -237,7 +237,7 @@ export default function ReserverPage() {
           {/* Description Section */}
           <div className="text-center mb-16 animate-fade-in-up stagger-1">
             <p className="font-sans text-xl md:text-2xl text-charcoal/80 max-w-5xl mx-auto leading-relaxed">
-              L'Ex Église Sacré-Cœur met à votre disposition une variété d'espaces, intérieurs comme extérieurs, où chaque détail contribue à la réussite de vos événements.
+              L'espace sacré coeur met à votre disposition une variété d'espaces, intérieurs comme extérieurs, où chaque détail contribue à la réussite de vos événements.
             </p>
           </div>
 
@@ -259,35 +259,35 @@ export default function ReserverPage() {
                 {[
                   {
                     image: "/decouvrer/decouvrer-1.jpg",
-                    alt: "Vue panoramique de l'Ex Église Sacré-Cœur"
+                    alt: "Vue panoramique de l'espace sacré coeur"
                   },
                   {
                     image: "/decouvrer/decouvrer-3.jpg",
-                    alt: "Espace intérieur de l'Ex Église Sacré-Cœur"
+                    alt: "Espace intérieur de l'espace sacré coeur"
                   },
                   {
                     image: "/decouvrer/decouvrer-4.jpg",
-                    alt: "Architecture intérieure de l'Ex Église Sacré-Cœur"
+                    alt: "Architecture intérieure de l'espace sacré coeur"
                   },
                   {
                     image: "/decouvrer/decouvrer-5.jpg",
-                    alt: "Détails architecturaux de l'Ex Église Sacré-Cœur"
+                    alt: "Détails architecturaux de l'espace sacré coeur"
                   },
                   {
                     image: "/decouvrer/decouvrer-6.jpg",
-                    alt: "Perspective intérieure de l'Ex Église Sacré-Cœur"
+                    alt: "Perspective intérieure de l'espace sacré coeur"
                   },
                   {
                     image: "/decouvrer/decouvrer-7.jpg",
-                    alt: "Vue d'ensemble de l'Ex Église Sacré-Cœur"
+                    alt: "Vue d'ensemble de l'espace sacré coeur"
                   },
                   {
                     image: "/decouvrer/decouvrer-8.jpg",
-                    alt: "Espace événementiel de l'Ex Église Sacré-Cœur"
+                    alt: "Espace événementiel de l'espace sacré coeur"
                   },
                   {
                     image: "/decouvrer/decouvrer-9.jpg",
-                    alt: "Architecture extérieure de l'Ex Église Sacré-Cœur"
+                    alt: "Architecture extérieure de l'espace sacré coeur"
                   }
                 ].map((item, index) => (
                   <div
@@ -474,7 +474,7 @@ export default function ReserverPage() {
             </h2>
             
             <p className="font-sans text-xl md:text-2xl text-off-white/80 max-w-5xl mx-auto leading-relaxed">
-              Des marques prestigieuses et institutions de renom ont choisi l'Ex église Sacré-Cœur pour leurs événements d'exception.
+              Des marques prestigieuses et institutions de renom ont choisi l'espace sacré coeur pour leurs événements d'exception.
             </p>
           </div>
 
@@ -721,7 +721,7 @@ export default function ReserverPage() {
             {/* Submit Section */}
             <div className="text-center animate-fade-in-up stagger-10 pt-6 border-t border-charcoal/10">
               <p className="font-sans text-xs text-charcoal/60 mb-6 max-w-2xl mx-auto leading-relaxed">
-                Contactez notre équipe pour organiser votre événement à l'Ex église Sacré-Cœur et profitez d'un cadre prestigieux au cœur de Casablanca.
+                Contactez notre équipe pour organiser votre événement à l'espace sacré coeur et profitez d'un cadre prestigieux au cœur de Casablanca.
               </p>
               <button
                 type="submit"

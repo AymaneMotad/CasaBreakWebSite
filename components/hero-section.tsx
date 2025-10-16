@@ -65,7 +65,7 @@ export function HeroSection() {
           
           
           <p className="relative z-10 font-sans text-base md:text-lg text-off-white max-w-xl mx-auto leading-relaxed animate-gentle-fade-in stagger-2 text-readable mb-8 drop-shadow-xl">
-            L'icône du patrimoine casablancais, l'Ex Église Sacré-Cœur, s'éveille à une nouvelle vie.
+            L'icône du patrimoine casablancais, l'espace sacré coeur, s'éveille à une nouvelle vie.
             Désormais centre culturel et espace de création, elle incarne la rencontre entre la mémoire d'hier et la modernité d'aujourd'hui.
           </p>
 

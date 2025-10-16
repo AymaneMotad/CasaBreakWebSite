@@ -43,7 +43,7 @@ export default function IndividuelsPage() {
       icon: Users,
       title: "Individuels & Familles",
       price: "50 MAD",
-      description: "Visite libre ou guidée pour découvrir l'Ex Église Sacré-Cœur à votre rythme",
+      description: "Visite libre ou guidée pour découvrir l'espace sacré coeur à votre rythme",
       features: ["Visite libre", "Audio-guide disponible", "Pack famille : 120 MAD (2 adultes + 2 enfants)"]
     },
     {
@@ -58,14 +58,14 @@ export default function IndividuelsPage() {
       title: "Seniors (60+)",
       price: "35 MAD",
       description: "Visite adaptée à votre rythme avec services dédiés",
-      features: ["Visite à rythme adapté", "Pauses régulières", "Le jardin de l’Ex Église Sacré-Cœur est aménagé de bancs pour assurer le confort et l’accueil des visiteurs"]
+      features: ["Visite à rythme adapté", "Pauses régulières", "Le jardin de l'espace sacré coeur est aménagé de bancs pour assurer le confort et l’accueil des visiteurs"]
     },
     {
       icon: Accessibility,
       title: "Visiteurs à mobilité réduite",
       price: "Gratuit",
       description: "Notre équipe est disponible sur place pour offrir toute assistance nécessaire",
-      features: ["Un passage est aménagé pour faciliter l’accès au monument", "Un passage aménagé permet aux personnes à mobilité réduite d’accéder librement au jardin de l’Ex Église Sacré-Cœur"]
+      features: ["Un passage est aménagé pour faciliter l’accès au monument", "Un passage aménagé permet aux personnes à mobilité réduite d’accéder librement au jardin de l'espace sacré coeur"]
     }
   ]
 
@@ -100,7 +100,7 @@ export default function IndividuelsPage() {
             Individuels et Familles
           </h1>
           <p className="font-sans text-sm md:text-base lg:text-lg tracking-wide text-off-white/90 animate-fade-in-up delay-100">
-            Découvrez l'Ex église Sacré-Cœur à votre rythme, seul ou en famille
+            Découvrez l'espace sacré coeur à votre rythme, seul ou en famille
           </p>
         </div>
       </section>
@@ -118,7 +118,7 @@ export default function IndividuelsPage() {
           </h2>
           <p className="font-sans text-lg lg:text-xl text-charcoal/70 leading-relaxed max-w-4xl mx-auto animate-fade-in-up delay-200">
             Que vous soyez seul, en couple, en famille, étudiant, senior ou visiteur à mobilité réduite, 
-            l'Ex église Sacré-Cœur vous accueille avec des services adaptés à vos besoins.
+            l'espace sacré coeur vous accueille avec des services adaptés à vos besoins.
           </p>
         </div>
 

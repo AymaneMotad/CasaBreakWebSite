@@ -39,7 +39,7 @@ export function SpinningCathedral() {
           </h2>
           
           <p className="font-sans text-base lg:text-lg text-charcoal/70 leading-relaxed max-w-3xl mx-auto">
-            Découvrez l'histoire fascinante de l'Ex église Sacré-Cœur, un joyau architectural Art Déco 
+            Découvrez l'histoire fascinante de l'espace sacré coeur, un joyau architectural Art Déco 
             qui continue d'inspirer et de rassembler les Casablancais et les visiteurs du monde entier.
           </p>
         </div>

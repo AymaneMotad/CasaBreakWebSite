@@ -28,7 +28,7 @@ export function Footer() {
               <div className="mb-8">
                 <Image 
                   src="/sacre-black.svg" 
-                  alt="l'Ex église Sacré-Cœur" 
+                  alt="l'espace sacré coeur" 
                   width={595} 
                   height={393}
                   className="h-20 w-auto filter brightness-0 invert"
@@ -220,7 +220,7 @@ export function Footer() {
                 allowFullScreen
                 loading="lazy"
                 referrerPolicy="no-referrer-when-downgrade"
-                title="Localisation de l'Ex église Sacré-Cœur"
+                title="Localisation de l'espace sacré coeur"
                 className="rounded-xl"
               />
             </div>
@@ -244,7 +244,7 @@ export function Footer() {
         <div className="pt-8 border-t border-slate-700/50">
           <div className="text-center">
             <p className="text-slate-400 text-sm font-light">
-              © {new Date().getFullYear()} l'Ex église Sacré-Cœur Casablanca. Tous droits réservés.
+              © {new Date().getFullYear()} l'espace sacré coeur Casablanca. Tous droits réservés.
             </p>
           </div>
         </div>
