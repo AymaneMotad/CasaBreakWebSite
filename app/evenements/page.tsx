@@ -6,6 +6,11 @@ import { Breadcrumb } from "@/components/breadcrumb"
 export default function EvenementsPage() {
   const pastEvents = [
     {
+      title: "Festival Egregore",
+      image: "/dosei.jpeg",
+      description: "Le festival de hip-hop le plus attendu du Maroc ! Deux jours d'événement exceptionnel avec plus de 40 superstars du rap du Moyen-Orient et d'Afrique du Nord.",
+    },
+    {
       title: "Soirée Inauguration",
       image: "/site-map-images/evenements-optimized/soiree/evenement - soiree 2.jpg",
       description: "Une soirée d'exception marquant l'ouverture officielle de l'Ex église Sacré-Cœur comme espace culturel. Un moment historique célébrant la renaissance de ce monument Art Déco au cœur de Casablanca.",
@@ -126,13 +131,13 @@ export default function EvenementsPage() {
                 <div className="absolute inset-0 border-2 border-off-white/10 group-hover:border-vibrant-pink/40 transition-all duration-500 rounded-xl"></div>
                 
                 {/* Text content - always visible */}
-                <div className="absolute bottom-0 left-0 right-0 p-8 z-10">
+                <div className="absolute bottom-0 left-0 right-0 p-8 z-10 text-center">
                   <div className="w-16 h-0.5 bg-gradient-to-r from-vibrant-pink to-transparent mb-4 group-hover:w-20 transition-all duration-500"></div>
-                  <h3 className="font-serif text-2xl lg:text-3xl text-white font-bold drop-shadow-[0_4px_12px_rgba(0,0,0,0.9)]">
+                  <h3 className="font-serif text-2xl lg:text-3xl text-white font-bold drop-shadow-[0_4px_12px_rgba(0,0,0,0.9)] text-center leading-tight">
                     {event.title}
                   </h3>
                   <div className="mt-3 opacity-0 group-hover:opacity-100 transition-opacity duration-500">
-                    <p className="text-white/90 text-sm leading-relaxed drop-shadow-[0_2px_8px_rgba(0,0,0,0.8)]">
+                    <p className="text-white/90 text-sm leading-relaxed drop-shadow-[0_2px_8px_rgba(0,0,0,0.8)] text-center">
                       {event.description}
                     </p>
                   </div>

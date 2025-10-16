@@ -59,11 +59,19 @@ export default function ReserverPage() {
               Un espace d'exception pour vos événements
             </h2>
             <p className="font-sans text-base text-charcoal/70 leading-relaxed mb-6">
-              L'Ex église Sacré-Cœur de Casablanca s'impose aujourd'hui comme un lieu emblématique pour les événements professionnels, culturels et institutionnels.
-              Grâce à son architecture monumentale, sa localisation centrale et ses espaces modulables, il offre un cadre unique pour accueillir conférences, forums, lancements, expositions ou soirées de prestige.
+            L’Ex Église Sacré-Cœur de Casablanca s’impose aujourd’hui comme un lieu emblématique pour tous types d’événements — professionnels, culturels, institutionnels, artistiques ou privés. Grâce à son architecture monumentale, sa localisation centrale et ses espaces modulables, elle offre un cadre unique, inspirant et prestigieux, adapté à chaque projet.
+
+
+
+
             </p>
+            
             <p className="font-sans text-base text-charcoal/70 leading-relaxed">
-              Notre équipe vous accompagne dans l'organisation de votre événement pour garantir une expérience unique et mémorable.
+            Notre équipe vous accompagne dans l'organisation de votre événement pour garantir une expérience unique et mémorable.
+            </p>
+            <br />
+            <p className="font-sans text-base text-charcoal/70 leading-relaxed">
+            Donnez vie à votre événement dès aujourd’hui , contactez-nous pour réserver votre date et découvrir nos offres personnalisées.
             </p>
           </div>
           <div className="relative h-[500px] animate-fade-in-up stagger-1">
@@ -466,7 +474,7 @@ export default function ReserverPage() {
             </h2>
             
             <p className="font-sans text-xl md:text-2xl text-off-white/80 max-w-5xl mx-auto leading-relaxed">
-              Des marques prestigieuses et institutions de renom ont choisi l'Ex église Sacré-Cœur pour leurs événements d'exception
+              Des marques prestigieuses et institutions de renom ont choisi l'Ex église Sacré-Cœur pour leurs événements d'exception.
             </p>
           </div>
 
@@ -713,7 +721,7 @@ export default function ReserverPage() {
             {/* Submit Section */}
             <div className="text-center animate-fade-in-up stagger-10 pt-6 border-t border-charcoal/10">
               <p className="font-sans text-xs text-charcoal/60 mb-6 max-w-2xl mx-auto leading-relaxed">
-                Réservez l'Ex église Sacré-Cœur pour votre événement ! Contactez notre équipe pour organiser votre événement à l'Ex église Sacré-Cœur et profitez d'un cadre prestigieux au cœur de Casablanca.
+                Contactez notre équipe pour organiser votre événement à l'Ex église Sacré-Cœur et profitez d'un cadre prestigieux au cœur de Casablanca.
               </p>
               <button
                 type="submit"
