@@ -404,7 +404,7 @@ export default function HistoirePage() {
             <div className="relative animate-fade-in-up stagger-1">
               <div className="relative h-[400px] lg:h-[450px] rounded-2xl overflow-hidden shadow-2xl group">
                 <Image
-                  src="/site-map-images/architecture-optimized/cethedrale image.jpeg"
+                  src="/site-cal/histoire-last.JPG"
                   alt="Architecture de l'Ex église Sacré-Cœur"
                   fill
                   className="object-cover transition-transform duration-700 group-hover:scale-105"

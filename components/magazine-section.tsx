@@ -41,9 +41,9 @@ export function MagazineSection() {
         <div className="grid lg:grid-cols-2 gap-12 lg:gap-20 items-center mb-32">
           <div className="animate-gentle-fade-in flex justify-center">
             <img
-              src="/sacrefront.png"
+              src="/site-cal/home-1.JPG"
               alt="Façade de l'Ex église Sacré-Cœur de Casablanca"
-              className="w-full max-w-none h-[650px] object-contain rounded-xl hover-scale-subtle transition-smooth"
+              className="w-full h-[500px] object-cover rounded-xl hover-scale"
             />
           </div>
           <div className="animate-gentle-fade-in stagger-1">
@@ -78,7 +78,7 @@ export function MagazineSection() {
           </div>
           <div className="order-1 lg:order-2 animate-slide-in-right stagger-1">
             <img
-              src="/site-map-images/evenements-optimized/soiree/evenement - soiree 5.jpg"
+              src="/site-cal/home-2.JPG"
               alt="Exhibition at l'Ex église Sacré-Cœur"
               className="w-full h-[500px] object-cover rounded-xl hover-scale"
             />
