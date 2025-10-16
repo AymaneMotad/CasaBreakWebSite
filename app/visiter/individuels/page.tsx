@@ -107,6 +107,19 @@ export default function IndividuelsPage() {
 
       {/* Introduction */}
       <section className="max-w-[1400px] mx-auto px-6 lg:px-12 py-24 lg:py-32">
+        {/* Featured Image */}
+        <div className="mb-16">
+          <div className="relative rounded-3xl overflow-hidden shadow-2xl hover:shadow-3xl transition-all duration-500 group">
+            <Image
+              src="/site-cal/visiter-1.JPG"
+              alt="Visiteur découvrant l'Ex église Sacré-Cœur"
+              width={1200}
+              height={600}
+              className="w-full h-[300px] md:h-[400px] object-cover group-hover:scale-105 transition-transform duration-700"
+            />
+          </div>
+        </div>
+
         <div className="text-center mb-24">
           <div className="inline-block px-6 py-3 bg-gradient-to-r from-vibrant-pink/10 to-warm-terracotta/10 rounded-full mb-8 animate-fade-in-up">
             <span className="font-sans text-sm font-medium text-vibrant-pink tracking-wider uppercase">Découvrez</span>
