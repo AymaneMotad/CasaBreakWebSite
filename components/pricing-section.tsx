@@ -5,7 +5,7 @@ export function PricingSection() {
     <section className="py-24 lg:py-32 bg-off-white">
       <div className="max-w-[1000px] mx-auto px-6 lg:px-12 text-center">
         <h2 className="font-serif font-normal text-5xl lg:text-6xl text-charcoal mb-6 animate-fade-in-up">
-          Tarif pour la visite de l'espace sacré coeur
+          Tarif pour la visite de l'Ex église Sacré-Cœur
         </h2>
         <p className="font-sans text-lg text-charcoal/60 mb-16 animate-fade-in-up stagger-1">
           Accédez à l'un des plus beaux monuments de Casablanca

@@ -13,7 +13,7 @@ export function IntroSection() {
           </div>
           <div className="space-y-6">
             <p className="font-sans text-lg leading-relaxed text-charcoal/80">
-              L'espace sacré coeur, construite entre 1930 et 1953 par l'architecte français Paul Tournon, représente un
+              L'Ex église Sacré-Cœur, construite entre 1930 et 1953 par l'architecte français Paul Tournon, représente un
               exemple remarquable de l'architecture Art Déco mêlée aux influences néo-gothiques et marocaines.
             </p>
             <p className="font-sans text-lg leading-relaxed text-charcoal/80">

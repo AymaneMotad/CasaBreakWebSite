@@ -53,10 +53,10 @@ export function BookingSection() {
         <div className="grid lg:grid-cols-2 gap-12 lg:gap-20 items-center">
           <div className="animate-fade-in-up">
             <h2 className="font-serif font-normal text-5xl lg:text-6xl text-charcoal mb-8 leading-tight">
-              Voulez-vous réserver les billets pour vos prochains événements à l'espace sacré coeur ?
+              Voulez-vous réserver les billets pour vos prochains événements à l'Ex église Sacré-Cœur ?
             </h2>
             <p className="font-sans text-lg text-charcoal/70 leading-relaxed mb-8">
-            Découvrez notre plateforme de réservation en ligne et accédez à tous les événements de l'espace sacré coeur en un seul clic.
+            Découvrez notre plateforme de réservation en ligne et accédez à tous les événements de l'Ex église Sacré-Cœur en un seul clic.
             </p>
 
             <div className="space-y-4 mb-10">
@@ -85,7 +85,7 @@ export function BookingSection() {
               <div className="relative">
                 <img
                   src="/casawee.png"
-                  alt="Plateforme de réservation espace sacré coeur"
+                  alt="Plateforme de réservation Sacré-Cœur"
                   className="w-[400px] h-[600px] lg:w-[450px] lg:h-[650px] object-cover rounded-[3rem] shadow-2xl hover-scale-subtle transition-smooth"
                 />
               </div>

@@ -13,12 +13,12 @@ export default function EvenementsPage() {
     {
       title: "Soirée Inauguration",
       image: "/site-map-images/evenements-optimized/soiree/evenement - soiree 2.jpg",
-      description: "Une soirée d'exception marquant l'ouverture officielle de l'espace sacré coeur comme espace culturel. Un moment historique célébrant la renaissance de ce monument Art Déco au cœur de Casablanca.",
+      description: "Une soirée d'exception marquant l'ouverture officielle de l'Ex église Sacré-Cœur comme espace culturel. Un moment historique célébrant la renaissance de ce monument Art Déco au cœur de Casablanca.",
     },
     {
       title: "Casablanca Smart City",
       image: "/site-map-images/evenements-optimized/smart-city/evenement-smartcity2.jpg",
-      description: "Un événement technologique d'envergure présentant l'innovation urbaine et les solutions intelligentes pour la ville de demain. L'espace sacré coeur accueille les leaders de la transformation digitale.",
+      description: "Un événement technologique d'envergure présentant l'innovation urbaine et les solutions intelligentes pour la ville de demain. L'Ex église Sacré-Cœur accueille les leaders de la transformation digitale.",
     },
   ]
 
@@ -41,7 +41,7 @@ export default function EvenementsPage() {
       <section className="relative h-[70vh] flex items-center justify-center overflow-hidden">
         <Image 
           src="/site-map-images/evenements-optimized/soiree/evenement - soiree 1.jpg" 
-          alt="Événements à l'espace sacré coeur" 
+          alt="Événements à l'Ex église Sacré-Cœur" 
           fill 
           className="object-cover animate-subtle-float" 
           priority 
@@ -108,7 +108,7 @@ export default function EvenementsPage() {
               Nos Événements
             </h2>
             <p className="font-sans text-lg md:text-xl text-charcoal/70 max-w-3xl mx-auto leading-relaxed animate-fade-in-up stagger-1">
-              Revivez les moments marquants qui ont fait vibrer l'espace sacré coeur
+              Revivez les moments marquants qui ont fait vibrer l'Ex église Sacré-Cœur
             </p>
           </div>
 

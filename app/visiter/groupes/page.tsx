@@ -37,10 +37,10 @@ export default function GroupesPage() {
         <div className="grid lg:grid-cols-2 gap-16 items-center">
           <div className="animate-fade-in-up">
             <h2 className="font-serif text-4xl md:text-5xl text-charcoal mb-6 text-balance">
-              Découvrez l'espace sacré coeur en groupe
+              Découvrez l'Ex Église Sacré-Cœur en groupe
             </h2>
             <p className="font-sans text-base text-charcoal/70 leading-relaxed mb-6">
-              Vous souhaitez découvrir l'espace sacré coeur entre amis ou en petit groupe (plus de 10 personnes) ? 
+              Vous souhaitez découvrir l'Ex Église Sacré-Cœur entre amis ou en petit groupe (plus de 10 personnes) ? 
               Profitez d'une visite libre ou accompagnée, selon vos envies, pour explorer l'histoire, l'architecture et la symbolique de ce monument emblématique de Casablanca.
             </p>
             <p className="font-sans text-base text-charcoal/70 leading-relaxed">

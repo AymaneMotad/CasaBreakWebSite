@@ -60,7 +60,7 @@ export function Navigation() {
           >
             <Image 
               src="/sacre-logo.svg" 
-              alt="Casablanca espace sacré coeur" 
+              alt="Casablanca Sacré-Cœur" 
               width={595} 
               height={393}
               className="h-20 lg:h-24 w-auto"

@@ -42,7 +42,7 @@ export function MagazineSection() {
           <div className="animate-gentle-fade-in flex justify-center">
             <img
               src="/site-cal/home-1.JPG"
-              alt="Façade de l'espace sacré coeur de Casablanca"
+              alt="Façade de l'Ex église Sacré-Cœur de Casablanca"
               className="w-full h-[500px] object-cover rounded-xl hover-scale"
             />
           </div>
@@ -51,7 +51,7 @@ export function MagazineSection() {
               Un chef-d'œuvre architectural
             </h2>
             <p className="font-sans text-base lg:text-lg text-charcoal/70 leading-relaxed mb-4 text-readable">
-              L'espace sacré coeur de Casablanca, érigé en 1930, incarne l'élégance de l'architecture Art Déco. Ses lignes
+              L'Ex église Sacré-Cœur de Casablanca, érigé en 1930, incarne l'élégance de l'architecture Art Déco. Ses lignes
               épurées et sa façade blanche immaculée en font un monument emblématique de la ville.
             </p>
             <p className="font-sans text-base lg:text-lg text-charcoal/70 leading-relaxed text-readable">
@@ -79,7 +79,7 @@ export function MagazineSection() {
           <div className="order-1 lg:order-2 animate-slide-in-right stagger-1">
             <img
               src="/site-cal/home-2.JPG"
-              alt="Exhibition at l'espace sacré coeur"
+              alt="Exhibition at l'Ex église Sacré-Cœur"
               className="w-full h-[500px] object-cover rounded-xl hover-scale"
             />
           </div>
@@ -90,7 +90,7 @@ export function MagazineSection() {
           <div className="animate-slide-in-left stagger-2">
             <img
               src="/reserve.png"
-              alt="Cultural diversity at l'espace sacré coeur"
+              alt="Cultural diversity at l'Ex église Sacré-Cœur"
               className="w-full h-[500px] object-cover rounded-xl hover-scale"
             />
           </div>
@@ -99,7 +99,7 @@ export function MagazineSection() {
               Un symbole de la diversité culturelle
             </h2>
             <p className="font-sans text-base lg:text-lg text-charcoal/70 leading-relaxed mb-4">
-              L'espace sacré coeur témoigne de la richesse du patrimoine culturel de Casablanca. Elle représente un
+              L'Ex église Sacré-Cœur témoigne de la richesse du patrimoine culturel de Casablanca. Elle représente un
               pont entre les cultures, les époques et les communautés.
             </p>
             <p className="font-sans text-base lg:text-lg text-charcoal/70 leading-relaxed">
