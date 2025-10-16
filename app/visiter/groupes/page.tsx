@@ -19,7 +19,7 @@ export default function GroupesPage() {
       </div>
       {/* Hero Section */}
       <section className="relative h-[60vh] flex items-center justify-center overflow-hidden">
-        <Image src="/large-group-tour-inside-cathedral-with-guide.jpg" alt="Visite de groupe" fill className="object-cover" priority />
+        <Image src="/site-cal/architecture-header.JPG" alt="Visite de groupe" fill className="object-cover" priority />
         <div className="absolute inset-0 bg-charcoal/40" />
         <div className="relative z-10 text-center px-6">
           <h1 className="font-serif text-5xl md:text-7xl text-off-white mb-4 animate-fade-in-up text-balance">
@@ -33,6 +33,7 @@ export default function GroupesPage() {
 
       {/* Introduction */}
       <section className="max-w-[1400px] mx-auto px-6 lg:px-12 py-20">
+        
         <div className="grid lg:grid-cols-2 gap-16 items-center">
           <div className="animate-fade-in-up">
             <h2 className="font-serif text-4xl md:text-5xl text-charcoal mb-6 text-balance">
@@ -47,7 +48,12 @@ export default function GroupesPage() {
             </p>
           </div>
           <div className="relative h-[500px] animate-fade-in-up stagger-1">
-            <Image src="/tour-guide-explaining-cathedral-architecture-to-gr.jpg" alt="Guide avec groupe" fill className="object-cover shadow-2xl" />
+            <Image 
+              src="/site-cal/visiter-1.JPG" 
+              alt="Guide avec groupe" 
+              fill 
+              className="object-cover rounded-2xl shadow-2xl hover-scale-subtle transition-smooth" 
+            />
           </div>
         </div>
       </section>
