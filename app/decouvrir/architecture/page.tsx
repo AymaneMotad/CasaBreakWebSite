@@ -240,12 +240,6 @@ export default function ArchitecturePage() {
                   <div className="absolute bottom-0 right-0 w-4 h-4 border-b-2 border-r-2 border-warm-terracotta"></div>
                 </div>
 
-                <div className="absolute bottom-0 left-0 right-0 p-6 transform translate-y-2 group-hover:translate-y-0 transition-transform duration-500">
-                  <div className="w-12 h-px bg-gradient-to-r from-vibrant-pink to-transparent mb-3 opacity-0 group-hover:opacity-100 transition-opacity duration-500"></div>
-                  <h3 className="font-serif text-xl lg:text-2xl text-off-white">
-                    {photo.title}
-                  </h3>
-                </div>
               </div>
             ))}
           </div>
