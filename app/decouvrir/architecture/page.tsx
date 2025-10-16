@@ -53,7 +53,7 @@ export default function ArchitecturePage() {
       </div>
 
       {/* Hero Section */}
-      <section className="relative h-[70vh] flex items-center justify-center overflow-hidden">
+      <section className="relative h-[75vh] flex items-center justify-center overflow-hidden">
         <Image
           src="/site-map-images/architecture-optimized/cethedrale image.jpeg"
           alt="Architecture de l'Ex église Sacré-Cœur"
@@ -61,87 +61,90 @@ export default function ArchitecturePage() {
           className="object-cover animate-subtle-float"
           priority
         />
-        <div className="absolute inset-0 bg-gradient-to-b from-charcoal/60 via-charcoal/40 to-charcoal/60" />
+        <div className="absolute inset-0 bg-gradient-to-b from-charcoal/70 via-charcoal/50 to-charcoal/70" />
         
-        {/* Moroccan Artistic Elements */}
+        {/* Architectural Elements */}
         <div className="absolute inset-0 z-5">
           {/* Top decorative border */}
-          <div className="absolute top-0 left-0 right-0 h-1 bg-gradient-to-r from-transparent via-vibrant-pink/50 to-transparent"></div>
-          <div className="absolute top-2 left-0 right-0 h-px bg-gradient-to-r from-transparent via-warm-terracotta/40 to-transparent"></div>
+          <div className="absolute top-0 left-0 right-0 h-2 bg-gradient-to-r from-transparent via-vibrant-pink/60 to-transparent"></div>
+          <div className="absolute top-4 left-0 right-0 h-px bg-gradient-to-r from-transparent via-warm-terracotta/50 to-transparent"></div>
           
           {/* Corner geometric patterns */}
-          <div className="absolute top-8 left-8 w-16 h-16 opacity-25">
-            <svg viewBox="0 0 64 64" className="w-full h-full text-vibrant-pink/50">
-              <path d="M8 8 L56 8 L56 56 L8 56 Z M16 16 L48 16 L48 48 L16 48 Z" fill="none" stroke="currentColor" strokeWidth="1.5"/>
-              <path d="M24 24 L40 24 L40 40 L24 40 Z" fill="currentColor" opacity="0.3"/>
+          <div className="absolute top-12 left-12 w-20 h-20 opacity-30">
+            <svg viewBox="0 0 80 80" className="w-full h-full text-vibrant-pink/60">
+              <path d="M10 10 L70 10 L70 70 L10 70 Z M20 20 L60 20 L60 60 L20 60 Z" fill="none" stroke="currentColor" strokeWidth="2"/>
+              <path d="M30 30 L50 30 L50 50 L30 50 Z" fill="currentColor" opacity="0.4"/>
             </svg>
           </div>
           
-          <div className="absolute top-8 right-8 w-16 h-16 opacity-25">
-            <svg viewBox="0 0 64 64" className="w-full h-full text-warm-terracotta/50">
-              <path d="M8 8 L56 8 L56 56 L8 56 Z M16 16 L48 16 L48 48 L16 48 Z" fill="none" stroke="currentColor" strokeWidth="1.5"/>
-              <path d="M24 24 L40 24 L40 40 L24 40 Z" fill="currentColor" opacity="0.3"/>
+          <div className="absolute top-12 right-12 w-20 h-20 opacity-30">
+            <svg viewBox="0 0 80 80" className="w-full h-full text-warm-terracotta/60">
+              <path d="M10 10 L70 10 L70 70 L10 70 Z M20 20 L60 20 L60 60 L20 60 Z" fill="none" stroke="currentColor" strokeWidth="2"/>
+              <path d="M30 30 L50 30 L50 50 L30 50 Z" fill="currentColor" opacity="0.4"/>
             </svg>
           </div>
           
           {/* Side decorative lines */}
-          <div className="absolute left-0 top-1/4 bottom-1/4 w-1 bg-gradient-to-b from-transparent via-vibrant-pink/30 to-transparent"></div>
-          <div className="absolute right-0 top-1/4 bottom-1/4 w-1 bg-gradient-to-b from-transparent via-warm-terracotta/30 to-transparent"></div>
+          <div className="absolute left-0 top-1/4 bottom-1/4 w-2 bg-gradient-to-b from-transparent via-vibrant-pink/40 to-transparent"></div>
+          <div className="absolute right-0 top-1/4 bottom-1/4 w-2 bg-gradient-to-b from-transparent via-warm-terracotta/40 to-transparent"></div>
           
           {/* Bottom decorative elements */}
-          <div className="absolute bottom-8 left-1/2 -translate-x-1/2 w-32 h-8 opacity-20">
-            <svg viewBox="0 0 128 32" className="w-full h-full text-vibrant-pink/40">
-              <path d="M8 16 Q32 4, 56 16 Q80 28, 104 16 Q112 12, 120 16" fill="none" stroke="currentColor" strokeWidth="2"/>
-              <circle cx="32" cy="16" r="2" fill="currentColor"/>
-              <circle cx="64" cy="16" r="2" fill="currentColor"/>
-              <circle cx="96" cy="16" r="2" fill="currentColor"/>
+          <div className="absolute bottom-12 left-1/2 -translate-x-1/2 w-40 h-10 opacity-25">
+            <svg viewBox="0 0 160 40" className="w-full h-full text-vibrant-pink/50">
+              <path d="M10 20 Q40 8, 80 20 Q120 32, 150 20 Q155 18, 160 20" fill="none" stroke="currentColor" strokeWidth="2.5"/>
+              <circle cx="40" cy="20" r="3" fill="currentColor"/>
+              <circle cx="80" cy="20" r="3" fill="currentColor"/>
+              <circle cx="120" cy="20" r="3" fill="currentColor"/>
             </svg>
           </div>
         </div>
         
-        <div className="relative z-10 text-center px-6">
+        <div className="relative z-10 text-center px-6 max-w-6xl mx-auto">
           <div className="animate-gentle-fade-in">
-            <div className="inline-block px-4 py-2 bg-gradient-to-r from-vibrant-pink/20 to-warm-terracotta/20 backdrop-blur-sm border border-off-white/20 rounded-full mb-8">
-              <span className="text-off-white/90 text-sm font-sans tracking-wider uppercase">
+            <div className="inline-block px-6 py-3 bg-gradient-to-r from-vibrant-pink/25 to-warm-terracotta/25 backdrop-blur-sm border border-off-white/30 rounded-full mb-10">
+              <span className="text-off-white/95 text-sm font-sans tracking-widest uppercase font-semibold">
                 Architecture Art Déco
               </span>
             </div>
           </div>
-          <h1 className="font-serif text-6xl md:text-8xl lg:text-9xl text-off-white mb-6 animate-gentle-fade-in stagger-1 text-enhanced">
+          <h1 className="font-serif text-7xl md:text-8xl lg:text-9xl text-off-white mb-8 animate-gentle-fade-in stagger-1 text-enhanced">
             Architecture
           </h1>
-          <p className="font-sans text-lg md:text-xl text-off-white/90 max-w-3xl mx-auto leading-relaxed animate-gentle-fade-in stagger-2 text-readable">
+          <p className="font-sans text-xl md:text-2xl text-off-white/95 max-w-4xl mx-auto leading-relaxed animate-gentle-fade-in stagger-2 text-readable">
             Un chef-d'œuvre de l'Art Déco marocain alliant tradition gothique et modernité
           </p>
         </div>
       </section>
 
       {/* Architectural Features */}
-      <section className="max-w-[1400px] mx-auto px-6 lg:px-12 py-20 lg:py-32">
-        <div className="space-y-32">
+      <section className="max-w-[1600px] mx-auto px-6 lg:px-12 py-24 lg:py-40">
+        <div className="space-y-40">
           {features.map((feature, index) => (
             <div
               key={feature.title}
-              className={`grid md:grid-cols-2 gap-12 lg:gap-20 items-start ${
+              className={`grid md:grid-cols-2 gap-16 lg:gap-24 items-center ${
                 index % 2 === 1 ? "md:flex-row-reverse" : ""
               }`}
             >
               <div className={`${index % 2 === 1 ? "md:order-2" : ""} animate-fade-in-up`}>
-                <h3 className="font-serif text-3xl lg:text-5xl text-charcoal mb-6">{feature.title}</h3>
-                <p className="font-sans text-base lg:text-lg text-charcoal/70 leading-relaxed">{feature.description}</p>
+                <div className="mb-8">
+                  <h3 className="font-serif text-4xl lg:text-6xl text-charcoal mb-8 leading-tight">{feature.title}</h3>
+                  <p className="font-sans text-lg lg:text-xl text-charcoal/75 leading-relaxed mb-8">{feature.description}</p>
+                </div>
                 <TextToSpeechPlayer 
                   text={feature.audioText}
                   title={`Écouter: ${feature.title}`}
                 />
               </div>
               <div className={`${index % 2 === 1 ? "md:order-1" : ""} animate-fade-in-up delay-100`}>
-                <div className="relative h-[400px] lg:h-[500px]">
+                <div className="relative h-[500px] lg:h-[600px] rounded-2xl overflow-hidden shadow-2xl">
                   <Image
                     src={feature.image || "/placeholder.svg"}
                     alt={feature.title}
                     fill
                     className="object-cover hover:scale-105 transition-transform duration-700"
                   />
+                  <div className="absolute inset-0 bg-gradient-to-t from-charcoal/20 to-transparent opacity-0 hover:opacity-100 transition-opacity duration-500"></div>
                 </div>
               </div>
             </div>
@@ -150,140 +153,163 @@ export default function ArchitecturePage() {
       </section>
 
       {/* Technical Details */}
-      <section className="relative bg-gradient-to-br from-charcoal via-charcoal to-charcoal/90 py-20 lg:py-32 overflow-hidden">
-        {/* Gothic Background Pattern */}
-        <div className="absolute inset-0 opacity-10">
+      <section className="relative bg-gradient-to-br from-charcoal via-charcoal to-charcoal/90 py-24 lg:py-40 overflow-hidden">
+        {/* Architectural Blueprint Background */}
+        <div className="absolute inset-0 opacity-8">
           <div className="absolute inset-0" style={{
-            backgroundImage: `url("data:image/svg+xml,%3Csvg width='80' height='80' viewBox='0 0 80 80' xmlns='http://www.w3.org/2000/svg'%3E%3Cg fill='none' fill-rule='evenodd'%3E%3Cg fill='%23ffffff' fill-opacity='0.1'%3E%3Cpath d='M40 0L50 20L70 20L55 35L60 55L40 45L20 55L25 35L10 20L30 20Z'/%3E%3Cpath d='M40 10L45 25L60 25L50 35L55 50L40 40L25 50L30 35L20 25L35 25Z'/%3E%3C/g%3E%3C/g%3E%3C/svg%3E")`,
-            backgroundSize: '80px 80px'
+            backgroundImage: `url("data:image/svg+xml,%3Csvg width='100' height='100' viewBox='0 0 100 100' xmlns='http://www.w3.org/2000/svg'%3E%3Cg fill='none' fill-rule='evenodd'%3E%3Cg fill='%23ffffff' fill-opacity='0.05'%3E%3Cpath d='M50 0L60 20L80 20L70 40L90 40L80 60L100 60L90 80L70 80L60 100L40 100L30 80L10 80L0 60L20 60L10 40L30 40L20 20L40 20Z'/%3E%3Cpath d='M50 10L55 25L70 25L65 40L80 40L75 55L90 55L85 70L70 70L65 85L50 85L45 70L30 70L25 55L40 55L35 40L50 40L45 25L60 25Z'/%3E%3C/g%3E%3C/g%3E%3C/svg%3E")`,
+            backgroundSize: '100px 100px'
           }}></div>
         </div>
 
-        {/* Gothic Decorative Elements */}
-        <div className="absolute top-0 left-0 w-full h-2 bg-gradient-to-r from-transparent via-vibrant-pink/40 to-transparent"></div>
-        <div className="absolute bottom-0 left-0 w-full h-2 bg-gradient-to-r from-transparent via-warm-terracotta/40 to-transparent"></div>
+        {/* Architectural Grid Lines */}
+        <div className="absolute inset-0 opacity-5">
+          <div className="absolute inset-0" style={{
+            backgroundImage: `linear-gradient(90deg, rgba(255,255,255,0.1) 1px, transparent 1px), linear-gradient(0deg, rgba(255,255,255,0.1) 1px, transparent 1px)`,
+            backgroundSize: '50px 50px'
+          }}></div>
+        </div>
+
+        {/* Architectural Corner Details */}
+        <div className="absolute top-0 left-0 w-full h-3 bg-gradient-to-r from-transparent via-vibrant-pink/50 to-transparent"></div>
+        <div className="absolute bottom-0 left-0 w-full h-3 bg-gradient-to-r from-transparent via-warm-terracotta/50 to-transparent"></div>
         
-        {/* Gothic Corner Accents */}
-        <div className="absolute top-12 left-12 w-20 h-20 opacity-15">
-          <svg viewBox="0 0 80 80" className="w-full h-full text-vibrant-pink">
-            <path d="M10 10 L70 10 L70 70 L10 70 Z M20 20 L60 20 L60 60 L20 60 Z" fill="none" stroke="currentColor" strokeWidth="2"/>
-            <path d="M30 30 L50 30 L50 50 L30 50 Z" fill="currentColor" opacity="0.4"/>
-            <path d="M35 35 L45 35 L45 45 L35 45 Z" fill="currentColor" opacity="0.6"/>
+        {/* Architectural Corner Accents */}
+        <div className="absolute top-16 left-16 w-24 h-24 opacity-20">
+          <svg viewBox="0 0 100 100" className="w-full h-full text-vibrant-pink">
+            <path d="M10 10 L90 10 L90 90 L10 90 Z M20 20 L80 20 L80 80 L20 80 Z" fill="none" stroke="currentColor" strokeWidth="2"/>
+            <path d="M30 30 L70 30 L70 70 L30 70 Z" fill="currentColor" opacity="0.3"/>
+            <path d="M40 40 L60 40 L60 60 L40 60 Z" fill="currentColor" opacity="0.5"/>
+            <circle cx="50" cy="50" r="5" fill="currentColor" opacity="0.7"/>
           </svg>
         </div>
         
-        <div className="absolute top-12 right-12 w-20 h-20 opacity-15">
-          <svg viewBox="0 0 80 80" className="w-full h-full text-warm-terracotta">
-            <path d="M10 10 L70 10 L70 70 L10 70 Z M20 20 L60 20 L60 60 L20 60 Z" fill="none" stroke="currentColor" strokeWidth="2"/>
-            <path d="M30 30 L50 30 L50 50 L30 50 Z" fill="currentColor" opacity="0.4"/>
-            <path d="M35 35 L45 35 L45 45 L35 45 Z" fill="currentColor" opacity="0.6"/>
+        <div className="absolute top-16 right-16 w-24 h-24 opacity-20">
+          <svg viewBox="0 0 100 100" className="w-full h-full text-warm-terracotta">
+            <path d="M10 10 L90 10 L90 90 L10 90 Z M20 20 L80 20 L80 80 L20 80 Z" fill="none" stroke="currentColor" strokeWidth="2"/>
+            <path d="M30 30 L70 30 L70 70 L30 70 Z" fill="currentColor" opacity="0.3"/>
+            <path d="M40 40 L60 40 L60 60 L40 60 Z" fill="currentColor" opacity="0.5"/>
+            <circle cx="50" cy="50" r="5" fill="currentColor" opacity="0.7"/>
           </svg>
         </div>
 
-        <div className="relative z-10 max-w-[1400px] mx-auto px-6 lg:px-12">
-          <div className="text-center mb-20">
-            <div className="inline-block px-8 py-4 bg-gradient-to-r from-vibrant-pink/20 to-warm-terracotta/20 backdrop-blur-sm border border-off-white/20 rounded-full mb-8">
-              <span className="text-off-white/90 text-sm font-sans tracking-wider uppercase">
+        {/* Architectural Side Elements */}
+        <div className="absolute left-0 top-1/3 bottom-1/3 w-2 bg-gradient-to-b from-transparent via-vibrant-pink/40 to-transparent"></div>
+        <div className="absolute right-0 top-1/3 bottom-1/3 w-2 bg-gradient-to-b from-transparent via-warm-terracotta/40 to-transparent"></div>
+
+        <div className="relative z-10 max-w-[1600px] mx-auto px-6 lg:px-12">
+          <div className="text-center mb-24">
+            <div className="inline-block px-10 py-5 bg-gradient-to-r from-vibrant-pink/25 to-warm-terracotta/25 backdrop-blur-sm border-2 border-off-white/30 rounded-full mb-10">
+              <span className="text-off-white/95 text-sm font-sans tracking-widest uppercase font-semibold">
                 Spécifications Techniques
               </span>
             </div>
-            <h2 className="font-serif text-5xl lg:text-7xl text-off-white mb-6 animate-fade-in-up">
+            <h2 className="font-serif text-6xl lg:text-8xl text-off-white mb-8 animate-fade-in-up">
               Caractéristiques Techniques
             </h2>
-            <p className="font-sans text-lg text-off-white/80 max-w-3xl mx-auto animate-fade-in-up delay-100">
+            <p className="font-sans text-xl text-off-white/85 max-w-4xl mx-auto animate-fade-in-up delay-100 leading-relaxed">
               Découvrez les dimensions et spécifications architecturales de ce monument emblématique
             </p>
           </div>
 
-          <div className="grid md:grid-cols-2 lg:grid-cols-4 gap-8 lg:gap-12">
-            {/* Hauteur sous plafond - Ruler/Measurement Icon */}
-            <div className="group relative bg-gradient-to-br from-charcoal/60 to-charcoal/40 backdrop-blur-sm border-2 border-vibrant-pink/30 rounded-2xl p-8 text-center hover:border-vibrant-pink/60 hover:shadow-2xl hover:shadow-vibrant-pink/20 transition-all duration-500 animate-fade-in-up">
-              <div className="absolute inset-0 bg-gradient-to-br from-vibrant-pink/10 to-transparent rounded-2xl opacity-0 group-hover:opacity-100 transition-opacity duration-500"></div>
+          <div className="grid md:grid-cols-2 lg:grid-cols-4 gap-10 lg:gap-16">
+            {/* Hauteur sous plafond - Architectural Measurement */}
+            <div className="group relative bg-gradient-to-br from-charcoal/70 to-charcoal/50 backdrop-blur-sm border-2 border-vibrant-pink/40 rounded-3xl p-10 text-center hover:border-vibrant-pink/70 hover:shadow-2xl hover:shadow-vibrant-pink/30 transition-all duration-700 animate-fade-in-up">
+              <div className="absolute inset-0 bg-gradient-to-br from-vibrant-pink/15 to-transparent rounded-3xl opacity-0 group-hover:opacity-100 transition-opacity duration-700"></div>
               <div className="relative z-10">
-                <div className="w-20 h-20 mx-auto mb-6 bg-gradient-to-br from-vibrant-pink/30 to-vibrant-pink/15 rounded-full flex items-center justify-center">
-                  <svg className="w-10 h-10 text-vibrant-pink" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                    <path strokeLinecap="round" strokeLinejoin="round" strokeWidth="2" d="M7 21h10a2 2 0 002-2V9.414a1 1 0 00-.293-.707l-5.414-5.414A1 1 0 0012.586 3H7a2 2 0 00-2 2v14a2 2 0 002 2z"/>
-                    <path strokeLinecap="round" strokeLinejoin="round" strokeWidth="2" d="M9 7h6m-6 4h6m-6 4h6"/>
-                    <path strokeLinecap="round" strokeLinejoin="round" strokeWidth="2" d="M12 3v18"/>
+                <div className="w-24 h-24 mx-auto mb-8 bg-gradient-to-br from-vibrant-pink/40 to-vibrant-pink/20 rounded-full flex items-center justify-center group-hover:rotate-12 transition-transform duration-500">
+                  <svg className="w-12 h-12 text-vibrant-pink" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                    <path strokeLinecap="round" strokeLinejoin="round" strokeWidth="2.5" d="M7 21h10a2 2 0 002-2V9.414a1 1 0 00-.293-.707l-5.414-5.414A1 1 0 0012.586 3H7a2 2 0 00-2 2v14a2 2 0 002 2z"/>
+                    <path strokeLinecap="round" strokeLinejoin="round" strokeWidth="2.5" d="M9 7h6m-6 4h6m-6 4h6"/>
+                    <path strokeLinecap="round" strokeLinejoin="round" strokeWidth="2.5" d="M12 3v18"/>
+                    <path strokeLinecap="round" strokeLinejoin="round" strokeWidth="2.5" d="M8 12h8"/>
                   </svg>
                 </div>
-                <div className="font-serif text-5xl lg:text-6xl text-vibrant-pink mb-4 group-hover:scale-110 transition-transform duration-300">33m</div>
-                <div className="font-sans text-sm tracking-wider uppercase text-off-white/80">Hauteur sous plafond</div>
+                <div className="font-serif text-6xl lg:text-7xl text-vibrant-pink mb-6 group-hover:scale-110 transition-transform duration-500">33m</div>
+                <div className="font-sans text-base tracking-widest uppercase text-off-white/90 font-semibold">Hauteur sous plafond</div>
+                <div className="mt-4 text-sm text-off-white/70">Dimension architecturale</div>
               </div>
             </div>
 
-            {/* Date construction première partie - Construction/Hammer Icon */}
-            <div className="group relative bg-gradient-to-br from-charcoal/60 to-charcoal/40 backdrop-blur-sm border-2 border-warm-terracotta/30 rounded-2xl p-8 text-center hover:border-warm-terracotta/60 hover:shadow-2xl hover:shadow-warm-terracotta/20 transition-all duration-500 animate-fade-in-up delay-100">
-              <div className="absolute inset-0 bg-gradient-to-br from-warm-terracotta/10 to-transparent rounded-2xl opacity-0 group-hover:opacity-100 transition-opacity duration-500"></div>
+            {/* Date construction première partie - Construction Timeline */}
+            <div className="group relative bg-gradient-to-br from-charcoal/70 to-charcoal/50 backdrop-blur-sm border-2 border-warm-terracotta/40 rounded-3xl p-10 text-center hover:border-warm-terracotta/70 hover:shadow-2xl hover:shadow-warm-terracotta/30 transition-all duration-700 animate-fade-in-up delay-100">
+              <div className="absolute inset-0 bg-gradient-to-br from-warm-terracotta/15 to-transparent rounded-3xl opacity-0 group-hover:opacity-100 transition-opacity duration-700"></div>
               <div className="relative z-10">
-                <div className="w-20 h-20 mx-auto mb-6 bg-gradient-to-br from-warm-terracotta/30 to-warm-terracotta/15 rounded-full flex items-center justify-center">
-                  <svg className="w-10 h-10 text-warm-terracotta" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                    <path strokeLinecap="round" strokeLinejoin="round" strokeWidth="2" d="M8 7V3m8 4V3m-9 8h10M5 21h14a2 2 0 002-2V7a2 2 0 00-2-2H5a2 2 0 00-2 2v12a2 2 0 002 2z"/>
-                    <path strokeLinecap="round" strokeLinejoin="round" strokeWidth="2" d="M12 3v18m0-18l4 4m-4-4l-4 4"/>
-                    <path strokeLinecap="round" strokeLinejoin="round" strokeWidth="2" d="M8 12h8m-8 4h8"/>
+                <div className="w-24 h-24 mx-auto mb-8 bg-gradient-to-br from-warm-terracotta/40 to-warm-terracotta/20 rounded-full flex items-center justify-center group-hover:rotate-12 transition-transform duration-500">
+                  <svg className="w-12 h-12 text-warm-terracotta" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                    <path strokeLinecap="round" strokeLinejoin="round" strokeWidth="2.5" d="M8 7V3m8 4V3m-9 8h10M5 21h14a2 2 0 002-2V7a2 2 0 00-2-2H5a2 2 0 00-2 2v12a2 2 0 002 2z"/>
+                    <path strokeLinecap="round" strokeLinejoin="round" strokeWidth="2.5" d="M12 3v18m0-18l4 4m-4-4l-4 4"/>
+                    <path strokeLinecap="round" strokeLinejoin="round" strokeWidth="2.5" d="M8 12h8m-8 4h8"/>
+                    <path strokeLinecap="round" strokeLinejoin="round" strokeWidth="2.5" d="M6 9h12M6 13h12"/>
                   </svg>
                 </div>
-                <div className="font-serif text-5xl lg:text-6xl text-warm-terracotta mb-4 group-hover:scale-110 transition-transform duration-300">1930</div>
-                <div className="font-sans text-sm tracking-wider uppercase text-off-white/80">Construction première partie</div>
+                <div className="font-serif text-6xl lg:text-7xl text-warm-terracotta mb-6 group-hover:scale-110 transition-transform duration-500">1930</div>
+                <div className="font-sans text-base tracking-widest uppercase text-off-white/90 font-semibold">Construction première partie</div>
+                <div className="mt-4 text-sm text-off-white/70">Début des travaux</div>
               </div>
             </div>
 
-            {/* Date achèvement deuxième partie - Checkmark/Completion Icon */}
-            <div className="group relative bg-gradient-to-br from-charcoal/60 to-charcoal/40 backdrop-blur-sm border-2 border-vibrant-pink/30 rounded-2xl p-8 text-center hover:border-vibrant-pink/60 hover:shadow-2xl hover:shadow-vibrant-pink/20 transition-all duration-500 animate-fade-in-up delay-200">
-              <div className="absolute inset-0 bg-gradient-to-br from-vibrant-pink/10 to-transparent rounded-2xl opacity-0 group-hover:opacity-100 transition-opacity duration-500"></div>
+            {/* Date achèvement deuxième partie - Completion Achievement */}
+            <div className="group relative bg-gradient-to-br from-charcoal/70 to-charcoal/50 backdrop-blur-sm border-2 border-vibrant-pink/40 rounded-3xl p-10 text-center hover:border-vibrant-pink/70 hover:shadow-2xl hover:shadow-vibrant-pink/30 transition-all duration-700 animate-fade-in-up delay-200">
+              <div className="absolute inset-0 bg-gradient-to-br from-vibrant-pink/15 to-transparent rounded-3xl opacity-0 group-hover:opacity-100 transition-opacity duration-700"></div>
               <div className="relative z-10">
-                <div className="w-20 h-20 mx-auto mb-6 bg-gradient-to-br from-vibrant-pink/30 to-vibrant-pink/15 rounded-full flex items-center justify-center">
-                  <svg className="w-10 h-10 text-vibrant-pink" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                    <path strokeLinecap="round" strokeLinejoin="round" strokeWidth="2" d="M9 12l2 2 4-4m6 2a9 9 0 11-18 0 9 9 0 0118 0z"/>
-                    <path strokeLinecap="round" strokeLinejoin="round" strokeWidth="2" d="M8 7V3m8 4V3m-9 8h10M5 21h14a2 2 0 002-2V7a2 2 0 00-2-2H5a2 2 0 00-2 2v12a2 2 0 002 2z"/>
+                <div className="w-24 h-24 mx-auto mb-8 bg-gradient-to-br from-vibrant-pink/40 to-vibrant-pink/20 rounded-full flex items-center justify-center group-hover:rotate-12 transition-transform duration-500">
+                  <svg className="w-12 h-12 text-vibrant-pink" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                    <path strokeLinecap="round" strokeLinejoin="round" strokeWidth="2.5" d="M9 12l2 2 4-4m6 2a9 9 0 11-18 0 9 9 0 0118 0z"/>
+                    <path strokeLinecap="round" strokeLinejoin="round" strokeWidth="2.5" d="M8 7V3m8 4V3m-9 8h10M5 21h14a2 2 0 002-2V7a2 2 0 00-2-2H5a2 2 0 00-2 2v12a2 2 0 002 2z"/>
+                    <path strokeLinecap="round" strokeLinejoin="round" strokeWidth="2.5" d="M12 3v18m0-18l4 4m-4-4l-4 4"/>
                   </svg>
                 </div>
-                <div className="font-serif text-5xl lg:text-6xl text-vibrant-pink mb-4 group-hover:scale-110 transition-transform duration-300">1953</div>
-                <div className="font-sans text-sm tracking-wider uppercase text-off-white/80">Achèvement deuxième partie</div>
+                <div className="font-serif text-6xl lg:text-7xl text-vibrant-pink mb-6 group-hover:scale-110 transition-transform duration-500">1953</div>
+                <div className="font-sans text-base tracking-widest uppercase text-off-white/90 font-semibold">Achèvement deuxième partie</div>
+                <div className="mt-4 text-sm text-off-white/70">Finalisation du projet</div>
               </div>
             </div>
 
-            {/* Architecte - Blueprint/Drawing Icon */}
-            <div className="group relative bg-gradient-to-br from-charcoal/60 to-charcoal/40 backdrop-blur-sm border-2 border-warm-terracotta/30 rounded-2xl p-8 text-center hover:border-warm-terracotta/60 hover:shadow-2xl hover:shadow-warm-terracotta/20 transition-all duration-500 animate-fade-in-up delay-300">
-              <div className="absolute inset-0 bg-gradient-to-br from-warm-terracotta/10 to-transparent rounded-2xl opacity-0 group-hover:opacity-100 transition-opacity duration-500"></div>
+            {/* Architecte - Master Architect */}
+            <div className="group relative bg-gradient-to-br from-charcoal/70 to-charcoal/50 backdrop-blur-sm border-2 border-warm-terracotta/40 rounded-3xl p-10 text-center hover:border-warm-terracotta/70 hover:shadow-2xl hover:shadow-warm-terracotta/30 transition-all duration-700 animate-fade-in-up delay-300">
+              <div className="absolute inset-0 bg-gradient-to-br from-warm-terracotta/15 to-transparent rounded-3xl opacity-0 group-hover:opacity-100 transition-opacity duration-700"></div>
               <div className="relative z-10">
-                <div className="w-20 h-20 mx-auto mb-6 bg-gradient-to-br from-warm-terracotta/30 to-warm-terracotta/15 rounded-full flex items-center justify-center">
-                  <svg className="w-10 h-10 text-warm-terracotta" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                    <path strokeLinecap="round" strokeLinejoin="round" strokeWidth="2" d="M9 12h6m-6 4h6m2 5H7a2 2 0 01-2-2V5a2 2 0 012-2h5.586a1 1 0 01.707.293l5.414 5.414a1 1 0 01.293.707V19a2 2 0 01-2 2z"/>
-                    <path strokeLinecap="round" strokeLinejoin="round" strokeWidth="2" d="M12 3v18m0-18l4 4m-4-4l-4 4"/>
-                    <path strokeLinecap="round" strokeLinejoin="round" strokeWidth="2" d="M8 12h8m-8 4h8"/>
+                <div className="w-24 h-24 mx-auto mb-8 bg-gradient-to-br from-warm-terracotta/40 to-warm-terracotta/20 rounded-full flex items-center justify-center group-hover:rotate-12 transition-transform duration-500">
+                  <svg className="w-12 h-12 text-warm-terracotta" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                    <path strokeLinecap="round" strokeLinejoin="round" strokeWidth="2.5" d="M9 12h6m-6 4h6m2 5H7a2 2 0 01-2-2V5a2 2 0 012-2h5.586a1 1 0 01.707.293l5.414 5.414a1 1 0 01.293.707V19a2 2 0 01-2 2z"/>
+                    <path strokeLinecap="round" strokeLinejoin="round" strokeWidth="2.5" d="M12 3v18m0-18l4 4m-4-4l-4 4"/>
+                    <path strokeLinecap="round" strokeLinejoin="round" strokeWidth="2.5" d="M8 12h8m-8 4h8"/>
+                    <path strokeLinecap="round" strokeLinejoin="round" strokeWidth="2.5" d="M6 9h12M6 13h12"/>
                   </svg>
                 </div>
-                <div className="font-serif text-3xl lg:text-4xl text-warm-terracotta mb-4 group-hover:scale-110 transition-transform duration-300">Paul Tournon</div>
-                <div className="font-sans text-sm tracking-wider uppercase text-off-white/80">Architecte</div>
+                <div className="font-serif text-4xl lg:text-5xl text-warm-terracotta mb-6 group-hover:scale-110 transition-transform duration-500">Paul Tournon</div>
+                <div className="font-sans text-base tracking-widest uppercase text-off-white/90 font-semibold">Architecte</div>
+                <div className="mt-4 text-sm text-off-white/70">Maître d'œuvre</div>
               </div>
             </div>
           </div>
 
-          {/* Gothic decorative line */}
-          <div className="mt-20 flex justify-center">
-            <div className="w-48 h-1 bg-gradient-to-r from-transparent via-vibrant-pink/60 to-transparent"></div>
+          {/* Architectural Decorative Elements */}
+          <div className="mt-24 flex justify-center items-center space-x-8">
+            <div className="w-16 h-px bg-gradient-to-r from-transparent via-vibrant-pink/60 to-transparent"></div>
+            <div className="w-4 h-4 bg-vibrant-pink/40 rounded-full"></div>
+            <div className="w-32 h-px bg-gradient-to-r from-transparent via-warm-terracotta/60 to-transparent"></div>
+            <div className="w-4 h-4 bg-warm-terracotta/40 rounded-full"></div>
+            <div className="w-16 h-px bg-gradient-to-r from-transparent via-vibrant-pink/60 to-transparent"></div>
           </div>
         </div>
       </section>
 
-      {/* Source Attribution */}
-      <section className="py-12 bg-charcoal/5">
-        <div className="max-w-[1000px] mx-auto px-6 lg:px-12">
-          <p className="font-sans text-sm text-charcoal/60 leading-relaxed text-center">
-            Source : A+E Magazine, publié le 20 février 2025. Rénovation et reconversion de l'Ex église Sacré-Cœur de Casablanca
-          </p>
-        </div>
-      </section>
 
       {/* Architecture Photo Gallery */}
-      <section className="py-20 lg:py-32 bg-off-white">
+      <section className="py-24 lg:py-40 bg-off-white">
         <div className="max-w-[1600px] mx-auto px-6 lg:px-12">
-          <div className="text-center mb-16">
-            <h2 className="font-serif text-4xl lg:text-6xl text-charcoal mb-6 animate-fade-in-up">
+          <div className="text-center mb-20">
+            <div className="inline-block px-6 py-3 bg-gradient-to-r from-vibrant-pink/10 to-warm-terracotta/10 border border-charcoal/20 rounded-full mb-8">
+              <span className="text-charcoal/80 text-sm font-sans tracking-widest uppercase font-semibold">
+                Galerie Visuelle
+              </span>
+            </div>
+            <h2 className="font-serif text-5xl lg:text-7xl text-charcoal mb-8 animate-fade-in-up">
               Galerie Architecturale
             </h2>
-            <p className="font-sans text-base lg:text-lg text-charcoal/70 max-w-3xl mx-auto animate-fade-in-up stagger-1">
+            <p className="font-sans text-xl text-charcoal/75 max-w-4xl mx-auto animate-fade-in-up stagger-1 leading-relaxed">
               Explorez les détails architecturaux uniques de l'Ex église Sacré-Cœur à travers notre collection de photographies
             </p>
           </div>
@@ -342,19 +368,26 @@ export default function ArchitecturePage() {
       </section>
 
       {/* CTA Section */}
-      <section className="max-w-[1000px] mx-auto px-6 lg:px-12 py-20 lg:py-32 text-center">
-        <h2 className="font-serif text-4xl lg:text-6xl text-charcoal mb-8 animate-fade-in-up">
-          Visiter l'Ex église Sacré-Cœur
-        </h2>
-        <p className="font-sans text-base lg:text-lg text-charcoal/70 leading-relaxed mb-12 animate-fade-in-up delay-100">
-          Découvrez l'architecture exceptionnelle de l'Ex église Sacré-Cœur lors d'une visite guidée ou en autonomie
-        </p>
-        <a
-          href="/visiter/individuels"
-          className="inline-block px-8 py-4 text-xs font-sans tracking-wider uppercase bg-gradient-to-r from-blue-500 to-blue-700 text-white hover:shadow-lg hover:scale-105 transition-all duration-300 animate-fade-in-up delay-200 rounded-lg"
-        >
-          Visiter maintenant
-        </a>
+      <section className="max-w-[1200px] mx-auto px-6 lg:px-12 py-24 lg:py-40 text-center">
+        <div className="bg-gradient-to-br from-charcoal/5 to-charcoal/10 rounded-3xl p-12 lg:p-16">
+          <div className="inline-block px-6 py-3 bg-gradient-to-r from-vibrant-pink/15 to-warm-terracotta/15 border border-charcoal/20 rounded-full mb-8">
+            <span className="text-charcoal/80 text-sm font-sans tracking-widest uppercase font-semibold">
+              Visite Guidée
+            </span>
+          </div>
+          <h2 className="font-serif text-5xl lg:text-7xl text-charcoal mb-8 animate-fade-in-up">
+            Visiter l'Ex église Sacré-Cœur
+          </h2>
+          <p className="font-sans text-xl text-charcoal/75 leading-relaxed mb-12 animate-fade-in-up delay-100 max-w-3xl mx-auto">
+            Découvrez l'architecture exceptionnelle de l'Ex église Sacré-Cœur lors d'une visite guidée ou en autonomie
+          </p>
+          <a
+            href="/visiter/individuels"
+            className="inline-block px-10 py-5 text-sm font-sans tracking-widest uppercase bg-gradient-to-r from-vibrant-pink to-warm-terracotta text-white hover:shadow-2xl hover:scale-105 transition-all duration-500 animate-fade-in-up delay-200 rounded-xl font-semibold"
+          >
+            Visiter maintenant
+          </a>
+        </div>
       </section>
 
       <Footer />
