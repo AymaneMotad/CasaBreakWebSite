@@ -303,7 +303,7 @@ export default function HistoirePage() {
               <div className="animate-gentle-fade-in">
                 <div className="relative h-[500px]">
                   <Image 
-                    src="/histoire-2.png" 
+                    src="/site-cal/histoire-2010.JPG" 
                     alt="Réhabilitation 2010" 
                     fill 
                     className="object-cover rounded-2xl shadow-2xl hover-scale-subtle transition-smooth" 
@@ -346,14 +346,15 @@ export default function HistoirePage() {
                 />
               </div>
               <div className="animate-gentle-fade-in stagger-1">
-                <div className="relative h-[500px] bg-charcoal/5 rounded-2xl overflow-hidden shadow-2xl">
+                <div className="relative h-[500px]">
                   <Image 
                     src="/histoire-3.png" 
                     alt="Le Sacré-Cœur aujourd'hui" 
                     fill 
-                    className="object-contain hover-scale-subtle transition-smooth" 
+                    className="object-cover rounded-2xl shadow-2xl hover-scale-subtle transition-smooth" 
                   />
                 </div>
+                <p className="text-xs text-charcoal/50 mt-3 font-sans italic">Photo issue du Fonds Flandrin, collection privée de la Fondation Banque Populaire</p>
               </div>
             </div>
           </div>
