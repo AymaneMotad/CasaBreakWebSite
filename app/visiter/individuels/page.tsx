@@ -237,13 +237,14 @@ export default function IndividuelsPage() {
                   <span>Enfants (6-12 ans)</span>
                   <span className="font-semibold text-charcoal">25 MAD</span>
                 </div>
-                <div className="flex justify-between items-center py-2 border-b border-charcoal/10">
-                  <span>Visiteurs à mobilité réduite</span>
-                  <span className="font-semibold text-vibrant-pink">Gratuit</span>
-                </div>
+               
                 <div className="flex justify-between items-center py-2 border-b border-charcoal/10">
                   <span>Pack famille</span>
                   <span className="font-semibold text-charcoal">120 MAD</span>
+                </div>
+                <div className="flex justify-between items-center py-2 border-b border-charcoal/10">
+                  <span>Visiteurs à mobilité réduite</span>
+                  <span className="font-semibold text-vibrant-pink">Gratuit</span>
                 </div>
                 <div className="flex justify-between items-center py-2">
                   <span>Résidents au Maroc</span>

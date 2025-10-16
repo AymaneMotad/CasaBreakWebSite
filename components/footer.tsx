@@ -88,8 +88,8 @@ export function Footer() {
           </div>
         </div>
 
-        {/* Navigation sections */}
-        <div className="grid grid-cols-2 md:grid-cols-4 gap-8 lg:gap-12 mb-16">
+        {/* Navigation sections - Mirroring navbar structure */}
+        <div className="grid grid-cols-2 md:grid-cols-5 gap-8 lg:gap-12 mb-16">
           {/* Accueil */}
           <div>
             <h4 className="text-slate-200 text-lg font-semibold mb-6 tracking-wide">Accueil</h4>
@@ -136,7 +136,7 @@ export function Footer() {
             </ul>
           </div>
 
-          {/* Événements & Réserver */}
+          {/* Événements */}
           <div>
             <h4 className="text-slate-200 text-lg font-semibold mb-6 tracking-wide">Événements</h4>
             <ul className="space-y-3">
@@ -145,6 +145,13 @@ export function Footer() {
                   Nos Événements
                 </a>
               </li>
+            </ul>
+          </div>
+
+          {/* Réserver */}
+          <div>
+            <h4 className="text-slate-200 text-lg font-semibold mb-6 tracking-wide">Réserver</h4>
+            <ul className="space-y-3">
               <li>
                 <a href="/reserver" className="text-slate-400 hover:text-slate-200 transition-colors duration-200 text-sm">
                   Réserver votre espace
