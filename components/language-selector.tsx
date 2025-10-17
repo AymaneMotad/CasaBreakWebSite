@@ -12,9 +12,9 @@ interface Language {
 }
 
 const languages: Language[] = [
-  { code: 'fr', name: 'Français', flag: '🇫🇷', status: 'active' },
-  { code: 'ar', name: 'العربية', flag: '🇲🇦', status: 'coming-soon' },
-  { code: 'en', name: 'English', flag: '🇬🇧', status: 'coming-soon' }
+  { code: 'fr', name: 'Français', flag: '', status: 'active' },
+  { code: 'ar', name: 'العربية', flag: '', status: 'coming-soon' },
+  { code: 'en', name: 'English', flag: '', status: 'coming-soon' }
 ]
 
 export function LanguageSelector() {
@@ -57,7 +57,6 @@ export function LanguageSelector() {
         aria-label="Select language"
       >
         <Globe className="h-4 w-4 transition-transform group-hover:rotate-12" />
-        <span className="text-lg">{selectedLanguage.flag}</span>
         <span className="hidden sm:inline">{selectedLanguage.name}</span>
         <ChevronDown 
           className={`h-3 w-3 transition-transform duration-300 ${isOpen ? 'rotate-180' : ''}`} 
@@ -84,7 +83,6 @@ export function LanguageSelector() {
                 aria-label={`Select ${language.name} language`}
               >
                 <div className="flex items-center gap-3">
-                  <span className="text-lg">{language.flag}</span>
                   <span className="font-medium">{language.name}</span>
                 </div>
                 <div className="flex items-center gap-2">
