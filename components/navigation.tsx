@@ -7,6 +7,7 @@ import { Menu, X, ChevronDown, Ticket } from "lucide-react"
 import Link from "next/link"
 import Image from "next/image"
 import { usePathname } from "next/navigation"
+import { LanguageSelector } from "./language-selector"
 
 export function Navigation() {
   const [isOpen, setIsOpen] = useState(false)
@@ -111,6 +112,9 @@ export function Navigation() {
               </div>
             ))}
 
+            {/* Language Selector */}
+            <LanguageSelector />
+
             <a
               href="https://tickets.sacrecoeur-casa.ma"
               target="_blank"
@@ -199,6 +203,11 @@ export function Navigation() {
                   )}
                 </div>
               ))}
+              
+              {/* Mobile Language Selector */}
+              <div className="mt-6 px-4">
+                <LanguageSelector />
+              </div>
               
               {/* Mobile Ticket Button */}
               <div className="mt-8 px-4">
