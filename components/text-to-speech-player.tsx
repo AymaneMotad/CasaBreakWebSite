@@ -65,47 +65,79 @@ export function TextToSpeechPlayer({ text, title }: TextToSpeechPlayerProps) {
     // Get available voices
     const voices = window.speechSynthesis.getVoices()
     
-    // Prioritize high-quality French female voices (Google, Microsoft, Apple)
-    const preferredVoiceNames = [
-      'Amelie',
-      'Amelie (Enhanced)',
-      'Samantha (Enhanced)',
-      'Microsoft Hortense - French (France)',
-      'Microsoft Denise - French (France)',
-      'Microsoft Julie - French (France)',
-      'Aurelie',
-      'Google français',
-      'Google French'
-    ]
+     // Prioritize high-quality French female voices and Arabic voices
+     const preferredFrenchVoiceNames = [
+       'Amelie',
+       'Amelie (Enhanced)',
+       'Samantha (Enhanced)',
+       'Microsoft Hortense - French (France)',
+       'Microsoft Denise - French (France)',
+       'Microsoft Julie - French (France)',
+       'Aurelie',
+       'Google français',
+       'Google French'
+     ]
+     
+     const preferredArabicVoiceNames = [
+       'Microsoft Salma - Arabic (Egypt)',
+       'Microsoft Zeina - Arabic (Egypt)',
+       'Microsoft Hoda - Arabic (Egypt)',
+       'Google العربية',
+       'Google Arabic',
+       'Arabic Female',
+       'Arabic'
+     ]
+     
+     // Try to find a preferred high-quality French female voice first
+     let selectedVoice = voices.find(voice => 
+       (voice.lang.startsWith('fr-') || voice.lang === 'fr') && 
+       preferredFrenchVoiceNames.some(name => voice.name.includes(name))
+     )
+     
+     // If no French voice, try Arabic female voices
+     if (!selectedVoice) {
+       selectedVoice = voices.find(voice => 
+         (voice.lang.startsWith('ar-') || voice.lang === 'ar') && 
+         preferredArabicVoiceNames.some(name => voice.name.includes(name))
+       )
+     }
+     
+     // If no preferred voice, try to find any premium/natural sounding French voice
+     if (!selectedVoice) {
+       selectedVoice = voices.find(voice => 
+         (voice.lang.startsWith('fr-') || voice.lang === 'fr') && 
+         (voice.name.toLowerCase().includes('premium') || 
+          voice.name.toLowerCase().includes('enhanced') ||
+          voice.name.toLowerCase().includes('natural'))
+       )
+     }
+     
+     // If no French voice, try any Arabic voice
+     if (!selectedVoice) {
+       selectedVoice = voices.find(voice => 
+         voice.lang.startsWith('ar-') || voice.lang === 'ar'
+       )
+     }
+     
+     // Fallback to any French voice
+     if (!selectedVoice) {
+       selectedVoice = voices.find(voice => 
+         voice.lang.startsWith('fr-') || voice.lang === 'fr'
+       )
+     }
     
-    // Try to find a preferred high-quality voice first
-    let frenchVoice = voices.find(voice => 
-      (voice.lang.startsWith('fr-') || voice.lang === 'fr') && 
-      preferredVoiceNames.some(name => voice.name.includes(name))
-    )
-    
-    // If no preferred voice, try to find any premium/natural sounding French voice
-    if (!frenchVoice) {
-      frenchVoice = voices.find(voice => 
-        (voice.lang.startsWith('fr-') || voice.lang === 'fr') && 
-        (voice.name.toLowerCase().includes('premium') || 
-         voice.name.toLowerCase().includes('enhanced') ||
-         voice.name.toLowerCase().includes('natural'))
-      )
-    }
-    
-    // Fallback to any French voice
-    if (!frenchVoice) {
-      frenchVoice = voices.find(voice => 
-        voice.lang.startsWith('fr-') || voice.lang === 'fr'
-      )
-    }
-    
-    if (frenchVoice) {
-      utterance.voice = frenchVoice
-    }
-    
-    utterance.lang = "fr-FR"
+     if (selectedVoice) {
+       utterance.voice = selectedVoice
+       // Set language based on selected voice
+       if (selectedVoice.lang.startsWith('ar-') || selectedVoice.lang === 'ar') {
+         utterance.lang = "ar-SA"
+       } else {
+         utterance.lang = "fr-FR"
+       }
+     } else {
+       // Default to French if no voice found
+       utterance.lang = "fr-FR"
+     }
     utterance.rate = 0.85  // Slightly slower for more elegance
     utterance.pitch = 0.95  // Slightly lower pitch for more sophistication
     utterance.volume = volumeToUse
