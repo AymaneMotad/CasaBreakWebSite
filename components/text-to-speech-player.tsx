@@ -22,11 +22,26 @@ export function TextToSpeechPlayer({ text, title }: TextToSpeechPlayerProps) {
     if (typeof window !== "undefined" && "speechSynthesis" in window) {
       setIsSupported(true)
       
-      // Load voices
+      // Load voices with better handling
       const loadVoices = () => {
         const voices = window.speechSynthesis.getVoices()
+        console.log("Loading voices:", voices.length)
         if (voices.length > 0) {
           setVoicesLoaded(true)
+          // Log Arabic voices specifically
+          const arabicVoices = voices.filter(voice => 
+            voice.lang.startsWith('ar-') || voice.lang === 'ar' || 
+            voice.name.toLowerCase().includes('arabic') ||
+            voice.name.toLowerCase().includes('salma') ||
+            voice.name.toLowerCase().includes('zeina') ||
+            voice.name.toLowerCase().includes('hoda') ||
+            voice.name.toLowerCase().includes('maged')
+          )
+          if (arabicVoices.length > 0) {
+            console.log("Arabic voices detected:", arabicVoices.map(v => v.name))
+          } else {
+            console.log("No Arabic voices detected")
+          }
         }
       }
 
@@ -38,8 +53,11 @@ export function TextToSpeechPlayer({ text, title }: TextToSpeechPlayerProps) {
         window.speechSynthesis.onvoiceschanged = loadVoices
       }
 
-      // Fallback timeout to ensure voices are loaded
-      setTimeout(loadVoices, 100)
+      // Multiple fallback attempts to ensure voices are loaded
+      const timeouts = [100, 500, 1000, 2000]
+      timeouts.forEach(delay => {
+        setTimeout(loadVoices, delay)
+      })
     }
 
     // Cleanup function
@@ -66,6 +84,17 @@ export function TextToSpeechPlayer({ text, title }: TextToSpeechPlayerProps) {
      const voices = window.speechSynthesis.getVoices()
      console.log("Available voices:", voices.map(v => `${v.name} (${v.lang})`))
      
+     // Check specifically for Arabic voices
+     const arabicVoices = voices.filter(voice => 
+       voice.lang.startsWith('ar-') || voice.lang === 'ar' || 
+       voice.name.toLowerCase().includes('arabic') ||
+       voice.name.toLowerCase().includes('salma') ||
+       voice.name.toLowerCase().includes('zeina') ||
+       voice.name.toLowerCase().includes('hoda') ||
+       voice.name.toLowerCase().includes('maged')
+     )
+     console.log("Arabic voices found:", arabicVoices.map(v => `${v.name} (${v.lang})`))
+     
      // Prioritize high-quality French female voices and Arabic voices
      const preferredFrenchVoiceNames = [
        'Amelie',
@@ -83,10 +112,17 @@ export function TextToSpeechPlayer({ text, title }: TextToSpeechPlayerProps) {
        'Microsoft Salma - Arabic (Egypt)',
        'Microsoft Zeina - Arabic (Egypt)',
        'Microsoft Hoda - Arabic (Egypt)',
+       'Microsoft Naayf - Arabic (Saudi Arabia)',
+       'Microsoft Talal - Arabic (Saudi Arabia)',
        'Google العربية',
        'Google Arabic',
        'Arabic Female',
-       'Arabic'
+       'Arabic',
+       'Salma',
+       'Zeina',
+       'Hoda',
+       'Naayf',
+       'Talal'
      ]
      
      // Check text language to determine voice preference
@@ -102,16 +138,35 @@ export function TextToSpeechPlayer({ text, title }: TextToSpeechPlayerProps) {
      // Priority 1: Arabic voices for Arabic text
      if (hasArabicText) {
        console.log("Looking for Arabic voices...")
-       // Try to find a preferred Arabic voice first
-       selectedVoice = voices.find(voice => 
-         (voice.lang.startsWith('ar-') || voice.lang === 'ar') && 
+       
+       // First try to find any Arabic voice (broader search)
+       selectedVoice = arabicVoices.find(voice => 
          preferredArabicVoiceNames.some(name => voice.name.includes(name))
        )
        
        // If no preferred Arabic voice, try any Arabic voice
+       if (!selectedVoice && arabicVoices.length > 0) {
+         selectedVoice = arabicVoices[0] // Use first available Arabic voice
+         console.log("Using first available Arabic voice:", selectedVoice.name)
+       }
+       
+       // If still no Arabic voices, try broader search in all voices
        if (!selectedVoice) {
          selectedVoice = voices.find(voice => 
-           voice.lang.startsWith('ar-') || voice.lang === 'ar'
+           voice.name.toLowerCase().includes('arabic') ||
+           voice.name.toLowerCase().includes('salma') ||
+           voice.name.toLowerCase().includes('zeina') ||
+           voice.name.toLowerCase().includes('hoda') ||
+           voice.name.toLowerCase().includes('maged')
+         )
+       }
+       
+       // If no Arabic voices available, use English voice as fallback for Arabic text
+       if (!selectedVoice) {
+         console.log("No Arabic voices found, using English fallback...")
+         selectedVoice = voices.find(voice => 
+           (voice.lang.startsWith('en-') || voice.lang === 'en') && 
+           (voice.name.includes('Zira') || voice.name.includes('Samantha') || voice.name.includes('Google US English'))
          )
        }
        console.log("Arabic voice found:", selectedVoice?.name)
@@ -180,10 +235,16 @@ export function TextToSpeechPlayer({ text, title }: TextToSpeechPlayerProps) {
        console.log("Selected voice:", selectedVoice.name, "Language:", selectedVoice.lang)
      }
      
-     // Set language based on text content, not just voice
+     // Set language based on text content, but be smart about fallbacks
      if (hasArabicText) {
-       utterance.lang = "ar-SA"
-       console.log("Setting language to Arabic")
+       // Only set Arabic language if we have an Arabic voice, otherwise use English
+       if (selectedVoice && (selectedVoice.lang.startsWith('ar-') || selectedVoice.lang === 'ar')) {
+         utterance.lang = "ar-SA"
+         console.log("Setting language to Arabic")
+       } else {
+         utterance.lang = "en-US"
+         console.log("No Arabic voice available, using English language for Arabic text")
+       }
      } else if (hasEnglishText) {
        utterance.lang = "en-US"
        console.log("Setting language to English")
