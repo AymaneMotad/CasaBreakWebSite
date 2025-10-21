@@ -91,10 +91,11 @@ export function TextToSpeechPlayer({ text, title }: TextToSpeechPlayerProps) {
      
      // Check text language to determine voice preference
      const hasArabicText = /[\u0600-\u06FF]/.test(text)
-     const hasEnglishText = /[a-zA-Z]/.test(text) && !/[àâäéèêëïîôöùûüÿç]/.test(text)
      const hasFrenchText = /[àâäéèêëïîôöùûüÿç]/.test(text)
+     const hasEnglishText = /[a-zA-Z]/.test(text) && !hasFrenchText && !hasArabicText
      
      console.log("Text analysis:", { hasArabicText, hasEnglishText, hasFrenchText })
+     console.log("Sample text:", text.substring(0, 50))
      
      let selectedVoice = null
      
@@ -113,6 +114,7 @@ export function TextToSpeechPlayer({ text, title }: TextToSpeechPlayerProps) {
            voice.lang.startsWith('ar-') || voice.lang === 'ar'
          )
        }
+       console.log("Arabic voice found:", selectedVoice?.name)
      }
      
      // Priority 2: English voices for English text
@@ -142,6 +144,7 @@ export function TextToSpeechPlayer({ text, title }: TextToSpeechPlayerProps) {
            voice.lang.startsWith('en-') || voice.lang === 'en'
          )
        }
+       console.log("English voice found:", selectedVoice?.name)
      }
      
      // Priority 3: French voices for French text or fallback
@@ -169,23 +172,24 @@ export function TextToSpeechPlayer({ text, title }: TextToSpeechPlayerProps) {
            voice.lang.startsWith('fr-') || voice.lang === 'fr'
          )
        }
+       console.log("French voice found:", selectedVoice?.name)
      }
     
      if (selectedVoice) {
        utterance.voice = selectedVoice
        console.log("Selected voice:", selectedVoice.name, "Language:", selectedVoice.lang)
-       
-       // Set language based on selected voice
-       if (selectedVoice.lang.startsWith('ar-') || selectedVoice.lang === 'ar') {
-         utterance.lang = "ar-SA"
-       } else if (selectedVoice.lang.startsWith('en-') || selectedVoice.lang === 'en') {
-         utterance.lang = "en-US"
-       } else {
-         utterance.lang = "fr-FR"
-       }
+     }
+     
+     // Set language based on text content, not just voice
+     if (hasArabicText) {
+       utterance.lang = "ar-SA"
+       console.log("Setting language to Arabic")
+     } else if (hasEnglishText) {
+       utterance.lang = "en-US"
+       console.log("Setting language to English")
      } else {
-       // Default to French if no voice found
        utterance.lang = "fr-FR"
+       console.log("Setting language to French")
      }
     utterance.rate = 0.85  // Slightly slower for more elegance
     utterance.pitch = 0.95  // Slightly lower pitch for more sophistication
