@@ -62,9 +62,10 @@ export function TextToSpeechPlayer({ text, title }: TextToSpeechPlayerProps) {
     // Start new speech
     const utterance = new SpeechSynthesisUtterance(text)
     
-    // Get available voices
-    const voices = window.speechSynthesis.getVoices()
-    
+     // Get available voices
+     const voices = window.speechSynthesis.getVoices()
+     console.log("Available voices:", voices.map(v => `${v.name} (${v.lang})`))
+     
      // Prioritize high-quality French female voices and Arabic voices
      const preferredFrenchVoiceNames = [
        'Amelie',
@@ -88,49 +89,97 @@ export function TextToSpeechPlayer({ text, title }: TextToSpeechPlayerProps) {
        'Arabic'
      ]
      
-     // Try to find a preferred high-quality French female voice first
-     let selectedVoice = voices.find(voice => 
-       (voice.lang.startsWith('fr-') || voice.lang === 'fr') && 
-       preferredFrenchVoiceNames.some(name => voice.name.includes(name))
-     )
+     // Check text language to determine voice preference
+     const hasArabicText = /[\u0600-\u06FF]/.test(text)
+     const hasEnglishText = /[a-zA-Z]/.test(text) && !/[àâäéèêëïîôöùûüÿç]/.test(text)
+     const hasFrenchText = /[àâäéèêëïîôöùûüÿç]/.test(text)
      
-     // If no French voice, try Arabic female voices
-     if (!selectedVoice) {
+     console.log("Text analysis:", { hasArabicText, hasEnglishText, hasFrenchText })
+     
+     let selectedVoice = null
+     
+     // Priority 1: Arabic voices for Arabic text
+     if (hasArabicText) {
+       console.log("Looking for Arabic voices...")
+       // Try to find a preferred Arabic voice first
        selectedVoice = voices.find(voice => 
          (voice.lang.startsWith('ar-') || voice.lang === 'ar') && 
          preferredArabicVoiceNames.some(name => voice.name.includes(name))
        )
+       
+       // If no preferred Arabic voice, try any Arabic voice
+       if (!selectedVoice) {
+         selectedVoice = voices.find(voice => 
+           voice.lang.startsWith('ar-') || voice.lang === 'ar'
+         )
+       }
      }
      
-     // If no preferred voice, try to find any premium/natural sounding French voice
+     // Priority 2: English voices for English text
+     else if (hasEnglishText) {
+       console.log("Looking for English voices...")
+       // Try to find a preferred English female voice
+       const preferredEnglishVoiceNames = [
+         'Samantha',
+         'Samantha (Enhanced)',
+         'Microsoft Zira - English (United States)',
+         'Microsoft Susan - English (United States)',
+         'Microsoft Hazel - English (Great Britain)',
+         'Google English',
+         'Google English (US)',
+         'English Female',
+         'English'
+       ]
+       
+       selectedVoice = voices.find(voice => 
+         (voice.lang.startsWith('en-') || voice.lang === 'en') && 
+         preferredEnglishVoiceNames.some(name => voice.name.includes(name))
+       )
+       
+       // If no preferred English voice, try any English voice
+       if (!selectedVoice) {
+         selectedVoice = voices.find(voice => 
+           voice.lang.startsWith('en-') || voice.lang === 'en'
+         )
+       }
+     }
+     
+     // Priority 3: French voices for French text or fallback
      if (!selectedVoice) {
+       console.log("Looking for French voices...")
+       // Try to find a preferred high-quality French female voice
        selectedVoice = voices.find(voice => 
          (voice.lang.startsWith('fr-') || voice.lang === 'fr') && 
-         (voice.name.toLowerCase().includes('premium') || 
-          voice.name.toLowerCase().includes('enhanced') ||
-          voice.name.toLowerCase().includes('natural'))
+         preferredFrenchVoiceNames.some(name => voice.name.includes(name))
        )
-     }
-     
-     // If no French voice, try any Arabic voice
-     if (!selectedVoice) {
-       selectedVoice = voices.find(voice => 
-         voice.lang.startsWith('ar-') || voice.lang === 'ar'
-       )
-     }
-     
-     // Fallback to any French voice
-     if (!selectedVoice) {
-       selectedVoice = voices.find(voice => 
-         voice.lang.startsWith('fr-') || voice.lang === 'fr'
-       )
+       
+       // If no preferred French voice, try any premium/natural sounding French voice
+       if (!selectedVoice) {
+         selectedVoice = voices.find(voice => 
+           (voice.lang.startsWith('fr-') || voice.lang === 'fr') && 
+           (voice.name.toLowerCase().includes('premium') || 
+            voice.name.toLowerCase().includes('enhanced') ||
+            voice.name.toLowerCase().includes('natural'))
+         )
+       }
+       
+       // Fallback to any French voice
+       if (!selectedVoice) {
+         selectedVoice = voices.find(voice => 
+           voice.lang.startsWith('fr-') || voice.lang === 'fr'
+         )
+       }
      }
     
      if (selectedVoice) {
        utterance.voice = selectedVoice
+       console.log("Selected voice:", selectedVoice.name, "Language:", selectedVoice.lang)
+       
        // Set language based on selected voice
        if (selectedVoice.lang.startsWith('ar-') || selectedVoice.lang === 'ar') {
          utterance.lang = "ar-SA"
+       } else if (selectedVoice.lang.startsWith('en-') || selectedVoice.lang === 'en') {
+         utterance.lang = "en-US"
        } else {
          utterance.lang = "fr-FR"
        }
