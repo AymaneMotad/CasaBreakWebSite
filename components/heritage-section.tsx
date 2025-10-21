@@ -1,8 +1,11 @@
 import Link from "next/link"
 import { BookOpen, Building, Users, Calendar, ArrowRight } from "lucide-react"
 import { ImageLightbox } from "./image-lightbox"
+import { useTranslations } from 'next-intl'
 
 export function HeritageSection() {
+  const t = useTranslations('home.heritage')
+  
   return (
     <section className="py-20 bg-charcoal text-off-white relative overflow-hidden">
       {/* Subtle Moroccan decorative elements */}
@@ -56,15 +59,15 @@ export function HeritageSection() {
             </p>
           </div>
           <div className="animate-gentle-fade-in stagger-1">
-            <h3 className="font-serif text-3xl mb-6">Mémoire de Casablanca</h3>
+            <h3 className="font-serif text-3xl mb-6">{t("title")}</h3>
             <p className="font-sans text-base text-off-white/80 leading-relaxed mb-8">
-              Au centre de Casablanca, l'Ex église Sacré-Cœur incarne le lien entre tradition et modernité. Construit dans les années 1930, ce monument emblématique témoigne de la richesse culturelle et architecturale de la ville. Transformé au fil des décennies, il a su préserver son authenticité tout en se réinventant en espace de création et de partage. Lieu de mémoire devenu lieu de vie, il illustre la capacité de Casablanca à faire dialoguer passé et avenir.
+              {t("description")}
             </p>
             <Link
               href="/decouvrir/histoire"
               className="inline-flex items-center gap-2 px-6 py-3 bg-gradient-to-r from-blue-500 to-blue-700 text-white text-sm font-sans tracking-wider uppercase hover:shadow-xl hover:scale-105 transition-all duration-300 rounded-lg"
             >
-              Explorer l'histoire
+              {t("exploreButton")}
               <ArrowRight className="h-4 w-4" />
             </Link>
           </div>
@@ -74,23 +77,26 @@ export function HeritageSection() {
           {[
             {
               icon: BookOpen,
-              title: "Histoire",
-              description: "Découvrez l'histoire fascinante de ce monument depuis sa construction en 1930 jusqu'à sa transformation en centre culturel.",
+              title: t("cards.history.title"),
+              description: t("cards.history.description"),
               link: "/decouvrir/histoire",
+              linkText: t("cards.history.link"),
               color: "from-vibrant-pink to-warm-terracotta"
             },
             {
               icon: Building,
-              title: "Architecture",
-              description: "Explorez les détails architecturaux, les influences Art Déco et les techniques de construction de l'époque.",
+              title: t("cards.architecture.title"),
+              description: t("cards.architecture.description"),
               link: "/decouvrir/architecture",
+              linkText: t("cards.architecture.link"),
               color: "from-warm-terracotta to-charcoal"
             },
             {
               icon: Users,
-              title: "Visites guidées",
-              description: "Participez à nos visites guidées avec des experts pour une découverte approfondie du patrimoine.",
+              title: t("cards.visits.title"),
+              description: t("cards.visits.description"),
               link: "/visiter/individuels",
+              linkText: t("cards.visits.link"),
               color: "from-charcoal to-vibrant-pink"
             }
           ].map((item, index) => (
@@ -112,7 +118,7 @@ export function HeritageSection() {
                 href={item.link}
                 className="inline-flex items-center gap-2 text-sm font-sans tracking-wider uppercase hover:gap-3 transition-all duration-300"
               >
-                En savoir plus
+                {item.linkText}
                 <ArrowRight className="h-4 w-4 group-hover:translate-x-1 transition-transform" />
               </Link>
             </div>

@@ -1,7 +1,10 @@
 import { Clock, MapPin, Users, Phone, Calendar, Coins, Train } from "lucide-react"
 import { CopyButton } from "./copy-button"
+import { useTranslations } from 'next-intl'
 
 export function PracticalInfoSection() {
+  const t = useTranslations('home.practical')
+  
   return (
     <section className="py-24 bg-gradient-to-b from-off-white to-charcoal/5 relative overflow-hidden">
       {/* Moroccan Artistic Elements */}
@@ -55,14 +58,14 @@ export function PracticalInfoSection() {
         <div className="text-center mb-20">
           <div className="inline-block px-6 py-3 bg-gradient-to-r from-vibrant-pink/10 to-warm-terracotta/10 border border-vibrant-pink/20 rounded-full mb-8 animate-gentle-fade-in">
             <span className="text-charcoal/80 text-sm font-sans tracking-wider uppercase">
-              Informations Pratiques
+              {t("badge")}
             </span>
           </div>
           <h2 className="font-serif text-5xl md:text-6xl text-charcoal mb-8 animate-gentle-fade-in stagger-1">
-            Bien préparer sa visite
+            {t("title")}
           </h2>
           <p className="font-sans text-xl text-charcoal/70 max-w-3xl mx-auto leading-relaxed animate-gentle-fade-in stagger-2">
-          Préparez votre visite à l'Ex église Sacré-Cœur en toute sérénité : retrouvez ici toutes les informations essentielles.
+          {t("description")}
           </p>
         </div>
 
@@ -76,22 +79,22 @@ export function PracticalInfoSection() {
                 <div className="p-2.5 bg-gradient-to-br from-blue-500/15 to-blue-500/10 rounded-lg shadow-sm">
                   <Clock className="h-6 w-6 text-blue-600" />
                 </div>
-                <h3 className="font-serif text-2xl text-blue-600 tracking-tight font-medium">Horaires</h3>
+                <h3 className="font-serif text-2xl text-blue-600 tracking-tight font-medium">{t("sections.hours.title")}</h3>
               </div>
               <div className="space-y-6">
                 <div className="flex justify-between items-baseline">
-                  <span className="font-sans text-sm text-charcoal/50 uppercase tracking-wider">Mardi - Dimanche</span>
-                  <span className="font-sans text-lg text-charcoal font-light">9h - 18h</span>
+                  <span className="font-sans text-sm text-charcoal/50 uppercase tracking-wider">{t("sections.hours.tuesdaySunday")}</span>
+                  <span className="font-sans text-lg text-charcoal font-light">{t("sections.hours.hours")}</span>
                 </div>
                 <div className="h-px bg-charcoal/5"></div>
                 <div className="flex justify-between items-baseline">
-                  <span className="font-sans text-sm text-charcoal/50 uppercase tracking-wider">Dernière entrée</span>
-                  <span className="font-sans text-lg text-charcoal font-light">17h</span>
+                  <span className="font-sans text-sm text-charcoal/50 uppercase tracking-wider">{t("sections.hours.lastEntry")}</span>
+                  <span className="font-sans text-lg text-charcoal font-light">{t("sections.hours.lastEntryTime")}</span>
                 </div>
                 <div className="h-px bg-charcoal/5"></div>
                 <div className="flex justify-between items-baseline">
-                  <span className="font-sans text-sm text-charcoal/50 uppercase tracking-wider">Lundi</span>
-                  <span className="font-sans text-lg text-charcoal font-light">Fermé</span>
+                  <span className="font-sans text-sm text-charcoal/50 uppercase tracking-wider">{t("sections.hours.monday")}</span>
+                  <span className="font-sans text-lg text-charcoal font-light">{t("sections.hours.closed")}</span>
                 </div>
               </div>
             </div>
@@ -105,22 +108,20 @@ export function PracticalInfoSection() {
                 <div className="p-2.5 bg-gradient-to-br from-blue-500/15 to-blue-500/10 rounded-lg shadow-sm">
                   <MapPin className="h-6 w-6 text-blue-600" />
                 </div>
-                <h3 className="font-serif text-2xl text-blue-600 tracking-tight font-medium">Accès</h3>
+                <h3 className="font-serif text-2xl text-blue-600 tracking-tight font-medium">{t("sections.access.title")}</h3>
               </div>
               <div className="space-y-6">
                 <div>
-                  <span className="font-sans text-sm text-charcoal/50 uppercase tracking-wider block mb-2">Adresse</span>
-                  <span className="font-sans text-base text-charcoal font-light">
-                    Angle rue d'Alger et boulevard Rachidi<br />
-                    Quartier Gautier, Casablanca 20250
+                  <span className="font-sans text-sm text-charcoal/50 uppercase tracking-wider block mb-2">{t("sections.access.address")}</span>
+                  <span className="font-sans text-base text-charcoal font-light" dangerouslySetInnerHTML={{ __html: t("sections.access.addressValue") }}>
                   </span>
                 </div>
                 <div className="h-px bg-charcoal/5"></div>
                 <div className="flex items-center gap-3">
                   <Train className="h-4 w-4 text-blue-600" />
                   <div>
-                    <span className="font-sans text-sm text-charcoal/50 uppercase tracking-wider block mb-1">Tramway</span>
-                    <span className="font-sans text-base text-charcoal font-light">Place Mohammed V</span>
+                    <span className="font-sans text-sm text-charcoal/50 uppercase tracking-wider block mb-1">{t("sections.access.tramway")}</span>
+                    <span className="font-sans text-base text-charcoal font-light">{t("sections.access.tramwayStop")}</span>
                   </div>
                 </div>
               </div>
@@ -135,32 +136,32 @@ export function PracticalInfoSection() {
                 <div className="p-2.5 bg-gradient-to-br from-blue-500/15 to-blue-500/10 rounded-lg shadow-sm">
                   <Coins className="h-6 w-6 text-blue-600" />
                 </div>
-                <h3 className="font-serif text-2xl text-blue-600 tracking-tight font-medium">Tarifs</h3>
+                <h3 className="font-serif text-2xl text-blue-600 tracking-tight font-medium">{t("sections.pricing.title")}</h3>
               </div>
               <div className="space-y-6">
                 <div className="flex justify-between items-baseline group/item">
-                  <span className="font-sans text-sm text-charcoal/50 uppercase tracking-wider">Adulte</span>
+                  <span className="font-sans text-sm text-charcoal/50 uppercase tracking-wider">{t("sections.pricing.adult")}</span>
                   <span className="font-serif text-2xl text-blue-600 font-light group-hover/item:scale-105 transition-transform">50<span className="text-base ml-1">DH</span></span>
                 </div>
                 <div className="h-px bg-charcoal/5"></div>
                 <div className="flex justify-between items-baseline group/item">
-                  <span className="font-sans text-sm text-charcoal/50 uppercase tracking-wider">Étudiant</span>
+                  <span className="font-sans text-sm text-charcoal/50 uppercase tracking-wider">{t("sections.pricing.student")}</span>
                   <span className="font-serif text-2xl text-blue-600 font-light group-hover/item:scale-105 transition-transform">25<span className="text-base ml-1">DH</span></span>
                 </div>
                 <div className="h-px bg-charcoal/5"></div>
                 <div className="flex justify-between items-baseline group/item">
-                  <span className="font-sans text-sm text-charcoal/50 uppercase tracking-wider">Senior (60+)</span>
+                  <span className="font-sans text-sm text-charcoal/50 uppercase tracking-wider">{t("sections.pricing.senior")}</span>
                   <span className="font-serif text-2xl text-blue-600 font-light group-hover/item:scale-105 transition-transform">35<span className="text-base ml-1">DH</span></span>
                 </div>
                 <div className="h-px bg-charcoal/5"></div>
                 <div className="flex justify-between items-baseline group/item">
-                  <span className="font-sans text-sm text-charcoal/50 uppercase tracking-wider">Visiteurs à mobilité réduite</span>
-                  <span className="font-serif text-xl text-blue-600 font-light group-hover/item:scale-105 transition-transform italic">Gratuit</span>
+                  <span className="font-sans text-sm text-charcoal/50 uppercase tracking-wider">{t("sections.pricing.disabled")}</span>
+                  <span className="font-serif text-xl text-blue-600 font-light group-hover/item:scale-105 transition-transform italic">{t("sections.pricing.free")}</span>
                 </div>
                 <div className="h-px bg-charcoal/5"></div>
                 <div className="flex justify-between items-baseline group/item">
-                  <span className="font-sans text-sm text-charcoal/50 uppercase tracking-wider">Résidents au Maroc</span>
-                  <span className="font-serif text-xl text-blue-600 font-light group-hover/item:scale-105 transition-transform italic">Gratuit</span>
+                  <span className="font-sans text-sm text-charcoal/50 uppercase tracking-wider">{t("sections.pricing.residents")}</span>
+                  <span className="font-serif text-xl text-blue-600 font-light group-hover/item:scale-105 transition-transform italic">{t("sections.pricing.free")}</span>
                 </div>
               </div>
             </div>
@@ -176,23 +177,23 @@ export function PracticalInfoSection() {
                 <div className="p-4 bg-gradient-to-br from-blue-500/15 to-blue-500/10 rounded-xl shadow-sm">
                   <Calendar className="h-8 w-8 text-blue-600" />
                 </div>
-                <h3 className="font-serif text-3xl text-charcoal tracking-tight font-medium">Réserver votre visite</h3>
+                <h3 className="font-serif text-3xl text-charcoal tracking-tight font-medium">{t("actions.booking.title")}</h3>
               </div>
               <p className="font-sans text-lg mb-8 leading-relaxed text-charcoal/70">
-                Réservez votre créneau de visite pour éviter l'attente et profiter pleinement de votre découverte du patrimoine Art Déco.
+                {t("actions.booking.description")}
               </p>
               <div className="flex flex-col sm:flex-row gap-4">
                 <a
                   href="/visiter/individuels"
                   className="inline-flex items-center justify-center px-8 py-4 bg-gradient-to-r from-blue-500 to-blue-700 text-white text-sm font-sans tracking-wider uppercase hover:shadow-xl hover:scale-105 transition-all duration-300 rounded-lg font-semibold"
                 >
-                  Réserver maintenant
+                  {t("actions.booking.bookNow")}
                 </a>
                 <a
                   href="/visiter/groupes"
                   className="inline-flex items-center justify-center px-8 py-4 bg-transparent border-2 border-blue-500/30 text-blue-600 text-sm font-sans tracking-wider uppercase hover:bg-blue-500/10 hover:border-blue-500/50 transition-all duration-300 rounded-lg font-semibold"
                 >
-                  Visite de groupe
+                  {t("actions.booking.groupVisit")}
                 </a>
               </div>
             </div>
@@ -203,17 +204,17 @@ export function PracticalInfoSection() {
               <div className="p-4 bg-gradient-to-br from-vibrant-pink to-warm-terracotta rounded-xl">
                 <Phone className="h-8 w-8 text-off-white" />
               </div>
-              <h3 className="font-serif text-3xl">Nous contacter</h3>
+              <h3 className="font-serif text-3xl">{t("actions.contact.title")}</h3>
             </div>
             <p className="font-sans text-lg mb-8 leading-relaxed text-off-white/90">
-              Des questions sur votre visite ? Notre équipe est là pour vous accompagner et personnaliser votre expérience.
+              {t("actions.contact.description")}
             </p>
             <div className="space-y-4 mb-8">
               <div className="flex items-center justify-between gap-4 p-4 bg-off-white/10 rounded-lg">
                 <div className="flex items-center gap-4">
                   <Phone className="h-5 w-5 text-vibrant-pink" />
                   <div>
-                    <p className="font-semibold">Téléphone</p>
+                    <p className="font-semibold">{t("actions.contact.phone")}</p>
                     <p className="text-off-white/80">+212 522 227 745</p>
                   </div>
                 </div>
@@ -223,7 +224,7 @@ export function PracticalInfoSection() {
                 <div className="flex items-center gap-4">
                   <Users className="h-5 w-5 text-warm-terracotta" />
                   <div>
-                    <p className="font-semibold">Email</p>
+                    <p className="font-semibold">{t("actions.contact.email")}</p>
                     <p className="text-off-white/80">contact@casaevents.ma</p>
                   </div>
                 </div>
@@ -234,7 +235,7 @@ export function PracticalInfoSection() {
               href="/reserver"
               className="inline-flex items-center justify-center px-8 py-4 bg-gradient-to-r from-blue-500 to-blue-700 text-white text-sm font-sans tracking-wider uppercase hover:shadow-xl hover:scale-105 transition-all duration-300 rounded-lg font-semibold"
             >
-              Nous contacter
+              {t("actions.contact.contactUs")}
             </a>
           </div>
         </div>

@@ -1,38 +1,39 @@
+"use client"
+
 import { Navigation } from "@/components/navigation"
 import { Footer } from "@/components/footer"
 import { Breadcrumb } from "@/components/breadcrumb"
 import { TextToSpeechPlayer } from "@/components/text-to-speech-player"
+import { useTranslations, useLocale } from 'next-intl'
 import Image from "next/image"
 
 export default function ArchitecturePage() {
+  const t = useTranslations('architecture')
+  const locale = useLocale()
   const features = [
     {
-      title: "Entre Art Déco et modernisme spirituel",
-      description:
-        "L'architecture de l'Ex église Sacré-Cœur est une œuvre pionnière du mouvement Art Déco marocain, où se rencontrent spiritualité et innovation technique. Le choix du béton armé matériau novateur à l'époque a permis la création de volumes vertigineux, de voûtes élancées, et d'un espace intérieur d'une légèreté lumineuse exceptionnelle. Les ouvertures rythmées de vitraux laissent pénétrer une lumière filtrée, transformant chaque rayon en une vibration colorée sur les murs blancs.",
+      title: t("features.artDeco.title"),
+      description: t("features.artDeco.description"),
       image: "/archi-2.png",
-      audioText: "L'architecture de l'Ex église Sacré-Cœur est une œuvre pionnière du mouvement Art Déco marocain, où se rencontrent spiritualité et innovation technique. Le choix du béton armé matériau novateur à l'époque a permis la création de volumes vertigineux, de voûtes élancées, et d'un espace intérieur d'une légèreté lumineuse exceptionnelle. Les ouvertures rythmées de vitraux laissent pénétrer une lumière filtrée, transformant chaque rayon en une vibration colorée sur les murs blancs.",
+      audioText: t("features.artDeco.description"),
     },
     {
-      title: "Une alliance subtile entre cultures",
-      description:
-        "L'esthétique de l'édifice évoque un dialogue entre les styles européens et arabo-andalous. Les résilles géométriques qui décorent les façades rappellent l'artisanat local, tandis que les deux clochers élancés font écho à l'architecture islamique. Cette hybridation fait de l'Ex église Sacré-Cœur un symbole unique de la Casablanca des années 1930, ville d'échanges et de coexistence culturelle.",
+      title: t("features.culturalAlliance.title"),
+      description: t("features.culturalAlliance.description"),
       image: "/site-map-images/architecture-optimized/Eglise-du-Sacre-Coeur-3-768x1024.jpeg",
-      audioText: "L'esthétique de l'édifice évoque un dialogue entre les styles européens et arabo-andalous. Les résilles géométriques qui décorent les façades rappellent l'artisanat local, tandis que les deux clochers élancés font écho à l'architecture islamique. Cette hybridation fait de l'Ex église Sacré-Cœur un symbole unique de la Casablanca des années 1930, ville d'échanges et de coexistence culturelle.",
+      audioText: t("features.culturalAlliance.description"),
     },
     {
-      title: "Une restauration respectueuse et innovante",
-      description:
-        "Lors de la rénovation, chaque élément a été traité avec soin : les piliers, voûtes, vitraux et coupoles ont été nettoyés, consolidés et protégés durablement. Une attention particulière a été portée à l'acoustique, avec l'ajout de panneaux absorbants permettant de réduire la réverbération tout en préservant le volume monumental. Les interventions contemporaines, sobres et réversibles, s'intègrent harmonieusement dans la structure originelle, révélant la puissance géométrique et la pureté architecturale de l'édifice.",
+      title: t("features.restoration.title"),
+      description: t("features.restoration.description"),
       image: "/archi-3.png",
-      audioText: "Lors de la rénovation, chaque élément a été traité avec soin : les piliers, voûtes, vitraux et coupoles ont été nettoyés, consolidés et protégés durablement. Une attention particulière a été portée à l'acoustique, avec l'ajout de panneaux absorbants permettant de réduire la réverbération tout en préservant le volume monumental. Les interventions contemporaines, sobres et réversibles, s'intègrent harmonieusement dans la structure originelle, révélant la puissance géométrique et la pureté architecturale de l'édifice.",
+      audioText: t("features.restoration.description"),
     },
     {
-      title: "Un espace vivant et modulable",
-      description:
-        "Grâce à sa modularité intérieure, l'Ex église Sacré-Cœur s'adapte aujourd'hui à de nouvelles fonctions : expositions, concerts, conférences, installations artistiques ou performances. Ses proportions grandioses et sa lumière naturelle offrent un cadre unique où le patrimoine dialogue avec la création contemporaine.",
+      title: t("features.livingSpace.title"),
+      description: t("features.livingSpace.description"),
       image: "/site-map-images/architecture-optimized/Eglise-du-Sacre-Coeur-1-1024x576.jpeg",
-      audioText: "Grâce à sa modularité intérieure, l'Ex église Sacré-Cœur s'adapte aujourd'hui à de nouvelles fonctions : expositions, concerts, conférences, installations artistiques ou performances. Ses proportions grandioses et sa lumière naturelle offrent un cadre unique où le patrimoine dialogue avec la création contemporaine.",
+      audioText: t("features.livingSpace.description"),
     },
   ]
 
@@ -45,8 +46,8 @@ export default function ArchitecturePage() {
         <div className="max-w-[1400px] mx-auto px-6 lg:px-12">
           <Breadcrumb 
             items={[
-              { label: "Découvrir", href: "/decouvrir/histoire" },
-              { label: "Architecture", href: "/decouvrir/architecture" }
+              { label: t("breadcrumb.discover"), href: `/${locale}/decouvrir/histoire` },
+              { label: t("breadcrumb.architecture"), href: `/${locale}/decouvrir/architecture` }
             ]} 
           />
         </div>
@@ -56,7 +57,7 @@ export default function ArchitecturePage() {
       <section className="relative h-[75vh] flex items-center justify-center overflow-hidden">
         <Image
           src="/site-map-images/architecture-optimized/cethedrale image.jpeg"
-          alt="Architecture de l'Ex église Sacré-Cœur"
+          alt={t("hero.imageAlt")}
           fill
           className="object-cover animate-subtle-float"
           priority
@@ -103,15 +104,15 @@ export default function ArchitecturePage() {
           <div className="animate-gentle-fade-in">
             <div className="inline-block px-6 py-3 bg-gradient-to-r from-vibrant-pink/25 to-warm-terracotta/25 backdrop-blur-sm border border-off-white/30 rounded-full mb-10">
               <span className="text-off-white/95 text-sm font-sans tracking-widest uppercase font-semibold">
-                Architecture Art Déco
+                {t("hero.badge")}
               </span>
             </div>
           </div>
           <h1 className="font-serif text-7xl md:text-8xl lg:text-9xl text-off-white mb-8 animate-gentle-fade-in stagger-1 text-enhanced">
-            Architecture
+            {t("hero.title")}
           </h1>
           <p className="font-sans text-xl md:text-2xl text-off-white/95 max-w-4xl mx-auto leading-relaxed animate-gentle-fade-in stagger-2 text-readable">
-            Un chef-d'œuvre de l'Art Déco marocain alliant tradition gothique et modernité
+            {t("hero.description")}
           </p>
         </div>
       </section>
@@ -133,7 +134,7 @@ export default function ArchitecturePage() {
                 </div>
                 <TextToSpeechPlayer 
                   text={feature.audioText}
-                  title={`Écouter: ${feature.title}`}
+                  title={feature.title}
                 />
               </div>
               <div className={`${index % 2 === 1 ? "md:order-1" : ""} animate-fade-in-up delay-100`}>
@@ -201,14 +202,14 @@ export default function ArchitecturePage() {
           <div className="text-center mb-24">
             <div className="inline-block px-10 py-5 bg-gradient-to-r from-vibrant-pink/25 to-warm-terracotta/25 backdrop-blur-sm border-2 border-off-white/30 rounded-full mb-10">
               <span className="text-off-white/95 text-sm font-sans tracking-widest uppercase font-semibold">
-                Spécifications Techniques
+                {t("technical.badge")}
               </span>
             </div>
             <h2 className="font-serif text-6xl lg:text-8xl text-off-white mb-8 animate-fade-in-up">
-              Caractéristiques Techniques
+              {t("technical.title")}
             </h2>
             <p className="font-sans text-xl text-off-white/85 max-w-4xl mx-auto animate-fade-in-up delay-100 leading-relaxed">
-              Découvrez les dimensions et spécifications architecturales de ce monument emblématique
+              {t("technical.description")}
             </p>
           </div>
 
@@ -225,9 +226,9 @@ export default function ArchitecturePage() {
                     <path strokeLinecap="round" strokeLinejoin="round" strokeWidth="2.5" d="M8 12h8"/>
                   </svg>
                 </div>
-                <div className="font-serif text-6xl lg:text-7xl text-vibrant-pink mb-6 group-hover:scale-110 transition-transform duration-500">33m</div>
-                <div className="font-sans text-base tracking-widest uppercase text-off-white/90 font-semibold">Hauteur sous plafond</div>
-                <div className="mt-4 text-sm text-off-white/70">Dimension architecturale</div>
+                <div className="font-serif text-6xl lg:text-7xl text-vibrant-pink mb-6 group-hover:scale-110 transition-transform duration-500">{t("technical.specifications.height.value")}</div>
+                <div className="font-sans text-base tracking-widest uppercase text-off-white/90 font-semibold">{t("technical.specifications.height.label")}</div>
+                <div className="mt-4 text-sm text-off-white/70">{t("technical.specifications.height.description")}</div>
               </div>
             </div>
 
@@ -243,9 +244,9 @@ export default function ArchitecturePage() {
                     <path strokeLinecap="round" strokeLinejoin="round" strokeWidth="2.5" d="M6 9h12M6 13h12"/>
                   </svg>
                 </div>
-                <div className="font-serif text-6xl lg:text-7xl text-warm-terracotta mb-6 group-hover:scale-110 transition-transform duration-500">1930</div>
-                <div className="font-sans text-base tracking-widest uppercase text-off-white/90 font-semibold">Construction première partie</div>
-                <div className="mt-4 text-sm text-off-white/70">Début des travaux</div>
+                <div className="font-serif text-6xl lg:text-7xl text-warm-terracotta mb-6 group-hover:scale-110 transition-transform duration-500">{t("technical.specifications.construction.value")}</div>
+                <div className="font-sans text-base tracking-widest uppercase text-off-white/90 font-semibold">{t("technical.specifications.construction.label")}</div>
+                <div className="mt-4 text-sm text-off-white/70">{t("technical.specifications.construction.description")}</div>
               </div>
             </div>
 
@@ -260,9 +261,9 @@ export default function ArchitecturePage() {
                     <path strokeLinecap="round" strokeLinejoin="round" strokeWidth="2.5" d="M12 3v18m0-18l4 4m-4-4l-4 4"/>
                   </svg>
                 </div>
-                <div className="font-serif text-6xl lg:text-7xl text-vibrant-pink mb-6 group-hover:scale-110 transition-transform duration-500">1953</div>
-                <div className="font-sans text-base tracking-widest uppercase text-off-white/90 font-semibold">Achèvement deuxième partie</div>
-                <div className="mt-4 text-sm text-off-white/70">Finalisation du projet</div>
+                <div className="font-serif text-6xl lg:text-7xl text-vibrant-pink mb-6 group-hover:scale-110 transition-transform duration-500">{t("technical.specifications.completion.value")}</div>
+                <div className="font-sans text-base tracking-widest uppercase text-off-white/90 font-semibold">{t("technical.specifications.completion.label")}</div>
+                <div className="mt-4 text-sm text-off-white/70">{t("technical.specifications.completion.description")}</div>
               </div>
             </div>
 
@@ -278,9 +279,9 @@ export default function ArchitecturePage() {
                     <path strokeLinecap="round" strokeLinejoin="round" strokeWidth="2.5" d="M6 9h12M6 13h12"/>
                   </svg>
                 </div>
-                <div className="font-serif text-4xl lg:text-5xl text-warm-terracotta mb-6 group-hover:scale-110 transition-transform duration-500">Paul Tournon</div>
-                <div className="font-sans text-base tracking-widest uppercase text-off-white/90 font-semibold">Architecte</div>
-                <div className="mt-4 text-sm text-off-white/70">Maître d'œuvre</div>
+                <div className="font-serif text-4xl lg:text-5xl text-warm-terracotta mb-6 group-hover:scale-110 transition-transform duration-500">{t("technical.specifications.architect.value")}</div>
+                <div className="font-sans text-base tracking-widest uppercase text-off-white/90 font-semibold">{t("technical.specifications.architect.label")}</div>
+                <div className="mt-4 text-sm text-off-white/70">{t("technical.specifications.architect.description")}</div>
               </div>
             </div>
           </div>
@@ -303,41 +304,41 @@ export default function ArchitecturePage() {
           <div className="text-center mb-20">
             <div className="inline-block px-6 py-3 bg-gradient-to-r from-vibrant-pink/10 to-warm-terracotta/10 border border-charcoal/20 rounded-full mb-8">
               <span className="text-charcoal/80 text-sm font-sans tracking-widest uppercase font-semibold">
-                Galerie Visuelle
+                {t("gallery.badge")}
               </span>
             </div>
             <h2 className="font-serif text-5xl lg:text-7xl text-charcoal mb-8 animate-fade-in-up">
-              Galerie Architecturale
+              {t("gallery.title")}
             </h2>
             <p className="font-sans text-xl text-charcoal/75 max-w-4xl mx-auto animate-fade-in-up stagger-1 leading-relaxed">
-              Explorez les détails architecturaux uniques de l'Ex église Sacré-Cœur à travers notre collection de photographies
+              {t("gallery.description")}
             </p>
           </div>
 
           <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6 lg:gap-8">
             {[
               {
-                title: "Vue Extérieure",
+                title: t("gallery.photos.exterior"),
                 image: "/site-map-images/architecture-optimized/Eglise-du-Sacre-Coeur-9-1024x768.jpeg",
               },
               {
-                title: "Détail Architectural",
+                title: t("gallery.photos.detail"),
                 image: "/site-map-images/architecture-optimized/Eglise-du-Sacre-Coeur-2-1-461x1024.jpeg",
               },
               {
-                title: "Perspective Intérieure",
+                title: t("gallery.photos.interior"),
                 image: "/site-map-images/architecture-optimized/IMG-20210712-WA0035-576x1024.jpeg",
               },
               {
-                title: "Vue Panoramique",
+                title: t("gallery.photos.panoramic"),
                 image: "/site-map-images/architecture-optimized/Eglise-du-Sacre-Coeur-6-1024x461.jpeg",
               },
               {
-                title: "Élévation",
+                title: t("gallery.photos.elevation"),
                 image: "/site-map-images/architecture-optimized/Eglise-du-Sacre-Coeur-7-1024x461.jpeg",
               },
               {
-                title: "Détail de Façade",
+                title: t("gallery.photos.facade"),
                 image: "/site-map-images/architecture-optimized/Eglise-du-Sacre-Coeur-4-696x313.jpeg",
               },
             ].map((photo, index) => (
@@ -372,20 +373,20 @@ export default function ArchitecturePage() {
         <div className="bg-gradient-to-br from-charcoal/5 to-charcoal/10 rounded-3xl p-12 lg:p-16">
           <div className="inline-block px-6 py-3 bg-gradient-to-r from-vibrant-pink/15 to-warm-terracotta/15 border border-charcoal/20 rounded-full mb-8">
             <span className="text-charcoal/80 text-sm font-sans tracking-widest uppercase font-semibold">
-              Visite Guidée
+              {t("cta.badge")}
             </span>
           </div>
           <h2 className="font-serif text-5xl lg:text-7xl text-charcoal mb-8 animate-fade-in-up">
-            Visiter l'Ex église Sacré-Cœur
+            {t("cta.title")}
           </h2>
           <p className="font-sans text-xl text-charcoal/75 leading-relaxed mb-12 animate-fade-in-up delay-100 max-w-3xl mx-auto">
-            Découvrez l'architecture exceptionnelle de l'Ex église Sacré-Cœur lors d'une visite guidée ou en autonomie
+            {t("cta.description")}
           </p>
           <a
-            href="/visiter/individuels"
+            href={`/${locale}/visiter/individuels`}
             className="inline-block px-10 py-5 text-sm font-sans tracking-widest uppercase bg-gradient-to-r from-vibrant-pink to-warm-terracotta text-white hover:shadow-2xl hover:scale-105 transition-all duration-500 animate-fade-in-up delay-200 rounded-xl font-semibold"
           >
-            Visiter maintenant
+            {t("cta.button")}
           </a>
         </div>
       </section>

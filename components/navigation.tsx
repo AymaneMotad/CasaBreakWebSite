@@ -8,32 +8,50 @@ import Link from "next/link"
 import Image from "next/image"
 import { usePathname } from "next/navigation"
 import { LanguageSelector } from "./language-selector"
+import { useTranslations, useLocale } from 'next-intl'
 
 export function Navigation() {
   const [isOpen, setIsOpen] = useState(false)
   const [openDropdown, setOpenDropdown] = useState<string | null>(null)
   const pathname = usePathname()
+  const locale = useLocale()
+  const t = useTranslations('navigation')
+
+  // Fallback: Extract locale from pathname if useLocale() is not working
+  const getCurrentLocale = () => {
+    const segments = pathname.split('/').filter(Boolean)
+    const validLocales = ['fr', 'en', 'ar']
+    const pathLocale = segments[0]
+    
+    if (validLocales.includes(pathLocale)) {
+      return pathLocale
+    }
+    
+    return locale || 'fr' // Fallback to useLocale() or 'fr'
+  }
+
+  const currentLocale = getCurrentLocale()
 
   const navItems = [
-    { label: "Accueil", href: "/" },
+    { label: t("home"), href: `/${currentLocale}` },
     {
-      label: "Découvrir",
+      label: t("discover"),
       href: "#",
       submenu: [
-        { label: "Histoire", href: "/decouvrir/histoire" },
-        { label: "Architecture", href: "/decouvrir/architecture" },
+        { label: t("history"), href: `/${currentLocale}/decouvrir/histoire` },
+        { label: t("architecture"), href: `/${currentLocale}/decouvrir/architecture` },
       ],
     },
     {
-      label: "Visiter",
+      label: t("visit"),
       href: "#",
       submenu: [
-        { label: "Individuels et familles", href: "/visiter/individuels" },
-        { label: "Groupes", href: "/visiter/groupes" },
+        { label: t("individuals"), href: `/${currentLocale}/visiter/individuels` },
+        { label: t("groups"), href: `/${currentLocale}/visiter/groupes` },
       ],
     },
-    { label: "Événements", href: "/evenements" },
-    { label: "Réserver votre espace", href: "/reserver" },
+    { label: t("events"), href: `/${currentLocale}/evenements` },
+    { label: t("reserve"), href: `/${currentLocale}/reserver` },
   ]
 
   const handleDropdownClick = (e: React.MouseEvent, hasSubmenu: boolean) => {
@@ -43,7 +61,7 @@ export function Navigation() {
   }
 
   const isActive = (href: string) => {
-    if (href === "/") return pathname === "/"
+    if (href === `/${currentLocale}`) return pathname === `/${currentLocale}` || pathname === `/${currentLocale}/`
     return pathname.startsWith(href)
   }
 
@@ -56,7 +74,7 @@ export function Navigation() {
       <div className="max-w-[1600px] mx-auto px-6 lg:px-12">
         <div className="flex items-center justify-between h-24 lg:h-28 py-3">
           <Link
-            href="/"
+            href={`/${currentLocale}`}
             className="transition-all duration-500 hover:scale-105 flex items-center"
           >
             <Image 
@@ -123,7 +141,7 @@ export function Navigation() {
             >
               <span className="relative z-10 flex items-center gap-3">
                 <Ticket className="w-4 h-4" />
-                <span>Billetterie</span>
+                <span>{t("tickets")}</span>
               </span>
               <div className="absolute inset-0 bg-gradient-to-r from-blue-700 to-blue-900 opacity-0 group-hover:opacity-100 transition-opacity duration-500 rounded-lg" />
             </a>
@@ -220,7 +238,7 @@ export function Navigation() {
                 >
                   <div className="flex items-center justify-center gap-3">
                     <Ticket className="w-5 h-5" />
-                    <span>Billetterie</span>
+                    <span>{t("tickets")}</span>
                   </div>
                 </a>
               </div>

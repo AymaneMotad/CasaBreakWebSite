@@ -1,6 +1,9 @@
 import { Calendar, Clock, MapPin } from "lucide-react"
+import { useTranslations } from 'next-intl'
 
 export function BookingSection() {
+  const t = useTranslations('home.booking')
+  
   return (
     <section className="py-24 lg:py-32 bg-cream relative overflow-hidden">
       {/* Moroccan Artistic Elements */}
@@ -53,31 +56,31 @@ export function BookingSection() {
         <div className="grid lg:grid-cols-2 gap-12 lg:gap-20 items-center">
           <div className="animate-fade-in-up">
             <h2 className="font-serif font-normal text-5xl lg:text-6xl text-charcoal mb-8 leading-tight">
-              Voulez-vous réserver les billets pour vos prochains événements à l'Ex église Sacré-Cœur ?
+              {t("title")}
             </h2>
             <p className="font-sans text-lg text-charcoal/70 leading-relaxed mb-8">
-            Découvrez notre plateforme de réservation en ligne et accédez à tous les événements de l'Ex église Sacré-Cœur en un seul clic.
+            {t("description")}
             </p>
 
             <div className="space-y-4 mb-10">
               <div className="flex items-start gap-4">
                 <Calendar className="w-6 h-6 text-terracotta mt-1 flex-shrink-0" />
                 <div>
-                  <h3 className="font-sans font-medium text-charcoal mb-1">Calendrier en temps réel</h3>
-                  <p className="font-sans text-sm text-charcoal/60">Consultez tous les événements à venir</p>
+                  <h3 className="font-sans font-medium text-charcoal mb-1">{t("features.calendar.title")}</h3>
+                  <p className="font-sans text-sm text-charcoal/60">{t("features.calendar.description")}</p>
                 </div>
               </div>
               <div className="flex items-start gap-4">
                 <Clock className="w-6 h-6 text-terracotta mt-1 flex-shrink-0" />
                 <div>
-                  <h3 className="font-sans font-medium text-charcoal mb-1">Réservation instantanée</h3>
-                  <p className="font-sans text-sm text-charcoal/60">Confirmation immédiate par email</p>
+                  <h3 className="font-sans font-medium text-charcoal mb-1">{t("features.instant.title")}</h3>
+                  <p className="font-sans text-sm text-charcoal/60">{t("features.instant.description")}</p>
                 </div>
               </div>
             </div>
 
             <button className="px-8 py-4 bg-blue-600 text-white font-sans text-sm tracking-wide uppercase rounded-md hover:bg-blue-700 transition-all duration-300 hover:scale-105 shadow-lg">
-              Réserver maintenant
+              {t("bookNow")}
             </button>
           </div>
 

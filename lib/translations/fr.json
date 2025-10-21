@@ -1,0 +1,568 @@
+{
+  "navigation": {
+    "home": "Accueil",
+    "discover": "Découvrir",
+    "history": "Histoire",
+    "architecture": "Architecture",
+    "visit": "Visiter",
+    "individuals": "Individuels et familles",
+    "groups": "Groupes",
+    "events": "Événements",
+    "reserve": "Réserver votre espace",
+    "tickets": "Billetterie"
+  },
+  "home": {
+    "hero": {
+      "badge": "Patrimoine Culturel • Depuis 1930",
+      "title": "Un joyau patrimonial au cœur de Casablanca",
+      "description": "L'icône du patrimoine casablancais, l'Ex Église Sacré-Cœur, s'éveille à une nouvelle vie. Désormais centre culturel et espace de création, elle incarne la rencontre entre la mémoire d'hier et la modernité d'aujourd'hui.",
+      "visitButton": "Visiter",
+      "discoverButton": "Découvrir"
+    },
+    "magazine": {
+      "title1": "Un chef-d'œuvre architectural",
+      "description1": "L'Ex église Sacré-Cœur de Casablanca, érigé en 1930, incarne l'élégance de l'architecture Art Déco. Ses lignes épurées et sa façade blanche immaculée en font un monument emblématique de la ville.",
+      "description1b": "Aujourd'hui transformé en centre culturel, il accueille expositions, concerts et événements qui célèbrent le patrimoine marocain et international.",
+      "title2": "Un mélange harmonieux de styles",
+      "description2": "L'édifice dialogue avec l'architecture mauresque traditionnelle tout en affirmant sa modernité. Ses vitraux colorés et ses volumes généreux créent une atmosphère unique.",
+      "description2b": "Chaque détail architectural raconte l'histoire d'une époque où l'art et la foi se rencontraient dans une harmonie parfaite.",
+      "title3": "Un symbole de la diversité culturelle",
+      "description3": "L'Ex église Sacré-Cœur témoigne de la richesse du patrimoine culturel de Casablanca. Elle représente un pont entre les cultures, les époques et les communautés.",
+      "description3b": "Aujourd'hui, elle continue d'inspirer artistes, architectes et visiteurs du monde entier, perpétuant son rôle de lieu de rencontre et d'échange."
+    },
+    "heritage": {
+      "title": "Mémoire de Casablanca",
+      "description": "Au centre de Casablanca, l'Ex église Sacré-Cœur incarne le lien entre tradition et modernité. Construit dans les années 1930, ce monument emblématique témoigne de la richesse culturelle et architecturale de la ville. Transformé au fil des décennies, il a su préserver son authenticité tout en se réinventant en espace de création et de partage. Lieu de mémoire devenu lieu de vie, il illustre la capacité de Casablanca à faire dialoguer passé et avenir.",
+      "exploreButton": "Explorer l'histoire",
+      "cards": {
+        "history": {
+          "title": "Histoire",
+          "description": "Découvrez l'histoire fascinante de ce monument depuis sa construction en 1930 jusqu'à sa transformation en centre culturel.",
+          "link": "En savoir plus"
+        },
+        "architecture": {
+          "title": "Architecture",
+          "description": "Explorez les détails architecturaux, les influences Art Déco et les techniques de construction de l'époque.",
+          "link": "En savoir plus"
+        },
+        "visits": {
+          "title": "Visites guidées",
+          "description": "Participez à nos visites guidées avec des experts pour une découverte approfondie du patrimoine.",
+          "link": "En savoir plus"
+        }
+      }
+    },
+    "spinningCathedral": {
+      "title": "Un Monument au Cœur de Casablanca",
+      "description": "Découvrez l'histoire fascinante de l'Ex église Sacré-Cœur, un joyau architectural Art Déco qui continue d'inspirer et de rassembler les Casablancais et les visiteurs du monde entier."
+    },
+    "practical": {
+      "badge": "Informations Pratiques",
+      "title": "Bien préparer sa visite",
+      "description": "Préparez votre visite à l'Ex église Sacré-Cœur en toute sérénité : retrouvez ici toutes les informations essentielles.",
+      "sections": {
+        "hours": {
+          "title": "Horaires",
+          "tuesdaySunday": "Mardi - Dimanche",
+          "hours": "9h - 18h",
+          "lastEntry": "Dernière entrée",
+          "lastEntryTime": "17h",
+          "monday": "Lundi",
+          "closed": "Fermé"
+        },
+        "access": {
+          "title": "Accès",
+          "address": "Adresse",
+          "addressValue": "Angle rue d'Alger et boulevard Rachidi<br />Quartier Gautier, Casablanca 20250",
+          "tramway": "Tramway",
+          "tramwayStop": "Place Mohammed V"
+        },
+        "pricing": {
+          "title": "Tarifs",
+          "adult": "Adulte",
+          "student": "Étudiant",
+          "senior": "Senior (60+)",
+          "disabled": "Visiteurs à mobilité réduite",
+          "residents": "Résidents au Maroc",
+          "free": "Gratuit"
+        }
+      },
+      "actions": {
+        "booking": {
+          "title": "Réserver votre visite",
+          "description": "Réservez votre créneau de visite pour éviter l'attente et profiter pleinement de votre découverte du patrimoine Art Déco.",
+          "bookNow": "Réserver maintenant",
+          "groupVisit": "Visite de groupe"
+        },
+        "contact": {
+          "title": "Nous contacter",
+          "description": "Des questions sur votre visite ? Notre équipe est là pour vous accompagner et personnaliser votre expérience.",
+          "phone": "Téléphone",
+          "email": "Email",
+          "contactUs": "Nous contacter"
+        }
+      }
+    },
+    "availability": {
+      "title": "Nos disponibilités",
+      "description": "Consultez notre calendrier pour voir les dates disponibles et réserver votre visite ou événement"
+    },
+    "booking": {
+      "title": "Voulez-vous réserver les billets pour vos prochains événements à l'Ex église Sacré-Cœur ?",
+      "description": "Découvrez notre plateforme de réservation en ligne et accédez à tous les événements de l'Ex église Sacré-Cœur en un seul clic.",
+      "features": {
+        "calendar": {
+          "title": "Calendrier en temps réel",
+          "description": "Consultez tous les événements à venir"
+        },
+        "instant": {
+          "title": "Réservation instantanée",
+          "description": "Confirmation immédiate par email"
+        }
+      },
+      "bookNow": "Réserver maintenant"
+    },
+    "newsletter": {
+      "title": "Rejoignez-nous",
+      "description": "Inscrivez-vous à notre newsletter pour recevoir les dernières actualités sur nos événements, expositions et activités culturelles à l'Ex église Sacré-Cœur de Casablanca.",
+      "placeholder": "Votre adresse email",
+      "subscribe": "S'inscrire"
+    },
+    "footer": {
+      "description": "Monument historique Art Déco et espace culturel au cœur de Casablanca depuis 1930. Un lieu d'exception où l'histoire rencontre la modernité.",
+      "contact": "Contact",
+      "address": "Adresse",
+      "addressValue": "Angle rue d'Alger et boulevard Rachidi<br />Quartier Gautier, Casablanca 20250",
+      "phone": "Téléphone",
+      "email": "Email",
+      "sections": {
+        "home": "Accueil",
+        "discover": "Découvrir",
+        "history": "Histoire",
+        "architecture": "Architecture",
+        "visit": "Visiter",
+        "individuals": "Individuels",
+        "groups": "Groupes",
+        "events": "Événements",
+        "reserve": "Réserver"
+      },
+      "links": {
+        "ourEvents": "Nos Événements",
+        "reserveSpace": "Réserver votre espace",
+        "tickets": "Billetterie"
+      },
+      "follow": "Suivez-nous",
+      "location": "Localisation",
+      "openInMaps": "Ouvrir dans Google Maps",
+      "copyright": "© l'Ex église Sacré-Cœur Casablanca. Tous droits réservés."
+    }
+  },
+  "histoire": {
+    "breadcrumb": {
+      "discover": "Découvrir",
+      "history": "Histoire"
+    },
+    "hero": {
+      "badge": "Patrimoine Historique",
+      "title": "Histoire",
+      "description": "Un monument emblématique de Casablanca qui raconte l'histoire de la ville à travers le 21ème siècle",
+      "photoCredit": "Photo issue du Fonds Flandrin, collection privée de la Fondation Banque Populaire"
+    },
+    "timeline": {
+      "title": "Chronologie Historique",
+      "description": "Découvrez les étapes clés qui ont façonné l'histoire de ce monument emblématique",
+      "events": {
+        "1923": {
+          "title": "Le début d'un projet symbolique",
+          "description": "La construction de l'Ex église Sacré-Cœur est lancée sous le protectorat français, à l'initiative de la communauté catholique de Casablanca. Elle témoigne de la volonté de cette communauté d'affirmer sa présence dans une ville en pleine mutation. L'objectif est d'ériger un lieu de culte majeur au cœur d'une cité en plein essor, reflet du développement urbain rapide et du dynamisme de la métropole. Ce projet s'inscrit ainsi dans le contexte de l'expansion de Casablanca, où la modernité et la foi se rejoignent pour donner naissance à un monument emblématique de son époque.",
+          "audioTitle": "Écouter l'histoire de 1923"
+        },
+        "1930": {
+          "title": "L'achèvement d'un chef-d'œuvre architectural",
+          "description1": "L'inauguration officielle de l'Ex église Sacré-Cœur marque une étape majeure dans l'histoire architecturale et culturelle de Casablanca. Conçue par l'architecte Paul Tournon, l'édifice se distingue par son caractère avant-gardiste, fruit d'un savant mariage entre l'art gothique et l'art déco, un style alors inédit en Afrique du Nord.",
+          "description2": "Par ses voûtes élancées, ses vitraux aux motifs géométriques et ses façades épurées, l'église incarne la modernité et l'élégance caractéristiques de la Casablanca des années 1930. Ce chef-d'œuvre architectural témoigne du raffinement esthétique de son époque et de la volonté de faire de l'Ex église Sacré-Cœur un symbole fort de la ville, à la croisée entre tradition religieuse et innovation urbaine.",
+          "audioTitle": "Écouter l'histoire de 1930"
+        },
+        "1956": {
+          "title": "L'indépendance du Maroc : un tournant",
+          "description1": "Après l'indépendance du Maroc, la fréquentation de l'Ex église Sacré-Cœur connaît une baisse progressive. Peu à peu, l'édifice perd sa fonction religieuse initiale, conséquence directe des transformations sociales et démographiques de la ville.",
+          "description2": "Cependant, loin de tomber dans l'oubli, l'église acquiert un nouveau statut : celui de symbole patrimonial et culturel de Casablanca. Son architecture remarquable et sa place au cœur de la cité en font un lieu chargé d'histoire, témoin du passé colonial mais aussi de l'évolution urbaine et artistique du Maroc moderne.",
+          "audioTitle": "Écouter l'histoire de 1956"
+        },
+        "1976": {
+          "title": "Déconsécration et changement d'usage",
+          "description1": "L'Ex église Sacré-Cœur est officiellement désacralisée, marquant la fin de son usage religieux. Ce changement lui offre une nouvelle vie en tant qu'espace culturel et d'exposition, ouvert à la création et au dialogue artistique.",
+          "description2": "Dès lors, le monument accueille divers événements tels que des concerts, des salons, des projections et de nombreuses manifestations culturelles. Ce renouveau transforme l'édifice en un lieu vivant et inclusif, où patrimoine et modernité se rencontrent, faisant de l'Ex église Sacré-Cœur un symbole de la vitalité culturelle de Casablanca.",
+          "audioTitle": "Écouter l'histoire de 1976"
+        },
+        "1990-2000": {
+          "title": "Reconnaissance patrimoniale",
+          "description1": "Classée parmi les monuments emblématiques du patrimoine architectural de Casablanca, l'Ex église Sacré-Cœur occupe une place particulière dans l'histoire de la ville. Par sa structure audacieuse en béton armé et son style néo-gothique revisité, elle témoigne du génie architectural et de l'esprit novateur de son époque.",
+          "description2": "Son allure unique attire aujourd'hui architectes, chercheurs et visiteurs du monde entier, fascinés par l'harmonie entre tradition et modernité qu'incarne l'édifice. Véritable repère urbain et culturel, l'Ex église Sacré-Cœur demeure un symbole fort du patrimoine casablancais et de la richesse de son héritage artistique.",
+          "audioTitle": "Écouter l'histoire de 1990-2000"
+        },
+        "2010": {
+          "title": "Début de la réhabilitation",
+          "description1": "Des travaux de restauration et de sécurisation sont entrepris afin de préserver l'Ex église Sacré-Cœur, fragilisée par le temps et les années d'exposition aux éléments. Ces interventions visent à sauvegarder la solidité de l'édifice tout en respectant son architecture d'origine, symbole fort du patrimoine casablancais.",
+          "description2": "Parallèlement, une volonté claire émerge : celle de redonner vie à ce monument historique en le transformant en un véritable centre de créativité et de dialogue culturel. L'objectif est d'en faire un lieu ouvert à tous, où se rencontrent les arts, les idées et les générations, perpétuant ainsi l'esprit vivant et inspirant de l'Ex église Sacré-Cœur.",
+          "audioTitle": "Écouter l'histoire de 2010"
+        },
+        "today": {
+          "label": "Aujourd'hui",
+          "title": "Renaissance d'un joyau patrimonial",
+          "description1": "Le site de l'Ex église Sacré-Cœur renaît aujourd'hui comme un véritable centre culturel, artistique et touristique, symbole de la vitalité et du renouveau de Casablanca. Ce lieu emblématique se transforme en un espace de rencontre entre mémoire et modernité, où se croisent le patrimoine, l'art, l'innovation et la citoyenneté.",
+          "description2": "En accueillant expositions, événements et initiatives créatives, la cathédrale s'inscrit désormais dans une démarche de valorisation durable du patrimoine casablancais. Elle incarne la volonté de préserver l'histoire tout en la réinventant, offrant à la ville un espace vivant, inspirant et ouvert sur le monde.",
+          "audioTitle": "Écouter l'histoire d'aujourd'hui"
+        }
+      }
+    },
+    "cta": {
+      "badge": "Continuez votre découverte",
+      "title": "Explorez l'Architecture",
+      "description": "Plongez dans les détails architecturaux exceptionnels de l'Ex église Sacré-Cœur. Découvrez comment l'Art Déco et le modernisme se rencontrent dans ce chef-d'œuvre unique.",
+      "button": "Découvrir l'Architecture",
+      "label": "Architecture Art Déco"
+    }
+  },
+  "architecture": {
+    "breadcrumb": {
+      "discover": "Découvrir",
+      "architecture": "Architecture"
+    },
+    "hero": {
+      "badge": "Architecture Art Déco",
+      "title": "Architecture",
+      "description": "Un chef-d'œuvre de l'Art Déco marocain alliant tradition gothique et modernité",
+      "imageAlt": "Architecture de l'Ex église Sacré-Cœur"
+    },
+    "features": {
+      "artDeco": {
+        "title": "Entre Art Déco et modernisme spirituel",
+        "description": "L'architecture de l'Ex église Sacré-Cœur est une œuvre pionnière du mouvement Art Déco marocain, où se rencontrent spiritualité et innovation technique. Le choix du béton armé matériau novateur à l'époque a permis la création de volumes vertigineux, de voûtes élancées, et d'un espace intérieur d'une légèreté lumineuse exceptionnelle. Les ouvertures rythmées de vitraux laissent pénétrer une lumière filtrée, transformant chaque rayon en une vibration colorée sur les murs blancs.",
+        "audioTitle": "Écouter: Entre Art Déco et modernisme spirituel"
+      },
+      "culturalAlliance": {
+        "title": "Une alliance subtile entre cultures",
+        "description": "L'esthétique de l'édifice évoque un dialogue entre les styles européens et arabo-andalous. Les résilles géométriques qui décorent les façades rappellent l'artisanat local, tandis que les deux clochers élancés font écho à l'architecture islamique. Cette hybridation fait de l'Ex église Sacré-Cœur un symbole unique de la Casablanca des années 1930, ville d'échanges et de coexistence culturelle.",
+        "audioTitle": "Écouter: Une alliance subtile entre cultures"
+      },
+      "restoration": {
+        "title": "Une restauration respectueuse et innovante",
+        "description": "Lors de la rénovation, chaque élément a été traité avec soin : les piliers, voûtes, vitraux et coupoles ont été nettoyés, consolidés et protégés durablement. Une attention particulière a été portée à l'acoustique, avec l'ajout de panneaux absorbants permettant de réduire la réverbération tout en préservant le volume monumental. Les interventions contemporaines, sobres et réversibles, s'intègrent harmonieusement dans la structure originelle, révélant la puissance géométrique et la pureté architecturale de l'édifice.",
+        "audioTitle": "Écouter: Une restauration respectueuse et innovante"
+      },
+      "livingSpace": {
+        "title": "Un espace vivant et modulable",
+        "description": "Grâce à sa modularité intérieure, l'Ex église Sacré-Cœur s'adapte aujourd'hui à de nouvelles fonctions : expositions, concerts, conférences, installations artistiques ou performances. Ses proportions grandioses et sa lumière naturelle offrent un cadre unique où le patrimoine dialogue avec la création contemporaine.",
+        "audioTitle": "Écouter: Un espace vivant et modulable"
+      }
+    },
+    "technical": {
+      "badge": "Spécifications Techniques",
+      "title": "Caractéristiques Techniques",
+      "description": "Découvrez les dimensions et spécifications architecturales de ce monument emblématique",
+      "specifications": {
+        "height": {
+          "value": "33m",
+          "label": "Hauteur sous plafond",
+          "description": "Dimension architecturale"
+        },
+        "construction": {
+          "value": "1930",
+          "label": "Construction première partie",
+          "description": "Début des travaux"
+        },
+        "completion": {
+          "value": "1953",
+          "label": "Achèvement deuxième partie",
+          "description": "Finalisation du projet"
+        },
+        "architect": {
+          "value": "Paul Tournon",
+          "label": "Architecte",
+          "description": "Maître d'œuvre"
+        }
+      }
+    },
+    "gallery": {
+      "badge": "Galerie Visuelle",
+      "title": "Galerie Architecturale",
+      "description": "Explorez les détails architecturaux uniques de l'Ex église Sacré-Cœur à travers notre collection de photographies",
+      "photos": {
+        "exterior": "Vue Extérieure",
+        "detail": "Détail Architectural",
+        "interior": "Perspective Intérieure",
+        "panoramic": "Vue Panoramique",
+        "elevation": "Élévation",
+        "facade": "Détail de Façade"
+      }
+    },
+    "cta": {
+      "badge": "Visite Guidée",
+      "title": "Visiter l'Ex église Sacré-Cœur",
+      "description": "Découvrez l'architecture exceptionnelle de l'Ex église Sacré-Cœur lors d'une visite guidée ou en autonomie",
+      "button": "Visiter maintenant"
+    }
+  },
+  "individuels": {
+    "breadcrumb": {
+      "visit": "Visiter",
+      "individuals": "Individuels et familles"
+    },
+    "hero": {
+      "title": "Individuels et Familles",
+      "description": "Découvrez l'Ex Église Sacré-Cœur à votre rythme, seul ou en famille",
+      "imageAlt": "Visite individuelle et familiale"
+    },
+    "introduction": {
+      "badge": "Découvrez",
+      "title": "Une Expérience Personnalisée",
+      "description": "Que vous soyez seul, en couple, en famille, étudiant, senior ou visiteur à mobilité réduite, l'Ex Église Sacré-Cœur vous accueille avec des services adaptés à vos besoins."
+    },
+    "tips": {
+      "bestTimes": {
+        "title": "Meilleurs moments",
+        "description": "Visitez à tout moment pour une expérience apaisante et inspirante"
+      },
+      "photography": {
+        "title": "Photographie",
+        "description": "La photographie est autorisée. Les vitraux sont particulièrement photogéniques"
+      },
+      "audioGuide": {
+        "title": "Audio-guide",
+        "description": "Audio-guides disponibles en français, arabe et anglais"
+      },
+      "duration": {
+        "title": "Durée de visite",
+        "description": "Ouvert de 9h à 18h - Comptez 1h pour une visite complète et contemplative"
+      },
+      "family": {
+        "title": "Visites en famille",
+        "description": "Un moment de partage et de découverte pour toute la famille"
+      },
+      "booking": {
+        "title": "Réservation",
+        "description": "Réservation recommandée mais pas obligatoire pour les individuels"
+      }
+    },
+    "visitorTypes": {
+      "badge": "Formules",
+      "title": "Formules de Visite",
+      "description": "Choisissez la formule qui correspond le mieux à votre profil et vos besoins",
+      "individuals": {
+        "title": "Individuels & Familles",
+        "price": "50 MAD",
+        "description": "Visite libre ou guidée pour découvrir l'Ex Église Sacré-Cœur à votre rythme",
+        "features": [
+          "Visite libre",
+          "Audio-guide disponible",
+          "Pack famille : 120 MAD (2 adultes + 2 enfants)"
+        ]
+      },
+      "students": {
+        "title": "Étudiants",
+        "price": "25 MAD",
+        "description": "Tarif préférentiel avec programmes éducatifs adaptés",
+        "features": [
+          "Tarif réduit sur présentation de la carte étudiante.",
+          "Photos autorisées pour projets scolaires."
+        ]
+      },
+      "seniors": {
+        "title": "Seniors (60+)",
+        "price": "35 MAD",
+        "description": "Visite adaptée à votre rythme avec services dédiés",
+        "features": [
+          "Visite à rythme adapté",
+          "Pauses régulières",
+          "Le jardin de l'Ex Église Sacré-Cœur est aménagé de bancs pour assurer le confort et l'accueil des visiteurs"
+        ]
+      },
+      "disabled": {
+        "title": "Visiteurs à mobilité réduite",
+        "price": "Gratuit",
+        "description": "Notre équipe est disponible sur place pour offrir toute assistance nécessaire",
+        "features": [
+          "Un passage est aménagé pour faciliter l'accès au monument",
+          "Un passage aménagé permet aux personnes à mobilité réduite d'accéder librement au jardin de l'Ex Église Sacré-Cœur"
+        ]
+      }
+    },
+    "practicalInfo": {
+      "badge": "Informations",
+      "title": "Informations Pratiques",
+      "description": "Tout ce que vous devez savoir pour préparer votre visite",
+      "hours": {
+        "title": "Horaires",
+        "tuesdaySunday": "Mardi - Dimanche",
+        "hours": "9h00 - 18h00",
+        "monday": "Lundi",
+        "closed": "Fermé",
+        "lastEntry": "Dernière entrée",
+        "lastEntryTime": "17h"
+      },
+      "pricing": {
+        "title": "Tarifs",
+        "adults": "Adultes",
+        "adultsPrice": "50 MAD",
+        "students": "Étudiants",
+        "studentsPrice": "25 MAD",
+        "seniors": "Seniors (60+)",
+        "seniorsPrice": "35 MAD",
+        "children": "Enfants (6-12 ans)",
+        "childrenPrice": "25 MAD",
+        "familyPack": "Pack famille",
+        "familyPackPrice": "120 MAD",
+        "disabled": "Visiteurs à mobilité réduite",
+        "disabledPrice": "Gratuit",
+        "residents": "Résidents au Maroc",
+        "residentsPrice": "Gratuit"
+      },
+      "access": {
+        "title": "Accès",
+        "address": "Adresse",
+        "addressValue": "Boulevard Mohammed V, Casablanca",
+        "tramway": "Tramway",
+        "tramwayStop": "Arrêt Place Mohammed V"
+      },
+      "bookingButton": "Réserver ma visite"
+    }
+  },
+  "groupes": {
+    "breadcrumb": {
+      "visit": "Visiter",
+      "groups": "Groupes"
+    },
+    "hero": {
+      "title": "Visites de Groupe",
+      "description": "Découvrez ensemble le patrimoine",
+      "imageAlt": "Visite de groupe"
+    },
+    "introduction": {
+      "title": "Découvrez l'Ex Église Sacré-Cœur en groupe",
+      "description1": "Vous souhaitez découvrir l'Ex Église Sacré-Cœur entre amis ou en petit groupe (plus de 10 personnes) ? Profitez d'une visite libre ou accompagnée, selon vos envies, pour explorer l'histoire, l'architecture et la symbolique de ce monument emblématique de Casablanca.",
+      "description2": "Choisissez le parcours qui vous correspond le mieux, prenez le temps d'admirer les vitraux, les volumes et la lumière, et laissez-vous porter par la magie du lieu.",
+      "imageAlt": "Guide avec groupe"
+    },
+    "practicalInfo": {
+      "badge": "Informations Pratiques",
+      "title": "Informations pratiques",
+      "description": "Toutes les informations essentielles pour organiser votre visite de groupe.",
+      "booking": {
+        "title": "Réservation",
+        "description": "Contactez-nous par téléphone ou via notre formulaire en ligne pour organiser votre visite."
+      },
+      "hours": {
+        "title": "Horaires disponibles",
+        "tuesdaySunday": "Mardi - Dimanche",
+        "hours": "9h00 - 18h00",
+        "monday": "Lundi",
+        "closed": "Fermé"
+      },
+      "contact": {
+        "title": "Nous contacter",
+        "description": "Des questions sur votre visite de groupe ? Notre équipe est là pour vous accompagner et personnaliser votre expérience.",
+        "phone": "Téléphone",
+        "phoneNumber": "+212 522 227 745",
+        "email": "Email",
+        "emailAddress": "contact@casaevents.ma",
+        "quoteButton": "Demander un devis"
+      }
+    }
+  },
+  "evenements": {
+    "breadcrumb": {
+      "events": "Événements"
+    },
+    "hero": {
+      "title": "Événements",
+      "description": "Concerts, expositions, ateliers et festivals au cœur du patrimoine",
+      "imageAlt": "Événements à l'Ex église Sacré-Cœur"
+    },
+    "events": {
+      "title": "Nos Événements",
+      "description": "Revivez les moments marquants qui ont fait vibrer l'Ex église Sacré-Cœur",
+      "festivalEgregore": {
+        "title": "Festival Egregore",
+        "description": "Le festival de hip-hop le plus attendu du Maroc ! Deux jours d'événement exceptionnel avec plus de 40 superstars du rap du Moyen-Orient et d'Afrique du Nord."
+      },
+      "inauguration": {
+        "title": "Soirée Inauguration",
+        "description": "Une soirée d'exception marquant l'ouverture officielle de l'Ex église Sacré-Cœur comme espace culturel. Un moment historique célébrant la renaissance de ce monument Art Déco au cœur de Casablanca."
+      },
+      "smartCity": {
+        "title": "Casablanca Smart City",
+        "description": "Un événement technologique d'envergure présentant l'innovation urbaine et les solutions intelligentes pour la ville de demain. L'Ex église Sacré-Cœur accueille les leaders de la transformation digitale."
+      }
+    }
+  },
+  "reserver": {
+    "breadcrumb": {
+      "reserve": "Réserver"
+    },
+    "hero": {
+      "title": "Réserver votre espace",
+      "description": "Un lieu d'exception pour vos événements",
+      "imageAlt": "Réserver l'Ex Église Sacré-Cœur"
+    },
+    "introduction": {
+      "title": "Un espace d'exception pour vos événements",
+      "description1": "Découvrez des possibilités infinies au cœur de Casablanca. L'Ex Église Sacré-Cœur ouvre ses portes pour accueillir vos événements les plus prestigieux.",
+      "description2": "Des concerts intimes aux grandes expositions artistiques, des événements d'entreprise aux célébrations privées, nous offrons des espaces flexibles qui s'adaptent à votre vision.",
+      "description3": "Chaque espace raconte une histoire, chaque événement devient un souvenir. Rejoignez-nous pour écrire le prochain chapitre de l'histoire de ce lieu emblématique."
+    },
+    "video": {
+      "title": "Revivez l'inauguration du l'Ex Église Sacré-Cœur",
+      "subtitle": "Un voyage architectural à travers l'histoire et l'élégance"
+    },
+    "spaces": {
+      "title": "Découvrez nos espaces",
+      "description": "L'Ex Église Sacré-Cœur met à votre disposition une variété d'espaces, intérieurs comme extérieurs, où chaque détail contribue à la réussite de vos événements.",
+      "subtitle": "Des espaces uniques pour des événements d'exception"
+    },
+    "events": {
+      "title": "Ils nous ont fait",
+      "subtitle": "confiance",
+      "description": "Des marques prestigieuses et institutions de renom ont choisi l'Ex Église Sacré-Cœur pour leurs événements d'exception."
+    },
+    "booking": {
+      "title": "Demande de réservation",
+      "description": "Remplissez ce formulaire et nous vous contacterons dans les 48 heures",
+      "personalInfo": "Informations personnelles",
+      "name": "Nom & Prénom *",
+      "company": "Entreprise *",
+      "email": "Email *",
+      "phone": "Téléphone *",
+      "eventDetails": "Détails de l'événement",
+      "eventType": "Type d'événement *",
+      "selectOption": "Sélectionnez...",
+      "eventTypes": {
+        "festival": "Festival",
+        "concert": "Concert Privé",
+        "photo": "Séance Photo",
+        "shooting": "Tournage",
+        "corporate": "Événement Corporatif",
+        "exhibition": "Exposition",
+        "other": "Autre"
+      },
+      "desiredDate": "Date souhaitée *",
+      "numberOfPeople": "Nombre de personnes",
+      "projectDetails": "Détails de votre projet",
+      "projectPlaceholder": "Décrivez votre événement, vos besoins spécifiques, horaires souhaités...",
+      "contactText": "Contactez notre équipe pour organiser votre événement à l'Ex Église Sacré-Cœur et profitez d'un cadre prestigieux au cœur de Casablanca.",
+      "bookNow": "Réserver maintenant"
+    },
+    "services": {
+      "title": "Services inclus",
+      "items": {
+        "access": "Accès exclusif aux espaces",
+        "team": "Équipe d'accueil dédiée",
+        "sound": "Système son et éclairage",
+        "furniture": "Mobilier et décoration de base",
+        "security": "Sécurité et surveillance",
+        "cleaning": "Nettoyage après événement",
+        "support": "Assistance technique"
+      }
+    }
+  }
+}

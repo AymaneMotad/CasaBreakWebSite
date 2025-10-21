@@ -1,24 +1,30 @@
+"use client"
+
 import Image from "next/image"
 import { Navigation } from "@/components/navigation"
 import { Footer } from "@/components/footer"
 import { Breadcrumb } from "@/components/breadcrumb"
+import { useTranslations, useLocale } from 'next-intl'
 
 export default function EvenementsPage() {
+  const t = useTranslations('evenements')
+  const locale = useLocale()
+  
   const pastEvents = [
     {
-      title: "Festival Egregore",
+      title: t("events.festivalEgregore.title"),
       image: "/dosei.jpeg",
-      description: "Le festival de hip-hop le plus attendu du Maroc ! Deux jours d'événement exceptionnel avec plus de 40 superstars du rap du Moyen-Orient et d'Afrique du Nord.",
+      description: t("events.festivalEgregore.description"),
     },
     {
-      title: "Soirée Inauguration",
+      title: t("events.inauguration.title"),
       image: "/site-map-images/evenements-optimized/soiree/evenement - soiree 2.jpg",
-      description: "Une soirée d'exception marquant l'ouverture officielle de l'Ex église Sacré-Cœur comme espace culturel. Un moment historique célébrant la renaissance de ce monument Art Déco au cœur de Casablanca.",
+      description: t("events.inauguration.description"),
     },
     {
-      title: "Casablanca Smart City",
+      title: t("events.smartCity.title"),
       image: "/site-map-images/evenements-optimized/smart-city/evenement-smartcity2.jpg",
-      description: "Un événement technologique d'envergure présentant l'innovation urbaine et les solutions intelligentes pour la ville de demain. L'Ex église Sacré-Cœur accueille les leaders de la transformation digitale.",
+      description: t("events.smartCity.description"),
     },
   ]
 
@@ -31,7 +37,7 @@ export default function EvenementsPage() {
         <div className="max-w-[1400px] mx-auto px-6 lg:px-12">
           <Breadcrumb 
             items={[
-              { label: "Événements", href: "/evenements" }
+              { label: t("breadcrumb.events"), href: `/${locale}/evenements` }
             ]} 
           />
         </div>
@@ -41,7 +47,7 @@ export default function EvenementsPage() {
       <section className="relative h-[70vh] flex items-center justify-center overflow-hidden">
         <Image 
           src="/site-map-images/evenements-optimized/soiree/evenement - soiree 1.jpg" 
-          alt="Événements à l'Ex église Sacré-Cœur" 
+          alt={t("hero.imageAlt")} 
           fill 
           className="object-cover animate-subtle-float" 
           priority 
@@ -87,10 +93,10 @@ export default function EvenementsPage() {
         <div className="relative z-10 text-center px-6">
        
           <h1 className="font-serif text-6xl md:text-8xl lg:text-9xl text-off-white mb-6 animate-gentle-fade-in stagger-1 text-enhanced">
-            Événements
+            {t("hero.title")}
           </h1>
           <p className="font-sans text-lg md:text-xl text-off-white/90 max-w-3xl mx-auto leading-relaxed animate-gentle-fade-in stagger-2 text-readable">
-            Concerts, expositions, ateliers et festivals au cœur du patrimoine
+            {t("hero.description")}
           </p>
         </div>
       </section>
@@ -105,10 +111,10 @@ export default function EvenementsPage() {
               <div className="h-px w-12 bg-gradient-to-l from-transparent to-vibrant-pink/60"></div>
             </div>
             <h2 className="font-serif text-4xl md:text-5xl lg:text-6xl text-charcoal mb-6 animate-fade-in-up">
-              Nos Événements
+              {t("events.title")}
             </h2>
             <p className="font-sans text-lg md:text-xl text-charcoal/70 max-w-3xl mx-auto leading-relaxed animate-fade-in-up stagger-1">
-              Revivez les moments marquants qui ont fait vibrer l'Ex église Sacré-Cœur
+              {t("events.description")}
             </p>
           </div>
 

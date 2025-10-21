@@ -1,8 +1,10 @@
 "use client"
 
 import { VideoPlayer } from "./video-player"
+import { useTranslations } from 'next-intl'
 
 export function SpinningCathedral() {
+  const t = useTranslations('home.spinningCathedral')
   return (
     <section className="py-16 lg:py-24 bg-white relative overflow-hidden">
       {/* Moroccan Artistic Elements */}
@@ -35,12 +37,11 @@ export function SpinningCathedral() {
           </div>
           
           <h2 className="font-serif text-3xl lg:text-5xl text-charcoal mb-6 leading-tight">
-            Un Monument au Cœur de Casablanca
+            {t("title")}
           </h2>
           
           <p className="font-sans text-base lg:text-lg text-charcoal/70 leading-relaxed max-w-3xl mx-auto">
-            Découvrez l'histoire fascinante de l'Ex église Sacré-Cœur, un joyau architectural Art Déco 
-            qui continue d'inspirer et de rassembler les Casablancais et les visiteurs du monde entier.
+            {t("description")}
           </p>
         </div>
 

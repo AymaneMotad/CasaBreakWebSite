@@ -1,8 +1,11 @@
 "use client"
 
 import { VideoPlayer } from "./video-player"
+import { useTranslations } from 'next-intl'
 
 export function HeroSection() {
+  const t = useTranslations('home.hero')
+  
   return (
     <section className="relative min-h-[110vh] lg:min-h-[120vh] flex items-center justify-center bg-charcoal overflow-hidden pt-32 lg:pt-40">
       <div className="absolute inset-0 z-0">
@@ -51,7 +54,7 @@ export function HeroSection() {
         <div className="relative z-30 animate-gentle-fade-in -mb-6">
           <div className="inline-block px-6 py-3 bg-gradient-to-r from-blue-500 to-blue-700 border-2 border-blue-600 rounded-full shadow-2xl">
             <span className="text-white text-sm font-sans tracking-wider uppercase font-semibold drop-shadow-lg">
-              Patrimoine Culturel • Depuis 1930
+              {t("badge")}
             </span>
           </div>
         </div>
@@ -60,13 +63,12 @@ export function HeroSection() {
         <div className="relative bg-gradient-to-b from-charcoal/40 via-charcoal/30 to-charcoal/50 lg:from-charcoal/60 lg:via-charcoal/40 lg:to-charcoal/70 rounded-2xl backdrop-blur-sm pt-8 pb-8 px-6 lg:px-8 max-w-4xl mx-auto">
           
           <h1 className="relative z-10 font-serif font-normal text-3xl md:text-4xl lg:text-5xl text-off-white mb-4 leading-tight tracking-wide animate-gentle-fade-in stagger-1 drop-shadow-2xl">
-          Un joyau patrimonial au cœur de Casablanca
+          {t("title")}
           </h1>
           
           
           <p className="relative z-10 font-sans text-base md:text-lg text-off-white max-w-xl mx-auto leading-relaxed animate-gentle-fade-in stagger-2 text-readable mb-8 drop-shadow-xl">
-            L'icône du patrimoine casablancais, l'Ex Église Sacré-Cœur, s'éveille à une nouvelle vie.
-            Désormais centre culturel et espace de création, elle incarne la rencontre entre la mémoire d'hier et la modernité d'aujourd'hui.
+            {t("description")}
           </p>
 
           <div className="relative z-10 flex flex-col sm:flex-row gap-4 justify-center items-center animate-gentle-fade-in stagger-3">
@@ -74,13 +76,13 @@ export function HeroSection() {
               href="/visiter/individuels"
               className="px-8 py-3 bg-gradient-to-r from-blue-500 to-blue-700 text-white text-sm font-sans tracking-wider uppercase hover:shadow-xl hover:scale-105 transition-all duration-300 rounded-lg shadow-lg border-2 border-blue-600 font-semibold"
             >
-              Visiter
+              {t("visitButton")}
             </a>
             <a
               href="/decouvrir/histoire"
               className="px-8 py-3 bg-transparent border-2 border-off-white/60 text-off-white text-sm font-sans tracking-wider uppercase hover:bg-off-white/20 hover:border-off-white/80 transition-all duration-300 rounded-lg backdrop-blur-sm shadow-lg font-semibold"
             >
-              Découvrir
+              {t("discoverButton")}
             </a>
           </div>
         </div>

@@ -1,32 +1,37 @@
+"use client"
+
 import Image from "next/image"
 import Link from "next/link"
 import { Calendar, Phone } from "lucide-react"
 import { Navigation } from "@/components/navigation"
 import { Footer } from "@/components/footer"
 import { Breadcrumb } from "@/components/breadcrumb"
+import { useTranslations, useLocale } from 'next-intl'
 
 export default function GroupesPage() {
+  const t = useTranslations('groupes')
+  const locale = useLocale()
   return (
     <main className="min-h-screen bg-off-white">
       <Navigation />
       <div className="pt-32 pb-8 bg-off-white">
         <div className="max-w-[1400px] mx-auto px-6 lg:px-12">
           <Breadcrumb items={[
-            { label: "Visiter", href: "/visiter/individuels" },
-            { label: "Groupes", href: "/visiter/groupes" }
+            { label: t("breadcrumb.visit"), href: `/${locale}/visiter/individuels` },
+            { label: t("breadcrumb.groups"), href: `/${locale}/visiter/groupes` }
           ]} />
         </div>
       </div>
       {/* Hero Section */}
       <section className="relative h-[60vh] flex items-center justify-center overflow-hidden">
-        <Image src="/site-cal/architecture-header.JPG" alt="Visite de groupe" fill className="object-cover" priority />
+        <Image src="/site-cal/architecture-header.JPG" alt={t("hero.imageAlt")} fill className="object-cover" priority />
         <div className="absolute inset-0 bg-charcoal/40" />
         <div className="relative z-10 text-center px-6">
           <h1 className="font-serif text-5xl md:text-7xl text-off-white mb-4 animate-fade-in-up text-balance">
-            Visites de Groupe
+            {t("hero.title")}
           </h1>
           <p className="font-sans text-sm md:text-base text-off-white/90 tracking-wider uppercase animate-fade-in-up stagger-1">
-            Découvrez ensemble le patrimoine
+            {t("hero.description")}
           </p>
         </div>
       </section>
@@ -37,20 +42,19 @@ export default function GroupesPage() {
         <div className="grid lg:grid-cols-2 gap-16 items-center">
           <div className="animate-fade-in-up">
             <h2 className="font-serif text-4xl md:text-5xl text-charcoal mb-6 text-balance">
-              Découvrez l'Ex Église Sacré-Cœur en groupe
+              {t("introduction.title")}
             </h2>
             <p className="font-sans text-base text-charcoal/70 leading-relaxed mb-6">
-              Vous souhaitez découvrir l'Ex Église Sacré-Cœur entre amis ou en petit groupe (plus de 10 personnes) ? 
-              Profitez d'une visite libre ou accompagnée, selon vos envies, pour explorer l'histoire, l'architecture et la symbolique de ce monument emblématique de Casablanca.
+              {t("introduction.description1")}
             </p>
             <p className="font-sans text-base text-charcoal/70 leading-relaxed">
-              Choisissez le parcours qui vous correspond le mieux, prenez le temps d'admirer les vitraux, les volumes et la lumière, et laissez-vous porter par la magie du lieu.
+              {t("introduction.description2")}
             </p>
           </div>
           <div className="relative h-[500px] animate-fade-in-up stagger-1">
             <Image 
               src="/site-cal/visiter-1.JPG" 
-              alt="Guide avec groupe" 
+              alt={t("introduction.imageAlt")} 
               fill 
               className="object-cover rounded-2xl shadow-2xl hover-scale-subtle transition-smooth" 
             />
@@ -86,14 +90,14 @@ export default function GroupesPage() {
           <div className="text-center mb-20">
             <div className="inline-block px-6 py-3 bg-gradient-to-r from-vibrant-pink/10 to-warm-terracotta/10 border border-vibrant-pink/20 rounded-full mb-8 animate-gentle-fade-in">
               <span className="text-charcoal/80 text-sm font-sans tracking-wider uppercase">
-                Informations Pratiques
+                {t("practicalInfo.badge")}
               </span>
             </div>
             <h2 className="font-serif text-5xl md:text-6xl text-charcoal mb-8 animate-gentle-fade-in stagger-1">
-              Informations pratiques
+              {t("practicalInfo.title")}
             </h2>
             <p className="font-sans text-xl text-charcoal/70 max-w-3xl mx-auto leading-relaxed animate-gentle-fade-in stagger-2">
-              Toutes les informations essentielles pour organiser votre visite de groupe.
+              {t("practicalInfo.description")}
             </p>
           </div>
 
@@ -107,11 +111,11 @@ export default function GroupesPage() {
                   <div className="p-2.5 bg-gradient-to-br from-blue-500/15 to-blue-500/10 rounded-lg shadow-sm">
                     <Calendar className="h-6 w-6 text-blue-600" />
                   </div>
-                  <h3 className="font-serif text-2xl text-blue-600 tracking-tight font-medium">Réservation</h3>
+                  <h3 className="font-serif text-2xl text-blue-600 tracking-tight font-medium">{t("practicalInfo.booking.title")}</h3>
                 </div>
                 <div className="space-y-6">
                   <p className="font-sans text-base text-charcoal/80 leading-relaxed">
-                    Contactez-nous par téléphone ou via notre formulaire en ligne pour organiser votre visite.
+                    {t("practicalInfo.booking.description")}
                   </p>
                 </div>
               </div>
@@ -125,17 +129,17 @@ export default function GroupesPage() {
                   <div className="p-2.5 bg-gradient-to-br from-blue-500/15 to-blue-500/10 rounded-lg shadow-sm">
                     <Calendar className="h-6 w-6 text-blue-600" />
                   </div>
-                  <h3 className="font-serif text-2xl text-blue-600 tracking-tight font-medium">Horaires disponibles</h3>
+                  <h3 className="font-serif text-2xl text-blue-600 tracking-tight font-medium">{t("practicalInfo.hours.title")}</h3>
                 </div>
                 <div className="space-y-6">
                   <div className="flex justify-between items-baseline">
-                    <span className="font-sans text-sm text-charcoal/50 uppercase tracking-wider">Mardi - Dimanche</span>
-                    <span className="font-sans text-lg text-charcoal font-light">9h00 - 18h00</span>
+                    <span className="font-sans text-sm text-charcoal/50 uppercase tracking-wider">{t("practicalInfo.hours.tuesdaySunday")}</span>
+                    <span className="font-sans text-lg text-charcoal font-light">{t("practicalInfo.hours.hours")}</span>
                   </div>
                   <div className="h-px bg-charcoal/5"></div>
                   <div className="flex justify-between items-baseline">
-                    <span className="font-sans text-sm text-charcoal/50 uppercase tracking-wider">Lundi</span>
-                    <span className="font-sans text-lg text-charcoal font-light">Fermé</span>
+                    <span className="font-sans text-sm text-charcoal/50 uppercase tracking-wider">{t("practicalInfo.hours.monday")}</span>
+                    <span className="font-sans text-lg text-charcoal font-light">{t("practicalInfo.hours.closed")}</span>
                   </div>
                 </div>
               </div>
@@ -149,18 +153,18 @@ export default function GroupesPage() {
                 <div className="p-4 bg-gradient-to-br from-vibrant-pink to-warm-terracotta rounded-xl">
                   <Phone className="h-8 w-8 text-off-white" />
                 </div>
-                <h3 className="font-serif text-3xl">Nous contacter</h3>
+                <h3 className="font-serif text-3xl">{t("practicalInfo.contact.title")}</h3>
               </div>
               <p className="font-sans text-lg mb-8 leading-relaxed text-off-white/90">
-                Des questions sur votre visite de groupe ? Notre équipe est là pour vous accompagner et personnaliser votre expérience.
+                {t("practicalInfo.contact.description")}
               </p>
               <div className="space-y-4 mb-8">
                 <div className="flex items-center justify-between gap-4 p-4 bg-off-white/10 rounded-lg">
                   <div className="flex items-center gap-4">
                     <Phone className="h-5 w-5 text-vibrant-pink" />
                     <div>
-                      <p className="font-semibold">Téléphone</p>
-                      <p className="text-off-white/80">+212 522 227 745</p>
+                      <p className="font-semibold">{t("practicalInfo.contact.phone")}</p>
+                      <p className="text-off-white/80">{t("practicalInfo.contact.phoneNumber")}</p>
                     </div>
                   </div>
                 </div>
@@ -168,8 +172,8 @@ export default function GroupesPage() {
                   <div className="flex items-center gap-4">
                     <Calendar className="h-5 w-5 text-warm-terracotta" />
                     <div>
-                      <p className="font-semibold">Email</p>
-                      <p className="text-off-white/80">contact@casaevents.ma</p>
+                      <p className="font-semibold">{t("practicalInfo.contact.email")}</p>
+                      <p className="text-off-white/80">{t("practicalInfo.contact.emailAddress")}</p>
                     </div>
                   </div>
                 </div>
@@ -178,7 +182,7 @@ export default function GroupesPage() {
                 href="/reserver"
                 className="inline-flex items-center justify-center px-8 py-4 bg-gradient-to-r from-blue-500 to-blue-700 text-white text-sm font-sans tracking-wider uppercase hover:shadow-xl hover:scale-105 transition-all duration-300 rounded-lg font-semibold"
               >
-                Demander un devis
+                {t("practicalInfo.contact.quoteButton")}
               </Link>
             </div>
           </div>

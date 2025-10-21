@@ -6,9 +6,12 @@ import { Navigation } from "@/components/navigation"
 import { Footer } from "@/components/footer"
 import { Breadcrumb } from "@/components/breadcrumb"
 import { ImageLightbox } from "@/components/image-lightbox"
+import { useTranslations, useLocale } from 'next-intl'
 import { useRef, useState } from "react"
 
 export default function ReserverPage() {
+  const t = useTranslations('reserver')
+  const locale = useLocale()
   const videoRef = useRef<HTMLVideoElement>(null)
   const [isPlaying, setIsPlaying] = useState(false)
 
@@ -31,7 +34,7 @@ export default function ReserverPage() {
         <div className="max-w-[1400px] mx-auto px-6 lg:px-12">
           <Breadcrumb 
             items={[
-              { label: "Réserver", href: "/reserver" }
+              { label: t("breadcrumb.reserve"), href: `/${locale}/reserver` }
             ]} 
           />
         </div>
@@ -39,14 +42,14 @@ export default function ReserverPage() {
 
       {/* Hero Section */}
       <section className="relative h-[50vh] flex items-center justify-center overflow-hidden">
-        <Image src="/reserve.png" alt="Réserver l'Ex Église Sacré-Cœur" fill className="object-cover" priority />
+        <Image src="/reserve.png" alt={t("hero.imageAlt")} fill className="object-cover" priority />
         <div className="absolute inset-0 bg-charcoal/50" />
         <div className="relative z-10 text-center px-6">
           <h1 className="font-serif text-5xl md:text-7xl text-off-white mb-4 animate-fade-in-up text-balance">
-            Réserver votre espace
+            {t("hero.title")}
           </h1>
           <p className="font-sans text-sm md:text-base text-off-white/90 tracking-wider uppercase animate-fade-in-up stagger-1">
-            Un lieu d'exception pour vos événements
+            {t("hero.description")}
           </p>
         </div>
       </section>
@@ -56,10 +59,10 @@ export default function ReserverPage() {
         <div className="grid lg:grid-cols-2 gap-16 items-center">
           <div className="animate-fade-in-up">
             <h2 className="font-serif text-4xl md:text-5xl text-charcoal mb-6 text-balance">
-              Un espace d'exception pour vos événements
+              {t("introduction.title")}
             </h2>
             <p className="font-sans text-base text-charcoal/70 leading-relaxed mb-6">
-            L'Ex Église Sacré-Cœur de Casablanca s’impose aujourd’hui comme un lieu emblématique pour tous types d’événements — professionnels, culturels, institutionnels, artistiques ou privés. Grâce à son architecture monumentale, sa localisation centrale et ses espaces modulables, elle offre un cadre unique, inspirant et prestigieux, adapté à chaque projet.
+            {t("introduction.description1")}
 
 
 
@@ -67,17 +70,17 @@ export default function ReserverPage() {
             </p>
             
             <p className="font-sans text-base text-charcoal/70 leading-relaxed">
-            Notre équipe vous accompagne dans l'organisation de votre événement pour garantir une expérience unique et mémorable.
+            {t("introduction.description2")}
             </p>
             <br />
             <p className="font-sans text-base text-charcoal/70 leading-relaxed">
-            Donnez vie à votre événement dès aujourd’hui , contactez-nous pour réserver votre date et découvrir nos offres personnalisées.
+            {t("introduction.description3")}
             </p>
           </div>
           <div className="relative h-[500px] animate-fade-in-up stagger-1">
             <Image
               src="/site-map-images/reserver sacre coeur/reserver sacre coeur - ferrari /reserver sacre coeur - ferrari 2.jpeg"
-              alt="Événement privé"
+              alt={t("reserver.introduction.imageAlt")}
               fill
               className="object-cover shadow-2xl"
             />
@@ -106,7 +109,7 @@ export default function ReserverPage() {
               <div className="h-px w-16 bg-gradient-to-l from-transparent to-vibrant-pink"></div>
             </div>
             <h2 className="font-serif text-4xl md:text-6xl lg:text-5xl text-charcoal mb-6 tracking-tight">
-              Revivez l'inauguration du l'Ex Église Sacré-Cœur
+              {t("video.title")}
             </h2>
             
             <div className="inline-flex items-center gap-2 mt-6">
@@ -191,7 +194,7 @@ export default function ReserverPage() {
                   <div className="w-2 h-2 rounded-full bg-vibrant-pink"></div>
                 </div>
                 <p className="font-serif text-lg text-charcoal/50 italic">
-                  "Un voyage architectural à travers l'histoire et l'élégance"
+                  "{t("video.subtitle")}"
                 </p>
                 <div className="flex items-center gap-2">
                   <div className="w-2 h-2 rounded-full bg-warm-terracotta"></div>
@@ -224,7 +227,7 @@ export default function ReserverPage() {
               <div className="h-px w-16 bg-gradient-to-l from-transparent to-vibrant-pink"></div>
             </div>
             <h2 className="font-serif text-4xl md:text-6xl lg:text-5xl text-charcoal mb-6 tracking-tight">
-              Découvrez nos espaces
+              {t("spaces.title")}
             </h2>
             
             <div className="inline-flex items-center gap-2 mt-6">
@@ -237,7 +240,7 @@ export default function ReserverPage() {
           {/* Description Section */}
           <div className="text-center mb-16 animate-fade-in-up stagger-1">
             <p className="font-sans text-xl md:text-2xl text-charcoal/80 max-w-5xl mx-auto leading-relaxed">
-              L'Ex Église Sacré-Cœur met à votre disposition une variété d'espaces, intérieurs comme extérieurs, où chaque détail contribue à la réussite de vos événements.
+              {t("spaces.description")}
             </p>
           </div>
 
@@ -422,7 +425,7 @@ export default function ReserverPage() {
                 <div className="w-2 h-2 rounded-full bg-vibrant-pink"></div>
               </div>
               <p className="font-serif text-lg text-charcoal/50 italic">
-                "Des espaces uniques pour des événements d'exception"
+                "{t("spaces.subtitle")}"
               </p>
               <div className="flex items-center gap-2">
                 <div className="w-2 h-2 rounded-full bg-warm-terracotta"></div>
@@ -467,14 +470,14 @@ export default function ReserverPage() {
             </div>
             
             <h2 className="font-serif text-5xl md:text-7xl lg:text-8xl text-off-white mb-8 tracking-tight leading-[0.9]">
-              Ils nous ont fait
+              {t("events.title")}
               <span className="block text-4xl md:text-5xl lg:text-6xl bg-gradient-to-r from-vibrant-pink via-warm-terracotta to-vibrant-pink bg-clip-text text-transparent uppercase font-light tracking-[0.15em] leading-[0.8]">
-                confiance
+                {t("events.subtitle")}
               </span>
             </h2>
             
             <p className="font-sans text-xl md:text-2xl text-off-white/80 max-w-5xl mx-auto leading-relaxed">
-              Des marques prestigieuses et institutions de renom ont choisi l'Ex Église Sacré-Cœur pour leurs événements d'exception.
+              {t("events.description")}
             </p>
           </div>
 
@@ -577,21 +580,21 @@ export default function ReserverPage() {
       <section className="max-w-[1000px] mx-auto px-6 lg:px-12 py-20">
         <div className="bg-charcoal/5 p-10 lg:p-16">
           <h2 className="font-serif text-4xl text-charcoal mb-8 text-center animate-fade-in-up">
-            Demande de réservation
+            {t("booking.title")}
           </h2>
           <p className="font-sans text-sm text-charcoal/70 text-center mb-12 animate-fade-in-up stagger-1">
-            Remplissez ce formulaire et nous vous contacterons dans les 48 heures
+            {t("booking.description")}
           </p>
 
           <form className="space-y-8">
             {/* Personal Information Section */}
             <div className="space-y-6">
-              <h3 className="font-serif text-xl text-charcoal mb-4 animate-fade-in-up">Informations personnelles</h3>
+              <h3 className="font-serif text-xl text-charcoal mb-4 animate-fade-in-up">{t("booking.personalInfo")}</h3>
               
               <div className="grid grid-cols-1 sm:grid-cols-2 gap-6">
                 <div className="animate-fade-in-up stagger-2">
                   <label className="block font-sans text-xs text-charcoal/60 uppercase tracking-wider mb-2">
-                    Nom & Prénom *
+                    {t("booking.name")}
                   </label>
                   <div className="relative">
                     <User className="absolute left-4 top-1/2 -translate-y-1/2 h-5 w-5 text-charcoal/30" />
@@ -606,7 +609,7 @@ export default function ReserverPage() {
 
                 <div className="animate-fade-in-up stagger-3">
                   <label className="block font-sans text-xs text-charcoal/60 uppercase tracking-wider mb-2">
-                    Entreprise *
+                    {t("booking.company")}
                   </label>
                   <div className="relative">
                     <User className="absolute left-4 top-1/2 -translate-y-1/2 h-5 w-5 text-charcoal/30" />
@@ -623,7 +626,7 @@ export default function ReserverPage() {
               <div className="grid grid-cols-1 sm:grid-cols-2 gap-6">
                 <div className="animate-fade-in-up stagger-4">
                   <label className="block font-sans text-xs text-charcoal/60 uppercase tracking-wider mb-2">
-                    Email *
+                    {t("booking.email")}
                   </label>
                   <div className="relative">
                     <Mail className="absolute left-4 top-1/2 -translate-y-1/2 h-5 w-5 text-charcoal/30" />
@@ -638,7 +641,7 @@ export default function ReserverPage() {
 
                 <div className="animate-fade-in-up stagger-5">
                   <label className="block font-sans text-xs text-charcoal/60 uppercase tracking-wider mb-2">
-                    Téléphone *
+                    {t("booking.phone")}
                   </label>
                   <div className="relative">
                     <Phone className="absolute left-4 top-1/2 -translate-y-1/2 h-5 w-5 text-charcoal/30" />
@@ -655,31 +658,31 @@ export default function ReserverPage() {
 
             {/* Event Information Section */}
             <div className="space-y-6">
-              <h3 className="font-serif text-xl text-charcoal mb-4 animate-fade-in-up">Détails de l'événement</h3>
+              <h3 className="font-serif text-xl text-charcoal mb-4 animate-fade-in-up">{t("booking.eventDetails")}</h3>
               
               <div className="grid grid-cols-1 sm:grid-cols-2 gap-6">
                 <div className="animate-fade-in-up stagger-6">
                   <label className="block font-sans text-xs text-charcoal/60 uppercase tracking-wider mb-2">
-                    Type d'événement *
+                    {t("booking.eventType")}
                   </label>
                   <select
                     required
                     className="w-full px-4 py-4 bg-off-white border border-charcoal/10 focus:border-vibrant-pink focus:outline-none transition-colors font-sans text-sm rounded-lg"
                   >
-                    <option value="">Sélectionnez...</option>
-                    <option value="festival">Festival</option>
-                    <option value="concert">Concert Privé</option>
-                    <option value="photo">Séance Photo</option>
-                    <option value="tournage">Tournage</option>
-                    <option value="corporate">Événement Corporatif</option>
-                    <option value="exposition">Exposition</option>
-                    <option value="autre">Autre</option>
+                    <option value="">{t("booking.selectOption")}</option>
+                    <option value="festival">{t("booking.eventTypes.festival")}</option>
+                    <option value="concert">{t("booking.eventTypes.concert")}</option>
+                    <option value="photo">{t("booking.eventTypes.photo")}</option>
+                    <option value="tournage">{t("booking.eventTypes.shooting")}</option>
+                    <option value="corporate">{t("booking.eventTypes.corporate")}</option>
+                    <option value="exposition">{t("booking.eventTypes.exhibition")}</option>
+                    <option value="autre">{t("booking.eventTypes.other")}</option>
                   </select>
                 </div>
 
                 <div className="animate-fade-in-up stagger-7">
                   <label className="block font-sans text-xs text-charcoal/60 uppercase tracking-wider mb-2">
-                    Date souhaitée *
+                    {t("booking.desiredDate")}
                   </label>
                   <div className="relative">
                     <Calendar className="absolute left-4 top-1/2 -translate-y-1/2 h-5 w-5 text-charcoal/30" />
@@ -694,7 +697,7 @@ export default function ReserverPage() {
 
               <div className="animate-fade-in-up stagger-8">
                 <label className="block font-sans text-xs text-charcoal/60 uppercase tracking-wider mb-2">
-                  Nombre de personnes
+                  {t("booking.numberOfPeople")}
                 </label>
                 <div className="relative">
                   <Users className="absolute left-4 top-1/2 -translate-y-1/2 h-5 w-5 text-charcoal/30" />
@@ -708,12 +711,12 @@ export default function ReserverPage() {
 
               <div className="animate-fade-in-up stagger-9">
                 <label className="block font-sans text-xs text-charcoal/60 uppercase tracking-wider mb-2">
-                  Détails de votre projet
+                  {t("booking.projectDetails")}
                 </label>
                 <textarea
                   rows={6}
                   className="w-full px-4 py-4 bg-off-white border border-charcoal/10 focus:border-vibrant-pink focus:outline-none transition-colors font-sans text-sm resize-none rounded-lg"
-                  placeholder="Décrivez votre événement, vos besoins spécifiques, horaires souhaités..."
+                  placeholder={t("booking.projectPlaceholder")}
                 />
               </div>
             </div>
@@ -721,13 +724,13 @@ export default function ReserverPage() {
             {/* Submit Section */}
             <div className="text-center animate-fade-in-up stagger-10 pt-6 border-t border-charcoal/10">
               <p className="font-sans text-xs text-charcoal/60 mb-6 max-w-2xl mx-auto leading-relaxed">
-                Contactez notre équipe pour organiser votre événement à l'Ex Église Sacré-Cœur et profitez d'un cadre prestigieux au cœur de Casablanca.
+                {t("booking.contactText")}
               </p>
               <button
                 type="submit"
                 className="px-16 py-5 bg-gradient-to-r from-blue-500 to-blue-700 text-white text-sm font-sans tracking-[0.15em] uppercase hover:shadow-2xl hover:scale-105 transition-all duration-300 rounded-lg"
               >
-                Réserver maintenant
+                {t("booking.bookNow")}
               </button>
             </div>
           </form>
@@ -737,16 +740,16 @@ export default function ReserverPage() {
       {/* Services Included */}
       <section className="bg-charcoal text-off-white py-20">
         <div className="max-w-[1400px] mx-auto px-6 lg:px-12">
-          <h2 className="font-serif text-4xl md:text-5xl mb-16 text-center animate-fade-in-up">Services inclus</h2>
+          <h2 className="font-serif text-4xl md:text-5xl mb-16 text-center animate-fade-in-up">{t("services.title")}</h2>
           <div className="grid md:grid-cols-2 lg:grid-cols-4 gap-8">
             {[
-              { icon: Key, text: "Accès exclusif aux espaces" },
-              { icon: UsersRound, text: "Équipe d'accueil dédiée" },
-              { icon: Volume2, text: "Système son et éclairage" },
-              { icon: Sofa, text: "Mobilier et décoration de base" },
-              { icon: Shield, text: "Sécurité et surveillance" },
-              { icon: Sparkles, text: "Nettoyage après événement" },
-              { icon: Headphones, text: "Assistance technique" },
+              { icon: Key, text: t("services.items.access") },
+              { icon: UsersRound, text: t("services.items.team") },
+              { icon: Volume2, text: t("services.items.sound") },
+              { icon: Sofa, text: t("services.items.furniture") },
+              { icon: Shield, text: t("services.items.security") },
+              { icon: Sparkles, text: t("services.items.cleaning") },
+              { icon: Headphones, text: t("services.items.support") },
             ].map((service, index) => {
               const Icon = service.icon
               return (

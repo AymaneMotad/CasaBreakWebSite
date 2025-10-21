@@ -1,4 +1,8 @@
+import { useTranslations } from 'next-intl'
+
 export function MagazineSection() {
+  const t = useTranslations('home.magazine')
+  
   return (
     <section className="py-24 lg:py-32 bg-off-white relative overflow-hidden">
       {/* Subtle Moroccan decorative elements */}
@@ -48,15 +52,13 @@ export function MagazineSection() {
           </div>
           <div className="animate-gentle-fade-in stagger-1">
             <h2 className="font-serif font-normal text-4xl lg:text-5xl text-charcoal mb-6 leading-tight text-enhanced">
-              Un chef-d'œuvre architectural
+              {t("title1")}
             </h2>
             <p className="font-sans text-base lg:text-lg text-charcoal/70 leading-relaxed mb-4 text-readable">
-              L'Ex église Sacré-Cœur de Casablanca, érigé en 1930, incarne l'élégance de l'architecture Art Déco. Ses lignes
-              épurées et sa façade blanche immaculée en font un monument emblématique de la ville.
+              {t("description1")}
             </p>
             <p className="font-sans text-base lg:text-lg text-charcoal/70 leading-relaxed text-readable">
-              Aujourd'hui transformé en centre culturel, il accueille expositions, concerts et événements qui célèbrent
-              le patrimoine marocain et international.
+              {t("description1b")}
             </p>
           </div>
         </div>
@@ -65,15 +67,13 @@ export function MagazineSection() {
         <div className="grid lg:grid-cols-2 gap-12 lg:gap-20 items-center mb-32 lg:pl-20">
           <div className="order-2 lg:order-1 animate-slide-in-left stagger-1">
             <h2 className="font-serif font-normal text-4xl lg:text-5xl text-charcoal mb-6 leading-tight">
-              Un mélange harmonieux de styles
+              {t("title2")}
             </h2>
             <p className="font-sans text-base lg:text-lg text-charcoal/70 leading-relaxed mb-4">
-              L'édifice dialogue avec l'architecture mauresque traditionnelle tout en affirmant sa modernité. Ses
-              vitraux colorés et ses volumes généreux créent une atmosphère unique.
+              {t("description2")}
             </p>
             <p className="font-sans text-base lg:text-lg text-charcoal/70 leading-relaxed">
-              Chaque détail architectural raconte l'histoire d'une époque où l'art et la foi se rencontraient dans une
-              harmonie parfaite.
+              {t("description2b")}
             </p>
           </div>
           <div className="order-1 lg:order-2 animate-slide-in-right stagger-1">
@@ -96,15 +96,13 @@ export function MagazineSection() {
           </div>
           <div className="animate-slide-in-right stagger-2">
             <h2 className="font-serif font-normal text-4xl lg:text-5xl text-charcoal mb-6 leading-tight">
-              Un symbole de la diversité culturelle
+              {t("title3")}
             </h2>
             <p className="font-sans text-base lg:text-lg text-charcoal/70 leading-relaxed mb-4">
-              L'Ex église Sacré-Cœur témoigne de la richesse du patrimoine culturel de Casablanca. Elle représente un
-              pont entre les cultures, les époques et les communautés.
+              {t("description3")}
             </p>
             <p className="font-sans text-base lg:text-lg text-charcoal/70 leading-relaxed">
-              Aujourd'hui, elle continue d'inspirer artistes, architectes et visiteurs du monde entier, perpétuant son
-              rôle de lieu de rencontre et d'échange.
+              {t("description3b")}
             </p>
           </div>
         </div>

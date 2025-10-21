@@ -1,4 +1,8 @@
+import { useTranslations } from 'next-intl'
+
 export function NewsletterSection() {
+  const t = useTranslations('home.newsletter')
+  
   return (
     <section className="py-24 lg:py-32 bg-cream relative overflow-hidden">
       {/* Moroccan Artistic Elements */}
@@ -49,24 +53,23 @@ export function NewsletterSection() {
       
       <div className="max-w-[800px] mx-auto px-6 lg:px-12 text-center relative z-10">
         <h2 className="font-serif font-normal text-5xl lg:text-6xl text-charcoal mb-6 animate-fade-in-up">
-          Rejoignez-nous
+          {t("title")}
         </h2>
         <p className="font-sans text-lg text-charcoal/70 leading-relaxed mb-12 animate-fade-in-up stagger-1">
-          Inscrivez-vous à notre newsletter pour recevoir les dernières actualités sur nos événements, expositions et
-          activités culturelles à l'Ex église Sacré-Cœur de Casablanca.
+          {t("description")}
         </p>
 
         <form className="flex flex-col sm:flex-row gap-4 max-w-lg mx-auto animate-scale-in stagger-2">
           <input
             type="email"
-            placeholder="Votre adresse email"
+            placeholder={t("placeholder")}
             className="flex-1 px-6 py-4 bg-off-white border border-charcoal/20 rounded-md font-sans text-charcoal placeholder:text-charcoal/40 focus:outline-none focus:border-charcoal/40 transition-colors"
           />
           <button
             type="submit"
             className="px-8 py-4 bg-gradient-to-r from-blue-500 to-blue-700 text-white font-sans text-sm tracking-wide uppercase rounded-md hover:shadow-xl hover:scale-105 transition-all duration-300 whitespace-nowrap border-2 border-blue-600"
           >
-            S'inscrire
+            {t("subscribe")}
           </button>
         </form>
       </div>

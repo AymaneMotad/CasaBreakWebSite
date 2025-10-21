@@ -1,0 +1,568 @@
+{
+  "navigation": {
+    "home": "Home",
+    "discover": "Discover",
+    "history": "History",
+    "architecture": "Architecture",
+    "visit": "Visit",
+    "individuals": "Individuals & Families",
+    "groups": "Groups",
+    "events": "Events",
+    "reserve": "Reserve Your Space",
+    "tickets": "Tickets"
+  },
+  "home": {
+    "hero": {
+      "badge": "Cultural Heritage • Since 1930",
+      "title": "A heritage jewel in the heart of Casablanca",
+      "description": "The iconic heritage of Casablanca, the former Sacred Heart Church, awakens to new life. Now a cultural center and creative space, it embodies the meeting between yesterday's memory and today's modernity.",
+      "visitButton": "Visit",
+      "discoverButton": "Discover"
+    },
+    "magazine": {
+      "title1": "An architectural masterpiece",
+      "description1": "The former Sacred Heart Church of Casablanca, built in 1930, embodies the elegance of Art Deco architecture. Its clean lines and immaculate white facade make it an iconic monument of the city.",
+      "description1b": "Today transformed into a cultural center, it hosts exhibitions, concerts and events that celebrate Moroccan and international heritage.",
+      "title2": "A harmonious blend of styles",
+      "description2": "The building dialogues with traditional Moorish architecture while asserting its modernity. Its colorful stained glass windows and generous volumes create a unique atmosphere.",
+      "description2b": "Every architectural detail tells the story of an era where art and faith met in perfect harmony.",
+      "title3": "A symbol of cultural diversity",
+      "description3": "The former Sacred Heart Church bears witness to the richness of Casablanca's cultural heritage. It represents a bridge between cultures, eras and communities.",
+      "description3b": "Today, it continues to inspire artists, architects and visitors from around the world, perpetuating its role as a place of meeting and exchange."
+    },
+    "heritage": {
+      "title": "Memory of Casablanca",
+      "description": "At the center of Casablanca, the former Sacred Heart Church embodies the link between tradition and modernity. Built in the 1930s, this iconic monument bears witness to the city's rich cultural and architectural heritage. Transformed over the decades, it has managed to preserve its authenticity while reinventing itself as a space for creation and sharing. A place of memory that has become a place of life, it illustrates Casablanca's ability to make past and future dialogue.",
+      "exploreButton": "Explore the history",
+      "cards": {
+        "history": {
+          "title": "History",
+          "description": "Discover the fascinating history of this monument from its construction in 1930 to its transformation into a cultural center.",
+          "link": "Learn more"
+        },
+        "architecture": {
+          "title": "Architecture",
+          "description": "Explore the architectural details, Art Deco influences and construction techniques of the era.",
+          "link": "Learn more"
+        },
+        "visits": {
+          "title": "Guided tours",
+          "description": "Join our guided tours with experts for an in-depth discovery of the heritage.",
+          "link": "Learn more"
+        }
+      }
+    },
+    "spinningCathedral": {
+      "title": "A Monument in the Heart of Casablanca",
+      "description": "Discover the fascinating history of the Ex Sacred Heart Church, an Art Deco architectural gem that continues to inspire and bring together Casablancans and visitors from around the world."
+    },
+    "practical": {
+      "badge": "Practical Information",
+      "title": "Prepare your visit",
+      "description": "Prepare your visit to the former Sacred Heart Church with complete peace of mind: find all the essential information here.",
+      "sections": {
+        "hours": {
+          "title": "Opening Hours",
+          "tuesdaySunday": "Tuesday - Sunday",
+          "hours": "9am - 6pm",
+          "lastEntry": "Last entry",
+          "lastEntryTime": "5pm",
+          "monday": "Monday",
+          "closed": "Closed"
+        },
+        "access": {
+          "title": "Access",
+          "address": "Address",
+          "addressValue": "Corner of rue d'Alger and boulevard Rachidi<br />Gautier Quarter, Casablanca 20250",
+          "tramway": "Tramway",
+          "tramwayStop": "Place Mohammed V"
+        },
+        "pricing": {
+          "title": "Pricing",
+          "adult": "Adult",
+          "student": "Student",
+          "senior": "Senior (60+)",
+          "disabled": "Visitors with reduced mobility",
+          "residents": "Moroccan residents",
+          "free": "Free"
+        }
+      },
+      "actions": {
+        "booking": {
+          "title": "Book your visit",
+          "description": "Book your visit slot to avoid waiting and fully enjoy your discovery of the Art Deco heritage.",
+          "bookNow": "Book now",
+          "groupVisit": "Group visit"
+        },
+        "contact": {
+          "title": "Contact us",
+          "description": "Questions about your visit? Our team is here to accompany you and personalize your experience.",
+          "phone": "Phone",
+          "email": "Email",
+          "contactUs": "Contact us"
+        }
+      }
+    },
+    "availability": {
+      "title": "Our availability",
+      "description": "Check our calendar to see available dates and book your visit or event"
+    },
+    "booking": {
+      "title": "Would you like to book tickets for your upcoming events at the former Sacred Heart Church?",
+      "description": "Discover our online booking platform and access all events at the former Sacred Heart Church with a single click.",
+      "features": {
+        "calendar": {
+          "title": "Real-time calendar",
+          "description": "View all upcoming events"
+        },
+        "instant": {
+          "title": "Instant booking",
+          "description": "Immediate confirmation by email"
+        }
+      },
+      "bookNow": "Book now"
+    },
+    "newsletter": {
+      "title": "Join us",
+      "description": "Subscribe to our newsletter to receive the latest news about our events, exhibitions and cultural activities at the former Sacred Heart Church in Casablanca.",
+      "placeholder": "Your email address",
+      "subscribe": "Subscribe"
+    },
+    "footer": {
+      "description": "Historic Art Deco monument and cultural space in the heart of Casablanca since 1930. An exceptional place where history meets modernity.",
+      "contact": "Contact",
+      "address": "Address",
+      "addressValue": "Corner of rue d'Alger and boulevard Rachidi<br />Gautier Quarter, Casablanca 20250",
+      "phone": "Phone",
+      "email": "Email",
+      "sections": {
+        "home": "Home",
+        "discover": "Discover",
+        "history": "History",
+        "architecture": "Architecture",
+        "visit": "Visit",
+        "individuals": "Individuals",
+        "groups": "Groups",
+        "events": "Events",
+        "reserve": "Reserve"
+      },
+      "links": {
+        "ourEvents": "Our Events",
+        "reserveSpace": "Reserve your space",
+        "tickets": "Tickets"
+      },
+      "follow": "Follow us",
+      "location": "Location",
+      "openInMaps": "Open in Google Maps",
+      "copyright": "© former Sacred Heart Church Casablanca. All rights reserved."
+    }
+  },
+  "histoire": {
+    "breadcrumb": {
+      "discover": "Discover",
+      "history": "History"
+    },
+    "hero": {
+      "badge": "Historical Heritage",
+      "title": "History",
+      "description": "An iconic monument of Casablanca that tells the story of the city through the 21st century",
+      "photoCredit": "Photo from the Flandrin Collection, private collection of the Banque Populaire Foundation"
+    },
+    "timeline": {
+      "title": "Historical Timeline",
+      "description": "Discover the key stages that shaped the history of this iconic monument",
+      "events": {
+        "1923": {
+          "title": "The beginning of a symbolic project",
+          "description": "The construction of the former Sacred Heart Church was launched under the French protectorate, at the initiative of the Catholic community of Casablanca. It bears witness to this community's desire to assert its presence in a city in full transformation. The objective was to erect a major place of worship in the heart of a city on the rise, reflecting the rapid urban development and dynamism of the metropolis. This project thus fits into the context of Casablanca's expansion, where modernity and faith come together to give birth to an iconic monument of its time.",
+          "audioTitle": "Listen to the story of 1923"
+        },
+        "1930": {
+          "title": "The completion of an architectural masterpiece",
+          "description1": "The official inauguration of the former Sacred Heart Church marks a major milestone in the architectural and cultural history of Casablanca. Designed by architect Paul Tournon, the building stands out for its avant-garde character, the result of a skillful marriage between Gothic art and Art Deco, a style then unprecedented in North Africa.",
+          "description2": "With its soaring vaults, geometric stained glass windows and clean facades, the church embodies the modernity and elegance characteristic of 1930s Casablanca. This architectural masterpiece bears witness to the aesthetic refinement of its era and the desire to make the former Sacred Heart Church a strong symbol of the city, at the crossroads between religious tradition and urban innovation.",
+          "audioTitle": "Listen to the story of 1930"
+        },
+        "1956": {
+          "title": "Morocco's independence: a turning point",
+          "description1": "After Morocco's independence, attendance at the former Sacred Heart Church gradually declined. Little by little, the building lost its initial religious function, a direct consequence of the social and demographic transformations of the city.",
+          "description2": "However, far from falling into oblivion, the church acquired a new status: that of a heritage and cultural symbol of Casablanca. Its remarkable architecture and its place in the heart of the city make it a place charged with history, witness to the colonial past but also to the urban and artistic evolution of modern Morocco.",
+          "audioTitle": "Listen to the story of 1956"
+        },
+        "1976": {
+          "title": "Deconsecration and change of use",
+          "description1": "The former Sacred Heart Church is officially deconsecrated, marking the end of its religious use. This change offers it a new life as a cultural and exhibition space, open to creation and artistic dialogue.",
+          "description2": "From then on, the monument hosts various events such as concerts, exhibitions, screenings and numerous cultural events. This renewal transforms the building into a living and inclusive place, where heritage and modernity meet, making the former Sacred Heart Church a symbol of Casablanca's cultural vitality.",
+          "audioTitle": "Listen to the story of 1976"
+        },
+        "1990-2000": {
+          "title": "Heritage recognition",
+          "description1": "Listed among the iconic monuments of Casablanca's architectural heritage, the former Sacred Heart Church occupies a special place in the city's history. With its bold reinforced concrete structure and revisited neo-Gothic style, it bears witness to the architectural genius and innovative spirit of its era.",
+          "description2": "Its unique appearance now attracts architects, researchers and visitors from around the world, fascinated by the harmony between tradition and modernity that the building embodies. A true urban and cultural landmark, the former Sacred Heart Church remains a strong symbol of Casablanca's heritage and the richness of its artistic legacy.",
+          "audioTitle": "Listen to the story of 1990-2000"
+        },
+        "2010": {
+          "title": "Beginning of rehabilitation",
+          "description1": "Restoration and security work was undertaken to preserve the former Sacred Heart Church, weakened by time and years of exposure to the elements. These interventions aim to safeguard the solidity of the building while respecting its original architecture, a strong symbol of Casablanca's heritage.",
+          "description2": "At the same time, a clear will emerges: to give new life to this historic monument by transforming it into a true center of creativity and cultural dialogue. The objective is to make it a place open to all, where arts, ideas and generations meet, thus perpetuating the living and inspiring spirit of the former Sacred Heart Church.",
+          "audioTitle": "Listen to the story of 2010"
+        },
+        "today": {
+          "label": "Today",
+          "title": "Renaissance of a heritage jewel",
+          "description1": "The site of the former Sacred Heart Church is reborn today as a true cultural, artistic and tourist center, symbol of the vitality and renewal of Casablanca. This iconic place transforms into a space of encounter between memory and modernity, where heritage, art, innovation and citizenship intersect.",
+          "description2": "By hosting exhibitions, events and creative initiatives, the cathedral now fits into a sustainable approach to enhancing Casablanca's heritage. It embodies the will to preserve history while reinventing it, offering the city a living, inspiring space open to the world.",
+          "audioTitle": "Listen to the story of today"
+        }
+      }
+    },
+    "cta": {
+      "badge": "Continue your discovery",
+      "title": "Explore the Architecture",
+      "description": "Dive into the exceptional architectural details of the former Sacred Heart Church. Discover how Art Deco and modernism meet in this unique masterpiece.",
+      "button": "Discover the Architecture",
+      "label": "Art Deco Architecture"
+    }
+  },
+  "architecture": {
+    "breadcrumb": {
+      "discover": "Discover",
+      "architecture": "Architecture"
+    },
+    "hero": {
+      "badge": "Art Deco Architecture",
+      "title": "Architecture",
+      "description": "A masterpiece of Moroccan Art Deco combining Gothic tradition and modernity",
+      "imageAlt": "Architecture of the former Sacred Heart Church"
+    },
+    "features": {
+      "artDeco": {
+        "title": "Between Art Deco and spiritual modernism",
+        "description": "The architecture of the former Sacred Heart Church is a pioneering work of the Moroccan Art Deco movement, where spirituality and technical innovation meet. The choice of reinforced concrete, an innovative material at the time, allowed the creation of vertiginous volumes, soaring vaults, and an interior space of exceptional luminous lightness. The rhythmic openings of stained glass windows let in filtered light, transforming each ray into a colored vibration on the white walls.",
+        "audioTitle": "Listen: Between Art Deco and spiritual modernism"
+      },
+      "culturalAlliance": {
+        "title": "A subtle alliance between cultures",
+        "description": "The building's aesthetic evokes a dialogue between European and Arab-Andalusian styles. The geometric lattices that decorate the facades recall local craftsmanship, while the two soaring bell towers echo Islamic architecture. This hybridization makes the former Sacred Heart Church a unique symbol of 1930s Casablanca, a city of exchanges and cultural coexistence.",
+        "audioTitle": "Listen: A subtle alliance between cultures"
+      },
+      "restoration": {
+        "title": "A respectful and innovative restoration",
+        "description": "During the renovation, each element was treated with care: the pillars, vaults, stained glass windows and domes were cleaned, consolidated and durably protected. Particular attention was paid to acoustics, with the addition of absorbing panels to reduce reverberation while preserving the monumental volume. Contemporary interventions, sober and reversible, integrate harmoniously into the original structure, revealing the geometric power and architectural purity of the building.",
+        "audioTitle": "Listen: A respectful and innovative restoration"
+      },
+      "livingSpace": {
+        "title": "A living and modular space",
+        "description": "Thanks to its interior modularity, the former Sacred Heart Church now adapts to new functions: exhibitions, concerts, conferences, artistic installations or performances. Its grandiose proportions and natural light offer a unique setting where heritage dialogues with contemporary creation.",
+        "audioTitle": "Listen: A living and modular space"
+      }
+    },
+    "technical": {
+      "badge": "Technical Specifications",
+      "title": "Technical Characteristics",
+      "description": "Discover the dimensions and architectural specifications of this iconic monument",
+      "specifications": {
+        "height": {
+          "value": "33m",
+          "label": "Ceiling height",
+          "description": "Architectural dimension"
+        },
+        "construction": {
+          "value": "1930",
+          "label": "First phase construction",
+          "description": "Beginning of work"
+        },
+        "completion": {
+          "value": "1953",
+          "label": "Second phase completion",
+          "description": "Project finalization"
+        },
+        "architect": {
+          "value": "Paul Tournon",
+          "label": "Architect",
+          "description": "Master builder"
+        }
+      }
+    },
+    "gallery": {
+      "badge": "Visual Gallery",
+      "title": "Architectural Gallery",
+      "description": "Explore the unique architectural details of the former Sacred Heart Church through our collection of photographs",
+      "photos": {
+        "exterior": "Exterior View",
+        "detail": "Architectural Detail",
+        "interior": "Interior Perspective",
+        "panoramic": "Panoramic View",
+        "elevation": "Elevation",
+        "facade": "Facade Detail"
+      }
+    },
+    "cta": {
+      "badge": "Guided Tour",
+      "title": "Visit the former Sacred Heart Church",
+      "description": "Discover the exceptional architecture of the former Sacred Heart Church on a guided tour or independently",
+      "button": "Visit now"
+    }
+  },
+  "individuels": {
+    "breadcrumb": {
+      "visit": "Visit",
+      "individuals": "Individuals & Families"
+    },
+    "hero": {
+      "title": "Individuals & Families",
+      "description": "Discover the former Sacred Heart Church at your own pace, alone or with family",
+      "imageAlt": "Individual and family visit"
+    },
+    "introduction": {
+      "badge": "Discover",
+      "title": "A Personalized Experience",
+      "description": "Whether you're alone, as a couple, with family, a student, senior or visitor with reduced mobility, the former Sacred Heart Church welcomes you with services adapted to your needs."
+    },
+    "tips": {
+      "bestTimes": {
+        "title": "Best times",
+        "description": "Visit at any time for a peaceful and inspiring experience"
+      },
+      "photography": {
+        "title": "Photography",
+        "description": "Photography is allowed. The stained glass windows are particularly photogenic"
+      },
+      "audioGuide": {
+        "title": "Audio guide",
+        "description": "Audio guides available in French, Arabic and English"
+      },
+      "duration": {
+        "title": "Visit duration",
+        "description": "Open from 9am to 6pm - Allow 1 hour for a complete and contemplative visit"
+      },
+      "family": {
+        "title": "Family visits",
+        "description": "A moment of sharing and discovery for the whole family"
+      },
+      "booking": {
+        "title": "Booking",
+        "description": "Booking recommended but not mandatory for individuals"
+      }
+    },
+    "visitorTypes": {
+      "badge": "Packages",
+      "title": "Visit Packages",
+      "description": "Choose the package that best matches your profile and needs",
+      "individuals": {
+        "title": "Individuals & Families",
+        "price": "50 MAD",
+        "description": "Free or guided visit to discover the former Sacred Heart Church at your own pace",
+        "features": [
+          "Free visit",
+          "Audio guide available",
+          "Family pack: 120 MAD (2 adults + 2 children)"
+        ]
+      },
+      "students": {
+        "title": "Students",
+        "price": "25 MAD",
+        "description": "Preferential rate with adapted educational programs",
+        "features": [
+          "Reduced rate upon presentation of student card.",
+          "Photos allowed for school projects."
+        ]
+      },
+      "seniors": {
+        "title": "Seniors (60+)",
+        "price": "35 MAD",
+        "description": "Visit adapted to your pace with dedicated services",
+        "features": [
+          "Visit at adapted pace",
+          "Regular breaks",
+          "The garden of the former Sacred Heart Church is equipped with benches to ensure comfort and welcome of visitors"
+        ]
+      },
+      "disabled": {
+        "title": "Visitors with reduced mobility",
+        "price": "Free",
+        "description": "Our team is available on site to provide any necessary assistance",
+        "features": [
+          "A passage is arranged to facilitate access to the monument",
+          "An arranged passage allows people with reduced mobility to freely access the garden of the former Sacred Heart Church"
+        ]
+      }
+    },
+    "practicalInfo": {
+      "badge": "Information",
+      "title": "Practical Information",
+      "description": "Everything you need to know to prepare your visit",
+      "hours": {
+        "title": "Opening Hours",
+        "tuesdaySunday": "Tuesday - Sunday",
+        "hours": "9:00 AM - 6:00 PM",
+        "monday": "Monday",
+        "closed": "Closed",
+        "lastEntry": "Last entry",
+        "lastEntryTime": "5:00 PM"
+      },
+      "pricing": {
+        "title": "Pricing",
+        "adults": "Adults",
+        "adultsPrice": "50 MAD",
+        "students": "Students",
+        "studentsPrice": "25 MAD",
+        "seniors": "Seniors (60+)",
+        "seniorsPrice": "35 MAD",
+        "children": "Children (6-12 years)",
+        "childrenPrice": "25 MAD",
+        "familyPack": "Family pack",
+        "familyPackPrice": "120 MAD",
+        "disabled": "Visitors with reduced mobility",
+        "disabledPrice": "Free",
+        "residents": "Moroccan residents",
+        "residentsPrice": "Free"
+      },
+      "access": {
+        "title": "Access",
+        "address": "Address",
+        "addressValue": "Boulevard Mohammed V, Casablanca",
+        "tramway": "Tramway",
+        "tramwayStop": "Place Mohammed V stop"
+      },
+      "bookingButton": "Book my visit"
+    }
+  },
+  "groupes": {
+    "breadcrumb": {
+      "visit": "Visit",
+      "groups": "Groups"
+    },
+    "hero": {
+      "title": "Group Visits",
+      "description": "Discover the heritage together",
+      "imageAlt": "Group visit"
+    },
+    "introduction": {
+      "title": "Discover the former Sacred Heart Church in a group",
+      "description1": "Would you like to discover the former Sacred Heart Church with friends or in a small group (more than 10 people)? Enjoy a free or accompanied visit, according to your wishes, to explore the history, architecture and symbolism of this iconic monument of Casablanca.",
+      "description2": "Choose the route that suits you best, take time to admire the stained glass windows, volumes and light, and let yourself be carried away by the magic of the place.",
+      "imageAlt": "Guide with group"
+    },
+    "practicalInfo": {
+      "badge": "Practical Information",
+      "title": "Practical information",
+      "description": "All the essential information to organize your group visit.",
+      "booking": {
+        "title": "Booking",
+        "description": "Contact us by phone or via our online form to organize your visit."
+      },
+      "hours": {
+        "title": "Available hours",
+        "tuesdaySunday": "Tuesday - Sunday",
+        "hours": "9:00 AM - 6:00 PM",
+        "monday": "Monday",
+        "closed": "Closed"
+      },
+      "contact": {
+        "title": "Contact us",
+        "description": "Questions about your group visit? Our team is here to accompany you and personalize your experience.",
+        "phone": "Phone",
+        "phoneNumber": "+212 522 227 745",
+        "email": "Email",
+        "emailAddress": "contact@casaevents.ma",
+        "quoteButton": "Request a quote"
+      }
+    }
+  },
+  "evenements": {
+    "breadcrumb": {
+      "events": "Events"
+    },
+    "hero": {
+      "title": "Events",
+      "description": "Concerts, exhibitions, workshops and festivals at the heart of heritage",
+      "imageAlt": "Events at the former Sacred Heart Church"
+    },
+    "events": {
+      "title": "Our Events",
+      "description": "Relive the memorable moments that made the former Sacred Heart Church vibrate",
+      "festivalEgregore": {
+        "title": "Egregore Festival",
+        "description": "Morocco's most anticipated hip-hop festival! Two days of exceptional event with more than 40 rap superstars from the Middle East and North Africa."
+      },
+      "inauguration": {
+        "title": "Inauguration Evening",
+        "description": "An exceptional evening marking the official opening of the former Sacred Heart Church as a cultural space. A historic moment celebrating the renaissance of this Art Deco monument in the heart of Casablanca."
+      },
+      "smartCity": {
+        "title": "Casablanca Smart City",
+        "description": "A large-scale technological event presenting urban innovation and smart solutions for the city of tomorrow. The former Sacred Heart Church hosts the leaders of digital transformation."
+      }
+    }
+  },
+  "reserver": {
+    "breadcrumb": {
+      "reserve": "Reserve"
+    },
+    "hero": {
+      "title": "Reserve your space",
+      "description": "An exceptional venue for your events",
+      "imageAlt": "Reserve the former Sacred Heart Church"
+    },
+    "introduction": {
+      "title": "Exceptional spaces for unforgettable events",
+      "description1": "Discover unlimited possibilities in the heart of Casablanca. The Ex Sacred Heart Church opens its doors to host your most prestigious events.",
+      "description2": "From intimate concerts to large art exhibitions, from corporate events to private celebrations, we offer flexible spaces that adapt to your vision.",
+      "description3": "Every space tells a story, every event becomes a memory. Join us to write the next chapter in the history of this iconic place."
+    },
+    "video": {
+      "title": "Relive the inauguration of the Ex Sacred Heart Church",
+      "subtitle": "An architectural journey through history and elegance"
+    },
+    "spaces": {
+      "title": "Discover our spaces",
+      "description": "The Ex Sacred Heart Church offers you a variety of spaces, both indoor and outdoor, where every detail contributes to the success of your events.",
+      "subtitle": "Unique spaces for exceptional events"
+    },
+    "events": {
+      "title": "They trusted",
+      "subtitle": "us",
+      "description": "Prestigious brands and renowned institutions have chosen the Ex Sacred Heart Church for their exceptional events."
+    },
+    "booking": {
+      "title": "Reservation request",
+      "description": "Fill out this form and we will contact you within 48 hours",
+      "personalInfo": "Personal information",
+      "name": "Full name *",
+      "company": "Company *",
+      "email": "Email *",
+      "phone": "Phone *",
+      "eventDetails": "Event details",
+      "eventType": "Event type *",
+      "selectOption": "Select...",
+      "eventTypes": {
+        "festival": "Festival",
+        "concert": "Private Concert",
+        "photo": "Photo Session",
+        "shooting": "Shooting",
+        "corporate": "Corporate Event",
+        "exhibition": "Exhibition",
+        "other": "Other"
+      },
+      "desiredDate": "Desired date *",
+      "numberOfPeople": "Number of people",
+      "projectDetails": "Your project details",
+      "projectPlaceholder": "Describe your event, your specific needs, preferred times...",
+      "contactText": "Contact our team to organize your event at the Ex Sacred Heart Church and enjoy a prestigious setting in the heart of Casablanca.",
+      "bookNow": "Reserve now"
+    },
+    "services": {
+      "title": "Included services",
+      "items": {
+        "access": "Exclusive access to spaces",
+        "team": "Dedicated welcome team",
+        "sound": "Sound and lighting system",
+        "furniture": "Basic furniture and decoration",
+        "security": "Security and surveillance",
+        "cleaning": "Post-event cleaning",
+        "support": "Technical support"
+      }
+    }
+  }
+}

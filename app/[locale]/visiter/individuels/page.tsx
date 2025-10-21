@@ -1,71 +1,76 @@
+"use client"
+
 import { Navigation } from "@/components/navigation"
 import { Footer } from "@/components/footer"
 import { Breadcrumb } from "@/components/breadcrumb"
+import { useTranslations, useLocale } from 'next-intl'
 import Image from "next/image"
 import { Clock, Camera, Headphones, MapPin, Users, Calendar, GraduationCap, Heart, Accessibility, Euro } from "lucide-react"
 
 export default function IndividuelsPage() {
+  const t = useTranslations('individuels')
+  const locale = useLocale()
   const tips = [
     {
       icon: Clock,
-      title: "Meilleurs moments",
-      description: "Visitez à tout moment pour une expérience apaisante et inspirante",
+      title: t("tips.bestTimes.title"),
+      description: t("tips.bestTimes.description"),
     },
     {
       icon: Camera,
-      title: "Photographie",
-      description: "La photographie est autorisée. Les vitraux sont particulièrement photogéniques",
+      title: t("tips.photography.title"),
+      description: t("tips.photography.description"),
     },
     {
       icon: Headphones,
-      title: "Audio-guide",
-      description: "Audio-guides disponibles en français, arabe et anglais",
+      title: t("tips.audioGuide.title"),
+      description: t("tips.audioGuide.description"),
     },
     {
       icon: MapPin,
-      title: "Durée de visite",
-      description: "Ouvert de 9h à 18h - Comptez 1h pour une visite complète et contemplative",
+      title: t("tips.duration.title"),
+      description: t("tips.duration.description"),
     },
     {
       icon: Users,
-      title: "Visites en famille",
-      description: "Un moment de partage et de découverte pour toute la famille",
+      title: t("tips.family.title"),
+      description: t("tips.family.description"),
     },
     {
       icon: Calendar,
-      title: "Réservation",
-      description: "Réservation recommandée mais pas obligatoire pour les individuels",
+      title: t("tips.booking.title"),
+      description: t("tips.booking.description"),
     },
   ]
 
   const visitorTypes = [
     {
       icon: Users,
-      title: "Individuels & Familles",
-      price: "50 MAD",
-      description: "Visite libre ou guidée pour découvrir l'Ex Église Sacré-Cœur à votre rythme",
-      features: ["Visite libre", "Audio-guide disponible", "Pack famille : 120 MAD (2 adultes + 2 enfants)"]
+      title: t("visitorTypes.individuals.title"),
+      price: t("visitorTypes.individuals.price"),
+      description: t("visitorTypes.individuals.description"),
+      features: t.raw("visitorTypes.individuals.features")
     },
     {
       icon: GraduationCap,
-      title: "Étudiants",
-      price: "25 MAD",
-      description: "Tarif préférentiel avec programmes éducatifs adaptés",
-      features: ["Tarif réduit sur présentation de la carte étudiante.", "Photos autorisées pour projets scolaires."]
+      title: t("visitorTypes.students.title"),
+      price: t("visitorTypes.students.price"),
+      description: t("visitorTypes.students.description"),
+      features: t.raw("visitorTypes.students.features")
     },
     {
       icon: Heart,
-      title: "Seniors (60+)",
-      price: "35 MAD",
-      description: "Visite adaptée à votre rythme avec services dédiés",
-      features: ["Visite à rythme adapté", "Pauses régulières", "Le jardin de l'Ex Église Sacré-Cœur est aménagé de bancs pour assurer le confort et l’accueil des visiteurs"]
+      title: t("visitorTypes.seniors.title"),
+      price: t("visitorTypes.seniors.price"),
+      description: t("visitorTypes.seniors.description"),
+      features: t.raw("visitorTypes.seniors.features")
     },
     {
       icon: Accessibility,
-      title: "Visiteurs à mobilité réduite",
-      price: "Gratuit",
-      description: "Notre équipe est disponible sur place pour offrir toute assistance nécessaire",
-      features: ["Un passage est aménagé pour faciliter l’accès au monument", "Un passage aménagé permet aux personnes à mobilité réduite d’accéder librement au jardin de l'Ex Église Sacré-Cœur"]
+      title: t("visitorTypes.disabled.title"),
+      price: t("visitorTypes.disabled.price"),
+      description: t("visitorTypes.disabled.description"),
+      features: t.raw("visitorTypes.disabled.features")
     }
   ]
 
@@ -78,8 +83,8 @@ export default function IndividuelsPage() {
         <div className="max-w-[1400px] mx-auto px-6 lg:px-12">
           <Breadcrumb 
             items={[
-              { label: "Visiter", href: "/visiter/individuels" },
-              { label: "Individuels et familles", href: "/visiter/individuels" }
+              { label: t("breadcrumb.visit"), href: "/visiter/individuels" },
+              { label: t("breadcrumb.individuals"), href: "/visiter/individuels" }
             ]} 
           />
         </div>
@@ -89,7 +94,7 @@ export default function IndividuelsPage() {
       <section className="relative h-[50vh] flex items-center justify-center overflow-hidden">
         <Image
           src="/site-map-images/architecture-optimized/cethedrale image.jpeg"
-          alt="Visite individuelle et familiale"
+          alt={t("hero.imageAlt")}
           fill
           className="object-cover"
           priority
@@ -97,10 +102,10 @@ export default function IndividuelsPage() {
         <div className="absolute inset-0 bg-charcoal/50" />
         <div className="relative z-10 text-center px-6 max-w-4xl mx-auto">
           <h1 className="font-serif text-5xl md:text-7xl lg:text-8xl text-off-white mb-6 animate-fade-in-up text-balance">
-            Individuels et Familles
+            {t("hero.title")}
           </h1>
           <p className="font-sans text-sm md:text-base lg:text-lg tracking-wide text-off-white/90 animate-fade-in-up delay-100">
-            Découvrez l'Ex Église Sacré-Cœur à votre rythme, seul ou en famille
+            {t("hero.description")}
           </p>
         </div>
       </section>
@@ -110,16 +115,15 @@ export default function IndividuelsPage() {
        
 
         <div className="text-center mb-24">
-          <div className="inline-block px-6 py-3 bg-gradient-to-r from-vibrant-pink/10 to-warm-terracotta/10 rounded-full mb-8 animate-fade-in-up">
-            <span className="font-sans text-sm font-medium text-vibrant-pink tracking-wider uppercase">Découvrez</span>
-          </div>
-          <h2 className="font-serif text-5xl lg:text-7xl text-charcoal mb-8 animate-fade-in-up delay-100 tracking-tight">
-            Une Expérience Personnalisée
-          </h2>
-          <p className="font-sans text-lg lg:text-xl text-charcoal/70 leading-relaxed max-w-4xl mx-auto animate-fade-in-up delay-200">
-            Que vous soyez seul, en couple, en famille, étudiant, senior ou visiteur à mobilité réduite, 
-            l'Ex Église Sacré-Cœur vous accueille avec des services adaptés à vos besoins.
-          </p>
+            <div className="inline-block px-6 py-3 bg-gradient-to-r from-vibrant-pink/10 to-warm-terracotta/10 rounded-full mb-8 animate-fade-in-up">
+              <span className="font-sans text-sm font-medium text-vibrant-pink tracking-wider uppercase">{t("introduction.badge")}</span>
+            </div>
+            <h2 className="font-serif text-5xl lg:text-7xl text-charcoal mb-8 animate-fade-in-up delay-100 tracking-tight">
+              {t("introduction.title")}
+            </h2>
+            <p className="font-sans text-lg lg:text-xl text-charcoal/70 leading-relaxed max-w-4xl mx-auto animate-fade-in-up delay-200">
+              {t("introduction.description")}
+            </p>
         </div>
 
         {/* Tips Grid */}
@@ -141,13 +145,13 @@ export default function IndividuelsPage() {
         <div className="max-w-[1400px] mx-auto px-6 lg:px-12">
           <div className="text-center mb-20">
             <div className="inline-block px-6 py-3 bg-gradient-to-r from-blue-500/10 to-vibrant-pink/10 rounded-full mb-8 animate-fade-in-up">
-              <span className="font-sans text-sm font-medium text-blue-600 tracking-wider uppercase">Formules</span>
+              <span className="font-sans text-sm font-medium text-blue-600 tracking-wider uppercase">{t("visitorTypes.badge")}</span>
             </div>
             <h2 className="font-serif text-5xl lg:text-7xl text-charcoal mb-8 animate-fade-in-up delay-100 tracking-tight">
-              Formules de Visite
+              {t("visitorTypes.title")}
             </h2>
             <p className="font-sans text-lg lg:text-xl text-charcoal/70 leading-relaxed max-w-3xl mx-auto animate-fade-in-up delay-200">
-              Choisissez la formule qui correspond le mieux à votre profil et vos besoins
+              {t("visitorTypes.description")}
             </p>
           </div>
           <div className="grid md:grid-cols-2 gap-8 lg:gap-12">
@@ -166,12 +170,17 @@ export default function IndividuelsPage() {
                   </div>
                   <p className="font-sans text-base text-charcoal/70 leading-relaxed mb-8">{type.description}</p>
                   <ul className="space-y-3">
-                    {type.features.map((feature, featureIndex) => (
+                    {Array.isArray(type.features) ? type.features.map((feature: string, featureIndex: number) => (
                       <li key={featureIndex} className="flex items-start gap-3">
                         <div className="w-2 h-2 bg-vibrant-pink rounded-full mt-2 flex-shrink-0"></div>
                         <span className="font-sans text-sm text-charcoal/70">{feature}</span>
                       </li>
-                    ))}
+                    )) : (
+                      <li className="flex items-start gap-3">
+                        <div className="w-2 h-2 bg-vibrant-pink rounded-full mt-2 flex-shrink-0"></div>
+                        <span className="font-sans text-sm text-charcoal/70">{type.features}</span>
+                      </li>
+                    )}
                   </ul>
                 </div>
               </div>
@@ -187,13 +196,13 @@ export default function IndividuelsPage() {
         <div className="max-w-[1400px] mx-auto px-6 lg:px-12">
           <div className="text-center mb-20">
             <div className="inline-block px-6 py-3 bg-gradient-to-r from-vibrant-pink/10 to-warm-terracotta/10 rounded-full mb-8 animate-fade-in-up">
-              <span className="font-sans text-sm font-medium text-vibrant-pink tracking-wider uppercase">Informations</span>
+              <span className="font-sans text-sm font-medium text-vibrant-pink tracking-wider uppercase">{t("practicalInfo.badge")}</span>
             </div>
             <h2 className="font-serif text-5xl lg:text-7xl text-charcoal mb-8 animate-fade-in-up delay-100 tracking-tight">
-              Informations Pratiques
+              {t("practicalInfo.title")}
             </h2>
             <p className="font-sans text-lg lg:text-xl text-charcoal/70 leading-relaxed max-w-3xl mx-auto animate-fade-in-up delay-200">
-              Tout ce que vous devez savoir pour préparer votre visite
+              {t("practicalInfo.description")}
             </p>
           </div>
           <div className="grid lg:grid-cols-2 gap-12">
@@ -201,19 +210,19 @@ export default function IndividuelsPage() {
               <div className="w-16 h-16 bg-gradient-to-br from-vibrant-pink/10 to-warm-terracotta/10 rounded-2xl flex items-center justify-center mb-8 group-hover:scale-110 transition-transform duration-300">
                 <Clock className="h-8 w-8 text-vibrant-pink" />
               </div>
-              <h3 className="font-serif text-3xl text-charcoal mb-6">Horaires</h3>
+              <h3 className="font-serif text-3xl text-charcoal mb-6">{t("practicalInfo.hours.title")}</h3>
               <div className="space-y-4 font-sans text-base text-charcoal/70 leading-relaxed">
                 <div className="flex justify-between items-center py-2 border-b border-charcoal/10">
-                  <span>Mardi - Dimanche</span>
-                  <span className="font-semibold text-charcoal">9h00 - 18h00</span>
+                  <span>{t("practicalInfo.hours.tuesdaySunday")}</span>
+                  <span className="font-semibold text-charcoal">{t("practicalInfo.hours.hours")}</span>
                 </div>
                 <div className="flex justify-between items-center py-2 border-b border-charcoal/10">
-                  <span>Lundi</span>
-                  <span className="font-semibold text-charcoal/60">Fermé</span>
+                  <span>{t("practicalInfo.hours.monday")}</span>
+                  <span className="font-semibold text-charcoal/60">{t("practicalInfo.hours.closed")}</span>
                 </div>
                 <div className="flex justify-between items-center py-2">
-                  <span>Dernière entrée</span>
-                  <span className="font-semibold text-charcoal">17h</span>
+                  <span>{t("practicalInfo.hours.lastEntry")}</span>
+                  <span className="font-semibold text-charcoal">{t("practicalInfo.hours.lastEntryTime")}</span>
                 </div>
               </div>
             </div>
@@ -221,36 +230,36 @@ export default function IndividuelsPage() {
               <div className="w-16 h-16 bg-gradient-to-br from-warm-terracotta/10 to-vibrant-pink/10 rounded-2xl flex items-center justify-center mb-8 group-hover:scale-110 transition-transform duration-300">
                 <Euro className="h-8 w-8 text-warm-terracotta" />
               </div>
-              <h3 className="font-serif text-3xl text-charcoal mb-6">Tarifs</h3>
+              <h3 className="font-serif text-3xl text-charcoal mb-6">{t("practicalInfo.pricing.title")}</h3>
               <div className="space-y-4 font-sans text-base text-charcoal/70 leading-relaxed">
                 <div className="flex justify-between items-center py-2 border-b border-charcoal/10">
-                  <span>Adultes</span>
-                  <span className="font-semibold text-charcoal">50 MAD</span>
+                  <span>{t("practicalInfo.pricing.adults")}</span>
+                  <span className="font-semibold text-charcoal">{t("practicalInfo.pricing.adultsPrice")}</span>
                 </div>
                 <div className="flex justify-between items-center py-2 border-b border-charcoal/10">
-                  <span>Étudiants</span>
-                  <span className="font-semibold text-charcoal">25 MAD</span>
+                  <span>{t("practicalInfo.pricing.students")}</span>
+                  <span className="font-semibold text-charcoal">{t("practicalInfo.pricing.studentsPrice")}</span>
                 </div>
                 <div className="flex justify-between items-center py-2 border-b border-charcoal/10">
-                  <span>Seniors (60+)</span>
-                  <span className="font-semibold text-charcoal">35 MAD</span>
+                  <span>{t("practicalInfo.pricing.seniors")}</span>
+                  <span className="font-semibold text-charcoal">{t("practicalInfo.pricing.seniorsPrice")}</span>
                 </div>
                 <div className="flex justify-between items-center py-2 border-b border-charcoal/10">
-                  <span>Enfants (6-12 ans)</span>
-                  <span className="font-semibold text-charcoal">25 MAD</span>
+                  <span>{t("practicalInfo.pricing.children")}</span>
+                  <span className="font-semibold text-charcoal">{t("practicalInfo.pricing.childrenPrice")}</span>
                 </div>
                
                 <div className="flex justify-between items-center py-2 border-b border-charcoal/10">
-                  <span>Pack famille</span>
-                  <span className="font-semibold text-charcoal">120 MAD</span>
+                  <span>{t("practicalInfo.pricing.familyPack")}</span>
+                  <span className="font-semibold text-charcoal">{t("practicalInfo.pricing.familyPackPrice")}</span>
                 </div>
                 <div className="flex justify-between items-center py-2 border-b border-charcoal/10">
-                  <span>Visiteurs à mobilité réduite</span>
-                  <span className="font-semibold text-vibrant-pink">Gratuit</span>
+                  <span>{t("practicalInfo.pricing.disabled")}</span>
+                  <span className="font-semibold text-vibrant-pink">{t("practicalInfo.pricing.disabledPrice")}</span>
                 </div>
                 <div className="flex justify-between items-center py-2">
-                  <span>Résidents au Maroc</span>
-                  <span className="font-semibold text-vibrant-pink">Gratuit</span>
+                  <span>{t("practicalInfo.pricing.residents")}</span>
+                  <span className="font-semibold text-vibrant-pink">{t("practicalInfo.pricing.residentsPrice")}</span>
                 </div>
               </div>
             </div>
@@ -261,7 +270,7 @@ export default function IndividuelsPage() {
               className="inline-flex items-center gap-4 px-12 py-6 text-sm font-sans tracking-wider uppercase bg-gradient-to-r from-blue-500 to-blue-700 text-white hover:shadow-2xl hover:shadow-blue-500/25 hover:scale-105 transition-all duration-500 animate-fade-in-up delay-200 rounded-2xl group"
             >
               <Calendar className="w-5 h-5 group-hover:scale-110 transition-transform duration-300" />
-              <span>Réserver ma visite</span>
+              <span>{t("practicalInfo.bookingButton")}</span>
             </a>
           </div>
         </div>

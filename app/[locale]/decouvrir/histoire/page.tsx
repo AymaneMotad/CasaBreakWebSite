@@ -1,10 +1,16 @@
+"use client"
+
 import { Navigation } from "@/components/navigation"
 import { Footer } from "@/components/footer"
 import { Breadcrumb } from "@/components/breadcrumb"
 import { TextToSpeechPlayer } from "@/components/text-to-speech-player"
+import { useTranslations, useLocale } from 'next-intl'
 import Image from "next/image"
 
 export default function HistoirePage() {
+  const t = useTranslations('histoire')
+  const locale = useLocale()
+  
   return (
     <main className="min-h-screen bg-off-white">
       <Navigation />
@@ -14,8 +20,8 @@ export default function HistoirePage() {
         <div className="max-w-[1400px] mx-auto px-6 lg:px-12">
           <Breadcrumb 
             items={[
-              { label: "Découvrir", href: "/decouvrir/histoire" },
-              { label: "Histoire", href: "/decouvrir/histoire" }
+              { label: t("breadcrumb.discover"), href: `/${locale}/decouvrir/histoire` },
+              { label: t("breadcrumb.history"), href: `/${locale}/decouvrir/histoire` }
             ]}
           />
         </div>
@@ -35,7 +41,7 @@ export default function HistoirePage() {
         {/* Photo Credit */}
         <div className="absolute bottom-4 right-4 z-10">
           <p className="text-xs text-off-white/60 font-sans italic">
-            Photo issue du Fonds Flandrin, collection privée de la Fondation Banque Populaire
+            {t("hero.photoCredit")}
           </p>
         </div>
         
@@ -79,15 +85,15 @@ export default function HistoirePage() {
           <div className="animate-gentle-fade-in">
             <div className="inline-block px-4 py-2 bg-gradient-to-r from-vibrant-pink/20 to-warm-terracotta/20 backdrop-blur-sm border border-off-white/20 rounded-full mb-8">
               <span className="text-off-white/90 text-sm font-sans tracking-wider uppercase">
-                Patrimoine Historique
+                {t("hero.badge")}
               </span>
             </div>
           </div>
           <h1 className="font-serif text-6xl md:text-8xl lg:text-9xl text-off-white mb-6 animate-gentle-fade-in stagger-1 text-enhanced">
-            Histoire
+            {t("hero.title")}
           </h1>
           <p className="font-sans text-lg md:text-xl text-off-white/90 max-w-2xl mx-auto leading-relaxed animate-gentle-fade-in stagger-2 text-readable">
-            Un monument emblématique de Casablanca qui raconte l'histoire de la ville à travers le 21ème siècle
+            {t("hero.description")}
           </p>
         </div>
       </section>
@@ -143,10 +149,10 @@ export default function HistoirePage() {
         <div className="max-w-[1400px] mx-auto px-6 lg:px-12 relative z-10">
           <div className="text-center mb-20">
             <h2 className="font-serif text-5xl md:text-6xl text-charcoal mb-8 animate-gentle-fade-in">
-              Chronologie Historique
+              {t("timeline.title")}
             </h2>
             <p className="font-sans text-xl text-charcoal/70 max-w-3xl mx-auto leading-relaxed animate-gentle-fade-in stagger-1">
-              Découvrez les étapes clés qui ont façonné l'histoire de ce monument emblématique
+              {t("timeline.description")}
             </p>
           </div>
           
@@ -156,13 +162,13 @@ export default function HistoirePage() {
               <div className="animate-gentle-fade-in">
            
                 <span className="font-serif text-7xl lg:text-9xl text-vibrant-pink block mb-6">1923</span>
-                <h3 className="font-serif text-4xl lg:text-6xl text-charcoal mb-8">Le début d'un projet symbolique</h3>
+                <h3 className="font-serif text-4xl lg:text-6xl text-charcoal mb-8">{t("timeline.events.1923.title")}</h3>
                 <p className="font-sans text-lg text-charcoal/70 leading-relaxed text-readable">
-                  La construction de l'Ex église Sacré-Cœur est lancée sous le protectorat français, à l'initiative de la communauté catholique de Casablanca. Elle témoigne de la volonté de cette communauté d'affirmer sa présence dans une ville en pleine mutation. L'objectif est d'ériger un lieu de culte majeur au cœur d'une cité en plein essor, reflet du développement urbain rapide et du dynamisme de la métropole. Ce projet s'inscrit ainsi dans le contexte de l'expansion de Casablanca, où la modernité et la foi se rejoignent pour donner naissance à un monument emblématique de son époque.
+                  {t("timeline.events.1923.description")}
                 </p>
                 <TextToSpeechPlayer 
-                  text="La construction de l'Ex église Sacré-Cœur est lancée sous le protectorat français, à l'initiative de la communauté catholique de Casablanca. Elle témoigne de la volonté de cette communauté d'affirmer sa présence dans une ville en pleine mutation. L'objectif est d'ériger un lieu de culte majeur au cœur d'une cité en plein essor, reflet du développement urbain rapide et du dynamisme de la métropole. Ce projet s'inscrit ainsi dans le contexte de l'expansion de Casablanca, où la modernité et la foi se rejoignent pour donner naissance à un monument emblématique de son époque."
-                  title="Écouter l'histoire de 1923"
+                  text={t("timeline.events.1923.description")}
+                  title={t("timeline.events.1923.audioTitle")}
                 />
               </div>
               <div className="animate-gentle-fade-in stagger-1">
@@ -174,7 +180,7 @@ export default function HistoirePage() {
                     className="object-cover rounded-2xl shadow-2xl hover-scale-subtle transition-smooth" 
                   />
                 </div>
-                <p className="text-xs text-charcoal/50 mt-3 font-sans italic">Photo issue du Fonds Flandrin, collection privée de la Fondation Banque Populaire</p>
+                <p className="text-xs text-charcoal/50 mt-3 font-sans italic">{t.raw("hero.photoCredit")}</p>
               </div>
             </div>
 
@@ -189,21 +195,21 @@ export default function HistoirePage() {
                     className="object-cover grayscale rounded-2xl shadow-2xl hover-scale-subtle transition-smooth"
                   />
                 </div>
-                <p className="text-xs text-charcoal/50 mt-3 font-sans italic">Photo issue du Fonds Flandrin, collection privée de la Fondation Banque Populaire</p>
+                <p className="text-xs text-charcoal/50 mt-3 font-sans italic">{t.raw("hero.photoCredit")}</p>
               </div>
               <div className="animate-gentle-fade-in stagger-1">
              
                 <span className="font-serif text-7xl lg:text-9xl text-warm-terracotta block mb-6">1930</span>
-                <h3 className="font-serif text-4xl lg:text-6xl text-charcoal mb-8">L'achèvement d'un chef-d'œuvre architectural</h3>
+                <h3 className="font-serif text-4xl lg:text-6xl text-charcoal mb-8">{t("timeline.events.1930.title")}</h3>
                 <p className="font-sans text-lg text-charcoal/70 leading-relaxed text-readable mb-4">
-                  L'inauguration officielle de l'Ex église Sacré-Cœur marque une étape majeure dans l'histoire architecturale et culturelle de Casablanca. Conçue par l'architecte Paul Tournon, l'édifice se distingue par son caractère avant-gardiste, fruit d'un savant mariage entre l'art gothique et l'art déco, un style alors inédit en Afrique du Nord.
+                  {t("timeline.events.1930.description1")}
                 </p>
                 <p className="font-sans text-lg text-charcoal/70 leading-relaxed text-readable">
-                  Par ses voûtes élancées, ses vitraux aux motifs géométriques et ses façades épurées, l'église incarne la modernité et l'élégance caractéristiques de la Casablanca des années 1930. Ce chef-d'œuvre architectural témoigne du raffinement esthétique de son époque et de la volonté de faire de l'Ex église Sacré-Cœur un symbole fort de la ville, à la croisée entre tradition religieuse et innovation urbaine.
+                  {t("timeline.events.1930.description2")}
                 </p>
                 <TextToSpeechPlayer 
-                  text="L'inauguration officielle de l'Ex église Sacré-Cœur marque une étape majeure dans l'histoire architecturale et culturelle de Casablanca. Conçue par l'architecte Paul Tournon, l'édifice se distingue par son caractère avant-gardiste, fruit d'un savant mariage entre l'art gothique et l'art déco, un style alors inédit en Afrique du Nord. Par ses voûtes élancées, ses vitraux aux motifs géométriques et ses façades épurées, l'église incarne la modernité et l'élégance caractéristiques de la Casablanca des années 1930. Ce chef-d'œuvre architectural témoigne du raffinement esthétique de son époque et de la volonté de faire de l'Ex église Sacré-Cœur un symbole fort de la ville, à la croisée entre tradition religieuse et innovation urbaine."
-                  title="Écouter l'histoire de 1930"
+                  text={`${t("timeline.events.1930.description1")} ${t("timeline.events.1930.description2")}`}
+                  title={t("timeline.events.1930.audioTitle")}
                 />
               </div>
             </div>
@@ -213,16 +219,16 @@ export default function HistoirePage() {
               <div className="animate-gentle-fade-in">
              
                 <span className="font-serif text-7xl lg:text-9xl text-vibrant-pink block mb-6">1956</span>
-                <h3 className="font-serif text-4xl lg:text-6xl text-charcoal mb-8">L'indépendance du Maroc : un tournant</h3>
+                <h3 className="font-serif text-4xl lg:text-6xl text-charcoal mb-8">{t("timeline.events.1956.title")}</h3>
                 <p className="font-sans text-lg text-charcoal/70 leading-relaxed text-readable mb-4">
-                  Après l'indépendance du Maroc, la fréquentation de l'Ex église Sacré-Cœur connaît une baisse progressive. Peu à peu, l'édifice perd sa fonction religieuse initiale, conséquence directe des transformations sociales et démographiques de la ville.
+                  {t("timeline.events.1956.description1")}
                 </p>
                 <p className="font-sans text-lg text-charcoal/70 leading-relaxed text-readable">
-                  Cependant, loin de tomber dans l'oubli, l'église acquiert un nouveau statut : celui de symbole patrimonial et culturel de Casablanca. Son architecture remarquable et sa place au cœur de la cité en font un lieu chargé d'histoire, témoin du passé colonial mais aussi de l'évolution urbaine et artistique du Maroc moderne.
+                  {t("timeline.events.1956.description2")}
                 </p>
                 <TextToSpeechPlayer 
-                  text="Après l'indépendance du Maroc, la fréquentation de l'Ex église Sacré-Cœur connaît une baisse progressive. Peu à peu, l'édifice perd sa fonction religieuse initiale, conséquence directe des transformations sociales et démographiques de la ville. Cependant, loin de tomber dans l'oubli, l'église acquiert un nouveau statut : celui de symbole patrimonial et culturel de Casablanca. Son architecture remarquable et sa place au cœur de la cité en font un lieu chargé d'histoire, témoin du passé colonial mais aussi de l'évolution urbaine et artistique du Maroc moderne."
-                  title="Écouter l'histoire de 1956"
+                  text={`${t("timeline.events.1956.description1")} ${t("timeline.events.1956.description2")}`}
+                  title={t("timeline.events.1956.audioTitle")}
                 />
               </div>
               <div className="animate-gentle-fade-in stagger-1">
@@ -234,7 +240,7 @@ export default function HistoirePage() {
                     className="object-cover grayscale rounded-2xl shadow-2xl hover-scale-subtle transition-smooth"
                   />
                 </div>
-                <p className="text-xs text-charcoal/50 mt-3 font-sans italic">Photo issue du Fonds Flandrin, collection privée de la Fondation Banque Populaire</p>
+                <p className="text-xs text-charcoal/50 mt-3 font-sans italic">{t.raw("hero.photoCredit")}</p>
               </div>
             </div>
 
@@ -249,21 +255,21 @@ export default function HistoirePage() {
                     className="object-cover rounded-2xl shadow-2xl hover-scale-subtle transition-smooth" 
                   />
                 </div>
-                <p className="text-xs text-charcoal/50 mt-3 font-sans italic">Photo issue du Fonds Flandrin, collection privée de la Fondation Banque Populaire</p>
+                <p className="text-xs text-charcoal/50 mt-3 font-sans italic">{t.raw("hero.photoCredit")}</p>
               </div>
               <div className="animate-gentle-fade-in stagger-1">
                
                 <span className="font-serif text-7xl lg:text-9xl text-warm-terracotta block mb-6">1976</span>
-                <h3 className="font-serif text-4xl lg:text-6xl text-charcoal mb-8">Déconsécration et changement d'usage</h3>
+                <h3 className="font-serif text-4xl lg:text-6xl text-charcoal mb-8">{t("timeline.events.1976.title")}</h3>
                 <p className="font-sans text-lg text-charcoal/70 leading-relaxed text-readable mb-4">
-                  L'Ex église Sacré-Cœur est officiellement désacralisée, marquant la fin de son usage religieux. Ce changement lui offre une nouvelle vie en tant qu'espace culturel et d'exposition, ouvert à la création et au dialogue artistique.
+                  {t("timeline.events.1976.description1")}
                 </p>
                 <p className="font-sans text-lg text-charcoal/70 leading-relaxed text-readable">
-                  Dès lors, le monument accueille divers événements tels que des concerts, des salons, des projections et de nombreuses manifestations culturelles. Ce renouveau transforme l'édifice en un lieu vivant et inclusif, où patrimoine et modernité se rencontrent, faisant de l'Ex église Sacré-Cœur un symbole de la vitalité culturelle de Casablanca.
+                  {t("timeline.events.1976.description2")}
                 </p>
                 <TextToSpeechPlayer 
-                  text="L'Ex église Sacré-Cœur est officiellement désacralisée, marquant la fin de son usage religieux. Ce changement lui offre une nouvelle vie en tant qu'espace culturel et d'exposition, ouvert à la création et au dialogue artistique. Dès lors, le monument accueille divers événements tels que des concerts, des salons, des projections et de nombreuses manifestations culturelles. Ce renouveau transforme l'édifice en un lieu vivant et inclusif, où patrimoine et modernité se rencontrent, faisant de l'Ex église Sacré-Cœur un symbole de la vitalité culturelle de Casablanca."
-                  title="Écouter l'histoire de 1976"
+                  text={`${t("timeline.events.1976.description1")} ${t("timeline.events.1976.description2")}`}
+                  title={t("timeline.events.1976.audioTitle")}
                 />
               </div>
             </div>
@@ -273,16 +279,16 @@ export default function HistoirePage() {
               <div className="animate-gentle-fade-in">
               
                 <span className="font-serif text-7xl lg:text-9xl text-vibrant-pink block mb-6">1990-2000</span>
-                <h3 className="font-serif text-4xl lg:text-6xl text-charcoal mb-8">Reconnaissance patrimoniale</h3>
+                <h3 className="font-serif text-4xl lg:text-6xl text-charcoal mb-8">{t("timeline.events.1990-2000.title")}</h3>
                 <p className="font-sans text-lg text-charcoal/70 leading-relaxed text-readable mb-4">
-                  Classée parmi les monuments emblématiques du patrimoine architectural de Casablanca, l'Ex église Sacré-Cœur occupe une place particulière dans l'histoire de la ville. Par sa structure audacieuse en béton armé et son style néo-gothique revisité, elle témoigne du génie architectural et de l'esprit novateur de son époque.
+                  {t("timeline.events.1990-2000.description1")}
                 </p>
                 <p className="font-sans text-lg text-charcoal/70 leading-relaxed text-readable">
-                  Son allure unique attire aujourd'hui architectes, chercheurs et visiteurs du monde entier, fascinés par l'harmonie entre tradition et modernité qu'incarne l'édifice. Véritable repère urbain et culturel, l'Ex église Sacré-Cœur demeure un symbole fort du patrimoine casablancais et de la richesse de son héritage artistique.
+                  {t("timeline.events.1990-2000.description2")}
                 </p>
                 <TextToSpeechPlayer 
-                  text="Classée parmi les monuments emblématiques du patrimoine architectural de Casablanca, l'Ex église Sacré-Cœur occupe une place particulière dans l'histoire de la ville. Par sa structure audacieuse en béton armé et son style néo-gothique revisité, elle témoigne du génie architectural et de l'esprit novateur de son époque. Son allure unique attire aujourd'hui architectes, chercheurs et visiteurs du monde entier, fascinés par l'harmonie entre tradition et modernité qu'incarne l'édifice. Véritable repère urbain et culturel, l'Ex église Sacré-Cœur demeure un symbole fort du patrimoine casablancais et de la richesse de son héritage artistique."
-                  title="Écouter l'histoire de 1990-2000"
+                  text={`${t("timeline.events.1990-2000.description1")} ${t("timeline.events.1990-2000.description2")}`}
+                  title={t("timeline.events.1990-2000.audioTitle")}
                 />
               </div>
               <div className="animate-gentle-fade-in stagger-1">
@@ -294,7 +300,7 @@ export default function HistoirePage() {
                     className="object-cover rounded-2xl shadow-2xl hover-scale-subtle transition-smooth" 
                   />
                 </div>
-                <p className="text-xs text-charcoal/50 mt-3 font-sans italic">Photo issue du Fonds Flandrin, collection privée de la Fondation Banque Populaire</p>
+                <p className="text-xs text-charcoal/50 mt-3 font-sans italic">{t.raw("hero.photoCredit")}</p>
               </div>
             </div>
 
@@ -309,21 +315,21 @@ export default function HistoirePage() {
                     className="object-cover rounded-2xl shadow-2xl hover-scale-subtle transition-smooth" 
                   />
                 </div>
-                <p className="text-xs text-charcoal/50 mt-3 font-sans italic">Photo issue du Fonds Flandrin, collection privée de la Fondation Banque Populaire</p>
+                <p className="text-xs text-charcoal/50 mt-3 font-sans italic">{t.raw("hero.photoCredit")}</p>
               </div>
               <div className="animate-gentle-fade-in stagger-1">
                
                 <span className="font-serif text-7xl lg:text-9xl text-warm-terracotta block mb-6">2010</span>
-                <h3 className="font-serif text-4xl lg:text-6xl text-charcoal mb-8">Début de la réhabilitation</h3>
+                <h3 className="font-serif text-4xl lg:text-6xl text-charcoal mb-8">{t("timeline.events.2010.title")}</h3>
                 <p className="font-sans text-lg text-charcoal/70 leading-relaxed text-readable mb-4">
-                  Des travaux de restauration et de sécurisation sont entrepris afin de préserver l'Ex église Sacré-Cœur, fragilisée par le temps et les années d'exposition aux éléments. Ces interventions visent à sauvegarder la solidité de l'édifice tout en respectant son architecture d'origine, symbole fort du patrimoine casablancais.
+                  {t("timeline.events.2010.description1")}
                 </p>
                 <p className="font-sans text-lg text-charcoal/70 leading-relaxed text-readable">
-                  Parallèlement, une volonté claire émerge : celle de redonner vie à ce monument historique en le transformant en un véritable centre de créativité et de dialogue culturel. L'objectif est d'en faire un lieu ouvert à tous, où se rencontrent les arts, les idées et les générations, perpétuant ainsi l'esprit vivant et inspirant de l'Ex église Sacré-Cœur.
+                  {t("timeline.events.2010.description2")}
                 </p>
                 <TextToSpeechPlayer 
-                  text="Des travaux de restauration et de sécurisation sont entrepris afin de préserver l'Ex église Sacré-Cœur, fragilisée par le temps et les années d'exposition aux éléments. Ces interventions visent à sauvegarder la solidité de l'édifice tout en respectant son architecture d'origine, symbole fort du patrimoine casablancais. Parallèlement, une volonté claire émerge : celle de redonner vie à ce monument historique en le transformant en un véritable centre de créativité et de dialogue culturel. L'objectif est d'en faire un lieu ouvert à tous, où se rencontrent les arts, les idées et les générations, perpétuant ainsi l'esprit vivant et inspirant de l'Ex église Sacré-Cœur."
-                  title="Écouter l'histoire de 2010"
+                  text={`${t("timeline.events.2010.description1")} ${t("timeline.events.2010.description2")}`}
+                  title={t("timeline.events.2010.audioTitle")}
                 />
               </div>
             </div>
@@ -332,17 +338,17 @@ export default function HistoirePage() {
             <div className="grid lg:grid-cols-2 gap-16 items-start">
               <div className="animate-gentle-fade-in">
                
-                <span className="font-serif text-6xl lg:text-7xl text-vibrant-pink block mb-6">Aujourd'hui</span>
-                <h3 className="font-serif text-3xl lg:text-5xl text-charcoal mb-8">Renaissance d'un joyau patrimonial</h3>
+                <span className="font-serif text-6xl lg:text-7xl text-vibrant-pink block mb-6">{t("timeline.events.today.label")}</span>
+                <h3 className="font-serif text-3xl lg:text-5xl text-charcoal mb-8">{t("timeline.events.today.title")}</h3>
                 <p className="font-sans text-lg text-charcoal/70 leading-relaxed text-readable mb-4">
-                  Le site de l'Ex église Sacré-Cœur renaît aujourd'hui comme un véritable centre culturel, artistique et touristique, symbole de la vitalité et du renouveau de Casablanca. Ce lieu emblématique se transforme en un espace de rencontre entre mémoire et modernité, où se croisent le patrimoine, l'art, l'innovation et la citoyenneté.
+                  {t("timeline.events.today.description1")}
                 </p>
                 <p className="font-sans text-lg text-charcoal/70 leading-relaxed text-readable">
-                  En accueillant expositions, événements et initiatives créatives, la cathédrale s'inscrit désormais dans une démarche de valorisation durable du patrimoine casablancais. Elle incarne la volonté de préserver l'histoire tout en la réinventant, offrant à la ville un espace vivant, inspirant et ouvert sur le monde.
+                  {t("timeline.events.today.description2")}
                 </p>
                 <TextToSpeechPlayer 
-                  text="Le site de l'Ex église Sacré-Cœur renaît aujourd'hui comme un véritable centre culturel, artistique et touristique, symbole de la vitalité et du renouveau de Casablanca. Ce lieu emblématique se transforme en un espace de rencontre entre mémoire et modernité, où se croisent le patrimoine, l'art, l'innovation et la citoyenneté. En accueillant expositions, événements et initiatives créatives, la cathédrale s'inscrit désormais dans une démarche de valorisation durable du patrimoine casablancais. Elle incarne la volonté de préserver l'histoire tout en la réinventant, offrant à la ville un espace vivant, inspirant et ouvert sur le monde."
-                  title="Écouter l'histoire d'aujourd'hui"
+                  text={`${t("timeline.events.today.description1")} ${t("timeline.events.today.description2")}`}
+                  title={t("timeline.events.today.audioTitle")}
                 />
               </div>
               <div className="animate-gentle-fade-in stagger-1">
@@ -354,7 +360,7 @@ export default function HistoirePage() {
                     className="object-cover rounded-2xl shadow-2xl hover-scale-subtle transition-smooth" 
                   />
                 </div>
-                <p className="text-xs text-charcoal/50 mt-3 font-sans italic">Photo issue du Fonds Flandrin, collection privée de la Fondation Banque Populaire</p>
+                <p className="text-xs text-charcoal/50 mt-3 font-sans italic">{t.raw("hero.photoCredit")}</p>
               </div>
             </div>
           </div>
@@ -375,17 +381,16 @@ export default function HistoirePage() {
             <div className="text-center lg:text-left animate-fade-in-up">
               <div className="inline-flex items-center gap-3 mb-6">
                 <div className="h-px w-12 bg-gradient-to-r from-transparent to-blue-400"></div>
-                <span className="text-xs font-sans tracking-wider uppercase text-blue-600">Continuez votre découverte</span>
+                <span className="text-xs font-sans tracking-wider uppercase text-blue-600">{t("cta.badge")}</span>
                 <div className="h-px w-12 bg-gradient-to-l from-transparent to-blue-400"></div>
               </div>
               
               <h2 className="font-serif text-4xl md:text-5xl lg:text-6xl text-charcoal mb-6 leading-tight">
-                Explorez l'Architecture
+                {t("cta.title")}
               </h2>
               
               <p className="font-sans text-lg text-charcoal/70 leading-relaxed mb-8">
-                Plongez dans les détails architecturaux exceptionnels de l'Ex église Sacré-Cœur. 
-                Découvrez comment l'Art Déco et le modernisme se rencontrent dans ce chef-d'œuvre unique.
+                {t("cta.description")}
               </p>
 
               <div className="flex flex-col sm:flex-row gap-4 justify-center lg:justify-start">
@@ -393,7 +398,7 @@ export default function HistoirePage() {
                   href="/decouvrir/architecture"
                   className="group inline-flex items-center justify-center gap-3 px-8 py-4 bg-gradient-to-r from-blue-500 to-blue-700 text-white text-sm font-sans font-semibold tracking-wider uppercase rounded-xl hover:shadow-xl hover:shadow-blue-500/25 hover:scale-105 transition-all duration-300"
                 >
-                  <span>Découvrir l'Architecture</span>
+                  <span>{t("cta.button")}</span>
                   <svg className="w-5 h-5 transition-transform group-hover:translate-x-1" fill="none" stroke="currentColor" viewBox="0 0 24 24">
                     <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M17 8l4 4m0 0l-4 4m4-4H3" />
                   </svg>
@@ -419,7 +424,7 @@ export default function HistoirePage() {
                 <div className="absolute bottom-6 left-6 right-6">
                   <div className="inline-flex items-center gap-2 px-4 py-2 bg-white/95 backdrop-blur-sm rounded-lg shadow-lg">
                     <div className="w-2 h-2 rounded-full bg-blue-500 animate-pulse"></div>
-                    <span className="text-sm font-sans font-semibold text-charcoal">Architecture Art Déco</span>
+                    <span className="text-sm font-sans font-semibold text-charcoal">{t("cta.label")}</span>
                   </div>
                 </div>
               </div>

@@ -2,6 +2,8 @@
 
 import type React from "react"
 import { useState, useRef, useEffect } from "react"
+import { useRouter, usePathname } from "next/navigation"
+import { useLocale } from 'next-intl'
 import { Globe, ChevronDown, Check, Clock } from "lucide-react"
 
 interface Language {
@@ -13,13 +15,31 @@ interface Language {
 
 const languages: Language[] = [
   { code: 'fr', name: 'Français', flag: '', status: 'active' },
-  { code: 'ar', name: 'العربية', flag: '', status: 'coming-soon' },
-  { code: 'en', name: 'English', flag: '', status: 'coming-soon' }
+  { code: 'en', name: 'English', flag: '', status: 'active' },
+  { code: 'ar', name: 'العربية', flag: '', status: 'active' }
 ]
 
 export function LanguageSelector() {
   const [isOpen, setIsOpen] = useState(false)
-  const [selectedLanguage, setSelectedLanguage] = useState(languages[0])
+  const router = useRouter()
+  const pathname = usePathname()
+  const locale = useLocale()
+  
+  // Fallback: Extract locale from pathname if useLocale() is not working
+  const getCurrentLocale = () => {
+    const segments = pathname.split('/').filter(Boolean)
+    const validLocales = ['fr', 'en', 'ar']
+    const pathLocale = segments[0]
+    
+    if (validLocales.includes(pathLocale)) {
+      return pathLocale
+    }
+    
+    return locale || 'fr' // Fallback to useLocale() or 'fr'
+  }
+
+  const currentLocale = getCurrentLocale()
+  const selectedLanguage = languages.find(lang => lang.code === currentLocale) || languages[0]
   const dropdownRef = useRef<HTMLDivElement>(null)
 
   useEffect(() => {
@@ -35,10 +55,50 @@ export function LanguageSelector() {
 
   const handleLanguageSelect = (language: Language) => {
     if (language.status === 'active') {
-      setSelectedLanguage(language)
       setIsOpen(false)
-      // Here you could add language switching logic
-      // For now, we'll just update the UI state
+      
+      // Get the current path without any locale prefix
+      let pathWithoutLocale = pathname
+      
+      // Remove any locale prefix from the path (handle cases with multiple locales)
+      const segments = pathname.split('/').filter(Boolean)
+      const validLocales = ['fr', 'en', 'ar']
+      
+      // Find the first segment that is not a locale
+      let pathStartIndex = 0
+      for (let i = 0; i < segments.length; i++) {
+        if (!validLocales.includes(segments[i])) {
+          pathStartIndex = i
+          break
+        }
+        // If we've checked all segments and they're all locales, we're at root
+        if (i === segments.length - 1) {
+          pathStartIndex = segments.length
+        }
+      }
+      
+      // Reconstruct the path without any locale prefixes
+      if (pathStartIndex < segments.length) {
+        pathWithoutLocale = '/' + segments.slice(pathStartIndex).join('/')
+      } else {
+        pathWithoutLocale = '/'
+      }
+      
+      // Handle root path
+      if (pathWithoutLocale === '/') {
+        pathWithoutLocale = ''
+      }
+      
+      // Navigate to the same page with the new locale
+      const newPath = `/${language.code}${pathWithoutLocale}`
+      
+      // Additional safety check to prevent double locale prefixes
+      if (newPath.includes(`/${language.code}/${language.code}`)) {
+        console.warn('Prevented double locale prefix in navigation')
+        return
+      }
+      
+      router.push(newPath)
     }
   }
 
