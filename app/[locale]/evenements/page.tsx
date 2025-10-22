@@ -186,19 +186,25 @@ export default function EvenementsPage() {
           </div>
 
           {/* Video Gallery Grid */}
-          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-2 gap-8 lg:gap-12">
+          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8 lg:gap-12">
             {[
               {
-                video: "/event-2.mp4",
-                title: "Soirée ramadanésque",
+                video: "/soire ramadan.mp4",
+                title: "Programme ramadanésque",
                 description: "Une célébration culturelle sous les lumières du Ramadan",
-                fallbackImage: "/site-map-images/evenements-optimized/smart-city/evenement-smartcity1.jpg"
+                fallbackImage: "/site-map-images/evenements-optimized/soiree/evenement - soiree 1.jpg"
               },
               {
-                video: "/event-3.mp4", 
-                title: "Young Moroccan Architecture Awards",
-                description: "Célébrer l'excellence architecturale de demain",
-                fallbackImage: "/site-map-images/evenements-optimized/soiree/evenement - soiree 1.jpg"
+                video: "/AMMA.mp4", 
+                title: "AMMA",
+                description: "Un événement exceptionnel à l'Espace Sacré-Cœur",
+                fallbackImage: "/site-map-images/evenements-optimized/soiree/evenement - soiree 2.jpg"
+              },
+              {
+                video: "/Casablanca Arab Film Festival.mp4",
+                title: "Casablanca Arab Film Festival",
+                description: "Un festival cinématographique d'exception au cœur de Casablanca",
+                fallbackImage: "/site-map-images/reserver sacre coeur/casa arab festival/WhatsApp Image 2025-10-02 at 11.26.11 AM.jpeg"
               },
               {
                 video: "https://www.youtube.com/watch?v=8nFCk756Qlc",
@@ -417,17 +423,15 @@ export default function EvenementsPage() {
                   <video 
                     className="w-full h-full object-cover transition-all duration-700 group-hover:scale-110"
                     muted
-                    loop
                     playsInline
                     preload="metadata"
                     onError={(e: React.SyntheticEvent<HTMLVideoElement, Event>) => {
-                      console.error('Thumbnail video failed to load:', item.video)
-                      // Hide the video element if it fails to load
+                      console.error('Video failed to load:', item.video)
+                      // If video fails, show a solid color background
                       e.currentTarget.style.display = 'none'
-                      // Show fallback image
-                      const fallbackImg = e.currentTarget.nextElementSibling as HTMLImageElement
-                      if (fallbackImg) {
-                        fallbackImg.style.display = 'block'
+                      const parent = e.currentTarget.parentElement
+                      if (parent) {
+                        parent.style.background = 'linear-gradient(135deg, #8B5A2B 0%, #D4AF37 100%)'
                       }
                     }}
                   >
@@ -435,23 +439,6 @@ export default function EvenementsPage() {
                   </video>
                 )}
                 
-                {/* Fallback Image - Only for non-YouTube videos */}
-                {!item.isYouTube && (
-                  <img 
-                    src={item.fallbackImage}
-                    alt={item.title}
-                    className="w-full h-full object-cover transition-all duration-700 group-hover:scale-110 hidden"
-                    onError={(e: React.SyntheticEvent<HTMLImageElement, Event>) => {
-                      console.error('Fallback image failed to load:', item.fallbackImage)
-                      // If both video and image fail, show a solid color background
-                      e.currentTarget.style.display = 'none'
-                      const parent = e.currentTarget.parentElement
-                      if (parent) {
-                        parent.style.background = 'linear-gradient(135deg, #8B5A2B 0%, #D4AF37 100%)'
-                      }
-                    }}
-                  />
-                )}
                 
                 {/* Elegant Overlay */}
                 <div className="absolute inset-0 bg-gradient-to-t from-black/80 via-black/20 to-transparent group-hover:from-black/90 transition-all duration-500"></div>
