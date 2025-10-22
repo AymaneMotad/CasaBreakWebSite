@@ -154,7 +154,7 @@
       "follow": "Suivez-nous",
       "location": "Localisation",
       "openInMaps": "Ouvrir dans Google Maps",
-      "copyright": "© l'Ex église Sacré-Cœur Casablanca. Tous droits réservés."
+      "copyright": "© l'Espace Casablanca. Tous droits réservés."
     }
   },
   "histoire": {
@@ -222,6 +222,39 @@
       "description": "Plongez dans les détails architecturaux exceptionnels de l'Espace Sacré-Cœur. Découvrez comment l'Art Déco et le modernisme s'y rencontrent, faisant de ce lieu un chef-d'œuvre unique du patrimoine casablancais.",
       "button": "Découvrir l'Architecture",
       "label": "Architecture Art Déco"
+    }
+  },
+  "architect": {
+    "badge": "Génie Architectural",
+    "title": "Paul Tournon",
+    "description": "L'architecte visionnaire qui a conçu l'Ex église Sacré-Cœur de Casablanca, un chef-d'œuvre de l'Art Déco marocain",
+    "portrait": {
+      "label": "Architecte du Sacré-Cœur"
+    },
+    "info": {
+      "birth": "1881",
+      "birthLabel": "Naissance",
+      "death": "1964",
+      "deathLabel": "Décès"
+    },
+    "biography": {
+      "title": "Biographie",
+      "paragraph1": "Architecte français né à Marseille, Paul Tournon est diplômé de l'École des Beaux-Arts de Paris. Lauréat du Deuxième Grand Prix de Rome en 1911, il se distingue par sa capacité à unir spiritualité, modernité et technique.",
+      "paragraph2": "Précurseur dans l'usage du béton armé pour les édifices religieux, il marie l'innovation à une grande sensibilité artistique. Son approche révolutionnaire transforme l'architecture sacrée de son époque.",
+      "paragraph3": "En 1930, il conçoit le Sacré-Cœur de Casablanca, chef-d'œuvre qui allie style néo-gothique et art déco, magnifié par la lumière et les volumes marocains. Tournon fut également architecte en chef des Bâtiments civils et Palais nationaux et membre de l'Académie des Beaux-Arts.",
+      "audioTitle": "Écouter: Biographie de Paul Tournon"
+    },
+    "achievements": {
+      "title": "Réalisations Majeures",
+      "achievement1": "Deuxième Grand Prix de Rome en 1911",
+      "achievement2": "Architecte en chef des Bâtiments civils et Palais nationaux",
+      "achievement3": "Membre de l'Académie des Beaux-Arts",
+      "achievement4": "Pionnier du béton armé dans l'architecture religieuse"
+    },
+    "philosophy": {
+      "title": "Philosophie Architecturale",
+      "description": "Paul Tournon croyait en une architecture qui transcende les époques, où la spiritualité rencontre l'innovation technique. Son œuvre incarne un dialogue harmonieux entre héritage spirituel et modernité architecturale.",
+      "quote": "L'architecture doit élever l'âme tout en servant la fonction"
     }
   },
   "architecture": {
@@ -488,11 +521,11 @@
       },
       "inauguration": {
         "title": "Soirée Inauguration",
-        "description": "Une soirée d'exception marquant l'ouverture officielle de l'Ex église Sacré-Cœur comme espace culturel. Un moment historique célébrant la renaissance de ce monument Art Déco au cœur de Casablanca."
+        "description": "Une soirée d'exception marquant l'ouverture officielle de l'Espace Sacré-Cœur comme espace culturel. Un moment historique célébrant la renaissance de ce monument Art Déco au cœur de Casablanca."
       },
       "smartCity": {
         "title": "Casablanca Smart City",
-        "description": "Un événement technologique d'envergure présentant l'innovation urbaine et les solutions intelligentes pour la ville de demain. L'Ex église Sacré-Cœur accueille les leaders de la transformation digitale."
+        "description": "Un événement technologique d'envergure présentant l'innovation urbaine et les solutions intelligentes pour la ville de demain. L'Espace Sacré-Cœur accueille les leaders de la transformation digitale."
       }
     },
     "trust": {

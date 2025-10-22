@@ -154,7 +154,7 @@
       "follow": "Follow us",
       "location": "Location",
       "openInMaps": "Open in Google Maps",
-      "copyright": "© Sacred Heart Space Casablanca. All rights reserved."
+      "copyright": "© The Space Casablanca. All rights reserved."
     }
   },
   "histoire": {
@@ -222,6 +222,39 @@
       "description": "Dive into the exceptional architectural details of the Sacred Heart Space. Discover how Art Deco and modernism meet in this unique masterpiece.",
       "button": "Discover the Architecture",
       "label": "Art Deco Architecture"
+    }
+  },
+  "architect": {
+    "badge": "Architectural Genius",
+    "title": "Paul Tournon",
+    "description": "The visionary architect who designed the Ex Church Sacred Heart of Casablanca, a masterpiece of Moroccan Art Deco",
+    "portrait": {
+      "label": "Sacred Heart Architect"
+    },
+    "info": {
+      "birth": "1881",
+      "birthLabel": "Birth",
+      "death": "1964",
+      "deathLabel": "Death"
+    },
+    "biography": {
+      "title": "Biography",
+      "paragraph1": "French architect born in Marseille, Paul Tournon graduated from the École des Beaux-Arts in Paris. Winner of the Second Grand Prix de Rome in 1911, he distinguished himself by his ability to unite spirituality, modernity and technique.",
+      "paragraph2": "Pioneer in the use of reinforced concrete for religious buildings, he marries innovation with great artistic sensitivity. His revolutionary approach transformed the sacred architecture of his time.",
+      "paragraph3": "In 1930, he designed the Sacred Heart of Casablanca, a masterpiece that combines neo-Gothic and art deco styles, magnified by light and Moroccan volumes. Tournon was also chief architect of Civil Buildings and National Palaces and a member of the Academy of Fine Arts.",
+      "audioTitle": "Listen: Paul Tournon Biography"
+    },
+    "achievements": {
+      "title": "Major Achievements",
+      "achievement1": "Second Grand Prix de Rome in 1911",
+      "achievement2": "Chief Architect of Civil Buildings and National Palaces",
+      "achievement3": "Member of the Academy of Fine Arts",
+      "achievement4": "Pioneer of reinforced concrete in religious architecture"
+    },
+    "philosophy": {
+      "title": "Architectural Philosophy",
+      "description": "Paul Tournon believed in an architecture that transcends eras, where spirituality meets technical innovation. His work embodies a harmonious dialogue between spiritual heritage and architectural modernity.",
+      "quote": "Architecture must elevate the soul while serving function"
     }
   },
   "architecture": {

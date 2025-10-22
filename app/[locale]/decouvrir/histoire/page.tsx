@@ -4,6 +4,7 @@ import { Navigation } from "@/components/navigation"
 import { Footer } from "@/components/footer"
 import { Breadcrumb } from "@/components/breadcrumb"
 import { TextToSpeechPlayer } from "@/components/text-to-speech-player"
+import { ArchitectSection } from "@/components/architect-section"
 import { useTranslations, useLocale } from 'next-intl'
 import Image from "next/image"
 
@@ -214,41 +215,6 @@ export default function HistoirePage() {
               </div>
             </div>
 
-            {/* Paul Tournon - Architect */}
-            <div className="grid lg:grid-cols-2 gap-16 items-start">
-              <div className="animate-gentle-fade-in">
-                <div className="relative h-[500px]">
-                  <Image
-                    src="/paul.png"
-                    alt="Paul Tournon, architecte du Sacré-Cœur de Casablanca"
-                    fill
-                    className="object-cover grayscale rounded-2xl shadow-2xl hover-scale-subtle transition-smooth"
-                  />
-                </div>
-                <p className="text-xs text-charcoal/50 mt-3 font-sans italic">Paul Tournon (1881-1964), architecte français</p>
-              </div>
-              <div className="animate-gentle-fade-in stagger-1">
-                <span className="font-serif text-6xl lg:text-7xl text-vibrant-pink block mb-6">Paul Tournon</span>
-                <h3 className="font-serif text-3xl lg:text-5xl text-charcoal mb-8">Architecte du Sacré-Cœur de Casablanca</h3>
-                <p className="font-sans text-lg text-charcoal/70 leading-relaxed text-readable mb-4">
-                  Architecte français né à Marseille, Paul Tournon est diplômé de l'École des Beaux-Arts de Paris. Lauréat du Deuxième Grand Prix de Rome en 1911, il se distingue par sa capacité à unir spiritualité, modernité et technique.
-                </p>
-                <p className="font-sans text-lg text-charcoal/70 leading-relaxed text-readable mb-4">
-                  Précurseur dans l'usage du béton armé pour les édifices religieux, il marie l'innovation à une grande sensibilité artistique.
-                </p>
-                <p className="font-sans text-lg text-charcoal/70 leading-relaxed text-readable mb-4">
-                  En 1930, il conçoit le Sacré-Cœur de Casablanca, chef-d'œuvre qui allie style néo-gothique et art déco, magnifié par la lumière et les volumes marocains.
-                </p>
-                <p className="font-sans text-lg text-charcoal/70 leading-relaxed text-readable">
-                  Tournon fut également architecte en chef des Bâtiments civils et Palais nationaux et membre de l'Académie des Beaux-Arts. Son œuvre incarne un dialogue harmonieux entre héritage spirituel et modernité architecturale.
-                </p>
-                <TextToSpeechPlayer 
-                  text="Paul Tournon, architecte français né à Marseille, diplômé de l'École des Beaux-Arts de Paris. Lauréat du Deuxième Grand Prix de Rome en 1911, il se distingue par sa capacité à unir spiritualité, modernité et technique. Précurseur dans l'usage du béton armé pour les édifices religieux, il marie l'innovation à une grande sensibilité artistique. En 1930, il conçoit le Sacré-Cœur de Casablanca, chef-d'œuvre qui allie style néo-gothique et art déco, magnifié par la lumière et les volumes marocains. Tournon fut également architecte en chef des Bâtiments civils et Palais nationaux et membre de l'Académie des Beaux-Arts. Son œuvre incarne un dialogue harmonieux entre héritage spirituel et modernité architecturale."
-                  title="Écouter: Paul Tournon, architecte du Sacré-Cœur"
-                />
-              </div>
-            </div>
-
             {/* 1956 */}
             <div className="grid lg:grid-cols-2 gap-16 items-start">
               <div className="animate-gentle-fade-in">
@@ -267,12 +233,13 @@ export default function HistoirePage() {
                 />
               </div>
               <div className="animate-gentle-fade-in stagger-1">
-                <div className="relative h-[500px]">
+                <div className="relative h-[500px] overflow-hidden rounded-2xl">
                   <Image
-                    src="/site-map-images/histoire-optimized/1A1_H1-52_93p057.jpg"
+                    src="/3C2_G22-39-1-044.jpg"
                     alt="Indépendance du Maroc 1956"
                     fill
-                    className="object-cover grayscale rounded-2xl shadow-2xl hover-scale-subtle transition-smooth"
+                    className="object-cover grayscale shadow-2xl hover-scale-subtle transition-smooth"
+                    style={{ transform: 'translateY(20px)' }}
                   />
                 </div>
                 <p className="text-xs text-charcoal/50 mt-3 font-sans italic">{t.raw("hero.photoCredit")}</p>
@@ -401,6 +368,9 @@ export default function HistoirePage() {
           </div>
         </div>
       </section>
+
+      {/* Architect Section */}
+      <ArchitectSection />
 
       {/* Call to Action - Architecture Section */}
       <section className="relative py-24 lg:py-32 bg-gradient-to-b from-off-white via-blue-50/30 to-off-white overflow-hidden">
