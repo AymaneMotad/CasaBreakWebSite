@@ -50,39 +50,84 @@ export function HeroSection() {
 
       <div className="relative z-20 max-w-[1400px] mx-auto px-6 lg:px-12 text-center">
         
-        {/* Patrimoine badge - positioned to overlap container */}
-        <div className="relative z-30 animate-gentle-fade-in -mb-6">
-          <div className="inline-block px-6 py-3 bg-gradient-to-r from-blue-500 to-blue-700 border-2 border-blue-600 rounded-full shadow-2xl">
-            <span className="text-white text-sm font-sans tracking-wider uppercase font-semibold drop-shadow-lg">
-              {t("badge")}
-            </span>
+        {/* Elegant Patrimoine badge with artistic styling */}
+        <div className="relative z-30 animate-gentle-fade-in -mb-8">
+          <div className="inline-block relative">
+            {/* Decorative border elements */}
+            <div className="absolute -inset-1 bg-gradient-to-r from-vibrant-pink/20 via-blue-500/20 to-warm-terracotta/20 rounded-full blur-sm"></div>
+            <div className="relative px-8 py-4 bg-gradient-to-r from-charcoal/80 via-charcoal/70 to-charcoal/80 backdrop-blur-md border border-off-white/20 rounded-full shadow-2xl">
+              <span className="text-off-white text-sm font-sans tracking-widest uppercase font-medium drop-shadow-lg">
+                {t("badge")}
+              </span>
+              {/* Subtle accent dots */}
+              <div className="absolute -right-2 -top-1 w-2 h-2 bg-vibrant-pink/60 rounded-full animate-gentle-pulse"></div>
+              <div className="absolute -left-2 -bottom-1 w-1.5 h-1.5 bg-warm-terracotta/60 rounded-full animate-gentle-pulse delay-300"></div>
+            </div>
           </div>
         </div>
         
-        {/* Enhanced text contrast background container (more compact) */}
-        <div className="relative bg-gradient-to-b from-charcoal/40 via-charcoal/30 to-charcoal/50 lg:from-charcoal/60 lg:via-charcoal/40 lg:to-charcoal/70 rounded-2xl backdrop-blur-sm pt-8 pb-8 px-6 lg:px-8 max-w-4xl mx-auto">
+        {/* Refined text container with reduced opacity and elegant styling */}
+        <div className="relative bg-gradient-to-b from-charcoal/15 via-charcoal/10 to-charcoal/20 lg:from-charcoal/20 lg:via-charcoal/15 lg:to-charcoal/25 rounded-3xl backdrop-blur-md pt-10 pb-10 px-8 lg:px-12 max-w-3xl mx-auto border border-off-white/10 shadow-2xl">
           
-          <h1 className="relative z-10 font-serif font-normal text-3xl md:text-4xl lg:text-5xl text-off-white mb-4 leading-tight tracking-wide animate-gentle-fade-in stagger-1 drop-shadow-2xl">
-          {t("title")}
-          </h1>
+          {/* Artistic corner decorations */}
+          <div className="absolute top-4 left-4 w-8 h-8 opacity-20">
+            <svg viewBox="0 0 32 32" className="w-full h-full text-vibrant-pink/40">
+              <path d="M4 4 L28 4 L28 8 L8 8 L8 28 L4 28 Z" fill="none" stroke="currentColor" strokeWidth="1"/>
+            </svg>
+          </div>
+          <div className="absolute top-4 right-4 w-8 h-8 opacity-20">
+            <svg viewBox="0 0 32 32" className="w-full h-full text-warm-terracotta/40">
+              <path d="M28 4 L4 4 L4 8 L24 8 L24 28 L28 28 Z" fill="none" stroke="currentColor" strokeWidth="1"/>
+            </svg>
+          </div>
+          <div className="absolute bottom-4 left-4 w-8 h-8 opacity-20">
+            <svg viewBox="0 0 32 32" className="w-full h-full text-blue-500/40">
+              <path d="M4 28 L28 28 L28 24 L8 24 L8 4 L4 4 Z" fill="none" stroke="currentColor" strokeWidth="1"/>
+            </svg>
+          </div>
+          <div className="absolute bottom-4 right-4 w-8 h-8 opacity-20">
+            <svg viewBox="0 0 32 32" className="w-full h-full text-vibrant-pink/40">
+              <path d="M28 28 L4 28 L4 24 L24 24 L24 4 L28 4 Z" fill="none" stroke="currentColor" strokeWidth="1"/>
+            </svg>
+          </div>
           
+          {/* Elegant title with artistic flourishes */}
+          <div className="relative mb-6">
+            <h1 className="relative z-10 font-serif font-light text-3xl md:text-4xl lg:text-5xl text-off-white leading-tight tracking-wide animate-gentle-fade-in stagger-1 drop-shadow-2xl">
+              {t("title")}
+            </h1>
+            {/* Decorative line under title */}
+            <div className="absolute -bottom-2 left-1/2 -translate-x-1/2 w-24 h-px bg-gradient-to-r from-transparent via-vibrant-pink/40 to-transparent animate-gentle-fade-in stagger-2"></div>
+          </div>
           
-          <p className="relative z-10 font-sans text-base md:text-lg text-off-white max-w-xl mx-auto leading-relaxed animate-gentle-fade-in stagger-2 text-readable mb-8 drop-shadow-xl">
+          {/* Refined description with better spacing */}
+          <p className="relative z-10 font-sans text-base md:text-lg text-off-white/95 max-w-2xl mx-auto leading-relaxed animate-gentle-fade-in stagger-2 text-readable mb-10 drop-shadow-xl">
             {t("description")}
           </p>
 
-          <div className="relative z-10 flex flex-col sm:flex-row gap-4 justify-center items-center animate-gentle-fade-in stagger-3">
+          {/* Elegant button group with artistic styling */}
+          <div className="relative z-10 flex flex-col sm:flex-row gap-6 justify-center items-center animate-gentle-fade-in stagger-3">
+            {/* Primary button with enhanced styling */}
             <a
               href="/visiter/individuels"
-              className="px-8 py-3 bg-gradient-to-r from-blue-500 to-blue-700 text-white text-sm font-sans tracking-wider uppercase hover:shadow-xl hover:scale-105 transition-all duration-300 rounded-lg shadow-lg border-2 border-blue-600 font-semibold"
+              className="group relative px-10 py-4 bg-gradient-to-r from-vibrant-pink/90 to-blue-500/90 text-off-white text-sm font-sans tracking-wider uppercase hover:shadow-2xl hover:scale-105 transition-all duration-500 rounded-full shadow-xl border border-off-white/20 font-medium backdrop-blur-sm overflow-hidden"
             >
-              {t("visitButton")}
+              {/* Animated background effect */}
+              <div className="absolute inset-0 bg-gradient-to-r from-vibrant-pink to-blue-500 opacity-0 group-hover:opacity-100 transition-opacity duration-500"></div>
+              <span className="relative z-10">{t("visitButton")}</span>
+              {/* Decorative corner elements */}
+              <div className="absolute top-1 right-1 w-1 h-1 bg-off-white/60 rounded-full group-hover:animate-pulse"></div>
+              <div className="absolute bottom-1 left-1 w-1 h-1 bg-off-white/60 rounded-full group-hover:animate-pulse delay-150"></div>
             </a>
+            
+            {/* Secondary button with refined styling */}
             <a
               href="/decouvrir/histoire"
-              className="px-8 py-3 bg-transparent border-2 border-off-white/60 text-off-white text-sm font-sans tracking-wider uppercase hover:bg-off-white/20 hover:border-off-white/80 transition-all duration-300 rounded-lg backdrop-blur-sm shadow-lg font-semibold"
+              className="group relative px-10 py-4 bg-transparent border-2 border-off-white/40 text-off-white text-sm font-sans tracking-wider uppercase hover:bg-off-white/10 hover:border-off-white/60 transition-all duration-500 rounded-full backdrop-blur-md shadow-lg font-medium overflow-hidden"
             >
-              {t("discoverButton")}
+              <span className="relative z-10">{t("discoverButton")}</span>
+              {/* Subtle hover effect */}
+              <div className="absolute inset-0 bg-gradient-to-r from-transparent via-off-white/5 to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-500"></div>
             </a>
           </div>
         </div>
