@@ -219,6 +219,20 @@ export default function EvenementsPage() {
                 description: "Best of Day 2 - Solutions intelligentes pour la ville de demain",
                 fallbackImage: "/smart-city-day2-thumbnail.jpg",
                 isYouTube: true
+              },
+              {
+                video: "https://www.instagram.com/reel/C79QTIHojGS/?igsh=MXFma3RjZXUwb2Z6OQ%3D%3D",
+                title: "Instagram Reel - Moments Culturels",
+                description: "Captures authentiques des événements à l'Espace Sacré-Cœur",
+                fallbackImage: "/site-map-images/evenements-optimized/soiree/evenement - soiree 4.jpg",
+                isInstagram: true
+              },
+              {
+                video: "https://www.instagram.com/reel/DBvgoWLOEWy/?igsh=MWtwajB5Y2loODFkMw==",
+                title: "Instagram Reel - Espace Sacré-Cœur",
+                description: "Découvrez l'Espace Sacré-Cœur à travers nos contenus Instagram",
+                fallbackImage: "/site-map-images/evenements-optimized/soiree/evenement - soiree 5.jpg",
+                isInstagram: true
               }
             ].map((item, index) => (
               <div
@@ -274,7 +288,7 @@ export default function EvenementsPage() {
                     closeBtn.style.transform = 'scale(1)'
                   }
                   
-                  // Create video element (YouTube or regular video)
+                  // Create video element (YouTube, Instagram, or regular video)
                   let videoElement
                   if (item.isYouTube) {
                     // Extract YouTube video ID
@@ -294,6 +308,10 @@ export default function EvenementsPage() {
                       videoElement.muted = false
                       videoElement.preload = 'metadata'
                     }
+                  } else if (item.isInstagram) {
+                    // For Instagram videos, open in new tab
+                    window.open(item.video, '_blank')
+                    return
                   } else {
                     videoElement = document.createElement('video')
                     videoElement.src = item.video
