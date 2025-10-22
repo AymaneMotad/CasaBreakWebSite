@@ -78,10 +78,10 @@ export function Navigation() {
             className="transition-all duration-500 hover:scale-105 flex items-center"
           >
             <Image 
-              src="/sacre-logo.svg" 
+              src={currentLocale === 'ar' ? "/logo one svg.svg" : "/sacre-logo.svg"} 
               alt="Casablanca Sacré-Cœur" 
-              width={595} 
-              height={393}
+              width={currentLocale === 'ar' ? 274 : 595} 
+              height={currentLocale === 'ar' ? 184 : 393}
               className="h-20 lg:h-24 w-auto"
               priority
             />

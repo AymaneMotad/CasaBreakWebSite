@@ -50,10 +50,10 @@ export function Footer() {
             <div className="lg:max-w-md">
               <div className="mb-8">
                 <Image 
-                  src="/sacre-black.svg" 
+                  src={currentLocale === 'ar' ? "/logo one svg.svg" : "/sacre-black.svg"} 
                   alt="l'Ex église Sacré-Cœur" 
-                  width={595} 
-                  height={393}
+                  width={currentLocale === 'ar' ? 274 : 595} 
+                  height={currentLocale === 'ar' ? 184 : 393}
                   className="h-20 w-auto filter brightness-0 invert"
                 />
               </div>
