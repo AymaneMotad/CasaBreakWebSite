@@ -67,7 +67,7 @@ export function HeroSection() {
         </div>
         
         {/* Refined text container with reduced opacity and elegant styling */}
-        <div className="relative bg-gradient-to-b from-charcoal/15 via-charcoal/10 to-charcoal/20 lg:from-charcoal/20 lg:via-charcoal/15 lg:to-charcoal/25 rounded-3xl backdrop-blur-md pt-10 pb-10 px-8 lg:px-12 max-w-3xl mx-auto border border-off-white/10 shadow-2xl">
+        <div className="relative bg-gradient-to-b from-charcoal/15 via-charcoal/10 to-charcoal/20 lg:from-charcoal/20 lg:via-charcoal/15 lg:to-charcoal/25 rounded-3xl backdrop-blur-md pt-8 pb-8 px-6 lg:px-10 max-w-2xl mx-auto border border-off-white/10 shadow-2xl">
           
           {/* Artistic corner decorations */}
           <div className="absolute top-4 left-4 w-8 h-8 opacity-20">
