@@ -16,7 +16,7 @@ interface Language {
 const languages: Language[] = [
   { code: 'fr', name: 'Français', flag: '', status: 'active' },
   { code: 'en', name: 'English', flag: '', status: 'active' },
-  { code: 'ar', name: 'العربية', flag: '', status: 'active' }
+  { code: 'ar', name: 'العربية', flag: '', status: 'coming-soon' }
 ]
 
 export function LanguageSelector() {
