@@ -498,7 +498,7 @@
     "trust": {
       "title": "Ils nous ont fait",
       "subtitle": "confiance",
-      "description": "Des marques prestigieuses et institutions de renom ont choisi l'Ex Église Sacré-Cœur pour leurs événements d'exception."
+      "description": "Des marques prestigieuses et institutions de renom ont choisi l'Espace Sacré-Cœur pour leurs événements d'exception."
     }
   },
   "reserver": {
@@ -517,7 +517,7 @@
       "description3": "Donnez vie à votre événement dès aujourd'hui — contactez-nous pour réserver votre date et découvrir nos offres personnalisées."
     },
     "video": {
-      "title": "Revivez l'inauguration du l'Ex Église Sacré-Cœur",
+      "title": "Revivez l'inauguration de l'Espace Sacré-Cœur",
       "subtitle": "Un voyage architectural à travers l'histoire et l'élégance"
     },
     "spaces": {
@@ -554,7 +554,7 @@
       "numberOfPeople": "Nombre de personnes",
       "projectDetails": "Détails de votre projet",
       "projectPlaceholder": "Décrivez votre événement, vos besoins spécifiques, horaires souhaités...",
-      "contactText": "Contactez notre équipe pour organiser votre événement à l'Ex Église Sacré-Cœur et profitez d'un cadre prestigieux au cœur de Casablanca.",
+      "contactText": "Contactez notre équipe pour organiser votre événement à l'Espace Sacré-Cœur et profitez d'un cadre prestigieux au cœur de Casablanca.",
       "bookNow": "Réserver maintenant"
     },
     "services": {
