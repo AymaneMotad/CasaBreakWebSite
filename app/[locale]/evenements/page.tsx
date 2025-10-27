@@ -32,9 +32,9 @@ export default function EvenementsPage() {
       description: t("events.openPortfolio.description"),
     },
     {
-      title: t("events.caverneAliBaba.title"),
+      title: t("events.marcheCreateurs.title"),
       image: "/lacaverne.jpeg",
-      description: t("events.caverneAliBaba.description"),
+      description: t("events.marcheCreateurs.description"),
     },
   ]
 

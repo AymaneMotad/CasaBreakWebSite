@@ -531,9 +531,9 @@
         "title": "OPEN PORTFOLIO CASABLANCA",
         "description": "Une exposition exceptionnelle mettant en valeur le talent créatif et l'innovation artistique de Casablanca. Découvrez les œuvres d'artistes émergents et établis dans un cadre patrimonial unique."
       },
-      "caverneAliBaba": {
-        "title": "La caverne d'Ali Baba",
-        "description": "Un événement culturel magique qui transporte les visiteurs dans l'univers des Mille et Une Nuits. Une expérience immersive mêlant tradition et modernité au cœur de l'Espace Sacré-Cœur."
+      "marcheCreateurs": {
+        "title": "Marché des créateurs",
+        "description": "Un marché artisanal exceptionnel mettant en valeur les talents créatifs locaux. Découvrez des créations uniques et rencontrez les artisans qui façonnent l'artisanat marocain contemporain."
       }
     },
     "trust": {
