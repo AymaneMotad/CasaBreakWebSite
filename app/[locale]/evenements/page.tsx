@@ -26,6 +26,16 @@ export default function EvenementsPage() {
       image: "/site-map-images/evenements-optimized/smart-city/evenement-smartcity2.jpg",
       description: t("events.smartCity.description"),
     },
+    {
+      title: t("events.openPortfolio.title"),
+      image: "/open portfolio.jpeg",
+      description: t("events.openPortfolio.description"),
+    },
+    {
+      title: t("events.caverneAliBaba.title"),
+      image: "/lacaverne.jpeg",
+      description: t("events.caverneAliBaba.description"),
+    },
   ]
 
   return (

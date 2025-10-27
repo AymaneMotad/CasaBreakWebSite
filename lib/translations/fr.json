@@ -526,6 +526,14 @@
       "smartCity": {
         "title": "Casablanca Smart City",
         "description": "Un événement technologique d'envergure présentant l'innovation urbaine et les solutions intelligentes pour la ville de demain. L'Espace Sacré-Cœur accueille les leaders de la transformation digitale."
+      },
+      "openPortfolio": {
+        "title": "OPEN PORTFOLIO CASABLANCA",
+        "description": "Une exposition exceptionnelle mettant en valeur le talent créatif et l'innovation artistique de Casablanca. Découvrez les œuvres d'artistes émergents et établis dans un cadre patrimonial unique."
+      },
+      "caverneAliBaba": {
+        "title": "La caverne d'Ali Baba",
+        "description": "Un événement culturel magique qui transporte les visiteurs dans l'univers des Mille et Une Nuits. Une expérience immersive mêlant tradition et modernité au cœur de l'Espace Sacré-Cœur."
       }
     },
     "trust": {
