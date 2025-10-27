@@ -266,7 +266,9 @@ export default function IndividuelsPage() {
           </div>
           <div className="text-center mt-16">
             <a
-              href="/ticket"
+              href="https://casawe.ma"
+              target="_blank"
+              rel="noopener noreferrer"
               className="inline-flex items-center gap-4 px-12 py-6 text-sm font-sans tracking-wider uppercase bg-gradient-to-r from-blue-500 to-blue-700 text-white hover:shadow-2xl hover:shadow-blue-500/25 hover:scale-105 transition-all duration-500 animate-fade-in-up delay-200 rounded-2xl group"
             >
               <Calendar className="w-5 h-5 group-hover:scale-110 transition-transform duration-300" />

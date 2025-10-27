@@ -178,7 +178,7 @@ export function Footer() {
                 </a>
               </li>
               <li>
-                <a href="https://tickets.sacrecoeur-casa.ma" target="_blank" rel="noopener noreferrer" className="text-slate-400 hover:text-slate-200 transition-colors duration-200 text-sm">
+                <a href="https://casawe.ma" target="_blank" rel="noopener noreferrer" className="text-slate-400 hover:text-slate-200 transition-colors duration-200 text-sm">
                   {t("links.tickets")}
                 </a>
               </li>

@@ -134,7 +134,7 @@ export function Navigation() {
             <LanguageSelector />
 
             <a
-              href="https://tickets.sacrecoeur-casa.ma"
+              href="https://casawe.ma"
               target="_blank"
               rel="noopener noreferrer"
               className="relative px-8 py-4 text-sm font-sans font-medium tracking-wide uppercase bg-gradient-to-r from-blue-500 to-blue-700 text-white border-2 border-blue-600 hover:border-blue-800 hover:shadow-xl hover:shadow-blue-500/25 hover:scale-105 transition-all duration-500 overflow-hidden group rounded-lg"
@@ -230,7 +230,7 @@ export function Navigation() {
               {/* Mobile Ticket Button */}
               <div className="mt-8 px-4">
                 <a
-                  href="https://tickets.sacrecoeur-casa.ma"
+                  href="https://casawe.ma"
                   target="_blank"
                   rel="noopener noreferrer"
                   className="block w-full py-5 px-6 text-center text-base font-sans font-medium tracking-wide uppercase bg-gradient-to-r from-blue-500 to-blue-700 text-white border-2 border-blue-600 hover:border-blue-800 shadow-lg hover:shadow-xl hover:shadow-blue-500/25 hover:scale-105 transition-all duration-500 rounded-xl touch-manipulation"
