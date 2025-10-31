@@ -14,6 +14,59 @@ export default function ReserverPage() {
   const locale = useLocale()
   const videoRef = useRef<HTMLVideoElement>(null)
   const [isPlaying, setIsPlaying] = useState(false)
+  const [submitting, setSubmitting] = useState(false)
+  const [form, setForm] = useState({
+    name: "",
+    company: "",
+    email: "",
+    phone: "",
+    event_type: "",
+    desired_date: "",
+    number_of_people: "",
+    project_details: "",
+  })
+
+  const handleSubmit = async (e: React.FormEvent) => {
+    e.preventDefault()
+    if (submitting) return
+    setSubmitting(true)
+    try {
+      const res = await fetch("/api/reservations", {
+        method: "POST",
+        headers: { "Content-Type": "application/json" },
+        body: JSON.stringify({
+          name: form.name,
+          company: form.company,
+          email: form.email,
+          phone: form.phone,
+          event_type: form.event_type,
+          desired_date: form.desired_date,
+          number_of_people: form.number_of_people ? Number(form.number_of_people) : null,
+          project_details: form.project_details || null,
+          locale,
+        }),
+      })
+      if (!res.ok) {
+        const data = await res.json().catch(() => ({}))
+        throw new Error(data?.error || "Failed to submit reservation")
+      }
+      alert("Votre demande a été envoyée. Nous vous contacterons sous 48h.")
+      setForm({
+        name: "",
+        company: "",
+        email: "",
+        phone: "",
+        event_type: "",
+        desired_date: "",
+        number_of_people: "",
+        project_details: "",
+      })
+    } catch (err: any) {
+      alert(err?.message || "Une erreur est survenue. Réessayez plus tard.")
+    } finally {
+      setSubmitting(false)
+    }
+  }
 
   const togglePlay = () => {
     if (videoRef.current) {
@@ -80,7 +133,7 @@ export default function ReserverPage() {
           <div className="relative h-[500px] animate-fade-in-up stagger-1">
             <Image
               src="/site-map-images/reserver sacre coeur/reserver sacre coeur - ferrari /reserver sacre coeur - ferrari 2.jpeg"
-              alt={t("reserver.introduction.imageAlt")}
+              alt={t("introduction.imageAlt")}
               fill
               className="object-cover rounded-2xl shadow-2xl"
             />
@@ -447,7 +500,7 @@ export default function ReserverPage() {
             {t("booking.description")}
           </p>
 
-          <form className="space-y-8">
+          <form className="space-y-8" onSubmit={handleSubmit}>
             {/* Personal Information Section */}
             <div className="space-y-6">
               <h3 className="font-serif text-xl text-charcoal mb-4 animate-fade-in-up">{t("booking.personalInfo")}</h3>
@@ -464,6 +517,8 @@ export default function ReserverPage() {
                       required
                       className="w-full pl-12 pr-4 py-4 bg-off-white border border-charcoal/10 focus:border-vibrant-pink focus:outline-none transition-colors font-sans text-sm rounded-lg"
                       placeholder="Nom & Prénom"
+                      value={form.name}
+                      onChange={(e) => setForm({ ...form, name: e.target.value })}
                     />
                   </div>
                 </div>
@@ -479,6 +534,8 @@ export default function ReserverPage() {
                       required
                       className="w-full pl-12 pr-4 py-4 bg-off-white border border-charcoal/10 focus:border-vibrant-pink focus:outline-none transition-colors font-sans text-sm rounded-lg"
                       placeholder="Nom de l'Entreprise"
+                      value={form.company}
+                      onChange={(e) => setForm({ ...form, company: e.target.value })}
                     />
                   </div>
                 </div>
@@ -496,6 +553,8 @@ export default function ReserverPage() {
                       required
                       className="w-full pl-12 pr-4 py-4 bg-off-white border border-charcoal/10 focus:border-vibrant-pink focus:outline-none transition-colors font-sans text-sm rounded-lg"
                       placeholder="votre@email.com"
+                      value={form.email}
+                      onChange={(e) => setForm({ ...form, email: e.target.value })}
                     />
                   </div>
                 </div>
@@ -511,6 +570,8 @@ export default function ReserverPage() {
                       required
                       className="w-full pl-12 pr-4 py-4 bg-off-white border border-charcoal/10 focus:border-vibrant-pink focus:outline-none transition-colors font-sans text-sm rounded-lg"
                       placeholder="+212 6XX XXX XXX"
+                      value={form.phone}
+                      onChange={(e) => setForm({ ...form, phone: e.target.value })}
                     />
                   </div>
                 </div>
@@ -529,6 +590,8 @@ export default function ReserverPage() {
                   <select
                     required
                     className="w-full px-4 py-4 bg-off-white border border-charcoal/10 focus:border-vibrant-pink focus:outline-none transition-colors font-sans text-sm rounded-lg"
+                    value={form.event_type}
+                    onChange={(e) => setForm({ ...form, event_type: e.target.value })}
                   >
                     <option value="">{t("booking.selectOption")}</option>
                     <option value="festival">{t("booking.eventTypes.festival")}</option>
@@ -551,6 +614,8 @@ export default function ReserverPage() {
                       type="date"
                       required
                       className="w-full pl-12 pr-4 py-4 bg-off-white border border-charcoal/10 focus:border-vibrant-pink focus:outline-none transition-colors font-sans text-sm rounded-lg"
+                      value={form.desired_date}
+                      onChange={(e) => setForm({ ...form, desired_date: e.target.value })}
                     />
                   </div>
                 </div>
@@ -566,6 +631,8 @@ export default function ReserverPage() {
                     type="number"
                     className="w-full pl-12 pr-4 py-4 bg-off-white border border-charcoal/10 focus:border-vibrant-pink focus:outline-none transition-colors font-sans text-sm rounded-lg"
                     placeholder="50"
+                    value={form.number_of_people}
+                    onChange={(e) => setForm({ ...form, number_of_people: e.target.value })}
                   />
                 </div>
               </div>
@@ -578,6 +645,8 @@ export default function ReserverPage() {
                   rows={6}
                   className="w-full px-4 py-4 bg-off-white border border-charcoal/10 focus:border-vibrant-pink focus:outline-none transition-colors font-sans text-sm resize-none rounded-lg"
                   placeholder={t("booking.projectPlaceholder")}
+                  value={form.project_details}
+                  onChange={(e) => setForm({ ...form, project_details: e.target.value })}
                 />
               </div>
             </div>
@@ -589,9 +658,10 @@ export default function ReserverPage() {
               </p>
               <button
                 type="submit"
-                className="px-16 py-5 bg-gradient-to-r from-blue-500 to-blue-700 text-white text-sm font-sans tracking-[0.15em] uppercase hover:shadow-2xl hover:scale-105 transition-all duration-300 rounded-lg"
+                className="px-16 py-5 bg-gradient-to-r from-blue-500 to-blue-700 text-white text-sm font-sans tracking-[0.15em] uppercase hover:shadow-2xl hover:scale-105 transition-all duration-300 rounded-lg disabled:opacity-60 disabled:cursor-not-allowed"
+                disabled={submitting}
               >
-                {t("booking.bookNow")}
+                {submitting ? "Envoi..." : t("booking.bookNow")}
               </button>
             </div>
           </form>
