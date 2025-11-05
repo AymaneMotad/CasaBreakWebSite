@@ -477,6 +477,18 @@
       "description2": "Choose the route that suits you best, take time to admire the stained glass windows, volumes and light, and let yourself be carried away by the magic of the place.",
       "imageAlt": "Guide with group"
     },
+    "pricing": {
+      "title": "Visit Rates",
+      "groups": {
+        "title": "Groups (from 10 people)",
+        "price": "35 MAD / person",
+        "description": "Want to discover the Sacred Heart Space with friends or in a small group? Enjoy a free or accompanied visit, according to your wishes, to explore the history, architecture and symbolism of this iconic monument of Casablanca. Choose the route that inspires you, admire the stained glass windows, volumes and light, and let yourself be carried away by the magic of the place."
+      },
+      "children": {
+        "title": "Children (6 to 12 years)",
+        "price": "25 MAD"
+      }
+    },
     "practicalInfo": {
       "badge": "Practical Information",
       "title": "Practical information",

@@ -2,7 +2,7 @@
 
 import Image from "next/image"
 import Link from "next/link"
-import { Calendar, Phone } from "lucide-react"
+import { Calendar, Phone, Users, Baby } from "lucide-react"
 import { Navigation } from "@/components/navigation"
 import { Footer } from "@/components/footer"
 import { Breadcrumb } from "@/components/breadcrumb"
@@ -58,6 +58,50 @@ export default function GroupesPage() {
               fill 
               className="object-cover rounded-2xl shadow-2xl hover-scale-subtle transition-smooth" 
             />
+          </div>
+        </div>
+      </section>
+
+      {/* Pricing Section */}
+      <section className="bg-gradient-to-br from-charcoal/3 via-off-white to-charcoal/5 py-24 lg:py-32">
+        <div className="max-w-[1400px] mx-auto px-6 lg:px-12">
+          <div className="text-center mb-20">
+            <h2 className="font-serif text-5xl lg:text-7xl text-charcoal mb-8 animate-fade-in-up delay-100 tracking-tight">
+              {t("pricing.title")}
+            </h2>
+          </div>
+          <div className="max-w-[900px] mx-auto">
+            {/* Combined Groups Pricing Card */}
+            <div className="group relative bg-white rounded-3xl p-10 lg:p-12 shadow-lg hover:shadow-2xl transition-all duration-500 animate-fade-in-up hover:-translate-y-2 overflow-hidden">
+              <div className="absolute inset-0 bg-gradient-to-br from-vibrant-pink/5 via-transparent to-warm-terracotta/5 opacity-0 group-hover:opacity-100 transition-opacity duration-500"></div>
+              <div className="relative">
+                <div className="flex items-center gap-6 mb-8">
+                  <div className="w-20 h-20 bg-gradient-to-br from-vibrant-pink/10 to-warm-terracotta/10 rounded-2xl flex items-center justify-center group-hover:scale-110 transition-transform duration-300">
+                    <Users className="h-10 w-10 text-vibrant-pink" />
+                  </div>
+                  <div>
+                    <h3 className="font-serif text-3xl text-charcoal mb-2">{t("pricing.groups.title")}</h3>
+                    <p className="font-serif text-4xl text-vibrant-pink font-bold">{t("pricing.groups.price")}</p>
+                  </div>
+                </div>
+                <p className="font-sans text-base text-charcoal/70 leading-relaxed mb-8">{t("pricing.groups.description")}</p>
+                
+                {/* Pricing Tiers */}
+                <div className="border-t border-charcoal/10 pt-8 mt-8">
+                  <div className="flex items-center justify-between gap-4 p-6 bg-gradient-to-r from-vibrant-pink/5 to-warm-terracotta/5 rounded-2xl">
+                    <div className="flex items-center gap-4">
+                      <div className="w-12 h-12 bg-gradient-to-br from-vibrant-pink/10 to-warm-terracotta/10 rounded-xl flex items-center justify-center">
+                        <Baby className="h-6 w-6 text-vibrant-pink" />
+                      </div>
+                      <div>
+                        <h4 className="font-serif text-xl text-charcoal">{t("pricing.children.title")}</h4>
+                      </div>
+                    </div>
+                    <p className="font-serif text-3xl text-vibrant-pink font-bold">{t("pricing.children.price")}</p>
+                  </div>
+                </div>
+              </div>
+            </div>
           </div>
         </div>
       </section>

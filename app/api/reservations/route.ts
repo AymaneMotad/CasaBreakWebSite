@@ -27,48 +27,52 @@ export async function POST(request: Request) {
       }, { status: 400 })
     }
 
-    if (!supabaseUrl || !serviceKey) {
-      console.error("Missing Supabase environment variables")
-      console.error("SUPABASE_URL:", supabaseUrl ? "✓ found" : "✗ missing")
-      console.error("SERVICE_ROLE_KEY:", serviceKey ? "✓ found" : "✗ missing")
-      return NextResponse.json({ 
-        error: "Server configuration error",
-        message: "Missing Supabase environment variables. Please check your .env.local file.",
-        required: {
-          "NEXT_PUBLIC_SUPABASE_URL or SUPABASE_URL": !!supabaseUrl,
-          "SUPABASE_SERVICE_ROLE_KEY": !!serviceKey
-        }
-      }, { status: 500 })
-    }
+    // COMMENTED OUT: Supabase insertion logic - now using email instead
+    // if (!supabaseUrl || !serviceKey) {
+    //   console.error("Missing Supabase environment variables")
+    //   console.error("SUPABASE_URL:", supabaseUrl ? "✓ found" : "✗ missing")
+    //   console.error("SERVICE_ROLE_KEY:", serviceKey ? "✓ found" : "✗ missing")
+    //   return NextResponse.json({ 
+    //     error: "Server configuration error",
+    //     message: "Missing Supabase environment variables. Please check your .env.local file.",
+    //     required: {
+    //       "NEXT_PUBLIC_SUPABASE_URL or SUPABASE_URL": !!supabaseUrl,
+    //       "SUPABASE_SERVICE_ROLE_KEY": !!serviceKey
+    //     }
+    //   }, { status: 500 })
+    // }
 
-    const supabaseAdmin = createServerClient(supabaseUrl, serviceKey, {
-      cookies: {
-        getAll() { return [] },
-        setAll() {},
-      },
-    })
+    // const supabaseAdmin = createServerClient(supabaseUrl, serviceKey, {
+    //   cookies: {
+    //     getAll() { return [] },
+    //     setAll() {},
+    //   },
+    // })
 
-    const { data, error } = await supabaseAdmin
-      .from("reservations")
-      .insert({
-        name,
-        company,
-        email,
-        phone,
-        event_type,
-        desired_date,
-        number_of_people: number_of_people ? parseInt(String(number_of_people), 10) : null,
-        project_details: project_details || null,
-        locale: locale || null,
-      })
-      .select()
+    // const { data, error } = await supabaseAdmin
+    //   .from("reservations")
+    //   .insert({
+    //     name,
+    //     company,
+    //     email,
+    //     phone,
+    //     event_type,
+    //     desired_date,
+    //     number_of_people: number_of_people ? parseInt(String(number_of_people), 10) : null,
+    //     project_details: project_details || null,
+    //     locale: locale || null,
+    //   })
+    //   .select()
 
-    if (error) {
-      console.error("Supabase error:", error)
-      return NextResponse.json({ error: error.message, code: error.code }, { status: 500 })
-    }
+    // if (error) {
+    //   console.error("Supabase error:", error)
+    //   return NextResponse.json({ error: error.message, code: error.code }, { status: 500 })
+    // }
 
-    return NextResponse.json({ success: true, data })
+    // return NextResponse.json({ success: true, data })
+    
+    // Return success response for backward compatibility
+    return NextResponse.json({ success: true, message: "Form data received - email will be sent from client side" })
   } catch (err: any) {
     console.error("API route error:", err)
     return NextResponse.json({ 

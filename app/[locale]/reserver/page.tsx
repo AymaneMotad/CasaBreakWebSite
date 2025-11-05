@@ -31,26 +31,55 @@ export default function ReserverPage() {
     if (submitting) return
     setSubmitting(true)
     try {
-      const res = await fetch("/api/reservations", {
-        method: "POST",
-        headers: { "Content-Type": "application/json" },
-        body: JSON.stringify({
-          name: form.name,
-          company: form.company,
-          email: form.email,
-          phone: form.phone,
-          event_type: form.event_type,
-          desired_date: form.desired_date,
-          number_of_people: form.number_of_people ? Number(form.number_of_people) : null,
-          project_details: form.project_details || null,
-          locale,
-        }),
-      })
-      if (!res.ok) {
-        const data = await res.json().catch(() => ({}))
-        throw new Error(data?.error || "Failed to submit reservation")
-      }
-      alert("Votre demande a été envoyée. Nous vous contacterons sous 48h.")
+      // COMMENTED OUT: Backend API call to Supabase - now using email directly
+      // const res = await fetch("/api/reservations", {
+      //   method: "POST",
+      //   headers: { "Content-Type": "application/json" },
+      //   body: JSON.stringify({
+      //     name: form.name,
+      //     company: form.company,
+      //     email: form.email,
+      //     phone: form.phone,
+      //     event_type: form.event_type,
+      //     desired_date: form.desired_date,
+      //     number_of_people: form.number_of_people ? Number(form.number_of_people) : null,
+      //     project_details: form.project_details || null,
+      //     locale,
+      //   }),
+      // })
+      // if (!res.ok) {
+      //   const data = await res.json().catch(() => ({}))
+      //   throw new Error(data?.error || "Failed to submit reservation")
+      // }
+
+      // Create email content similar to insp.html pattern
+      const emailContent = `
+Nouvelle demande de réservation - Ex Église Sacré-Cœur
+
+Nom: ${form.name}
+Entreprise: ${form.company}
+Email: ${form.email}
+Téléphone: ${form.phone}
+Type d'événement: ${form.event_type}
+Date souhaitée: ${form.desired_date}
+Nombre de personnes: ${form.number_of_people || 'Non renseigné'}
+Détails du projet:
+${form.project_details || 'Non renseigné'}
+
+---
+Message envoyé depuis le site web Casablanca Church
+Langue: ${locale}
+`
+      
+      // Create mailto link with CC
+      const subject = encodeURIComponent(`Nouvelle demande de réservation - ${form.company}`)
+      const body = encodeURIComponent(emailContent)
+      const mailtoLink = `mailto:fz.challigui@casaevents.ma?cc=contact@casaevents.ma&subject=${subject}&body=${body}`
+      
+      // Open email client
+      window.location.href = mailtoLink
+      
+      // Reset form
       setForm({
         name: "",
         company: "",

@@ -477,6 +477,18 @@
       "description2": "Choisissez le parcours qui vous correspond le mieux, prenez le temps d'admirer les vitraux, les volumes et la lumière, et laissez-vous porter par la magie du lieu.",
       "imageAlt": "Guide avec groupe"
     },
+    "pricing": {
+      "title": "Tarifs des visites",
+      "groups": {
+        "title": "Groupes (à partir de 10 personnes)",
+        "price": "35 MAD / personne",
+        "description": "Envie de découvrir l'Espace Sacré-Cœur entre amis ou en petit groupe ? Profitez d'une visite libre ou accompagnée, selon vos envies, pour explorer l'histoire, l'architecture et la symbolique de ce monument emblématique de Casablanca. Choisissez le parcours qui vous inspire, admirez les vitraux, les volumes et la lumière, et laissez-vous porter par la magie du lieu."
+      },
+      "children": {
+        "title": "Enfants (6 à 12 ans)",
+        "price": "25 MAD"
+      }
+    },
     "practicalInfo": {
       "badge": "Informations Pratiques",
       "title": "Informations pratiques",
