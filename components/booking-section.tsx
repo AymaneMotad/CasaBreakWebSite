@@ -79,9 +79,14 @@ export function BookingSection() {
               </div>
             </div>
 
-            <button className="px-8 py-4 bg-blue-600 text-white font-sans text-sm tracking-wide uppercase rounded-md hover:bg-blue-700 transition-all duration-300 hover:scale-105 shadow-lg">
+            <a
+              href="https://casawe.ma"
+              target="_blank"
+              rel="noopener noreferrer"
+              className="inline-block px-8 py-4 bg-blue-600 text-white font-sans text-sm tracking-wide uppercase rounded-md hover:bg-blue-700 transition-all duration-300 hover:scale-105 shadow-lg"
+            >
               {t("bookNow")}
-            </button>
+            </a>
           </div>
 
             <div className="animate-gentle-scale stagger-1 flex justify-center lg:justify-end">
