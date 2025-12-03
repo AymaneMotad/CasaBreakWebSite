@@ -159,7 +159,7 @@ export default function HistoirePage() {
           
           <div className="space-y-32">
             {/* 1923 */}
-            <div className="grid lg:grid-cols-2 gap-16 items-start">
+            {/* <div className="grid lg:grid-cols-2 gap-16 items-start">
               <div className="animate-gentle-fade-in">
            
                 <span className="font-serif text-7xl lg:text-9xl text-vibrant-pink block mb-6">1923</span>
@@ -183,7 +183,7 @@ export default function HistoirePage() {
                 </div>
                 <p className="text-xs text-charcoal/50 mt-3 font-sans italic">{t.raw("hero.photoCredit")}</p>
               </div>
-            </div>
+            </div> */}
 
             {/* 1930 */}
             <div className="grid lg:grid-cols-2 gap-16 items-start">
