@@ -11,6 +11,7 @@ import { ToastProvider } from "@/components/toast-notification"
 import { ScrollProgress } from "@/components/scroll-progress"
 import { BackToTop } from "@/components/back-to-top"
 import { PWAInstallPrompt } from "@/components/pwa-install-prompt"
+import { ChatbotWidget } from "@/components/chatbot/chatbot-widget"
 
 const inter = Inter({
   subsets: ["latin"],
@@ -89,6 +90,7 @@ export default async function LocaleLayout({
             <Suspense fallback={null}>{children}</Suspense>
             <BackToTop />
             <PWAInstallPrompt />
+            <ChatbotWidget />
             <Analytics />
           </ToastProvider>
         </NextIntlClientProvider>
