@@ -1,4 +1,18 @@
 {
+  "pwa": {
+    "title": "Install CasaBreak",
+    "description": "Install the CasaBreak app on your device for quick access and an optimal experience, even offline.",
+    "install": "Install now",
+    "later": "Later",
+    "cancel": "Cancel",
+    "close": "Close",
+    "understood": "Got it",
+    "iosInstructions": "To install on your iPhone or iPad:",
+    "iosStep1": "Tap the Share button",
+    "iosStep2": "Select \"Add to Home Screen\"",
+    "feature1": "Quick access",
+    "feature2": "Works offline"
+  },
   "navigation": {
     "home": "Home",
     "discover": "Discover Casablanca",
