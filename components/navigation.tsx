@@ -207,7 +207,7 @@ export function Navigation() {
               href="https://casawe.ma"
               target="_blank"
               rel="noopener noreferrer"
-              className="px-8 py-4 text-sm font-sans font-medium tracking-wide uppercase bg-[#006233] text-[#c1272d] border-2 border-[#006233] hover:opacity-90 transition-all duration-300 rounded-lg font-bold"
+              className="px-8 py-4 text-sm font-sans font-medium tracking-wide uppercase bg-gradient-to-r from-[#00a346] to-[#c10000] text-white hover:opacity-90 transition-all duration-300 rounded-lg font-bold"
             >
               <span className="flex items-center gap-3">
                 <Ticket className="w-4 h-4" />
@@ -297,7 +297,7 @@ export function Navigation() {
                   href="https://casawe.ma"
                   target="_blank"
                   rel="noopener noreferrer"
-                  className="block w-full py-5 px-6 text-center text-base font-sans font-medium tracking-wide uppercase bg-[#006233] text-[#c1272d] border-2 border-[#006233] hover:opacity-90 transition-all duration-300 rounded-xl touch-manipulation font-bold"
+                  className="block w-full py-5 px-6 text-center text-base font-sans font-medium tracking-wide uppercase bg-gradient-to-r from-[#00a346] to-[#c10000] text-white hover:opacity-90 transition-all duration-300 rounded-xl touch-manipulation font-bold"
                   onClick={() => setIsOpen(false)}
                 >
                   <div className="flex items-center justify-center gap-3">

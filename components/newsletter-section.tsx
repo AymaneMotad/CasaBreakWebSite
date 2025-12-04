@@ -67,7 +67,7 @@ export function NewsletterSection() {
           />
           <button
             type="submit"
-            className="px-8 py-4 bg-[#006233] text-[#c1272d] font-sans text-sm tracking-wide uppercase rounded-md hover:shadow-xl hover:scale-105 transition-all duration-300 whitespace-nowrap border-2 border-[#006233] font-bold"
+            className="px-8 py-4 bg-gradient-to-r from-[#00a346] to-[#c10000] text-white font-sans text-sm tracking-wide uppercase rounded-md hover:shadow-xl hover:scale-105 transition-all duration-300 whitespace-nowrap font-bold"
           >
             {t("subscribe")}
           </button>

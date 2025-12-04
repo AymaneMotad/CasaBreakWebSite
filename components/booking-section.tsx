@@ -83,7 +83,7 @@ export function BookingSection() {
               href="https://casawe.ma"
               target="_blank"
               rel="noopener noreferrer"
-              className="inline-block px-8 py-4 bg-blue-600 text-white font-sans text-sm tracking-wide uppercase rounded-md hover:bg-blue-700 transition-all duration-300 hover:scale-105 shadow-lg"
+              className="inline-block px-8 py-4 bg-gradient-to-r from-[#00a346] to-[#c10000] text-white font-sans text-sm tracking-wide uppercase rounded-md hover:opacity-90 transition-all duration-300 hover:scale-105 shadow-lg font-bold"
             >
               {t("bookNow")}
             </a>
@@ -93,7 +93,7 @@ export function BookingSection() {
               <div className="relative">
                 <img
                   src="/casawee.png"
-                  alt="Plateforme de réservation Sacré-Cœur"
+                  alt="Plateforme de réservation CasaBreak"
                   className="w-[400px] h-[600px] lg:w-[450px] lg:h-[650px] object-cover rounded-[3rem] shadow-2xl hover-scale-subtle transition-smooth"
                 />
               </div>

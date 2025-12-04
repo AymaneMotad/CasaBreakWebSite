@@ -11,31 +11,31 @@ export function HeritageSection() {
       {/* Subtle Moroccan decorative elements */}
       <div className="absolute inset-0 pointer-events-none">
         {/* Top decorative border */}
-        <div className="absolute top-0 left-1/3 right-1/3 h-1 bg-gradient-to-r from-transparent via-vibrant-pink/60 to-transparent"></div>
-        <div className="absolute top-2 left-1/3 right-1/3 h-px bg-gradient-to-r from-transparent via-warm-terracotta/40 to-transparent"></div>
+        <div className="absolute top-0 left-1/3 right-1/3 h-1 bg-gradient-to-r from-transparent via-[#00a346]/60 to-transparent"></div>
+        <div className="absolute top-2 left-1/3 right-1/3 h-px bg-gradient-to-r from-transparent via-[#c10000]/40 to-transparent"></div>
         
         {/* Corner geometric patterns */}
         <div className="absolute top-16 left-16 w-16 h-16 opacity-30">
-          <svg viewBox="0 0 64 64" className="w-full h-full text-vibrant-pink/60">
+          <svg viewBox="0 0 64 64" className="w-full h-full text-[#00a346]/60">
             <path d="M8 8 L56 8 L56 56 L8 56 Z M16 16 L48 16 L48 48 L16 48 Z" fill="none" stroke="currentColor" strokeWidth="1.5"/>
             <path d="M24 24 L40 24 L40 40 L24 40 Z" fill="currentColor" opacity="0.4"/>
           </svg>
         </div>
         
         <div className="absolute top-16 right-16 w-16 h-16 opacity-30">
-          <svg viewBox="0 0 64 64" className="w-full h-full text-warm-terracotta/60">
+          <svg viewBox="0 0 64 64" className="w-full h-full text-[#c10000]/60">
             <path d="M8 8 L56 8 L56 56 L8 56 Z M16 16 L48 16 L48 48 L16 48 Z" fill="none" stroke="currentColor" strokeWidth="1.5"/>
             <path d="M24 24 L40 24 L40 40 L24 40 Z" fill="currentColor" opacity="0.4"/>
           </svg>
         </div>
         
         {/* Side decorative elements */}
-        <div className="absolute left-0 top-1/4 bottom-1/4 w-1 bg-gradient-to-b from-transparent via-vibrant-pink/40 to-transparent"></div>
-        <div className="absolute right-0 top-1/4 bottom-1/4 w-1 bg-gradient-to-b from-transparent via-warm-terracotta/40 to-transparent"></div>
+        <div className="absolute left-0 top-1/4 bottom-1/4 w-1 bg-gradient-to-b from-transparent via-[#00a346]/40 to-transparent"></div>
+        <div className="absolute right-0 top-1/4 bottom-1/4 w-1 bg-gradient-to-b from-transparent via-[#c10000]/40 to-transparent"></div>
         
         {/* Bottom decorative pattern */}
         <div className="absolute bottom-12 left-1/2 -translate-x-1/2 w-48 h-12 opacity-25">
-          <svg viewBox="0 0 192 48" className="w-full h-full text-vibrant-pink/60">
+          <svg viewBox="0 0 192 48" className="w-full h-full text-[#00a346]/60">
             <path d="M8 24 Q48 8, 88 24 Q128 40, 168 24 Q176 20, 184 24" fill="none" stroke="currentColor" strokeWidth="2"/>
             <circle cx="48" cy="24" r="3" fill="currentColor"/>
             <circle cx="96" cy="24" r="3" fill="currentColor"/>
@@ -48,15 +48,12 @@ export function HeritageSection() {
         <div className="grid lg:grid-cols-2 gap-16 items-center mb-20">
           <div className="animate-gentle-fade-in">
             <ImageLightbox
-              src="/site-map-images/histoire-optimized/1A1_H1-19_136p.jpg"
-              alt="Ex Sacré-Cœur de Casablanca - Histoire"
+              src="/decouvrer/decouvrer-8.jpg"
+              alt="Découvrir Casablanca avec CasaBreak"
               width={600}
               height={400}
               className="w-full h-[400px] object-cover rounded-xl shadow-2xl"
             />
-            <p className="font-sans text-[10px] text-off-white/60 mt-3 text-center italic">
-              Photo issue du Fonds Flandrin, collection privée de la Fondation Banque Populaire
-            </p>
           </div>
           <div className="animate-gentle-fade-in stagger-1">
             <h3 className="font-serif text-3xl mb-6">{t("title")}</h3>
@@ -64,8 +61,8 @@ export function HeritageSection() {
               {t("description")}
             </p>
             <Link
-              href="/decouvrir/histoire"
-              className="inline-flex items-center gap-2 px-6 py-3 bg-gradient-to-r from-blue-500 to-blue-700 text-white text-sm font-sans tracking-wider uppercase hover:shadow-xl hover:scale-105 transition-all duration-300 rounded-lg"
+              href="/decouvrir/monuments"
+              className="inline-flex items-center gap-2 px-6 py-3 bg-gradient-to-r from-[#00a346] to-[#c10000] text-white text-sm font-sans tracking-wider uppercase hover:shadow-xl hover:scale-105 transition-all duration-300 rounded-lg font-bold"
             >
               {t("exploreButton")}
               <ArrowRight className="h-4 w-4" />
@@ -79,25 +76,25 @@ export function HeritageSection() {
               icon: BookOpen,
               title: t("cards.history.title"),
               description: t("cards.history.description"),
-              link: "/decouvrir/histoire",
+              link: "/decouvrir/monuments",
               linkText: t("cards.history.link"),
-              color: "from-vibrant-pink to-warm-terracotta"
+              color: "from-[#00a346] to-[#00a346]/80"
             },
             {
               icon: Building,
               title: t("cards.architecture.title"),
               description: t("cards.architecture.description"),
-              link: "/decouvrir/architecture",
+              link: "/manger-sortir/restaurants",
               linkText: t("cards.architecture.link"),
-              color: "from-warm-terracotta to-charcoal"
+              color: "from-[#c10000] to-[#c10000]/80"
             },
             {
               icon: Users,
               title: t("cards.visits.title"),
               description: t("cards.visits.description"),
-              link: "/visiter/individuels",
+              link: "/evenements",
               linkText: t("cards.visits.link"),
-              color: "from-charcoal to-vibrant-pink"
+              color: "from-[#00a346] to-[#c10000]"
             }
           ].map((item, index) => (
             <div

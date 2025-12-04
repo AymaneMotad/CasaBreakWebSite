@@ -1,8 +1,6 @@
 import type React from "react"
 import type { Metadata } from "next"
-import { GeistSans } from "geist/font/sans"
-import { GeistMono } from "geist/font/mono"
-import { Bodoni_Moda } from "next/font/google"
+import { Roboto, Open_Sans } from "next/font/google"
 import { Analytics } from "@vercel/analytics/next"
 import { Suspense } from "react"
 import { NextIntlClientProvider } from 'next-intl';
@@ -13,7 +11,14 @@ import { ToastProvider } from "@/components/toast-notification"
 import { ScrollProgress } from "@/components/scroll-progress"
 import { BackToTop } from "@/components/back-to-top"
 
-const bodoniModa = Bodoni_Moda({
+const roboto = Roboto({
+  subsets: ["latin"],
+  weight: ["300", "400", "500", "700", "900"],
+  variable: "--font-sans",
+  display: "swap",
+})
+
+const openSans = Open_Sans({
   subsets: ["latin"],
   weight: ["400", "500", "600", "700", "800"],
   variable: "--font-serif",
@@ -44,7 +49,7 @@ export default async function LocaleLayout({
 
   return (
     <html lang={locale} dir={locale === 'ar' ? 'rtl' : 'ltr'}>
-      <body className={`font-sans ${GeistSans.variable} ${GeistMono.variable} ${bodoniModa.variable} ${locale === 'ar' ? 'rtl' : 'ltr'}`}>
+      <body className={`font-sans ${roboto.variable} ${openSans.variable} ${locale === 'ar' ? 'rtl' : 'ltr'}`}>
         <NextIntlClientProvider messages={messages}>
           <ToastProvider>
             <ScrollProgress />

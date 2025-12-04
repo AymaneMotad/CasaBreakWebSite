@@ -34,48 +34,48 @@
   },
   "home": {
     "hero": {
-      "badge": "Patrimoine Culturel • Depuis 1930",
-      "title": "Un joyau patrimonial au cœur de Casablanca",
-      "description": "L'icône du patrimoine casablancais, l'Espace Sacré-Cœur, s'éveille à une nouvelle vie. Désormais centre culturel et lieu de création, il incarne la rencontre entre la mémoire d'hier et la modernité d'aujourd'hui.",
-      "visitButton": "Visiter",
-      "discoverButton": "Découvrir"
+      "badge": "CasaBreak • Votre Guide Urbain",
+      "title": "Découvrez Casablanca avec CasaBreak",
+      "description": "CasaBreak est votre guide urbain pour découvrir le meilleur de Casablanca : lieux touristiques, parcs, attractions, street art, cinémas, shopping, restaurants, cafés et spas. Disponible sur smartphone et tablette, trouvez rapidement une activité à faire et laissez-vous guider grâce à cette application mobile géolocalisée dédiée aux sorties à Casablanca.",
+      "visitButton": "Télécharger l'app",
+      "discoverButton": "Découvrir Casablanca"
     },
     "magazine": {
-      "title1": "Un chef-d'œuvre architectural",
-      "description1": "L'Ex église Sacré-Cœur de Casablanca, érigé en 1930, incarne l'élégance de l'architecture Art Déco. Ses lignes épurées et sa façade blanche immaculée en font un monument emblématique de la ville.",
-      "description1b": "Aujourd'hui transformé en centre culturel, il accueille expositions, concerts et événements qui célèbrent le patrimoine marocain et international.",
-      "title2": "Un mélange harmonieux de styles",
-      "description2": "L'édifice dialogue avec l'architecture mauresque traditionnelle tout en affirmant sa modernité. Ses vitraux colorés et ses volumes généreux créent une atmosphère unique.",
-      "description2b": "Chaque détail architectural raconte l'histoire d'une époque où l'art et la foi se rencontraient dans une harmonie parfaite.",
-      "title3": "Un symbole de la diversité culturelle",
-      "description3": "Aujourd'hui, l'Espace Sacré-Cœur incarne la richesse du patrimoine culturel de Casablanca. Véritable pont entre les cultures, les époques et les communautés, il inspire artistes, architectes et visiteurs du monde entier, perpétuant son rôle de lieu de rencontre et d'échange.",
-      "description3b": ""
+      "title1": "Explorez Casablanca facilement",
+      "description1": "CasaBreak est une application mobile innovante conçue pour vous faire découvrir tous les trésors cachés de Casablanca. Que vous soyez résident ou visiteur, trouvez instantanément les meilleurs endroits à visiter, les restaurants à essayer, les événements à ne pas manquer et bien plus encore.",
+      "description1b": "Avec une interface intuitive et une géolocalisation précise, CasaBreak transforme votre expérience de la ville blanche en une aventure personnalisée et mémorable.",
+      "title2": "Tout Casablanca dans votre poche",
+      "description2": "L'application CasaBreak vous donne accès à une base de données complète de lieux emblématiques, monuments historiques, quartiers à explorer, plages, centres commerciaux, et activités culturelles. Chaque lieu est accompagné d'informations détaillées, photos, horaires et avis.",
+      "description2b": "Planifiez vos sorties, créez vos itinéraires personnalisés et découvrez Casablanca à votre rythme avec CasaBreak.",
+      "title3": "Votre compagnon de sorties",
+      "description3": "CasaBreak révolutionne la façon dont vous explorez Casablanca. Trouvez rapidement un restaurant pour dîner, un café pour travailler, un parc pour se détendre, ou un événement culturel à ne pas manquer. L'application s'adapte à vos préférences et vous suggère les meilleures options selon votre localisation.",
+      "description3b": "Téléchargez CasaBreak maintenant et transformez chaque sortie en une expérience inoubliable à Casablanca."
     },
     "heritage": {
-      "title": "Mémoire de Casablanca",
-      "description": "Au centre de Casablanca, l'Ex Église du Sacré-Cœur incarne le lien entre tradition et modernité. Construite dans les années 1930, ce monument emblématique témoigne de la richesse culturelle et architecturale de la ville. Transformée au fil des décennies, elle a su préserver son authenticité tout en se réinventant en espace de création et de partage. Lieu de mémoire devenu lieu de vie, elle illustre la capacité de Casablanca à faire dialoguer passé et avenir.",
-      "exploreButton": "Explorer l'histoire",
+      "title": "Explorez Casablanca",
+      "description": "CasaBreak vous permet de découvrir tous les trésors cachés de Casablanca. Que vous soyez résident ou visiteur, trouvez instantanément les meilleurs endroits à visiter, les restaurants à essayer, les événements à ne pas manquer et bien plus encore.",
+      "exploreButton": "Découvrir l'application",
       "cards": {
         "history": {
-          "title": "Histoire",
-          "description": "Découvrez l'histoire fascinante de ce monument depuis sa construction en 1930 jusqu'à sa transformation en centre culturel.",
-          "link": "En savoir plus"
+          "title": "Monuments",
+          "description": "Découvrez les monuments emblématiques et lieux historiques de Casablanca avec des informations détaillées et des photos.",
+          "link": "Voir les monuments"
         },
         "architecture": {
-          "title": "Architecture",
-          "description": "Explorez les détails architecturaux, les influences Art Déco et les techniques de construction de l'époque.",
-          "link": "En savoir plus"
+          "title": "Restaurants & Cafés",
+          "description": "Trouvez les meilleurs restaurants et cafés de la ville avec des avis, horaires et géolocalisation précise.",
+          "link": "Explorer"
         },
         "visits": {
-          "title": "Visites guidées",
-          "description": "Participez à nos visites guidées avec des experts pour une découverte approfondie du patrimoine.",
-          "link": "En savoir plus"
+          "title": "Événements",
+          "description": "Ne manquez aucun événement culturel, festival ou activité à Casablanca grâce à notre calendrier mis à jour.",
+          "link": "Voir les événements"
         }
       }
     },
     "spinningCathedral": {
-      "title": "Un Monument au Cœur de Casablanca",
-      "description": "Découvrez l'histoire fascinante de l'Ex église Sacré-Cœur, un joyau architectural Art Déco qui continue d'inspirer et de rassembler les Casablancais et les visiteurs du monde entier."
+      "title": "CasaBreak - Votre Guide de Casablanca",
+      "description": "CasaBreak est l'application mobile de référence pour découvrir Casablanca. Trouvez les meilleurs restaurants, cafés, attractions, événements et lieux emblématiques de la ville blanche. Disponible sur iOS et Android."
     },
     "practical": {
       "badge": "Informations Pratiques",
@@ -129,8 +129,8 @@
       "description": "Consultez notre calendrier pour voir les dates disponibles et réserver votre visite ou événement"
     },
     "booking": {
-      "title": "Voulez-vous réserver vos billets pour vos prochains événements à l'Espace Sacré-Cœur ?",
-      "description": "Découvrez notre plateforme de réservation en ligne et accédez à tous les événements de l'Espace Sacré-Cœur en un seul clic.",
+      "title": "Réservez vos billets pour vos prochains événements à Casablanca",
+      "description": "Découvrez notre plateforme de réservation en ligne et accédez à tous les événements à Casablanca en un seul clic.",
       "features": {
         "calendar": {
           "title": "Calendrier en temps réel",
@@ -145,12 +145,12 @@
     },
     "newsletter": {
       "title": "Rejoignez-nous",
-      "description": "Inscrivez-vous à notre newsletter pour recevoir les dernières actualités sur nos événements, expositions et activités culturelles à l'Espace Sacré-Cœur de Casablanca.",
+      "description": "Inscrivez-vous à notre newsletter pour recevoir les dernières actualités sur les événements, expositions et activités culturelles à Casablanca.",
       "placeholder": "Votre adresse email",
       "subscribe": "S'inscrire"
     },
     "footer": {
-      "description": "Monument historique Art Déco et espace culturel au cœur de Casablanca depuis 1930. Un lieu d'exception où l'histoire rencontre la modernité.",
+      "description": "CasaBreak est votre guide urbain pour découvrir le meilleur de Casablanca. Trouvez rapidement une activité à faire et laissez-vous guider grâce à cette application mobile géolocalisée.",
       "contact": "Contact",
       "address": "Adresse",
       "addressValue": "Angle rue d'Alger et boulevard Rachidi<br />Quartier Gautier, Casablanca 20250",
@@ -175,7 +175,7 @@
       "follow": "Suivez-nous",
       "location": "Localisation",
       "openInMaps": "Ouvrir dans Google Maps",
-      "copyright": "© l'Espace Sacré-Cœur. Tous droits réservés."
+      "copyright": "© CasaBreak. Tous droits réservés."
     }
   },
   "histoire": {
@@ -643,6 +643,46 @@
         "cleaning": "Nettoyage après événement",
         "support": "Assistance technique"
       }
+    }
+  },
+  "monuments": {
+    "breadcrumb": {
+      "discover": "Découvrir",
+      "monuments": "Monuments & lieux emblématiques"
+    },
+    "hero": {
+      "badge": "Patrimoine Casablancais",
+      "title": "Monuments & Lieux Emblématiques",
+      "description": "Découvrez les monuments emblématiques qui font la renommée de Casablanca",
+      "imageAlt": "Monuments de Casablanca"
+    },
+    "monuments": {
+      "hassan2": {
+        "title": "Mosquée Hassan II",
+        "description": "La Mosquée Hassan II est le symbole absolu de Casablanca. Construite en partie sur l'océan, elle impressionne par son minaret de 210 mètres le plus haut du monde et son architecture raffinée mêlant zellige, marbre sculpté et bois de cèdre. C'est l'un des seuls lieux religieux du Maroc ouvert aux visiteurs non musulmans, ce qui en fait une étape incontournable. Les visites guidées permettent de découvrir la salle de prière majestueuse, les patios et les vues spectaculaires sur l'Atlantique. Un monument grandiose, à vivre autant de jour que de nuit."
+      },
+      "habous": {
+        "title": "Quartier Habous",
+        "description": "Le Quartier Habous, aussi appelé \"Nouvelle Médina\", est un mélange harmonieux entre architecture marocaine traditionnelle et urbanisme colonial. Ses ruelles propres, ses arcades et ses places lumineuses en font un lieu agréable pour flâner. Le quartier est célèbre pour ses librairies, ses artisans du cuir, ses boutiques d'habits traditionnels et ses pâtisseries marocaines mythiques. On y trouve aussi la Mahkama du Pacha, un chef-d'œuvre architectural. C'est l'un des endroits les plus authentiques de Casablanca, idéal pour découvrir un artisanat de qualité et une ambiance calme."
+      },
+      "medina": {
+        "title": "Ancienne Médina",
+        "description": "L'Ancienne Médina représente le cœur historique de Casablanca. Plus petite et moins touristique que celle d'autres villes marocaines, elle offre une immersion réelle dans la vie locale : petites échoppes, marchés traditionnels, ruelles animées et scènes du quotidien. On y découvre la Sqala, un ancien fort réaménagé en café-restaurant, ainsi que des remparts d'époque. C'est un lieu parfait pour ressentir l'histoire de Casa et observer son authenticité. Idéal pour une promenade culturelle, accompagné de quelques pauses dans les petites boutiques locales."
+      },
+      "artdeco": {
+        "title": "Centre-ville Art Déco",
+        "description": "Casablanca possède l'un des plus beaux patrimoines Art Déco du monde. Le centre-ville, construit dans les années 1920–1940, regorge de façades géométriques, de balcons travaillés, de portes en fer forgé et d'immeubles historiques. En se promenant sur le boulevard Mohammed V ou dans les rues transversales, on découvre des bâtiments iconiques : hôtels d'époque, anciens cinémas, banques, immeubles résidentiels. Ce quartier représente l'élégance de l'ancienne Casablanca cosmopolite. Des visites guidées permettent d'apprécier pleinement ce patrimoine unique."
+      },
+      "sacrecoeur": {
+        "title": "Espace Sacré-Cœur",
+        "description": "Construite en 1930, l'ex église Sacré-Cœur est un exemple remarquable d'architecture néo-gothique avec une touche Art Déco. Bien qu'elle ne soit plus un lieu de culte, elle accueille aujourd'hui des expositions, des événements culturels et des installations artistiques. Son allure imposante, son intérieur lumineux et ses vitraux stylisés en font un lieu unique à Casablanca. Située au bord du Parc de la Ligue Arabe, elle constitue une étape culturelle et architecturale incontournable pour découvrir le passé colonial de la ville."
+      }
+    },
+    "cta": {
+      "badge": "Visite Guidée",
+      "title": "Découvrez Casablanca",
+      "description": "Explorez ces monuments emblématiques lors d'une visite guidée ou en autonomie",
+      "button": "Planifier votre visite"
     }
   }
 }

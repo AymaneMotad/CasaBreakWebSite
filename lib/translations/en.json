@@ -34,22 +34,22 @@
   },
   "home": {
     "hero": {
-      "badge": "Cultural Heritage • Since 1930",
-      "title": "A heritage jewel in the heart of Casablanca",
-      "description": "The iconic heritage of Casablanca, the Sacred Heart Space, awakens to new life. Now a cultural center and creative space, it embodies the meeting between yesterday's memory and today's modernity.",
-      "visitButton": "Visit",
-      "discoverButton": "Discover"
+      "badge": "CasaBreak • Your Urban Guide",
+      "title": "Discover Casablanca with CasaBreak",
+      "description": "CasaBreak is your urban guide to discover the best of Casablanca: tourist places, parks, attractions, street art, cinemas, shopping, restaurants, cafes and spas. Available on smartphone and tablet, quickly find an activity to do and let yourself be guided by this geolocated mobile app dedicated to outings in Casablanca.",
+      "visitButton": "Download the app",
+      "discoverButton": "Discover Casablanca"
     },
     "magazine": {
-      "title1": "An architectural masterpiece",
-      "description1": "The Sacred Heart Space of Casablanca, built in 1930, embodies the elegance of Art Deco architecture. Its clean lines and immaculate white facade make it an iconic monument of the city.",
-      "description1b": "Today transformed into a cultural center, it hosts exhibitions, concerts and events that celebrate Moroccan and international heritage.",
-      "title2": "A harmonious blend of styles",
-      "description2": "The building dialogues with traditional Moorish architecture while asserting its modernity. Its colorful stained glass windows and generous volumes create a unique atmosphere.",
-      "description2b": "Every architectural detail tells the story of an era where art and faith met in perfect harmony.",
-      "title3": "A symbol of cultural diversity",
-      "description3": "Today, the Sacred Heart Space embodies the richness of Casablanca's cultural heritage. A true bridge between cultures, eras and communities, it inspires artists, architects and visitors from around the world, perpetuating its role as a place of meeting and exchange.",
-      "description3b": ""
+      "title1": "Explore Casablanca easily",
+      "description1": "CasaBreak is an innovative mobile app designed to help you discover all the hidden treasures of Casablanca. Whether you're a resident or visitor, instantly find the best places to visit, restaurants to try, events not to miss and much more.",
+      "description1b": "With an intuitive interface and precise geolocation, CasaBreak transforms your experience of the white city into a personalized and memorable adventure.",
+      "title2": "All of Casablanca in your pocket",
+      "description2": "The CasaBreak app gives you access to a comprehensive database of iconic places, historic monuments, neighborhoods to explore, beaches, shopping malls, and cultural activities. Each place comes with detailed information, photos, hours and reviews.",
+      "description2b": "Plan your outings, create your personalized itineraries and discover Casablanca at your own pace with CasaBreak.",
+      "title3": "Your outings companion",
+      "description3": "CasaBreak revolutionizes the way you explore Casablanca. Quickly find a restaurant for dinner, a café to work, a park to relax, or a cultural event not to miss. The app adapts to your preferences and suggests the best options based on your location.",
+      "description3b": "Download CasaBreak now and turn every outing into an unforgettable experience in Casablanca."
     },
     "heritage": {
       "title": "Memory of Casablanca",
@@ -74,8 +74,8 @@
       }
     },
     "spinningCathedral": {
-      "title": "A Monument in the Heart of Casablanca",
-      "description": "Discover the fascinating history of the Sacred Heart Space, an Art Deco architectural gem that continues to inspire and bring together Casablancans and visitors from around the world."
+      "title": "CasaBreak - Your Casablanca Guide",
+      "description": "CasaBreak is the leading mobile app for discovering Casablanca. Find the best restaurants, cafes, attractions, events and iconic places in the white city. Available on iOS and Android."
     },
     "practical": {
       "badge": "Practical Information",
@@ -129,8 +129,8 @@
       "description": "Check our calendar to see available dates and book your visit or event"
     },
     "booking": {
-      "title": "Would you like to book tickets for your upcoming events at the Sacred Heart Space?",
-      "description": "Discover our online booking platform and access all events at the Sacred Heart Space with a single click.",
+      "title": "Book tickets for your upcoming events in Casablanca",
+      "description": "Discover our online booking platform and access all events in Casablanca with a single click.",
       "features": {
         "calendar": {
           "title": "Real-time calendar",
@@ -145,12 +145,12 @@
     },
     "newsletter": {
       "title": "Join us",
-      "description": "Subscribe to our newsletter to receive the latest news about our events, exhibitions and cultural activities at the Sacred Heart Space in Casablanca.",
+      "description": "Subscribe to our newsletter to receive the latest news about events, exhibitions and cultural activities in Casablanca.",
       "placeholder": "Your email address",
       "subscribe": "Subscribe"
     },
     "footer": {
-      "description": "Historic Art Deco monument and cultural space in the heart of Casablanca since 1930. An exceptional place where history meets modernity.",
+      "description": "CasaBreak is your urban guide to discover the best of Casablanca. Quickly find an activity to do and let yourself be guided by this geolocated mobile app.",
       "contact": "Contact",
       "address": "Address",
       "addressValue": "Corner of rue d'Alger and boulevard Rachidi<br />Gautier Quarter, Casablanca 20250",
@@ -175,7 +175,7 @@
       "follow": "Follow us",
       "location": "Location",
       "openInMaps": "Open in Google Maps",
-      "copyright": "© The Sacred Heart Space. All rights reserved."
+      "copyright": "© CasaBreak. All rights reserved."
     }
   },
   "histoire": {
@@ -643,6 +643,46 @@
         "cleaning": "Post-event cleaning",
         "support": "Technical support"
       }
+    }
+  },
+  "monuments": {
+    "breadcrumb": {
+      "discover": "Discover",
+      "monuments": "Monuments & iconic places"
+    },
+    "hero": {
+      "badge": "Casablanca Heritage",
+      "title": "Monuments & Iconic Places",
+      "description": "Discover the iconic monuments that make Casablanca famous",
+      "imageAlt": "Casablanca Monuments"
+    },
+    "monuments": {
+      "hassan2": {
+        "title": "Hassan II Mosque",
+        "description": "The Hassan II Mosque is the absolute symbol of Casablanca. Built partly on the ocean, it impresses with its 210-meter minaret, the tallest in the world, and its refined architecture combining zellige, sculpted marble and cedar wood. It is one of the few religious sites in Morocco open to non-Muslim visitors, making it an essential stop. Guided tours allow you to discover the majestic prayer hall, patios and spectacular views of the Atlantic. A grandiose monument, to be experienced both day and night."
+      },
+      "habous": {
+        "title": "Habous Quarter",
+        "description": "The Habous Quarter, also called \"New Medina\", is a harmonious blend of traditional Moroccan architecture and colonial urbanism. Its clean alleys, arcades and bright squares make it a pleasant place to stroll. The quarter is famous for its bookstores, leather craftsmen, traditional clothing shops and mythical Moroccan pastry shops. You can also find the Mahkama du Pacha, an architectural masterpiece. It is one of the most authentic places in Casablanca, ideal for discovering quality craftsmanship and a calm atmosphere."
+      },
+      "medina": {
+        "title": "Old Medina",
+        "description": "The Old Medina represents the historic heart of Casablanca. Smaller and less touristy than those of other Moroccan cities, it offers a real immersion into local life: small shops, traditional markets, lively alleys and everyday scenes. You can discover the Sqala, an old fort converted into a café-restaurant, as well as period ramparts. It's a perfect place to feel the history of Casa and observe its authenticity. Ideal for a cultural walk, accompanied by a few stops in the small local shops."
+      },
+      "artdeco": {
+        "title": "Art Deco City Center",
+        "description": "Casablanca has one of the most beautiful Art Deco heritages in the world. The city center, built in the 1920s–1940s, is full of geometric facades, worked balconies, wrought iron doors and historic buildings. Walking along Mohammed V Boulevard or the side streets, you discover iconic buildings: period hotels, old cinemas, banks, residential buildings. This quarter represents the elegance of old cosmopolitan Casablanca. Guided tours allow you to fully appreciate this unique heritage."
+      },
+      "sacrecoeur": {
+        "title": "Sacred Heart Space",
+        "description": "Built in 1930, the former Sacred Heart Church is a remarkable example of neo-Gothic architecture with an Art Deco touch. Although it is no longer a place of worship, it now hosts exhibitions, cultural events and artistic installations. Its imposing appearance, bright interior and stylized stained glass windows make it a unique place in Casablanca. Located on the edge of the Arab League Park, it is an essential cultural and architectural stop to discover the colonial past of the city."
+      }
+    },
+    "cta": {
+      "badge": "Guided Tour",
+      "title": "Discover Casablanca",
+      "description": "Explore these iconic monuments on a guided tour or independently",
+      "button": "Plan your visit"
     }
   }
 }
