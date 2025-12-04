@@ -51,13 +51,13 @@
     "hero": {
       "badge": "CasaBreak • Votre Guide Urbain",
       "title": "Découvrez Casablanca avec CasaBreak",
-      "description": "CasaBreak est votre guide urbain pour découvrir le meilleur de Casablanca : lieux touristiques, parcs, attractions, street art, cinémas, shopping, restaurants, cafés et spas. Disponible sur smartphone et tablette, trouvez rapidement une activité à faire et laissez-vous guider grâce à cette application mobile géolocalisée dédiée aux sorties à Casablanca.",
+      "description": "CasaBreak est votre guide urbain pour découvrir le meilleur de Casablanca : lieux touristiques, parcs, attractions, street art, cinémas, shopping, restaurants, cafés et spas. Disponible sur smartphone et tablette, trouvez rapidement une activité à faire et laissez-vous guider grâce à cette plateforme géolocalisée dédiée aux sorties à Casablanca.",
       "visitButton": "Télécharger l'app",
       "discoverButton": "Découvrir Casablanca"
     },
     "magazine": {
       "title1": "Explorez Casablanca facilement",
-      "description1": "CasaBreak est une application mobile innovante conçue pour vous faire découvrir tous les trésors cachés de Casablanca. Que vous soyez résident ou visiteur, trouvez instantanément les meilleurs endroits à visiter, les restaurants à essayer, les événements à ne pas manquer et bien plus encore.",
+      "description1": "CasaBreak est une plateforme innovante conçue pour vous faire découvrir tous les trésors cachés de Casablanca. Que vous soyez résident ou visiteur, trouvez instantanément les meilleurs endroits à visiter, les restaurants à essayer, les événements à ne pas manquer et bien plus encore.",
       "description1b": "Avec une interface intuitive et une géolocalisation précise, CasaBreak transforme votre expérience de la ville blanche en une aventure personnalisée et mémorable.",
       "title2": "Tout Casablanca dans votre poche",
       "description2": "L'application CasaBreak vous donne accès à une base de données complète de lieux emblématiques, monuments historiques, quartiers à explorer, plages, centres commerciaux, et activités culturelles. Chaque lieu est accompagné d'informations détaillées, photos, horaires et avis.",
@@ -90,7 +90,7 @@
     },
     "spinningCathedral": {
       "title": "CasaBreak - Votre Guide de Casablanca",
-      "description": "CasaBreak est l'application mobile de référence pour découvrir Casablanca. Trouvez les meilleurs restaurants, cafés, attractions, événements et lieux emblématiques de la ville blanche. Disponible sur iOS et Android."
+      "description": "CasaBreak est la plateforme de référence pour découvrir Casablanca. Trouvez les meilleurs restaurants, cafés, attractions, événements et lieux emblématiques de la ville blanche. Disponible sur iOS et Android."
     },
     "practical": {
       "badge": "Informations Pratiques",
@@ -165,7 +165,7 @@
       "subscribe": "S'inscrire"
     },
     "footer": {
-      "description": "CasaBreak est votre guide urbain pour découvrir le meilleur de Casablanca. Trouvez rapidement une activité à faire et laissez-vous guider grâce à cette application mobile géolocalisée.",
+      "description": "CasaBreak est votre guide urbain pour découvrir le meilleur de Casablanca. Trouvez rapidement une activité à faire et laissez-vous guider grâce à cette plateforme géolocalisée.",
       "contact": "Contact",
       "address": "Adresse",
       "addressValue": "Angle rue d'Alger et boulevard Rachidi<br />Quartier Gautier, Casablanca 20250",

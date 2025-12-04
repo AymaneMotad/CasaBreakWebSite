@@ -3,12 +3,22 @@
 import type React from "react"
 
 import { useState } from "react"
-import { Menu, X, ChevronDown, Ticket } from "lucide-react"
+import { Menu, X, ChevronDown, Ticket, ArrowRight, Sparkles, Compass } from "lucide-react"
 import Link from "next/link"
 import Image from "next/image"
 import { usePathname } from "next/navigation"
 import { LanguageSelector } from "./language-selector"
 import { useTranslations, useLocale } from 'next-intl'
+
+// Simplified background glow (static, no animation)
+function DropdownGlow() {
+  return (
+    <div className="absolute inset-0 overflow-hidden pointer-events-none">
+      <div className="absolute -top-10 -left-10 w-32 h-32 bg-[#00a346]/15 rounded-full blur-[60px]" />
+      <div className="absolute -bottom-10 -right-10 w-32 h-32 bg-[#c10000]/15 rounded-full blur-[60px]" />
+    </div>
+  )
+}
 
 export function Navigation() {
   const [isOpen, setIsOpen] = useState(false)
@@ -118,39 +128,38 @@ export function Navigation() {
         <LanguageSelector />
       </div>
       
-      <nav className="fixed top-0 left-0 right-0 z-50 bg-white/90 backdrop-blur-xl border-b border-black/5 shadow-sm transition-all duration-500">
-      <div className="max-w-[1600px] mx-auto px-6 lg:px-12">
-        <div className="flex items-center justify-between h-24 lg:h-28 py-3">
+      <nav className="fixed top-0 left-0 right-0 z-50 bg-white/90 backdrop-blur-xl border-b border-black/5 shadow-sm">
+      <div className="max-w-[1600px] mx-auto px-4 sm:px-6 lg:px-12">
+        <div className="flex items-center justify-between h-20 sm:h-24 lg:h-28 py-3">
           <Link
             href={`/${currentLocale}`}
-            className="transition-all duration-500 hover:scale-105 flex items-center"
+            className="flex items-center"
           >
             <Image 
               src="/casa break and casa can.svg" 
               alt="Casabreak & Casa Can" 
               width={987} 
               height={881}
-              className="h-12 lg:h-16 w-auto"
+              className="h-10 sm:h-12 lg:h-16 w-auto"
               priority
             />
           </Link>
 
           {/* Desktop Navigation */}
-          <div className="hidden lg:flex items-center gap-8 xl:gap-10">
+          <div className="hidden lg:flex items-center gap-6 xl:gap-8">
             {navItems.map((item) => (
               <div key={item.label} className="relative group">
                 <button
                   onClick={(e) => handleDropdownClick(e, !!item.submenu)}
                   className={`
-                    text-sm font-sans tracking-wide transition-all duration-500 relative flex items-center gap-2
-                    ${isActive(item.href) || isParentActive(item.submenu) ? 'text-[#00a346] font-semibold after:w-full' : 'text-gray-700 hover:text-gray-900 after:w-0'}
-                    after:absolute after:bottom-0 after:left-0 after:h-[2px] after:transition-all after:duration-500 hover:after:w-full after:bg-gradient-to-r after:from-[#00a346] after:to-[#0066b2]
+                    text-sm font-sans tracking-wide transition-colors duration-200 relative flex items-center gap-1.5
+                    ${isActive(item.href) || isParentActive(item.submenu) ? 'text-[#00a346] font-semibold' : 'text-gray-700 hover:text-gray-900'}
                   `}
                 >
                   {item.submenu ? (
                     <>
                       {item.label}
-                      <ChevronDown className="h-3 w-3 transition-transform group-hover:rotate-180" />
+                      <ChevronDown className="h-3 w-3 transition-transform duration-200 group-hover:rotate-180" />
                     </>
                   ) : item.label === "Can 2025" ? (
                     <Link href={item.href} className="font-bold">
@@ -162,41 +171,81 @@ export function Navigation() {
                 </button>
 
                 {item.submenu && (
-                  <div className="absolute top-full left-0 pt-6 opacity-0 invisible group-hover:opacity-100 group-hover:visible transition-all duration-300 z-[9999] transform translate-y-4 group-hover:translate-y-0">
-                    <div className="bg-white/95 backdrop-blur-xl rounded-2xl shadow-2xl border border-gray-100 overflow-hidden flex">
-                      {/* Submenu items on the left */}
-                      <div className="min-w-[380px] py-10 px-4 flex-shrink-0">
-                        {item.submenu.map((subItem, index) => (
-                          <Link
-                            key={subItem.href}
-                            href={subItem.href}
-                            className={`
-                              block px-8 py-5 text-base font-sans transition-all duration-200 rounded-xl mx-2
-                              ${isActive(subItem.href) 
-                                ? 'text-[#00a346] bg-[#00a346]/10 font-semibold shadow-sm border-l-4 border-[#00a346]' 
-                                : 'text-gray-600 hover:text-gray-900 hover:bg-gray-50 hover:translate-x-2'}
-                            `}
-                          >
-                            {subItem.label}
-                          </Link>
-                        ))}
-                      </div>
-                      {/* Category image on the right */}
-                      {item.image && (
-                        <div className="w-[420px] min-h-[400px] relative bg-gradient-to-br from-charcoal/5 to-charcoal/10 flex-shrink-0 overflow-hidden group/image">
-                          <Image
-                            src={item.image}
-                            alt={item.label}
-                            fill
-                            className="object-cover transition-transform duration-700 group-hover/image:scale-110"
-                            sizes="420px"
-                          />
-                          {/* Subtle overlay gradient */}
-                          <div className="absolute inset-0 bg-gradient-to-t from-black/20 via-transparent to-transparent pointer-events-none"></div>
-                          {/* Decorative border */}
-                          <div className="absolute inset-0 border-l-2 border-charcoal/10"></div>
+                  <div className="absolute top-full left-1/2 -translate-x-1/2 pt-3 opacity-0 invisible group-hover:opacity-100 group-hover:visible transition-all duration-200 z-[9999]">
+                    {/* CAN 2025 Style Dropdown */}
+                    <div className="relative bg-[#0a0a0a] rounded-2xl shadow-2xl border border-white/10 overflow-hidden min-w-[600px]">
+                      {/* Subtle background glow */}
+                      <DropdownGlow />
+                      
+                      <div className="relative z-10 flex">
+                        {/* Submenu items */}
+                        <div className="min-w-[280px] py-5 px-3 flex-shrink-0">
+                          {/* Category header */}
+                          <div className="px-4 pb-3 mb-2 border-b border-white/10">
+                            <span className="text-xs font-bold text-[#00a346] uppercase tracking-wider">{item.label}</span>
+                          </div>
+                          
+                          {item.submenu.map((subItem) => (
+                            <Link
+                              key={subItem.href}
+                              href={subItem.href}
+                              className="group/item block"
+                            >
+                              <div className={`
+                                px-4 py-3 rounded-xl mx-1 my-0.5 transition-colors duration-150
+                                ${isActive(subItem.href) 
+                                  ? 'bg-[#00a346]/20' 
+                                  : 'hover:bg-white/5'}
+                              `}>
+                                {/* Active indicator */}
+                                <div className="flex items-center justify-between">
+                                  <span className={`
+                                    text-sm font-medium
+                                    ${isActive(subItem.href) ? 'text-white' : 'text-white/70 group-hover/item:text-white'}
+                                  `}>
+                                    {subItem.label}
+                                  </span>
+                                  <ArrowRight className={`
+                                    w-4 h-4 transition-opacity duration-150
+                                    ${isActive(subItem.href) 
+                                      ? 'text-[#00a346] opacity-100' 
+                                      : 'text-white/30 opacity-0 group-hover/item:opacity-100'}
+                                  `} />
+                                </div>
+                              </div>
+                            </Link>
+                          ))}
                         </div>
-                      )}
+                        
+                        {/* Image section */}
+                        {item.image && (
+                          <div className="w-[320px] relative flex-shrink-0 overflow-hidden">
+                            <Image
+                              src={item.image}
+                              alt={item.label}
+                              fill
+                              className="object-cover"
+                              sizes="320px"
+                            />
+                            {/* Overlay */}
+                            <div className="absolute inset-0 bg-gradient-to-l from-transparent to-[#0a0a0a]" />
+                            <div className="absolute inset-0 bg-gradient-to-t from-[#0a0a0a] via-transparent to-transparent" />
+                            
+                            {/* Bottom label */}
+                            <div className="absolute bottom-4 left-4 right-4">
+                              <div className="flex items-center gap-2 mb-2">
+                                <div className="w-2 h-2 rounded-full bg-[#00a346]" />
+                                <span className="text-[10px] text-white/60 uppercase tracking-widest">Explorer</span>
+                              </div>
+                              <h3 className="text-lg font-bold text-white">{item.label}</h3>
+                              <p className="text-xs text-white/50">{item.submenu.length} destinations</p>
+                            </div>
+                          </div>
+                        )}
+                      </div>
+                      
+                      {/* Bottom accent */}
+                      <div className="h-0.5 bg-gradient-to-r from-[#00a346] via-[#ffd700] to-[#c10000]" />
                     </div>
                   </div>
                 )}
@@ -207,9 +256,9 @@ export function Navigation() {
               href="https://casawe.ma"
               target="_blank"
               rel="noopener noreferrer"
-              className="px-8 py-4 text-sm font-sans font-medium tracking-wide uppercase bg-gradient-to-r from-[#00a346] to-[#c10000] text-white hover:opacity-90 transition-all duration-300 rounded-lg font-bold"
+              className="px-6 py-3 text-sm font-medium bg-gradient-to-r from-[#00a346] to-[#c10000] text-white rounded-lg font-bold"
             >
-              <span className="flex items-center gap-3">
+              <span className="flex items-center gap-2">
                 <Ticket className="w-4 h-4" />
                 <span>{t("tickets")}</span>
               </span>
@@ -218,7 +267,7 @@ export function Navigation() {
 
           {/* Mobile Menu Button */}
           <button
-            className="lg:hidden p-2 transition-all text-gray-700"
+            className="lg:hidden p-2 text-gray-700"
             onClick={() => setIsOpen(!isOpen)}
             aria-label="Toggle menu"
           >
@@ -228,62 +277,80 @@ export function Navigation() {
 
         {/* Mobile Navigation */}
         {isOpen && (
-          <div className="lg:hidden pb-8 border-t border-gray-100 bg-white/98 backdrop-blur-xl shadow-2xl animate-gentle-fade-in">
-            <div className="px-6 sm:px-8">
-              {navItems.map((item, index) => (
-                <div key={item.label} className="border-b border-gray-100 last:border-b-0">
+          <div className="lg:hidden fixed inset-x-0 top-20 sm:top-24 bottom-0 bg-[#0a0a0a] z-[999] overflow-y-auto">
+            {/* Subtle background glow */}
+            <div className="absolute inset-0 overflow-hidden pointer-events-none">
+              <div className="absolute top-0 left-0 w-48 h-48 bg-[#00a346]/10 rounded-full blur-[80px]" />
+              <div className="absolute bottom-1/4 right-0 w-48 h-48 bg-[#c10000]/10 rounded-full blur-[80px]" />
+            </div>
+            
+            <div className="relative z-10 px-4 sm:px-6 py-6 pb-32">
+              {navItems.map((item) => (
+                <div key={item.label} className="border-b border-white/10 last:border-b-0">
                   {item.submenu ? (
                     <button
                       onClick={() => setOpenDropdown(openDropdown === item.label ? null : item.label)}
                       className={`
-                        w-full text-left py-6 px-4 text-lg font-sans tracking-wide transition-all duration-300 
-                        flex items-center justify-between animate-gentle-fade-in stagger-${index + 1} font-medium touch-manipulation group
-                        ${isParentActive(item.submenu) ? 'text-[#00a346] bg-[#00a346]/10' : 'text-gray-700 hover:text-gray-900'}
+                        w-full text-left py-4 px-3 text-base font-medium
+                        flex items-center justify-between
+                        ${isParentActive(item.submenu) ? 'text-white' : 'text-white/80'}
                       `}
                     >
                       <span className="flex items-center gap-3">
                         <div className={`
-                          w-2 h-2 bg-gradient-to-r from-[#00a346] to-[#0066b2] rounded-full transition-opacity duration-300
-                          ${isParentActive(item.submenu) ? 'opacity-100' : 'opacity-60 group-hover:opacity-100'}
-                        `}></div>
+                          w-9 h-9 rounded-lg flex items-center justify-center
+                          ${isParentActive(item.submenu) ? 'bg-[#00a346]/30' : 'bg-white/10'}
+                        `}>
+                          <Sparkles className={`w-4 h-4 ${isParentActive(item.submenu) ? 'text-[#00a346]' : 'text-white/60'}`} />
+                        </div>
                         {item.label}
                       </span>
-                      <ChevronDown
-                        className={`h-5 w-5 transition-transform duration-300 ${openDropdown === item.label ? "rotate-180" : ""}`}
-                      />
+                      <ChevronDown className={`h-5 w-5 text-white/40 transition-transform duration-200 ${openDropdown === item.label ? "rotate-180" : ""}`} />
                     </button>
                   ) : (
                     <Link
                       href={item.href}
                       className={`
-                        block py-6 px-4 text-lg font-sans tracking-wide transition-all duration-300 
-                        animate-gentle-fade-in stagger-${index + 1} font-medium touch-manipulation group
-                        ${isActive(item.href) ? 'text-[#00a346] bg-[#00a346]/10' : 'text-gray-700 hover:text-gray-900'}
+                        block py-4 px-3 text-base font-medium
+                        ${isActive(item.href) ? 'text-white' : 'text-white/80'}
                       `}
                       onClick={() => setIsOpen(false)}
                     >
                       <span className="flex items-center gap-3">
                         <div className={`
-                          w-2 h-2 bg-gradient-to-r from-[#00a346] to-[#0066b2] rounded-full transition-opacity duration-300
-                          ${isActive(item.href) ? 'opacity-100' : 'opacity-60 group-hover:opacity-100'}
-                        `}></div>
-                        {item.label}
+                          w-9 h-9 rounded-lg flex items-center justify-center
+                          ${isActive(item.href) ? 'bg-[#00a346]/30' : 'bg-white/10'}
+                        `}>
+                          {item.label === "Can 2025" ? (
+                            <span className="text-sm">🏆</span>
+                          ) : (
+                            <Compass className={`w-4 h-4 ${isActive(item.href) ? 'text-[#00a346]' : 'text-white/60'}`} />
+                          )}
+                        </div>
+                        {item.label === "Can 2025" ? (
+                          <span className="font-bold">
+                            <span className="text-[#c1272d]">Can</span> <span className="text-[#006233]">2025</span>
+                          </span>
+                        ) : item.label}
                       </span>
                     </Link>
                   )}
+                  
+                  {/* Mobile Submenu */}
                   {item.submenu && openDropdown === item.label && (
-                    <div className="bg-gray-50 mx-4 mb-4 rounded-lg overflow-hidden">
+                    <div className="mx-2 mb-3 rounded-xl bg-white/5 border border-white/10 overflow-hidden">
                       {item.submenu.map((subItem) => (
                         <Link
                           key={subItem.href}
                           href={subItem.href}
                           className={`
-                            block py-3 px-5 text-sm font-sans transition-all duration-200 border-b border-gray-100 last:border-b-0
-                            ${isActive(subItem.href) ? 'text-[#00a346] bg-[#00a346]/10 font-semibold' : 'text-gray-600 hover:text-gray-900 hover:bg-gray-100'}
+                            flex items-center justify-between py-3 px-4 text-sm border-b border-white/5 last:border-b-0
+                            ${isActive(subItem.href) ? 'text-white bg-[#00a346]/10' : 'text-white/70'}
                           `}
                           onClick={() => setIsOpen(false)}
                         >
-                          {subItem.label}
+                          <span>{subItem.label}</span>
+                          {isActive(subItem.href) && <div className="w-1.5 h-1.5 rounded-full bg-[#00a346]" />}
                         </Link>
                       ))}
                     </div>
@@ -292,20 +359,21 @@ export function Navigation() {
               ))}
               
               {/* Mobile Ticket Button */}
-              <div className="mt-8 px-4">
+              <div className="mt-8 px-2">
                 <a
                   href="https://casawe.ma"
                   target="_blank"
                   rel="noopener noreferrer"
-                  className="block w-full py-5 px-6 text-center text-base font-sans font-medium tracking-wide uppercase bg-gradient-to-r from-[#00a346] to-[#c10000] text-white hover:opacity-90 transition-all duration-300 rounded-xl touch-manipulation font-bold"
+                  className="flex items-center justify-center gap-2 w-full py-4 bg-gradient-to-r from-[#00a346] to-[#c10000] text-white font-bold rounded-xl"
                   onClick={() => setIsOpen(false)}
                 >
-                  <div className="flex items-center justify-center gap-3">
-                    <Ticket className="w-5 h-5" />
-                    <span>{t("tickets")}</span>
-                  </div>
+                  <Ticket className="w-5 h-5" />
+                  <span>{t("tickets")}</span>
                 </a>
               </div>
+              
+              {/* Accent line */}
+              <div className="mt-8 h-0.5 bg-gradient-to-r from-[#00a346] via-[#ffd700] to-[#c10000] rounded-full opacity-50" />
             </div>
           </div>
         )}
