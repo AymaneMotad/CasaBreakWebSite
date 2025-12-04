@@ -34,8 +34,8 @@ export function ChatbotWidget() {
         id: 'welcome',
         role: 'assistant',
         content: locale === 'fr' 
-          ? "Salam! 👋 Je suis l'assistant CasaBreak. Posez-moi vos questions sur la CAN 2025, Casablanca, les restaurants, les événements... Je peux aussi répondre en Darija!"
-          : "Hello! 👋 I'm the CasaBreak assistant. Ask me about CAN 2025, Casablanca, restaurants, events... I can also respond in Darija!",
+          ? "Salam! 👋⚽ CAN 2025, restos, sorties à Casa... demande-moi! 🇲🇦"
+          : "Salam! 👋⚽ CAN 2025, restaurants, things to do in Casa... ask me! 🇲🇦",
         timestamp: new Date()
       }
       setMessages([welcomeMessage])

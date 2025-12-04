@@ -4,7 +4,7 @@ import { buildContextForLLM, getRelevantLinks } from '@/lib/chatbot/content-extr
 import { detectLanguage, getSystemPromptForLanguage } from '@/lib/chatbot/language-detector'
 
 const PERPLEXITY_KEY = process.env.PERPLEXITY_KEY
-const PERPLEXITY_MODEL = process.env.PERPLEXITY_MODEL || 'llama-3.1-sonar-small-128k-online'
+const PERPLEXITY_MODEL = process.env.PERPLEXITY_MODEL || 'sonar'
 
 export async function POST(request: Request) {
   try {
