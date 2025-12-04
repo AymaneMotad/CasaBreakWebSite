@@ -2,6 +2,7 @@
 
 import { Navigation } from "@/components/navigation"
 import { HeroSection } from "@/components/hero-section"
+import { CasablancaGallery } from "@/components/casablanca-gallery"
 import { SpinningCathedral } from "@/components/spinning-cathedral"
 import { MagazineSection } from "@/components/magazine-section"
 import { BookingSection } from "@/components/booking-section"
@@ -18,6 +19,7 @@ export default function Home() {
     <main className="min-h-screen">
       <Navigation />
       <HeroSection />
+      <CasablancaGallery />
       <SpinningCathedral />
       <MagazineSection />
       
