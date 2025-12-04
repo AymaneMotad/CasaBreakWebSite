@@ -1,150 +1,177 @@
 "use client"
 
 import { useTranslations } from 'next-intl'
+import Image from 'next/image'
+import { ArrowDown, Sparkles } from 'lucide-react'
 
 export function HeroSection() {
   const t = useTranslations('home.hero')
   
   return (
-    <section className="relative min-h-[110vh] lg:min-h-[120vh] flex items-center justify-center bg-charcoal overflow-hidden pt-32 lg:pt-40">
+    <section className="relative min-h-screen flex items-center justify-center overflow-hidden bg-[#0a0a0a]">
+      {/* Animated Gradient Mesh Background */}
       <div className="absolute inset-0 z-0">
-        <iframe
-          src="https://www.youtube.com/embed/RZUnw5fGqGg?autoplay=1&loop=1&mute=1&controls=0&playlist=RZUnw5fGqGg&modestbranding=1&rel=0&showinfo=0&iv_load_policy=3&start=0"
-          className="absolute inset-0 w-full h-full object-cover animate-gentle-float pointer-events-none"
-          allow="autoplay; encrypted-media"
-          allowFullScreen
-          style={{
-            width: '100%',
-            height: '100%',
-            objectFit: 'cover',
-            transform: 'scale(1.1)',
-            transformOrigin: 'center center'
-          }}
-        />
+        {/* Primary gradient orbs */}
+        <div className="absolute top-0 left-0 w-[800px] h-[800px] bg-[#00a346]/20 rounded-full blur-[120px] animate-pulse" style={{ animationDuration: '4s' }} />
+        <div className="absolute top-1/4 right-0 w-[600px] h-[600px] bg-[#0066b2]/20 rounded-full blur-[120px] animate-pulse" style={{ animationDuration: '5s', animationDelay: '1s' }} />
+        <div className="absolute bottom-0 left-1/3 w-[700px] h-[700px] bg-[#c10000]/15 rounded-full blur-[120px] animate-pulse" style={{ animationDuration: '6s', animationDelay: '2s' }} />
         
-        {/* Subtle video enhancement - lighter overlay (reduced on mobile) */}
-        <div className="absolute inset-0 bg-gradient-to-b from-charcoal/20 via-transparent to-charcoal/25 lg:from-charcoal/30 lg:to-charcoal/40" />
+        {/* Grid pattern overlay */}
+        <div className="absolute inset-0 bg-[linear-gradient(rgba(255,255,255,0.02)_1px,transparent_1px),linear-gradient(90deg,rgba(255,255,255,0.02)_1px,transparent_1px)] bg-[size:60px_60px]" />
         
-        {/* Color enhancement overlay - subtle (only on desktop) */}
-        <div className="absolute inset-0 hidden lg:block bg-gradient-to-br from-[#00a346]/8 via-transparent to-[#c10000]/8 mix-blend-overlay" />
-        
-        {/* Dynamic light effect - gentle (only on desktop) */}
-        <div className="absolute inset-0 hidden lg:block bg-gradient-to-r from-transparent via-off-white/3 to-transparent animate-gentle-float" />
-        
-        {/* Moroccan Artistic Elements (more subtle on mobile) */}
-        <div className="absolute inset-0 z-10 opacity-50 lg:opacity-100">
-          {/* Top decorative border */}
-          <div className="absolute top-0 left-0 right-0 h-1 bg-gradient-to-r from-transparent via-[#00a346]/60 to-transparent"></div>
-          <div className="absolute top-2 left-0 right-0 h-px bg-gradient-to-r from-transparent via-[#c10000]/35 to-transparent"></div>
-          
-          
-          {/* Side decorative lines */}
-          <div className="absolute left-0 top-1/4 bottom-1/4 w-1 bg-gradient-to-b from-transparent via-[#00a346]/40 to-transparent"></div>
-          <div className="absolute right-0 top-1/4 bottom-1/4 w-1 bg-gradient-to-b from-transparent via-[#c10000]/40 to-transparent"></div>
-          
-          {/* Bottom decorative elements */}
-          <div className="absolute bottom-8 left-1/2 -translate-x-1/2 w-40 h-10 opacity-30">
-            <svg viewBox="0 0 160 40" className="w-full h-full text-[#00a346]/60">
-              <path d="M8 20 Q40 8, 72 20 Q104 32, 136 20 Q144 16, 152 20" fill="none" stroke="currentColor" strokeWidth="2"/>
-              <circle cx="32" cy="20" r="3" fill="currentColor"/>
-              <circle cx="64" cy="20" r="3" fill="currentColor"/>
-              <circle cx="96" cy="20" r="3" fill="currentColor"/>
-            </svg>
-          </div>
-        </div>
+        {/* Noise texture */}
+        <div className="absolute inset-0 opacity-[0.015]" style={{ backgroundImage: `url("data:image/svg+xml,%3Csvg viewBox='0 0 400 400' xmlns='http://www.w3.org/2000/svg'%3E%3Cfilter id='noiseFilter'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='0.9' numOctaves='3' stitchTiles='stitch'/%3E%3C/filter%3E%3Crect width='100%25' height='100%25' filter='url(%23noiseFilter)'/%3E%3C/svg%3E")` }} />
       </div>
 
-      <div className="relative z-20 max-w-[1400px] mx-auto px-6 lg:px-12 text-center">
-        
-        {/* Elegant Patrimoine badge with artistic styling */}
-        <div className="relative z-30 animate-gentle-fade-in -mb-8">
-          <div className="inline-block relative">
-            {/* Decorative border elements */}
-            <div className="absolute -inset-1 bg-gradient-to-r from-[#00a346]/20 via-transparent to-[#c10000]/20 rounded-full blur-sm"></div>
-            <div className="relative px-8 py-4 bg-gradient-to-r from-charcoal/80 via-charcoal/70 to-charcoal/80 backdrop-blur-md border border-off-white/20 rounded-full shadow-2xl">
-              <span className="text-off-white text-sm font-sans tracking-widest uppercase font-medium drop-shadow-lg">
+      {/* Main Content */}
+      <div className="relative z-10 max-w-7xl mx-auto px-6 lg:px-12 pt-32 pb-20">
+        <div className="grid lg:grid-cols-2 gap-12 lg:gap-20 items-center">
+          
+          {/* Left Column - Text Content */}
+          <div className="text-center lg:text-left order-2 lg:order-1">
+            {/* Badge */}
+            <div className="inline-flex items-center gap-2 px-4 py-2 rounded-full bg-white/5 border border-white/10 backdrop-blur-sm mb-8 animate-fade-in-up">
+              <Sparkles className="w-4 h-4 text-[#00a346]" />
+              <span className="text-sm font-medium text-white/80 tracking-wide">
                 {t("badge")}
               </span>
-              {/* Subtle accent dots */}
-              <div className="absolute -right-2 -top-1 w-2 h-2 bg-[#00a346]/60 rounded-full animate-gentle-pulse"></div>
-              <div className="absolute -left-2 -bottom-1 w-1.5 h-1.5 bg-[#c10000]/60 rounded-full animate-gentle-pulse delay-300"></div>
+            </div>
+            
+            {/* Title */}
+            <h1 className="font-serif text-4xl sm:text-5xl lg:text-6xl xl:text-7xl font-bold text-white leading-[1.1] mb-6 animate-fade-in-up" style={{ animationDelay: '0.1s' }}>
+              <span className="block">Découvrez</span>
+              <span className="block text-gradient-can">Casablanca</span>
+            </h1>
+            
+            {/* Description */}
+            <p className="text-lg lg:text-xl text-white/60 leading-relaxed max-w-xl mx-auto lg:mx-0 mb-10 animate-fade-in-up" style={{ animationDelay: '0.2s' }}>
+              {t("description")}
+            </p>
+            
+            {/* CTA Buttons */}
+            <div className="flex flex-col sm:flex-row gap-4 justify-center lg:justify-start animate-fade-in-up" style={{ animationDelay: '0.3s' }}>
+              <a
+                href="#download"
+                className="group relative inline-flex items-center justify-center px-8 py-4 bg-gradient-to-r from-[#00a346] via-[#0066b2] to-[#00a346] bg-[length:200%_100%] text-white font-semibold rounded-2xl hover:bg-[position:100%_0] transition-all duration-500 shadow-lg shadow-[#00a346]/25 hover:shadow-[#00a346]/40 hover:scale-105"
+              >
+                <span>{t("visitButton")}</span>
+                <svg className="w-5 h-5 ml-2 group-hover:translate-x-1 transition-transform" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                  <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M17 8l4 4m0 0l-4 4m4-4H3" />
+                </svg>
+              </a>
+              
+              <a
+                href="#features"
+                className="inline-flex items-center justify-center px-8 py-4 bg-white/5 border border-white/10 text-white font-semibold rounded-2xl hover:bg-white/10 hover:border-white/20 transition-all duration-300 backdrop-blur-sm"
+              >
+                {t("discoverButton")}
+              </a>
+            </div>
+            
+            {/* Stats */}
+            <div className="grid grid-cols-3 gap-6 mt-12 pt-12 border-t border-white/10 animate-fade-in-up" style={{ animationDelay: '0.4s' }}>
+              <div className="text-center lg:text-left">
+                <div className="text-3xl lg:text-4xl font-bold text-white mb-1">500+</div>
+                <div className="text-sm text-white/50">Lieux</div>
+              </div>
+              <div className="text-center lg:text-left">
+                <div className="text-3xl lg:text-4xl font-bold text-white mb-1">50K+</div>
+                <div className="text-sm text-white/50">Utilisateurs</div>
+              </div>
+              <div className="text-center lg:text-left">
+                <div className="text-3xl lg:text-4xl font-bold text-white mb-1">4.9</div>
+                <div className="text-sm text-white/50">Note App</div>
+              </div>
+            </div>
+          </div>
+          
+          {/* Right Column - Dynamic Visual */}
+          <div className="relative order-1 lg:order-2 flex justify-center animate-fade-in-up" style={{ animationDelay: '0.2s' }}>
+            {/* Glow effect */}
+            <div className="absolute inset-0 flex items-center justify-center">
+              <div className="w-80 h-80 bg-gradient-to-br from-[#00a346]/30 via-[#0066b2]/20 to-[#c10000]/30 rounded-full blur-[100px]" />
+            </div>
+            
+            {/* Main Image Grid - Casablanca Vibes */}
+            <div className="relative z-10 w-full max-w-md">
+              {/* Central large image */}
+              <div className="relative rounded-3xl overflow-hidden shadow-2xl border-2 border-white/10 aspect-[3/4]">
+                <img
+                  src="https://images.unsplash.com/photo-1569383746724-6f1b882b8f46?w=800&q=80"
+                  alt="Casablanca - Hassan II Mosque"
+                  className="w-full h-full object-cover"
+                />
+                <div className="absolute inset-0 bg-gradient-to-t from-black/60 via-transparent to-transparent" />
+                
+                {/* Overlay content */}
+                <div className="absolute bottom-0 left-0 right-0 p-6">
+                  <div className="flex items-center gap-2 mb-3">
+                    <span className="px-3 py-1 bg-[#00a346] text-white text-xs font-bold rounded-full">POPULAIRE</span>
+                    <span className="px-3 py-1 bg-white/20 backdrop-blur text-white text-xs font-medium rounded-full">À voir</span>
+                  </div>
+                  <h3 className="text-xl font-bold text-white mb-1">Mosquée Hassan II</h3>
+                  <p className="text-white/70 text-sm">Le joyau architectural de Casablanca</p>
+                </div>
+              </div>
+              
+              {/* Floating cards */}
+              <div className="absolute -top-4 -left-4 lg:-left-12 animate-subtle-float" style={{ animationDelay: '0s' }}>
+                <div className="flex items-center gap-3 px-4 py-3 bg-white rounded-2xl shadow-xl border border-gray-100">
+                  <div className="w-12 h-12 rounded-xl overflow-hidden">
+                    <img src="https://images.unsplash.com/photo-1552566626-52f8b828add9?w=100&q=80" alt="Restaurant" className="w-full h-full object-cover" />
+                  </div>
+                  <div>
+                    <div className="text-sm font-bold text-gray-900">Restaurants</div>
+                    <div className="text-xs text-[#00a346] font-medium">+200 adresses</div>
+                  </div>
+                </div>
+              </div>
+              
+              <div className="absolute top-1/4 -right-4 lg:-right-16 animate-subtle-float" style={{ animationDelay: '1s' }}>
+                <div className="flex items-center gap-3 px-4 py-3 bg-white rounded-2xl shadow-xl border border-gray-100">
+                  <div className="w-12 h-12 rounded-xl overflow-hidden">
+                    <img src="https://images.unsplash.com/photo-1495474472287-4d71bcdd2085?w=100&q=80" alt="Café" className="w-full h-full object-cover" />
+                  </div>
+                  <div>
+                    <div className="text-sm font-bold text-gray-900">Cafés</div>
+                    <div className="text-xs text-[#0066b2] font-medium">+150 spots</div>
+                  </div>
+                </div>
+              </div>
+              
+              <div className="absolute bottom-1/4 -left-4 lg:-left-16 animate-subtle-float" style={{ animationDelay: '2s' }}>
+                <div className="flex items-center gap-3 px-4 py-3 bg-white rounded-2xl shadow-xl border border-gray-100">
+                  <div className="w-12 h-12 rounded-xl bg-gradient-to-br from-[#c10000] to-[#00a346] flex items-center justify-center">
+                    <span className="text-xl">🎉</span>
+                  </div>
+                  <div>
+                    <div className="text-sm font-bold text-gray-900">Événements</div>
+                    <div className="text-xs text-[#c10000] font-medium">Cette semaine</div>
+                  </div>
+                </div>
+              </div>
+              
+              <div className="absolute -bottom-6 right-4 lg:right-0 animate-subtle-float" style={{ animationDelay: '0.5s' }}>
+                <div className="flex items-center gap-2 px-4 py-2 bg-[#00a346] rounded-full shadow-lg">
+                  <div className="w-2 h-2 bg-white rounded-full animate-ping" />
+                  <span className="text-white text-sm font-medium">500+ lieux à découvrir</span>
+                </div>
+              </div>
             </div>
           </div>
         </div>
-        
-        {/* Refined text container with reduced opacity and elegant styling */}
-        <div className="relative bg-gradient-to-b from-charcoal/15 via-charcoal/10 to-charcoal/20 lg:from-charcoal/20 lg:via-charcoal/15 lg:to-charcoal/25 rounded-3xl backdrop-blur-md pt-8 pb-8 px-6 lg:px-10 max-w-2xl mx-auto border border-off-white/10 shadow-2xl">
-          
-          {/* Artistic corner decorations */}
-          <div className="absolute top-4 left-4 w-8 h-8 opacity-20">
-            <svg viewBox="0 0 32 32" className="w-full h-full text-[#00a346]/40">
-              <path d="M4 4 L28 4 L28 8 L8 8 L8 28 L4 28 Z" fill="none" stroke="currentColor" strokeWidth="1"/>
-            </svg>
-          </div>
-          <div className="absolute top-4 right-4 w-8 h-8 opacity-20">
-            <svg viewBox="0 0 32 32" className="w-full h-full text-[#c10000]/40">
-              <path d="M28 4 L4 4 L4 8 L24 8 L24 28 L28 28 Z" fill="none" stroke="currentColor" strokeWidth="1"/>
-            </svg>
-          </div>
-          <div className="absolute bottom-4 left-4 w-8 h-8 opacity-20">
-            <svg viewBox="0 0 32 32" className="w-full h-full text-[#00a346]/40">
-              <path d="M4 28 L28 28 L28 24 L8 24 L8 4 L4 4 Z" fill="none" stroke="currentColor" strokeWidth="1"/>
-            </svg>
-          </div>
-          <div className="absolute bottom-4 right-4 w-8 h-8 opacity-20">
-            <svg viewBox="0 0 32 32" className="w-full h-full text-[#c10000]/40">
-              <path d="M28 28 L4 28 L4 24 L24 24 L24 4 L28 4 Z" fill="none" stroke="currentColor" strokeWidth="1"/>
-            </svg>
-          </div>
-          
-          {/* Elegant title with artistic flourishes */}
-          <div className="relative mb-6">
-            <h1 className="relative z-10 font-serif font-light text-3xl md:text-4xl lg:text-5xl text-off-white leading-tight tracking-wide animate-gentle-fade-in stagger-1 drop-shadow-2xl">
-              {t("title")}
-            </h1>
-            {/* Decorative line under title */}
-            <div className="absolute -bottom-2 left-1/2 -translate-x-1/2 w-24 h-px bg-gradient-to-r from-transparent via-[#00a346]/40 to-transparent animate-gentle-fade-in stagger-2"></div>
-          </div>
-          
-          {/* Refined description with better spacing */}
-          <p className="relative z-10 font-sans text-base md:text-lg text-off-white/95 max-w-2xl mx-auto leading-relaxed animate-gentle-fade-in stagger-2 text-readable mb-10 drop-shadow-xl">
-            {t("description")}
-          </p>
-
-          {/* Elegant button group with artistic styling */}
-          <div className="relative z-10 flex flex-col sm:flex-row gap-6 justify-center items-center animate-gentle-fade-in stagger-3">
-            {/* Primary button with enhanced styling */}
-            <a
-              href="/decouvrir/monuments"
-              className="group relative px-10 py-4 bg-gradient-to-r from-[#00a346]/90 to-[#c10000]/90 text-off-white text-sm font-sans tracking-wider uppercase hover:shadow-2xl hover:scale-105 transition-all duration-500 rounded-full shadow-xl border border-off-white/20 font-medium backdrop-blur-sm overflow-hidden"
-            >
-              {/* Animated background effect */}
-              <div className="absolute inset-0 bg-gradient-to-r from-[#00a346] to-[#c10000] opacity-0 group-hover:opacity-100 transition-opacity duration-500"></div>
-              <span className="relative z-10">{t("visitButton")}</span>
-              {/* Decorative corner elements */}
-              <div className="absolute top-1 right-1 w-1 h-1 bg-off-white/60 rounded-full group-hover:animate-pulse"></div>
-              <div className="absolute bottom-1 left-1 w-1 h-1 bg-off-white/60 rounded-full group-hover:animate-pulse delay-150"></div>
-            </a>
-            
-            {/* Secondary button with refined styling */}
-            <a
-              href="/decouvrir/histoire"
-              className="group relative px-10 py-4 bg-transparent border-2 border-off-white/40 text-off-white text-sm font-sans tracking-wider uppercase hover:bg-off-white/10 hover:border-off-white/60 transition-all duration-500 rounded-full backdrop-blur-md shadow-lg font-medium overflow-hidden"
-            >
-              <span className="relative z-10">{t("discoverButton")}</span>
-              {/* Subtle hover effect */}
-              <div className="absolute inset-0 bg-gradient-to-r from-transparent via-off-white/5 to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-500"></div>
-            </a>
-          </div>
-        </div>
       </div>
 
-      <div className="absolute bottom-12 left-1/2 -translate-x-1/2 z-10 animate-gentle-fade-in stagger-4">
-        <div className="flex flex-col items-center gap-4">
-          <div className="w-px h-20 bg-gradient-to-b from-transparent via-off-white/30 to-transparent animate-gentle-pulse" />
-          <div className="w-2 h-2 bg-off-white/60 rounded-full animate-gentle-pulse" />
+      {/* Scroll Indicator */}
+      <div className="absolute bottom-8 left-1/2 scroll-indicator z-10">
+        <div className="flex flex-col items-center gap-2">
+          <span className="text-xs text-white/40 uppercase tracking-widest">Scroll</span>
+          <ArrowDown className="w-5 h-5 text-white/40 animate-bounce" />
         </div>
       </div>
+      
+      {/* Bottom gradient fade */}
+      <div className="absolute bottom-0 left-0 right-0 h-32 bg-gradient-to-t from-[#0a0a0a] to-transparent z-[5]" />
     </section>
   )
 }

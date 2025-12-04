@@ -118,7 +118,7 @@ export function Navigation() {
         <LanguageSelector />
       </div>
       
-      <nav className="fixed top-0 left-0 right-0 z-50 bg-white shadow-sm transition-all duration-500">
+      <nav className="fixed top-0 left-0 right-0 z-50 bg-white/90 backdrop-blur-xl border-b border-black/5 shadow-sm transition-all duration-500">
       <div className="max-w-[1600px] mx-auto px-6 lg:px-12">
         <div className="flex items-center justify-between h-24 lg:h-28 py-3">
           <Link
@@ -143,8 +143,8 @@ export function Navigation() {
                   onClick={(e) => handleDropdownClick(e, !!item.submenu)}
                   className={`
                     text-sm font-sans tracking-wide transition-all duration-500 relative flex items-center gap-2
-                    ${isActive(item.href) || isParentActive(item.submenu) ? 'text-blue-600 font-semibold after:w-full' : 'text-charcoal/70 hover:text-charcoal after:w-0'}
-                    after:absolute after:bottom-0 after:left-0 after:h-[2px] after:transition-all after:duration-500 hover:after:w-full after:bg-gradient-to-r after:from-vibrant-pink after:to-warm-terracotta
+                    ${isActive(item.href) || isParentActive(item.submenu) ? 'text-[#00a346] font-semibold after:w-full' : 'text-gray-700 hover:text-gray-900 after:w-0'}
+                    after:absolute after:bottom-0 after:left-0 after:h-[2px] after:transition-all after:duration-500 hover:after:w-full after:bg-gradient-to-r after:from-[#00a346] after:to-[#0066b2]
                   `}
                 >
                   {item.submenu ? (
@@ -163,7 +163,7 @@ export function Navigation() {
 
                 {item.submenu && (
                   <div className="absolute top-full left-0 pt-6 opacity-0 invisible group-hover:opacity-100 group-hover:visible transition-all duration-300 z-[9999] transform translate-y-4 group-hover:translate-y-0">
-                    <div className="bg-white rounded-2xl shadow-2xl border border-charcoal/10 overflow-hidden flex backdrop-blur-sm">
+                    <div className="bg-white/95 backdrop-blur-xl rounded-2xl shadow-2xl border border-gray-100 overflow-hidden flex">
                       {/* Submenu items on the left */}
                       <div className="min-w-[380px] py-10 px-4 flex-shrink-0">
                         {item.submenu.map((subItem, index) => (
@@ -173,8 +173,8 @@ export function Navigation() {
                             className={`
                               block px-8 py-5 text-base font-sans transition-all duration-200 rounded-xl mx-2
                               ${isActive(subItem.href) 
-                                ? 'text-blue-600 bg-blue-50 font-semibold shadow-sm border-l-4 border-blue-600' 
-                                : 'text-charcoal/80 hover:text-charcoal hover:bg-gradient-to-r hover:from-charcoal/5 hover:to-transparent hover:translate-x-2 hover:shadow-sm'}
+                                ? 'text-[#00a346] bg-[#00a346]/10 font-semibold shadow-sm border-l-4 border-[#00a346]' 
+                                : 'text-gray-600 hover:text-gray-900 hover:bg-gray-50 hover:translate-x-2'}
                             `}
                           >
                             {subItem.label}
@@ -218,7 +218,7 @@ export function Navigation() {
 
           {/* Mobile Menu Button */}
           <button
-            className="lg:hidden p-2 transition-all text-charcoal"
+            className="lg:hidden p-2 transition-all text-gray-700"
             onClick={() => setIsOpen(!isOpen)}
             aria-label="Toggle menu"
           >
@@ -228,22 +228,22 @@ export function Navigation() {
 
         {/* Mobile Navigation */}
         {isOpen && (
-          <div className="lg:hidden pb-8 border-t border-charcoal/10 bg-white/98 backdrop-blur-xl shadow-2xl animate-gentle-fade-in">
+          <div className="lg:hidden pb-8 border-t border-gray-100 bg-white/98 backdrop-blur-xl shadow-2xl animate-gentle-fade-in">
             <div className="px-6 sm:px-8">
               {navItems.map((item, index) => (
-                <div key={item.label} className="border-b border-charcoal/5 last:border-b-0">
+                <div key={item.label} className="border-b border-gray-100 last:border-b-0">
                   {item.submenu ? (
                     <button
                       onClick={() => setOpenDropdown(openDropdown === item.label ? null : item.label)}
                       className={`
                         w-full text-left py-6 px-4 text-lg font-sans tracking-wide transition-all duration-300 
                         flex items-center justify-between animate-gentle-fade-in stagger-${index + 1} font-medium touch-manipulation group
-                        ${isParentActive(item.submenu) ? 'text-blue-600 bg-blue-50' : 'text-charcoal hover:text-charcoal'}
+                        ${isParentActive(item.submenu) ? 'text-[#00a346] bg-[#00a346]/10' : 'text-gray-700 hover:text-gray-900'}
                       `}
                     >
                       <span className="flex items-center gap-3">
                         <div className={`
-                          w-2 h-2 bg-gradient-to-r from-vibrant-pink to-warm-terracotta rounded-full transition-opacity duration-300
+                          w-2 h-2 bg-gradient-to-r from-[#00a346] to-[#0066b2] rounded-full transition-opacity duration-300
                           ${isParentActive(item.submenu) ? 'opacity-100' : 'opacity-60 group-hover:opacity-100'}
                         `}></div>
                         {item.label}
@@ -258,13 +258,13 @@ export function Navigation() {
                       className={`
                         block py-6 px-4 text-lg font-sans tracking-wide transition-all duration-300 
                         animate-gentle-fade-in stagger-${index + 1} font-medium touch-manipulation group
-                        ${isActive(item.href) ? 'text-blue-600 bg-blue-50' : 'text-charcoal hover:text-charcoal'}
+                        ${isActive(item.href) ? 'text-[#00a346] bg-[#00a346]/10' : 'text-gray-700 hover:text-gray-900'}
                       `}
                       onClick={() => setIsOpen(false)}
                     >
                       <span className="flex items-center gap-3">
                         <div className={`
-                          w-2 h-2 bg-gradient-to-r from-vibrant-pink to-warm-terracotta rounded-full transition-opacity duration-300
+                          w-2 h-2 bg-gradient-to-r from-[#00a346] to-[#0066b2] rounded-full transition-opacity duration-300
                           ${isActive(item.href) ? 'opacity-100' : 'opacity-60 group-hover:opacity-100'}
                         `}></div>
                         {item.label}
@@ -272,14 +272,14 @@ export function Navigation() {
                     </Link>
                   )}
                   {item.submenu && openDropdown === item.label && (
-                    <div className="bg-charcoal/5 mx-4 mb-4 rounded-lg overflow-hidden">
+                    <div className="bg-gray-50 mx-4 mb-4 rounded-lg overflow-hidden">
                       {item.submenu.map((subItem) => (
                         <Link
                           key={subItem.href}
                           href={subItem.href}
                           className={`
-                            block py-3 px-5 text-sm font-sans transition-all duration-200 border-b border-charcoal/10 last:border-b-0
-                            ${isActive(subItem.href) ? 'text-blue-600 bg-blue-50 font-semibold' : 'text-charcoal/80 hover:text-charcoal hover:bg-charcoal/10'}
+                            block py-3 px-5 text-sm font-sans transition-all duration-200 border-b border-gray-100 last:border-b-0
+                            ${isActive(subItem.href) ? 'text-[#00a346] bg-[#00a346]/10 font-semibold' : 'text-gray-600 hover:text-gray-900 hover:bg-gray-100'}
                           `}
                           onClick={() => setIsOpen(false)}
                         >
