@@ -7,6 +7,11 @@ import { ArrowDown, Sparkles } from 'lucide-react'
 export function HeroSection() {
   const t = useTranslations('home.hero')
   
+  // Simple function to trigger PWA install popup
+  const triggerInstall = () => {
+    window.dispatchEvent(new CustomEvent("trigger-pwa-install"));
+  }
+  
   return (
     <section className="relative min-h-screen flex items-center justify-center overflow-hidden bg-[#0a0a0a]">
       {/* Animated Gradient Mesh Background */}
@@ -50,15 +55,15 @@ export function HeroSection() {
             
             {/* CTA Buttons */}
             <div className="flex flex-col sm:flex-row gap-4 justify-center lg:justify-start animate-fade-in-up" style={{ animationDelay: '0.3s' }}>
-              <a
-                href="#download"
+              <button
+                onClick={triggerInstall}
                 className="group relative inline-flex items-center justify-center px-8 py-4 bg-gradient-to-r from-[#00a346] via-[#0066b2] to-[#00a346] bg-[length:200%_100%] text-white font-semibold rounded-2xl hover:bg-[position:100%_0] transition-all duration-500 shadow-lg shadow-[#00a346]/25 hover:shadow-[#00a346]/40 hover:scale-105"
               >
                 <span>{t("visitButton")}</span>
                 <svg className="w-5 h-5 ml-2 group-hover:translate-x-1 transition-transform" fill="none" viewBox="0 0 24 24" stroke="currentColor">
                   <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M17 8l4 4m0 0l-4 4m4-4H3" />
                 </svg>
-              </a>
+              </button>
               
               <a
                 href="#features"
