@@ -25,3 +25,13 @@ yarn-error.log*
 # typescript
 *.tsbuildinfo
 next-env.d.ts
+
+# Large media files
+public/archi-*.png
+public/histoire-*.png
+public/reserve.png
+public/3C2_G22-39-1-044.jpg
+public/decouvrer/decouvrer-*.jpg
+public/site-cal/*.JPG
+public/videos/*.mp4
+public/AMMA.mp4
