@@ -113,7 +113,7 @@ export function LanguageSelector() {
     <div className="relative" ref={dropdownRef}>
       <button
         onClick={() => setIsOpen(!isOpen)}
-        className="flex items-center gap-2 px-4 py-2 text-sm font-sans tracking-wide text-charcoal/80 hover:text-charcoal transition-all duration-300 hover:bg-charcoal/5 rounded-lg border border-charcoal/10 hover:border-charcoal/20 group"
+        className="flex items-center gap-2 px-3 py-2 text-sm font-sans tracking-wide text-charcoal/80 hover:text-charcoal transition-all duration-300 hover:bg-white/90 bg-white/80 backdrop-blur-sm rounded-lg border border-charcoal/10 hover:border-charcoal/20 shadow-md hover:shadow-lg group"
         aria-label="Select language"
       >
         <Globe className="h-4 w-4 transition-transform group-hover:rotate-12" />

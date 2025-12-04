@@ -199,24 +199,6 @@ export default function EvenementsPage() {
           <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8 lg:gap-12">
             {[
               {
-                video: "/soire ramadan.mp4",
-                title: "Programme ramadanésque",
-                description: "Une célébration culturelle sous les lumières du Ramadan",
-                fallbackImage: "/site-map-images/evenements-optimized/soiree/evenement - soiree 1.jpg"
-              },
-              {
-                video: "/AMMA.mp4", 
-                title: "AMMA",
-                description: "Un événement exceptionnel à l'Espace Sacré-Cœur",
-                fallbackImage: "/site-map-images/evenements-optimized/soiree/evenement - soiree 2.jpg"
-              },
-              {
-                video: "/Casablanca Arab Film Festival.mp4",
-                title: "Casablanca Arab Film Festival",
-                description: "Un festival cinématographique d'exception au cœur de Casablanca",
-                fallbackImage: "/site-map-images/reserver sacre coeur/casa arab festival/WhatsApp Image 2025-10-02 at 11.26.11 AM.jpeg"
-              },
-              {
                 video: "https://www.youtube.com/watch?v=8nFCk756Qlc",
                 title: "Casablanca Smart City - Jour 1",
                 description: "Best of Day 1 - Un événement technologique d'envergure présentant l'innovation urbaine",

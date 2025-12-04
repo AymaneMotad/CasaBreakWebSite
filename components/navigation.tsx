@@ -34,24 +34,66 @@ export function Navigation() {
 
   const navItems = [
     { label: t("home"), href: `/${currentLocale}` },
+    { label: "Can 2025", href: `/${currentLocale}/can-2025` },
     {
       label: t("discover"),
       href: "#",
+      image: "/casablanca-cityscape-atlantic-ocean-aerial-view-mo.jpg",
       submenu: [
-        { label: t("history"), href: `/${currentLocale}/decouvrir/histoire` },
-        { label: t("architecture"), href: `/${currentLocale}/decouvrir/architecture` },
+        { label: t("monuments"), href: `/${currentLocale}/decouvrir/monuments` },
+        { label: t("neighborhoods"), href: `/${currentLocale}/decouvrir/quartiers` },
+        { label: t("seaBeaches"), href: `/${currentLocale}/decouvrir/mer-plages` },
+        { label: t("itineraries"), href: `/${currentLocale}/decouvrir/itineraires` },
       ],
     },
     {
-      label: t("visit"),
+      label: t("activities"),
       href: "#",
+      image: "/decouvrer/decouvrer-1.jpg",
       submenu: [
-        { label: t("individuals"), href: `/${currentLocale}/visiter/individuels` },
-        { label: t("groups"), href: `/${currentLocale}/visiter/groupes` },
+        { label: t("mustSee"), href: `/${currentLocale}/activites/incontournables` },
+        { label: t("freeActivities"), href: `/${currentLocale}/activites/gratuites` },
+        { label: t("outdoorSea"), href: `/${currentLocale}/activites/plein-air-mer` },
+        { label: t("toursExperiences"), href: `/${currentLocale}/activites/tours-experiences` },
+        { label: t("familyKids"), href: `/${currentLocale}/activites/famille-enfants` },
       ],
     },
-    { label: t("events"), href: `/${currentLocale}/evenements` },
-    { label: t("reserve"), href: `/${currentLocale}/reserver` },
+    {
+      label: t("foodFun"),
+      href: "#",
+      image: "/casablanca-cityscape-atlantic-ocean-aerial-view-mo.jpg",
+      submenu: [
+        { label: t("restaurants"), href: `/${currentLocale}/manger-sortir/restaurants` },
+        { label: t("cafesBrunch"), href: `/${currentLocale}/manger-sortir/cafes-brunchs` },
+        { label: t("barsNightlife"), href: `/${currentLocale}/manger-sortir/bars-nightlife` },
+        { label: t("shoppingMalls"), href: `/${currentLocale}/manger-sortir/centres-commerciaux` },
+        { label: t("souksCrafts"), href: `/${currentLocale}/manger-sortir/souks-artisanat` },
+      ],
+    },
+    {
+      label: t("events"),
+      href: "#",
+      image: "/cultural-festival-morocco-traditional-celebration-.jpg",
+      submenu: [
+        { label: t("concertsShows"), href: `/${currentLocale}/evenements/concerts-spectacles` },
+        { label: t("exhibitionsGalleries"), href: `/${currentLocale}/evenements/expositions-galeries` },
+        { label: t("festivals"), href: `/${currentLocale}/evenements/festivals` },
+        { label: t("sportsEvents"), href: `/${currentLocale}/evenements/evenements-sportifs` },
+        { label: t("fairsSalons"), href: `/${currentLocale}/evenements/foires-salons` },
+      ],
+    },
+    {
+      label: t("planStay"),
+      href: "#",
+      image: "/decouvrer/decouvrer-3.jpg",
+      submenu: [
+        { label: t("accommodation"), href: `/${currentLocale}/planifier/hebergement` },
+        { label: t("whereToStay"), href: `/${currentLocale}/planifier/ou-loger` },
+        { label: t("gettingAround"), href: `/${currentLocale}/planifier/se-deplacer` },
+        { label: t("airportToCity"), href: `/${currentLocale}/planifier/aeroport-centre-ville` },
+        { label: t("practicalInfo"), href: `/${currentLocale}/planifier/infos-pratiques` },
+      ],
+    },
   ]
 
   const handleDropdownClick = (e: React.MouseEvent, hasSubmenu: boolean) => {
@@ -70,7 +112,13 @@ export function Navigation() {
   }
 
   return (
-    <nav className="fixed top-0 left-0 right-0 z-50 bg-white shadow-sm transition-all duration-500">
+    <>
+      {/* Fixed Language Selector - Bottom Left */}
+      <div className="fixed bottom-6 left-6 z-[100]">
+        <LanguageSelector />
+      </div>
+      
+      <nav className="fixed top-0 left-0 right-0 z-50 bg-white shadow-sm transition-all duration-500">
       <div className="max-w-[1600px] mx-auto px-6 lg:px-12">
         <div className="flex items-center justify-between h-24 lg:h-28 py-3">
           <Link
@@ -78,11 +126,11 @@ export function Navigation() {
             className="transition-all duration-500 hover:scale-105 flex items-center"
           >
             <Image 
-              src={currentLocale === 'ar' ? "/logo one svg.svg" : "/sacre-logo.svg"} 
-              alt="Casablanca Sacré-Cœur" 
-              width={currentLocale === 'ar' ? 274 : 595} 
-              height={currentLocale === 'ar' ? 184 : 393}
-              className="h-20 lg:h-24 w-auto"
+              src="/casa break and casa can.svg" 
+              alt="Casabreak & Casa Can" 
+              width={987} 
+              height={881}
+              className="h-12 lg:h-16 w-auto"
               priority
             />
           </Link>
@@ -104,46 +152,67 @@ export function Navigation() {
                       {item.label}
                       <ChevronDown className="h-3 w-3 transition-transform group-hover:rotate-180" />
                     </>
+                  ) : item.label === "Can 2025" ? (
+                    <Link href={item.href} className="font-bold">
+                      <span className="text-[#c1272d]">Can</span> <span className="text-[#006233]">2025</span>
+                    </Link>
                   ) : (
                     <Link href={item.href}>{item.label}</Link>
                   )}
                 </button>
 
                 {item.submenu && (
-                  <div className="absolute top-full left-0 pt-3 opacity-0 invisible group-hover:opacity-100 group-hover:visible transition-all duration-300 z-[9999] transform translate-y-2 group-hover:translate-y-0">
-                    <div className="min-w-[240px] bg-white rounded-lg shadow-lg border border-charcoal/10 overflow-hidden py-2">
-                      {item.submenu.map((subItem, index) => (
-                        <Link
-                          key={subItem.href}
-                          href={subItem.href}
-                          className={`
-                            block px-5 py-3 text-sm font-sans transition-all duration-200
-                            ${isActive(subItem.href) ? 'text-blue-600 bg-blue-50 font-semibold' : 'text-charcoal/80 hover:text-charcoal hover:bg-charcoal/5'}
-                          `}
-                        >
-                          {subItem.label}
-                        </Link>
-                      ))}
+                  <div className="absolute top-full left-0 pt-6 opacity-0 invisible group-hover:opacity-100 group-hover:visible transition-all duration-300 z-[9999] transform translate-y-4 group-hover:translate-y-0">
+                    <div className="bg-white rounded-2xl shadow-2xl border border-charcoal/10 overflow-hidden flex backdrop-blur-sm">
+                      {/* Submenu items on the left */}
+                      <div className="min-w-[380px] py-10 px-4 flex-shrink-0">
+                        {item.submenu.map((subItem, index) => (
+                          <Link
+                            key={subItem.href}
+                            href={subItem.href}
+                            className={`
+                              block px-8 py-5 text-base font-sans transition-all duration-200 rounded-xl mx-2
+                              ${isActive(subItem.href) 
+                                ? 'text-blue-600 bg-blue-50 font-semibold shadow-sm border-l-4 border-blue-600' 
+                                : 'text-charcoal/80 hover:text-charcoal hover:bg-gradient-to-r hover:from-charcoal/5 hover:to-transparent hover:translate-x-2 hover:shadow-sm'}
+                            `}
+                          >
+                            {subItem.label}
+                          </Link>
+                        ))}
+                      </div>
+                      {/* Category image on the right */}
+                      {item.image && (
+                        <div className="w-[420px] min-h-[400px] relative bg-gradient-to-br from-charcoal/5 to-charcoal/10 flex-shrink-0 overflow-hidden group/image">
+                          <Image
+                            src={item.image}
+                            alt={item.label}
+                            fill
+                            className="object-cover transition-transform duration-700 group-hover/image:scale-110"
+                            sizes="420px"
+                          />
+                          {/* Subtle overlay gradient */}
+                          <div className="absolute inset-0 bg-gradient-to-t from-black/20 via-transparent to-transparent pointer-events-none"></div>
+                          {/* Decorative border */}
+                          <div className="absolute inset-0 border-l-2 border-charcoal/10"></div>
+                        </div>
+                      )}
                     </div>
                   </div>
                 )}
               </div>
             ))}
 
-            {/* Language Selector */}
-            <LanguageSelector />
-
             <a
               href="https://casawe.ma"
               target="_blank"
               rel="noopener noreferrer"
-              className="relative px-8 py-4 text-sm font-sans font-medium tracking-wide uppercase bg-gradient-to-r from-blue-500 to-blue-700 text-white border-2 border-blue-600 hover:border-blue-800 hover:shadow-xl hover:shadow-blue-500/25 hover:scale-105 transition-all duration-500 overflow-hidden group rounded-lg"
+              className="px-8 py-4 text-sm font-sans font-medium tracking-wide uppercase bg-[#006233] text-[#c1272d] border-2 border-[#006233] hover:opacity-90 transition-all duration-300 rounded-lg font-bold"
             >
-              <span className="relative z-10 flex items-center gap-3">
+              <span className="flex items-center gap-3">
                 <Ticket className="w-4 h-4" />
                 <span>{t("tickets")}</span>
               </span>
-              <div className="absolute inset-0 bg-gradient-to-r from-blue-700 to-blue-900 opacity-0 group-hover:opacity-100 transition-opacity duration-500 rounded-lg" />
             </a>
           </div>
 
@@ -222,18 +291,13 @@ export function Navigation() {
                 </div>
               ))}
               
-              {/* Mobile Language Selector */}
-              <div className="mt-6 px-4">
-                <LanguageSelector />
-              </div>
-              
               {/* Mobile Ticket Button */}
               <div className="mt-8 px-4">
                 <a
                   href="https://casawe.ma"
                   target="_blank"
                   rel="noopener noreferrer"
-                  className="block w-full py-5 px-6 text-center text-base font-sans font-medium tracking-wide uppercase bg-gradient-to-r from-blue-500 to-blue-700 text-white border-2 border-blue-600 hover:border-blue-800 shadow-lg hover:shadow-xl hover:shadow-blue-500/25 hover:scale-105 transition-all duration-500 rounded-xl touch-manipulation"
+                  className="block w-full py-5 px-6 text-center text-base font-sans font-medium tracking-wide uppercase bg-[#006233] text-[#c1272d] border-2 border-[#006233] hover:opacity-90 transition-all duration-300 rounded-xl touch-manipulation font-bold"
                   onClick={() => setIsOpen(false)}
                 >
                   <div className="flex items-center justify-center gap-3">
@@ -247,5 +311,6 @@ export function Navigation() {
         )}
       </div>
     </nav>
+    </>
   )
 }

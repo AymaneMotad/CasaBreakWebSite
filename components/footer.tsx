@@ -50,11 +50,11 @@ export function Footer() {
             <div className="lg:max-w-md">
               <div className="mb-8">
                 <Image 
-                  src={currentLocale === 'ar' ? "/logo one svg.svg" : "/sacre-black.svg"} 
-                  alt="l'Ex église Sacré-Cœur" 
-                  width={currentLocale === 'ar' ? 274 : 595} 
-                  height={currentLocale === 'ar' ? 184 : 393}
-                  className="h-20 w-auto filter brightness-0 invert"
+                  src="/casa break and casa can.svg" 
+                  alt="Casabreak & Casa Can" 
+                  width={987} 
+                  height={881}
+                  className="h-16 lg:h-20 w-auto"
                 />
               </div>
               <p className="text-slate-300 text-lg leading-relaxed font-light">

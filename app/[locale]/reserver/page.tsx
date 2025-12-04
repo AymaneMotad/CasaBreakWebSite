@@ -1,19 +1,17 @@
 "use client"
 
 import Image from "next/image"
-import { Calendar, Users, Mail, Phone, User, Key, UsersRound, Volume2, Sofa, Shield, Sparkles, ParkingCircle, Headphones, Play, Pause } from "lucide-react"
+import { Calendar, Users, Mail, Phone, User, Key, UsersRound, Volume2, Sofa, Shield, Sparkles, ParkingCircle, Headphones } from "lucide-react"
 import { Navigation } from "@/components/navigation"
 import { Footer } from "@/components/footer"
 import { Breadcrumb } from "@/components/breadcrumb"
 import { ImageLightbox } from "@/components/image-lightbox"
 import { useTranslations, useLocale } from 'next-intl'
-import { useRef, useState } from "react"
+import { useState } from "react"
 
 export default function ReserverPage() {
   const t = useTranslations('reserver')
   const locale = useLocale()
-  const videoRef = useRef<HTMLVideoElement>(null)
-  const [isPlaying, setIsPlaying] = useState(false)
   const [submitting, setSubmitting] = useState(false)
   const [form, setForm] = useState({
     name: "",
@@ -97,16 +95,6 @@ Langue: ${locale}
     }
   }
 
-  const togglePlay = () => {
-    if (videoRef.current) {
-      if (isPlaying) {
-        videoRef.current.pause()
-      } else {
-        videoRef.current.play()
-      }
-      setIsPlaying(!isPlaying)
-    }
-  }
   return (
     <main className="min-h-screen bg-off-white">
       <Navigation />
@@ -170,123 +158,6 @@ Langue: ${locale}
         </div>
       </section>
 
-      {/* Video Showcase Section - Enhanced Stylistic Design */}
-      <section className="py-20 lg:py-32 bg-gradient-to-b from-off-white via-off-white to-charcoal/5 relative overflow-hidden">
-        {/* Decorative Background Elements */}
-        <div className="absolute inset-0 opacity-[0.02]">
-          <div className="absolute top-40 left-10 w-96 h-96 border-2 border-vibrant-pink rounded-full"></div>
-          <div className="absolute bottom-20 right-20 w-72 h-72 border-2 border-warm-terracotta rounded-full"></div>
-          <div className="absolute top-60 right-40 w-2 h-2 bg-vibrant-pink rounded-full animate-pulse"></div>
-          <div className="absolute bottom-40 left-60 w-3 h-3 bg-warm-terracotta rounded-full animate-pulse"></div>
-        </div>
-
-        <div className="max-w-[1400px] mx-auto px-6 lg:px-12 relative z-10">
-          {/* Enhanced Header with Decorative Elements */}
-          <div className="text-center mb-16 lg:mb-20 animate-fade-in-up">
-            <div className="inline-flex items-center gap-3 mb-6">
-              <div className="h-px w-16 bg-gradient-to-r from-transparent to-vibrant-pink"></div>
-              <div className="w-2 h-2 rounded-full bg-vibrant-pink animate-pulse"></div>
-              <div className="w-1.5 h-1.5 rounded-full bg-warm-terracotta"></div>
-              <div className="w-2 h-2 rounded-full bg-vibrant-pink animate-pulse"></div>
-              <div className="h-px w-16 bg-gradient-to-l from-transparent to-vibrant-pink"></div>
-            </div>
-            <h2 className="font-serif text-4xl md:text-6xl lg:text-5xl text-charcoal mb-6 tracking-tight">
-              {t("video.title")}
-            </h2>
-            
-            <div className="inline-flex items-center gap-2 mt-6">
-              <div className="h-px w-12 bg-gradient-to-r from-transparent to-warm-terracotta/60"></div>
-              <div className="w-1.5 h-1.5 rounded-full bg-warm-terracotta"></div>
-              <div className="h-px w-12 bg-gradient-to-l from-transparent to-warm-terracotta/60"></div>
-            </div>
-          </div>
-
-          {/* Premium Video Container with Cinematic Styling */}
-          <div className="max-w-[1200px] mx-auto animate-fade-in-up stagger-1">
-            {/* Outer Decorative Frame */}
-            <div className="relative p-8 lg:p-12">
-              {/* Corner Accents - Art Deco Style */}
-              <div className="absolute top-0 left-0 w-24 h-24 border-l-2 border-t-2 border-vibrant-pink opacity-40"></div>
-              <div className="absolute top-0 right-0 w-24 h-24 border-r-2 border-t-2 border-vibrant-pink opacity-40"></div>
-              <div className="absolute bottom-0 left-0 w-24 h-24 border-l-2 border-b-2 border-warm-terracotta opacity-40"></div>
-              <div className="absolute bottom-0 right-0 w-24 h-24 border-r-2 border-b-2 border-warm-terracotta opacity-40"></div>
-
-              {/* Glowing Border Effect */}
-              <div className="absolute inset-0 bg-gradient-to-r from-vibrant-pink/10 via-transparent to-warm-terracotta/10 blur-2xl"></div>
-
-              {/* Video Frame Container */}
-              <div className="relative">
-                {/* Premium Border with Multiple Layers */}
-                <div className="absolute -inset-4 bg-gradient-to-br from-vibrant-pink/20 via-transparent to-warm-terracotta/20 rounded-2xl blur-xl"></div>
-                <div className="absolute -inset-2 bg-gradient-to-tr from-charcoal/10 via-charcoal/5 to-charcoal/10 rounded-xl"></div>
-
-                {/* Main Video Container */}
-                <div className="relative aspect-video rounded-xl overflow-hidden shadow-[0_20px_60px_rgba(0,0,0,0.3)] bg-charcoal group cursor-pointer" onClick={togglePlay}>
-                  {/* Video Element */}
-                  <video 
-                    ref={videoRef}
-                    className="w-full h-full object-cover transition-all duration-700 group-hover:scale-105"
-                    preload="metadata"
-                    onEnded={() => setIsPlaying(false)}
-                  >
-                    <source src="/videos/opening.mp4" type="video/mp4" />
-                    Votre navigateur ne supporte pas la lecture de vidéos.
-                  </video>
-
-                  {/* Custom Play/Pause Button Overlay */}
-                  <div className="absolute inset-0 flex items-center justify-center transition-all duration-300 pointer-events-none">
-                    <div className={`transition-all duration-500 ${isPlaying ? 'opacity-0 scale-75' : 'opacity-100 scale-100 group-hover:scale-110'}`}>
-                      {/* Outer Glow Ring */}
-                      <div className="absolute inset-0 bg-gradient-to-br from-vibrant-pink/30 to-warm-terracotta/30 rounded-full blur-2xl scale-150"></div>
-
-                      {/* Button Background */}
-                      <div className="relative w-24 h-24 lg:w-32 lg:h-32 rounded-full bg-gradient-to-br from-white/95 to-white/90 shadow-2xl flex items-center justify-center backdrop-blur-sm border-4 border-white/50 transition-all duration-300 group-hover:shadow-[0_0_60px_rgba(236,72,153,0.6)]">
-                        {/* Inner Button Ring */}
-                        <div className="absolute inset-3 rounded-full border-2 border-vibrant-pink/20"></div>
-
-                        {/* Play/Pause Icon */}
-                        {isPlaying ? (
-                          <Pause className="w-10 h-10 lg:w-12 lg:h-12 text-charcoal fill-charcoal" />
-                        ) : (
-                          <Play className="w-10 h-10 lg:w-12 lg:h-12 text-charcoal fill-charcoal ml-1" />
-                        )}
-                      </div>
-                    </div>
-                  </div>
-
-                  {/* Elegant Overlay Frame */}
-                  <div className="absolute inset-0 border-4 border-white/5 rounded-xl pointer-events-none"></div>
-                  <div className="absolute inset-0 border border-white/10 rounded-xl pointer-events-none"></div>
-
-                  {/* Cinematic Vignette Effect */}
-                  <div className={`absolute inset-0 bg-gradient-to-t from-black/40 via-transparent to-black/20 pointer-events-none rounded-xl transition-opacity duration-500 ${isPlaying ? 'opacity-0' : 'opacity-100'}`}></div>
-                </div>
-
-                {/* Floating Accent Bars */}
-                <div className="absolute -left-6 top-1/2 -translate-y-1/2 w-1 h-32 bg-gradient-to-b from-transparent via-vibrant-pink to-transparent opacity-60"></div>
-                <div className="absolute -right-6 top-1/2 -translate-y-1/2 w-1 h-32 bg-gradient-to-b from-transparent via-warm-terracotta to-transparent opacity-60"></div>
-              </div>
-            </div>
-
-            {/* Enhanced Video Info with Styled Details */}
-            <div className="mt-12 text-center">
-              <div className="flex items-center justify-center gap-6">
-                <div className="flex items-center gap-2">
-                  <div className="w-8 h-px bg-gradient-to-r from-transparent to-vibrant-pink"></div>
-                  <div className="w-2 h-2 rounded-full bg-vibrant-pink"></div>
-                </div>
-                <p className="font-serif text-lg text-charcoal/50 italic">
-                  "{t("video.subtitle")}"
-                </p>
-                <div className="flex items-center gap-2">
-                  <div className="w-2 h-2 rounded-full bg-warm-terracotta"></div>
-                  <div className="w-8 h-px bg-gradient-to-l from-transparent to-warm-terracotta"></div>
-                </div>
-              </div>
-            </div>
-          </div>
-        </div>
-      </section>
 
       {/* Discover Our Spaces Section */}
       <section className="py-20 lg:py-32 bg-gradient-to-b from-off-white via-off-white to-charcoal/5 relative overflow-hidden">
