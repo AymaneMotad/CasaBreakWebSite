@@ -1,6 +1,6 @@
 "use client";
 
-import { useState, useEffect } from "react";
+import { useState, useEffect, useCallback } from "react";
 import { useTranslations } from "next-intl";
 import { X, Download, Share, Plus } from "lucide-react";
 import Image from "next/image";
@@ -8,6 +8,64 @@ import Image from "next/image";
 interface BeforeInstallPromptEvent extends Event {
   prompt: () => Promise<void>;
   userChoice: Promise<{ outcome: "accepted" | "dismissed" }>;
+}
+
+// ============================================
+// PWA PROMPT CONFIGURATION
+// ============================================
+const PWA_CONFIG = {
+  // Minimum visits before showing prompt (1 = show to new visitors)
+  MIN_VISITS_BEFORE_PROMPT: 1,
+  
+  // Delay in ms before showing prompt after conditions are met
+  // Allows user to start engaging with content first
+  PROMPT_DELAY_MS: 5000,
+  
+  // Days to wait after user clicks "Cancel" / X button
+  DAYS_AFTER_DISMISS: 30,
+  
+  // Days to wait after user clicks "Remind Later"
+  DAYS_AFTER_REMIND_LATER: 3,
+  
+  // Whether to show on desktop browsers (false = mobile only)
+  // PWA install is primarily a mobile experience
+  SHOW_ON_DESKTOP: false,
+};
+
+// Helper: Check if device is mobile
+function isMobileDevice(): boolean {
+  if (typeof window === "undefined") return false;
+  
+  const userAgent = window.navigator.userAgent.toLowerCase();
+  const mobileKeywords = /android|webos|iphone|ipad|ipod|blackberry|iemobile|opera mini|mobile|tablet/i;
+  
+  // Also check screen width as backup
+  const isSmallScreen = window.innerWidth <= 1024;
+  
+  return mobileKeywords.test(userAgent) || isSmallScreen;
+}
+
+// Helper: Track and get visit count
+function trackVisit(): number {
+  const VISIT_KEY = "pwa-visit-count";
+  const LAST_VISIT_KEY = "pwa-last-visit";
+  
+  const lastVisit = localStorage.getItem(LAST_VISIT_KEY);
+  const lastVisitTime = lastVisit ? parseInt(lastVisit, 10) : 0;
+  const hoursSinceLastVisit = (Date.now() - lastVisitTime) / (1000 * 60 * 60);
+  
+  // Only count as new visit if more than 1 hour since last visit
+  // Prevents counting page refreshes as new visits
+  let visitCount = parseInt(localStorage.getItem(VISIT_KEY) || "0", 10);
+  
+  if (hoursSinceLastVisit > 1) {
+    visitCount += 1;
+    localStorage.setItem(VISIT_KEY, visitCount.toString());
+  }
+  
+  localStorage.setItem(LAST_VISIT_KEY, Date.now().toString());
+  
+  return visitCount;
 }
 
 export function PWAInstallPrompt() {
@@ -18,49 +76,83 @@ export function PWAInstallPrompt() {
   const [isStandalone, setIsStandalone] = useState(false);
   const [isClosing, setIsClosing] = useState(false);
 
+  // Memoized function to trigger prompt display
+  const triggerPrompt = useCallback(() => {
+    setTimeout(() => setShowPrompt(true), PWA_CONFIG.PROMPT_DELAY_MS);
+  }, []);
+
   useEffect(() => {
-    // Check if already installed or dismissed
-    const dismissed = localStorage.getItem("pwa-prompt-dismissed");
-    const dismissedTime = dismissed ? parseInt(dismissed, 10) : 0;
-    const daysSinceDismissed = (Date.now() - dismissedTime) / (1000 * 60 * 60 * 24);
-    
-    // Show again after 7 days
-    if (dismissed && daysSinceDismissed < 7) {
+    // Skip on desktop if configured
+    if (!PWA_CONFIG.SHOW_ON_DESKTOP && !isMobileDevice()) {
       return;
     }
 
-    // Check if running in standalone mode (already installed)
+    // Track visit and check engagement
+    const visitCount = trackVisit();
+    if (visitCount < PWA_CONFIG.MIN_VISITS_BEFORE_PROMPT) {
+      return; // Not enough engagement yet
+    }
+
+    // Check if already installed
+    const installed = localStorage.getItem("pwa-installed");
+    if (installed === "true") {
+      return;
+    }
+
+    // Check dismissal cooldown
+    const dismissed = localStorage.getItem("pwa-prompt-dismissed");
+    if (dismissed) {
+      const dismissedTime = parseInt(dismissed, 10);
+      const daysSinceDismissed = (Date.now() - dismissedTime) / (1000 * 60 * 60 * 24);
+      const requiredDays = PWA_CONFIG.DAYS_AFTER_DISMISS;
+      
+      if (daysSinceDismissed < requiredDays) {
+        return; // Still in cooldown period
+      }
+    }
+
+    // Check "remind later" cooldown
+    const remindLater = localStorage.getItem("pwa-prompt-remind-later");
+    if (remindLater) {
+      const remindTime = parseInt(remindLater, 10);
+      const daysSinceRemind = (Date.now() - remindTime) / (1000 * 60 * 60 * 24);
+      
+      if (daysSinceRemind < PWA_CONFIG.DAYS_AFTER_REMIND_LATER) {
+        return; // Still in remind later period
+      }
+    }
+
+    // Check if running in standalone mode (already installed as PWA)
     const standalone = window.matchMedia("(display-mode: standalone)").matches ||
       (window.navigator as any).standalone === true;
     setIsStandalone(standalone);
 
     if (standalone) return;
 
-    // Check if iOS
+    // Check if iOS Safari
     const userAgent = window.navigator.userAgent.toLowerCase();
     const isIOSDevice = /iphone|ipad|ipod/.test(userAgent);
     const isSafari = /safari/.test(userAgent) && !/chrome/.test(userAgent);
     setIsIOS(isIOSDevice && isSafari);
 
-    // Listen for beforeinstallprompt event (Chrome, Edge, etc.)
+    // Listen for beforeinstallprompt event (Chrome, Edge, Samsung Internet, etc.)
     const handleBeforeInstallPrompt = (e: Event) => {
       e.preventDefault();
       setDeferredPrompt(e as BeforeInstallPromptEvent);
-      // Show prompt after a short delay for better UX
-      setTimeout(() => setShowPrompt(true), 2000);
+      triggerPrompt();
     };
 
     window.addEventListener("beforeinstallprompt", handleBeforeInstallPrompt);
 
-    // For iOS, show prompt after delay
+    // For iOS Safari, show custom instructions prompt
     if (isIOSDevice && isSafari) {
-      setTimeout(() => setShowPrompt(true), 3000);
+      triggerPrompt();
     }
 
     return () => {
       window.removeEventListener("beforeinstallprompt", handleBeforeInstallPrompt);
     };
-  }, []);
+  }, [triggerPrompt]);
 
   const handleInstall = async () => {
     if (!deferredPrompt) return;
@@ -72,6 +164,8 @@ export function PWAInstallPrompt() {
       if (outcome === "accepted") {
         setShowPrompt(false);
         localStorage.setItem("pwa-installed", "true");
+        // Clear visit tracking on successful install
+        localStorage.removeItem("pwa-visit-count");
       }
     } catch (error) {
       console.error("Installation failed:", error);
@@ -84,7 +178,9 @@ export function PWAInstallPrompt() {
     setIsClosing(true);
     setTimeout(() => {
       setShowPrompt(false);
+      // Full dismiss - wait 30 days before showing again
       localStorage.setItem("pwa-prompt-dismissed", Date.now().toString());
+      localStorage.removeItem("pwa-prompt-remind-later");
       setIsClosing(false);
     }, 300);
   };
@@ -93,9 +189,8 @@ export function PWAInstallPrompt() {
     setIsClosing(true);
     setTimeout(() => {
       setShowPrompt(false);
-      // Will show again in 1 day
-      const oneDayAgo = Date.now() - (6 * 24 * 60 * 60 * 1000);
-      localStorage.setItem("pwa-prompt-dismissed", oneDayAgo.toString());
+      // Shorter wait - 7 days (user showed interest but not ready)
+      localStorage.setItem("pwa-prompt-remind-later", Date.now().toString());
       setIsClosing(false);
     }, 300);
   };

@@ -42,42 +42,42 @@ export default function Home() {
                 title: "Géolocalisation",
                 description: "Trouvez instantanément les meilleurs endroits près de vous",
                 color: "from-[#00a346] to-[#00a346]/80",
-                image: "https://images.unsplash.com/photo-1578662996442-48f60103fc96?ixlib=rb-4.0.3&auto=format&fit=crop&w=1200&q=80"
+                image: "https://images.unsplash.com/photo-1524661135-423995f22d0b?w=800&q=80"
               },
               {
                 icon: Utensils,
                 title: "Restaurants",
                 description: "Découvrez les meilleurs restaurants de Casablanca",
                 color: "from-[#c10000] to-[#c10000]/80",
-                image: "https://images.unsplash.com/photo-1517248135467-4c7edcad34c4?ixlib=rb-4.0.3&auto=format&fit=crop&w=1200&q=80"
+                image: "https://images.unsplash.com/photo-1552566626-52f8b828add9?w=800&q=80"
               },
               {
                 icon: Coffee,
                 title: "Cafés & Brunchs",
                 description: "Trouvez le café parfait pour travailler ou vous détendre",
                 color: "from-[#00a346] to-[#00a346]/80",
-                image: "https://images.unsplash.com/photo-1501339847302-ac426a4c7c6d?ixlib=rb-4.0.3&auto=format&fit=crop&w=1200&q=80"
+                image: "https://images.unsplash.com/photo-1554118811-1e0d58224f24?w=800&q=80"
               },
               {
                 icon: Camera,
                 title: "Attractions",
                 description: "Explorez les monuments et lieux emblématiques",
                 color: "from-[#c10000] to-[#c10000]/80",
-                image: "https://images.unsplash.com/photo-1559827260-dc66d52bef19?ixlib=rb-4.0.3&auto=format&fit=crop&w=1200&q=80"
+                image: "https://images.unsplash.com/photo-1569383746724-6f1b882b8f46?w=800&q=80"
               },
               {
                 icon: ShoppingBag,
                 title: "Shopping",
                 description: "Centres commerciaux et boutiques à découvrir",
                 color: "from-[#00a346] to-[#00a346]/80",
-                image: "https://images.unsplash.com/photo-1441986300917-64674bd600d8?ixlib=rb-4.0.3&auto=format&fit=crop&w=1200&q=80"
+                image: "https://images.unsplash.com/photo-1555529669-e69e7aa0ba9a?w=800&q=80"
               },
               {
                 icon: Calendar,
                 title: "Événements",
                 description: "Ne manquez aucun événement culturel ou festif",
                 color: "from-[#c10000] to-[#c10000]/80",
-                image: "https://images.unsplash.com/photo-1511578314322-379afb476865?ixlib=rb-4.0.3&auto=format&fit=crop&w=1200&q=80"
+                image: "https://images.unsplash.com/photo-1492684223066-81342ee5ff30?w=800&q=80"
               }
             ].map((feature, index) => (
               <div
@@ -111,7 +111,7 @@ export default function Home() {
       <section className="py-16 lg:py-24 relative overflow-hidden">
         <div className="relative h-[400px] lg:h-[500px] rounded-2xl overflow-hidden mx-6 lg:mx-12 shadow-2xl">
           <img
-            src="https://images.unsplash.com/photo-1578662996442-48f60103fc96?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=2070&q=80"
+            src="https://images.unsplash.com/photo-1569383746724-6f1b882b8f46?w=1600&q=80"
             alt="Casablanca Cityscape - Discover with CasaBreak"
             className="w-full h-full object-cover"
           />
@@ -129,14 +129,10 @@ export default function Home() {
       
       {/* App Screenshots Section */}
       <section id="download" className="py-24 lg:py-32 bg-gradient-to-b from-white to-off-white relative overflow-hidden">
-        {/* Casablanca Background Image */}
-        <div className="absolute inset-0 z-0 opacity-10 lg:opacity-20">
-          <img
-            src="https://images.unsplash.com/photo-1578662996442-48f60103fc96?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=2070&q=80"
-            alt="Casablanca Cityscape"
-            className="w-full h-full object-cover"
-          />
-          <div className="absolute inset-0 bg-gradient-to-b from-white via-white/50 to-off-white"></div>
+        {/* Subtle geometric pattern background */}
+        <div className="absolute inset-0 z-0 opacity-5">
+          <div className="absolute inset-0 bg-[radial-gradient(circle_at_30%_20%,#00a346_0%,transparent_50%)]"></div>
+          <div className="absolute inset-0 bg-[radial-gradient(circle_at_70%_80%,#c10000_0%,transparent_50%)]"></div>
         </div>
         
         <div className="max-w-[1400px] mx-auto px-6 lg:px-12 relative z-10">
@@ -164,14 +160,6 @@ export default function Home() {
               </div>
             </div>
             <div className="animate-fade-in-up delay-100 flex justify-center relative">
-              {/* Casablanca Image Overlay */}
-              <div className="absolute -z-10 w-full h-full flex items-center justify-center opacity-5 lg:opacity-10">
-                <img
-                  src="https://images.unsplash.com/photo-1578662996442-48f60103fc96?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=2070&q=80"
-                  alt="Casablanca"
-                  className="w-[400px] h-[600px] lg:w-[500px] lg:h-[700px] object-cover rounded-3xl blur-sm"
-                />
-              </div>
               <div className="relative">
                 <img
                   src="/casawee.png"

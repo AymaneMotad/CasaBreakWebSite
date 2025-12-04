@@ -11,13 +11,9 @@ export function MagazineSection() {
         <div className="grid lg:grid-cols-2 gap-12 lg:gap-20 items-center mb-32">
           <div className="animate-gentle-fade-in flex justify-center">
             <img
-              src="https://upload.wikimedia.org/wikipedia/commons/4/4c/Casablanca_Hassan_II_Mosque.jpg"
+              src="https://images.unsplash.com/photo-1512917774080-9991f1c4c750?w=800&q=80"
               alt="Découvrir Casablanca avec CasaBreak"
               className="w-full h-[500px] object-cover rounded-xl hover-scale shadow-xl"
-              unoptimized
-              onError={(e) => {
-                e.currentTarget.src = "https://upload.wikimedia.org/wikipedia/commons/thumb/4/4c/Casablanca_Hassan_II_Mosque.jpg/800px-Casablanca_Hassan_II_Mosque.jpg"
-              }}
             />
           </div>
           <div className="animate-gentle-fade-in stagger-1">
@@ -48,13 +44,9 @@ export function MagazineSection() {
           </div>
           <div className="order-1 lg:order-2 animate-slide-in-right stagger-1">
             <img
-              src="https://upload.wikimedia.org/wikipedia/commons/8/8c/Rick%27s_Cafe_Casablanca.jpg"
-              alt="Restaurants et cafés à Casablanca - Rick's Café"
+              src="https://images.unsplash.com/photo-1517248135467-4c7edcad34c4?w=800&q=80"
+              alt="Restaurants et cafés à Casablanca"
               className="w-full h-[500px] object-cover rounded-xl hover-scale shadow-xl"
-              unoptimized
-              onError={(e) => {
-                e.currentTarget.src = "https://upload.wikimedia.org/wikipedia/commons/thumb/8/8c/Rick%27s_Cafe_Casablanca.jpg/800px-Rick%27s_Cafe_Casablanca.jpg"
-              }}
             />
           </div>
         </div>
@@ -63,13 +55,9 @@ export function MagazineSection() {
         <div className="grid lg:grid-cols-2 gap-12 lg:gap-20 items-center">
           <div className="animate-slide-in-left stagger-2">
             <img
-              src="https://upload.wikimedia.org/wikipedia/commons/9/9a/Casablanca_Twin_Center.jpg"
-              alt="Attractions et activités à Casablanca - Twin Center"
+              src="https://images.unsplash.com/photo-1551632436-cbf8dd35adfa?w=800&q=80"
+              alt="Attractions et activités à Casablanca"
               className="w-full h-[500px] object-cover rounded-xl hover-scale shadow-xl"
-              unoptimized
-              onError={(e) => {
-                e.currentTarget.src = "https://upload.wikimedia.org/wikipedia/commons/thumb/9/9a/Casablanca_Twin_Center.jpg/800px-Casablanca_Twin_Center.jpg"
-              }}
             />
           </div>
           <div className="animate-slide-in-right stagger-2">
