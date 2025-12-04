@@ -2,7 +2,8 @@
 
 import { useState, useEffect } from "react";
 import { useTranslations } from "next-intl";
-import { X, Download, Smartphone, Share, Plus } from "lucide-react";
+import { X, Download, Share, Plus } from "lucide-react";
+import Image from "next/image";
 
 interface BeforeInstallPromptEvent extends Event {
   prompt: () => Promise<void>;
@@ -134,13 +135,19 @@ export function PWAInstallPrompt() {
         </button>
 
         <div className="p-6 pt-8">
-          {/* Icon */}
+          {/* Logo */}
           <div className="flex justify-center mb-5">
             <div className="relative">
-              <div className="w-20 h-20 rounded-2xl bg-gradient-to-br from-amber-500 to-yellow-600 flex items-center justify-center shadow-lg shadow-amber-500/30">
-                <Smartphone className="w-10 h-10 text-white" />
+              <div className="w-24 h-24 rounded-2xl bg-white flex items-center justify-center shadow-lg border border-zinc-200 p-3">
+                <Image 
+                  src="/casa break and casa can.svg" 
+                  alt="CasaBreak" 
+                  width={200} 
+                  height={200}
+                  className="w-full h-full object-contain"
+                />
               </div>
-              <div className="absolute -bottom-1 -right-1 w-8 h-8 rounded-full bg-emerald-500 flex items-center justify-center shadow-lg">
+              <div className="absolute -bottom-2 -right-2 w-9 h-9 rounded-full bg-gradient-to-br from-emerald-500 to-emerald-600 flex items-center justify-center shadow-lg shadow-emerald-500/30">
                 <Download className="w-4 h-4 text-white" />
               </div>
             </div>

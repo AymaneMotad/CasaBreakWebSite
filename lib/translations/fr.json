@@ -1,17 +1,17 @@
 {
   "pwa": {
-    "title": "Installer CasaBreak",
-    "description": "Installez l'application CasaBreak sur votre appareil pour un accès rapide et une expérience optimale, même hors ligne.",
-    "install": "Installer maintenant",
+    "title": "Installer l'application",
+    "description": "Ajoutez CasaBreak à votre écran d'accueil pour découvrir Casablanca en un clic, même sans connexion internet.",
+    "install": "Installer",
     "later": "Plus tard",
-    "cancel": "Annuler",
+    "cancel": "Non merci",
     "close": "Fermer",
     "understood": "J'ai compris",
-    "iosInstructions": "Pour installer sur votre iPhone ou iPad :",
+    "iosInstructions": "Pour installer sur iPhone ou iPad :",
     "iosStep1": "Appuyez sur le bouton Partager",
-    "iosStep2": "Sélectionnez « Sur l'écran d'accueil »",
-    "feature1": "Accès rapide",
-    "feature2": "Fonctionne hors ligne"
+    "iosStep2": "Puis « Sur l'écran d'accueil »",
+    "feature1": "Accès instantané",
+    "feature2": "Mode hors ligne"
   },
   "navigation": {
     "home": "Accueil",
