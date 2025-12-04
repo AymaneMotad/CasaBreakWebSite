@@ -5,7 +5,8 @@ import { useTranslations, useLocale } from 'next-intl'
 import { usePathname } from 'next/navigation'
 
 export function Footer() {
-  const t = useTranslations('home.footer')
+  const t = useTranslations('navigation')
+  const tFooter = useTranslations('home.footer')
   const locale = useLocale()
   const pathname = usePathname()
 
@@ -28,9 +29,9 @@ export function Footer() {
     <footer className="relative bg-gradient-to-b from-slate-900 via-slate-800 to-slate-900 text-slate-100 overflow-hidden">
       {/* Elegant background pattern */}
       <div className="absolute inset-0 opacity-5">
-        <div className="absolute inset-0 bg-[radial-gradient(circle_at_50%_50%,rgba(59,130,246,0.1),transparent_50%)]"></div>
-        <div className="absolute top-0 left-0 w-full h-px bg-gradient-to-r from-transparent via-blue-400/30 to-transparent"></div>
-        <div className="absolute bottom-0 left-0 w-full h-px bg-gradient-to-r from-transparent via-blue-400/20 to-transparent"></div>
+        <div className="absolute inset-0 bg-[radial-gradient(circle_at_50%_50%,rgba(0,163,70,0.1),transparent_50%)]"></div>
+        <div className="absolute top-0 left-0 w-full h-px bg-gradient-to-r from-transparent via-[#00a346]/30 to-transparent"></div>
+        <div className="absolute bottom-0 left-0 w-full h-px bg-gradient-to-r from-transparent via-[#c10000]/20 to-transparent"></div>
       </div>
       
       {/* Subtle geometric patterns */}
@@ -58,48 +59,48 @@ export function Footer() {
                 />
               </div>
               <p className="text-slate-300 text-lg leading-relaxed font-light">
-                {t("description")}
+                {tFooter("description")}
               </p>
             </div>
 
             {/* Contact information */}
             <div className="lg:max-w-sm">
-              <h3 className="text-slate-200 text-xl font-semibold mb-6 tracking-wide">{t("contact")}</h3>
+              <h3 className="text-slate-200 text-xl font-semibold mb-6 tracking-wide">{tFooter("contact")}</h3>
               <div className="space-y-4">
                 <div className="flex items-start gap-3">
                   <div className="w-5 h-5 mt-1 flex-shrink-0">
-                    <svg className="w-5 h-5 text-blue-400" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                    <svg className="w-5 h-5 text-[#00a346]" fill="none" stroke="currentColor" viewBox="0 0 24 24">
                       <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={1.5} d="M17.657 16.657L13.414 20.9a1.998 1.998 0 01-2.827 0l-4.244-4.243a8 8 0 1111.314 0z" />
                       <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={1.5} d="M15 11a3 3 0 11-6 0 3 3 0 016 0z" />
                     </svg>
                   </div>
                   <div>
-                    <p className="text-slate-300 font-medium">{t("address")}</p>
-                    <p className="text-slate-400 text-sm leading-relaxed" dangerouslySetInnerHTML={{ __html: t("addressValue") }}>
+                    <p className="text-slate-300 font-medium">{tFooter("address")}</p>
+                    <p className="text-slate-400 text-sm leading-relaxed" dangerouslySetInnerHTML={{ __html: tFooter("addressValue") }}>
                     </p>
                   </div>
                 </div>
                 
                 <div className="flex items-start gap-3">
                   <div className="w-5 h-5 mt-1 flex-shrink-0">
-                    <svg className="w-5 h-5 text-blue-400" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                    <svg className="w-5 h-5 text-[#00a346]" fill="none" stroke="currentColor" viewBox="0 0 24 24">
                       <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={1.5} d="M3 5a2 2 0 012-2h3.28a1 1 0 01.948.684l1.498 4.493a1 1 0 01-.502 1.21l-2.257 1.13a11.042 11.042 0 005.516 5.516l1.13-2.257a1 1 0 011.21-.502l4.493 1.498a1 1 0 01.684.949V19a2 2 0 01-2 2h-1C9.716 21 3 14.284 3 6V5z" />
                     </svg>
                   </div>
                   <div>
-                    <p className="text-slate-300 font-medium">{t("phone")}</p>
+                    <p className="text-slate-300 font-medium">{tFooter("phone")}</p>
                     <p className="text-slate-400 text-sm">+212 522 227 745</p>
                   </div>
                 </div>
 
                 <div className="flex items-start gap-3">
                   <div className="w-5 h-5 mt-1 flex-shrink-0">
-                    <svg className="w-5 h-5 text-blue-400" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                    <svg className="w-5 h-5 text-[#c10000]" fill="none" stroke="currentColor" viewBox="0 0 24 24">
                       <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={1.5} d="M3 8l7.89 4.26a2 2 0 002.22 0L21 8M5 19h14a2 2 0 002-2V7a2 2 0 00-2-2H5a2 2 0 00-2 2v10a2 2 0 002 2z" />
                     </svg>
                   </div>
                   <div>
-                    <p className="text-slate-300 font-medium">{t("email")}</p>
+                    <p className="text-slate-300 font-medium">{tFooter("email")}</p>
                     <p className="text-slate-400 text-sm">contact@casaevents.ma</p>
                   </div>
                 </div>
@@ -109,14 +110,19 @@ export function Footer() {
         </div>
 
         {/* Navigation sections - Mirroring navbar structure */}
-        <div className="grid grid-cols-2 md:grid-cols-5 gap-8 lg:gap-12 mb-16">
+        <div className="grid grid-cols-2 md:grid-cols-3 lg:grid-cols-7 gap-8 lg:gap-12 mb-16">
           {/* Accueil */}
           <div>
-            <h4 className="text-slate-200 text-lg font-semibold mb-6 tracking-wide">{t("sections.home")}</h4>
+            <h4 className="text-slate-200 text-lg font-semibold mb-6 tracking-wide">{t("home")}</h4>
             <ul className="space-y-3">
               <li>
-                <a href={`/${currentLocale}`} className="text-slate-400 hover:text-slate-200 transition-colors duration-200 text-sm">
-                  {t("sections.home")}
+                <a href={`/${currentLocale}`} className="text-slate-400 hover:text-[#00a346] transition-colors duration-200 text-sm">
+                  {t("home")}
+                </a>
+              </li>
+              <li>
+                <a href={`/${currentLocale}/can-2025`} className="text-slate-400 hover:text-[#00a346] transition-colors duration-200 text-sm">
+                  Can 2025
                 </a>
               </li>
             </ul>
@@ -124,33 +130,90 @@ export function Footer() {
 
           {/* Découvrir */}
           <div>
-            <h4 className="text-slate-200 text-lg font-semibold mb-6 tracking-wide">{t("sections.discover")}</h4>
+            <h4 className="text-slate-200 text-lg font-semibold mb-6 tracking-wide">{t("discover")}</h4>
             <ul className="space-y-3">
               <li>
-                <a href={`/${currentLocale}/decouvrir/histoire`} className="text-slate-400 hover:text-slate-200 transition-colors duration-200 text-sm">
-                  {t("sections.history")}
+                <a href={`/${currentLocale}/decouvrir/monuments`} className="text-slate-400 hover:text-[#00a346] transition-colors duration-200 text-sm">
+                  {t("monuments")}
                 </a>
               </li>
               <li>
-                <a href={`/${currentLocale}/decouvrir/architecture`} className="text-slate-400 hover:text-slate-200 transition-colors duration-200 text-sm">
-                  {t("sections.architecture")}
+                <a href={`/${currentLocale}/decouvrir/quartiers`} className="text-slate-400 hover:text-[#00a346] transition-colors duration-200 text-sm">
+                  {t("neighborhoods")}
+                </a>
+              </li>
+              <li>
+                <a href={`/${currentLocale}/decouvrir/mer-plages`} className="text-slate-400 hover:text-[#00a346] transition-colors duration-200 text-sm">
+                  {t("seaBeaches")}
+                </a>
+              </li>
+              <li>
+                <a href={`/${currentLocale}/decouvrir/itineraires`} className="text-slate-400 hover:text-[#00a346] transition-colors duration-200 text-sm">
+                  {t("itineraries")}
                 </a>
               </li>
             </ul>
           </div>
 
-          {/* Visiter */}
+          {/* Activités */}
           <div>
-            <h4 className="text-slate-200 text-lg font-semibold mb-6 tracking-wide">{t("sections.visit")}</h4>
+            <h4 className="text-slate-200 text-lg font-semibold mb-6 tracking-wide">{t("activities")}</h4>
             <ul className="space-y-3">
               <li>
-                <a href={`/${currentLocale}/visiter/individuels`} className="text-slate-400 hover:text-slate-200 transition-colors duration-200 text-sm">
-                  {t("sections.individuals")}
+                <a href={`/${currentLocale}/activites/incontournables`} className="text-slate-400 hover:text-[#c10000] transition-colors duration-200 text-sm">
+                  {t("mustSee")}
                 </a>
               </li>
               <li>
-                <a href={`/${currentLocale}/visiter/groupes`} className="text-slate-400 hover:text-slate-200 transition-colors duration-200 text-sm">
-                  {t("sections.groups")}
+                <a href={`/${currentLocale}/activites/gratuites`} className="text-slate-400 hover:text-[#c10000] transition-colors duration-200 text-sm">
+                  {t("freeActivities")}
+                </a>
+              </li>
+              <li>
+                <a href={`/${currentLocale}/activites/plein-air-mer`} className="text-slate-400 hover:text-[#c10000] transition-colors duration-200 text-sm">
+                  {t("outdoorSea")}
+                </a>
+              </li>
+              <li>
+                <a href={`/${currentLocale}/activites/tours-experiences`} className="text-slate-400 hover:text-[#c10000] transition-colors duration-200 text-sm">
+                  {t("toursExperiences")}
+                </a>
+              </li>
+              <li>
+                <a href={`/${currentLocale}/activites/famille-enfants`} className="text-slate-400 hover:text-[#c10000] transition-colors duration-200 text-sm">
+                  {t("familyKids")}
+                </a>
+              </li>
+            </ul>
+          </div>
+
+          {/* Gastronomie & Sorties */}
+          <div>
+            <h4 className="text-slate-200 text-lg font-semibold mb-6 tracking-wide">{t("foodFun")}</h4>
+            <ul className="space-y-3">
+              <li>
+                <a href={`/${currentLocale}/manger-sortir/restaurants`} className="text-slate-400 hover:text-[#00a346] transition-colors duration-200 text-sm">
+                  {t("restaurants")}
+                </a>
+              </li>
+              <li>
+                <a href={`/${currentLocale}/manger-sortir/cafes-brunchs`} className="text-slate-400 hover:text-[#00a346] transition-colors duration-200 text-sm">
+                  {t("cafesBrunch")}
+                </a>
+              </li>
+              <li>
+                <a href={`/${currentLocale}/manger-sortir/bars-nightlife`} className="text-slate-400 hover:text-[#00a346] transition-colors duration-200 text-sm">
+                  {t("barsNightlife")}
+                </a>
+              </li>
+              <li>
+                <a href={`/${currentLocale}/manger-sortir/centres-commerciaux`} className="text-slate-400 hover:text-[#00a346] transition-colors duration-200 text-sm">
+                  {t("shoppingMalls")}
+                </a>
+              </li>
+              <li>
+                <a href={`/${currentLocale}/manger-sortir/souks-artisanat`} className="text-slate-400 hover:text-[#00a346] transition-colors duration-200 text-sm">
+                  {t("souksCrafts")}
                 </a>
               </li>
             </ul>
@@ -158,27 +221,74 @@ export function Footer() {
 
           {/* Événements */}
           <div>
-            <h4 className="text-slate-200 text-lg font-semibold mb-6 tracking-wide">{t("sections.events")}</h4>
+            <h4 className="text-slate-200 text-lg font-semibold mb-6 tracking-wide">{t("events")}</h4>
             <ul className="space-y-3">
               <li>
-                <a href={`/${currentLocale}/evenements`} className="text-slate-400 hover:text-slate-200 transition-colors duration-200 text-sm">
-                  {t("links.ourEvents")}
+                <a href={`/${currentLocale}/evenements/concerts-spectacles`} className="text-slate-400 hover:text-[#c10000] transition-colors duration-200 text-sm">
+                  {t("concertsShows")}
+                </a>
+              </li>
+              <li>
+                <a href={`/${currentLocale}/evenements/expositions-galeries`} className="text-slate-400 hover:text-[#c10000] transition-colors duration-200 text-sm">
+                  {t("exhibitionsGalleries")}
+                </a>
+              </li>
+              <li>
+                <a href={`/${currentLocale}/evenements/festivals`} className="text-slate-400 hover:text-[#c10000] transition-colors duration-200 text-sm">
+                  {t("festivals")}
+                </a>
+              </li>
+              <li>
+                <a href={`/${currentLocale}/evenements/evenements-sportifs`} className="text-slate-400 hover:text-[#c10000] transition-colors duration-200 text-sm">
+                  {t("sportsEvents")}
+                </a>
+              </li>
+              <li>
+                <a href={`/${currentLocale}/evenements/foires-salons`} className="text-slate-400 hover:text-[#c10000] transition-colors duration-200 text-sm">
+                  {t("fairsSalons")}
                 </a>
               </li>
             </ul>
           </div>
 
-          {/* Réserver */}
+          {/* Planifier votre séjour */}
           <div>
-            <h4 className="text-slate-200 text-lg font-semibold mb-6 tracking-wide">{t("sections.reserve")}</h4>
+            <h4 className="text-slate-200 text-lg font-semibold mb-6 tracking-wide">{t("planStay")}</h4>
             <ul className="space-y-3">
               <li>
-                <a href={`/${currentLocale}/reserver`} className="text-slate-400 hover:text-slate-200 transition-colors duration-200 text-sm">
-                  {t("links.reserveSpace")}
+                <a href={`/${currentLocale}/planifier/hebergement`} className="text-slate-400 hover:text-[#00a346] transition-colors duration-200 text-sm">
+                  {t("accommodation")}
                 </a>
               </li>
               <li>
-                <a href="https://casawe.ma" target="_blank" rel="noopener noreferrer" className="text-slate-400 hover:text-slate-200 transition-colors duration-200 text-sm">
+                <a href={`/${currentLocale}/planifier/ou-loger`} className="text-slate-400 hover:text-[#00a346] transition-colors duration-200 text-sm">
+                  {t("whereToStay")}
+                </a>
+              </li>
+              <li>
+                <a href={`/${currentLocale}/planifier/se-deplacer`} className="text-slate-400 hover:text-[#00a346] transition-colors duration-200 text-sm">
+                  {t("gettingAround")}
+                </a>
+              </li>
+              <li>
+                <a href={`/${currentLocale}/planifier/aeroport-centre-ville`} className="text-slate-400 hover:text-[#00a346] transition-colors duration-200 text-sm">
+                  {t("airportToCity")}
+                </a>
+              </li>
+              <li>
+                <a href={`/${currentLocale}/planifier/infos-pratiques`} className="text-slate-400 hover:text-[#00a346] transition-colors duration-200 text-sm">
+                  {t("practicalInfo")}
+                </a>
+              </li>
+            </ul>
+          </div>
+
+          {/* Billetterie */}
+          <div>
+            <h4 className="text-slate-200 text-lg font-semibold mb-6 tracking-wide">{t("links.tickets")}</h4>
+            <ul className="space-y-3">
+              <li>
+                <a href="https://casawe.ma" target="_blank" rel="noopener noreferrer" className="text-slate-400 hover:text-[#c10000] transition-colors duration-200 text-sm">
                   {t("links.tickets")}
                 </a>
               </li>
@@ -190,13 +300,13 @@ export function Footer() {
         <div className="grid lg:grid-cols-2 gap-12 mb-16">
           {/* Social Media */}
           <div>
-            <h4 className="text-slate-200 text-lg font-semibold mb-6 tracking-wide">{t("follow")}</h4>
+            <h4 className="text-slate-200 text-lg font-semibold mb-6 tracking-wide">{tFooter("follow")}</h4>
             <div className="flex gap-4">
               <a
                 href="https://facebook.com"
                 target="_blank"
                 rel="noopener noreferrer"
-                className="group w-12 h-12 bg-slate-700/40 hover:bg-blue-500/20 rounded-xl flex items-center justify-center text-slate-400 hover:text-blue-400 transition-all duration-300 hover:scale-110 hover:shadow-lg hover:shadow-blue-500/20"
+                className="group w-12 h-12 bg-slate-700/40 hover:bg-[#00a346]/20 rounded-xl flex items-center justify-center text-slate-400 hover:text-[#00a346] transition-all duration-300 hover:scale-110 hover:shadow-lg hover:shadow-[#00a346]/20"
                 aria-label="Facebook"
               >
                 <svg className="w-5 h-5 group-hover:scale-110 transition-transform duration-200" fill="currentColor" viewBox="0 0 24 24">
@@ -207,7 +317,7 @@ export function Footer() {
                 href="https://www.instagram.com/sacre_coeur_casa/"
                 target="_blank"
                 rel="noopener noreferrer"
-                className="group w-12 h-12 bg-slate-700/40 hover:bg-pink-500/20 rounded-xl flex items-center justify-center text-slate-400 hover:text-pink-400 transition-all duration-300 hover:scale-110 hover:shadow-lg hover:shadow-pink-500/20"
+                className="group w-12 h-12 bg-slate-700/40 hover:bg-[#c10000]/20 rounded-xl flex items-center justify-center text-slate-400 hover:text-[#c10000] transition-all duration-300 hover:scale-110 hover:shadow-lg hover:shadow-[#c10000]/20"
                 aria-label="Instagram"
               >
                 <svg className="w-5 h-5 group-hover:scale-110 transition-transform duration-200" fill="currentColor" viewBox="0 0 24 24">
@@ -218,7 +328,7 @@ export function Footer() {
                 href="https://twitter.com"
                 target="_blank"
                 rel="noopener noreferrer"
-                className="group w-12 h-12 bg-slate-700/40 hover:bg-blue-500/20 rounded-xl flex items-center justify-center text-slate-400 hover:text-blue-400 transition-all duration-300 hover:scale-110 hover:shadow-lg hover:shadow-blue-500/20"
+                className="group w-12 h-12 bg-slate-700/40 hover:bg-[#00a346]/20 rounded-xl flex items-center justify-center text-slate-400 hover:text-[#00a346] transition-all duration-300 hover:scale-110 hover:shadow-lg hover:shadow-[#00a346]/20"
                 aria-label="Twitter"
               >
                 <svg className="w-5 h-5 group-hover:scale-110 transition-transform duration-200" fill="currentColor" viewBox="0 0 24 24">
@@ -230,7 +340,7 @@ export function Footer() {
 
           {/* Map */}
           <div>
-            <h4 className="text-slate-200 text-lg font-semibold mb-6 tracking-wide">{t("location")}</h4>
+            <h4 className="text-slate-200 text-lg font-semibold mb-6 tracking-wide">{tFooter("location")}</h4>
             <div className="relative w-full h-48 rounded-xl overflow-hidden border border-slate-600/30 bg-slate-800/50 shadow-lg hover:shadow-xl transition-shadow duration-300">
               <iframe
                 src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3323.123456789!2d-7.620000!3d33.590000!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0xda7d291010717e5%3A0x1f76295a86bb2f25!2sSacr%C3%A9%20Coeur%20Casablanca!5e0!3m2!1sen!2sma!4v1234567890!5m2!1sen!2sma"
@@ -249,12 +359,12 @@ export function Footer() {
                 href="https://www.google.com/maps/dir//sacr%C3%A9+coeur+casablanca/data=!4m6!4m5!1m1!4e2!1m2!1m1!1s0xda7d291010717e5:0x1f76295a86bb2f25?sa=X&ved=1t:155782&ictx=111"
                 target="_blank"
                 rel="noopener noreferrer"
-                className="group inline-flex items-center gap-2 text-sm text-slate-400 hover:text-blue-400 transition-colors duration-200 hover:gap-3"
+                className="group inline-flex items-center gap-2 text-sm text-slate-400 hover:text-[#00a346] transition-colors duration-200 hover:gap-3"
               >
                 <svg className="w-4 h-4 group-hover:scale-110 transition-transform duration-200" fill="none" stroke="currentColor" viewBox="0 0 24 24">
                   <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M10 6H6a2 2 0 00-2 2v10a2 2 0 002 2h10a2 2 0 002-2v-4M14 4h6m0 0v6m0-6L10 14" />
                 </svg>
-                {t("openInMaps")}
+                {tFooter("openInMaps")}
               </a>
             </div>
           </div>
@@ -264,7 +374,7 @@ export function Footer() {
         <div className="pt-8 border-t border-slate-700/50">
           <div className="text-center">
             <p className="text-slate-400 text-sm font-light">
-              {new Date().getFullYear()} {t("copyright")}
+              {new Date().getFullYear()} {tFooter("copyright")}
             </p>
           </div>
         </div>

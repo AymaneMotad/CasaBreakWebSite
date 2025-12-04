@@ -1,6 +1,6 @@
 import type React from "react"
 import type { Metadata } from "next"
-import { Roboto, Open_Sans } from "next/font/google"
+import { Inter, Poppins } from "next/font/google"
 import { Analytics } from "@vercel/analytics/next"
 import { Suspense } from "react"
 import { NextIntlClientProvider } from 'next-intl';
@@ -11,23 +11,23 @@ import { ToastProvider } from "@/components/toast-notification"
 import { ScrollProgress } from "@/components/scroll-progress"
 import { BackToTop } from "@/components/back-to-top"
 
-const roboto = Roboto({
+const inter = Inter({
   subsets: ["latin"],
-  weight: ["300", "400", "500", "700", "900"],
+  weight: ["300", "400", "500", "600", "700", "800", "900"],
   variable: "--font-sans",
   display: "swap",
 })
 
-const openSans = Open_Sans({
+const poppins = Poppins({
   subsets: ["latin"],
-  weight: ["400", "500", "600", "700", "800"],
+  weight: ["400", "500", "600", "700", "800", "900"],
   variable: "--font-serif",
   display: "swap",
 })
 
 export const metadata: Metadata = {
-  title: "L'Ex Église Sacré-Cœur - Casablanca",
-  description: "Historic Art Deco cathedral in Casablanca - Cultural heritage site and exhibition space",
+  title: "CasaBreak - Votre Guide Urbain de Casablanca",
+  description: "Découvrez Casablanca avec CasaBreak - Application mobile pour trouver restaurants, cafés, attractions, événements et lieux emblématiques",
   generator: "v0.app",
 }
 
@@ -49,7 +49,7 @@ export default async function LocaleLayout({
 
   return (
     <html lang={locale} dir={locale === 'ar' ? 'rtl' : 'ltr'}>
-      <body className={`font-sans ${roboto.variable} ${openSans.variable} ${locale === 'ar' ? 'rtl' : 'ltr'}`}>
+      <body className={`font-sans ${inter.variable} ${poppins.variable} ${locale === 'ar' ? 'rtl' : 'ltr'}`}>
         <NextIntlClientProvider messages={messages}>
           <ToastProvider>
             <ScrollProgress />
