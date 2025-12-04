@@ -52,10 +52,10 @@ export function Navigation() {
       image: "/decouvrer/decouvrer-1.jpg",
       submenu: [
         { label: t("mustSee"), href: `/${currentLocale}/activites/incontournables` },
-        { label: t("freeActivities"), href: `/${currentLocale}/activites/gratuites` },
         { label: t("outdoorSea"), href: `/${currentLocale}/activites/plein-air-mer` },
         { label: t("toursExperiences"), href: `/${currentLocale}/activites/tours-experiences` },
         { label: t("familyKids"), href: `/${currentLocale}/activites/famille-enfants` },
+        { label: t("shopping"), href: `/${currentLocale}/activites/shopping` },
       ],
     },
     {

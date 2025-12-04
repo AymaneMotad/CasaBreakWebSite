@@ -165,11 +165,6 @@ export function Footer() {
                 </a>
               </li>
               <li>
-                <a href={`/${currentLocale}/activites/gratuites`} className="text-slate-400 hover:text-[#c10000] transition-colors duration-200 text-sm">
-                  {t("freeActivities")}
-                </a>
-              </li>
-              <li>
                 <a href={`/${currentLocale}/activites/plein-air-mer`} className="text-slate-400 hover:text-[#c10000] transition-colors duration-200 text-sm">
                   {t("outdoorSea")}
                 </a>
@@ -182,6 +177,11 @@ export function Footer() {
               <li>
                 <a href={`/${currentLocale}/activites/famille-enfants`} className="text-slate-400 hover:text-[#c10000] transition-colors duration-200 text-sm">
                   {t("familyKids")}
+                </a>
+              </li>
+              <li>
+                <a href={`/${currentLocale}/activites/shopping`} className="text-slate-400 hover:text-[#c10000] transition-colors duration-200 text-sm">
+                  {t("shopping")}
                 </a>
               </li>
             </ul>

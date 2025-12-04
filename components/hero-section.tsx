@@ -1,6 +1,5 @@
 "use client"
 
-import { VideoPlayer } from "./video-player"
 import { useTranslations } from 'next-intl'
 
 export function HeroSection() {
@@ -9,10 +8,18 @@ export function HeroSection() {
   return (
     <section className="relative min-h-[110vh] lg:min-h-[120vh] flex items-center justify-center bg-charcoal overflow-hidden pt-32 lg:pt-40">
       <div className="absolute inset-0 z-0">
-        <img
-          src="/casablanca-cityscape-atlantic-ocean-aerial-view-mo.jpg"
-          alt="Casablanca cityscape"
-          className="w-full h-full object-cover animate-gentle-float"
+        <iframe
+          src="https://www.youtube.com/embed/RZUnw5fGqGg?autoplay=1&loop=1&mute=1&controls=0&playlist=RZUnw5fGqGg&modestbranding=1&rel=0&showinfo=0&iv_load_policy=3&start=0"
+          className="absolute inset-0 w-full h-full object-cover animate-gentle-float pointer-events-none"
+          allow="autoplay; encrypted-media"
+          allowFullScreen
+          style={{
+            width: '100%',
+            height: '100%',
+            objectFit: 'cover',
+            transform: 'scale(1.1)',
+            transformOrigin: 'center center'
+          }}
         />
         
         {/* Subtle video enhancement - lighter overlay (reduced on mobile) */}
@@ -108,7 +115,7 @@ export function HeroSection() {
           <div className="relative z-10 flex flex-col sm:flex-row gap-6 justify-center items-center animate-gentle-fade-in stagger-3">
             {/* Primary button with enhanced styling */}
             <a
-              href="/visiter/individuels"
+              href="/decouvrir/monuments"
               className="group relative px-10 py-4 bg-gradient-to-r from-[#00a346]/90 to-[#c10000]/90 text-off-white text-sm font-sans tracking-wider uppercase hover:shadow-2xl hover:scale-105 transition-all duration-500 rounded-full shadow-xl border border-off-white/20 font-medium backdrop-blur-sm overflow-hidden"
             >
               {/* Animated background effect */}

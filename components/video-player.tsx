@@ -40,7 +40,7 @@ export function VideoPlayer({ src, poster, className = "", showControls = true }
 
   return (
     <div 
-      className="relative group" 
+      className="relative group w-full h-full"
       onMouseEnter={() => setShowButton(true)}
       onMouseLeave={() => setShowButton(false)}
     >

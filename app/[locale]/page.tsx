@@ -22,18 +22,9 @@ export default function Home() {
       <MagazineSection />
       
       {/* Features Section - Mobile App Features */}
-      <section className="py-24 lg:py-32 bg-gradient-to-b from-off-white to-white relative overflow-hidden">
-        <div className="absolute inset-0 pointer-events-none">
-          <div className="absolute top-0 left-1/4 right-1/4 h-1 bg-gradient-to-r from-transparent via-[#00a346]/50 to-transparent"></div>
-        </div>
-        
+      <section className="py-24 lg:py-32 bg-white relative overflow-hidden">
         <div className="max-w-[1400px] mx-auto px-6 lg:px-12 relative z-10">
           <div className="text-center mb-16 animate-fade-in-up">
-            <div className="inline-block px-6 py-3 bg-gradient-to-r from-[#00a346]/10 to-[#c10000]/10 border-2 border-[#00a346]/20 rounded-full mb-8">
-              <span className="text-charcoal text-sm font-sans tracking-widest uppercase font-bold">
-                Fonctionnalités
-              </span>
-            </div>
             <h2 className="font-serif text-4xl md:text-5xl lg:text-6xl text-charcoal mb-6 tracking-tight">
               Découvrez Casablanca avec CasaBreak
             </h2>
@@ -42,55 +33,79 @@ export default function Home() {
             </p>
           </div>
           
-          <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-8">
+          <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-6">
             {[
               {
                 icon: MapPin,
                 title: "Géolocalisation",
                 description: "Trouvez instantanément les meilleurs endroits près de vous",
-                color: "from-[#00a346] to-[#00a346]/80"
+                color: "from-[#00a346] to-[#00a346]/80",
+                image: "https://upload.wikimedia.org/wikipedia/commons/8/8a/Casablanca_skyline.jpg"
               },
               {
                 icon: Utensils,
                 title: "Restaurants",
                 description: "Découvrez les meilleurs restaurants de Casablanca",
-                color: "from-[#c10000] to-[#c10000]/80"
+                color: "from-[#c10000] to-[#c10000]/80",
+                image: "https://upload.wikimedia.org/wikipedia/commons/8/8c/Rick%27s_Cafe_Casablanca.jpg"
               },
               {
                 icon: Coffee,
                 title: "Cafés & Brunchs",
                 description: "Trouvez le café parfait pour travailler ou vous détendre",
-                color: "from-[#00a346] to-[#00a346]/80"
+                color: "from-[#00a346] to-[#00a346]/80",
+                image: "https://upload.wikimedia.org/wikipedia/commons/0/0a/Ain_Diab_Corniche_Casablanca.jpg"
               },
               {
                 icon: Camera,
                 title: "Attractions",
                 description: "Explorez les monuments et lieux emblématiques",
-                color: "from-[#c10000] to-[#c10000]/80"
+                color: "from-[#c10000] to-[#c10000]/80",
+                image: "https://upload.wikimedia.org/wikipedia/commons/4/4c/Casablanca_Hassan_II_Mosque.jpg"
               },
               {
                 icon: ShoppingBag,
                 title: "Shopping",
                 description: "Centres commerciaux et boutiques à découvrir",
-                color: "from-[#00a346] to-[#00a346]/80"
+                color: "from-[#00a346] to-[#00a346]/80",
+                image: "https://upload.wikimedia.org/wikipedia/commons/9/9a/Casablanca_Twin_Center.jpg"
               },
               {
                 icon: Calendar,
                 title: "Événements",
                 description: "Ne manquez aucun événement culturel ou festif",
-                color: "from-[#c10000] to-[#c10000]/80"
+                color: "from-[#c10000] to-[#c10000]/80",
+                image: "https://upload.wikimedia.org/wikipedia/commons/d/d0/Mohammed_V_Square_Casablanca.jpg"
               }
             ].map((feature, index) => (
               <div
                 key={feature.title}
-                className="group bg-white p-8 rounded-2xl shadow-lg hover:shadow-2xl transition-all duration-500 border-2 border-transparent hover:border-[#00a346]/20 animate-fade-in-up"
+                className="group bg-white rounded-2xl overflow-hidden shadow-md hover:shadow-xl transition-all duration-500 border border-gray-100 animate-fade-in-up"
                 style={{ animationDelay: `${index * 0.1}s` }}
               >
-                <div className={`w-16 h-16 rounded-xl bg-gradient-to-br ${feature.color} flex items-center justify-center mb-6 group-hover:scale-110 transition-transform duration-300`}>
-                  <feature.icon className="w-8 h-8 text-white" />
+                <div className="relative h-48 overflow-hidden">
+                  <img
+                    src={feature.image}
+                    alt={feature.title}
+                    className="w-full h-full object-cover group-hover:scale-110 transition-transform duration-500"
+                    unoptimized
+                    onError={(e) => {
+                      // Fallback to a smaller size if the main image fails
+                      const originalSrc = e.currentTarget.src
+                      if (!originalSrc.includes('thumb')) {
+                        e.currentTarget.src = originalSrc.replace('/commons/', '/commons/thumb/').replace('.jpg', '/800px-' + originalSrc.split('/').pop())
+                      }
+                    }}
+                  />
+                  <div className={`absolute inset-0 bg-gradient-to-t ${feature.color} opacity-0 group-hover:opacity-20 transition-opacity duration-300`}></div>
+                  <div className={`absolute top-4 right-4 w-12 h-12 rounded-full bg-gradient-to-br ${feature.color} flex items-center justify-center shadow-lg`}>
+                    <feature.icon className="w-6 h-6 text-white" />
+                  </div>
                 </div>
-                <h3 className="font-serif text-2xl text-charcoal mb-4">{feature.title}</h3>
-                <p className="font-sans text-base text-charcoal/70 leading-relaxed">{feature.description}</p>
+                <div className="p-6">
+                  <h3 className="font-serif text-xl text-charcoal mb-2">{feature.title}</h3>
+                  <p className="font-sans text-sm text-charcoal/70 leading-relaxed">{feature.description}</p>
+                </div>
               </div>
             ))}
           </div>
@@ -98,15 +113,10 @@ export default function Home() {
       </section>
       
       {/* App Screenshots Section */}
-      <section className="py-24 lg:py-32 bg-gradient-to-br from-[#00a346]/5 via-white to-[#c10000]/5 relative overflow-hidden">
+      <section id="download" className="py-24 lg:py-32 bg-gradient-to-b from-white to-off-white relative overflow-hidden">
         <div className="max-w-[1400px] mx-auto px-6 lg:px-12">
           <div className="grid lg:grid-cols-2 gap-16 items-center">
             <div className="animate-fade-in-up">
-              <div className="inline-block px-6 py-3 bg-gradient-to-r from-[#00a346]/10 to-[#c10000]/10 border-2 border-[#00a346]/20 rounded-full mb-8">
-                <span className="text-charcoal text-sm font-sans tracking-widest uppercase font-bold">
-                  Application Mobile
-                </span>
-              </div>
               <h2 className="font-serif text-4xl lg:text-5xl text-charcoal mb-6 leading-tight">
                 Téléchargez CasaBreak maintenant
               </h2>

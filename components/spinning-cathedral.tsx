@@ -48,37 +48,49 @@ export function SpinningCathedral() {
         {/* Image Grid Section - Casablanca Attractions */}
         <div className="animate-fade-in-up stagger-1">
           <div className="grid grid-cols-1 md:grid-cols-3 gap-6 max-w-5xl mx-auto">
-            <div className="relative h-[300px] rounded-xl overflow-hidden shadow-xl hover:scale-105 transition-transform duration-500">
+            <div className="relative h-[300px] rounded-xl overflow-hidden shadow-xl hover:scale-105 transition-transform duration-500 group">
               <img
-                src="/decouvrer/decouvrer-5.jpg"
-                alt="Monuments de Casablanca"
+                src="https://upload.wikimedia.org/wikipedia/commons/4/4c/Casablanca_Hassan_II_Mosque.jpg"
+                alt="Mosquée Hassan II - Casablanca"
                 className="w-full h-full object-cover"
+                unoptimized
+                onError={(e) => {
+                  e.currentTarget.src = "https://upload.wikimedia.org/wikipedia/commons/thumb/4/4c/Casablanca_Hassan_II_Mosque.jpg/800px-Casablanca_Hassan_II_Mosque.jpg"
+                }}
               />
-              <div className="absolute inset-0 bg-gradient-to-t from-charcoal/60 to-transparent"></div>
+              <div className="absolute inset-0 bg-gradient-to-t from-[#00a346]/80 via-transparent to-transparent group-hover:from-[#00a346]/90 transition-all duration-300"></div>
               <div className="absolute bottom-4 left-4 right-4">
-                <h3 className="text-white font-bold text-lg">Monuments</h3>
+                <h3 className="text-white font-bold text-lg drop-shadow-lg">Mosquée Hassan II</h3>
               </div>
             </div>
-            <div className="relative h-[300px] rounded-xl overflow-hidden shadow-xl hover:scale-105 transition-transform duration-500">
+            <div className="relative h-[300px] rounded-xl overflow-hidden shadow-xl hover:scale-105 transition-transform duration-500 group">
               <img
-                src="/decouvrer/decouvrer-6.jpg"
-                alt="Restaurants à Casablanca"
+                src="https://upload.wikimedia.org/wikipedia/commons/8/8c/Rick%27s_Cafe_Casablanca.jpg"
+                alt="Restaurants à Casablanca - Rick's Café"
                 className="w-full h-full object-cover"
+                unoptimized
+                onError={(e) => {
+                  e.currentTarget.src = "https://upload.wikimedia.org/wikipedia/commons/thumb/8/8c/Rick%27s_Cafe_Casablanca.jpg/800px-Rick%27s_Cafe_Casablanca.jpg"
+                }}
               />
-              <div className="absolute inset-0 bg-gradient-to-t from-charcoal/60 to-transparent"></div>
+              <div className="absolute inset-0 bg-gradient-to-t from-[#c10000]/80 via-transparent to-transparent group-hover:from-[#c10000]/90 transition-all duration-300"></div>
               <div className="absolute bottom-4 left-4 right-4">
-                <h3 className="text-white font-bold text-lg">Restaurants</h3>
+                <h3 className="text-white font-bold text-lg drop-shadow-lg">Restaurants Casa</h3>
               </div>
             </div>
-            <div className="relative h-[300px] rounded-xl overflow-hidden shadow-xl hover:scale-105 transition-transform duration-500">
+            <div className="relative h-[300px] rounded-xl overflow-hidden shadow-xl hover:scale-105 transition-transform duration-500 group">
               <img
-                src="/decouvrer/decouvrer-7.jpg"
-                alt="Cafés à Casablanca"
+                src="https://upload.wikimedia.org/wikipedia/commons/0/0a/Ain_Diab_Corniche_Casablanca.jpg"
+                alt="Cafés à Casablanca - Corniche Ain Diab"
                 className="w-full h-full object-cover"
+                unoptimized
+                onError={(e) => {
+                  e.currentTarget.src = "https://upload.wikimedia.org/wikipedia/commons/thumb/0/0a/Ain_Diab_Corniche_Casablanca.jpg/800px-Ain_Diab_Corniche_Casablanca.jpg"
+                }}
               />
-              <div className="absolute inset-0 bg-gradient-to-t from-charcoal/60 to-transparent"></div>
+              <div className="absolute inset-0 bg-gradient-to-t from-[#00a346]/80 via-transparent to-transparent group-hover:from-[#00a346]/90 transition-all duration-300"></div>
               <div className="absolute bottom-4 left-4 right-4">
-                <h3 className="text-white font-bold text-lg">Cafés</h3>
+                <h3 className="text-white font-bold text-lg drop-shadow-lg">Cafés Corniche</h3>
               </div>
             </div>
           </div>
