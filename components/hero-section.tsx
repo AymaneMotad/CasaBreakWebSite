@@ -102,7 +102,7 @@ export function HeroSection() {
               {/* Central large image */}
               <div className="relative rounded-3xl overflow-hidden shadow-2xl border-2 border-white/10 aspect-[3/4]">
                 <img
-                  src="https://images.unsplash.com/photo-1569383746724-6f1b882b8f46?w=800&q=80"
+                  src="https://images.unsplash.com/photo-1696259629194-5411989d6675?w=800&q=80"
                   alt="Casablanca - Hassan II Mosque"
                   className="w-full h-full object-cover"
                 />
