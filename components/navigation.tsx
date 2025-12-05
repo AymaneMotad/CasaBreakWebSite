@@ -63,9 +63,8 @@ export function Navigation() {
       submenu: [
         { label: t("mustSee"), href: `/${currentLocale}/activites/incontournables` },
         { label: t("outdoorSea"), href: `/${currentLocale}/activites/plein-air-mer` },
-        { label: t("toursExperiences"), href: `/${currentLocale}/activites/tours-experiences` },
         { label: t("familyKids"), href: `/${currentLocale}/activites/famille-enfants` },
-        { label: t("shopping"), href: `/${currentLocale}/activites/shopping` },
+        { label: t("sportWellness"), href: `/${currentLocale}/activites/shopping` },
       ],
     },
     {
@@ -73,8 +72,7 @@ export function Navigation() {
       href: "#",
       image: "/casablanca-cityscape-atlantic-ocean-aerial-view-mo.jpg",
       submenu: [
-        { label: t("restaurants"), href: `/${currentLocale}/manger-sortir/restaurants` },
-        { label: t("cafesBrunch"), href: `/${currentLocale}/manger-sortir/cafes-brunchs` },
+        { label: t("cafesRestaurants"), href: `/${currentLocale}/manger-sortir/restaurants` },
         { label: t("barsNightlife"), href: `/${currentLocale}/manger-sortir/bars-nightlife` },
         { label: t("shoppingMalls"), href: `/${currentLocale}/manger-sortir/centres-commerciaux` },
         { label: t("souksCrafts"), href: `/${currentLocale}/manger-sortir/souks-artisanat` },
@@ -98,7 +96,6 @@ export function Navigation() {
       image: "/decouvrer/decouvrer-3.jpg",
       submenu: [
         { label: t("accommodation"), href: `/${currentLocale}/planifier/hebergement` },
-        { label: t("whereToStay"), href: `/${currentLocale}/planifier/ou-loger` },
         { label: t("gettingAround"), href: `/${currentLocale}/planifier/se-deplacer` },
         { label: t("airportToCity"), href: `/${currentLocale}/planifier/aeroport-centre-ville` },
         { label: t("practicalInfo"), href: `/${currentLocale}/planifier/infos-pratiques` },

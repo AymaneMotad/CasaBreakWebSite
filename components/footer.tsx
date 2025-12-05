@@ -26,20 +26,22 @@ export function Footer() {
   const currentLocale = getCurrentLocale()
   
   return (
-    <footer className="relative bg-gradient-to-b from-slate-900 via-slate-800 to-slate-900 text-slate-100 overflow-hidden">
-      {/* Elegant background pattern */}
-      <div className="absolute inset-0 opacity-5">
-        <div className="absolute inset-0 bg-[radial-gradient(circle_at_50%_50%,rgba(0,163,70,0.1),transparent_50%)]"></div>
+    <footer className="relative bg-[#0a0a0a] text-white overflow-hidden">
+      {/* Animated Gradient Mesh Background - matching hero section */}
+      <div className="absolute inset-0 z-0">
+        {/* Primary gradient orbs */}
+        <div className="absolute top-0 left-0 w-[600px] h-[600px] bg-[#00a346]/10 rounded-full blur-[120px] animate-pulse" style={{ animationDuration: '4s' }} />
+        <div className="absolute top-1/4 right-0 w-[500px] h-[500px] bg-[#0066b2]/10 rounded-full blur-[120px] animate-pulse" style={{ animationDuration: '5s', animationDelay: '1s' }} />
+        <div className="absolute bottom-0 left-1/3 w-[550px] h-[550px] bg-[#c10000]/8 rounded-full blur-[120px] animate-pulse" style={{ animationDuration: '6s', animationDelay: '2s' }} />
+        
+        {/* Grid pattern overlay */}
+        <div className="absolute inset-0 bg-[linear-gradient(rgba(255,255,255,0.02)_1px,transparent_1px),linear-gradient(90deg,rgba(255,255,255,0.02)_1px,transparent_1px)] bg-[size:60px_60px]" />
+        
+        {/* Noise texture */}
+        <div className="absolute inset-0 opacity-[0.015]" style={{ backgroundImage: `url("data:image/svg+xml,%3Csvg viewBox='0 0 400 400' xmlns='http://www.w3.org/2000/svg'%3E%3Cfilter id='noiseFilter'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='0.9' numOctaves='3' stitchTiles='stitch'/%3E%3C/filter%3E%3Crect width='100%25' height='100%25' filter='url(%23noiseFilter)'/%3E%3C/svg%3E")` }} />
+        
+        {/* Top accent line */}
         <div className="absolute top-0 left-0 w-full h-px bg-gradient-to-r from-transparent via-[#00a346]/30 to-transparent"></div>
-        <div className="absolute bottom-0 left-0 w-full h-px bg-gradient-to-r from-transparent via-[#c10000]/20 to-transparent"></div>
-      </div>
-      
-      {/* Subtle geometric patterns */}
-      <div className="absolute inset-0 opacity-3">
-        <div className="absolute top-20 left-10 w-32 h-32 border border-slate-600/20 rounded-full"></div>
-        <div className="absolute top-40 right-20 w-24 h-24 border border-slate-600/15 rounded-full"></div>
-        <div className="absolute bottom-32 left-1/4 w-16 h-16 border border-slate-600/10 rounded-full"></div>
-        <div className="absolute bottom-20 right-1/3 w-20 h-20 border border-slate-600/15 rounded-full"></div>
       </div>
 
       {/* Main content */}
@@ -58,14 +60,14 @@ export function Footer() {
                   className="h-16 lg:h-20 w-auto"
                 />
               </div>
-              <p className="text-slate-300 text-lg leading-relaxed font-light">
+              <p className="text-white/60 text-lg leading-relaxed font-light">
                 {tFooter("description")}
               </p>
             </div>
 
             {/* Contact information */}
             <div className="lg:max-w-sm">
-              <h3 className="text-slate-200 text-xl font-semibold mb-6 tracking-wide">{tFooter("contact")}</h3>
+              <h3 className="text-white text-xl font-semibold mb-6 tracking-wide">{tFooter("contact")}</h3>
               <div className="space-y-4">
                 <div className="flex items-start gap-3">
                   <div className="w-5 h-5 mt-1 flex-shrink-0">
@@ -75,8 +77,8 @@ export function Footer() {
                     </svg>
                   </div>
                   <div>
-                    <p className="text-slate-300 font-medium">{tFooter("address")}</p>
-                    <p className="text-slate-400 text-sm leading-relaxed" dangerouslySetInnerHTML={{ __html: tFooter("addressValue") }}>
+                    <p className="text-white/80 font-medium">{tFooter("address")}</p>
+                    <p className="text-white/50 text-sm leading-relaxed" dangerouslySetInnerHTML={{ __html: tFooter("addressValue") }}>
                     </p>
                   </div>
                 </div>
@@ -88,8 +90,8 @@ export function Footer() {
                     </svg>
                   </div>
                   <div>
-                    <p className="text-slate-300 font-medium">{tFooter("phone")}</p>
-                    <p className="text-slate-400 text-sm">+212 522 227 745</p>
+                    <p className="text-white/80 font-medium">{tFooter("phone")}</p>
+                    <p className="text-white/50 text-sm">+212 522 227 745</p>
                   </div>
                 </div>
 
@@ -100,8 +102,8 @@ export function Footer() {
                     </svg>
                   </div>
                   <div>
-                    <p className="text-slate-300 font-medium">{tFooter("email")}</p>
-                    <p className="text-slate-400 text-sm">contact@casaevents.ma</p>
+                    <p className="text-white/80 font-medium">{tFooter("email")}</p>
+                    <p className="text-white/50 text-sm">contact@casaevents.ma</p>
                   </div>
                 </div>
               </div>
@@ -113,15 +115,15 @@ export function Footer() {
         <div className="grid grid-cols-2 md:grid-cols-3 lg:grid-cols-7 gap-8 lg:gap-12 mb-16">
           {/* Accueil */}
           <div>
-            <h4 className="text-slate-200 text-lg font-semibold mb-6 tracking-wide">{t("home")}</h4>
+            <h4 className="text-white text-lg font-semibold mb-6 tracking-wide">{t("home")}</h4>
             <ul className="space-y-3">
               <li>
-                <a href={`/${currentLocale}`} className="text-slate-400 hover:text-[#00a346] transition-colors duration-200 text-sm">
+                <a href={`/${currentLocale}`} className="text-white/60 hover:text-[#00a346] transition-colors duration-200 text-sm">
                   {t("home")}
                 </a>
               </li>
               <li>
-                <a href={`/${currentLocale}/can-2025`} className="text-slate-400 hover:text-[#00a346] transition-colors duration-200 text-sm">
+                <a href={`/${currentLocale}/can-2025`} className="text-white/60 hover:text-[#00a346] transition-colors duration-200 text-sm">
                   Can 2025
                 </a>
               </li>
@@ -130,25 +132,25 @@ export function Footer() {
 
           {/* Découvrir */}
           <div>
-            <h4 className="text-slate-200 text-lg font-semibold mb-6 tracking-wide">{t("discover")}</h4>
+            <h4 className="text-white text-lg font-semibold mb-6 tracking-wide">{t("discover")}</h4>
             <ul className="space-y-3">
               <li>
-                <a href={`/${currentLocale}/decouvrir/monuments`} className="text-slate-400 hover:text-[#00a346] transition-colors duration-200 text-sm">
+                <a href={`/${currentLocale}/decouvrir/monuments`} className="text-white/60 hover:text-[#00a346] transition-colors duration-200 text-sm">
                   {t("monuments")}
                 </a>
               </li>
               <li>
-                <a href={`/${currentLocale}/decouvrir/quartiers`} className="text-slate-400 hover:text-[#00a346] transition-colors duration-200 text-sm">
+                <a href={`/${currentLocale}/decouvrir/quartiers`} className="text-white/60 hover:text-[#00a346] transition-colors duration-200 text-sm">
                   {t("neighborhoods")}
                 </a>
               </li>
               <li>
-                <a href={`/${currentLocale}/decouvrir/mer-plages`} className="text-slate-400 hover:text-[#00a346] transition-colors duration-200 text-sm">
+                <a href={`/${currentLocale}/decouvrir/mer-plages`} className="text-white/60 hover:text-[#00a346] transition-colors duration-200 text-sm">
                   {t("seaBeaches")}
                 </a>
               </li>
               <li>
-                <a href={`/${currentLocale}/decouvrir/itineraires`} className="text-slate-400 hover:text-[#00a346] transition-colors duration-200 text-sm">
+                <a href={`/${currentLocale}/decouvrir/itineraires`} className="text-white/60 hover:text-[#00a346] transition-colors duration-200 text-sm">
                   {t("itineraries")}
                 </a>
               </li>
@@ -170,35 +172,25 @@ export function Footer() {
                 </a>
               </li>
               <li>
-                <a href={`/${currentLocale}/activites/tours-experiences`} className="text-slate-400 hover:text-[#c10000] transition-colors duration-200 text-sm">
-                  {t("toursExperiences")}
-                </a>
-              </li>
-              <li>
                 <a href={`/${currentLocale}/activites/famille-enfants`} className="text-slate-400 hover:text-[#c10000] transition-colors duration-200 text-sm">
                   {t("familyKids")}
                 </a>
               </li>
               <li>
                 <a href={`/${currentLocale}/activites/shopping`} className="text-slate-400 hover:text-[#c10000] transition-colors duration-200 text-sm">
-                  {t("shopping")}
+                  {t("sportWellness")}
                 </a>
               </li>
             </ul>
           </div>
 
-          {/* Gastronomie & Sorties */}
+          {/* Gastronomie & Shopping */}
           <div>
             <h4 className="text-slate-200 text-lg font-semibold mb-6 tracking-wide">{t("foodFun")}</h4>
             <ul className="space-y-3">
               <li>
                 <a href={`/${currentLocale}/manger-sortir/restaurants`} className="text-slate-400 hover:text-[#00a346] transition-colors duration-200 text-sm">
-                  {t("restaurants")}
-                </a>
-              </li>
-              <li>
-                <a href={`/${currentLocale}/manger-sortir/cafes-brunchs`} className="text-slate-400 hover:text-[#00a346] transition-colors duration-200 text-sm">
-                  {t("cafesBrunch")}
+                  {t("cafesRestaurants")}
                 </a>
               </li>
               <li>
@@ -258,11 +250,6 @@ export function Footer() {
               <li>
                 <a href={`/${currentLocale}/planifier/hebergement`} className="text-slate-400 hover:text-[#00a346] transition-colors duration-200 text-sm">
                   {t("accommodation")}
-                </a>
-              </li>
-              <li>
-                <a href={`/${currentLocale}/planifier/ou-loger`} className="text-slate-400 hover:text-[#00a346] transition-colors duration-200 text-sm">
-                  {t("whereToStay")}
                 </a>
               </li>
               <li>
