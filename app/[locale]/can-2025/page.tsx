@@ -351,7 +351,7 @@ export default function Can2025Page() {
             <div className="relative">
               <div className="relative rounded-3xl overflow-hidden aspect-[4/5]">
                 <img
-                  src="https://images.unsplash.com/photo-1569383746724-6f1b882b8f46?w=800&q=80"
+                  src="https://images.unsplash.com/photo-1696259629194-5411989d6675?w=800&q=80"
                   alt="Hassan II Mosque Casablanca"
                   className="w-full h-full object-cover"
                 />
