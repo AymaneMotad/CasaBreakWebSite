@@ -4,9 +4,6 @@
 -- Run this in Supabase SQL Editor
 -- =====================================================
 
--- Clear existing restaurants (optional - comment out if you want to keep existing)
--- DELETE FROM venues WHERE category = 'restaurants';
-
 INSERT INTO venues (
   slug,
   category,
@@ -26,7 +23,7 @@ INSERT INTO venues (
   'Costa Coffee-Anfaplace Mall',
   'Costa Coffee au Anfa Place à Casablanca est un café moderne où vous pouvez déguster une large sélection de cafés, boissons chaudes et froides, ainsi que des pâtisseries dans un cadre contemporain.',
   'Costa Coffee au Anfa Place à Casablanca est un café moderne où vous pouvez déguster une large sélection de cafés.',
-  'https://crtasablanca.s3.eu-west-1.amazonaws.com/content/uploads/20250709102231/costa-coffee-anfaplace.jpg',
+  'https://crtasablanca.s3.eu-west-1.amazonaws.com/content/uploads/20250714140003/Costa-Coffee-Anfaplace-Mall-1.jpg',
   false,
   true
 ),
@@ -37,7 +34,7 @@ INSERT INTO venues (
   'Costa Coffee-Marina Mall',
   'Costa Coffee au Marina Mall à Casablanca est un café moderne où vous pouvez déguster une large sélection de cafés, boissons chaudes et froides, ainsi que des pâtisseries.',
   'Costa Coffee au Marina Mall à Casablanca est un café moderne.',
-  'https://crtasablanca.s3.eu-west-1.amazonaws.com/content/uploads/20250709102231/costa-coffee-marina.jpg',
+  'https://crtasablanca.s3.eu-west-1.amazonaws.com/content/uploads/20240815161922/Costa-Coffee-Marina-Mall.jpg',
   false,
   true
 ),
@@ -48,7 +45,7 @@ INSERT INTO venues (
   'Costa Coffee-Casa Voyageurs',
   'Costa Coffee à la gare Casa Voyageurs à Casablanca est un café moderne où vous pouvez déguster une large sélection de cafés, boissons chaudes et froides.',
   'Costa Coffee à la gare Casa Voyageurs.',
-  'https://crtasablanca.s3.eu-west-1.amazonaws.com/content/uploads/20250709102231/costa-coffee-voyageurs.jpg',
+  'https://crtasablanca.s3.eu-west-1.amazonaws.com/content/uploads/20240815161900/Costa-Coffee-casa-voyageurs.jpg',
   false,
   true
 ),
@@ -60,7 +57,7 @@ INSERT INTO venues (
   'Café de France',
   'Le Café de France à Casablanca est un établissement emblématique offrant des cafés de qualité, des pâtisseries exquises et des repas légers dans un cadre historique et chaleureux.',
   'Le Café de France à Casablanca est un établissement emblématique offrant des cafés de qualité.',
-  'https://crtasablanca.s3.eu-west-1.amazonaws.com/content/uploads/20250709102231/cafe-de-france.jpg',
+  'https://crtasablanca.s3.eu-west-1.amazonaws.com/content/uploads/20240815160601/2024-06-14.jpg',
   true,
   true
 ),
@@ -72,7 +69,7 @@ INSERT INTO venues (
   'Bondi Coffee Kitchen',
   'Bondi Coffee Kitchen à Casablanca est un café-restaurant moderne inspiré par Bondi Beach, offrant des cafés de qualité et des plats sains dans une ambiance décontractée.',
   'Bondi Coffee Kitchen est un café-restaurant moderne inspiré par Bondi Beach.',
-  'https://crtasablanca.s3.eu-west-1.amazonaws.com/content/uploads/20250709102231/bondi-coffee.jpg',
+  'https://crtasablanca.s3.eu-west-1.amazonaws.com/content/uploads/20250714112602/Bondi-Coffee-Kitchen.jpg',
   true,
   true
 ),
@@ -84,7 +81,7 @@ INSERT INTO venues (
   'Belati Coffee',
   'Belati Coffee à Casablanca est un café élégant offrant une variété de cafés et boissons dans un cadre moderne et accueillant.',
   'Belati Coffee à Casablanca est un café élégant offrant une variété de cafés.',
-  'https://crtasablanca.s3.eu-west-1.amazonaws.com/content/uploads/20250709102231/belati-coffee.jpg',
+  'https://crtasablanca.s3.eu-west-1.amazonaws.com/content/uploads/20240815155908/2024-05-15.jpg',
   false,
   true
 ),
@@ -96,7 +93,7 @@ INSERT INTO venues (
   'Dunkin Donuts - El Jadida Road',
   'Dunkin'' Donuts à Casablanca est célèbre pour ses donuts artisanaux et son café fraîchement préparé. Avec une atmosphère chaleureuse et un service rapide.',
   'Dunkin'' Donuts à Casablanca est célèbre pour ses donuts artisanaux.',
-  'https://crtasablanca.s3.eu-west-1.amazonaws.com/content/uploads/20250709102231/dunkin-donuts.jpg',
+  'https://crtasablanca.s3.eu-west-1.amazonaws.com/content/uploads/20240815154939/20220723_190225.jpg',
   false,
   true
 ),
@@ -107,7 +104,7 @@ INSERT INTO venues (
   'Dunkin Donuts-Michel Ange',
   'Dunkin'' Donuts à Casablanca est célèbre pour ses donuts artisanaux et son café fraîchement préparé. Avec une atmosphère chaleureuse et un service rapide.',
   'Dunkin'' Donuts à Casablanca est célèbre pour ses donuts artisanaux.',
-  'https://crtasablanca.s3.eu-west-1.amazonaws.com/content/uploads/20250709102231/dunkin-donuts.jpg',
+  'https://crtasablanca.s3.eu-west-1.amazonaws.com/content/uploads/20240815154939/20220723_190225.jpg',
   false,
   true
 ),
@@ -118,7 +115,7 @@ INSERT INTO venues (
   'Dunkin Donuts-Ghandi',
   'Dunkin'' Donuts à Casablanca est célèbre pour ses donuts artisanaux et son café fraîchement préparé. Avec une atmosphère chaleureuse et un service rapide.',
   'Dunkin'' Donuts à Casablanca est célèbre pour ses donuts artisanaux.',
-  'https://crtasablanca.s3.eu-west-1.amazonaws.com/content/uploads/20250709102231/dunkin-donuts.jpg',
+  'https://crtasablanca.s3.eu-west-1.amazonaws.com/content/uploads/20240815154939/20220723_190225.jpg',
   false,
   true
 ),
@@ -129,7 +126,7 @@ INSERT INTO venues (
   'Dunkin Donuts-Area Mall',
   'Dunkin'' Donuts à Casablanca est célèbre pour ses donuts artisanaux et son café fraîchement préparé. Avec une atmosphère chaleureuse et un service rapide.',
   'Dunkin'' Donuts à Casablanca est célèbre pour ses donuts artisanaux.',
-  'https://crtasablanca.s3.eu-west-1.amazonaws.com/content/uploads/20250709102231/dunkin-donuts.jpg',
+  'https://crtasablanca.s3.eu-west-1.amazonaws.com/content/uploads/20240815153028/dunkin-_-ariaa-mall.jpg',
   false,
   true
 ),
@@ -141,7 +138,7 @@ INSERT INTO venues (
   'Dream Donuts & Coffee',
   'Dream Donuts & Coffee, situé en plein centre-ville, est un café gourmand réputé pour ses donuts artisanaux aux saveurs variées et son café de qualité.',
   'Dream Donuts & Coffee est un café gourmand réputé pour ses donuts artisanaux.',
-  'https://crtasablanca.s3.eu-west-1.amazonaws.com/content/uploads/20250709102231/dream-donuts.jpg',
+  'https://crtasablanca.s3.eu-west-1.amazonaws.com/content/uploads/20240815154934/51935312-39742363.jpg',
   false,
   true
 ),
@@ -153,7 +150,7 @@ INSERT INTO venues (
   'Bex',
   'Bex Coffee est un café branché à Casablanca, situé au croisement du boulevard d''Anfa et de la rue Michel Ange. Un lieu tendance pour les amateurs de café.',
   'Bex Coffee est un café branché à Casablanca.',
-  'https://crtasablanca.s3.eu-west-1.amazonaws.com/content/uploads/20250709102231/bex-coffee.jpg',
+  'https://crtasablanca.s3.eu-west-1.amazonaws.com/content/uploads/20240815151331/2021-10-20.jpg',
   true,
   true
 ),
@@ -165,7 +162,7 @@ INSERT INTO venues (
   'Room 21',
   'Room 21 est un café moderne et convivial, situé en plein cœur de la ville. Ses murs en briques apparentes créent une ambiance chaleureuse et industrielle.',
   'Room 21 est un café moderne et convivial.',
-  'https://crtasablanca.s3.eu-west-1.amazonaws.com/content/uploads/20250709102231/room-21.jpg',
+  'https://crtasablanca.s3.eu-west-1.amazonaws.com/content/uploads/20240815145957/2023-10-17.jpg',
   true,
   true
 ),
@@ -177,7 +174,7 @@ INSERT INTO venues (
   'Gapi Villa',
   'Gapi Villa à Casablanca est un café-restaurant élégant offrant des plats raffinés pour les petits-déjeuners, déjeuners et dîners, dans un cadre sophistiqué.',
   'Gapi Villa est un café-restaurant élégant.',
-  'https://crtasablanca.s3.eu-west-1.amazonaws.com/content/uploads/20250709102231/gapi-villa.jpg',
+  'https://crtasablanca.s3.eu-west-1.amazonaws.com/content/uploads/20250714135554/Gapi-Villa.jpg',
   true,
   true
 ),
@@ -189,7 +186,7 @@ INSERT INTO venues (
   'Les Soeurettes',
   'Les Soeurettes à Casablanca est un café-restaurant chaleureux offrant des plats faits maison pour les petits-déjeuners, déjeuners et dîners, dans un cadre convivial.',
   'Les Soeurettes est un café-restaurant chaleureux.',
-  'https://crtasablanca.s3.eu-west-1.amazonaws.com/content/uploads/20250709102231/les-soeurettes.jpg',
+  'https://crtasablanca.s3.eu-west-1.amazonaws.com/content/uploads/20250714135315/Les-soeurettes.jpg',
   true,
   true
 ),
@@ -201,7 +198,7 @@ INSERT INTO venues (
   'Boca Chica',
   'Boca Chica à Casablanca est un café-restaurant élégant offrant une gamme de plats raffinés pour les petits-déjeuners, déjeuners et dîners.',
   'Boca Chica est un café-restaurant élégant.',
-  'https://crtasablanca.s3.eu-west-1.amazonaws.com/content/uploads/20250709102231/boca-chica.jpg',
+  'https://crtasablanca.s3.eu-west-1.amazonaws.com/content/uploads/20250714140732/Boca-Chica.jpg',
   false,
   true
 ),
@@ -213,7 +210,7 @@ INSERT INTO venues (
   'Le Gatsby',
   'Le Gatsby à Casablanca est un café-restaurant élégant offrant une gamme de plats raffinés pour les petits-déjeuners, déjeuners et dîners, dans un cadre inspiré des années folles.',
   'Le Gatsby est un café-restaurant élégant inspiré des années folles.',
-  'https://crtasablanca.s3.eu-west-1.amazonaws.com/content/uploads/20250709102231/le-gatsby.jpg',
+  'https://crtasablanca.s3.eu-west-1.amazonaws.com/content/uploads/20240815143843/unnamed-1-2.jpg',
   true,
   true
 ),
@@ -225,7 +222,7 @@ INSERT INTO venues (
   'Le Duo café et restaurant',
   'Le Duo à Casablanca est un café-restaurant moderne offrant une variété de plats allant des petits-déjeuners aux dîners raffinés, dans un cadre contemporain.',
   'Le Duo est un café-restaurant moderne.',
-  'https://crtasablanca.s3.eu-west-1.amazonaws.com/content/uploads/20250709102231/le-duo.jpg',
+  'https://crtasablanca.s3.eu-west-1.amazonaws.com/content/uploads/20240815143047/2021-10-14.jpg',
   false,
   true
 ),
@@ -237,7 +234,7 @@ INSERT INTO venues (
   'Papers Club',
   'Papers Club à Casablanca, situé en face du stade Mohammed V, est un café culturel offrant un programme varié incluant des événements artistiques et des concerts.',
   'Papers Club est un café culturel situé en face du stade Mohammed V.',
-  'https://crtasablanca.s3.eu-west-1.amazonaws.com/content/uploads/20250709102231/papers-club.jpg',
+  'https://crtasablanca.s3.eu-west-1.amazonaws.com/content/uploads/20240815143452/AF1QipOV8eYg9j5Xl_NagVTdvdtDY7Xmo9OyUrhpTGqOw1600-h1000-k-no.jpeg',
   true,
   true
 ),
@@ -249,7 +246,7 @@ INSERT INTO venues (
   'Le Blitz',
   'Le Blitz à Casablanca offre une expérience caféinée créative avec des cafés de spécialité, des plats innovants, et un décor moderne et branché.',
   'Le Blitz offre une expérience caféinée créative.',
-  'https://crtasablanca.s3.eu-west-1.amazonaws.com/content/uploads/20250709102231/le-blitz.jpg',
+  'https://crtasablanca.s3.eu-west-1.amazonaws.com/content/uploads/20240815142500/2020-08-14.jpg',
   true,
   true
 ),
@@ -261,7 +258,7 @@ INSERT INTO venues (
   'Amistad',
   'Amistad à Casablanca est un café chaleureux offrant une sélection de cafés, thés, pâtisseries et snacks, dans un cadre moderne et accueillant.',
   'Amistad est un café chaleureux offrant une sélection de cafés et pâtisseries.',
-  'https://crtasablanca.s3.eu-west-1.amazonaws.com/content/uploads/20250709102231/amistad.jpg',
+  'https://crtasablanca.s3.eu-west-1.amazonaws.com/content/uploads/20240815141951/restaurant_amistad_image1.jpg',
   false,
   true
 ),
@@ -273,7 +270,7 @@ INSERT INTO venues (
   'Starbucks',
   'Starbucks Casablanca propose une large gamme de boissons à base de café, pâtisseries, et snacks, dans un cadre moderne et confortable.',
   'Starbucks Casablanca propose une large gamme de boissons à base de café.',
-  'https://crtasablanca.s3.eu-west-1.amazonaws.com/content/uploads/20250709102231/starbucks.jpg',
+  'https://crtasablanca.s3.eu-west-1.amazonaws.com/content/uploads/20240815141609/photo1jpg.jpg',
   false,
   true
 ),
@@ -285,7 +282,7 @@ INSERT INTO venues (
   'EspressoLab',
   'EspressoLab à Casablanca est un café spécialisé dans l''art de l''espresso, offrant une gamme variée de cafés de qualité et de boissons chaudes.',
   'EspressoLab est un café spécialisé dans l''art de l''espresso.',
-  'https://crtasablanca.s3.eu-west-1.amazonaws.com/content/uploads/20250709102231/espressolab.jpg',
+  'https://crtasablanca.s3.eu-west-1.amazonaws.com/content/uploads/20240815141323/espressolab-maarif.jpg',
   false,
   true
 ),
@@ -297,7 +294,7 @@ INSERT INTO venues (
   'Arabica-Twin Center',
   'Arabica à Casablanca est un café élégant offrant une variété de cafés de haute qualité et de pâtisseries fraîches, dans un cadre minimaliste japonais.',
   'Arabica est un café élégant offrant une variété de cafés de haute qualité.',
-  'https://crtasablanca.s3.eu-west-1.amazonaws.com/content/uploads/20250709102231/arabica.jpg',
+  'https://crtasablanca.s3.eu-west-1.amazonaws.com/content/uploads/20240815140609/2024-07-02.jpg',
   true,
   true
 ),
@@ -308,7 +305,7 @@ INSERT INTO venues (
   'Arabica-Bd d''Anfa',
   'Arabica à Casablanca est un café élégant offrant une variété de cafés de haute qualité et de pâtisseries fraîches, dans un cadre minimaliste japonais.',
   'Arabica est un café élégant offrant une variété de cafés de haute qualité.',
-  'https://crtasablanca.s3.eu-west-1.amazonaws.com/content/uploads/20250709102231/arabica.jpg',
+  'https://crtasablanca.s3.eu-west-1.amazonaws.com/content/uploads/20240815140124/2023-06-23.jpg',
   false,
   true
 ),
@@ -320,7 +317,7 @@ INSERT INTO venues (
   'Villa Bianca',
   'Le Café Bianca à l''hôtel Villa Blanca à Casablanca offre des petits-déjeuners copieux, des déjeuners italiens, des cafés gourmands, et une ambiance élégante.',
   'Le Café Bianca à l''hôtel Villa Blanca offre des petits-déjeuners copieux.',
-  'https://crtasablanca.s3.eu-west-1.amazonaws.com/content/uploads/20250709102231/villa-bianca.jpg',
+  'https://crtasablanca.s3.eu-west-1.amazonaws.com/content/uploads/20240815135406/villablanca-restaurant-cafe-bianca-casablanca.jpg',
   true,
   true
 ),
@@ -332,7 +329,7 @@ INSERT INTO venues (
   'Paul-El Jadida Road',
   'Paul à Casablanca offre une cuisine variée dans un cadre élégant et chaleureux, avec des pâtisseries fraîches, plats de brasserie et une ambiance française authentique.',
   'Paul à Casablanca offre une cuisine variée dans un cadre élégant.',
-  'https://crtasablanca.s3.eu-west-1.amazonaws.com/content/uploads/20250709102231/paul.jpg',
+  'https://crtasablanca.s3.eu-west-1.amazonaws.com/content/uploads/20240815132810/paul-rt-jdida.jpg',
   false,
   true
 ),
@@ -343,7 +340,7 @@ INSERT INTO venues (
   'Paul-AnfaPlace',
   'Paul à Casablanca offre une cuisine variée dans un cadre élégant et chaleureux, avec des pâtisseries fraîches, plats de brasserie et une ambiance française authentique.',
   'Paul à Casablanca offre une cuisine variée dans un cadre élégant.',
-  'https://crtasablanca.s3.eu-west-1.amazonaws.com/content/uploads/20250709102231/paul.jpg',
+  'https://crtasablanca.s3.eu-west-1.amazonaws.com/content/uploads/20250709091342/Paul-AnfaPlace-02.jpg',
   false,
   true
 ),
@@ -354,7 +351,7 @@ INSERT INTO venues (
   'Paul-Aeria Mall',
   'Paul à Casablanca offre une cuisine variée dans un cadre élégant et chaleureux, avec des pâtisseries fraîches, plats de brasserie et une ambiance française authentique.',
   'Paul à Casablanca offre une cuisine variée dans un cadre élégant.',
-  'https://crtasablanca.s3.eu-west-1.amazonaws.com/content/uploads/20250709102231/paul.jpg',
+  'https://crtasablanca.s3.eu-west-1.amazonaws.com/content/uploads/20250709091658/Paul-Aeria-Mall-02.jpg',
   false,
   true
 ),
@@ -366,7 +363,7 @@ INSERT INTO venues (
   'Cézanne',
   'Cézanne à Casablanca propose une cuisine raffinée dans un cadre élégant, offrant des plats de qualité allant des classiques français aux créations contemporaines.',
   'Cézanne propose une cuisine raffinée dans un cadre élégant.',
-  'https://crtasablanca.s3.eu-west-1.amazonaws.com/content/uploads/20250709102231/cezanne.jpg',
+  'https://crtasablanca.s3.eu-west-1.amazonaws.com/content/uploads/20240815131907/53B9336C-49D5-4E33-B01C-8E8D668AE10D.jpeg',
   true,
   true
 ),
@@ -378,7 +375,7 @@ INSERT INTO venues (
   'Demoiselle',
   'Demoiselle à Casablanca est un café-restaurant sophistiqué et chaleureux, proposant une cuisine variée allant des plats marocains aux internationaux.',
   'Demoiselle est un café-restaurant sophistiqué et chaleureux.',
-  'https://crtasablanca.s3.eu-west-1.amazonaws.com/content/uploads/20250709102231/demoiselle.jpg',
+  'https://crtasablanca.s3.eu-west-1.amazonaws.com/content/uploads/20240815131001/2021-11-26.jpg',
   false,
   true
 ),
@@ -390,7 +387,7 @@ INSERT INTO venues (
   'Venezia Ice',
   'Venezia Ice à Casablanca propose des glaces artisanales, sorbets et desserts glacés dans un cadre moderne et accueillant.',
   'Venezia Ice propose des glaces artisanales et sorbets.',
-  'https://crtasablanca.s3.eu-west-1.amazonaws.com/content/uploads/20250709102231/venezia-ice.jpg',
+  'https://crtasablanca.s3.eu-west-1.amazonaws.com/content/uploads/20240815112009/unnamed-2.jpg',
   false,
   true
 ),
@@ -402,7 +399,7 @@ INSERT INTO venues (
   'Le Vendome',
   'Le Vendôme à Casablanca offre un brunch quotidien dans un cadre lumineux et élégant, avec des omelettes, pancakes, pains frais et bien plus.',
   'Le Vendôme offre un brunch quotidien dans un cadre lumineux.',
-  'https://crtasablanca.s3.eu-west-1.amazonaws.com/content/uploads/20250709102231/le-vendome.jpg',
+  'https://crtasablanca.s3.eu-west-1.amazonaws.com/content/uploads/20240815131641/Capture-decran-2024-08-15-141547.jpg',
   true,
   true
 ),
@@ -414,7 +411,7 @@ INSERT INTO venues (
   'Marina Juice',
   'Marina Juice à Casablanca offre une sélection de jus de fruits frais, smoothies et snacks légers dans un cadre moderne et décontracté.',
   'Marina Juice offre une sélection de jus de fruits frais et smoothies.',
-  'https://crtasablanca.s3.eu-west-1.amazonaws.com/content/uploads/20250709102231/marina-juice.jpg',
+  'https://crtasablanca.s3.eu-west-1.amazonaws.com/content/uploads/20240815111815/Capture-decran-2024-08-15-121749.jpg',
   false,
   true
 ),
@@ -426,7 +423,7 @@ INSERT INTO venues (
   'Le Marly',
   'Le Marly à Casablanca propose une sélection variée de cafés, thés, et autres boissons, avec des petits-déjeuners, déjeuners légers, et pâtisseries.',
   'Le Marly propose une sélection variée de cafés et thés.',
-  'https://crtasablanca.s3.eu-west-1.amazonaws.com/content/uploads/20250709102231/le-marly.jpg',
+  'https://crtasablanca.s3.eu-west-1.amazonaws.com/content/uploads/20240815111412/unnamed-1-1.jpg',
   false,
   true
 ),
@@ -438,7 +435,7 @@ INSERT INTO venues (
   'Amande et miel',
   'Amande et Miel à Casablanca est un café élégant spécialisé dans les pâtisseries à base d''amandes et de miel, offrant une expérience gourmande unique.',
   'Amande et Miel est un café élégant spécialisé dans les pâtisseries.',
-  'https://crtasablanca.s3.eu-west-1.amazonaws.com/content/uploads/20250709102231/amande-miel.jpg',
+  'https://crtasablanca.s3.eu-west-1.amazonaws.com/content/uploads/20240815111213/La-Maison-Amande-and-Miel-.jpg',
   false,
   true
 ),
@@ -450,7 +447,7 @@ INSERT INTO venues (
   'dipndip Morocco Mall',
   'Dip''n''Dip à Casablanca est un café dédié aux créations chocolatées, offrant fondues, crêpes et gaufres dans un cadre moderne et gourmand.',
   'Dip''n''Dip est un café dédié aux créations chocolatées.',
-  'https://crtasablanca.s3.eu-west-1.amazonaws.com/content/uploads/20250709102231/dipndip.jpg',
+  'https://crtasablanca.s3.eu-west-1.amazonaws.com/content/uploads/20240815110024/Capture-decran-2024-08-15-115922-1.jpg',
   false,
   true
 ),
@@ -461,7 +458,7 @@ INSERT INTO venues (
   'dipndip-Urban Square',
   'Dip''n''Dip à Casablanca est un café dédié aux créations chocolatées, offrant fondues, crêpes et gaufres dans un cadre moderne et gourmand.',
   'Dip''n''Dip est un café dédié aux créations chocolatées.',
-  'https://crtasablanca.s3.eu-west-1.amazonaws.com/content/uploads/20250709102231/dipndip.jpg',
+  'https://crtasablanca.s3.eu-west-1.amazonaws.com/content/uploads/20240815110012/Capture-decran-2024-08-15-115922.jpg',
   false,
   true
 ),
@@ -473,7 +470,7 @@ INSERT INTO venues (
   'Sforza Visconti',
   'Sforza Visconti à Casablanca propose une cuisine italienne contemporaine dans un cadre élégant, offrant une expérience gastronomique raffinée.',
   'Sforza Visconti propose une cuisine italienne contemporaine.',
-  'https://crtasablanca.s3.eu-west-1.amazonaws.com/content/uploads/20250709102231/sforza-visconti.jpg',
+  'https://crtasablanca.s3.eu-west-1.amazonaws.com/content/uploads/20240815105656/web_Sforza_Visconti-7568.jpg',
   true,
   true
 ),
@@ -485,7 +482,7 @@ INSERT INTO venues (
   'Milk + Honey',
   'Milk + Honey à Casablanca offre une sélection de boissons artisanales et de pâtisseries maison dans un cadre élégant et accueillant.',
   'Milk + Honey offre une sélection de boissons artisanales.',
-  'https://crtasablanca.s3.eu-west-1.amazonaws.com/content/uploads/20250709102231/milk-honey.jpg',
+  'https://crtasablanca.s3.eu-west-1.amazonaws.com/content/uploads/20240815104501/2021-08-19.jpg',
   false,
   true
 ),
@@ -497,7 +494,7 @@ INSERT INTO venues (
   'Le Balthazar',
   'Le Balthazar à Casablanca propose une cuisine française moderne avec des touches internationales dans un cadre élégant et confortable.',
   'Le Balthazar propose une cuisine française moderne.',
-  'https://crtasablanca.s3.eu-west-1.amazonaws.com/content/uploads/20250709102231/le-balthazar.jpg',
+  'https://crtasablanca.s3.eu-west-1.amazonaws.com/content/uploads/20240815104159/balthazar-casablanca.jpg',
   true,
   true
 ),
@@ -509,7 +506,7 @@ INSERT INTO venues (
   'Dupond-Bd de Ghandi',
   'Le Café Dupond à Casablanca propose une expérience gourmande avec ses gaufres, crêpes, pancakes, et glaces artisanales, dans un cadre chaleureux.',
   'Le Café Dupond propose une expérience gourmande avec ses gaufres et crêpes.',
-  'https://crtasablanca.s3.eu-west-1.amazonaws.com/content/uploads/20250709102231/dupond.jpg',
+  'https://crtasablanca.s3.eu-west-1.amazonaws.com/content/uploads/20250709093156/Dupond-10920.jpg',
   false,
   true
 ),
@@ -520,7 +517,7 @@ INSERT INTO venues (
   'Dupond-Marina Mall',
   'Le Café Dupond à Casablanca propose une expérience gourmande avec ses gaufres, crêpes, pancakes, et glaces artisanales, dans un cadre chaleureux.',
   'Le Café Dupond propose une expérience gourmande avec ses gaufres et crêpes.',
-  'https://crtasablanca.s3.eu-west-1.amazonaws.com/content/uploads/20250709102231/dupond.jpg',
+  'https://crtasablanca.s3.eu-west-1.amazonaws.com/content/uploads/20250709093156/Dupond-10920.jpg',
   false,
   true
 ),
@@ -531,7 +528,7 @@ INSERT INTO venues (
   'Dupond-Morocco Mall',
   'Le Café Dupond à Casablanca propose une expérience gourmande avec ses gaufres, crêpes, pancakes, et glaces artisanales, dans un cadre chaleureux.',
   'Le Café Dupond propose une expérience gourmande avec ses gaufres et crêpes.',
-  'https://crtasablanca.s3.eu-west-1.amazonaws.com/content/uploads/20250709102231/dupond.jpg',
+  'https://crtasablanca.s3.eu-west-1.amazonaws.com/content/uploads/20250709093156/Dupond-10920.jpg',
   false,
   true
 )
@@ -546,4 +543,3 @@ ON CONFLICT (slug) DO UPDATE SET
 
 -- Verify insertion
 SELECT COUNT(*) as total_restaurants FROM venues WHERE category = 'restaurants';
-

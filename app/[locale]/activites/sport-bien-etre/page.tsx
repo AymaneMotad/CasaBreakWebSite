@@ -28,9 +28,8 @@ export default function SportBienEtrePage() {
         const { data, error } = await supabase
           .from('activities')
           .select('*')
+          .eq('category', 'sport-bien-etre')
           .eq('is_published', true)
-          // Filter by slug pattern or add a tag/category field
-          // This is a placeholder - adjust based on your data structure
           .order('is_featured', { ascending: false })
 
         if (error) {

@@ -64,7 +64,7 @@ export function Navigation() {
         { label: t("mustSee"), href: `/${currentLocale}/activites/incontournables` },
         { label: t("outdoorSea"), href: `/${currentLocale}/activites/plein-air-mer` },
         { label: t("familyKids"), href: `/${currentLocale}/activites/famille-enfants` },
-        { label: t("sportWellness"), href: `/${currentLocale}/activites/shopping` },
+        { label: t("sportWellness"), href: `/${currentLocale}/activites/sport-bien-etre` },
       ],
     },
     {
@@ -74,7 +74,7 @@ export function Navigation() {
       submenu: [
         { label: t("cafesRestaurants"), href: `/${currentLocale}/manger-sortir/restaurants` },
         { label: t("barsNightlife"), href: `/${currentLocale}/manger-sortir/bars-nightlife` },
-        { label: t("shoppingMalls"), href: `/${currentLocale}/manger-sortir/centres-commerciaux` },
+        { label: t("shopping"), href: `/${currentLocale}/activites/shopping` },
         { label: t("souksCrafts"), href: `/${currentLocale}/manger-sortir/souks-artisanat` },
       ],
     },
