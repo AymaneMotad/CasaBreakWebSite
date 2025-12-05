@@ -6,45 +6,49 @@ import { Navigation } from "@/components/navigation"
 import { Footer } from "@/components/footer"
 import { Breadcrumb } from "@/components/breadcrumb"
 import { createClient } from "@/utils/supabase/client"
-import type { Venue } from "@/lib/database.types"
-import { Wine } from "lucide-react"
+import type { Activity } from "@/lib/database.types"
+import { Dumbbell } from "lucide-react"
 import Link from "next/link"
 import { useTranslations } from 'next-intl'
 
-export default function BarsNightlifePage() {
+export default function SportBienEtrePage() {
   const params = useParams()
   const locale = params.locale as string
   const t = useTranslations('navigation')
-  const [venues, setVenues] = useState<Venue[]>([])
+  const [activities, setActivities] = useState<Activity[]>([])
   const [loading, setLoading] = useState(true)
   const [error, setError] = useState<string | null>(null)
 
   useEffect(() => {
-    async function fetchVenues() {
+    async function fetchActivities() {
       try {
         const supabase = createClient()
+        // Note: You may need to add 'sport-bien-etre' to activity_category enum
+        // For now, using a filter that might work with existing data
         const { data, error } = await supabase
-          .from('venues')
+          .from('activities')
           .select('*')
-          .eq('category', 'bars-nightlife')
           .eq('is_published', true)
+          // Filter by slug pattern or add a tag/category field
+          // This is a placeholder - adjust based on your data structure
           .order('is_featured', { ascending: false })
 
         if (error) {
           console.error('Supabase error:', error)
-          throw new Error(error.message || 'Failed to load venues')
+          throw new Error(error.message || 'Failed to load activities')
         }
         
-        setVenues(data || [])
+        // Filter client-side if needed until schema is updated
+        setActivities(data || [])
       } catch (err) {
         console.error('Fetch error:', err)
-        setError(err instanceof Error ? err.message : 'Failed to load venues')
+        setError(err instanceof Error ? err.message : 'Failed to load activities')
       } finally {
         setLoading(false)
       }
     }
 
-    fetchVenues()
+    fetchActivities()
   }, [])
 
   return (
@@ -56,26 +60,28 @@ export default function BarsNightlifePage() {
         <div className="max-w-7xl mx-auto px-6 lg:px-12">
           <Breadcrumb 
             items={[
-              { label: t("foodFun"), href: `/${locale}/manger-sortir/bars-nightlife` },
-              { label: t("barsNightlife"), href: `/${locale}/manger-sortir/bars-nightlife` }
+              { label: t("activities"), href: `/${locale}/activites/sport-bien-etre` },
+              { label: t("sportWellness"), href: `/${locale}/activites/sport-bien-etre` }
             ]}
           />
         </div>
       </div>
 
+      {/* Hero */}
       <div className="pb-12 bg-gradient-to-b from-gray-50 to-white">
         <div className="max-w-7xl mx-auto px-6 lg:px-12">
-          <h1 className="text-5xl font-bold text-gray-900 mb-4">Bars, Lounges & Nightlife</h1>
+          <h1 className="text-5xl font-bold text-gray-900 mb-4">Sport & Bien-être</h1>
           <p className="text-xl text-gray-600 max-w-2xl">
-            Découvrez la vie nocturne de Casablanca
+            Découvrez les activités sportives et de bien-être à Casablanca
           </p>
         </div>
       </div>
 
+      {/* Content */}
       <div className="max-w-7xl mx-auto px-6 lg:px-12 pb-20">
         {loading ? (
           <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-8">
-            {[1, 2, 3].map((i) => (
+            {[1, 2, 3, 4, 5, 6].map((i) => (
               <div key={i} className="animate-pulse">
                 <div className="bg-gray-200 h-64 rounded-2xl mb-4" />
                 <div className="bg-gray-200 h-6 rounded w-3/4 mb-2" />
@@ -86,23 +92,26 @@ export default function BarsNightlifePage() {
         ) : error ? (
           <div className="text-center py-20">
             <p className="text-red-500 mb-4">Erreur: {error}</p>
+            <p className="text-gray-500">Vérifiez que la base de données est configurée.</p>
           </div>
-        ) : venues.length === 0 ? (
+        ) : activities.length === 0 ? (
           <div className="text-center py-20">
-            <p className="text-gray-500 text-lg">Aucun bar trouvé.</p>
+            <p className="text-gray-500 text-lg">Aucune activité trouvée.</p>
+            <p className="text-gray-400 mt-2">Utilisez le script de scraping pour ajouter des activités.</p>
           </div>
         ) : (
           <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-8">
-            {venues.map((venue) => (
+            {activities.map((activity) => (
               <article 
-                key={venue.id}
+                key={activity.id}
                 className="group bg-white rounded-2xl overflow-hidden shadow-lg hover:shadow-2xl transition-all duration-300 border border-gray-100"
               >
+                {/* Image */}
                 <div className="relative h-64 overflow-hidden">
-                  {venue.main_image ? (
+                  {activity.main_image ? (
                     <img
-                      src={venue.main_image}
-                      alt={venue.name_fr}
+                      src={activity.main_image}
+                      alt={activity.name_fr}
                       className="w-full h-full object-cover group-hover:scale-110 transition-transform duration-500"
                       onError={(e) => {
                         e.currentTarget.style.display = 'none'
@@ -110,25 +119,26 @@ export default function BarsNightlifePage() {
                       }}
                     />
                   ) : null}
-                  <div className={`w-full h-full bg-gradient-to-br from-purple-100 to-pink-100 flex items-center justify-center ${venue.main_image ? 'hidden absolute inset-0' : ''}`}>
-                    <Wine className="w-16 h-16 text-gray-400" />
+                  <div className={`w-full h-full bg-gradient-to-br from-green-100 to-blue-100 flex items-center justify-center ${activity.main_image ? 'hidden absolute inset-0' : ''}`}>
+                    <Dumbbell className="w-16 h-16 text-gray-400" />
                   </div>
                 </div>
 
+                {/* Content */}
                 <div className="p-6">
                   <h2 className="text-xl font-bold text-gray-900 mb-3 group-hover:text-teal-600 transition-colors">
-                    {venue.name_fr}
+                    {activity.name_fr}
                   </h2>
                   
-                  {(venue.description_fr || venue.short_description_fr) && (
+                  {(activity.description_fr || activity.short_description_fr) && (
                     <p className="text-gray-600 text-sm mb-4 line-clamp-3">
-                      {venue.description_fr || venue.short_description_fr}
+                      {activity.description_fr || activity.short_description_fr}
                     </p>
                   )}
 
                   {/* Read More Button */}
                   <Link
-                    href={`/${locale}/manger-sortir/bars-nightlife/${venue.slug}`}
+                    href={`/${locale}/activites/sport-bien-etre/${activity.slug}`}
                     className="inline-flex items-center text-teal-600 hover:text-teal-700 font-medium text-sm transition-colors"
                   >
                     Lire la suite
@@ -147,3 +157,4 @@ export default function BarsNightlifePage() {
     </main>
   )
 }
+

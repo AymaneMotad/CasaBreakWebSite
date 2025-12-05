@@ -1,14 +1,20 @@
 "use client"
 
 import { useEffect, useState } from "react"
-import Image from "next/image"
+import { useParams } from "next/navigation"
 import { Navigation } from "@/components/navigation"
 import { Footer } from "@/components/footer"
+import { Breadcrumb } from "@/components/breadcrumb"
 import { createClient } from "@/utils/supabase/client"
 import type { Venue } from "@/lib/database.types"
-import { MapPin, Phone, Globe, Star } from "lucide-react"
+import { Utensils } from "lucide-react"
+import Link from "next/link"
+import { useTranslations } from 'next-intl'
 
 export default function RestaurantsPage() {
+  const params = useParams()
+  const locale = params.locale as string
+  const t = useTranslations('navigation')
   const [restaurants, setRestaurants] = useState<Venue[]>([])
   const [loading, setLoading] = useState(true)
   const [error, setError] = useState<string | null>(null)
@@ -46,8 +52,20 @@ export default function RestaurantsPage() {
     <main className="min-h-screen bg-white">
       <Navigation />
       
+      {/* Breadcrumb */}
+      <div className="pt-32 pb-8 bg-white">
+        <div className="max-w-7xl mx-auto px-6 lg:px-12">
+          <Breadcrumb 
+            items={[
+              { label: t("foodFun"), href: `/${locale}/manger-sortir/restaurants` },
+              { label: t("restaurants"), href: `/${locale}/manger-sortir/restaurants` }
+            ]}
+          />
+        </div>
+      </div>
+
       {/* Hero */}
-      <div className="pt-32 pb-12 bg-gradient-to-b from-gray-50 to-white">
+      <div className="pb-12 bg-gradient-to-b from-gray-50 to-white">
         <div className="max-w-7xl mx-auto px-6 lg:px-12">
           <h1 className="text-5xl font-bold text-gray-900 mb-4">Restaurants</h1>
           <p className="text-xl text-gray-600 max-w-2xl">
@@ -88,80 +106,43 @@ export default function RestaurantsPage() {
                 {/* Image */}
                 <div className="relative h-64 overflow-hidden">
                   {restaurant.main_image ? (
-                    <Image
+                    <img
                       src={restaurant.main_image}
                       alt={restaurant.name_fr}
-                      fill
-                      className="object-cover group-hover:scale-110 transition-transform duration-500"
+                      className="w-full h-full object-cover group-hover:scale-110 transition-transform duration-500"
+                      onError={(e) => {
+                        e.currentTarget.style.display = 'none'
+                        e.currentTarget.nextElementSibling?.classList.remove('hidden')
+                      }}
                     />
-                  ) : (
-                    <div className="w-full h-full bg-gradient-to-br from-orange-100 to-red-100 flex items-center justify-center">
-                      <span className="text-6xl">🍽️</span>
-                    </div>
-                  )}
-                  
-                  {/* Featured badge */}
-                  {restaurant.is_featured && (
-                    <div className="absolute top-4 left-4 bg-amber-500 text-white px-3 py-1 rounded-full text-sm font-medium">
-                      ⭐ Recommandé
-                    </div>
-                  )}
-                  
-                  {/* Price range */}
-                  {restaurant.price_range && (
-                    <div className="absolute top-4 right-4 bg-white/90 backdrop-blur px-3 py-1 rounded-full text-sm font-medium text-gray-700">
-                      {restaurant.price_range}
-                    </div>
-                  )}
+                  ) : null}
+                  <div className={`w-full h-full bg-gradient-to-br from-orange-100 to-red-100 flex items-center justify-center ${restaurant.main_image ? 'hidden absolute inset-0' : ''}`}>
+                    <Utensils className="w-16 h-16 text-gray-400" />
+                  </div>
                 </div>
 
                 {/* Content */}
                 <div className="p-6">
-                  <h2 className="text-xl font-bold text-gray-900 mb-2 group-hover:text-green-600 transition-colors">
+                  <h2 className="text-xl font-bold text-gray-900 mb-3 group-hover:text-teal-600 transition-colors">
                     {restaurant.name_fr}
                   </h2>
                   
-                  {restaurant.short_description_fr && (
-                    <p className="text-gray-600 text-sm mb-4 line-clamp-2">
-                      {restaurant.short_description_fr}
+                  {(restaurant.description_fr || restaurant.short_description_fr) && (
+                    <p className="text-gray-600 text-sm mb-4 line-clamp-3">
+                      {restaurant.description_fr || restaurant.short_description_fr}
                     </p>
                   )}
 
-                  {/* Cuisine types */}
-                  {restaurant.cuisine_types && restaurant.cuisine_types.length > 0 && (
-                    <div className="flex flex-wrap gap-2 mb-4">
-                      {restaurant.cuisine_types.map((cuisine) => (
-                        <span 
-                          key={cuisine}
-                          className="bg-gray-100 text-gray-600 px-2 py-1 rounded text-xs"
-                        >
-                          {cuisine}
-                        </span>
-                      ))}
-                    </div>
-                  )}
-
-                  {/* Rating */}
-                  {restaurant.average_rating > 0 && (
-                    <div className="flex items-center gap-1 text-amber-500 mb-4">
-                      <Star className="w-4 h-4 fill-current" />
-                      <span className="font-medium">{restaurant.average_rating}</span>
-                      <span className="text-gray-400 text-sm">({restaurant.review_count} avis)</span>
-                    </div>
-                  )}
-
-                  {/* Features */}
-                  <div className="flex flex-wrap gap-3 text-xs text-gray-500">
-                    {restaurant.is_halal && (
-                      <span className="flex items-center gap-1">✓ Halal</span>
-                    )}
-                    {restaurant.has_terrace && (
-                      <span className="flex items-center gap-1">✓ Terrasse</span>
-                    )}
-                    {restaurant.has_vegetarian_options && (
-                      <span className="flex items-center gap-1">✓ Végétarien</span>
-                    )}
-                  </div>
+                  {/* Read More Button */}
+                  <Link
+                    href={`/${locale}/manger-sortir/restaurants/${restaurant.slug}`}
+                    className="inline-flex items-center text-teal-600 hover:text-teal-700 font-medium text-sm transition-colors"
+                  >
+                    Lire la suite
+                    <svg className="w-4 h-4 ml-1" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                      <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M9 5l7 7-7 7" />
+                    </svg>
+                  </Link>
                 </div>
               </article>
             ))}

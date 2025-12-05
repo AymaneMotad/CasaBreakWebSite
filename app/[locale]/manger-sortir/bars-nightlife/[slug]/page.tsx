@@ -6,42 +6,43 @@ import { Navigation } from "@/components/navigation"
 import { Footer } from "@/components/footer"
 import { Breadcrumb } from "@/components/breadcrumb"
 import { createClient } from "@/utils/supabase/client"
-import type { Accommodation } from "@/lib/database.types"
-import { Star, Phone, Mail, Globe, Hotel, ArrowLeft, ExternalLink } from "lucide-react"
+import type { Venue } from "@/lib/database.types"
+import { Phone, Mail, Globe, Wine, ArrowLeft, ExternalLink } from "lucide-react"
 import Link from "next/link"
 import { useTranslations } from 'next-intl'
 
-export default function AccommodationDetailPage() {
+export default function BarDetailPage() {
   const params = useParams()
   const slug = params.slug as string
   const locale = params.locale as string
   const t = useTranslations('navigation')
   
-  const [accommodation, setAccommodation] = useState<Accommodation | null>(null)
+  const [venue, setVenue] = useState<Venue | null>(null)
   const [loading, setLoading] = useState(true)
   const [error, setError] = useState<string | null>(null)
 
   useEffect(() => {
-    async function fetchAccommodation() {
+    async function fetchVenue() {
       try {
         const supabase = createClient()
         const { data, error } = await supabase
-          .from('accommodations')
+          .from('venues')
           .select('*')
           .eq('slug', slug)
+          .eq('category', 'bars-nightlife')
           .eq('is_published', true)
           .single()
 
         if (error) {
           console.error('Supabase error:', error)
-          throw new Error(error.message || 'Hébergement non trouvé')
+          throw new Error(error.message || 'Bar non trouvé')
         }
         
         if (!data) {
-          throw new Error('Hébergement non trouvé')
+          throw new Error('Bar non trouvé')
         }
         
-        setAccommodation(data)
+        setVenue(data)
       } catch (err) {
         console.error('Fetch error:', err)
         setError(err instanceof Error ? err.message : 'Erreur lors du chargement')
@@ -51,21 +52,9 @@ export default function AccommodationDetailPage() {
     }
 
     if (slug) {
-      fetchAccommodation()
+      fetchVenue()
     }
   }, [slug])
-
-  const getTypeLabel = (type: string) => {
-    const labels: Record<string, string> = {
-      'hotel': 'Hôtel',
-      'apartment': 'Résidence',
-      'guesthouse': 'Maison d\'hôte',
-      'hostel': 'Auberge',
-      'riad': 'Riad',
-      'villa': 'Villa'
-    }
-    return labels[type] || type
-  }
 
   if (loading) {
     return (
@@ -86,16 +75,16 @@ export default function AccommodationDetailPage() {
     )
   }
 
-  if (error || !accommodation) {
+  if (error || !venue) {
     return (
       <main className="min-h-screen bg-white">
         <Navigation />
         <div className="pt-32 pb-20">
           <div className="max-w-4xl mx-auto px-6 lg:px-12">
             <div className="text-center py-20">
-              <p className="text-red-500 mb-4 text-lg">Erreur: {error || 'Hébergement non trouvé'}</p>
+              <p className="text-red-500 mb-4 text-lg">Erreur: {error || 'Bar non trouvé'}</p>
               <Link
-                href={`/${locale}/planifier/hebergement`}
+                href={`/${locale}/manger-sortir/bars-nightlife`}
                 className="inline-flex items-center text-teal-600 hover:text-teal-700 font-medium"
               >
                 <ArrowLeft className="w-4 h-4 mr-2" />
@@ -118,9 +107,9 @@ export default function AccommodationDetailPage() {
         <div className="max-w-4xl mx-auto px-6 lg:px-12">
           <Breadcrumb 
             items={[
-              { label: t("planStay"), href: `/${locale}/planifier/hebergement` },
-              { label: t("accommodation"), href: `/${locale}/planifier/hebergement` },
-              { label: accommodation.name_fr, href: `/${locale}/planifier/hebergement/${slug}` }
+              { label: t("foodFun"), href: `/${locale}/manger-sortir/bars-nightlife` },
+              { label: t("barsNightlife"), href: `/${locale}/manger-sortir/bars-nightlife` },
+              { label: venue.name_fr, href: `/${locale}/manger-sortir/bars-nightlife/${slug}` }
             ]}
           />
         </div>
@@ -128,10 +117,10 @@ export default function AccommodationDetailPage() {
 
       {/* Hero Image */}
       <div className="relative h-96 w-full mb-8">
-        {accommodation.main_image ? (
+        {venue.main_image ? (
           <img
-            src={accommodation.main_image}
-            alt={accommodation.name_fr}
+            src={venue.main_image}
+            alt={venue.name_fr}
             className="w-full h-full object-cover"
             onError={(e) => {
               e.currentTarget.style.display = 'none'
@@ -139,60 +128,26 @@ export default function AccommodationDetailPage() {
             }}
           />
         ) : null}
-        <div className={`w-full h-full bg-gradient-to-br from-blue-100 to-teal-100 flex items-center justify-center ${accommodation.main_image ? 'hidden' : ''}`}>
-          <Hotel className="w-24 h-24 text-gray-400" />
-        </div>
-        
-        {/* Featured badge */}
-        {accommodation.is_featured && (
-          <div className="absolute top-6 left-6 bg-amber-500 text-white px-4 py-2 rounded-full text-sm font-medium flex items-center gap-2">
-            <Star className="w-4 h-4 fill-current" />
-            Recommandé
-          </div>
-        )}
-        
-        {/* Type badge */}
-        <div className="absolute top-6 right-6 bg-white/90 backdrop-blur px-4 py-2 rounded-full text-sm font-medium text-gray-700">
-          {getTypeLabel(accommodation.type)}
+        <div className={`w-full h-full bg-gradient-to-br from-purple-100 to-pink-100 flex items-center justify-center ${venue.main_image ? 'hidden' : ''}`}>
+          <Wine className="w-24 h-24 text-gray-400" />
         </div>
       </div>
 
       {/* Content */}
       <div className="max-w-4xl mx-auto px-6 lg:px-12 pb-20">
-        {/* Title and Rating */}
+        {/* Title */}
         <div className="mb-6">
           <h1 className="text-4xl font-bold text-gray-900 mb-4">
-            {accommodation.name_fr}
+            {venue.name_fr}
           </h1>
-          
-          {accommodation.star_rating && (
-            <div className="flex items-center gap-2 mb-4">
-              <div className="flex items-center gap-1">
-                {[...Array(accommodation.star_rating)].map((_, i) => (
-                  <Star key={i} className="w-5 h-5 fill-amber-400 text-amber-400" />
-                ))}
-              </div>
-              <span className="text-gray-600">{accommodation.star_rating} étoiles</span>
-            </div>
-          )}
-
-          {accommodation.average_rating > 0 && (
-            <div className="flex items-center gap-2 text-amber-500">
-              <Star className="w-5 h-5 fill-current" />
-              <span className="font-medium text-lg">{accommodation.average_rating}</span>
-              {accommodation.review_count > 0 && (
-                <span className="text-gray-400">({accommodation.review_count} avis)</span>
-              )}
-            </div>
-          )}
         </div>
 
         {/* Description */}
-        {accommodation.description_fr && (
+        {(venue.description_fr || venue.short_description_fr) && (
           <div className="mb-8">
             <h2 className="text-2xl font-semibold text-gray-900 mb-4">Description</h2>
             <p className="text-gray-700 leading-relaxed text-lg">
-              {accommodation.description_fr}
+              {venue.description_fr || venue.short_description_fr}
             </p>
           </div>
         )}
@@ -202,43 +157,43 @@ export default function AccommodationDetailPage() {
           <h2 className="text-2xl font-semibold text-gray-900 mb-6">Informations de contact</h2>
           
           <div className="grid md:grid-cols-2 gap-6">
-            {accommodation.phone && (
+            {venue.phone && (
               <div className="flex items-start gap-3">
                 <Phone className="w-5 h-5 text-teal-600 mt-1 flex-shrink-0" />
                 <div>
                   <p className="text-sm text-gray-500 mb-1">Téléphone</p>
                   <a 
-                    href={`tel:${accommodation.phone.replace(/\s/g, '')}`}
+                    href={`tel:${venue.phone.replace(/\s/g, '')}`}
                     className="text-gray-900 font-medium hover:text-teal-600 transition-colors"
                   >
-                    {accommodation.phone}
+                    {venue.phone}
                   </a>
                 </div>
               </div>
             )}
 
-            {accommodation.email && (
+            {venue.email && (
               <div className="flex items-start gap-3">
                 <Mail className="w-5 h-5 text-teal-600 mt-1 flex-shrink-0" />
                 <div>
                   <p className="text-sm text-gray-500 mb-1">Email</p>
                   <a 
-                    href={`mailto:${accommodation.email}`}
+                    href={`mailto:${venue.email}`}
                     className="text-gray-900 font-medium hover:text-teal-600 transition-colors break-all"
                   >
-                    {accommodation.email}
+                    {venue.email}
                   </a>
                 </div>
               </div>
             )}
 
-            {accommodation.website && (
+            {venue.website && (
               <div className="flex items-start gap-3 md:col-span-2">
                 <Globe className="w-5 h-5 text-teal-600 mt-1 flex-shrink-0" />
                 <div>
                   <p className="text-sm text-gray-500 mb-1">Site web</p>
                   <a 
-                    href={accommodation.website}
+                    href={venue.website}
                     target="_blank"
                     rel="noopener noreferrer"
                     className="inline-flex items-center gap-2 text-teal-600 hover:text-teal-700 font-medium transition-colors"
@@ -251,14 +206,6 @@ export default function AccommodationDetailPage() {
             )}
           </div>
         </div>
-
-        {/* Additional Info */}
-        {accommodation.type && (
-          <div>
-            <p className="text-sm text-gray-500 mb-1">Type d'hébergement</p>
-            <p className="text-gray-900 font-medium">{getTypeLabel(accommodation.type)}</p>
-          </div>
-        )}
       </div>
 
       <Footer />

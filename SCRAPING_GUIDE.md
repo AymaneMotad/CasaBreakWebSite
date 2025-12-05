@@ -510,10 +510,109 @@ ON CONFLICT (slug) DO UPDATE SET ...
 
 ---
 
+## Scraping Other Content Types
+
+### Restaurants & Cafés
+
+**Source URL**: `https://visitcasablanca.ma/pois/?cities%5B%5D=89&thematiques%5B%5D=83`
+
+**Database Table**: `venues`  
+**Category**: `restaurants`
+
+**Fields to Extract**:
+- Name (French)
+- Description
+- Cuisine types (array)
+- Price range
+- Phone, email, website
+- Image URL (from network requests)
+- Features: is_halal, has_terrace, has_vegetarian_options, etc.
+
+**SQL Template**:
+```sql
+INSERT INTO venues (
+  slug,
+  category,
+  name_fr,
+  description_fr,
+  cuisine_types,
+  price_range,
+  phone,
+  email,
+  website,
+  main_image,
+  is_featured,
+  is_published
+) VALUES (...);
+```
+
+### Bars & Nightlife
+
+**Source URL**: `https://visitcasablanca.ma/pois/?cities%5B%5D=89&experiences%5B%5D=21`
+
+**Database Table**: `venues`  
+**Category**: `bars-nightlife`
+
+Same structure as restaurants, but category = 'bars-nightlife'
+
+### Shopping
+
+**Source URL**: `https://visitcasablanca.ma/pois/?cities%5B%5D=89&experiences%5B%5D=20`
+
+**Database Table**: `activities`  
+**Category**: `shopping`
+
+**Fields to Extract**:
+- Name (French)
+- Description
+- Duration (if applicable)
+- Price range
+- Phone, email, website
+- Image URL
+- Schedule (opening hours)
+
+**SQL Template**:
+```sql
+INSERT INTO activities (
+  slug,
+  category,
+  name_fr,
+  description_fr,
+  price_range,
+  phone,
+  email,
+  website,
+  main_image,
+  is_featured,
+  is_published
+) VALUES (...);
+```
+
+### Sport & Bien-être
+
+**Source URL**: `https://visitcasablanca.ma/pois/?cities%5B%5D=89&experiences%5B%5D=48`
+
+**Database Table**: `activities`  
+**Category**: `sport-bien-etre` (may need to add to enum)
+
+**Note**: You may need to update the `activity_category` enum to include 'sport-bien-etre':
+
+```sql
+ALTER TYPE activity_category ADD VALUE IF NOT EXISTS 'sport-bien-etre';
+```
+
+Same structure as shopping activities.
+
+---
+
 ## References
 
 - [Supabase SQL Editor](https://supabase.com/dashboard/project/_/sql)
-- [Source Website](https://visitcasablanca.ma/hebergements/?cities%5B%5D=89)
+- [Source Website - Accommodations](https://visitcasablanca.ma/hebergements/?cities%5B%5D=89)
+- [Source Website - Restaurants](https://visitcasablanca.ma/pois/?cities%5B%5D=89&thematiques%5B%5D=83)
+- [Source Website - Bars](https://visitcasablanca.ma/pois/?cities%5B%5D=89&experiences%5B%5D=21)
+- [Source Website - Shopping](https://visitcasablanca.ma/pois/?cities%5B%5D=89&experiences%5B%5D=20)
+- [Source Website - Sport](https://visitcasablanca.ma/pois/?cities%5B%5D=89&experiences%5B%5D=48)
 - [S3 Image Bucket](https://crtasablanca.s3.eu-west-1.amazonaws.com)
 
 ---
