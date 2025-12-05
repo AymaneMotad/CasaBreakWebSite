@@ -47,7 +47,10 @@
     "gettingAround": "Se déplacer",
     "airportToCity": "Aéroport → centre-ville",
     "practicalInfo": "Infos pratiques & conseils",
-    "tickets": "Billetterie"
+    "tickets": "Billetterie",
+    "links": {
+      "tickets": "Billetterie"
+    }
   },
   "home": {
     "hero": {

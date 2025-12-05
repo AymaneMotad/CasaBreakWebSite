@@ -47,7 +47,10 @@
     "gettingAround": "Getting around",
     "airportToCity": "Airport → city center",
     "practicalInfo": "Practical info & tips",
-    "tickets": "Tickets"
+    "tickets": "Tickets",
+    "links": {
+      "tickets": "Tickets"
+    }
   },
   "home": {
     "hero": {

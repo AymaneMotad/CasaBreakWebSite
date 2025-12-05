@@ -47,7 +47,10 @@
     "gettingAround": "التنقل",
     "airportToCity": "المطار → وسط المدينة",
     "practicalInfo": "معلومات عملية ونصائح",
-    "tickets": "التذاكر"
+    "tickets": "التذاكر",
+    "links": {
+      "tickets": "التذاكر"
+    }
   },
   "home": {
     "hero": {
