@@ -12,69 +12,69 @@ export default function HomePage() {
   const locale = useLocale()
   
   return (
-    <main className="min-h-screen bg-[#0a0a0a]">
+    <main className="min-h-screen bg-gradient-to-br from-slate-50 via-blue-50/30 to-emerald-50/40">
       <Navigation />
       <HeroSection />
       
-      {/* DISCOVER CASABLANCA Section - DARK */}
+      {/* DISCOVER CASABLANCA Section - LIGHT GRADIENT */}
       <section id="decouvrir" className="py-24 lg:py-32 relative overflow-hidden">
-        <div className="absolute inset-0 bg-gradient-to-b from-[#0a0a0a] via-[#0f0f0f] to-[#0a0a0a]" />
-        <div className="absolute top-0 left-1/4 w-[500px] h-[500px] bg-[#00a346]/5 rounded-full blur-[100px]" />
+        <div className="absolute inset-0 bg-gradient-to-br from-emerald-50/60 via-blue-50/40 to-rose-50/50" />
+        <div className="absolute top-0 left-1/4 w-[500px] h-[500px] bg-[#00a346]/10 rounded-full blur-[100px]" />
         
         <div className="max-w-7xl mx-auto px-6 lg:px-12 relative z-10">
           <div className="text-center mb-16">
-            <div className="inline-flex items-center gap-2 px-4 py-2 rounded-full bg-white/5 border border-white/10 mb-6">
+            <div className="inline-flex items-center gap-2 px-4 py-2 rounded-full bg-white/80 backdrop-blur-sm border border-emerald-200/50 mb-6 shadow-sm">
               <Compass className="w-4 h-4 text-[#00a346]" />
-              <span className="text-sm text-white/70">Découvrir Casablanca</span>
+              <span className="text-sm text-gray-700 font-medium">Découvrir Casablanca</span>
             </div>
-            <h2 className="text-4xl lg:text-5xl font-bold text-white mb-6">
+            <h2 className="text-4xl lg:text-5xl font-bold text-gray-900 mb-6">
               Explorez la <span className="text-gradient-can">ville blanche</span>
             </h2>
-            <p className="text-lg text-white/50 max-w-2xl mx-auto">
+            <p className="text-lg text-gray-600 max-w-2xl mx-auto">
               Des monuments historiques aux quartiers branchés, découvrez tous les trésors de Casablanca
             </p>
           </div>
           
           <div className="grid md:grid-cols-2 lg:grid-cols-4 gap-6">
-            <Link href={`/${locale}/decouvrir/monuments`} className="group relative overflow-hidden rounded-3xl bg-gradient-to-br from-white/[0.08] to-white/[0.02] border border-white/10 p-6 hover:border-[#00a346]/30 transition-all duration-500">
-              <div className="w-12 h-12 rounded-xl bg-[#00a346]/20 flex items-center justify-center mb-4 group-hover:scale-110 transition-transform">
+            <Link href={`/${locale}/decouvrir/monuments`} className="group relative overflow-hidden rounded-3xl bg-white/80 backdrop-blur-sm border border-gray-200/50 p-6 hover:border-[#00a346]/50 hover:shadow-lg transition-all duration-500">
+              <div className="w-12 h-12 rounded-xl bg-[#00a346]/10 flex items-center justify-center mb-4 group-hover:scale-110 transition-transform">
                 <Building className="w-6 h-6 text-[#00a346]" />
               </div>
-              <h3 className="text-xl font-bold text-white mb-2">Monuments</h3>
-              <p className="text-white/50 text-sm mb-4">Mosquée Hassan II, Art Déco, lieux emblématiques</p>
+              <h3 className="text-xl font-bold text-gray-900 mb-2">Monuments</h3>
+              <p className="text-gray-600 text-sm mb-4">Mosquée Hassan II, Art Déco, lieux emblématiques</p>
               <span className="text-[#00a346] text-sm font-medium flex items-center gap-1 group-hover:gap-2 transition-all">
                 Explorer <ArrowRight className="w-4 h-4" />
               </span>
             </Link>
             
-            <Link href={`/${locale}/decouvrir/quartiers`} className="group relative overflow-hidden rounded-3xl bg-gradient-to-br from-white/[0.08] to-white/[0.02] border border-white/10 p-6 hover:border-[#0066b2]/30 transition-all duration-500">
-              <div className="w-12 h-12 rounded-xl bg-[#0066b2]/20 flex items-center justify-center mb-4 group-hover:scale-110 transition-transform">
+            <Link href={`/${locale}/decouvrir/quartiers`} className="group relative overflow-hidden rounded-3xl bg-white/80 backdrop-blur-sm border border-gray-200/50 p-6 hover:border-[#0066b2]/50 hover:shadow-lg transition-all duration-500">
+              <div className="w-12 h-12 rounded-xl bg-[#0066b2]/10 flex items-center justify-center mb-4 group-hover:scale-110 transition-transform">
                 <MapPin className="w-6 h-6 text-[#0066b2]" />
               </div>
-              <h3 className="text-xl font-bold text-white mb-2">Quartiers</h3>
-              <p className="text-white/50 text-sm mb-4">Habous, Maarif, Gauthier, Anfa et plus</p>
+              <h3 className="text-xl font-bold text-gray-900 mb-2">Quartiers</h3>
+              <p className="text-gray-600 text-sm mb-4">Habous, Maarif, Gauthier, Anfa et plus</p>
               <span className="text-[#0066b2] text-sm font-medium flex items-center gap-1 group-hover:gap-2 transition-all">
                 Explorer <ArrowRight className="w-4 h-4" />
               </span>
             </Link>
             
-            <Link href={`/${locale}/decouvrir/mer-plages`} className="group relative overflow-hidden rounded-3xl bg-gradient-to-br from-white/[0.08] to-white/[0.02] border border-white/10 p-6 hover:border-[#c10000]/30 transition-all duration-500">
-              <div className="w-12 h-12 rounded-xl bg-[#c10000]/20 flex items-center justify-center mb-4 group-hover:scale-110 transition-transform">
+            <Link href={`/${locale}/decouvrir/mer-plages`} className="group relative overflow-hidden rounded-3xl bg-white/80 backdrop-blur-sm border border-gray-200/50 p-6 hover:border-[#c10000]/50 hover:shadow-lg transition-all duration-500">
+              <div className="w-12 h-12 rounded-xl bg-[#c10000]/10 flex items-center justify-center mb-4 group-hover:scale-110 transition-transform">
                 <Waves className="w-6 h-6 text-[#c10000]" />
               </div>
-              <h3 className="text-xl font-bold text-white mb-2">Mer & Plages</h3>
-              <p className="text-white/50 text-sm mb-4">Corniche, Ain Diab, plages et spots surf</p>
+              <h3 className="text-xl font-bold text-gray-900 mb-2">Mer & Plages</h3>
+              <p className="text-gray-600 text-sm mb-4">Corniche, Ain Diab, plages et spots surf</p>
               <span className="text-[#c10000] text-sm font-medium flex items-center gap-1 group-hover:gap-2 transition-all">
                 Explorer <ArrowRight className="w-4 h-4" />
               </span>
             </Link>
             
-            <Link href={`/${locale}/decouvrir/itineraires`} className="group relative overflow-hidden rounded-3xl bg-gradient-to-br from-white/[0.08] to-white/[0.02] border border-white/10 p-6 hover:border-[#00a346]/30 transition-all duration-500">
-              <div className="w-12 h-12 rounded-xl bg-[#00a346]/20 flex items-center justify-center mb-4 group-hover:scale-110 transition-transform">
+            <Link href={`/${locale}/decouvrir/itineraires`} className="group relative overflow-hidden rounded-3xl bg-white/80 backdrop-blur-sm border border-gray-200/50 p-6 hover:border-[#00a346]/50 hover:shadow-lg transition-all duration-500">
+              <div className="w-12 h-12 rounded-xl bg-[#00a346]/10 flex items-center justify-center mb-4 group-hover:scale-110 transition-transform">
                 <Route className="w-6 h-6 text-[#00a346]" />
               </div>
-              <h3 className="text-xl font-bold text-white mb-2">Itinéraires</h3>
-              <p className="text-white/50 text-sm mb-4">Casa en 1, 2 ou 3 jours - parcours optimisés</p>
+              <h3 className="text-xl font-bold text-gray-900 mb-2">Itinéraires</h3>
+              <p className="text-gray-600 text-sm mb-4">Casa en 1, 2 ou 3 jours - parcours optimisés</p>
               <span className="text-[#00a346] text-sm font-medium flex items-center gap-1 group-hover:gap-2 transition-all">
                 Explorer <ArrowRight className="w-4 h-4" />
               </span>
@@ -135,41 +135,41 @@ export default function HomePage() {
         </div>
       </section>
       
-      {/* FOOD & FUN Section - DARK */}
+      {/* FOOD & FUN Section - LIGHT GRADIENT */}
       <section id="manger-sortir" className="py-24 lg:py-32 relative overflow-hidden">
-        <div className="absolute inset-0 bg-gradient-to-b from-[#0a0a0a] via-[#0f0f0f] to-[#0a0a0a]" />
-        <div className="absolute bottom-0 right-1/4 w-[500px] h-[500px] bg-[#c10000]/5 rounded-full blur-[100px]" />
+        <div className="absolute inset-0 bg-gradient-to-br from-rose-50/60 via-amber-50/40 to-emerald-50/50" />
+        <div className="absolute bottom-0 right-1/4 w-[500px] h-[500px] bg-[#c10000]/10 rounded-full blur-[100px]" />
         
         <div className="max-w-7xl mx-auto px-6 lg:px-12 relative z-10">
           <div className="grid lg:grid-cols-2 gap-16 items-center">
             <div>
-              <div className="inline-flex items-center gap-2 px-4 py-2 rounded-full bg-white/5 border border-white/10 mb-6">
+              <div className="inline-flex items-center gap-2 px-4 py-2 rounded-full bg-white/80 backdrop-blur-sm border border-rose-200/50 mb-6 shadow-sm">
                 <Utensils className="w-4 h-4 text-[#c10000]" />
-                <span className="text-sm text-white/70">Gastronomie & Sorties</span>
+                <span className="text-sm text-gray-700 font-medium">Gastronomie & Sorties</span>
               </div>
-              <h2 className="text-4xl lg:text-5xl font-bold text-white mb-6">
+              <h2 className="text-4xl lg:text-5xl font-bold text-gray-900 mb-6">
                 Savourez <span className="text-gradient-can">Casablanca</span>
               </h2>
-              <p className="text-lg text-white/50 mb-8">
+              <p className="text-lg text-gray-600 mb-8">
                 Des restaurants gastronomiques aux cafés branchés, des rooftops aux souks authentiques - découvrez la scène culinaire et festive de Casa
               </p>
               
               <div className="grid grid-cols-2 gap-4">
-                <Link href={`/${locale}/manger-sortir/restaurants`} className="flex items-center gap-3 p-4 rounded-2xl bg-white/5 border border-white/10 hover:border-[#00a346]/30 transition-all group">
+                <Link href={`/${locale}/manger-sortir/restaurants`} className="flex items-center gap-3 p-4 rounded-2xl bg-white/80 backdrop-blur-sm border border-gray-200/50 hover:border-[#00a346]/50 hover:shadow-md transition-all group">
                   <Utensils className="w-6 h-6 text-[#00a346]" />
-                  <span className="text-white font-medium">Restaurants</span>
+                  <span className="text-gray-900 font-medium">Restaurants</span>
                 </Link>
-                <Link href={`/${locale}/manger-sortir/cafes-brunchs`} className="flex items-center gap-3 p-4 rounded-2xl bg-white/5 border border-white/10 hover:border-[#0066b2]/30 transition-all group">
+                <Link href={`/${locale}/manger-sortir/cafes-brunchs`} className="flex items-center gap-3 p-4 rounded-2xl bg-white/80 backdrop-blur-sm border border-gray-200/50 hover:border-[#0066b2]/50 hover:shadow-md transition-all group">
                   <Coffee className="w-6 h-6 text-[#0066b2]" />
-                  <span className="text-white font-medium">Cafés & Brunchs</span>
+                  <span className="text-gray-900 font-medium">Cafés & Brunchs</span>
                 </Link>
-                <Link href={`/${locale}/manger-sortir/bars-nightlife`} className="flex items-center gap-3 p-4 rounded-2xl bg-white/5 border border-white/10 hover:border-[#c10000]/30 transition-all group">
+                <Link href={`/${locale}/manger-sortir/bars-nightlife`} className="flex items-center gap-3 p-4 rounded-2xl bg-white/80 backdrop-blur-sm border border-gray-200/50 hover:border-[#c10000]/50 hover:shadow-md transition-all group">
                   <PartyPopper className="w-6 h-6 text-[#c10000]" />
-                  <span className="text-white font-medium">Bars & Nightlife</span>
+                  <span className="text-gray-900 font-medium">Bars & Nightlife</span>
                 </Link>
-                <Link href={`/${locale}/manger-sortir/souks-artisanat`} className="flex items-center gap-3 p-4 rounded-2xl bg-white/5 border border-white/10 hover:border-[#00a346]/30 transition-all group">
+                <Link href={`/${locale}/manger-sortir/souks-artisanat`} className="flex items-center gap-3 p-4 rounded-2xl bg-white/80 backdrop-blur-sm border border-gray-200/50 hover:border-[#00a346]/50 hover:shadow-md transition-all group">
                   <Store className="w-6 h-6 text-[#00a346]" />
-                  <span className="text-white font-medium">Souks & Artisanat</span>
+                  <span className="text-gray-900 font-medium">Souks & Artisanat</span>
                 </Link>
               </div>
             </div>
@@ -248,54 +248,54 @@ export default function HomePage() {
         </div>
       </section>
       
-      {/* PLAN YOUR STAY Section - DARK */}
+      {/* PLAN YOUR STAY Section - LIGHT GRADIENT */}
       <section id="planifier" className="py-24 lg:py-32 relative overflow-hidden">
-        <div className="absolute inset-0 bg-gradient-to-b from-[#0a0a0a] to-[#0f0f0f]" />
-        <div className="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-[600px] h-[600px] bg-gradient-to-br from-[#00a346]/10 via-[#0066b2]/10 to-[#c10000]/10 rounded-full blur-[100px]" />
+        <div className="absolute inset-0 bg-gradient-to-br from-blue-50/60 via-emerald-50/50 to-slate-50/70" />
+        <div className="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-[600px] h-[600px] bg-gradient-to-br from-[#00a346]/15 via-[#0066b2]/15 to-[#c10000]/15 rounded-full blur-[100px]" />
         
         <div className="max-w-7xl mx-auto px-6 lg:px-12 relative z-10">
           <div className="text-center mb-16">
-            <div className="inline-flex items-center gap-2 px-4 py-2 rounded-full bg-white/5 border border-white/10 mb-6">
+            <div className="inline-flex items-center gap-2 px-4 py-2 rounded-full bg-white/80 backdrop-blur-sm border border-blue-200/50 mb-6 shadow-sm">
               <Plane className="w-4 h-4 text-[#0066b2]" />
-              <span className="text-sm text-white/70">Planifier votre séjour</span>
+              <span className="text-sm text-gray-700 font-medium">Planifier votre séjour</span>
             </div>
-            <h2 className="text-4xl lg:text-5xl font-bold text-white mb-6">
+            <h2 className="text-4xl lg:text-5xl font-bold text-gray-900 mb-6">
               Préparez votre <span className="text-gradient-can">voyage</span>
             </h2>
-            <p className="text-lg text-white/50 max-w-2xl mx-auto">
+            <p className="text-lg text-gray-600 max-w-2xl mx-auto">
               Hébergement, transports, conseils pratiques... tout ce qu'il faut savoir avant de venir
             </p>
           </div>
           
           <div className="grid md:grid-cols-2 lg:grid-cols-5 gap-4">
-            <Link href={`/${locale}/planifier/hebergement`} className="group p-6 rounded-2xl bg-white/5 border border-white/10 hover:border-[#00a346]/30 transition-all duration-300">
+            <Link href={`/${locale}/planifier/hebergement`} className="group p-6 rounded-2xl bg-white/80 backdrop-blur-sm border border-gray-200/50 hover:border-[#00a346]/50 hover:shadow-md transition-all duration-300">
               <Home className="w-8 h-8 text-[#00a346] mb-3" />
-              <h3 className="font-bold text-white mb-1">Hébergement</h3>
-              <p className="text-sm text-white/50">Hôtels, riads, Airbnb</p>
+              <h3 className="font-bold text-gray-900 mb-1">Hébergement</h3>
+              <p className="text-sm text-gray-600">Hôtels, riads, Airbnb</p>
             </Link>
             
-            <Link href={`/${locale}/planifier/ou-loger`} className="group p-6 rounded-2xl bg-white/5 border border-white/10 hover:border-[#0066b2]/30 transition-all duration-300">
+            <Link href={`/${locale}/planifier/ou-loger`} className="group p-6 rounded-2xl bg-white/80 backdrop-blur-sm border border-gray-200/50 hover:border-[#0066b2]/50 hover:shadow-md transition-all duration-300">
               <MapPin className="w-8 h-8 text-[#0066b2] mb-3" />
-              <h3 className="font-bold text-white mb-1">Où loger ?</h3>
-              <p className="text-sm text-white/50">Guide des quartiers</p>
+              <h3 className="font-bold text-gray-900 mb-1">Où loger ?</h3>
+              <p className="text-sm text-gray-600">Guide des quartiers</p>
             </Link>
             
-            <Link href={`/${locale}/planifier/se-deplacer`} className="group p-6 rounded-2xl bg-white/5 border border-white/10 hover:border-[#c10000]/30 transition-all duration-300">
+            <Link href={`/${locale}/planifier/se-deplacer`} className="group p-6 rounded-2xl bg-white/80 backdrop-blur-sm border border-gray-200/50 hover:border-[#c10000]/50 hover:shadow-md transition-all duration-300">
               <Route className="w-8 h-8 text-[#c10000] mb-3" />
-              <h3 className="font-bold text-white mb-1">Se déplacer</h3>
-              <p className="text-sm text-white/50">Tram, taxi, VTC</p>
+              <h3 className="font-bold text-gray-900 mb-1">Se déplacer</h3>
+              <p className="text-sm text-gray-600">Tram, taxi, VTC</p>
             </Link>
             
-            <Link href={`/${locale}/planifier/aeroport-centre-ville`} className="group p-6 rounded-2xl bg-white/5 border border-white/10 hover:border-[#00a346]/30 transition-all duration-300">
+            <Link href={`/${locale}/planifier/aeroport-centre-ville`} className="group p-6 rounded-2xl bg-white/80 backdrop-blur-sm border border-gray-200/50 hover:border-[#00a346]/50 hover:shadow-md transition-all duration-300">
               <Plane className="w-8 h-8 text-[#00a346] mb-3" />
-              <h3 className="font-bold text-white mb-1">Aéroport → Ville</h3>
-              <p className="text-sm text-white/50">Transferts, navettes</p>
+              <h3 className="font-bold text-gray-900 mb-1">Aéroport → Ville</h3>
+              <p className="text-sm text-gray-600">Transferts, navettes</p>
             </Link>
             
-            <Link href={`/${locale}/planifier/infos-pratiques`} className="group p-6 rounded-2xl bg-white/5 border border-white/10 hover:border-[#0066b2]/30 transition-all duration-300">
+            <Link href={`/${locale}/planifier/infos-pratiques`} className="group p-6 rounded-2xl bg-white/80 backdrop-blur-sm border border-gray-200/50 hover:border-[#0066b2]/50 hover:shadow-md transition-all duration-300">
               <CheckCircle2 className="w-8 h-8 text-[#0066b2] mb-3" />
-              <h3 className="font-bold text-white mb-1">Infos pratiques</h3>
-              <p className="text-sm text-white/50">Conseils & astuces</p>
+              <h3 className="font-bold text-gray-900 mb-1">Infos pratiques</h3>
+              <p className="text-sm text-gray-600">Conseils & astuces</p>
             </Link>
           </div>
         </div>

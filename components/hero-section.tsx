@@ -13,13 +13,15 @@ export function HeroSection() {
   }
   
   return (
-    <section className="relative min-h-screen flex items-center justify-center overflow-hidden bg-[#0a0a0a]">
+    <section className="relative min-h-screen flex items-center justify-center overflow-hidden bg-gradient-to-br from-slate-50 via-blue-50/50 to-emerald-50/60">
       {/* Animated Gradient Mesh Background */}
       <div className="absolute inset-0 z-0">
+        {/* Base gradient overlay */}
+        <div className="absolute inset-0 bg-gradient-to-br from-emerald-100/40 via-blue-100/30 to-rose-100/30" />
         {/* Primary gradient orbs */}
-        <div className="absolute top-0 left-0 w-[800px] h-[800px] bg-[#00a346]/20 rounded-full blur-[120px] animate-pulse" style={{ animationDuration: '4s' }} />
-        <div className="absolute top-1/4 right-0 w-[600px] h-[600px] bg-[#0066b2]/20 rounded-full blur-[120px] animate-pulse" style={{ animationDuration: '5s', animationDelay: '1s' }} />
-        <div className="absolute bottom-0 left-1/3 w-[700px] h-[700px] bg-[#c10000]/15 rounded-full blur-[120px] animate-pulse" style={{ animationDuration: '6s', animationDelay: '2s' }} />
+        <div className="absolute top-0 left-0 w-[800px] h-[800px] bg-[#00a346]/25 rounded-full blur-[120px] animate-pulse" style={{ animationDuration: '4s' }} />
+        <div className="absolute top-1/4 right-0 w-[600px] h-[600px] bg-[#0066b2]/25 rounded-full blur-[120px] animate-pulse" style={{ animationDuration: '5s', animationDelay: '1s' }} />
+        <div className="absolute bottom-0 left-1/3 w-[700px] h-[700px] bg-[#c10000]/20 rounded-full blur-[120px] animate-pulse" style={{ animationDuration: '6s', animationDelay: '2s' }} />
         
         {/* Grid pattern overlay */}
         <div className="absolute inset-0 bg-[linear-gradient(rgba(255,255,255,0.02)_1px,transparent_1px),linear-gradient(90deg,rgba(255,255,255,0.02)_1px,transparent_1px)] bg-[size:60px_60px]" />
@@ -35,21 +37,21 @@ export function HeroSection() {
           {/* Left Column - Text Content */}
           <div className="text-center lg:text-left order-2 lg:order-1">
             {/* Badge */}
-            <div className="inline-flex items-center gap-2 px-4 py-2 rounded-full bg-white/5 border border-white/10 backdrop-blur-sm mb-8 animate-fade-in-up">
+            <div className="inline-flex items-center gap-2 px-4 py-2 rounded-full bg-white/90 backdrop-blur-sm border border-emerald-200/50 shadow-sm mb-8 animate-fade-in-up">
               <Sparkles className="w-4 h-4 text-[#00a346]" />
-              <span className="text-sm font-medium text-white/80 tracking-wide">
+              <span className="text-sm font-medium text-gray-700 tracking-wide">
                 {t("badge")}
               </span>
             </div>
             
             {/* Title */}
-            <h1 className="font-serif text-4xl sm:text-5xl lg:text-6xl xl:text-7xl font-bold text-white leading-[1.1] mb-6 animate-fade-in-up" style={{ animationDelay: '0.1s' }}>
+            <h1 className="font-serif text-4xl sm:text-5xl lg:text-6xl xl:text-7xl font-bold text-gray-900 leading-[1.1] mb-6 animate-fade-in-up" style={{ animationDelay: '0.1s' }}>
               <span className="block">Découvrez</span>
               <span className="block text-gradient-can">Casablanca</span>
             </h1>
             
             {/* Description */}
-            <p className="text-lg lg:text-xl text-white/60 leading-relaxed max-w-xl mx-auto lg:mx-0 mb-10 animate-fade-in-up" style={{ animationDelay: '0.2s' }}>
+            <p className="text-lg lg:text-xl text-gray-700 leading-relaxed max-w-xl mx-auto lg:mx-0 mb-10 animate-fade-in-up" style={{ animationDelay: '0.2s' }}>
               {t("description")}
             </p>
             
@@ -74,18 +76,18 @@ export function HeroSection() {
             </div>
             
             {/* Stats */}
-            <div className="grid grid-cols-3 gap-6 mt-12 pt-12 border-t border-white/10 animate-fade-in-up" style={{ animationDelay: '0.4s' }}>
+            <div className="grid grid-cols-3 gap-6 mt-12 pt-12 border-t border-gray-200/50 animate-fade-in-up" style={{ animationDelay: '0.4s' }}>
               <div className="text-center lg:text-left">
-                <div className="text-3xl lg:text-4xl font-bold text-white mb-1">500+</div>
-                <div className="text-sm text-white/50">Lieux</div>
+                <div className="text-3xl lg:text-4xl font-bold text-gray-900 mb-1">500+</div>
+                <div className="text-sm text-gray-600">Lieux</div>
               </div>
               <div className="text-center lg:text-left">
-                <div className="text-3xl lg:text-4xl font-bold text-white mb-1">50K+</div>
-                <div className="text-sm text-white/50">Utilisateurs</div>
+                <div className="text-3xl lg:text-4xl font-bold text-gray-900 mb-1">50K+</div>
+                <div className="text-sm text-gray-600">Utilisateurs</div>
               </div>
               <div className="text-center lg:text-left">
-                <div className="text-3xl lg:text-4xl font-bold text-white mb-1">4.9</div>
-                <div className="text-sm text-white/50">Note App</div>
+                <div className="text-3xl lg:text-4xl font-bold text-gray-900 mb-1">4.9</div>
+                <div className="text-sm text-gray-600">Note App</div>
               </div>
             </div>
           </div>
@@ -170,13 +172,13 @@ export function HeroSection() {
       {/* Scroll Indicator */}
       <div className="absolute bottom-8 left-1/2 scroll-indicator z-10">
         <div className="flex flex-col items-center gap-2">
-          <span className="text-xs text-white/40 uppercase tracking-widest">Scroll</span>
-          <ArrowDown className="w-5 h-5 text-white/40 animate-bounce" />
+          <span className="text-xs text-gray-500 uppercase tracking-widest">Scroll</span>
+          <ArrowDown className="w-5 h-5 text-gray-500 animate-bounce" />
         </div>
       </div>
       
       {/* Bottom gradient fade */}
-      <div className="absolute bottom-0 left-0 right-0 h-32 bg-gradient-to-t from-[#0a0a0a] to-transparent z-[5]" />
+      <div className="absolute bottom-0 left-0 right-0 h-32 bg-gradient-to-t from-emerald-50/60 to-transparent z-[5]" />
     </section>
   )
 }
