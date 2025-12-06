@@ -2,7 +2,7 @@
 
 import type React from "react"
 
-import { useState } from "react"
+import { useState, useEffect } from "react"
 import { Menu, X, ChevronDown, Ticket, ArrowRight, Sparkles, Compass } from "lucide-react"
 import Link from "next/link"
 import Image from "next/image"
@@ -116,6 +116,18 @@ export function Navigation() {
   const isParentActive = (submenu?: { href: string }[]) => {
     return submenu?.some((item) => pathname.startsWith(item.href)) || false
   }
+
+  // Prevent body scroll when menu is open
+  useEffect(() => {
+    if (isOpen) {
+      document.body.style.overflow = 'hidden'
+    } else {
+      document.body.style.overflow = ''
+    }
+    return () => {
+      document.body.style.overflow = ''
+    }
+  }, [isOpen])
 
   return (
     <>
@@ -263,118 +275,159 @@ export function Navigation() {
 
           {/* Mobile Menu Button */}
           <button
-            className="lg:hidden p-2 text-gray-700"
-            onClick={() => setIsOpen(!isOpen)}
+            type="button"
+            className="lg:hidden relative z-[100] p-2 text-gray-700 hover:text-gray-900 transition-colors"
+            onClick={(e) => {
+              e.preventDefault()
+              e.stopPropagation()
+              setIsOpen(!isOpen)
+            }}
             aria-label="Toggle menu"
+            aria-expanded={isOpen}
           >
             {isOpen ? <X className="h-6 w-6" /> : <Menu className="h-6 w-6" />}
           </button>
         </div>
-
-        {/* Mobile Navigation */}
-        {isOpen && (
-          <div className="lg:hidden fixed inset-x-0 top-20 sm:top-24 bottom-0 bg-[#0a0a0a] z-[999] overflow-y-auto">
-            {/* Subtle background glow */}
-            <div className="absolute inset-0 overflow-hidden pointer-events-none">
-              <div className="absolute top-0 left-0 w-48 h-48 bg-[#00a346]/10 rounded-full blur-[80px]" />
-              <div className="absolute bottom-1/4 right-0 w-48 h-48 bg-[#c10000]/10 rounded-full blur-[80px]" />
-            </div>
-            
-            <div className="relative z-10 px-4 sm:px-6 py-6 pb-32">
-              {navItems.map((item) => (
-                <div key={item.label} className="border-b border-white/10 last:border-b-0">
-                  {item.submenu ? (
+      </div>
+    </nav>
+    
+    {/* Mobile Navigation - Outside nav container for proper z-index stacking */}
+    {isOpen && (
+      <>
+        {/* Backdrop overlay */}
+        <div 
+          className="lg:hidden fixed inset-0 top-20 sm:top-24 bg-black/20 backdrop-blur-sm z-[9998]"
+          onClick={() => setIsOpen(false)}
+        />
+        
+        {/* Mobile Menu */}
+        <div className="lg:hidden fixed inset-0 top-20 sm:top-24 bg-gradient-to-br from-slate-50 via-blue-50/30 to-emerald-50/40 z-[9999] overflow-y-auto w-full">
+          {/* Subtle background glow */}
+          <div className="absolute inset-0 overflow-hidden pointer-events-none">
+            <div className="absolute top-0 left-0 w-48 h-48 bg-[#00a346]/10 rounded-full blur-[80px]" />
+            <div className="absolute bottom-1/4 right-0 w-48 h-48 bg-[#c10000]/10 rounded-full blur-[80px]" />
+          </div>
+          
+          <div className="relative z-10 px-4 sm:px-6 py-6 pb-32 w-full">
+            {navItems.map((item) => (
+              <div key={item.label} className="border-b border-gray-200/50 last:border-b-0 w-full">
+                {item.submenu ? (
+                  <>
                     <button
                       onClick={() => setOpenDropdown(openDropdown === item.label ? null : item.label)}
                       className={`
                         w-full text-left py-4 px-3 text-base font-medium
                         flex items-center justify-between
-                        ${isParentActive(item.submenu) ? 'text-white' : 'text-white/80'}
+                        ${isParentActive(item.submenu) ? 'text-gray-900' : 'text-gray-700'}
                       `}
                     >
                       <span className="flex items-center gap-3">
                         <div className={`
                           w-9 h-9 rounded-lg flex items-center justify-center
-                          ${isParentActive(item.submenu) ? 'bg-[#00a346]/30' : 'bg-white/10'}
+                          ${isParentActive(item.submenu) ? 'bg-[#00a346]/20' : 'bg-gray-100'}
                         `}>
-                          <Sparkles className={`w-4 h-4 ${isParentActive(item.submenu) ? 'text-[#00a346]' : 'text-white/60'}`} />
+                          <Sparkles className={`w-4 h-4 ${isParentActive(item.submenu) ? 'text-[#00a346]' : 'text-gray-600'}`} />
                         </div>
                         {item.label}
                       </span>
-                      <ChevronDown className={`h-5 w-5 text-white/40 transition-transform duration-200 ${openDropdown === item.label ? "rotate-180" : ""}`} />
+                      <ChevronDown className={`h-5 w-5 text-gray-500 transition-transform duration-200 ${openDropdown === item.label ? "rotate-180" : ""}`} />
                     </button>
-                  ) : (
-                    <Link
-                      href={item.href}
-                      className={`
-                        block py-4 px-3 text-base font-medium
-                        ${isActive(item.href) ? 'text-white' : 'text-white/80'}
-                      `}
-                      onClick={() => setIsOpen(false)}
-                    >
-                      <span className="flex items-center gap-3">
-                        <div className={`
-                          w-9 h-9 rounded-lg flex items-center justify-center
-                          ${isActive(item.href) ? 'bg-[#00a346]/30' : 'bg-white/10'}
-                        `}>
-                          {item.label === "Can 2025" ? (
-                            <span className="text-sm">🏆</span>
-                          ) : (
-                            <Compass className={`w-4 h-4 ${isActive(item.href) ? 'text-[#00a346]' : 'text-white/60'}`} />
-                          )}
+                    
+                    {/* Mobile Submenu - Fully Responsive */}
+                    {item.submenu && (
+                      <div 
+                        className={`
+                          w-full overflow-hidden transition-all duration-300 ease-in-out
+                          ${openDropdown === item.label ? 'max-h-[500px] opacity-100' : 'max-h-0 opacity-0'}
+                        `}
+                      >
+                        <div className="mx-2 mb-3 mt-2 rounded-xl bg-white/80 backdrop-blur-sm border border-gray-200/50 shadow-sm overflow-hidden">
+                          {item.submenu.map((subItem) => (
+                            <Link
+                              key={subItem.href}
+                              href={subItem.href}
+                              className={`
+                                flex items-center justify-between py-3 px-4 text-sm border-b border-gray-100 last:border-b-0 w-full
+                                transition-colors duration-150
+                                ${isActive(subItem.href) 
+                                  ? 'text-gray-900 bg-[#00a346]/10 font-medium' 
+                                  : 'text-gray-700 hover:bg-gray-50'}
+                              `}
+                              onClick={() => {
+                                setIsOpen(false)
+                                setOpenDropdown(null)
+                              }}
+                            >
+                              <span>{subItem.label}</span>
+                              {isActive(subItem.href) && (
+                                <div className="w-2 h-2 rounded-full bg-[#00a346]" />
+                              )}
+                              {!isActive(subItem.href) && (
+                                <ArrowRight className="w-4 h-4 text-gray-400" />
+                              )}
+                            </Link>
+                          ))}
                         </div>
+                      </div>
+                    )}
+                  </>
+                ) : (
+                  <Link
+                    href={item.href}
+                    className={`
+                      block py-4 px-3 text-base font-medium w-full
+                      ${isActive(item.href) ? 'text-gray-900' : 'text-gray-700'}
+                    `}
+                    onClick={() => {
+                      setIsOpen(false)
+                      setOpenDropdown(null)
+                    }}
+                  >
+                    <span className="flex items-center gap-3">
+                      <div className={`
+                        w-9 h-9 rounded-lg flex items-center justify-center
+                        ${isActive(item.href) ? 'bg-[#00a346]/20' : 'bg-gray-100'}
+                      `}>
                         {item.label === "Can 2025" ? (
-                          <span className="font-bold">
-                            <span className="text-[#c1272d]">Can</span> <span className="text-[#006233]">2025</span>
-                          </span>
-                        ) : item.label}
-                      </span>
-                    </Link>
-                  )}
-                  
-                  {/* Mobile Submenu */}
-                  {item.submenu && openDropdown === item.label && (
-                    <div className="mx-2 mb-3 rounded-xl bg-white/5 border border-white/10 overflow-hidden">
-                      {item.submenu.map((subItem) => (
-                        <Link
-                          key={subItem.href}
-                          href={subItem.href}
-                          className={`
-                            flex items-center justify-between py-3 px-4 text-sm border-b border-white/5 last:border-b-0
-                            ${isActive(subItem.href) ? 'text-white bg-[#00a346]/10' : 'text-white/70'}
-                          `}
-                          onClick={() => setIsOpen(false)}
-                        >
-                          <span>{subItem.label}</span>
-                          {isActive(subItem.href) && <div className="w-1.5 h-1.5 rounded-full bg-[#00a346]" />}
-                        </Link>
-                      ))}
-                    </div>
-                  )}
-                </div>
-              ))}
-              
-              {/* Mobile Ticket Button */}
-              <div className="mt-8 px-2">
-                <a
-                  href="https://casawe.ma"
-                  target="_blank"
-                  rel="noopener noreferrer"
-                  className="flex items-center justify-center gap-2 w-full py-4 bg-gradient-to-r from-[#00a346] to-[#c10000] text-white font-bold rounded-xl"
-                  onClick={() => setIsOpen(false)}
-                >
-                  <Ticket className="w-5 h-5" />
-                  <span>{t("tickets")}</span>
-                </a>
+                          <span className="text-sm">🏆</span>
+                        ) : (
+                          <Compass className={`w-4 h-4 ${isActive(item.href) ? 'text-[#00a346]' : 'text-gray-600'}`} />
+                        )}
+                      </div>
+                      {item.label === "Can 2025" ? (
+                        <span className="font-bold">
+                          <span className="text-[#c1272d]">Can</span> <span className="text-[#006233]">2025</span>
+                        </span>
+                      ) : item.label}
+                    </span>
+                  </Link>
+                )}
               </div>
-              
-              {/* Accent line */}
-              <div className="mt-8 h-0.5 bg-gradient-to-r from-[#00a346] via-[#ffd700] to-[#c10000] rounded-full opacity-50" />
+            ))}
+            
+            {/* Mobile Ticket Button */}
+            <div className="mt-8 px-2 w-full">
+              <a
+                href="https://casawe.ma"
+                target="_blank"
+                rel="noopener noreferrer"
+                className="flex items-center justify-center gap-2 w-full py-4 bg-gradient-to-r from-[#00a346] to-[#c10000] text-white font-bold rounded-xl shadow-lg"
+                onClick={() => {
+                  setIsOpen(false)
+                  setOpenDropdown(null)
+                }}
+              >
+                <Ticket className="w-5 h-5" />
+                <span>{t("tickets")}</span>
+              </a>
             </div>
+            
+            {/* Accent line */}
+            <div className="mt-8 h-0.5 bg-gradient-to-r from-[#00a346] via-[#ffd700] to-[#c10000] rounded-full opacity-50" />
           </div>
-        )}
-      </div>
-    </nav>
+        </div>
+      </>
+    )}
     </>
   )
 }
