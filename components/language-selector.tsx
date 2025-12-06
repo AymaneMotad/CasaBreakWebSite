@@ -124,42 +124,49 @@ export function LanguageSelector() {
       </button>
 
       {isOpen && (
-        <div className="absolute top-full right-0 mt-2 min-w-[200px] bg-white rounded-lg shadow-lg border border-charcoal/10 overflow-hidden z-50 animate-gentle-scale">
-          <div className="py-2">
-            {languages.map((language) => (
-              <button
-                key={language.code}
-                onClick={() => handleLanguageSelect(language)}
-                onKeyDown={(e) => handleKeyDown(e, language)}
-                disabled={language.status === 'coming-soon'}
-                className={`
-                  w-full flex items-center justify-between px-4 py-3 text-sm font-sans transition-all duration-200 group
-                  ${language.status === 'active' 
-                    ? 'text-charcoal hover:bg-charcoal/5 cursor-pointer focus:bg-charcoal/5 focus:outline-none' 
-                    : 'text-charcoal/50 cursor-not-allowed'
-                  }
-                  ${selectedLanguage.code === language.code ? 'bg-blue-50 text-blue-600' : ''}
-                `}
-                aria-label={`Select ${language.name} language`}
-              >
-                <div className="flex items-center gap-3">
-                  <span className="font-medium">{language.name}</span>
-                </div>
-                <div className="flex items-center gap-2">
-                  {language.status === 'coming-soon' && (
-                    <div className="flex items-center gap-1 text-xs text-charcoal/40 bg-charcoal/10 px-2 py-1 rounded-full">
-                      <Clock className="h-3 w-3" />
-                      <span>En cours</span>
-                    </div>
-                  )}
-                  {selectedLanguage.code === language.code && language.status === 'active' && (
-                    <Check className="h-4 w-4 text-blue-600" />
-                  )}
-                </div>
-              </button>
-            ))}
+        <>
+          {/* Backdrop for mobile */}
+          <div
+            className="fixed inset-0 bg-black/20 z-40 sm:hidden"
+            onClick={() => setIsOpen(false)}
+          />
+          <div className="absolute top-full right-0 mt-2 min-w-[200px] bg-white rounded-lg shadow-lg border border-charcoal/10 overflow-hidden z-[100] animate-gentle-scale">
+            <div className="py-2">
+              {languages.map((language) => (
+                <button
+                  key={language.code}
+                  onClick={() => handleLanguageSelect(language)}
+                  onKeyDown={(e) => handleKeyDown(e, language)}
+                  disabled={language.status === 'coming-soon'}
+                  className={`
+                    w-full flex items-center justify-between px-4 py-3 text-sm font-sans transition-all duration-200 group
+                    ${language.status === 'active' 
+                      ? 'text-charcoal hover:bg-charcoal/5 cursor-pointer focus:bg-charcoal/5 focus:outline-none' 
+                      : 'text-charcoal/50 cursor-not-allowed'
+                    }
+                    ${selectedLanguage.code === language.code ? 'bg-blue-50 text-blue-600' : ''}
+                  `}
+                  aria-label={`Select ${language.name} language`}
+                >
+                  <div className="flex items-center gap-3">
+                    <span className="font-medium">{language.name}</span>
+                  </div>
+                  <div className="flex items-center gap-2">
+                    {language.status === 'coming-soon' && (
+                      <div className="flex items-center gap-1 text-xs text-charcoal/40 bg-charcoal/10 px-2 py-1 rounded-full">
+                        <Clock className="h-3 w-3" />
+                        <span>En cours</span>
+                      </div>
+                    )}
+                    {selectedLanguage.code === language.code && language.status === 'active' && (
+                      <Check className="h-4 w-4 text-blue-600" />
+                    )}
+                  </div>
+                </button>
+              ))}
+            </div>
           </div>
-        </div>
+        </>
       )}
     </div>
   )

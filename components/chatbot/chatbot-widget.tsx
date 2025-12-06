@@ -137,13 +137,13 @@ export function ChatbotWidget() {
         className={`fixed bottom-6 right-6 z-50 w-14 h-14 sm:w-16 sm:h-16 rounded-full bg-gradient-to-r from-[#00a346] via-[#ffd700] to-[#c10000] p-[2px] shadow-lg shadow-[#00a346]/30 hover:shadow-[#00a346]/50 hover:scale-110 transition-all duration-300 ${isOpen ? 'scale-0 opacity-0' : 'scale-100 opacity-100'}`}
         aria-label="Ouvrir le chat"
       >
-        <div className="w-full h-full rounded-full bg-[#030303] flex items-center justify-center relative overflow-hidden">
-          {/* Animated background */}
-          <div className="absolute inset-0 bg-gradient-to-r from-[#00a346]/20 via-transparent to-[#c10000]/20 animate-pulse-slow" />
+        <div className="w-full h-full rounded-full bg-[#030303] flex items-center justify-center relative overflow-hidden group">
+          {/* Animated background - only on hover */}
+          <div className="absolute inset-0 bg-gradient-to-r from-[#00a346]/20 via-transparent to-[#c10000]/20 group-hover:animate-pulse-slow" />
           <MessageCircle className="w-6 h-6 sm:w-7 sm:h-7 text-white relative z-10" />
-          {/* Pulse indicator */}
-          <span className="absolute top-0 right-0 w-3 h-3">
-            <span className="animate-ping absolute inline-flex h-full w-full rounded-full bg-[#00a346] opacity-75"></span>
+          {/* Pulse indicator - only on hover */}
+          <span className="absolute top-0 right-0 w-3 h-3 opacity-0 group-hover:opacity-100 transition-opacity">
+            <span className="group-hover:animate-ping absolute inline-flex h-full w-full rounded-full bg-[#00a346] opacity-75"></span>
             <span className="relative inline-flex rounded-full h-3 w-3 bg-[#00a346]"></span>
           </span>
         </div>

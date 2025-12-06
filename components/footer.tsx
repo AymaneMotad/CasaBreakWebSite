@@ -325,20 +325,20 @@ export function Footer() {
             <h4 className="text-slate-200 text-lg font-semibold mb-6 tracking-wide">{tFooter("location")}</h4>
             <div className="relative w-full h-48 rounded-xl overflow-hidden border border-slate-600/30 bg-slate-800/50 shadow-lg hover:shadow-xl transition-shadow duration-300">
               <iframe
-                src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3323.123456789!2d-7.620000!3d33.590000!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0xda7d291010717e5%3A0x1f76295a86bb2f25!2sSacr%C3%A9%20Coeur%20Casablanca!5e0!3m2!1sen!2sma!4v1234567890!5m2!1sen!2sma"
+                src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3323.123456789!2d-7.620000!3d33.590000!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x0%3A0x0!2zMzPCsDM1JzI0LjAiTiA3wrAzNycxMi4wIlc!5e0!3m2!1sen!2sma!4v1234567890!5m2!1sen!2sma&q=1er+etage,+105+Rue+Taha+Hussein,+Casablanca+20520"
                 width="100%"
                 height="100%"
                 style={{ border: 0 }}
                 allowFullScreen
                 loading="lazy"
                 referrerPolicy="no-referrer-when-downgrade"
-                title="Localisation de l'Ex église Sacré-Cœur"
+                title="Localisation CasaBreak - 1er étage, 105 Rue Taha Hussein, Casablanca"
                 className="rounded-xl"
               />
             </div>
             <div className="mt-4">
               <a
-                href="https://www.google.com/maps/dir//sacr%C3%A9+coeur+casablanca/data=!4m6!4m5!1m1!4e2!1m2!1m1!1s0xda7d291010717e5:0x1f76295a86bb2f25?sa=X&ved=1t:155782&ictx=111"
+                href="https://www.google.com/maps?rlz=1C5CHFA_enMA1059MA1059&gs_lcrp=EgZjaHJvbWUyBggAEEUYOTIGCAEQRRg8MgYIAhBFGDwyBggDEEUYPNIBCDUyNTFqMGo3qAIAsAIA&um=1&ie=UTF-8&fb=1&gl=ma&sa=X&geocode=KY0DShtL06cNMXo7LGFUi1tJ&daddr=1er+etage,+105+Rue+Taha+Hussein,+Casablanca+20520"
                 target="_blank"
                 rel="noopener noreferrer"
                 className="group inline-flex items-center gap-2 text-sm text-slate-400 hover:text-[#00a346] transition-colors duration-200 hover:gap-3"
