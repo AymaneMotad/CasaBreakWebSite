@@ -3,7 +3,7 @@
 import type React from "react"
 
 import { useState, useEffect } from "react"
-import { Menu, X, ChevronDown, Ticket, ArrowRight, Sparkles, Compass } from "lucide-react"
+import { Menu, X, ChevronDown, Ticket, ArrowRight, Home, Trophy, MapPin, Activity, UtensilsCrossed, Calendar, Map, Compass } from "lucide-react"
 import Link from "next/link"
 import Image from "next/image"
 import { usePathname } from "next/navigation"
@@ -42,12 +42,19 @@ export function Navigation() {
 
   const currentLocale = getCurrentLocale()
 
+  // Helper function to render icon component
+  const renderIcon = (IconComponent: React.ComponentType<{ className?: string }> | undefined, className: string) => {
+    if (!IconComponent) return null
+    return <IconComponent className={className} />
+  }
+
   const navItems = [
-    { label: t("home"), href: `/${currentLocale}` },
-    { label: "Can 2025", href: `/${currentLocale}/can-2025` },
+    { label: t("home"), href: `/${currentLocale}`, icon: Home },
+    { label: "Can 2025", href: `/${currentLocale}/can-2025`, icon: Trophy },
     {
       label: t("discover"),
       href: "#",
+      icon: MapPin,
       image: "/casablanca-cityscape-atlantic-ocean-aerial-view-mo.jpg",
       submenu: [
         { label: t("monuments"), href: `/${currentLocale}/decouvrir/monuments` },
@@ -59,6 +66,7 @@ export function Navigation() {
     {
       label: t("activities"),
       href: "#",
+      icon: Activity,
       image: "/decouvrer/decouvrer-1.jpg",
       submenu: [
         { label: t("mustSee"), href: `/${currentLocale}/activites/incontournables` },
@@ -70,6 +78,7 @@ export function Navigation() {
     {
       label: t("foodFun"),
       href: "#",
+      icon: UtensilsCrossed,
       image: "/casablanca-cityscape-atlantic-ocean-aerial-view-mo.jpg",
       submenu: [
         { label: t("cafesRestaurants"), href: `/${currentLocale}/manger-sortir/restaurants` },
@@ -80,6 +89,7 @@ export function Navigation() {
     {
       label: t("events"),
       href: "#",
+      icon: Calendar,
       image: "/cultural-festival-morocco-traditional-celebration-.jpg",
       submenu: [
         { label: t("concertsShows"), href: `/${currentLocale}/evenements/concerts-spectacles` },
@@ -92,6 +102,7 @@ export function Navigation() {
     {
       label: t("planStay"),
       href: "#",
+      icon: Map,
       image: "/decouvrer/decouvrer-3.jpg",
       submenu: [
         { label: t("accommodation"), href: `/${currentLocale}/planifier/hebergement` },
@@ -326,7 +337,7 @@ export function Navigation() {
                           w-9 h-9 rounded-lg flex items-center justify-center
                           ${isParentActive(item.submenu) ? 'bg-[#00a346]/20' : 'bg-gray-100'}
                         `}>
-                          <Sparkles className={`w-4 h-4 ${isParentActive(item.submenu) ? 'text-[#00a346]' : 'text-gray-600'}`} />
+                          {renderIcon(item.icon, `w-4 h-4 ${isParentActive(item.submenu) ? 'text-[#00a346]' : 'text-gray-600'}`)}
                         </div>
                         {item.label}
                       </span>
@@ -388,11 +399,7 @@ export function Navigation() {
                         w-9 h-9 rounded-lg flex items-center justify-center
                         ${isActive(item.href) ? 'bg-[#00a346]/20' : 'bg-gray-100'}
                       `}>
-                        {item.label === "Can 2025" ? (
-                          <span className="text-sm">🏆</span>
-                        ) : (
-                          <Compass className={`w-4 h-4 ${isActive(item.href) ? 'text-[#00a346]' : 'text-gray-600'}`} />
-                        )}
+                        {renderIcon(item.icon, `w-4 h-4 ${isActive(item.href) ? 'text-[#00a346]' : 'text-gray-600'}`)}
                       </div>
                       {item.label === "Can 2025" ? (
                         <span className="font-bold">
