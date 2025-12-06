@@ -203,23 +203,13 @@ export default function Can2025Page() {
           {/* Countdown */}
           <div className="mb-12 animate-fade-in-up animation-delay-600">
             <p className="text-sm text-gray-600 uppercase tracking-widest mb-4 font-medium">Coup d'envoi dans</p>
-            <CountdownTimer />
+            <div className="flex justify-center">
+              <CountdownTimer />
+            </div>
           </div>
           
           {/* CTA Buttons */}
           <div className="flex flex-col sm:flex-row gap-4 justify-center animate-fade-in-up animation-delay-800">
-            <a
-              href="https://casawe.ma"
-              target="_blank"
-              rel="noopener noreferrer"
-              className="group relative px-8 py-4 bg-gradient-to-r from-[#00a346] to-[#00a346]/80 rounded-2xl text-white font-bold text-lg overflow-hidden transition-all hover:shadow-2xl hover:shadow-[#00a346]/30"
-            >
-              <span className="relative z-10 flex items-center justify-center gap-2">
-                <Ticket className="w-5 h-5" />
-                Réserver mes billets
-              </span>
-              <div className="absolute inset-0 bg-gradient-to-r from-[#ffd700] to-[#00a346] opacity-0 group-hover:opacity-100 transition-opacity duration-500" />
-            </a>
             <Link
               href="#casablanca"
               className="px-8 py-4 bg-white/90 backdrop-blur-xl border border-gray-200/50 rounded-2xl text-gray-900 font-bold text-lg hover:bg-white transition-all flex items-center justify-center gap-2 shadow-sm"
