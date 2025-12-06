@@ -59,7 +59,7 @@ const can2025Content = {
   dates: '21 Décembre 2025 - 18 Janvier 2026',
   description: '24 nations. 6 villes. 1 champion. Le football africain arrive au Maroc.',
   cities: [
-    { name: 'Casablanca', stadium: 'Stade Mohammed V', capacity: '67 000', matches: 'Demi-finale' },
+    { name: 'Casablanca', stadium: 'Mohammed V Stadium', capacity: '45 000', matches: 'Finale' },
     { name: 'Rabat', stadium: 'Stade Moulay Abdellah', capacity: '52 000', matches: 'Finale' },
     { name: 'Marrakech', stadium: 'Grand Stade', capacity: '45 000', matches: 'Quarts de finale' },
     { name: 'Tanger', stadium: 'Stade Ibn Batouta', capacity: '45 000', matches: 'Phase de poules' },

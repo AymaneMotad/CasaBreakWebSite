@@ -201,7 +201,7 @@ export default function Can2025Page() {
   const locale = useLocale()
   
   const hostCities = [
-    { city: 'Casablanca', stadium: 'Grand Stade Hassan II', image: 'https://images.unsplash.com/photo-1540747913346-19e32dc3e97e?w=1200&q=80', capacity: '115 000', matches: 'Finale', accentColor: '#00a346' },
+    { city: 'Casablanca', stadium: 'Mohammed V Stadium', image: 'https://images.unsplash.com/photo-1574629810360-7efbbe195018?w=1200&q=80', capacity: '45 000', matches: 'Finale', accentColor: '#00a346' },
     { city: 'Rabat', stadium: 'Complexe Moulay Abdellah', image: 'https://images.unsplash.com/photo-1459865264687-595d652de67e?w=800&q=80', capacity: '52 000', matches: 'Demi-finale', accentColor: '#c10000' },
     { city: 'Marrakech', stadium: 'Grand Stade de Marrakech', image: 'https://images.unsplash.com/photo-1551958219-acbc608c6377?w=800&q=80', capacity: '45 000', matches: 'Quarts', accentColor: '#ffd700' },
     { city: 'Tanger', stadium: 'Stade Ibn Batouta', image: 'https://images.unsplash.com/photo-1486286701208-1d58e9338013?w=800&q=80', capacity: '65 000', matches: '3ème place', accentColor: '#0066b2' },
@@ -543,7 +543,7 @@ export default function Can2025Page() {
               
               <p className="text-lg text-gray-600 mb-8 leading-relaxed">
                 La capitale économique du Maroc vous ouvre ses portes. Avec le tout nouveau 
-                <strong className="text-gray-900"> Stade Hassan II</strong> et ses 115 000 places, 
+                <strong className="text-gray-900"> Mohammed V Stadium</strong> et ses 45 000 places, 
                 vivez une expérience footballistique unique au monde.
               </p>
               
@@ -554,8 +554,8 @@ export default function Can2025Page() {
                     <Building className="w-8 h-8 text-white" />
                   </div>
                   <div>
-                    <h3 className="text-2xl font-black text-gray-900">Stade Hassan II</h3>
-                    <p className="text-gray-600">115 000 places • Finale CAN 2025</p>
+                    <h3 className="text-2xl font-black text-gray-900">Mohammed V Stadium</h3>
+                    <p className="text-gray-600">45 000 places • Finale CAN 2025</p>
                   </div>
                 </div>
                 <p className="text-gray-600">
