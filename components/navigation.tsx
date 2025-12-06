@@ -60,7 +60,6 @@ export function Navigation() {
         { label: t("monuments"), href: `/${currentLocale}/decouvrir/monuments` },
         { label: t("neighborhoods"), href: `/${currentLocale}/decouvrir/quartiers` },
         { label: t("seaBeaches"), href: `/${currentLocale}/decouvrir/mer-plages` },
-        { label: t("itineraries"), href: `/${currentLocale}/decouvrir/itineraires` },
       ],
     },
     {

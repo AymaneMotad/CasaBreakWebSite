@@ -696,6 +696,30 @@
       "sacrecoeur": {
         "title": "Espace Sacré-Cœur",
         "description": "Construite en 1930, l'ex église Sacré-Cœur est un exemple remarquable d'architecture néo-gothique avec une touche Art Déco. Bien qu'elle ne soit plus un lieu de culte, elle accueille aujourd'hui des expositions, des événements culturels et des installations artistiques. Son allure imposante, son intérieur lumineux et ses vitraux stylisés en font un lieu unique à Casablanca. Située au bord du Parc de la Ligue Arabe, elle constitue une étape culturelle et architecturale incontournable pour découvrir le passé colonial de la ville."
+      },
+      "slaoui": {
+        "title": "Musée de la fondation Abderrahman Slaoui",
+        "description": "Après le décès de son patriarche, la famille Slaoui avait à cœur de partager avec le grand public le patrimoine artistique important que le Abderrahman Slaoui avait réuni durant ses voyages ou en côtoyant des artistes marocains et étrangers de grande renommée. Sur une superficie de 600 m2 répartis sur trois étages et dans un cadre intimiste, cette maison-musée charmée par l'atmosphère intimiste d'une pure maison traditionnelle marocaine qu'elle recrée. La collection permanente comprend des tableaux de grands artistes marocains tels quel Mohammed Ben Ali R'bati ou internationaux comme Jacques Majorelle, des affiches orientalistes d'antan et des bijoux marocains, ainsi que de nombreuses autres curiosités qui feront le plaisir des amateurs d'art. Le musée organise également des expositions temporaires, des ateliers et des résidences artistiques."
+      },
+      "mahkama": {
+        "title": "Mahkama du Palais Pacha",
+        "description": "La Mahkama du Pacha, construite entre 1948 et 1952 par l'architecte Auguste Cadet, est l'un des joyaux architecturaux de Casablanca. Ce bâtiment parlementaire, qui abrite la cour de justice et sert de lieu de réception officielle, domine son quartier tel un château. Son architecture d'inspiration mauresque est remarquable : plafond en cèdre sculpté, stuc finement ciselé, mosaïques polychromes, colonnes en marbre blanc et motifs géométriques. L'intérieur, richement décoré, offre une harmonie exceptionnelle. Aussi appelée Préfecture de Habous, la Mahkama du Pacha est une étape incontournable pour admirer l'élégance du patrimoine casablancais et capturer de superbes photos, même lors d'une visite extérieure."
+      },
+      "abattoirs": {
+        "title": "Les anciens abattoirs",
+        "description": "À Casablanca, les Anciens Abattoirs ont été transformés en un véritable espace culturel, devenu un laboratoire créatif pour la jeunesse du quartier. Situé à Hay Mohammadi, un haut lieu de l'histoire artistique et sociale marocaine, le site est facilement reconnaissable et même desservi par un arrêt de tram portant son nom. Construit en 1922 par l'architecte Georges-Ernest Desmarest, l'abattoir représente l'une des premières expressions de la modernité à Casablanca. Son architecture mêle style néo-mauresque et touches avant-gardistes proches de l'Art déco. À l'époque du Protectorat, il s'inscrivait au cœur d'une zone industrielle en pleine expansion, marquée par un exode rural massif et l'apparition des premiers bidonvilles. Aujourd'hui, cet immense ensemble de bâtiments, cours et allées s'étendant sur 5 hectares, conserve une authenticité saisissante : anciennes écuries, traces de l'activité passée et espaces bruts. L'art urbain y occupe désormais une place centrale. Graffitis, installations et fresques colorées envahissent murs, sols et anciens équipements, exprimant l'énergie d'une jeunesse rebelle et créative. Les Anciens Abattoirs constituent ainsi un lieu unique où patrimoine, culture alternative et mémoire industrielle se rencontrent. Une visite surprenante et incontournable."
+      },
+      "judaisme": {
+        "title": "Musée du Judaïsme Marocain",
+        "description": "Le Musée du Judaïsme Marocain, situé dans le quartier Oasis à Casablanca, est un lieu unique : c'est le seul musée dédié au patrimoine juif dans tout le monde arabe. Installé dans un ancien orphelinat fondé en 1948, il a été transformé en musée en 1997 afin de préserver la mémoire de la communauté juive marocaine. Son architecture sobre s'ouvre sur des espaces d'exposition qui retracent près de deux millénaires d'histoire. On y découvre des objets religieux, des rouleaux de Torah, du mobilier de synagogue, des bijoux traditionnels, des costumes, ainsi que des photographies et documents qui témoignent du rôle important des Juifs dans la culture et la société marocaines. Le musée reconstitue également des espaces de vie, comme un atelier de bijoutier ou une bimah d'ancienne synagogue, offrant un aperçu authentique du quotidien d'autrefois. L'ensemble crée une atmosphère paisible et mémorielle où patrimoine, spiritualité et histoire se rencontrent. Véritable lieu de transmission, le Musée du Judaïsme Marocain est une visite incontournable pour comprendre la richesse du vivre-ensemble qui a marqué l'histoire du Maroc et découvrir une partie précieuse de son identité culturelle."
+      },
+      "rialto": {
+        "title": "Cinéma Rialto",
+        "description": "Le Cinéma Rialto, situé au cœur du centre-ville de Casablanca, est l'un des plus anciens et emblématiques cinémas du Maroc. Inauguré dans les années 1930, il se distingue par son architecture Art déco, parfaitement représentative de l'âge d'or du Casablanca colonial. Avec sa façade élégante et sa grande salle en forme d'amphithéâtre, le Rialto a longtemps accueilli projections prestigieuses, concerts et spectacles internationaux, devenant un véritable lieu de rencontre culturelle. À l'intérieur, le décor d'époque a été largement préservé : sièges rouges, balcons arrondis, luminaires rétro et fresques murales qui plongent les visiteurs dans une atmosphère chaleureuse et nostalgique. Aujourd'hui encore, le Cinéma Rialto reste un symbole vivant du patrimoine artistique casablancais, un espace chargé d'histoire où le charme du passé se mêle à l'énergie contemporaine de la ville."
+      },
+      "sqala": {
+        "title": "Bastion La Sqala",
+        "description": "La Sqala, située près du port de Casablanca, est un ancien bastion édifié au XVIIIᵉ siècle pour protéger la médina des attaques venant de la mer. Avec ses remparts en pierre, ses canons tournés vers l'Atlantique et son architecture traditionnelle, elle témoigne du rôle défensif qu'occupait autrefois la ville. Aujourd'hui réhabilitée, la Sqala abrite un café-restaurant au charme authentique, entouré de jardins, de fontaines et de détails décoratifs marocains. C'est un lieu paisible et incontournable, idéal pour découvrir un fragment du patrimoine casablancais tout en profitant d'un cadre agréable en bord de mer."
       }
     },
     "cta": {
@@ -703,6 +727,181 @@
       "title": "Découvrez Casablanca",
       "description": "Explorez ces monuments emblématiques lors d'une visite guidée ou en autonomie",
       "button": "Planifier votre visite"
+    }
+  },
+  "quartiers": {
+    "breadcrumb": {
+      "discover": "Découvrir",
+      "quartiers": "Quartiers à explorer"
+    },
+    "hero": {
+      "badge": "Exploration Urbaine",
+      "title": "Quartiers à Explorer",
+      "description": "Découvrez les quartiers emblématiques de Casablanca, chacun avec sa propre identité et son charme unique"
+    },
+    "quartiers": {
+      "maarif": {
+        "title": "Maarif",
+        "ideal": "Idéal pour : shopping, cafés, vie urbaine",
+        "description": "L'un des quartiers les plus dynamiques de Casablanca, parfait pour flâner, faire du shopping ou profiter de la vie citadine.",
+        "features": "Boutiques internationales et créateurs marocains, centres commerciaux (Twin Center, galeries locales), cafés tendance et restaurants modernes, ambiance jeune, active et cosmopolite"
+      },
+      "gauthier": {
+        "title": "Gauthier",
+        "ideal": "Idéal pour : gastronomie, vie nocturne, ambiance chic",
+        "description": "Un quartier raffiné, idéal pour une soirée entre amis ou pour découvrir les meilleures adresses culinaires de la ville.",
+        "features": "Restaurants branchés et cuisines du monde, bars, lounges et adresses élégantes, rues calmes aux immeubles modernes, brunchs et coffee shops prisés"
+      },
+      "racine": {
+        "title": "Racine",
+        "ideal": "Idéal pour : shopping premium, cafés élégants, tranquillité",
+        "description": "Le bon équilibre entre élégance, luxe discret et douceur de vivre.",
+        "features": "Boutiques haut de gamme et concept stores, salons de thé chics, restaurants fins et ambiance posée, avenues résidentielles calmes"
+      },
+      "aindiab": {
+        "title": "Ain Diab – La Corniche",
+        "ideal": "Idéal pour : mer, détente, nightlife, restaurants vue mer",
+        "description": "Le quartier balnéaire par excellence : ambiance estivale, sunsets spectaculaires et activités en bord de mer.",
+        "features": "Longue corniche face à l'océan, plages, surf, écoles nautiques, beach clubs, restaurants et cafés avec vue panoramique, clubs et lieux de sortie en soirée"
+      },
+      "medina": {
+        "title": "La Médina",
+        "ideal": "Idéal pour : histoire, culture locale, immersion authentique",
+        "description": "Pour découvrir l'âme originelle de Casablanca et se perdre dans un décor chargé d'histoire.",
+        "features": "Rues traditionnelles et ruelles animées, souks, échoppes artisanales, petites boutiques, sites historiques comme La Sqala, une atmosphère vivante et typique"
+      },
+      "cfc": {
+        "title": "Casablanca Finance City (CFC)",
+        "ideal": "Idéal pour : architecture moderne, business district, cafés tendance",
+        "description": "Symbole de la Casablanca moderne et innovante, parfait pour admirer l'architecture contemporaine ou travailler dans un cadre élégant.",
+        "features": "Tours futuristes et bureaux internationaux, espaces verts et grandes avenues propres, restaurants modernes, rooftops, coffee shops design, un environnement sécurisé et très organisé"
+      }
+    },
+    "cta": {
+      "badge": "Explorer",
+      "title": "Découvrez les Quartiers",
+      "description": "Chaque quartier de Casablanca a sa propre identité. Explorez-les à votre rythme.",
+      "button": "Planifier votre visite"
+    }
+  },
+  "merPlages": {
+    "breadcrumb": {
+      "discover": "Découvrir",
+      "merPlages": "Mer & Plages"
+    },
+    "hero": {
+      "badge": "Littoral Atlantique",
+      "title": "Mer & Plages",
+      "description": "Découvrez le littoral casablancais : plages, beach clubs, activités nautiques et couchers de soleil spectaculaires"
+    },
+    "sections": {
+      "plageAinDiab": {
+        "title": "Plage Ain Diab",
+        "description": "La plage Ain Diab est la plus emblématique de Casablanca. Entre longues promenades, ambiance animée, cafés en bord de mer et vues sur l'Atlantique, c'est le spot idéal pour se détendre, marcher au bord de l'eau ou admirer un coucher de soleil. À proximité : restaurants, activités nautiques et espaces de loisirs."
+      },
+      "beachClubs": {
+        "title": "Beach Clubs",
+        "description": "Les beach clubs offrent une alternative élégante pour profiter de la mer : piscines, transats, terrasses, musique et restauration. Parfaits pour une journée détente, festive ou familiale.",
+        "addresses": "Tahiti Beach Club, Scara'Bay, Eden Beach Club, Gaia Beach Casa, Shore Club"
+      },
+      "surfSchools": {
+        "title": "Écoles de Surf",
+        "description": "Ain Diab est un excellent spot pour apprendre le surf ou se perfectionner. Les écoles proposent cours pour tous les niveaux, matériel inclus et moniteurs expérimentés. Le surf au coucher du soleil reste une expérience inoubliable.",
+        "schools": "Tahiti Surf School, Casablanca Surf Coaching, Aindiab Surf School, Casa Surf House"
+      },
+      "corniche": {
+        "title": "Promenade de la Corniche",
+        "description": "La Corniche est l'une des plus belles balades de Casablanca : restaurants vue océan, cafés modernes, pistes cyclables, espaces photo et zones piétonnes. Lieu parfait pour courir, marcher, faire du vélo ou profiter simplement de la brise marine."
+      },
+      "parcs": {
+        "title": "Parcs & Espaces Verts Côtiers",
+        "description": "En bord de mer, plusieurs espaces verts offrent un cadre calme pour se reposer, pique-niquer ou profiter d'une pause à l'ombre. Ces zones sont très appréciées pour leur tranquillité et leur proximité avec l'océan."
+      },
+      "sunsets": {
+        "title": "Couchers de Soleil",
+        "description": "Casablanca est réputée pour ses couchers de soleil spectaculaires sur l'Atlantique. Les meilleurs points de vue : la Corniche, Ain Diab, le Phare d'El Hank ou certains rooftops en bord de mer. Un moment incontournable pour vivre l'atmosphère unique du littoral casablancais."
+      }
+    },
+    "cta": {
+      "badge": "Détente",
+      "title": "Profitez du Littoral",
+      "description": "Découvrez toutes les activités et lieux de détente au bord de mer à Casablanca",
+      "button": "Explorer les activités"
+    }
+  },
+  "incontournables": {
+    "hero": {
+      "title": "Activités Incontournables à Casablanca",
+      "description": "Les expériences à ne pas manquer à Casablanca"
+    },
+    "activities": {
+      "hassan2": {
+        "title": "Visiter la Mosquée Hassan II",
+        "description": "Découvrez l'un des monuments les plus impressionnants du monde : salle de prière monumentale, décorée à la main, esplanade face à l'Atlantique, minaret le plus haut du monde (210 m), possibilité de visites guidées. Un lieu spectaculaire, mêlant spiritualité, architecture et vues panoramiques."
+      },
+      "sacrecoeur": {
+        "title": "Explorer l'espace Sacré-Cœur",
+        "description": "Pénétrez dans un monument surprenant, mêlant style néo-gothique et art déco : espace culturel et artistique, expositions, installations et événements, un cadre photogénique unique. Une parenthèse calme et artistique au cœur de la ville."
+      },
+      "judaisme": {
+        "title": "Découvrir le Musée du Judaïsme Marocain",
+        "description": "Un musée exceptionnel dans le monde arabe : 2 000 ans d'histoire judéo-marocaine, objets religieux, mobilier, archives, reconstitutions d'espaces traditionnels. Une visite riche et émouvante sur un patrimoine essentiel du Maroc."
+      },
+      "medina": {
+        "title": "Se perdre dans l'Ancienne Médina",
+        "description": "Vivez Casablanca comme un local : souks, ruelles animées et artisans, atmosphère traditionnelle, proximité avec La Sqala, un site historique emblématique. Une plongée dans la Casablanca d'autrefois."
+      },
+      "marche": {
+        "title": "Faire un tour au Marché Central",
+        "description": "Un lieu vivant et gourmand : poisson frais grillé, produits locaux, fleurs, épices, restaurants simples et authentiques. Pour goûter Casablanca et vivre son ambiance quotidienne."
+      },
+      "villa": {
+        "title": "Visiter la Villa des Arts",
+        "description": "Un espace culturel incontournable : musée d'art moderne et contemporain, architecture Art déco remarquable, expositions régulières d'artistes marocains et internationaux. Pour découvrir la scène artistique casablancaise dans un lieu élégant et chargé d'histoire."
+      },
+      "parc": {
+        "title": "Se promener au Parc de la Ligue Arabe",
+        "description": "Un espace parfait pour se détendre : allées ombragées, pelouses, fontaines, aires de jeux et cafés, atmosphère apaisante en plein centre-ville. Idéal pour marcher, courir, lire ou profiter d'une pause nature."
+      },
+      "place": {
+        "title": "Découvrir la Place des Nations Unies & l'Esplanade du Ritz",
+        "description": "Le point de rencontre entre la ville ancienne et la Casablanca moderne : architecture contemporaine, lieux emblématiques et animations, accès direct au tramway et aux grandes avenues. Un spot vibrant, parfait pour ressentir l'énergie de la ville et observer son rythme."
+      }
+    }
+  },
+  "pleinAirMer": {
+    "breadcrumb": {
+      "activities": "Activités",
+      "pleinAirMer": "Plein air & mer"
+    },
+    "hero": {
+      "badge": "Nature & Sport",
+      "title": "Plein air & Mer",
+      "description": "Découvrez les espaces verts, parcs et activités de plein air à Casablanca"
+    },
+    "activities": {
+      "anfa": {
+        "title": "Anfa Park",
+        "description": "Un vaste parc moderne au cœur de Casa Anfa : grandes pelouses pour pique-nique, sentiers de marche & pistes cyclables, espaces sportifs & zones familiales, un environnement calme et verdoyant. Parfait pour : jogging, yoga, pique-nique, détente."
+      },
+      "ligue": {
+        "title": "Parc de la Ligue Arabe",
+        "description": "Le plus grand parc historique de Casablanca : allées ombragées et jardins rénovés, aires de jeux & cafés en plein air, parc idéal pour familles et sportifs. Parfait pour : balade, lecture, sport léger."
+      },
+      "velodrome": {
+        "title": "Vélodrome",
+        "description": "Un lieu emblématique pour faire du sport en plein air : piste circulaire unique dans la ville, running, vélo, roller, terrains de jeux et ambiance sportive. Parfait pour : entraînements, activités sociales, sessions sportives."
+      },
+      "skatepark": {
+        "title": "Skatepark Rachidi",
+        "description": "Le spot préféré des riders casablancais : modules pour skate, trottinette, BMX, atmosphère street dynamique, ouvert et accessible à tous. Parfait pour : amateurs de glisse, photos urbaines, sessions freestyle."
+      }
+    },
+    "cta": {
+      "badge": "Découvrir",
+      "title": "Explorez le Plein Air",
+      "description": "Profitez des espaces verts et activités de plein air à Casablanca",
+      "button": "Voir plus d'activités"
     }
   }
 }

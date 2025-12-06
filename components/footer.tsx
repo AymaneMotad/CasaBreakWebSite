@@ -149,11 +149,6 @@ export function Footer() {
                   {t("seaBeaches")}
                 </a>
               </li>
-              <li>
-                <a href={`/${currentLocale}/decouvrir/itineraires`} className="text-white/60 hover:text-[#00a346] transition-colors duration-200 text-sm">
-                  {t("itineraries")}
-                </a>
-              </li>
             </ul>
           </div>
 
