@@ -143,3 +143,4 @@ After scraping, visit `/planifier/hebergement` to see all accommodations fetched
 - All accommodations are set to `is_published: true` by default
 - Featured accommodations can be marked manually in Supabase dashboard
 
+

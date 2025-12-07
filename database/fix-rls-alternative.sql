@@ -50,3 +50,4 @@ CREATE POLICY "Public can view published visit packages"
   TO anon, authenticated
   USING (is_published = true);
 
+
