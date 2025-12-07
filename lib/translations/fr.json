@@ -903,5 +903,550 @@
       "description": "Profitez des espaces verts et activités de plein air à Casablanca",
       "button": "Voir plus d'activités"
     }
+  },
+  "planifier": {
+    "seDeplacer": {
+      "hero": {
+        "badge": "Transport",
+        "title": "Se déplacer à Casablanca",
+        "description": "Tous les moyens de transport pour explorer la ville facilement"
+      },
+      "tramway": {
+        "title": "Tramway (Casatramway)",
+        "description": "Réseau moderne et efficace pour se déplacer dans Casablanca",
+        "features": [
+          "2 lignes en service couvrant la ville",
+          "151 stations au total",
+          "Fréquence : toutes les 8 minutes",
+          "Ticket unique : 6 dirhams",
+          "Valable sur tout le réseau",
+          "Accessible aux personnes à mobilité réduite"
+        ],
+        "appName": "Casatramway Mobile",
+        "appDescription": "Application mobile gratuite disponible sur iOS et Android",
+        "appFeatures": [
+          "Planification de trajets",
+          "Horaires en temps réel",
+          "Information sur le trafic",
+          "E-boutique (en cours)"
+        ],
+        "downloadApp": "Télécharger l'app"
+      },
+      "bus": {
+        "title": "Bus (Casabus)",
+        "description": "Réseau de bus public desservant la métropole de Casablanca",
+        "features": [
+          "60 lignes couvrant 970 km",
+          "1 833 stations",
+          "700 bus modernes",
+          "Dessert Casablanca, Mohammedia et 16 communes",
+          "Accessible aux personnes à mobilité réduite",
+          "Flotte moderne et confortable"
+        ],
+        "pricing": [
+          "5 dirhams : trajets urbains",
+          "6 dirhams : trajets < 30 km",
+          "8 dirhams : trajets > 30 km"
+        ],
+        "stats2021": "Statistiques 2021",
+        "passengers": "Passagers",
+        "fleet": "Bus",
+        "distance": "Km parcourus"
+      },
+      "taxis": {
+        "title": "Taxis",
+        "description": "Deux types de taxis pour tous vos déplacements",
+        "petitsTaxis": {
+          "name": "Petits Taxis",
+          "details": [
+            "Couleur rouge à Casablanca",
+            "Circulation uniquement en ville",
+            "Maximum 3 passagers",
+            "Compteur obligatoire",
+            "Très économique et pratique"
+          ]
+        },
+        "grandsTaxis": {
+          "name": "Grands Taxis",
+          "details": [
+            "Trajets fixes entre villes",
+            "Partagés avec d'autres passagers",
+            "Idéal pour les déplacements interurbains",
+            "Prix négociable"
+          ]
+        }
+      },
+      "vtc": {
+        "title": "VTC & Location",
+        "description": "Options de transport privé et location de véhicules",
+        "careem": {
+          "name": "Careem",
+          "type": "VTC",
+          "details": [
+            "Application mobile (filiale Uber)",
+            "Réservation avec chauffeur",
+            "Paiement par carte ou espèces",
+            "Alternative pratique aux taxis"
+          ]
+        },
+        "carRental": {
+          "name": "Location de voiture",
+          "type": "Agences",
+          "details": [
+            "Plusieurs agences en ville et à l'aéroport",
+            "Flexibilité maximale",
+            "Permis de conduire international requis",
+            "Assurance recommandée"
+          ]
+        }
+      },
+      "labels": {
+        "characteristics": "Caractéristiques",
+        "pricing": "Tarifs",
+        "contact": "Contact",
+        "networkMap": "Carte du réseau",
+        "interactiveMap": "Plan interactif du réseau",
+        "mapDescription": "Visualisez les tracés des lignes de tramway et busway pour planifier vos trajets facilement",
+        "viewMap": "Voir la carte interactive"
+      }
+    },
+    "aeroport": {
+      "hero": {
+        "badge": "Transfert aéroport",
+        "title": "Aéroport → Centre-ville",
+        "description": "Tous les moyens de transport pour rejoindre le centre de Casablanca depuis l'aéroport Mohammed V"
+      },
+      "airportInfo": {
+        "name": "Aéroport International Mohammed V",
+        "distance": "30 km au sud de Casablanca",
+        "code": "CMN"
+      },
+      "train": {
+        "title": "Train (ONCF)",
+        "description": "Le moyen le plus économique et pratique pour rejoindre le centre-ville",
+        "details": [
+          "Gare à l'aéroport Mohammed V",
+          "Liaison directe vers Casa-Port (centre-ville)",
+          "Durée : environ 30 minutes",
+          "Départs fréquents toutes les heures",
+          "Confortable et ponctuel"
+        ],
+        "pricing": [
+          "2ème classe : ~35 dirhams",
+          "1ère classe : ~60 dirhams"
+        ],
+        "tip": "Le train est recommandé pour éviter les embouteillages"
+      },
+      "shuttle": {
+        "title": "Navette Aéroport",
+        "description": "Service de navette directe vers le centre-ville",
+        "details": [
+          "Départs réguliers depuis l'aéroport",
+          "Arrêts principaux : Casa-Port, Place Mohammed V",
+          "Durée : 45-60 minutes (selon le trafic)",
+          "Confortable avec espace bagages"
+        ],
+        "pricing": [
+          "Tarif unique : ~20-30 dirhams"
+        ],
+        "tip": "Vérifiez les horaires à l'avance"
+      },
+      "taxis": {
+        "title": "Taxis & VTC",
+        "description": "Transport privé pour plus de confort et flexibilité",
+        "grandsTaxis": {
+          "name": "Grands Taxis",
+          "details": [
+            "Taxis collectifs depuis l'aéroport",
+            "Prix fixe négociable",
+            "Partagé avec d'autres passagers",
+            "Durée : 30-45 minutes"
+          ],
+          "price": "~150-200 dirhams"
+        },
+        "petitsTaxis": {
+          "name": "Petits Taxis",
+          "details": [
+            "Taxis individuels (rouge)",
+            "Compteur obligatoire",
+            "Maximum 3 passagers",
+            "Plus économique en groupe"
+          ],
+          "price": "~200-300 dirhams"
+        },
+        "vtc": {
+          "name": "Careem / VTC",
+          "details": [
+            "Réservation via application",
+            "Prix fixe affiché à l'avance",
+            "Paiement par carte ou espèces",
+            "Service premium disponible"
+          ],
+          "price": "~250-400 dirhams"
+        },
+        "tip": "Négociez le prix avant de monter dans les grands taxis"
+      },
+      "carRental": {
+        "title": "Location de Voiture",
+        "description": "Agences de location disponibles à l'aéroport",
+        "details": [
+          "Plusieurs agences internationales (Hertz, Avis, Europcar, etc.)",
+          "Guichets dans le hall des arrivées",
+          "Réservation en ligne recommandée",
+          "Permis de conduire international requis",
+          "Assurance complète recommandée"
+        ],
+        "pricing": [
+          "À partir de ~300 dirhams/jour",
+          "Varie selon le type de véhicule et la durée"
+        ],
+        "tip": "Réservez à l'avance pour de meilleurs tarifs"
+      },
+      "facilities": {
+        "wifi": "WiFi gratuit",
+        "restaurants": "Restaurants & cafés",
+        "shops": "Boutiques duty-free",
+        "exchange": "Guichets de change",
+        "carRental": "Location de voitures",
+        "parking": "Parking longue durée"
+      },
+      "tips": {
+        "title": "Conseils pratiques",
+        "description": "Quelques informations utiles pour votre transfert",
+        "travelTime": {
+          "title": "Temps de trajet",
+          "content": "Prévoyez 30-60 minutes selon le moyen de transport et le trafic"
+        },
+        "payment": {
+          "title": "Paiement",
+          "content": "Dirhams marocains (MAD). Change disponible à l'aéroport"
+        },
+        "luggage": {
+          "title": "Bagages",
+          "content": "Tous les moyens de transport acceptent les bagages standards"
+        },
+        "destination": {
+          "title": "Destination",
+          "content": "Centre-ville : Place Mohammed V, Casa-Port, Corniche"
+        }
+      },
+      "labels": {
+        "information": "Informations",
+        "pricing": "Tarifs",
+        "contact": "Contact",
+        "practicalTip": "Conseil pratique",
+        "route": "Itinéraire",
+        "planRoute": "Planifiez votre itinéraire",
+        "routeDescription": "Utilisez Google Maps ou Waze pour calculer le temps de trajet en temps réel selon le trafic",
+        "openGoogleMaps": "Ouvrir dans Google Maps"
+      }
+    },
+    "infosPratiques": {
+      "hero": {
+        "badge": "Guide pratique",
+        "title": "Infos pratiques & conseils culturels",
+        "description": "Tout ce que vous devez savoir pour profiter pleinement de votre séjour à Casablanca"
+      },
+      "practicalInfo": {
+        "title": "Informations pratiques",
+        "description": "Les essentiels pour organiser votre séjour",
+        "openingHours": {
+          "title": "Horaires d'ouverture",
+          "items": [
+            "Commerces : 9h-20h (fermés le dimanche)",
+            "Restaurants : 12h-15h et 19h-23h",
+            "Banques : 8h30-16h30 (lun-ven)",
+            "Administrations : 8h-16h (lun-ven)"
+          ]
+        },
+        "currency": {
+          "title": "Monnaie & Paiements",
+          "items": [
+            "Monnaie : Dirham marocain (MAD)",
+            "Cartes bancaires acceptées dans la plupart des commerces",
+            "Distributeurs disponibles partout en ville",
+            "Pourboires : 10% dans les restaurants"
+          ]
+        },
+        "telecom": {
+          "title": "Télécommunications",
+          "items": [
+            "Indicatif : +212",
+            "WiFi gratuit dans la plupart des cafés et hôtels",
+            "Cartes SIM prépayées disponibles (Maroc Telecom, Orange, Inwi)",
+            "Couverture 4G/5G excellente en ville"
+          ]
+        },
+        "languages": {
+          "title": "Langues",
+          "items": [
+            "Arabe (officiel) et Darija (dialecte local)",
+            "Français très répandu",
+            "Anglais dans les zones touristiques",
+            "Espagnol parfois compris"
+          ]
+        },
+        "climate": {
+          "title": "Climat",
+          "items": [
+            "Méditerranéen : été chaud (25-30°C), hiver doux (15-20°C)",
+            "Meilleure période : avril-juin et septembre-novembre",
+            "Pluies rares, surtout en hiver",
+            "Vent côtier fréquent (Alizé)"
+          ]
+        },
+        "electricity": {
+          "title": "Électricité",
+          "items": [
+            "220V / 50Hz",
+            "Prises de type C et E (européennes)",
+            "Adaptateurs disponibles dans les commerces",
+            "Coupures rares mais possibles"
+          ]
+        }
+      },
+      "culturalTips": {
+        "badge": "Conseils culturels",
+        "title": "Respecter les coutumes locales",
+        "description": "Quelques conseils pour s'intégrer et respecter la culture marocaine",
+        "respect": {
+          "title": "Respect & Courtoisie",
+          "tips": [
+            "Saluer avec 'Salam alaykum' est très apprécié",
+            "Enlever ses chaussures dans les maisons et certains commerces",
+            "Respecter les horaires de prière (5 fois par jour)",
+            "Éviter les gestes d'affection en public"
+          ]
+        },
+        "gastronomy": {
+          "title": "Gastronomie",
+          "tips": [
+            "Manger avec la main droite (tradition)",
+            "Le thé à la menthe est un rituel social",
+            "Ramadan : respecter le jeûne en public",
+            "Goûter le couscous du vendredi (tradition)"
+          ]
+        },
+        "bargaining": {
+          "title": "Marchandage",
+          "tips": [
+            "Négociation normale dans les souks et marchés",
+            "Prix fixes dans les centres commerciaux",
+            "Rester courtois et souriant",
+            "Ne pas hésiter à partir si le prix ne convient pas"
+          ]
+        },
+        "photography": {
+          "title": "Photographie",
+          "tips": [
+            "Demander la permission avant de photographier les gens",
+            "Interdit dans les mosquées (sauf Hassan II)",
+            "Respecter les zones militaires et gouvernementales",
+            "Photos autorisées dans les espaces publics"
+          ]
+        }
+      },
+      "emergency": {
+        "title": "Numéros d'urgence",
+        "description": "En cas d'urgence, composez ces numéros",
+        "police": "Police",
+        "firefighters": "Pompiers",
+        "samu": "SAMU",
+        "gendarmerie": "Gendarmerie",
+        "tourism": "Tourisme"
+      },
+      "resources": {
+        "title": "Ressources utiles",
+        "tourismOffice": "Office National Marocain du Tourisme :",
+        "embassies": "Ambassades et consulats : vérifiez les coordonnées avant votre départ",
+        "insurance": "Assurance voyage recommandée pour les soins médicaux"
+      }
+    },
+    "ouLoger": {
+      "hero": {
+        "badge": "Guide quartiers",
+        "title": "Dans quel quartier loger ?",
+        "description": "Guide complet des meilleurs quartiers de Casablanca pour votre séjour"
+      },
+      "comparison": {
+        "budget": {
+          "title": "Budget",
+          "description": "Prix d'hébergement moyen par nuit"
+        },
+        "transport": {
+          "title": "Transport",
+          "description": "Facilité d'accès aux transports en commun"
+        },
+        "attractions": {
+          "title": "Attractions",
+          "description": "Proximité des sites touristiques"
+        },
+        "gastronomy": {
+          "title": "Gastronomie",
+          "description": "Nombre et variété de restaurants"
+        }
+      },
+      "neighborhoods": {
+        "centreVille": {
+          "name": "Centre-ville (Place Mohammed V)",
+          "description": "Le cœur historique et économique de Casablanca",
+          "highlights": [
+            "Proximité des monuments historiques",
+            "Accès facile aux transports en commun",
+            "Nombreux restaurants et cafés",
+            "Vie nocturne animée"
+          ],
+          "pros": [
+            "Central et bien desservi",
+            "Nombreux commerces et services",
+            "Accès facile à tous les quartiers",
+            "Atmosphère authentique"
+          ],
+          "cons": [
+            "Peut être bruyant",
+            "Prix d'hébergement plus élevés",
+            "Trafic dense en heures de pointe"
+          ],
+          "priceRange": "Moyen à élevé",
+          "bestFor": "Première visite, business, vie culturelle",
+          "transport": "Tramway, bus, taxis - excellent accès"
+        },
+        "corniche": {
+          "name": "Corniche (Aïn Diab)",
+          "description": "Quartier balnéaire moderne le long de l'océan Atlantique",
+          "highlights": [
+            "Vue sur l'océan",
+            "Plages et promenades",
+            "Restaurants de poisson",
+            "Ambiance détendue"
+          ],
+          "pros": [
+            "Cadre magnifique face à la mer",
+            "Nombreux hôtels de luxe",
+            "Plages accessibles",
+            "Quartier moderne et sécurisé"
+          ],
+          "cons": [
+            "Éloigné du centre historique",
+            "Prix d'hébergement élevés",
+            "Moins de transports en commun"
+          ],
+          "priceRange": "Élevé",
+          "bestFor": "Séjour détente, familles, romantique",
+          "transport": "Taxis, VTC - accès limité en transport public"
+        },
+        "maarif": {
+          "name": "Maârif",
+          "description": "Quartier commerçant et résidentiel populaire",
+          "highlights": [
+            "Grands centres commerciaux",
+            "Rue commerçante animée",
+            "Restaurants variés",
+            "Vie locale authentique"
+          ],
+          "pros": [
+            "Excellent pour le shopping",
+            "Prix d'hébergement raisonnables",
+            "Bien desservi par les transports",
+            "Quartier vivant et authentique"
+          ],
+          "cons": [
+            "Peut être animé le soir",
+            "Trafic dense",
+            "Moins touristique"
+          ],
+          "priceRange": "Moyen",
+          "bestFor": "Shopping, budget moyen, expérience locale",
+          "transport": "Tramway, bus, taxis - bon accès"
+        },
+        "anfa": {
+          "name": "Anfa",
+          "description": "Quartier résidentiel chic et moderne",
+          "highlights": [
+            "Quartier résidentiel haut de gamme",
+            "Villas et résidences modernes",
+            "Calme et sécurisé",
+            "Proximité de la Corniche"
+          ],
+          "pros": [
+            "Quartier calme et sécurisé",
+            "Proximité de la mer",
+            "Infrastructure moderne",
+            "Bien entretenu"
+          ],
+          "cons": [
+            "Éloigné du centre-ville",
+            "Prix d'hébergement élevés",
+            "Moins de transports en commun",
+            "Moins d'animation"
+          ],
+          "priceRange": "Élevé",
+          "bestFor": "Familles, séjour longue durée, calme",
+          "transport": "Taxis, VTC - accès limité"
+        },
+        "hayHassani": {
+          "name": "Hay Hassani",
+          "description": "Quartier résidentiel moderne et bien équipé",
+          "highlights": [
+            "Quartier résidentiel moderne",
+            "Bien équipé en commerces",
+            "Proximité de l'aéroport",
+            "Prix abordables"
+          ],
+          "pros": [
+            "Prix d'hébergement abordables",
+            "Proximité de l'aéroport",
+            "Quartier moderne",
+            "Bien équipé"
+          ],
+          "cons": [
+            "Éloigné du centre-ville",
+            "Moins touristique",
+            "Trajets plus longs vers les attractions"
+          ],
+          "priceRange": "Abordable",
+          "bestFor": "Budget serré, transit aéroport, séjour longue durée",
+          "transport": "Bus, taxis - accès modéré"
+        },
+        "oasis": {
+          "name": "Oasis / 2 Mars",
+          "description": "Quartier central animé avec une vie locale authentique",
+          "highlights": [
+            "Vie locale authentique",
+            "Marchés traditionnels",
+            "Restaurants populaires",
+            "Prix abordables"
+          ],
+          "pros": [
+            "Prix très abordables",
+            "Expérience locale authentique",
+            "Marchés et commerces locaux",
+            "Bien desservi"
+          ],
+          "cons": [
+            "Moins touristique",
+            "Peut être bruyant",
+            "Infrastructure moins moderne"
+          ],
+          "priceRange": "Très abordable",
+          "bestFor": "Budget serré, expérience authentique, voyageurs indépendants",
+          "transport": "Tramway, bus, taxis - bon accès"
+        }
+      },
+      "labels": {
+        "highlights": "Points forts",
+        "advantages": "Avantages",
+        "pointsToNote": "Points à noter",
+        "practicalInfo": "Informations pratiques",
+        "price": "Prix",
+        "idealFor": "Idéal pour",
+        "transport": "Transport",
+        "seeInNeighborhood": "À voir dans le quartier",
+        "recommendation": "Recommandation",
+        "needHelp": "Besoin d'aide pour choisir ?",
+        "recommendationText": "Pour une première visite, le centre-ville ou Maârif offrent le meilleur compromis entre accessibilité, prix et expérience. Pour un séjour détente, la Corniche est idéale.",
+        "seeAccommodations": "Voir les hébergements"
+      }
+    }
   }
 }
