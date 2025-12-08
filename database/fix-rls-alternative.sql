@@ -51,3 +51,4 @@ CREATE POLICY "Public can view published visit packages"
   USING (is_published = true);
 
 
+

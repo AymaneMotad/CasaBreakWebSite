@@ -144,3 +144,4 @@ After scraping, visit `/planifier/hebergement` to see all accommodations fetched
 - Featured accommodations can be marked manually in Supabase dashboard
 
 
+

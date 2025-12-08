@@ -16,80 +16,129 @@ export default function InfosPratiquesPage() {
   const params = useParams()
   const locale = params.locale as string
   const t = useTranslations('navigation')
-  const tp = useTranslations('planifier.infosPratiques')
 
   const practicalInfo = [
     {
       icon: Clock,
-      title: tp('practicalInfo.openingHours.title'),
+      title: "Horaires d'ouverture",
       color: "#00a346",
-      items: tp.raw('practicalInfo.openingHours.items')
+      items: [
+        "Commerces : 9h-20h (fermés le dimanche)",
+        "Restaurants : 12h-15h et 19h-23h",
+        "Banques : 8h30-16h30 (lun-ven)",
+        "Administrations : 8h-16h (lun-ven)"
+      ]
     },
     {
       icon: CreditCard,
-      title: tp('practicalInfo.currency.title'),
+      title: "Monnaie & Paiements",
       color: "#0066b2",
-      items: tp.raw('practicalInfo.currency.items')
+      items: [
+        "Monnaie : Dirham marocain (MAD)",
+        "Cartes bancaires acceptées dans la plupart des commerces",
+        "Distributeurs disponibles partout en ville",
+        "Pourboires : 10% dans les restaurants"
+      ]
     },
     {
       icon: Phone,
-      title: tp('practicalInfo.telecom.title'),
+      title: "Télécommunications",
       color: "#c10000",
-      items: tp.raw('practicalInfo.telecom.items')
+      items: [
+        "Indicatif : +212",
+        "WiFi gratuit dans la plupart des cafés et hôtels",
+        "Cartes SIM prépayées disponibles (Maroc Telecom, Orange, Inwi)",
+        "Couverture 4G/5G excellente en ville"
+      ]
     },
     {
       icon: Languages,
-      title: tp('practicalInfo.languages.title'),
+      title: "Langues",
       color: "#00a346",
-      items: tp.raw('practicalInfo.languages.items')
+      items: [
+        "Arabe (officiel) et Darija (dialecte local)",
+        "Français très répandu",
+        "Anglais dans les zones touristiques",
+        "Espagnol parfois compris"
+      ]
     },
     {
       icon: Sun,
-      title: tp('practicalInfo.climate.title'),
+      title: "Climat",
       color: "#ffd700",
-      items: tp.raw('practicalInfo.climate.items')
+      items: [
+        "Méditerranéen : été chaud (25-30°C), hiver doux (15-20°C)",
+        "Meilleure période : avril-juin et septembre-novembre",
+        "Pluies rares, surtout en hiver",
+        "Vent côtier fréquent (Alizé)"
+      ]
     },
     {
       icon: Plug,
-      title: tp('practicalInfo.electricity.title'),
+      title: "Électricité",
       color: "#0066b2",
-      items: tp.raw('practicalInfo.electricity.items')
+      items: [
+        "220V / 50Hz",
+        "Prises de type C et E (européennes)",
+        "Adaptateurs disponibles dans les commerces",
+        "Coupures rares mais possibles"
+      ]
     }
   ]
 
   const culturalTips = [
     {
       icon: Heart,
-      title: tp('culturalTips.respect.title'),
+      title: "Respect & Courtoisie",
       color: "#c10000",
-      tips: tp.raw('culturalTips.respect.tips')
+      tips: [
+        "Saluer avec 'Salam alaykum' est très apprécié",
+        "Enlever ses chaussures dans les maisons et certains commerces",
+        "Respecter les horaires de prière (5 fois par jour)",
+        "Éviter les gestes d'affection en public"
+      ]
     },
     {
       icon: Utensils,
-      title: tp('culturalTips.gastronomy.title'),
+      title: "Gastronomie",
       color: "#00a346",
-      tips: tp.raw('culturalTips.gastronomy.tips')
+      tips: [
+        "Manger avec la main droite (tradition)",
+        "Le thé à la menthe est un rituel social",
+        "Ramadan : respecter le jeûne en public",
+        "Goûter le couscous du vendredi (tradition)"
+      ]
     },
     {
       icon: ShoppingBag,
-      title: tp('culturalTips.bargaining.title'),
+      title: "Marchandage",
       color: "#0066b2",
-      tips: tp.raw('culturalTips.bargaining.tips')
+      tips: [
+        "Négociation normale dans les souks et marchés",
+        "Prix fixes dans les centres commerciaux",
+        "Rester courtois et souriant",
+        "Ne pas hésiter à partir si le prix ne convient pas"
+      ]
     },
     {
       icon: Users,
-      title: tp('culturalTips.photography.title'),
+      title: "Photographie",
       color: "#ffd700",
-      tips: tp.raw('culturalTips.photography.tips')
+      tips: [
+        "Demander la permission avant de photographier les gens",
+        "Interdit dans les mosquées (sauf Hassan II)",
+        "Respecter les zones militaires et gouvernementales",
+        "Photos autorisées dans les espaces publics"
+      ]
     }
   ]
 
   const emergencyContacts = [
-    { service: tp('emergency.police'), number: "19", icon: AlertCircle, color: "#c10000" },
-    { service: tp('emergency.firefighters'), number: "15", icon: AlertCircle, color: "#c10000" },
-    { service: tp('emergency.samu'), number: "15", icon: Heart, color: "#c10000" },
-    { service: tp('emergency.gendarmerie'), number: "177", icon: AlertCircle, color: "#0066b2" },
-    { service: tp('emergency.tourism'), number: "05 22 27 11 77", icon: Info, color: "#00a346" }
+    { service: "Police", number: "19", icon: AlertCircle, color: "#c10000" },
+    { service: "Pompiers", number: "15", icon: AlertCircle, color: "#c10000" },
+    { service: "SAMU", number: "15", icon: Heart, color: "#c10000" },
+    { service: "Gendarmerie", number: "177", icon: AlertCircle, color: "#0066b2" },
+    { service: "Tourisme", number: "05 22 27 11 77", icon: Info, color: "#00a346" }
   ]
 
   return (
@@ -117,13 +166,13 @@ export default function InfosPratiquesPage() {
           <div className="text-center mb-12">
             <div className="inline-flex items-center gap-2 px-4 py-2 rounded-full bg-[#0066b2]/10 border border-[#0066b2]/20 mb-6">
               <Info className="w-4 h-4 text-[#0066b2]" />
-              <span className="text-sm text-[#0066b2] font-bold">{tp('hero.badge')}</span>
+              <span className="text-sm text-[#0066b2] font-bold">Guide pratique</span>
             </div>
             <h1 className="text-5xl lg:text-6xl font-black text-[#1a1a1a] mb-4">
-              {tp('hero.title')}
+              Infos pratiques & <span className="bg-gradient-to-r from-[#00a346] to-[#0066b2] bg-clip-text text-transparent">conseils culturels</span>
             </h1>
             <p className="text-xl text-gray-600 max-w-3xl mx-auto">
-              {tp('hero.description')}
+              Tout ce que vous devez savoir pour profiter pleinement de votre séjour à Casablanca
             </p>
           </div>
         </div>
@@ -134,10 +183,10 @@ export default function InfosPratiquesPage() {
         <div className="max-w-7xl mx-auto px-6 lg:px-12">
           <div className="text-center mb-12">
             <h2 className="text-3xl lg:text-4xl font-black text-[#1a1a1a] mb-4">
-              {tp('practicalInfo.title')}
+              Informations pratiques
             </h2>
             <p className="text-gray-600 max-w-2xl mx-auto">
-              {tp('practicalInfo.description')}
+              Les essentiels pour organiser votre séjour
             </p>
           </div>
 
@@ -176,13 +225,13 @@ export default function InfosPratiquesPage() {
           <div className="text-center mb-12">
             <div className="inline-flex items-center gap-2 px-4 py-2 rounded-full bg-[#00a346]/10 border border-[#00a346]/20 mb-6">
               <Lightbulb className="w-4 h-4 text-[#00a346]" />
-              <span className="text-sm text-[#00a346] font-bold">{tp('culturalTips.badge')}</span>
+              <span className="text-sm text-[#00a346] font-bold">Conseils culturels</span>
             </div>
             <h2 className="text-3xl lg:text-4xl font-black text-[#1a1a1a] mb-4">
-              {tp('culturalTips.title')}
+              Respecter les coutumes locales
             </h2>
             <p className="text-gray-600 max-w-2xl mx-auto">
-              {tp('culturalTips.description')}
+              Quelques conseils pour s'intégrer et respecter la culture marocaine
             </p>
           </div>
 
@@ -218,10 +267,10 @@ export default function InfosPratiquesPage() {
         <div className="max-w-7xl mx-auto px-6 lg:px-12">
           <div className="text-center mb-12">
             <h2 className="text-3xl lg:text-4xl font-black text-[#1a1a1a] mb-4">
-              {tp('emergency.title')}
+              Numéros d'urgence
             </h2>
             <p className="text-gray-600 max-w-2xl mx-auto">
-              {tp('emergency.description')}
+              En cas d'urgence, composez ces numéros
             </p>
           </div>
 
@@ -258,20 +307,20 @@ export default function InfosPratiquesPage() {
                 </div>
                 <div>
                   <h3 className="text-2xl font-black text-[#1a1a1a] mb-3">
-                    {tp('resources.title')}
+                    Ressources utiles
                   </h3>
                   <ul className="space-y-2 text-gray-700">
                     <li className="flex items-center gap-2">
                       <MapPin className="w-4 h-4 text-[#00a346]" />
-                      <span>{tp('resources.tourismOffice')} <a href="https://www.visitmorocco.com" target="_blank" rel="noopener noreferrer" className="text-[#0066b2] hover:underline font-medium">visitmorocco.com</a></span>
+                      <span>Office National Marocain du Tourisme : <a href="https://www.visitmorocco.com" target="_blank" rel="noopener noreferrer" className="text-[#0066b2] hover:underline font-medium">visitmorocco.com</a></span>
                     </li>
                     <li className="flex items-center gap-2">
                       <Phone className="w-4 h-4 text-[#00a346]" />
-                      <span>{tp('resources.embassies')}</span>
+                      <span>Ambassades et consulats : vérifiez les coordonnées avant votre départ</span>
                     </li>
                     <li className="flex items-center gap-2">
                       <Info className="w-4 h-4 text-[#00a346]" />
-                      <span>{tp('resources.insurance')}</span>
+                      <span>Assurance voyage recommandée pour les soins médicaux</span>
                     </li>
                   </ul>
                 </div>

@@ -798,6 +798,7 @@ textarea:focus-visible {
    Inspired by traditional Moroccan zelij tiles with modern refinement
    ═══════════════════════════════════════════════════════════════ */
 .navbar-zellige {
+  position: relative;
   background: 
     /* Top edge subtle gradient accent */
     linear-gradient(180deg, rgba(0, 163, 70, 0.03) 0%, transparent 20%),
@@ -813,6 +814,19 @@ textarea:focus-visible {
   background-position: 0 0, 0 0, 0 0, 0 0, 0 0;
 }
 
+.navbar-zellige::before {
+  content: '';
+  position: absolute;
+  inset: 0;
+  background-image: url('/ZELIJ MAROC ROUGE VERT.png');
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+  opacity: 0.25;
+  z-index: -1;
+  pointer-events: none;
+}
+
 /* Enhanced zellige for scrolled state */
 .navbar-zellige.scrolled {
   background: 
@@ -822,6 +836,10 @@ textarea:focus-visible {
     url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='60' height='60' viewBox='0 0 60 60'%3E%3Cg%3E%3Cpath fill='%2300a346' fill-opacity='0.05' d='M30,8 L33,22 L30,18 L27,22 Z M30,52 L33,38 L30,42 L27,38 Z M8,30 L22,33 L18,30 L22,27 Z M52,30 L38,33 L42,30 L38,27 Z M15,15 L22,21 L18,18 L21,22 Z M45,15 L38,21 L42,18 L39,22 Z M15,45 L22,39 L18,42 L21,38 Z M45,45 L38,39 L42,42 L39,38 Z'/%3E%3Cpath fill='%23c10000' fill-opacity='0.03' d='M30,25 L35,30 L30,35 L25,30 Z'/%3E%3C/g%3E%3C/svg%3E"),
     rgba(255, 255, 255, 0.95);
   background-size: 100% 100%, 100% 100%, 100% 100%, 50px 50px, 100% 100%;
+}
+
+.navbar-zellige.scrolled::before {
+  opacity: 0.2;
 }
 
 /* ═══════════════════════════════════════════════════════════════
