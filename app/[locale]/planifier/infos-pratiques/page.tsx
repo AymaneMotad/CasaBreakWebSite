@@ -11,6 +11,7 @@ import {
   Utensils, ShoppingBag, Heart, AlertCircle, 
   CheckCircle, Lightbulb, Users, Languages
 } from "lucide-react"
+import { CHPMap } from "@/components/chp-map"
 
 export default function InfosPratiquesPage() {
   const params = useParams()
@@ -200,6 +201,9 @@ const emergencyContacts = [
           </div>
         </div>
       </section>
+
+      {/* CHP Map */}
+      <CHPMap />
 
       {/* Additional Resources */}
       <section className="py-16 bg-gradient-to-b from-white to-gray-50">
