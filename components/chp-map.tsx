@@ -112,13 +112,14 @@ export function CHPMap() {
   const [selectedCHP, setSelectedCHP] = useState<CHP | null>(null)
   const [hoveredCHP, setHoveredCHP] = useState<string | null>(null)
 
-  // Create Google Maps embed URL with all markers
+  // Create Google Maps embed URL with correct coordinates
   const createMapUrl = (selectedCHP?: CHP) => {
     if (selectedCHP) {
-      return `https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3323.123456789!2d${selectedCHP.longitude}!3d${selectedCHP.latitude}!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x0%3A0x0!2zMzPCsDM1JzI0LjAiTiA3wrAzNycxMi4wIlc!5e0!3m2!1sen!2sma!4v1234567890!5m2!1sen!2sma&q=${encodeURIComponent(selectedCHP.address)}&zoom=14`
+      // Use coordinates directly in the URL - this format works without API key
+      return `https://maps.google.com/maps?q=${selectedCHP.latitude},${selectedCHP.longitude}&hl=en&z=15&output=embed`
     }
-    // Default map showing all of Casablanca
-    return `https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3323.123456789!2d-7.620000!3d33.590000!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x0%3A0x0!2zMzPCsDM1JzI0LjAiTiA3wrAzNycxMi4wIlc!5e0!3m2!1sen!2sma!4v1234567890!5m2!1sen!2sma&q=Casablanca,+Morocco&zoom=12`
+    // Default map showing all of Casablanca (center coordinates)
+    return `https://maps.google.com/maps?q=33.5731,-7.5898&hl=en&z=12&output=embed`
   }
 
   return (
