@@ -635,14 +635,14 @@ export default function Can2025Page() {
           {/* Services Grid */}
           <div className="grid grid-cols-2 lg:grid-cols-4 gap-4 lg:gap-6">
             {[
-              { icon: Utensils, title: 'Restaurants', desc: '200+ adresses', href: `/${locale}/manger-sortir/restaurants`, color: '#00a346', image: 'https://images.unsplash.com/photo-1552566626-52f8b828add9?w=400&q=80' },
-              { icon: Coffee, title: 'Cafés', desc: 'Les meilleurs spots', href: `/${locale}/manger-sortir/cafes-brunchs`, color: '#0066b2', image: 'https://images.unsplash.com/photo-1495474472287-4d71bcdd2085?w=400&q=80' },
-              { icon: Hotel, title: 'Hébergement', desc: 'Hôtels & Riads', href: `/${locale}/planifier/hebergement`, color: '#ffd700', image: 'https://images.unsplash.com/photo-1566073771259-6a8506099945?w=400&q=80' },
-              { icon: Bus, title: 'Transports', desc: 'Se déplacer', href: `/${locale}/planifier/se-deplacer`, color: '#c10000', image: 'https://images.unsplash.com/photo-1544620347-c4fd4a3d5957?w=400&q=80' },
-              { icon: Camera, title: 'Monuments', desc: 'À ne pas manquer', href: `/${locale}/decouvrir/monuments`, color: '#00a346', image: 'https://images.unsplash.com/photo-1569383746724-6f1b882b8f46?w=400&q=80' },
-              { icon: Waves, title: 'Plages', desc: 'Corniche & Ain Diab', href: `/${locale}/decouvrir/mer-plages`, color: '#0066b2', image: 'https://images.unsplash.com/photo-1507525428034-b723cf961d3e?w=400&q=80' },
-              { icon: ShoppingBag, title: 'Shopping', desc: 'Malls & souks', href: `/${locale}/activites/shopping`, color: '#ffd700', image: 'https://images.unsplash.com/photo-1441986300917-64674bd600d8?w=400&q=80' },
-              { icon: Music, title: 'Nightlife', desc: 'Bars & clubs', href: `/${locale}/manger-sortir/bars-nightlife`, color: '#c10000', image: 'https://images.unsplash.com/photo-1514933651103-005eec06c04b?w=400&q=80' },
+              { icon: Utensils, title: 'Restaurants', desc: '200+ adresses', href: `/${locale}/manger-sortir/restaurants`, color: '#00a346', image: 'https://images.unsplash.com/photo-1517248135467-4c7edcad34c4?w=800&q=80' },
+              { icon: Coffee, title: 'Cafés', desc: 'Les meilleurs spots', href: `/${locale}/manger-sortir/cafes-brunchs`, color: '#0066b2', image: 'https://images.unsplash.com/photo-1501339847302-ac426a4a7cbb?w=800&q=80' },
+              { icon: Hotel, title: 'Hébergement', desc: 'Hôtels & Riads', href: `/${locale}/planifier/hebergement`, color: '#ffd700', image: 'https://images.unsplash.com/photo-1566073771259-6a8506099945?w=800&q=80' },
+              { icon: Bus, title: 'Transports', desc: 'Se déplacer', href: `/${locale}/planifier/se-deplacer`, color: '#c10000', image: 'https://images.unsplash.com/photo-1558618666-fcd25c85cd64?w=800&q=80' },
+              { icon: Camera, title: 'Monuments', desc: 'À ne pas manquer', href: `/${locale}/decouvrir/monuments`, color: '#00a346', image: 'https://images.unsplash.com/photo-1696259629194-5411989d6675?w=800&q=80' },
+              { icon: Waves, title: 'Plages', desc: 'Corniche & Ain Diab', href: `/${locale}/decouvrir/mer-plages`, color: '#0066b2', image: 'https://images.unsplash.com/photo-1505142468610-359e7d316be0?w=800&q=80' },
+              { icon: ShoppingBag, title: 'Shopping', desc: 'Malls & souks', href: `/${locale}/activites/shopping`, color: '#ffd700', image: 'https://images.unsplash.com/photo-1441986300917-64674bd600d8?w=800&q=80' },
+              { icon: Music, title: 'Nightlife', desc: 'Bars & clubs', href: `/${locale}/manger-sortir/bars-nightlife`, color: '#c10000', image: 'https://images.unsplash.com/photo-1514933651103-005eec06c04b?w=800&q=80' },
             ].map((item, i) => (
               <Link 
                 key={i}
