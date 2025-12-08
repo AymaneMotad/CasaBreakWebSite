@@ -139,7 +139,7 @@ function MoroccanPatternBg() {
 }
 
 // Stadium Bento Card
-function StadiumBentoCard({ city, stadium, image, capacity, matches, isLarge = false, accentColor = '#00a346' }: {
+function StadiumBentoCard({ city, stadium, image, capacity, matches, isLarge = false, accentColor = '#00a346', imageClass = '' }: {
   city: string
   stadium: string
   image: string
@@ -147,13 +147,14 @@ function StadiumBentoCard({ city, stadium, image, capacity, matches, isLarge = f
   matches: string
   isLarge?: boolean
   accentColor?: string
+  imageClass?: string
 }) {
   return (
     <div className="group relative overflow-hidden rounded-3xl shadow-xl h-full">
       <img 
         src={image} 
         alt={stadium}
-        className="w-full h-full object-cover group-hover:scale-110 transition-transform duration-700"
+        className={`w-full h-full object-cover group-hover:scale-110 transition-transform duration-700 ${imageClass}`}
       />
       
       {/* Gradient overlay */}
@@ -452,8 +453,8 @@ export default function Can2025Page() {
             </div>
             
             {/* Agadir - Full width on mobile */}
-            <div className="col-span-6 lg:col-span-12 h-[250px] lg:h-[280px]">
-              <StadiumBentoCard {...hostCities[5]} />
+            <div className="col-span-6 lg:col-span-12 h-[300px] lg:h-[400px]">
+              <StadiumBentoCard {...hostCities[5]} imageClass="object-center" />
             </div>
           </div>
         </div>
