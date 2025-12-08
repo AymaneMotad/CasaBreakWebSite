@@ -56,7 +56,7 @@ export default function InfosPratiquesPage() {
       title: "Langues",
       color: "#00a346",
       items: [
-        "Arabe (officiel) et Darija (dialecte local)",
+        "Arabe (officiel) et Amazigh (officiel), et Darija (dialecte local)",
         "Français très répandu",
         "Anglais dans les zones touristiques",
         "Espagnol parfois compris"
@@ -68,8 +68,6 @@ export default function InfosPratiquesPage() {
       color: "#ffd700",
       items: [
         "Méditerranéen : été chaud (25-30°C), hiver doux (15-20°C)",
-        "Meilleure période : avril-juin et septembre-novembre",
-        "Pluies rares, surtout en hiver",
         "Vent côtier fréquent (Alizé)"
       ]
     },
@@ -80,60 +78,12 @@ export default function InfosPratiquesPage() {
       items: [
         "220V / 50Hz",
         "Prises de type C et E (européennes)",
-        "Adaptateurs disponibles dans les commerces",
-        "Coupures rares mais possibles"
+        "Adaptateurs disponibles dans les commerces"
       ]
     }
   ]
 
-  const culturalTips = [
-    {
-      icon: Heart,
-      title: "Respect & Courtoisie",
-      color: "#c10000",
-      tips: [
-        "Saluer avec 'Salam alaykum' est très apprécié",
-        "Enlever ses chaussures dans les maisons et certains commerces",
-        "Respecter les horaires de prière (5 fois par jour)",
-        "Éviter les gestes d'affection en public"
-      ]
-    },
-    {
-      icon: Utensils,
-      title: "Gastronomie",
-      color: "#00a346",
-      tips: [
-        "Manger avec la main droite (tradition)",
-        "Le thé à la menthe est un rituel social",
-        "Ramadan : respecter le jeûne en public",
-        "Goûter le couscous du vendredi (tradition)"
-      ]
-    },
-    {
-      icon: ShoppingBag,
-      title: "Marchandage",
-      color: "#0066b2",
-      tips: [
-        "Négociation normale dans les souks et marchés",
-        "Prix fixes dans les centres commerciaux",
-        "Rester courtois et souriant",
-        "Ne pas hésiter à partir si le prix ne convient pas"
-      ]
-    },
-    {
-      icon: Users,
-      title: "Photographie",
-      color: "#ffd700",
-      tips: [
-        "Demander la permission avant de photographier les gens",
-        "Interdit dans les mosquées (sauf Hassan II)",
-        "Respecter les zones militaires et gouvernementales",
-        "Photos autorisées dans les espaces publics"
-      ]
-    }
-  ]
-
-  const emergencyContacts = [
+const emergencyContacts = [
     { service: "Police", number: "19", icon: AlertCircle, color: "#c10000" },
     { service: "Pompiers", number: "15", icon: AlertCircle, color: "#c10000" },
     { service: "SAMU", number: "15", icon: Heart, color: "#c10000" },
@@ -169,7 +119,7 @@ export default function InfosPratiquesPage() {
               <span className="text-sm text-[#0066b2] font-bold">Guide pratique</span>
             </div>
             <h1 className="text-5xl lg:text-6xl font-black text-[#1a1a1a] mb-4">
-              Infos pratiques & <span className="bg-gradient-to-r from-[#00a346] to-[#0066b2] bg-clip-text text-transparent">conseils culturels</span>
+              Infos pratiques
             </h1>
             <p className="text-xl text-gray-600 max-w-3xl mx-auto">
               Tout ce que vous devez savoir pour profiter pleinement de votre séjour à Casablanca
@@ -217,57 +167,12 @@ export default function InfosPratiquesPage() {
         </div>
       </section>
 
-      {/* Cultural Tips */}
-      <section className="py-16 bg-gradient-to-b from-gray-50 to-white relative overflow-hidden">
-        <div className="absolute inset-0 bg-gradient-to-br from-[#fef7ed] via-[#f0fdf4] to-[#f0f9ff] opacity-30" />
-        
-        <div className="max-w-7xl mx-auto px-6 lg:px-12 relative z-10">
-          <div className="text-center mb-12">
-            <div className="inline-flex items-center gap-2 px-4 py-2 rounded-full bg-[#00a346]/10 border border-[#00a346]/20 mb-6">
-              <Lightbulb className="w-4 h-4 text-[#00a346]" />
-              <span className="text-sm text-[#00a346] font-bold">Conseils culturels</span>
-            </div>
-            <h2 className="text-3xl lg:text-4xl font-black text-[#1a1a1a] mb-4">
-              Respecter les coutumes locales
-            </h2>
-            <p className="text-gray-600 max-w-2xl mx-auto">
-              Quelques conseils pour s'intégrer et respecter la culture marocaine
-            </p>
-          </div>
-
-          <div className="grid md:grid-cols-2 gap-6">
-            {culturalTips.map((tip, i) => (
-              <div 
-                key={i}
-                className="group p-8 rounded-3xl bg-white border-2 border-gray-100 hover:border-gray-200 hover:shadow-xl transition-all"
-              >
-                <div 
-                  className="w-16 h-16 rounded-2xl flex items-center justify-center mb-6 transition-transform group-hover:scale-110"
-                  style={{ backgroundColor: `${tip.color}15` }}
-                >
-                  <tip.icon className="w-8 h-8" style={{ color: tip.color }} />
-                </div>
-                <h3 className="text-2xl font-black text-[#1a1a1a] mb-4">{tip.title}</h3>
-                <ul className="space-y-3">
-                  {tip.tips.map((item, j) => (
-                    <li key={j} className="flex items-start gap-3 text-gray-700">
-                      <div className="w-2 h-2 rounded-full mt-2 flex-shrink-0" style={{ backgroundColor: tip.color }} />
-                      <span>{item}</span>
-                    </li>
-                  ))}
-                </ul>
-              </div>
-            ))}
-          </div>
-        </div>
-      </section>
-
-      {/* Emergency Contacts */}
+{/* Emergency Contacts */}
       <section className="py-16 bg-white">
         <div className="max-w-7xl mx-auto px-6 lg:px-12">
           <div className="text-center mb-12">
             <h2 className="text-3xl lg:text-4xl font-black text-[#1a1a1a] mb-4">
-              Numéros d'urgence
+              Numéros utile
             </h2>
             <p className="text-gray-600 max-w-2xl mx-auto">
               En cas d'urgence, composez ces numéros
