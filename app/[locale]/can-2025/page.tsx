@@ -242,10 +242,10 @@ export default function Can2025Page() {
         </div>
         
         {/* Hero Content */}
-        <div className="relative z-10 w-full max-w-[1800px] mx-auto px-6 lg:px-16 pt-32 pb-20">
+        <div className="relative z-10 w-full max-w-[1800px] mx-auto px-6 lg:px-16 pt-24 pb-20">
           <div className="text-center">
             {/* Top Badge */}
-            <div className="inline-flex items-center gap-3 px-5 py-2.5 rounded-full bg-gradient-to-r from-[#00a346] to-[#006633] text-white shadow-lg shadow-[#00a346]/25 mb-8 animate-fade-in-up">
+            <div className="inline-flex items-center gap-3 px-5 py-2.5 rounded-full bg-gradient-to-r from-[#00a346] to-[#006633] text-white shadow-lg shadow-[#00a346]/25 mb-6 animate-fade-in-up">
               <span className="relative flex h-2 w-2">
                 <span className="animate-ping absolute inline-flex h-full w-full rounded-full bg-white opacity-75"></span>
                 <span className="relative inline-flex rounded-full h-2 w-2 bg-white"></span>
@@ -254,28 +254,25 @@ export default function Can2025Page() {
             </div>
             
             {/* Main Title */}
-            <h1 className="text-5xl sm:text-7xl lg:text-8xl xl:text-9xl font-black leading-[0.85] tracking-tight mb-8 animate-fade-in-up animation-delay-200">
+            <h1 className="text-4xl sm:text-6xl lg:text-7xl xl:text-8xl font-black leading-[0.9] tracking-tight mb-6 animate-fade-in-up animation-delay-200">
               <span className="block text-gray-900">COUPE D'AFRIQUE</span>
               <span className="block bg-gradient-to-r from-[#00a346] via-[#ffd700] to-[#c10000] bg-clip-text text-transparent">
                 DES NATIONS
               </span>
-              <span className="block mt-2 text-4xl sm:text-5xl lg:text-6xl text-gray-600 font-bold">
-                MAROC · 2025
-              </span>
             </h1>
             
-            {/* Subtitle */}
-            <p className="text-lg sm:text-xl text-gray-500 mb-16 max-w-2xl mx-auto animate-fade-in-up animation-delay-400">
-              Le plus grand événement footballistique du continent africain arrive au Royaume du Maroc
-            </p>
-            
-            {/* Epic Countdown */}
-            <div className="mb-16 animate-fade-in-up animation-delay-600">
-              <p className="text-sm text-gray-500 uppercase tracking-[0.3em] mb-6 font-medium">Coup d'envoi dans</p>
+            {/* Epic Countdown - Moved up for visibility */}
+            <div className="mb-8 animate-fade-in-up animation-delay-400">
+              <p className="text-xs sm:text-sm text-gray-500 uppercase tracking-[0.3em] mb-4 font-medium">Coup d'envoi dans</p>
               <div className="flex justify-center">
                 <EpicCountdown />
               </div>
             </div>
+            
+            {/* Subtitle */}
+            <p className="text-base sm:text-lg text-gray-500 mb-8 max-w-2xl mx-auto animate-fade-in-up animation-delay-600">
+              Le plus grand événement footballistique du continent africain arrive au Royaume du Maroc
+            </p>
             
             {/* CTA */}
             <div className="flex flex-col sm:flex-row gap-4 justify-center animate-fade-in-up animation-delay-800">
