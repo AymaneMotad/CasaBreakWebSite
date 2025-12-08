@@ -201,12 +201,12 @@ export default function Can2025Page() {
   const locale = useLocale()
   
   const hostCities = [
-    { city: 'Casablanca', stadium: 'Mohammed V Stadium', image: 'https://images.unsplash.com/photo-1574629810360-7efbbe195018?w=1200&q=80', capacity: '45 000', matches: 'Finale', accentColor: '#00a346' },
-    { city: 'Rabat', stadium: 'Complexe Moulay Abdellah', image: 'https://images.unsplash.com/photo-1459865264687-595d652de67e?w=800&q=80', capacity: '52 000', matches: 'Demi-finale', accentColor: '#c10000' },
-    { city: 'Marrakech', stadium: 'Grand Stade de Marrakech', image: 'https://images.unsplash.com/photo-1551958219-acbc608c6377?w=800&q=80', capacity: '45 000', matches: 'Quarts', accentColor: '#ffd700' },
-    { city: 'Tanger', stadium: 'Stade Ibn Batouta', image: 'https://images.unsplash.com/photo-1486286701208-1d58e9338013?w=800&q=80', capacity: '65 000', matches: '3ème place', accentColor: '#0066b2' },
-    { city: 'Fès', stadium: 'Complexe Sportif de Fès', image: 'https://images.unsplash.com/photo-1522778526097-ce0a22ceb253?w=800&q=80', capacity: '45 000', matches: 'Poules', accentColor: '#00a346' },
-    { city: 'Agadir', stadium: 'Stade Adrar', image: 'https://images.unsplash.com/photo-1431324155629-1a6deb1dec8d?w=800&q=80', capacity: '45 000', matches: 'Poules', accentColor: '#c10000' },
+    { city: 'Casablanca', stadium: 'Stade Mohammed V', image: '/stadiums/mohammed-v-casablanca.jpg', capacity: '67 000', matches: '8 matchs', accentColor: '#00a346' },
+    { city: 'Rabat', stadium: 'Complexe Sportif Prince Moulay Abdellah', image: '/stadiums/moulay-abdellah-rabat.jpg', capacity: '68 000', matches: 'Finale', accentColor: '#c10000' },
+    { city: 'Marrakech', stadium: 'Grand Stade de Marrakech', image: '/stadiums/marrakech.jpg', capacity: '45 240', matches: '8 matchs', accentColor: '#ffd700' },
+    { city: 'Tanger', stadium: 'Grand Stade de Tanger', image: '/stadiums/tanger.jpg', capacity: '68 000', matches: '6 matchs', accentColor: '#0066b2' },
+    { city: 'Fès', stadium: 'Complexe Sportif de Fès', image: '/stadiums/fes.jpg', capacity: '45 000', matches: '4 matchs', accentColor: '#00a346' },
+    { city: 'Agadir', stadium: 'Grand Stade d\'Agadir', image: '/stadiums/agadir.jpg', capacity: '45 480', matches: '8 matchs', accentColor: '#c10000' },
   ]
 
   const teams = [
@@ -542,9 +542,10 @@ export default function Can2025Page() {
               </h2>
               
               <p className="text-lg text-gray-600 mb-8 leading-relaxed">
-                La capitale économique du Maroc vous ouvre ses portes. Avec le tout nouveau 
-                <strong className="text-gray-900"> Mohammed V Stadium</strong> et ses 45 000 places, 
-                vivez une expérience footballistique unique au monde.
+                La capitale économique du Maroc vous ouvre ses portes. Avec le 
+                <strong className="text-gray-900"> Stade Mohammed V</strong> et ses 67 000 places, 
+                vivez une expérience footballistique unique au monde. Le stade accueillera 8 matchs de la CAN 2025, 
+                dont le match pour la 3ème place.
               </p>
               
               {/* Stadium Card */}
@@ -554,13 +555,14 @@ export default function Can2025Page() {
                     <Building className="w-8 h-8 text-white" />
                   </div>
                   <div>
-                    <h3 className="text-2xl font-black text-gray-900">Mohammed V Stadium</h3>
-                    <p className="text-gray-600">45 000 places • Finale CAN 2025</p>
+                    <h3 className="text-2xl font-black text-gray-900">Stade Mohammed V</h3>
+                    <p className="text-gray-600">67 000 places • 8 matchs CAN 2025</p>
                   </div>
                 </div>
                 <p className="text-gray-600">
-                  Le plus grand stade d'Afrique, une enceinte monumentale qui accueillera 
-                  la finale de la plus grande compétition du continent.
+                  Le monument. Le "Donor", inauguré en 1955, reste l'un des théâtres les plus iconiques 
+                  du football africain. Dans le quartier Maârif, l'enceinte casablancaise accueillera huit affiches 
+                  de la CAN, fidèle à sa réputation d'arène incandescente et d'hôte des grands rendez-vous.
                 </p>
               </div>
               
