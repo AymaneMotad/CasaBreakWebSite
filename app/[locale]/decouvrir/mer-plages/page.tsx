@@ -4,7 +4,7 @@ import { Navigation } from "@/components/navigation"
 import { Footer } from "@/components/footer"
 import { Breadcrumb } from "@/components/breadcrumb"
 import { useTranslations, useLocale } from 'next-intl'
-import { Waves, Sparkles, ArrowRight, Umbrella, Surf, Sunset, TreePine } from "lucide-react"
+import { Waves, Sparkles, ArrowRight, Umbrella, Sunset, TreePine } from "lucide-react"
 
 export default function MerPlagesPage() {
   const t = useTranslations('merPlages')
@@ -31,7 +31,7 @@ export default function MerPlagesPage() {
       title: t("sections.surfSchools.title"),
       description: t("sections.surfSchools.description"),
       schools: t("sections.surfSchools.schools"),
-      icon: Surf,
+      icon: Waves,
       color: "#c10000"
     },
     {
