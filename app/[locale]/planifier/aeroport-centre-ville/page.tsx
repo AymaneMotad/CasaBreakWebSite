@@ -70,11 +70,9 @@ export default function AeroportCentreVillePage() {
           name: "Grands Taxis",
           details: [
             "Taxis collectifs depuis l'aéroport",
-            "Prix fixe négociable",
-            "Partagé avec d'autres passagers",
-            "Durée : 30-45 minutes"
+            "Partagé avec d'autres passagers"
           ],
-          price: "~150-200 dirhams"
+          price: null
         },
         {
           name: "Petits Taxis",
@@ -82,22 +80,12 @@ export default function AeroportCentreVillePage() {
             "Taxis individuels (rouge)",
             "Compteur obligatoire",
             "Maximum 3 passagers",
-            "Plus économique en groupe"
+            "Plus économique en groupe",
+            "Le prix dépend du compteur du taxi"
           ],
-          price: "~200-300 dirhams"
-        },
-        {
-          name: "Careem / VTC",
-          details: [
-            "Réservation via application",
-            "Prix fixe affiché à l'avance",
-            "Paiement par carte ou espèces",
-            "Service premium disponible"
-          ],
-          price: "~250-400 dirhams"
+          price: null
         }
-      ],
-      tip: "Négociez le prix avant de monter dans les grands taxis"
+      ]
     },
     {
       icon: Car,
@@ -303,9 +291,11 @@ export default function AeroportCentreVillePage() {
                                   </li>
                                 ))}
                               </ul>
-                              <div className="text-lg font-bold" style={{ color: option.color }}>
-                                {type.price}
-                              </div>
+                              {type.price && (
+                                <div className="text-lg font-bold" style={{ color: option.color }}>
+                                  {type.price}
+                                </div>
+                              )}
                             </div>
                           ))}
                         </div>
