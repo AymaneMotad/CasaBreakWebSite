@@ -377,7 +377,7 @@ export default function HomePage() {
             <Link href={`/${locale}/decouvrir/monuments`} className="col-span-12 lg:col-span-8 group">
               <div className="relative h-[400px] lg:h-[500px] rounded-[2rem] overflow-hidden shadow-xl">
                 <img 
-                  src="https://images.unsplash.com/photo-1569383746724-6f1b882b8f46?w=1200&q=80" 
+                  src="https://images.unsplash.com/photo-1696259629194-5411989d6675?w=1200&q=80" 
                   alt="Monuments de Casablanca"
                   className="w-full h-full object-cover group-hover:scale-105 transition-transform duration-700"
                 />
