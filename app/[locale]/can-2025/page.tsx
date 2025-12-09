@@ -230,7 +230,7 @@ export default function Can2025Page() {
         { date: '21 décembre', time: '20h00', team1: 'Maroc', team2: 'Comores', group: 'Groupe A', type: 'Phase de groupes' },
         { date: '26 décembre', time: '13h00', team1: 'Maroc', team2: 'Mali', group: 'Groupe A', type: 'Phase de groupes' },
         { date: '29 décembre', time: '18h30', team1: 'Zambie', team2: 'Maroc', group: 'Groupe A', type: 'Phase de groupes' },
-        { date: '4 janvier', time: '18h00', team1: '1er Groupe A', team2: '3 Groupe C/D', group: '8es de finale', type: 'Élimination directe' },
+        { date: '4 janvier', time: '18h00', team1: '1er Groupe A', team2: '3 Groupe C/D/2', group: '8es de finale', type: 'Élimination directe' },
         { date: '9 janvier', time: '20h30', team1: 'TBD', team2: 'TBD', group: 'Quart de finale', type: 'Élimination directe' },
         { date: '14 janvier', time: '20h30', team1: 'TBD', team2: 'TBD', group: '1/2 finale', type: 'Élimination directe' },
         { date: '18 janvier', time: '20h00', team1: 'TBD', team2: 'TBD', group: 'Finale', type: 'Finale' },
@@ -274,7 +274,7 @@ export default function Can2025Page() {
     {
       stadium: 'Stade Mohammed V',
       city: 'Casablanca',
-      capacity: '67 000',
+      capacity: '45 000',
       accentColor: '#00a346',
       matches: [
         { date: '22 décembre', time: '15h00', team1: 'Mali', team2: 'Zambie', group: 'Groupe A', type: 'Phase de groupes' },
