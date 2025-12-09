@@ -9,7 +9,7 @@ import {
   MapPin, Calendar, Users, Trophy, Star, ArrowRight, 
   ChevronDown, Sparkles, Globe, Building, Heart,
   Utensils, Coffee, Hotel, Bus, Play, ArrowUpRight,
-  Compass, Camera, Waves, ShoppingBag, Music
+  Compass, Camera, Waves, ShoppingBag, Music, Clock, Filter
 } from "lucide-react"
 
 // Epic Countdown Timer Component
@@ -218,6 +218,143 @@ export default function Can2025Page() {
     '🇬🇦 Gabon', '🇲🇿 Mozambique', '🇧🇯 Bénin', '🇹🇿 Tanzanie',
     '🇺🇬 Ouganda', '🇿🇼 Zimbabwe', '🇸🇩 Soudan', '🇬🇶 Guinée Éq.'
   ]
+
+  // Match program data from CAF website
+  const matchProgram = [
+    {
+      stadium: 'Complexe Sportif Prince Moulay Abdellah',
+      city: 'Rabat',
+      capacity: '68 000',
+      accentColor: '#c10000',
+      matches: [
+        { date: '21 décembre', time: '20h00', team1: 'Maroc', team2: 'Comores', group: 'Groupe A', type: 'Phase de groupes' },
+        { date: '26 décembre', time: '13h00', team1: 'Maroc', team2: 'Mali', group: 'Groupe A', type: 'Phase de groupes' },
+        { date: '29 décembre', time: '18h30', team1: 'Zambie', team2: 'Maroc', group: 'Groupe A', type: 'Phase de groupes' },
+        { date: '4 janvier', time: '18h00', team1: '1er Groupe A', team2: '3 Groupe C/D', group: '8es de finale', type: 'Élimination directe' },
+        { date: '9 janvier', time: '20h30', team1: 'TBD', team2: 'TBD', group: 'Quart de finale', type: 'Élimination directe' },
+        { date: '14 janvier', time: '20h30', team1: 'TBD', team2: 'TBD', group: '1/2 finale', type: 'Élimination directe' },
+        { date: '18 janvier', time: '20h00', team1: 'TBD', team2: 'TBD', group: 'Finale', type: 'Finale' },
+      ]
+    },
+    {
+      stadium: 'Stade Annexe Olympique',
+      city: 'Rabat',
+      capacity: '21 000',
+      accentColor: '#00a346',
+      matches: [
+        { date: '23 décembre', time: '21h00', team1: 'Tunisie', team2: 'Ouganda', group: 'Groupe C', type: 'Phase de groupes' },
+        { date: '27 décembre', time: '13h30', team1: 'Bénin', team2: 'Botswana', group: 'Groupe D', type: 'Phase de groupes' },
+        { date: '30 décembre', time: '17h00', team1: 'Tanzanie', team2: 'Tunisie', group: 'Groupe C', type: 'Phase de groupes' },
+      ]
+    },
+    {
+      stadium: 'Complexe Sportif Prince Héritier Moulay El Hassan',
+      city: 'Rabat',
+      capacity: '22 000',
+      accentColor: '#0066b2',
+      matches: [
+        { date: '24 décembre', time: '16h00', team1: 'Algérie', team2: 'Soudan', group: 'Groupe E', type: 'Phase de groupes' },
+        { date: '28 décembre', time: '18h30', team1: 'Algérie', team2: 'Burkina Faso', group: 'Groupe E', type: 'Phase de groupes' },
+        { date: '31 décembre', time: '17h00', team1: 'Guinée équatoriale', team2: 'Algérie', group: 'Groupe E', type: 'Phase de groupes' },
+        { date: '6 janvier', time: '17h00', team1: '1er Groupe E', team2: '2e Groupe D', group: '8es de finale', type: 'Élimination directe' },
+      ]
+    },
+    {
+      stadium: 'Stade El Barid',
+      city: 'Rabat',
+      capacity: '18 000',
+      accentColor: '#ffd700',
+      matches: [
+        { date: '23 décembre', time: '13h30', team1: 'RD Congo', team2: 'Bénin', group: 'Groupe D', type: 'Phase de groupes' },
+        { date: '27 décembre', time: '18h30', team1: 'Ouganda', team2: 'Tanzanie', group: 'Groupe C', type: 'Phase de groupes' },
+        { date: '30 décembre', time: '20h00', team1: 'Botswana', team2: 'RD Congo', group: 'Groupe D', type: 'Phase de groupes' },
+        { date: '4 janvier', time: '20h00', team1: '2e Groupe B', team2: '2e Groupe F', group: '8es de finale', type: 'Élimination directe' },
+      ]
+    },
+    {
+      stadium: 'Stade Mohammed V',
+      city: 'Casablanca',
+      capacity: '67 000',
+      accentColor: '#00a346',
+      matches: [
+        { date: '22 décembre', time: '15h00', team1: 'Mali', team2: 'Zambie', group: 'Groupe A', type: 'Phase de groupes' },
+        { date: '24 décembre', time: '13h30', team1: 'Burkina Faso', team2: 'Guinée équatoriale', group: 'Groupe E', type: 'Phase de groupes' },
+        { date: '26 décembre', time: '18h30', team1: 'Zambie', team2: 'Comores', group: 'Groupe A', type: 'Phase de groupes' },
+        { date: '28 décembre', time: '16h00', team1: 'Guinée équatoriale', team2: 'Soudan', group: 'Groupe E', type: 'Phase de groupes' },
+        { date: '29 décembre', time: '20h00', team1: 'Comores', team2: 'Mali', group: 'Groupe A', type: 'Phase de groupes' },
+        { date: '31 décembre', time: '17h00', team1: 'Soudan', team2: 'Burkina Faso', group: 'Groupe E', type: 'Phase de groupes' },
+        { date: '3 janvier', time: '20h00', team1: '2e A', team2: '2e C', group: '8es de finale', type: 'Élimination directe' },
+        { date: '17 janvier', time: '17h00', team1: 'TBD', team2: 'TBD', group: 'Match pour la 3e place', type: 'Petite finale' },
+      ]
+    },
+    {
+      stadium: 'Grand Stade d\'Agadir',
+      city: 'Agadir',
+      capacity: '45 480',
+      accentColor: '#c10000',
+      matches: [
+        { date: '22 décembre', time: '21h00', team1: 'Égypte', team2: 'Zimbabwe', group: 'Groupe B', type: 'Phase de groupes' },
+        { date: '24 décembre', time: '21h00', team1: 'Cameroun', team2: 'Gabon', group: 'Groupe F', type: 'Phase de groupes' },
+        { date: '26 décembre', time: '16h00', team1: 'Égypte', team2: 'Afrique du Sud', group: 'Groupe B', type: 'Phase de groupes' },
+        { date: '28 décembre', time: '13h30', team1: 'Gabon', team2: 'Mozambique', group: 'Groupe F', type: 'Phase de groupes' },
+        { date: '29 décembre', time: '17h00', team1: 'Angola', team2: 'Égypte', group: 'Groupe B', type: 'Phase de groupes' },
+        { date: '31 décembre', time: '20h00', team1: 'Mozambique', team2: 'Cameroun', group: 'Groupe F', type: 'Phase de groupes' },
+        { date: '5 janvier', time: '17h00', team1: '1er B', team2: '3e A/C/D', group: '8es de finale', type: 'Élimination directe' },
+        { date: '10 janvier', time: '20h00', team1: 'TBD', team2: 'TBD', group: 'Quart de finale', type: 'Élimination directe' },
+      ]
+    },
+    {
+      stadium: 'Complexe Sportif de Fès',
+      city: 'Fès',
+      capacity: '45 000',
+      accentColor: '#00a346',
+      matches: [
+        { date: '23 décembre', time: '18h30', team1: 'Nigeria', team2: 'Tanzanie', group: 'Groupe C', type: 'Phase de groupes' },
+        { date: '27 décembre', time: '21h00', team1: 'Nigeria', team2: 'Tunisie', group: 'Groupe C', type: 'Phase de groupes' },
+        { date: '29 décembre', time: '17h00', team1: 'Ouganda', team2: 'Nigeria', group: 'Groupe C', type: 'Phase de groupes' },
+        { date: '5 janvier', time: '20h00', team1: '1er C', team2: '3e A/B/F', group: '8es de finale', type: 'Élimination directe' },
+      ]
+    },
+    {
+      stadium: 'Grand Stade de Marrakech',
+      city: 'Marrakech',
+      capacity: '45 240',
+      accentColor: '#ffd700',
+      matches: [
+        { date: '22 décembre', time: '18h00', team1: 'Afrique du Sud', team2: 'Angola', group: 'Groupe B', type: 'Phase de groupes' },
+        { date: '24 décembre', time: '18h30', team1: 'Côte d\'Ivoire', team2: 'Mozambique', group: 'Groupe F', type: 'Phase de groupes' },
+        { date: '26 décembre', time: '13h30', team1: 'Angola', team2: 'Zimbabwe', group: 'Groupe B', type: 'Phase de groupes' },
+        { date: '28 décembre', time: '21h00', team1: 'Côte d\'Ivoire', team2: 'Cameroun', group: 'Groupe F', type: 'Phase de groupes' },
+        { date: '29 décembre', time: '17h00', team1: 'Zimbabwe', team2: 'Afrique du Sud', group: 'Groupe B', type: 'Phase de groupes' },
+        { date: '31 décembre', time: '20h00', team1: 'Gabon', team2: 'Côte d\'Ivoire', group: 'Groupe F', type: 'Phase de groupes' },
+        { date: '6 janvier', time: '20h00', team1: '1er F', team2: '2e E', group: '8es de finale', type: 'Élimination directe' },
+        { date: '10 janvier', time: '17h00', team1: 'TBD', team2: 'TBD', group: 'Quart de finale', type: 'Élimination directe' },
+      ]
+    },
+    {
+      stadium: 'Grand Stade de Tanger',
+      city: 'Tanger',
+      capacity: '68 000',
+      accentColor: '#0066b2',
+      matches: [
+        { date: '23 décembre', time: '16h00', team1: 'Sénégal', team2: 'Botswana', group: 'Groupe D', type: 'Phase de groupes' },
+        { date: '27 décembre', time: '16h00', team1: 'Sénégal', team2: 'RD Congo', group: 'Groupe D', type: 'Phase de groupes' },
+        { date: '30 décembre', time: '20h00', team1: 'Bénin', team2: 'Sénégal', group: 'Groupe D', type: 'Phase de groupes' },
+        { date: '3 janvier', time: '17h00', team1: '1er D', team2: '3e B/E/F', group: '8es de finale', type: 'Élimination directe' },
+        { date: '9 janvier', time: '17h00', team1: 'TBD', team2: 'TBD', group: 'Quart de finale', type: 'Élimination directe' },
+        { date: '14 janvier', time: '18h00', team1: 'TBD', team2: 'TBD', group: 'Demi-finale', type: 'Élimination directe' },
+      ]
+    },
+  ]
+
+  const [selectedStadium, setSelectedStadium] = useState<string | null>(null)
+  
+  // Set default stadium on mount
+  useEffect(() => {
+    if (matchProgram.length > 0) {
+      setSelectedStadium(matchProgram[0].stadium)
+    }
+  }, [])
   
   return (
     <main className="min-h-screen bg-[#fafaf8] overflow-hidden">
@@ -277,8 +414,16 @@ export default function Can2025Page() {
             {/* CTA */}
             <div className="flex flex-col sm:flex-row gap-4 justify-center animate-fade-in-up animation-delay-800">
               <a
-                href="#casablanca"
+                href="#programme"
                 className="group px-10 py-5 bg-gradient-to-r from-[#00a346] to-[#006633] text-white font-bold text-lg rounded-2xl hover:shadow-xl hover:shadow-[#00a346]/30 transition-all flex items-center justify-center gap-3"
+              >
+                <Calendar className="w-6 h-6" />
+                <span>Voir le programme</span>
+                <ArrowRight className="w-5 h-5 group-hover:translate-x-1 transition-transform" />
+              </a>
+              <a
+                href="#casablanca"
+                className="group px-10 py-5 bg-white text-gray-900 font-bold text-lg rounded-2xl hover:shadow-xl border-2 border-gray-200 transition-all flex items-center justify-center gap-3"
               >
                 <MapPin className="w-6 h-6" />
                 <span>Découvrir Casablanca</span>
@@ -516,6 +661,268 @@ export default function Can2025Page() {
             </div>
           </div>
         </div>
+      </section>
+      
+      {/* ═══════════════════════════════════════════════════════════════
+          MATCH PROGRAM - CONDENSED COLORFUL SCHEDULE
+      ═══════════════════════════════════════════════════════════════ */}
+      <section id="programme" className="py-16 lg:py-20 relative overflow-hidden bg-gradient-to-br from-gray-50 via-white to-gray-50">
+        {/* Colorful background accents */}
+        <div className="absolute top-0 left-0 w-[400px] h-[400px] bg-[#00a346]/10 rounded-full blur-[120px]" />
+        <div className="absolute top-0 right-0 w-[400px] h-[400px] bg-[#c10000]/10 rounded-full blur-[120px]" />
+        <div className="absolute bottom-0 left-1/2 w-[400px] h-[400px] bg-[#ffd700]/10 rounded-full blur-[120px]" />
+        
+        <div className="max-w-[1800px] mx-auto px-6 lg:px-16 relative z-10">
+          {/* Compact Header */}
+          <div className="text-center mb-8">
+            <div className="inline-flex items-center gap-2 px-4 py-2 rounded-full bg-gradient-to-r from-[#00a346] to-[#006633] text-white shadow-lg mb-4">
+              <Calendar className="w-4 h-4" />
+              <span className="text-sm font-bold">Programme Complet</span>
+            </div>
+            <h2 className="text-3xl lg:text-5xl font-black text-gray-900 leading-tight mb-2">
+              Calendrier des <span className="text-gradient-can">matchs</span>
+            </h2>
+            <p className="text-gray-600 text-sm">
+              52 matchs • 21 déc 2025 - 18 jan 2026
+            </p>
+          </div>
+
+          {/* Stadium Tabs - Horizontal Scrollable */}
+          <div className="mb-8 overflow-x-auto pb-2 scrollbar-hide">
+            <div className="flex gap-3 min-w-max">
+              <button
+                onClick={() => setSelectedStadium(null)}
+                className={`group relative px-6 py-3 rounded-2xl font-bold text-sm transition-all whitespace-nowrap ${
+                  selectedStadium === null
+                    ? 'text-white shadow-xl scale-105'
+                    : 'bg-white text-gray-700 hover:bg-gray-50 border-2 border-gray-200'
+                }`}
+                style={selectedStadium === null ? { 
+                  backgroundColor: '#00a346',
+                  boxShadow: '0 10px 30px #00a34640'
+                } : {}}
+              >
+                <span>Tous</span>
+              </button>
+              {matchProgram.map((stadium, i) => (
+                <button
+                  key={i}
+                  onClick={() => setSelectedStadium(stadium.stadium)}
+                  className={`group relative px-6 py-3 rounded-2xl font-bold text-sm transition-all whitespace-nowrap ${
+                    selectedStadium === stadium.stadium
+                      ? 'text-white shadow-xl scale-105'
+                      : 'bg-white text-gray-700 hover:bg-gray-50 border-2 border-gray-200'
+                  }`}
+                  style={selectedStadium === stadium.stadium ? { 
+                    backgroundColor: stadium.accentColor,
+                    boxShadow: `0 10px 30px ${stadium.accentColor}40`
+                  } : {}}
+                >
+                  <div className="flex items-center gap-2">
+                    <MapPin className="w-4 h-4" />
+                    <span>{stadium.city}</span>
+                    <span className={`text-xs ${selectedStadium === stadium.stadium ? 'text-white/80' : 'text-gray-500'}`}>
+                      ({stadium.matches.length})
+                    </span>
+                  </div>
+                </button>
+              ))}
+            </div>
+          </div>
+
+          {/* Compact Match Grid */}
+          <div className="bg-white rounded-3xl shadow-2xl border-2 border-gray-100 overflow-hidden">
+            {selectedStadium === null ? (
+              // Show all stadiums in compact accordion style
+              <div className="divide-y-2 divide-gray-100">
+                {matchProgram.map((stadium, stadiumIndex) => (
+                  <div key={stadiumIndex} className="hover:bg-gray-50 transition-colors">
+                    {/* Compact Stadium Header - Clickable */}
+                    <button
+                      onClick={() => setSelectedStadium(stadium.stadium)}
+                      className="w-full px-6 py-4 text-left"
+                      style={{ 
+                        backgroundColor: `${stadium.accentColor}05`,
+                        borderLeft: `4px solid ${stadium.accentColor}`
+                      }}
+                    >
+                      <div className="flex items-center justify-between">
+                        <div className="flex-1">
+                          <div className="flex items-center gap-2 mb-1">
+                            <MapPin className="w-4 h-4" style={{ color: stadium.accentColor }} />
+                            <h3 className="text-lg font-black text-gray-900">{stadium.city}</h3>
+                            <span className="text-xs text-gray-500">• {stadium.stadium}</span>
+                          </div>
+                          <div className="flex items-center gap-4 text-xs text-gray-600">
+                            <span>{stadium.capacity} places</span>
+                            <span>•</span>
+                            <span>{stadium.matches.length} matchs</span>
+                          </div>
+                        </div>
+                        <div 
+                          className="px-3 py-1.5 rounded-lg text-white font-bold text-xs"
+                          style={{ backgroundColor: stadium.accentColor }}
+                        >
+                          {stadium.matches.length}
+                        </div>
+                      </div>
+                    </button>
+                    
+                    {/* Compact Match Preview - Show first 4 matches */}
+                    <div className="px-6 pb-4">
+                      <div className="grid grid-cols-2 sm:grid-cols-4 gap-2">
+                        {stadium.matches.slice(0, 4).map((match, matchIndex) => (
+                          <div
+                            key={matchIndex}
+                            className="rounded-lg border p-2.5 text-xs"
+                            style={{
+                              borderColor: `${stadium.accentColor}30`,
+                              backgroundColor: `${stadium.accentColor}05`
+                            }}
+                          >
+                            <div className="font-bold text-gray-700 mb-1">{match.date}</div>
+                            <div className="text-[10px] text-gray-500 mb-1">{match.time}</div>
+                            <div className="font-bold text-gray-900 truncate text-[10px]">{match.team1}</div>
+                            <div className="text-[9px] text-gray-400 text-center">vs</div>
+                            <div className="font-bold text-gray-900 truncate text-[10px]">{match.team2}</div>
+                          </div>
+                        ))}
+                        {stadium.matches.length > 4 && (
+                          <div className="rounded-lg border-2 border-dashed border-gray-300 flex items-center justify-center p-2.5">
+                            <span className="text-xs text-gray-500 font-bold">
+                              +{stadium.matches.length - 4}
+                            </span>
+                          </div>
+                        )}
+                      </div>
+                    </div>
+                  </div>
+                ))}
+              </div>
+            ) : (
+              // Show single stadium in detail
+              matchProgram
+                .filter(stadium => selectedStadium === stadium.stadium)
+                .map((stadium, stadiumIndex) => (
+                  <div key={stadiumIndex}>
+                    {/* Compact Stadium Header */}
+                    <div 
+                      className="px-6 py-4 border-b-2"
+                      style={{ 
+                        backgroundColor: `${stadium.accentColor}10`,
+                        borderColor: `${stadium.accentColor}30`
+                      }}
+                    >
+                      <div className="flex items-center justify-between">
+                        <div>
+                          <h3 className="text-xl font-black text-gray-900 mb-1">{stadium.stadium}</h3>
+                          <div className="flex items-center gap-4 text-sm text-gray-600">
+                            <span className="flex items-center gap-1">
+                              <Users className="w-3 h-3" />
+                              {stadium.capacity}
+                            </span>
+                            <span className="flex items-center gap-1">
+                              <Trophy className="w-3 h-3" />
+                              {stadium.matches.length} matchs
+                            </span>
+                          </div>
+                        </div>
+                        <div 
+                          className="px-4 py-2 rounded-xl text-white font-bold text-sm"
+                          style={{ backgroundColor: stadium.accentColor }}
+                        >
+                          {stadium.city}
+                        </div>
+                      </div>
+                    </div>
+
+                    {/* Dense Match Grid - 4-5 columns on desktop */}
+                    <div className="p-6">
+                      <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 xl:grid-cols-5 gap-3">
+                        {stadium.matches.map((match, matchIndex) => (
+                          <div
+                            key={matchIndex}
+                            className="group relative rounded-xl border-2 p-4 hover:shadow-lg transition-all duration-200"
+                            style={{
+                              borderColor: `${stadium.accentColor}30`,
+                              backgroundColor: `${stadium.accentColor}05`
+                            }}
+                          >
+                            {/* Compact Match Info */}
+                            <div className="space-y-2">
+                              {/* Date & Time - Single line */}
+                              <div className="flex items-center justify-between gap-2">
+                                <div className="flex items-center gap-1.5 text-xs">
+                                  <Calendar className="w-3 h-3" style={{ color: stadium.accentColor }} />
+                                  <span className="font-bold text-gray-700">{match.date}</span>
+                                </div>
+                                <div className="flex items-center gap-1 text-xs">
+                                  <Clock className="w-3 h-3" style={{ color: stadium.accentColor }} />
+                                  <span className="font-bold text-gray-700">{match.time}</span>
+                                </div>
+                              </div>
+
+                              {/* Match Type Badge */}
+                              <div 
+                                className="px-2 py-1 rounded-lg text-[10px] font-bold text-white inline-block"
+                                style={{ backgroundColor: stadium.accentColor }}
+                              >
+                                {match.type}
+                              </div>
+
+                              {/* Teams - Compact */}
+                              <div className="space-y-1 pt-1">
+                                <div className="text-sm font-bold text-gray-900 truncate">{match.team1}</div>
+                                <div className="text-xs text-gray-500 text-center font-bold">VS</div>
+                                <div className="text-sm font-bold text-gray-900 truncate">{match.team2}</div>
+                              </div>
+
+                              {/* Group info */}
+                              <div className="text-[10px] text-gray-500 font-medium pt-1 border-t border-gray-200">
+                                {match.group}
+                              </div>
+                            </div>
+
+                            {/* Hover accent */}
+                            <div 
+                              className="absolute inset-0 rounded-xl opacity-0 group-hover:opacity-10 transition-opacity pointer-events-none"
+                              style={{ backgroundColor: stadium.accentColor }}
+                            />
+                          </div>
+                        ))}
+                      </div>
+                    </div>
+                  </div>
+                ))
+            )}
+            
+            {/* Back to all stadiums */}
+            {selectedStadium !== null && (
+              <div className="px-6 py-4 border-t-2 border-gray-100 bg-gray-50 text-center">
+                <button
+                  onClick={() => setSelectedStadium(null)}
+                  className="text-sm font-bold text-gray-700 hover:text-[#00a346] transition-colors"
+                >
+                  ← Voir tous les stades
+                </button>
+              </div>
+            )}
+          </div>
+
+          {/* Compact Footer */}
+          <div className="mt-6 text-center">
+            <a
+              href="https://www.cafonline.com/fr/can2025/infos/votre-guide-complet-des-stades-de-la-can-totalenergies-maroc-2025/"
+              target="_blank"
+              rel="noopener noreferrer"
+              className="inline-flex items-center gap-2 px-4 py-2 bg-gray-100 hover:bg-gray-200 rounded-full text-gray-600 font-medium text-xs transition-all"
+            >
+              <span>Source officielle CAF</span>
+              <ArrowUpRight className="w-3 h-3" />
+            </a>
+          </div>
+        </div>
+
       </section>
       
       {/* ═══════════════════════════════════════════════════════════════
