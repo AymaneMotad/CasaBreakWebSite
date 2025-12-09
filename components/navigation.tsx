@@ -66,7 +66,7 @@ export function Navigation() {
       label: t("activities"),
       href: "#",
       icon: Activity,
-      image: "/decouvrer/decouvrer-1.jpg",
+      image: "/onglet-activite.jpg",
       submenu: [
         { label: t("mustSee"), href: `/${currentLocale}/activites/incontournables` },
         { label: t("outdoorSea"), href: `/${currentLocale}/activites/plein-air-mer` },
@@ -78,7 +78,7 @@ export function Navigation() {
       label: t("foodFun"),
       href: "#",
       icon: UtensilsCrossed,
-      image: "/casablanca-cityscape-atlantic-ocean-aerial-view-mo.jpg",
+      image: "/onglet-gastronomie-shoppingg.jpg",
       submenu: [
         { label: t("cafesRestaurants"), href: `/${currentLocale}/manger-sortir/restaurants` },
         { label: t("barsNightlife"), href: `/${currentLocale}/manger-sortir/bars-nightlife` },
@@ -89,7 +89,7 @@ export function Navigation() {
       label: t("events"),
       href: "#",
       icon: Calendar,
-      image: "/cultural-festival-morocco-traditional-celebration-.jpg",
+      image: "/onglet-evenement.jpg",
       submenu: [
         { label: t("concertsShows"), href: `/${currentLocale}/evenements/concerts-spectacles` },
         { label: t("exhibitionsGalleries"), href: `/${currentLocale}/evenements/expositions-galeries` },
@@ -102,7 +102,7 @@ export function Navigation() {
       label: t("planStay"),
       href: "#",
       icon: Map,
-      image: "/decouvrer/decouvrer-3.jpg",
+      image: "/planifier votre sejour.jpg",
       submenu: [
         { label: t("accommodation"), href: `/${currentLocale}/planifier/hebergement` },
         { label: t("gettingAround"), href: `/${currentLocale}/planifier/se-deplacer` },
