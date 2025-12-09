@@ -6,8 +6,9 @@ import { Navigation } from "@/components/navigation"
 import { Footer } from "@/components/footer"
 import { Breadcrumb } from "@/components/breadcrumb"
 import { createClient } from "@/utils/supabase/client"
-import { Utensils, ChevronDown, ChevronUp } from "lucide-react"
+import { Utensils, ChevronDown, ChevronUp, ChevronRight } from "lucide-react"
 import { useTranslations } from 'next-intl'
+import Link from 'next/link'
 
 interface RestaurantData {
   id: string
@@ -385,32 +386,41 @@ export default function RestaurantsPage() {
                       </div>
                     )}
 
-                    {/* Read More / Read Less Button */}
-                    {description && (
-                      <button
-                        type="button"
-                        onClick={(e) => {
-                          e.preventDefault()
-                          e.stopPropagation()
-                          console.log('Button clicked for:', restaurant.id, 'Current expanded:', isExpanded)
-                          toggleExpand(restaurant.id)
-                        }}
-                        className="inline-flex items-center text-teal-600 hover:text-teal-700 font-medium text-sm transition-colors mt-auto cursor-pointer focus:outline-none focus:ring-2 focus:ring-teal-500 focus:ring-offset-2 rounded px-2 py-1 -ml-2"
-                        aria-expanded={isExpanded}
+                    {/* Read More / Read Less Button & View Details Link */}
+                    <div className="flex items-center gap-3 mt-auto">
+                      {description && showExpandButton && (
+                        <button
+                          type="button"
+                          onClick={(e) => {
+                            e.preventDefault()
+                            e.stopPropagation()
+                            console.log('Button clicked for:', restaurant.id, 'Current expanded:', isExpanded)
+                            toggleExpand(restaurant.id)
+                          }}
+                          className="inline-flex items-center text-teal-600 hover:text-teal-700 font-medium text-sm transition-colors cursor-pointer focus:outline-none focus:ring-2 focus:ring-teal-500 focus:ring-offset-2 rounded px-2 py-1 -ml-2"
+                          aria-expanded={isExpanded}
+                        >
+                          {isExpanded ? (
+                            <>
+                              Lire moins
+                              <ChevronUp className="w-4 h-4 ml-1" />
+                            </>
+                          ) : (
+                            <>
+                              Lire la suite
+                              <ChevronDown className="w-4 h-4 ml-1" />
+                            </>
+                          )}
+                        </button>
+                      )}
+                      <Link
+                        href={`/${locale}/manger-sortir/restaurants/${restaurant.slug}`}
+                        className="inline-flex items-center text-teal-600 hover:text-teal-700 font-medium text-sm transition-colors ml-auto"
                       >
-                        {isExpanded ? (
-                          <>
-                            Lire moins
-                            <ChevronUp className="w-4 h-4 ml-1" />
-                          </>
-                        ) : (
-                          <>
-                            Lire la suite
-                            <ChevronDown className="w-4 h-4 ml-1" />
-                          </>
-                        )}
-                      </button>
-                    )}
+                        Voir les détails
+                        <ChevronRight className="w-4 h-4 ml-1" />
+                      </Link>
+                    </div>
 
                     {/* Website Link */}
                     {website && (

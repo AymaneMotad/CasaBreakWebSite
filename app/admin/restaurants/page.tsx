@@ -3,7 +3,7 @@
 import { useEffect, useState } from "react"
 import { useRouter } from "next/navigation"
 import { createClient } from "@/utils/supabase/client"
-import { Plus, Edit, Trash2, Image as ImageIcon, Search, Loader2, Upload } from "lucide-react"
+import { Plus, Edit, Trash2, Image as ImageIcon, Search, Loader2, Upload, Eye } from "lucide-react"
 
 interface Restaurant {
   id: string
@@ -268,11 +268,21 @@ export default function AdminRestaurantsPage() {
                     </td>
                     <td className="px-6 py-4 whitespace-nowrap text-right text-sm font-medium">
                       <div className="flex items-center justify-end gap-2">
+                        <a
+                          href={`/fr/manger-sortir/restaurants/${restaurant.slug}`}
+                          target="_blank"
+                          rel="noopener noreferrer"
+                          className="text-blue-600 hover:text-blue-900"
+                          title="View on website"
+                        >
+                          <Eye className="w-5 h-5" />
+                        </a>
                         <button
                           onClick={() =>
                             router.push(`/admin/restaurants/${restaurant.id}`)
                           }
                           className="text-teal-600 hover:text-teal-900"
+                          title="Edit"
                         >
                           <Edit className="w-5 h-5" />
                         </button>
@@ -280,6 +290,7 @@ export default function AdminRestaurantsPage() {
                           onClick={() => handleDelete(restaurant.id)}
                           disabled={deletingId === restaurant.id}
                           className="text-red-600 hover:text-red-900 disabled:opacity-50"
+                          title="Delete"
                         >
                           {deletingId === restaurant.id ? (
                             <Loader2 className="w-5 h-5 animate-spin" />
