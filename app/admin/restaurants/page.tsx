@@ -3,7 +3,7 @@
 import { useEffect, useState } from "react"
 import { useRouter } from "next/navigation"
 import { createClient } from "@/utils/supabase/client"
-import { Plus, Edit, Trash2, Image as ImageIcon, Search, Loader2 } from "lucide-react"
+import { Plus, Edit, Trash2, Image as ImageIcon, Search, Loader2, Upload } from "lucide-react"
 
 interface Restaurant {
   id: string
@@ -143,6 +143,13 @@ export default function AdminRestaurantsPage() {
           >
             <Search className="w-5 h-5" />
             Refresh
+          </button>
+          <button
+            onClick={() => router.push("/admin/restaurants/import")}
+            className="flex items-center gap-2 px-4 py-2 bg-blue-600 text-white rounded-lg hover:bg-blue-700 transition-colors"
+          >
+            <Upload className="w-5 h-5" />
+            Import Restaurants
           </button>
           <button
             onClick={() => router.push("/admin/restaurants/new")}
