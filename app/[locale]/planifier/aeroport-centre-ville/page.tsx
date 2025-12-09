@@ -31,8 +31,8 @@ export default function AeroportCentreVillePage() {
         "Confortable et ponctuel"
       ],
       pricing: [
-        "2ème classe : ~35 dirhams",
-        "1ère classe : ~60 dirhams"
+        "2ème classe : 60 dirhams",
+        "1ère classe : 80 dirhams"
       ],
       contact: {
         phone: "+212 537 77 47 47",

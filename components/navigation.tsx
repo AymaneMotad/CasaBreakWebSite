@@ -55,7 +55,7 @@ export function Navigation() {
       label: t("discover"),
       href: "#",
       icon: MapPin,
-      image: "/casablanca-cityscape-atlantic-ocean-aerial-view-mo.jpg",
+      image: "https://images.unsplash.com/photo-1696259629194-5411989d6675?w=800&q=80",
       submenu: [
         { label: t("monuments"), href: `/${currentLocale}/decouvrir/monuments` },
         { label: t("neighborhoods"), href: `/${currentLocale}/decouvrir/quartiers` },
