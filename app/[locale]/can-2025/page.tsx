@@ -202,7 +202,7 @@ export default function Can2025Page() {
   const locale = useLocale()
   
   const hostCities = [
-    { city: 'Casablanca', stadium: 'Stade Mohammed V', image: '/stadiums/mohammed-v-casablanca.jpg', capacity: '67 000', matches: '8 matchs', accentColor: '#00a346' },
+    { city: 'Casablanca', stadium: 'Stade Mohammed V', image: '/stadiums/mohammed-v-casablanca.jpg', capacity: '45 000', matches: '8 matchs', accentColor: '#00a346' },
     { city: 'Rabat', stadium: 'Complexe Sportif Prince Moulay Abdellah', image: '/stadiums/moulay-abdellah-rabat.jpg', capacity: '68 000', matches: 'Finale', accentColor: '#c10000' },
     { city: 'Marrakech', stadium: 'Grand Stade de Marrakech', image: '/stadiums/marrakech.jpg', capacity: '45 240', matches: '8 matchs', accentColor: '#ffd700' },
     { city: 'Tanger', stadium: 'Grand Stade de Tanger', image: '/stadiums/tanger.jpg', capacity: '68 000', matches: '6 matchs', accentColor: '#0066b2' },
@@ -541,7 +541,7 @@ export default function Can2025Page() {
               
               <p className="text-lg text-gray-600 mb-8 leading-relaxed">
                 La capitale économique du Maroc vous ouvre ses portes. Avec le 
-                <strong className="text-gray-900"> Stade Mohammed V</strong> et ses 67 000 places, 
+                <strong className="text-gray-900"> Stade Mohammed V</strong> et ses 45 000 places, 
                 vivez une expérience footballistique unique au monde. Le stade accueillera 8 matchs de la CAN 2025, 
                 dont le match pour la 3ème place.
               </p>
@@ -554,7 +554,7 @@ export default function Can2025Page() {
                   </div>
                   <div>
                     <h3 className="text-2xl font-black text-gray-900">Stade Mohammed V</h3>
-                    <p className="text-gray-600">67 000 places • 8 matchs CAN 2025</p>
+                    <p className="text-gray-600">45 000 places • 8 matchs CAN 2025</p>
                   </div>
                 </div>
                 <p className="text-gray-600">
