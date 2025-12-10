@@ -199,14 +199,17 @@ export default function EditEventPage() {
     try {
       const supabase = createClient()
       
+      // Auto-generate slug if not provided
+      const slug = formData.slug || formData.name_fr.toLowerCase().replace(/\s+/g, "-").replace(/[^a-z0-9-]/g, '')
+      
       const updateData: any = {
-        slug: formData.slug || formData.name_fr.toLowerCase().replace(/\s+/g, "-").replace(/[^a-z0-9-]/g, ''),
+        slug: slug,
         name_fr: formData.name_fr,
-        description_fr: formData.description_fr,
-        short_description_fr: formData.short_description_fr || formData.description_fr.substring(0, 200),
+        description_fr: formData.description_fr || null,
+        short_description_fr: formData.short_description_fr || formData.description_fr?.substring(0, 200) || null,
         main_image: formData.main_image || null,
         category: formData.category,
-        start_date: formData.start_date || new Date().toISOString(),
+        start_date: formData.start_date || null,
         end_date: formData.end_date || null,
         venue_name_fr: formData.venue_name_fr || null,
         is_free: formData.is_free,
@@ -278,13 +281,13 @@ export default function EditEventPage() {
             <div className="grid grid-cols-1 gap-6">
               <div>
                 <label className="block text-sm font-medium text-gray-700 mb-2">
-                  Slug *
+                  Slug
+                  <span className="text-gray-400 text-xs ml-2">(auto-generated if empty)</span>
                 </label>
                 <input
                   type="text"
                   value={formData.slug}
                   onChange={(e) => setFormData({ ...formData, slug: e.target.value })}
-                  required
                   className="w-full px-4 py-2 border border-gray-300 rounded-lg focus:ring-2 focus:ring-teal-500 focus:border-transparent"
                   placeholder="event-name"
                 />
@@ -323,12 +326,11 @@ export default function EditEventPage() {
 
               <div>
                 <label className="block text-sm font-medium text-gray-700 mb-2">
-                  Description (French) *
+                  Description (French)
                 </label>
                 <textarea
                   value={formData.description_fr}
                   onChange={(e) => setFormData({ ...formData, description_fr: e.target.value })}
-                  required
                   rows={4}
                   className="w-full px-4 py-2 border border-gray-300 rounded-lg focus:ring-2 focus:ring-teal-500 focus:border-transparent"
                 />
@@ -354,7 +356,7 @@ export default function EditEventPage() {
             <div className="space-y-4">
               <div>
                 <label className="block text-sm font-medium text-gray-700 mb-2">
-                  Image URL *
+                  Image URL
                 </label>
                 <input
                   type="url"
@@ -415,13 +417,12 @@ export default function EditEventPage() {
             <div className="grid grid-cols-2 gap-6">
               <div>
                 <label className="block text-sm font-medium text-gray-700 mb-2">
-                  Start Date & Time *
+                  Start Date & Time
                 </label>
                 <input
                   type="datetime-local"
                   value={formData.start_date}
                   onChange={(e) => setFormData({ ...formData, start_date: e.target.value })}
-                  required
                   className="w-full px-4 py-2 border border-gray-300 rounded-lg focus:ring-2 focus:ring-teal-500 focus:border-transparent"
                 />
               </div>
