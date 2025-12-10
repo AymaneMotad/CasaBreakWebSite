@@ -27,6 +27,8 @@ export default function EditRestaurantPage() {
     cuisine_types: [] as string[],
     // JSONB fields
     district: "",
+    address: "",
+    phone: "",
     price_level: "€€",
     tags: [] as string[],
   })
@@ -57,7 +59,11 @@ export default function EditRestaurantPage() {
         main_image_column: data.main_image,
         jsonb_photo_url: jsonData.photo_url,
         final_image_url: imageUrl,
-        hasImage: !!imageUrl
+        hasImage: !!imageUrl,
+        jsonData: jsonData,
+        phone: jsonData.phone,
+        address: jsonData.address,
+        district: jsonData.district
       })
       
       setFormData({
@@ -72,6 +78,8 @@ export default function EditRestaurantPage() {
         is_published: data.is_published ?? true,
         cuisine_types: data.cuisine_types || [],
         district: jsonData.district || "",
+        address: jsonData.address || "",
+        phone: jsonData.phone || (data as any).phone || "",
         price_level: jsonData.price_level || "€€",
         tags: jsonData.tags || [],
       })
@@ -219,8 +227,9 @@ export default function EditRestaurantPage() {
         id: formData.slug,
         name: formData.name_fr,
         description: formData.description_fr,
-        address: "",
+        address: formData.address,
         district: formData.district,
+        phone: formData.phone,
         rating: formData.average_rating,
         price_level: formData.price_level,
         photo_url: imageUrl, // Always set to same value as main_image
@@ -489,6 +498,32 @@ export default function EditRestaurantPage() {
 
               <div>
                 <label className="block text-sm font-medium text-gray-700 mb-2">
+                  Address
+                </label>
+                <input
+                  type="text"
+                  value={formData.address}
+                  onChange={(e) => setFormData({ ...formData, address: e.target.value })}
+                  className="w-full px-4 py-2 border border-gray-300 rounded-lg focus:ring-2 focus:ring-teal-500 focus:border-transparent"
+                  placeholder="27 Avenue des Forces Armées Royales, Casablanca"
+                />
+              </div>
+
+              <div>
+                <label className="block text-sm font-medium text-gray-700 mb-2">
+                  Phone
+                </label>
+                <input
+                  type="tel"
+                  value={formData.phone}
+                  onChange={(e) => setFormData({ ...formData, phone: e.target.value })}
+                  className="w-full px-4 py-2 border border-gray-300 rounded-lg focus:ring-2 focus:ring-teal-500 focus:border-transparent"
+                  placeholder="+212 5 29 90 05 00"
+                />
+              </div>
+
+              <div>
+                <label className="block text-sm font-medium text-gray-700 mb-2">
                   Price Level
                 </label>
                 <select
@@ -501,21 +536,6 @@ export default function EditRestaurantPage() {
                   <option value="€€€">€€€</option>
                   <option value="€€€€">€€€€</option>
                 </select>
-              </div>
-
-              <div>
-                <label className="block text-sm font-medium text-gray-700 mb-2">
-                  Rating
-                </label>
-                <input
-                  type="number"
-                  step="0.1"
-                  min="0"
-                  max="5"
-                  value={formData.average_rating}
-                  onChange={(e) => setFormData({ ...formData, average_rating: parseFloat(e.target.value) || 0 })}
-                  className="w-full px-4 py-2 border border-gray-300 rounded-lg focus:ring-2 focus:ring-teal-500 focus:border-transparent"
-                />
               </div>
 
               <div>

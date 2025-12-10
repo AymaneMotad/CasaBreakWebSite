@@ -125,6 +125,7 @@ export default function ImportRestaurantsPage() {
             description: restaurant.description || '',
             address: restaurant.address || '',
             district: restaurant.district || '',
+            phone: restaurant.phone || null,
             rating: restaurant.rating || null,
             price_level: restaurant.price_level || null,
             photo_url: restaurant.photo_url || null,

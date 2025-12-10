@@ -18,6 +18,7 @@ interface RestaurantData {
   description: string
   address: string
   district: string
+  phone: string | null
   rating: number
   price_level: string
   photo_url: string | null
@@ -37,6 +38,7 @@ interface RestaurantWithJsonb {
   price_range: string | null
   cuisine_types: string[] | null
   website: string | null
+  phone: string | null
 }
 
 export default function RestaurantsPage() {
@@ -55,7 +57,7 @@ export default function RestaurantsPage() {
         // Fetch ALL restaurants (both old ones without JSONB and new ones with JSONB)
         const { data, error } = await supabase
           .from('venues')
-          .select('id, slug, name_fr, description_fr, short_description_fr, main_image, data_jsonb, average_rating, price_range, cuisine_types, website')
+          .select('id, slug, name_fr, description_fr, short_description_fr, main_image, data_jsonb, average_rating, price_range, cuisine_types, website, phone')
           .eq('category', 'restaurants')
           .eq('is_published', true)
           .order('average_rating', { ascending: false })
@@ -231,6 +233,12 @@ export default function RestaurantsPage() {
               // For district: only from JSONB (old restaurants don't have this)
               const district = jsonData?.district || null
               
+              // For address: only from JSONB
+              const address = jsonData?.address || null
+              
+              // For phone: JSONB phone or direct column
+              const phone = jsonData?.phone || (restaurant as any).phone || null
+              
               // For tags: only from JSONB (old restaurants don't have this)
               const tags = jsonData?.tags || []
               
@@ -351,6 +359,29 @@ export default function RestaurantsPage() {
                             {priceLevel}
                           </span>
                         )}
+                      </div>
+                    )}
+                    
+                    {/* Address */}
+                    {address && (
+                      <div className="mb-2 text-sm text-gray-600">
+                        <span className="flex items-start gap-2">
+                          <span>📍</span>
+                          <span>{address}</span>
+                        </span>
+                      </div>
+                    )}
+                    
+                    {/* Phone */}
+                    {phone && (
+                      <div className="mb-3 text-sm text-gray-600">
+                        <a 
+                          href={`tel:${phone.replace(/\s/g, '')}`}
+                          className="flex items-center gap-2 text-teal-600 hover:text-teal-700 transition-colors"
+                        >
+                          <span>📞</span>
+                          <span>{phone}</span>
+                        </a>
                       </div>
                     )}
                     
