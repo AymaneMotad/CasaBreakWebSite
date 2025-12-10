@@ -41,7 +41,7 @@ function EpicCountdown() {
   if (!mounted) return null
   
   return (
-    <div className="flex gap-4 sm:gap-6 lg:gap-8">
+    <div className="flex flex-wrap justify-center gap-3 sm:gap-4 md:gap-6 lg:gap-8">
       {[
         { value: timeLeft.days, label: 'Jours', color: '#00a346' },
         { value: timeLeft.hours, label: 'Heures', color: '#ffd700' },
@@ -51,27 +51,27 @@ function EpicCountdown() {
         <div key={i} className="relative group">
           {/* Glow effect */}
           <div 
-            className="absolute -inset-2 rounded-3xl blur-xl opacity-30 group-hover:opacity-50 transition-opacity"
+            className="absolute -inset-1 sm:-inset-2 rounded-2xl sm:rounded-3xl blur-xl opacity-30 group-hover:opacity-50 transition-opacity"
             style={{ backgroundColor: item.color }}
           />
           
-          <div className="relative w-20 sm:w-28 lg:w-32 h-24 sm:h-32 lg:h-36 bg-white/95 backdrop-blur-xl rounded-2xl sm:rounded-3xl border border-white/50 shadow-2xl flex flex-col items-center justify-center overflow-hidden">
+          <div className="relative w-16 h-20 sm:w-24 sm:h-28 md:w-28 md:h-32 lg:w-32 lg:h-36 bg-white/95 backdrop-blur-xl rounded-xl sm:rounded-2xl md:rounded-3xl border border-white/50 shadow-2xl flex flex-col items-center justify-center overflow-hidden">
             {/* Top accent */}
             <div 
-              className="absolute top-0 left-0 right-0 h-1"
+              className="absolute top-0 left-0 right-0 h-0.5 sm:h-1"
               style={{ backgroundColor: item.color }}
             />
             
             {/* Number */}
             <span 
-              className="text-4xl sm:text-6xl lg:text-7xl font-black tabular-nums"
+              className="text-3xl sm:text-5xl md:text-6xl lg:text-7xl font-black tabular-nums leading-none"
               style={{ color: item.color }}
             >
               {String(item.value).padStart(2, '0')}
             </span>
             
             {/* Label */}
-            <span className="text-[10px] sm:text-xs text-gray-500 uppercase tracking-widest font-medium mt-1">
+            <span className="text-[9px] sm:text-[10px] md:text-xs text-gray-500 uppercase tracking-widest font-medium mt-1 sm:mt-1.5">
               {item.label}
             </span>
           </div>
@@ -382,10 +382,18 @@ export default function Can2025Page() {
         </div>
         
         {/* Hero Content */}
-        <div className="relative z-10 w-full max-w-[1800px] mx-auto px-6 lg:px-16 pt-24 pb-20">
+        <div className="relative z-10 w-full max-w-[1800px] mx-auto px-4 sm:px-6 lg:px-16 pt-20 sm:pt-24 pb-20">
           <div className="text-center">
+            {/* Epic Countdown - First and Prominent */}
+            <div className="mb-8 sm:mb-10 animate-fade-in-up">
+              <p className="text-xs sm:text-sm text-gray-500 uppercase tracking-[0.3em] mb-4 sm:mb-6 font-medium">Coup d'envoi dans</p>
+              <div className="flex justify-center px-2">
+                <EpicCountdown />
+              </div>
+            </div>
+            
             {/* Top Badge */}
-            <div className="inline-flex items-center gap-3 px-5 py-2.5 rounded-full bg-gradient-to-r from-[#00a346] to-[#006633] text-white shadow-lg shadow-[#00a346]/25 mb-6 animate-fade-in-up">
+            <div className="inline-flex items-center gap-3 px-5 py-2.5 rounded-full bg-gradient-to-r from-[#00a346] to-[#006633] text-white shadow-lg shadow-[#00a346]/25 mb-6 animate-fade-in-up animation-delay-200">
               <span className="relative flex h-2 w-2">
                 <span className="animate-ping absolute inline-flex h-full w-full rounded-full bg-white opacity-75"></span>
                 <span className="relative inline-flex rounded-full h-2 w-2 bg-white"></span>
@@ -394,20 +402,12 @@ export default function Can2025Page() {
             </div>
             
             {/* Main Title */}
-            <h1 className="text-4xl sm:text-6xl lg:text-7xl xl:text-8xl font-black leading-[0.9] tracking-tight mb-6 animate-fade-in-up animation-delay-200">
+            <h1 className="text-4xl sm:text-6xl lg:text-7xl xl:text-8xl font-black leading-[0.9] tracking-tight mb-6 animate-fade-in-up animation-delay-400">
               <span className="block text-gray-900">COUPE D'AFRIQUE</span>
               <span className="block bg-gradient-to-r from-[#00a346] via-[#ffd700] to-[#c10000] bg-clip-text text-transparent">
                 DES NATIONS
               </span>
             </h1>
-            
-            {/* Epic Countdown - Moved up for visibility */}
-            <div className="mb-8 animate-fade-in-up animation-delay-400">
-              <p className="text-xs sm:text-sm text-gray-500 uppercase tracking-[0.3em] mb-4 font-medium">Coup d'envoi dans</p>
-              <div className="flex justify-center">
-                <EpicCountdown />
-              </div>
-            </div>
             
             {/* Subtitle */}
             <p className="text-base sm:text-lg text-gray-500 mb-8 max-w-2xl mx-auto animate-fade-in-up animation-delay-600">
