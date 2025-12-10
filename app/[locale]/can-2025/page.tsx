@@ -202,8 +202,11 @@ export default function Can2025Page() {
   const locale = useLocale()
   
   const hostCities = [
-    { city: 'Casablanca', stadium: 'Stade Mohammed V', image: '/stadiums/mohammed-v-casablanca.jpg', capacity: '45 000', matches: '8 matchs', accentColor: '#00a346' },
+    { city: 'Casablanca', stadium: 'Stade Mohammed V', image: '/stadiums/mohammed-v-casablanca.jpg', capacity: '67 000', matches: '8 matchs', accentColor: '#00a346' },
     { city: 'Rabat', stadium: 'Complexe Sportif Prince Moulay Abdellah', image: '/stadiums/moulay-abdellah-rabat.jpg', capacity: '68 000', matches: 'Finale', accentColor: '#c10000' },
+    { city: 'Rabat', stadium: 'Stade Annexe Olympique – Complexe Sportif Prince Moulay Abdellah', image: '/stadiums/annexe-olympique-rabat.jpg', capacity: '21 000', matches: '4 matchs', accentColor: '#c10000' },
+    { city: 'Rabat', stadium: 'Complexe Sportif Prince Héritier Moulay El Hassan', image: '/stadiums/moulay-el-hassan-rabat.jpg', capacity: '22 000', matches: '4 matchs', accentColor: '#c10000' },
+    { city: 'Rabat', stadium: 'Stade El Barid', image: '/stadiums/el-barid-rabat.jpg', capacity: '18 000', matches: '4 matchs', accentColor: '#c10000' },
     { city: 'Marrakech', stadium: 'Grand Stade de Marrakech', image: '/stadiums/marrakech.jpg', capacity: '45 240', matches: '8 matchs', accentColor: '#ffd700' },
     { city: 'Tanger', stadium: 'Grand Stade de Tanger', image: '/stadiums/tanger.jpg', capacity: '68 000', matches: '6 matchs', accentColor: '#0066b2' },
     { city: 'Fès', stadium: 'Complexe Sportif de Fès', image: '/stadiums/fes.jpg', capacity: '45 000', matches: '4 matchs', accentColor: '#00a346' },
@@ -565,7 +568,7 @@ export default function Can2025Page() {
             </p>
           </div>
           
-          {/* Bento Grid - 6 Cities */}
+          {/* Bento Grid - 9 Stadiums (4 in Rabat + 5 others) */}
           <div className="grid grid-cols-12 gap-4 lg:gap-6">
             {/* Row 1 */}
             {/* Casablanca - Featured Large */}
@@ -573,30 +576,46 @@ export default function Can2025Page() {
               <StadiumBentoCard {...hostCities[0]} isLarge={true} />
             </div>
             
-            {/* Rabat */}
+            {/* Rabat - Main Stadium */}
             <div className="col-span-6 lg:col-span-4 h-[250px] lg:h-[450px]">
               <StadiumBentoCard {...hostCities[1]} />
             </div>
             
-            {/* Row 2 */}
-            {/* Marrakech */}
-            <div className="col-span-6 lg:col-span-4 h-[250px] lg:h-[300px]">
+            {/* Row 2 - Rabat Stadiums Grouped Together */}
+            {/* Stade Annexe Olympique */}
+            <div className="col-span-6 lg:col-span-3 h-[250px] lg:h-[300px]">
               <StadiumBentoCard {...hostCities[2]} />
             </div>
             
+            {/* Complexe Sportif Prince Héritier Moulay El Hassan */}
+            <div className="col-span-6 lg:col-span-3 h-[250px] lg:h-[300px]">
+              <StadiumBentoCard {...hostCities[3]} />
+            </div>
+            
+            {/* Stade El Barid */}
+            <div className="col-span-6 lg:col-span-3 h-[250px] lg:h-[300px]">
+              <StadiumBentoCard {...hostCities[4]} />
+            </div>
+            
+            {/* Marrakech */}
+            <div className="col-span-6 lg:col-span-3 h-[250px] lg:h-[300px]">
+              <StadiumBentoCard {...hostCities[5]} />
+            </div>
+            
+            {/* Row 3 */}
             {/* Tanger */}
             <div className="col-span-6 lg:col-span-4 h-[250px] lg:h-[300px]">
-              <StadiumBentoCard {...hostCities[3]} />
+              <StadiumBentoCard {...hostCities[6]} />
             </div>
             
             {/* Fès */}
             <div className="col-span-6 lg:col-span-4 h-[250px] lg:h-[300px]">
-              <StadiumBentoCard {...hostCities[4]} />
+              <StadiumBentoCard {...hostCities[7]} />
             </div>
             
             {/* Agadir - Full width on mobile */}
-            <div className="col-span-6 lg:col-span-12 h-[300px] lg:h-[400px]">
-              <StadiumBentoCard {...hostCities[5]} imageClass="object-center" />
+            <div className="col-span-6 lg:col-span-4 h-[300px] lg:h-[300px]">
+              <StadiumBentoCard {...hostCities[8]} imageClass="object-center" />
             </div>
           </div>
         </div>
@@ -1184,4 +1203,5 @@ export default function Can2025Page() {
     </main>
   )
 }
+
 
