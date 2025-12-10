@@ -42,29 +42,29 @@ export default function AeroportCentreVillePage() {
     },
     {
       icon: Bus,
-      title: "Navette Aéroport",
+      title: "Aérobus",
       color: "#0066b2",
       description: "Service de navette directe vers le centre-ville",
       details: [
-        "Départs réguliers depuis l'aéroport",
-        "Arrêts principaux : Casa-Port, Place Mohammed V",
-        "Durée : 45-60 minutes (selon le trafic)",
-        "Confortable avec espace bagages"
+        "Aérobus disponible 24 heures sur 24, 7 jours sur 7",
+        "Véhicules équipés de climatisation, Wi-Fi gratuit, espaces dédiés aux bagages",
+        "Équipements adaptés aux personnes à mobilité réduite",
+        "Conducteurs qualifiés et multilingues, formés pour accompagner les voyageurs"
       ],
       pricing: [
-        "Tarif unique : ~20-30 dirhams"
+        "Le tarif est fixé à 50 dirhams"
       ],
       contact: {
         phone: "+212 522 99 83 83",
-        website: "www.casatramway.ma"
+        website: "www.casabus.ma"
       },
-      tip: "Vérifiez les horaires à l'avance"
+      tip: "Service disponible en continu"
     },
     {
       icon: Car,
       title: "Taxis",
       color: "#c10000",
-      description: "Transport privé pour plus de confort et flexibilité",
+      description: "Transport pour plus de confort et flexibilité",
       types: [
         {
           name: "Grands Taxis",
@@ -96,7 +96,7 @@ export default function AeroportCentreVillePage() {
   ]
 
   const airportInfo = {
-    name: "Aéroport International Mohammed V",
+    name: "Aéroport Casablanca Mohammed V",
     distance: "30 km au sud de Casablanca",
     code: "CMN",
     facilities: [
