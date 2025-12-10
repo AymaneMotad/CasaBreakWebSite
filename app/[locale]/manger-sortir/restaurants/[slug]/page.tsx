@@ -242,7 +242,7 @@ export default function RestaurantDetailPage() {
               
               return (
                 <div className="bg-gray-50 rounded-2xl p-6 mb-8">
-                  <h2 className="text-2xl font-semibold text-gray-900 mb-6">Informations de contact</h2>
+                  <h2 className="text-2xl font-semibold text-gray-900 mb-6">Informations pratiques</h2>
                   
                   <div className="space-y-6">
                     {address && (
