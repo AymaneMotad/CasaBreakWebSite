@@ -10,6 +10,7 @@ export default function EditRestaurantPage() {
   const params = useParams()
   const id = params.id as string
   const isNew = id === "new"
+  const [isActivity, setIsActivity] = useState(false) // Track if editing an activity
 
   const [loading, setLoading] = useState(!isNew)
   const [saving, setSaving] = useState(false)
@@ -44,30 +45,49 @@ export default function EditRestaurantPage() {
   const fetchRestaurant = async () => {
     try {
       const supabase = createClient()
-      const { data, error } = await supabase
+      
+      // Try fetching from venues first
+      let { data, error } = await supabase
         .from("venues")
         .select("*")
         .eq("id", id)
         .single()
 
-      if (error) throw error
+      // If not found in venues, try activities table
+      if (error && error.code === 'PGRST116') {
+        setIsActivity(true)
+        const activitiesResult = await supabase
+          .from("activities")
+          .select("*")
+          .eq("id", id)
+          .single()
+        
+        if (activitiesResult.error) throw activitiesResult.error
+        data = activitiesResult.data
+        error = null
+      } else if (error) {
+        throw error
+      }
 
+      if (!data) throw new Error("Place not found")
+
+      // Both activities and venues now have the same structure
       const jsonData = data.data_jsonb || {}
       const imageUrl = data.main_image || jsonData.photo_url || ""
       
-      console.log('📥 Loading restaurant data:', {
+      console.log('📥 Loading place data:', {
         id: data.id,
         name: data.name_fr,
+        isActivity,
         main_image_column: data.main_image,
         jsonb_photo_url: jsonData.photo_url,
         final_image_url: imageUrl,
         hasImage: !!imageUrl,
-        jsonData: jsonData,
-        phone: jsonData.phone,
-        address: jsonData.address,
-        district: jsonData.district
       })
       
+      // Both use place_category now (after migration)
+      const placeCategory = (data as any).place_category || data.category || (isActivity ? "sport-bien-etre" : "restaurants")
+
       setFormData({
         slug: data.slug || "",
         name_fr: data.name_fr || "",
@@ -75,14 +95,14 @@ export default function EditRestaurantPage() {
         short_description_fr: data.short_description_fr || "",
         main_image: imageUrl,
         website: data.website || jsonData.website || "",
-        category: jsonData?.category || data.category || "", // JSON category (francais, asiatique, etc.)
-        place_category: (data as any).place_category || data.category || "restaurants", // venue_category enum - determines page
+        category: jsonData?.category || (isActivity ? "" : (data.category || "")), // JSON category (francais, asiatique, etc.) - activities don't have this yet
+        place_category: placeCategory, // venue_category enum - determines page
         price_range: data.price_range || "$$",
         average_rating: jsonData.rating || data.average_rating || 0,
         is_published: data.is_published ?? true,
         cuisine_types: data.cuisine_types || [],
-        district: jsonData.district || "",
-        address: jsonData.address || "",
+        district: jsonData.district || (data as any).district || "",
+        address: jsonData.address || (data as any).address || "",
         phone: jsonData.phone || (data as any).phone || "",
         price_level: jsonData.price_level || "€€",
         tags: jsonData.tags || [],
@@ -227,6 +247,7 @@ export default function EditRestaurantPage() {
       // Ensure photo_url is always set if main_image exists
       const imageUrl = formData.main_image?.trim() || null
       
+      // Both activities and venues now have data_jsonb with same structure
       const jsonbData = {
         id: formData.slug,
         name: formData.name_fr,
@@ -243,69 +264,66 @@ export default function EditRestaurantPage() {
         subtype: formData.cuisine_types[0] || "fusion",
       }
 
+      // Unified structure - both activities and venues now have the same fields
       const updateData: any = {
         slug: formData.slug || formData.name_fr.toLowerCase().replace(/\s+/g, "-"),
         name_fr: formData.name_fr,
         description_fr: formData.description_fr,
         short_description_fr: formData.short_description_fr || formData.description_fr.substring(0, 200),
-        main_image: imageUrl, // Use same cleaned imageUrl
+        main_image: imageUrl,
         website: formData.website || null,
         price_range: formData.price_range,
         average_rating: formData.average_rating,
         is_published: formData.is_published,
         cuisine_types: formData.cuisine_types,
         category: formData.category || null, // JSON category (francais, asiatique, etc.) - from JSON import
-        place_category: formData.place_category, // venue_category enum - determines which page (restaurants, bars-nightlife, shopping, hebergement)
-        data_jsonb: jsonbData, // This includes photo_url set to same imageUrl
+        place_category: formData.place_category, // venue_category enum - determines which page
+        data_jsonb: jsonbData, // Both tables now have data_jsonb
+        address: formData.address || null, // Both tables now have address
+        district: formData.district || null, // Both tables now have district
+        phone: formData.phone || null, // Both tables have phone (also in data_jsonb for consistency)
       }
-      
-      // Ensure both main_image and data_jsonb.photo_url are synchronized
-      console.log('🔄 Image sync check:', {
-        main_image: updateData.main_image,
-        jsonb_photo_url: jsonbData.photo_url,
-        areEqual: updateData.main_image === jsonbData.photo_url
-      })
 
-      console.log('💾 Saving restaurant with data:', {
+      console.log(`💾 Saving ${isActivity ? 'activity' : 'venue'} with data:`, {
         id: isNew ? 'new' : id,
         name_fr: updateData.name_fr,
         main_image: updateData.main_image,
-        main_image_type: typeof updateData.main_image,
-        main_image_length: updateData.main_image?.length || 0,
-        data_jsonb_photo_url: jsonbData.photo_url,
-        fullUpdateData: updateData
+        isActivity,
+        updateData
       })
 
+      const tableName = isActivity ? "activities" : "venues"
+
       if (isNew) {
-        const { data: insertedData, error } = await supabase.from("venues").insert(updateData).select()
+        const { data: insertedData, error } = await supabase.from(tableName).insert(updateData).select()
         if (error) {
           console.error('❌ Insert error:', error)
           throw error
         }
-        console.log('✅ Restaurant created:', insertedData)
+        console.log(`✅ ${isActivity ? 'Activity' : 'Place'} created:`, insertedData)
         if (insertedData && insertedData[0]) {
           console.log('📸 Saved image URL:', insertedData[0].main_image)
           console.log('📸 Saved JSONB photo_url:', insertedData[0].data_jsonb?.photo_url)
         }
       } else {
-        const { data: updatedData, error } = await supabase.from("venues").update(updateData).eq("id", id).select()
+        const { data: updatedData, error } = await supabase.from(tableName).update(updateData).eq("id", id).select()
         if (error) {
           console.error('❌ Update error:', error)
           throw error
         }
-        console.log('✅ Restaurant updated:', updatedData)
+        console.log(`✅ ${isActivity ? 'Activity' : 'Place'} updated:`, updatedData)
         if (updatedData && updatedData[0]) {
           console.log('📸 Saved image URL:', updatedData[0].main_image)
           console.log('📸 Saved JSONB photo_url:', updatedData[0].data_jsonb?.photo_url)
         }
       }
 
-      alert(`✅ Restaurant saved successfully!\n\nImage URL: ${updateData.main_image ? updateData.main_image.substring(0, 60) + '...' : 'None'}`)
+      alert(`✅ ${isActivity ? 'Activity' : 'Place'} saved successfully!\n\nImage URL: ${updateData.main_image ? updateData.main_image.substring(0, 60) + '...' : 'None'}`)
       router.push("/admin/restaurants")
       router.refresh()
     } catch (error: any) {
-      console.error("Error saving restaurant:", error)
-      alert("Failed to save restaurant: " + (error.message || "Unknown error"))
+      console.error(`Error saving ${isActivity ? 'activity' : 'place'}:`, error)
+      alert(`Failed to save ${isActivity ? 'activity' : 'place'}: ` + (error.message || "Unknown error"))
     } finally {
       setSaving(false)
     }

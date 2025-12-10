@@ -1,0 +1,100 @@
+{
+  "restaurants_francais_international_casablanca": [
+    {
+      "id": "la_brasserie_royal_mansour",
+      "name": "La Brasserie – Royal Mansour",
+      "category": "francais",
+      "category_place": "restaurants",
+      "description": "Brasserie française gastronomique signée Éric Frechon, proposant des classiques revisités dans le cadre d'un hôtel 5 étoiles.",
+      "address": "Royal Mansour Casablanca, 27 Avenue des Forces Armées Royales, Casablanca",
+      "district": "Centre",
+      "phone": "+212 5 29 90 05 00",
+      "price_level": "€€€€",
+      "tags": [
+        "brasserie",
+        "gastronomique",
+        "hotel"
+      ]
+    },
+    {
+      "id": "cafe_m",
+      "name": "Café M – Hyatt Regency",
+      "category": "francais",
+      "category_place": "restaurants",
+      "description": "Restaurant français chic de l'hôtel Hyatt Regency, spécialités de brasserie, viandes et poissons avec belle carte de vins.",
+      "address": "Hyatt Regency Casablanca, Place des Nations Unies, Casablanca 20000",
+      "district": "Centre",
+      "phone": "+212 5 22 43 12 71",
+      "price_level": "€€€",
+      "tags": [
+        "brasserie",
+        "vin",
+        "hotel"
+      ]
+    },
+    {
+      "id": "example_bar",
+      "name": "Example Bar & Lounge",
+      "category": "cocktail",
+      "category_place": "bars-nightlife",
+      "description": "Un bar lounge moderne avec une sélection de cocktails créatifs.",
+      "address": "123 Boulevard Mohammed V, Casablanca",
+      "district": "Maârif",
+      "phone": "+212 5 22 12 34 56",
+      "price_level": "€€€",
+      "tags": [
+        "bar",
+        "cocktails",
+        "lounge"
+      ]
+    },
+    {
+      "id": "example_shopping",
+      "name": "Example Shopping Store",
+      "category": "shopping",
+      "category_place": "shopping",
+      "description": "Boutique de mode et accessoires.",
+      "address": "456 Boulevard Zerktouni, Casablanca",
+      "district": "Ain Diab",
+      "phone": "+212 5 22 98 76 54",
+      "price_level": "€€",
+      "tags": [
+        "shopping",
+        "mode",
+        "accessoires"
+      ]
+    },
+    {
+      "id": "example_hotel",
+      "name": "Example Luxury Hotel",
+      "category": "luxury",
+      "category_place": "hebergement",
+      "description": "Hôtel 5 étoiles avec vue sur l'océan.",
+      "address": "789 Corniche, Casablanca",
+      "district": "Ain Diab",
+      "phone": "+212 5 22 11 22 33",
+      "price_level": "€€€€",
+      "tags": [
+        "hotel",
+        "luxury",
+        "vue mer"
+      ]
+    },
+    {
+      "id": "example_gym",
+      "name": "Example Fitness Center",
+      "category": "fitness",
+      "category_place": "sport-bien-etre",
+      "description": "Centre de fitness moderne avec équipements de dernière génération.",
+      "address": "321 Avenue Hassan II, Casablanca",
+      "district": "Gauthier",
+      "phone": "+212 5 22 44 55 66",
+      "price_level": "€€",
+      "tags": [
+        "fitness",
+        "gym",
+        "bien-être"
+      ]
+    }
+  ]
+}

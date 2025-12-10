@@ -15,6 +15,7 @@ interface Restaurant {
   data_jsonb: any
   average_rating: number
   is_published: boolean
+  source?: 'venue' | 'activity' // Track which table it came from
 }
 
 export default function AdminRestaurantsPage() {
@@ -61,35 +62,72 @@ export default function AdminRestaurantsPage() {
       
       console.log("✅ Test query successful:", testData)
       
-      // Now try with place_category filter
-      console.log("Test 2: With place_category filter...")
-      const { data, error } = await supabase
-        .from("venues")
+      // Fetch from both venues and activities tables
+      console.log("Fetching from venues and activities...")
+      
+      // Fetch venues
+      let query = supabase.from("venues").select("*")
+      if (categoryFilter !== "all") {
+        query = query.eq("place_category", categoryFilter)
+      }
+      const { data: venuesData, error: venuesError } = await query
+      
+      // Fetch activities - map activity.category to place_category
+      // Activities can have category values that match place_category: restaurants, bars-nightlife, shopping, hebergement, sport-bien-etre
+      let activitiesData: any[] = []
+      const validPlaceCategories = ['restaurants', 'bars-nightlife', 'shopping', 'hebergement', 'sport-bien-etre']
+      
+      let activitiesQuery = supabase
+        .from("activities")
         .select("*")
-        .eq("place_category", "restaurants")
+        .eq("is_published", true)
+      
+      // Filter activities by category if categoryFilter is set
+      if (categoryFilter !== "all") {
+        activitiesQuery = activitiesQuery.eq("category", categoryFilter)
+      } else {
+        // If "all", fetch activities that match any valid place_category
+        activitiesQuery = activitiesQuery.in("category", validPlaceCategories)
+      }
+      
+      const { data: activities, error: activitiesError } = await activitiesQuery
+      
+      if (activitiesError) {
+        console.warn("⚠️ Error fetching activities:", activitiesError)
+      } else {
+        // Transform activities to match Restaurant interface
+        // Map activity.category to place_category (they should match)
+        activitiesData = (activities || [])
+          .filter((activity: any) => validPlaceCategories.includes(activity.category))
+          .map((activity: any) => ({
+            ...activity,
+            source: 'activity' as const,
+            place_category: activity.category // Map activity.category to place_category
+          }))
+      }
 
-      if (error) {
+      if (venuesError) {
         console.error("❌ Supabase error details:", {
-          message: error.message,
-          code: error.code,
-          details: error.details,
-          hint: error.hint,
-          fullError: error
+          message: venuesError.message,
+          code: venuesError.code,
+          details: venuesError.details,
+          hint: venuesError.hint,
+          fullError: venuesError
         })
-        alert(`Error loading restaurants:\n\n${error.message}\n\nCode: ${error.code}\n\nCheck browser console (F12) for full details.`)
+        alert(`Error loading places:\n\n${venuesError.message}\n\nCode: ${venuesError.code}\n\nCheck browser console (F12) for full details.`)
         return
       }
       
-      console.log(`✅ Loaded ${data?.length || 0} restaurants`)
-      console.log("Sample restaurant:", data?.[0])
-      setRestaurants(data || [])
+      // Combine venues and activities
+      const venuesWithSource = (venuesData || []).map((venue: any) => ({
+        ...venue,
+        source: 'venue' as const
+      }))
       
-      if (data && data.length === 0) {
-        console.warn("⚠️ No restaurants found with category='restaurants'")
-        console.log("Checking all venues...")
-        const { data: allVenues } = await supabase.from("venues").select("id, name_fr, category").limit(10)
-        console.log("All venues sample:", allVenues)
-      }
+      const allPlaces = [...venuesWithSource, ...activitiesData]
+      
+      console.log(`✅ Loaded ${venuesWithSource.length} venues and ${activitiesData.length} activities (${allPlaces.length} total)`)
+      setRestaurants(allPlaces)
     } catch (error: any) {
       console.error("❌ Exception caught:", error)
       console.error("Error stack:", error.stack)
@@ -99,19 +137,20 @@ export default function AdminRestaurantsPage() {
     }
   }
 
-  const handleDelete = async (id: string) => {
-    if (!confirm("Are you sure you want to delete this restaurant?")) return
+  const handleDelete = async (restaurant: Restaurant) => {
+    if (!confirm("Are you sure you want to delete this place?")) return
 
-    setDeletingId(id)
+    setDeletingId(restaurant.id)
     try {
       const supabase = createClient()
-      const { error } = await supabase.from("venues").delete().eq("id", id)
+      const tableName = restaurant.source === 'activity' ? 'activities' : 'venues'
+      const { error } = await supabase.from(tableName).delete().eq("id", restaurant.id)
 
       if (error) throw error
       fetchRestaurants()
     } catch (error) {
-      console.error("Error deleting restaurant:", error)
-      alert("Failed to delete restaurant")
+      console.error("Error deleting place:", error)
+      alert("Failed to delete place")
     } finally {
       setDeletingId(null)
     }
@@ -119,7 +158,7 @@ export default function AdminRestaurantsPage() {
 
   const filteredRestaurants = restaurants.filter((restaurant) => {
     const matchesSearch = restaurant.name_fr.toLowerCase().includes(searchTerm.toLowerCase())
-    const placeCategory = (restaurant as any).place_category || 'restaurants'
+    const placeCategory = (restaurant as any).place_category || (restaurant.source === 'activity' ? 'sport-bien-etre' : 'restaurants')
     const matchesCategory = categoryFilter === "all" || placeCategory === categoryFilter
     return matchesSearch && matchesCategory
   })
@@ -318,26 +357,53 @@ export default function AdminRestaurantsPage() {
                     </td>
                     <td className="px-6 py-4 whitespace-nowrap text-right text-sm font-medium">
                       <div className="flex items-center justify-end gap-2">
-                        <a
-                          href={`/fr/manger-sortir/restaurants/${restaurant.slug}`}
-                          target="_blank"
-                          rel="noopener noreferrer"
-                          className="text-blue-600 hover:text-blue-900"
-                          title="View on website"
-                        >
-                          <Eye className="w-5 h-5" />
-                        </a>
-                        <button
-                          onClick={() =>
-                            router.push(`/admin/restaurants/${restaurant.id}`)
+                        {restaurant.source === 'activity' ? (() => {
+                          const placeCategory = (restaurant as any).place_category || (restaurant as any).category || 'sport-bien-etre'
+                          // Map place_category to the correct activity page URL
+                          const activityPageMap: Record<string, string> = {
+                            'sport-bien-etre': `/fr/activites/sport-bien-etre/${restaurant.slug}`,
+                            'restaurants': `/fr/manger-sortir/restaurants/${restaurant.slug}`,
+                            'bars-nightlife': `/fr/manger-sortir/bars-nightlife/${restaurant.slug}`,
+                            'shopping': `/fr/manger-sortir/shopping/${restaurant.slug}`,
+                            'hebergement': `/fr/planifier/hebergement/${restaurant.slug}`
                           }
+                          const activityUrl = activityPageMap[placeCategory] || `/fr/activites/sport-bien-etre/${restaurant.slug}`
+                          
+                          return (
+                            <a
+                              href={activityUrl}
+                              target="_blank"
+                              rel="noopener noreferrer"
+                              className="text-blue-600 hover:text-blue-900"
+                              title="View on website"
+                            >
+                              <Eye className="w-5 h-5" />
+                            </a>
+                          )
+                        })() : (
+                          <a
+                            href={`/fr/lieux/${restaurant.slug}`}
+                            target="_blank"
+                            rel="noopener noreferrer"
+                            className="text-blue-600 hover:text-blue-900"
+                            title="View on website"
+                          >
+                            <Eye className="w-5 h-5" />
+                          </a>
+                        )}
+                        <button
+                          onClick={() => {
+                            // For activities, we'll edit them through the same form
+                            // The form will detect the source and handle accordingly
+                            router.push(`/admin/restaurants/${restaurant.id}?source=${restaurant.source || 'venue'}`)
+                          }}
                           className="text-teal-600 hover:text-teal-900"
                           title="Edit"
                         >
                           <Edit className="w-5 h-5" />
                         </button>
                         <button
-                          onClick={() => handleDelete(restaurant.id)}
+                          onClick={() => handleDelete(restaurant)}
                           disabled={deletingId === restaurant.id}
                           className="text-red-600 hover:text-red-900 disabled:opacity-50"
                           title="Delete"

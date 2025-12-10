@@ -22,7 +22,9 @@ export default function EditEventPage() {
     main_image: "",
     category: "concerts-spectacles",
     start_date: "",
+    start_time: "",
     end_date: "",
+    end_time: "",
     venue_name_fr: "",
     is_free: false,
     price_from: "",
@@ -52,8 +54,33 @@ export default function EditEventPage() {
 
       if (error) throw error
 
-      const startDate = data.start_date ? new Date(data.start_date).toISOString().slice(0, 16) : ""
-      const endDate = data.end_date ? new Date(data.end_date).toISOString().slice(0, 16) : ""
+      // Parse start_date and end_date to separate date and time
+      let startDate = ""
+      let startTime = ""
+      let endDate = ""
+      let endTime = ""
+      
+      if (data.start_date) {
+        const start = new Date(data.start_date)
+        // Get date in local timezone (YYYY-MM-DD)
+        startDate = start.getFullYear() + '-' + 
+          String(start.getMonth() + 1).padStart(2, '0') + '-' + 
+          String(start.getDate()).padStart(2, '0')
+        // Get time in local timezone (HH:MM)
+        startTime = String(start.getHours()).padStart(2, '0') + ':' + 
+          String(start.getMinutes()).padStart(2, '0')
+      }
+      
+      if (data.end_date) {
+        const end = new Date(data.end_date)
+        // Get date in local timezone (YYYY-MM-DD)
+        endDate = end.getFullYear() + '-' + 
+          String(end.getMonth() + 1).padStart(2, '0') + '-' + 
+          String(end.getDate()).padStart(2, '0')
+        // Get time in local timezone (HH:MM)
+        endTime = String(end.getHours()).padStart(2, '0') + ':' + 
+          String(end.getMinutes()).padStart(2, '0')
+      }
 
       setFormData({
         slug: data.slug || "",
@@ -63,7 +90,9 @@ export default function EditEventPage() {
         main_image: data.main_image || "",
         category: data.category || "concerts-spectacles",
         start_date: startDate,
+        start_time: startTime,
         end_date: endDate,
+        end_time: endTime,
         venue_name_fr: data.venue_name_fr || "",
         is_free: data.is_free || false,
         price_from: data.price_from?.toString() || "",
@@ -209,8 +238,18 @@ export default function EditEventPage() {
         short_description_fr: formData.short_description_fr || formData.description_fr?.substring(0, 200) || null,
         main_image: formData.main_image || null,
         category: formData.category,
-        start_date: formData.start_date || null,
-        end_date: formData.end_date || null,
+        // Combine date and time, use default time (00:00:00) if time not provided
+        // Append timezone offset to ensure proper timezone handling
+        start_date: formData.start_date 
+          ? (formData.start_time 
+              ? `${formData.start_date}T${formData.start_time}:00` 
+              : `${formData.start_date}T00:00:00`)
+          : null,
+        end_date: formData.end_date 
+          ? (formData.end_time 
+              ? `${formData.end_date}T${formData.end_time}:00` 
+              : `${formData.end_date}T00:00:00`)
+          : null,
         venue_name_fr: formData.venue_name_fr || null,
         is_free: formData.is_free,
         price_from: formData.price_from ? parseFloat(formData.price_from) : null,
@@ -417,10 +456,10 @@ export default function EditEventPage() {
             <div className="grid grid-cols-2 gap-6">
               <div>
                 <label className="block text-sm font-medium text-gray-700 mb-2">
-                  Start Date & Time
+                  Start Date <span className="text-red-500">*</span>
                 </label>
                 <input
-                  type="datetime-local"
+                  type="date"
                   value={formData.start_date}
                   onChange={(e) => setFormData({ ...formData, start_date: e.target.value })}
                   className="w-full px-4 py-2 border border-gray-300 rounded-lg focus:ring-2 focus:ring-teal-500 focus:border-transparent"
@@ -429,12 +468,36 @@ export default function EditEventPage() {
 
               <div>
                 <label className="block text-sm font-medium text-gray-700 mb-2">
-                  End Date & Time
+                  Start Time <span className="text-gray-400 text-xs">(optional)</span>
                 </label>
                 <input
-                  type="datetime-local"
+                  type="time"
+                  value={formData.start_time}
+                  onChange={(e) => setFormData({ ...formData, start_time: e.target.value })}
+                  className="w-full px-4 py-2 border border-gray-300 rounded-lg focus:ring-2 focus:ring-teal-500 focus:border-transparent"
+                />
+              </div>
+
+              <div>
+                <label className="block text-sm font-medium text-gray-700 mb-2">
+                  End Date
+                </label>
+                <input
+                  type="date"
                   value={formData.end_date}
                   onChange={(e) => setFormData({ ...formData, end_date: e.target.value })}
+                  className="w-full px-4 py-2 border border-gray-300 rounded-lg focus:ring-2 focus:ring-teal-500 focus:border-transparent"
+                />
+              </div>
+
+              <div>
+                <label className="block text-sm font-medium text-gray-700 mb-2">
+                  End Time <span className="text-gray-400 text-xs">(optional)</span>
+                </label>
+                <input
+                  type="time"
+                  value={formData.end_time}
+                  onChange={(e) => setFormData({ ...formData, end_time: e.target.value })}
                   className="w-full px-4 py-2 border border-gray-300 rounded-lg focus:ring-2 focus:ring-teal-500 focus:border-transparent"
                 />
               </div>
