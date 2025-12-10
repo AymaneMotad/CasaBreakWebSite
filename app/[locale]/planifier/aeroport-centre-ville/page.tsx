@@ -62,7 +62,7 @@ export default function AeroportCentreVillePage() {
     },
     {
       icon: Car,
-      title: "Taxis & VTC",
+      title: "Taxis",
       color: "#c10000",
       description: "Transport privé pour plus de confort et flexibilité",
       types: [
@@ -71,17 +71,6 @@ export default function AeroportCentreVillePage() {
           details: [
             "Taxis collectifs depuis l'aéroport",
             "Partagé avec d'autres passagers"
-          ],
-          price: null
-        },
-        {
-          name: "Petits Taxis",
-          details: [
-            "Taxis individuels (rouge)",
-            "Compteur obligatoire",
-            "Maximum 3 passagers",
-            "Plus économique en groupe",
-            "Le prix dépend du compteur du taxi"
           ],
           price: null
         }
@@ -100,7 +89,6 @@ export default function AeroportCentreVillePage() {
         "Assurance complète recommandée"
       ],
       pricing: [
-        "À partir de ~300 dirhams/jour",
         "Varie selon le type de véhicule et la durée"
       ],
       tip: "Réservez à l'avance pour de meilleurs tarifs"

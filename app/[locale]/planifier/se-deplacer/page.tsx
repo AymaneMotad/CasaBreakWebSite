@@ -79,19 +79,8 @@ export default function SeDeplacerPage() {
       icon: Taxi,
       title: "Taxis",
       color: "#c10000",
-      description: "Deux types de taxis pour tous vos déplacements",
+      description: "Taxis pour tous vos déplacements",
       types: [
-        {
-          name: "Petits Taxis",
-          color: "#c10000",
-          details: [
-            "Couleur rouge à Casablanca",
-            "Circulation uniquement en ville",
-            "Maximum 3 passagers",
-            "Compteur obligatoire",
-            "Très économique et pratique"
-          ]
-        },
         {
           name: "Grands Taxis",
           color: "#991b1b",
@@ -100,34 +89,6 @@ export default function SeDeplacerPage() {
             "Partagés avec d'autres passagers",
             "Idéal pour les déplacements interurbains",
             "Prix négociable"
-          ]
-        }
-      ]
-    },
-    {
-      icon: Car,
-      title: "VTC & Location",
-      color: "#ffd700",
-      description: "Options de transport privé et location de véhicules",
-      options: [
-        {
-          name: "Careem",
-          type: "VTC",
-          details: [
-            "Application mobile (filiale Uber)",
-            "Réservation avec chauffeur",
-            "Paiement par carte ou espèces",
-            "Alternative pratique aux taxis"
-          ]
-        },
-        {
-          name: "Location de voiture",
-          type: "Agences",
-          details: [
-            "Plusieurs agences en ville et à l'aéroport",
-            "Flexibilité maximale",
-            "Permis de conduire international requis",
-            "Assurance recommandée"
           ]
         }
       ]

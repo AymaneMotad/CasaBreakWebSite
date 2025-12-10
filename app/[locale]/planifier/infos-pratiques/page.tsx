@@ -6,7 +6,7 @@ import { Breadcrumb } from "@/components/breadcrumb"
 import { useParams } from "next/navigation"
 import { useTranslations } from 'next-intl'
 import { 
-  Info, Clock, Phone, Globe, CreditCard, MapPin, 
+  Info, Clock, Phone, CreditCard, MapPin, 
   Calendar, Sun, Moon, Umbrella, Wifi, Plug, 
   Utensils, ShoppingBag, Heart, AlertCircle, 
   CheckCircle, Lightbulb, Users, Languages
@@ -204,40 +204,6 @@ const emergencyContacts = [
 
       {/* CHP Map */}
       <CHPMap />
-
-      {/* Additional Resources */}
-      <section className="py-16 bg-gradient-to-b from-white to-gray-50">
-        <div className="max-w-7xl mx-auto px-6 lg:px-12">
-          <div className="max-w-4xl mx-auto">
-            <div className="p-8 rounded-3xl bg-gradient-to-br from-[#00a346]/10 via-[#0066b2]/10 to-[#c10000]/10 border-2 border-[#00a346]/20">
-              <div className="flex items-start gap-4">
-                <div className="w-12 h-12 rounded-xl bg-[#00a346]/20 flex items-center justify-center flex-shrink-0">
-                  <Globe className="w-6 h-6 text-[#00a346]" />
-                </div>
-                <div>
-                  <h3 className="text-2xl font-black text-[#1a1a1a] mb-3">
-                    Ressources utiles
-                  </h3>
-                  <ul className="space-y-2 text-gray-700">
-                    <li className="flex items-center gap-2">
-                      <MapPin className="w-4 h-4 text-[#00a346]" />
-                      <span>Office National Marocain du Tourisme : <a href="https://www.visitmorocco.com" target="_blank" rel="noopener noreferrer" className="text-[#0066b2] hover:underline font-medium">visitmorocco.com</a></span>
-                    </li>
-                    <li className="flex items-center gap-2">
-                      <Phone className="w-4 h-4 text-[#00a346]" />
-                      <span>Ambassades et consulats : vérifiez les coordonnées avant votre départ</span>
-                    </li>
-                    <li className="flex items-center gap-2">
-                      <Info className="w-4 h-4 text-[#00a346]" />
-                      <span>Assurance voyage recommandée pour les soins médicaux</span>
-                    </li>
-                  </ul>
-                </div>
-              </div>
-            </div>
-          </div>
-        </div>
-      </section>
 
       <Footer />
     </main>
