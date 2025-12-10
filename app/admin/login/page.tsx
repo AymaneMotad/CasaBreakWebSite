@@ -31,7 +31,7 @@ export default function AdminLoginPage() {
       }
 
       if (data.user) {
-        // Check if user is admin (you can add role check here)
+        // Redirect to restaurants page (dashboard)
         router.push("/admin/restaurants")
         router.refresh()
       }
