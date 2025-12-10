@@ -11,6 +11,7 @@ interface Restaurant {
   name_fr: string
   description_fr: string | null
   main_image: string | null
+  category: string
   data_jsonb: any
   average_rating: number
   is_published: boolean
@@ -22,10 +23,11 @@ export default function AdminRestaurantsPage() {
   const [loading, setLoading] = useState(true)
   const [searchTerm, setSearchTerm] = useState("")
   const [deletingId, setDeletingId] = useState<string | null>(null)
+  const [categoryFilter, setCategoryFilter] = useState<string>("all")
 
   useEffect(() => {
     fetchRestaurants()
-  }, [])
+  }, [categoryFilter])
 
   const fetchRestaurants = async () => {
     try {
@@ -59,12 +61,12 @@ export default function AdminRestaurantsPage() {
       
       console.log("✅ Test query successful:", testData)
       
-      // Now try with category filter
-      console.log("Test 2: With category filter...")
+      // Now try with place_category filter
+      console.log("Test 2: With place_category filter...")
       const { data, error } = await supabase
         .from("venues")
         .select("*")
-        .eq("category", "restaurants")
+        .eq("place_category", "restaurants")
 
       if (error) {
         console.error("❌ Supabase error details:", {
@@ -115,9 +117,23 @@ export default function AdminRestaurantsPage() {
     }
   }
 
-  const filteredRestaurants = restaurants.filter((restaurant) =>
-    restaurant.name_fr.toLowerCase().includes(searchTerm.toLowerCase())
-  )
+  const filteredRestaurants = restaurants.filter((restaurant) => {
+    const matchesSearch = restaurant.name_fr.toLowerCase().includes(searchTerm.toLowerCase())
+    const placeCategory = (restaurant as any).place_category || 'restaurants'
+    const matchesCategory = categoryFilter === "all" || placeCategory === categoryFilter
+    return matchesSearch && matchesCategory
+  })
+
+  const getCategoryLabel = (category: string) => {
+    const labels: Record<string, string> = {
+      'restaurants': 'Cafés & Restaurants',
+      'bars-nightlife': 'Bars & Nightlife',
+      'shopping': 'Shopping',
+      'hebergement': 'Hébergement',
+      'sport-bien-etre': 'Sport & Bien-être'
+    }
+    return labels[category] || category
+  }
 
   if (loading) {
     return (
@@ -131,9 +147,9 @@ export default function AdminRestaurantsPage() {
     <div>
       <div className="flex justify-between items-center mb-6">
         <div>
-          <h2 className="text-2xl font-bold text-gray-900">Restaurants</h2>
+          <h2 className="text-2xl font-bold text-gray-900">Lieux</h2>
           <p className="text-gray-600 mt-1">
-            Manage all restaurants ({restaurants.length} total)
+            Manage all places ({restaurants.length} total)
           </p>
         </div>
         <div className="flex gap-3">
@@ -149,29 +165,48 @@ export default function AdminRestaurantsPage() {
             className="flex items-center gap-2 px-4 py-2 bg-blue-600 text-white rounded-lg hover:bg-blue-700 transition-colors"
           >
             <Upload className="w-5 h-5" />
-            Import Restaurants
+            Import Places
           </button>
           <button
             onClick={() => router.push("/admin/restaurants/new")}
             className="flex items-center gap-2 px-4 py-2 bg-teal-600 text-white rounded-lg hover:bg-teal-700 transition-colors"
           >
             <Plus className="w-5 h-5" />
-            Add Restaurant
+            Add Place
           </button>
         </div>
       </div>
 
-      {/* Search */}
-      <div className="mb-6">
-        <div className="relative">
-          <Search className="absolute left-3 top-1/2 transform -translate-y-1/2 text-gray-400 w-5 h-5" />
-          <input
-            type="text"
-            placeholder="Search restaurants..."
-            value={searchTerm}
-            onChange={(e) => setSearchTerm(e.target.value)}
-            className="w-full pl-10 pr-4 py-2 border border-gray-300 rounded-lg focus:ring-2 focus:ring-teal-500 focus:border-transparent"
-          />
+      {/* Search and Filters */}
+      <div className="mb-6 flex gap-4">
+        <div className="flex-1">
+          <div className="relative">
+            <Search className="absolute left-3 top-1/2 transform -translate-y-1/2 text-gray-400 w-5 h-5" />
+            <input
+              type="text"
+              placeholder="Search places..."
+              value={searchTerm}
+              onChange={(e) => setSearchTerm(e.target.value)}
+              className="w-full pl-10 pr-4 py-2 border border-gray-300 rounded-lg focus:ring-2 focus:ring-teal-500 focus:border-transparent"
+            />
+          </div>
+        </div>
+        <div>
+          <select
+            value={categoryFilter}
+            onChange={(e) => {
+              setCategoryFilter(e.target.value)
+              fetchRestaurants()
+            }}
+            className="px-4 py-2 border border-gray-300 rounded-lg focus:ring-2 focus:ring-teal-500 focus:border-transparent"
+          >
+            <option value="all">All Categories</option>
+            <option value="restaurants">Cafés & Restaurants</option>
+            <option value="bars-nightlife">Bars & Nightlife</option>
+            <option value="shopping">Shopping</option>
+            <option value="hebergement">Hébergement</option>
+            <option value="sport-bien-etre">Sport & Bien-être</option>
+          </select>
         </div>
       </div>
 
@@ -187,6 +222,9 @@ export default function AdminRestaurantsPage() {
                 Name
               </th>
               <th className="px-6 py-3 text-left text-xs font-medium text-gray-500 uppercase tracking-wider">
+                Category
+              </th>
+              <th className="px-6 py-3 text-left text-xs font-medium text-gray-500 uppercase tracking-wider">
                 Status
               </th>
               <th className="px-6 py-3 text-left text-xs font-medium text-gray-500 uppercase tracking-wider">
@@ -200,19 +238,19 @@ export default function AdminRestaurantsPage() {
           <tbody className="bg-white divide-y divide-gray-200">
             {filteredRestaurants.length === 0 ? (
               <tr>
-                <td colSpan={5} className="px-6 py-12 text-center">
+                <td colSpan={6} className="px-6 py-12 text-center">
                   <div className="flex flex-col items-center gap-4">
                     <p className="text-gray-500 text-lg">
                       {restaurants.length === 0 
-                        ? "No restaurants in database" 
-                        : `No restaurants match "${searchTerm}"`}
+                        ? "No places in database" 
+                        : `No places match "${searchTerm}"`}
                     </p>
                     {restaurants.length === 0 && (
                       <div className="text-sm text-gray-400 space-y-2">
-                        <p>To add restaurants:</p>
+                        <p>To add places:</p>
                         <ol className="list-decimal list-inside space-y-1">
                           <li>Run the seed SQL: <code className="bg-gray-100 px-2 py-1 rounded">database/seed-restaurants-json.sql</code></li>
-                          <li>Or click "Add Restaurant" to create one manually</li>
+                          <li>Or click "Add Place" to create one manually</li>
                         </ol>
                       </div>
                     )}
@@ -250,6 +288,18 @@ export default function AdminRestaurantsPage() {
                       </div>
                       <div className="text-sm text-gray-500 truncate max-w-md">
                         {restaurant.description_fr || restaurant.data_jsonb?.description || ""}
+                      </div>
+                    </td>
+                    <td className="px-6 py-4 whitespace-nowrap">
+                      <div className="flex flex-col gap-1">
+                        <span className="px-2 py-1 inline-flex text-xs leading-5 font-semibold rounded-full bg-blue-100 text-blue-800">
+                          {getCategoryLabel((restaurant as any).place_category || 'restaurants')}
+                        </span>
+                        {(restaurant as any).category && (
+                          <span className="px-2 py-1 inline-flex text-xs leading-5 font-medium rounded-full bg-gray-100 text-gray-700">
+                            {(restaurant as any).category}
+                          </span>
+                        )}
                       </div>
                     </td>
                     <td className="px-6 py-4 whitespace-nowrap">
@@ -309,7 +359,7 @@ export default function AdminRestaurantsPage() {
       </div>
 
       <div className="mt-4 text-sm text-gray-500">
-        Showing {filteredRestaurants.length} of {restaurants.length} restaurants
+        Showing {filteredRestaurants.length} of {restaurants.length} places
       </div>
     </div>
   )

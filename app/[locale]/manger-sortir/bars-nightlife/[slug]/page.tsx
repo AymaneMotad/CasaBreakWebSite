@@ -29,7 +29,7 @@ export default function BarDetailPage() {
           .from('venues')
           .select('*')
           .eq('slug', slug)
-          .eq('category', 'bars-nightlife')
+          .eq('place_category', 'bars-nightlife')
           .eq('is_published', true)
           .single()
 

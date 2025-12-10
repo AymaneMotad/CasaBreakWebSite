@@ -53,7 +53,7 @@ export default function AdminLayout({
 
   const menuItems = [
     {
-      name: "Restaurants",
+      name: "Lieux",
       href: "/admin/restaurants",
       icon: Utensils,
       active: pathname.startsWith("/admin/restaurants") || pathname === "/admin"
@@ -128,9 +128,9 @@ export default function AdminLayout({
         <header className="bg-white shadow-sm border-b border-gray-200">
           <div className="px-6 py-4">
             <h2 className="text-2xl font-bold text-gray-900">
-              {pathname.startsWith("/admin/restaurants") && "Restaurants"}
+              {pathname.startsWith("/admin/restaurants") && "Lieux"}
               {pathname.startsWith("/admin/events") && "Events"}
-              {pathname === "/admin" && "Restaurants"}
+              {pathname === "/admin" && "Lieux"}
             </h2>
           </div>
         </header>

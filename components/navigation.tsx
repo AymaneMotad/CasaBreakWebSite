@@ -82,7 +82,7 @@ export function Navigation() {
       submenu: [
         { label: t("cafesRestaurants"), href: `/${currentLocale}/manger-sortir/restaurants` },
         { label: t("barsNightlife"), href: `/${currentLocale}/manger-sortir/bars-nightlife` },
-        { label: t("shopping"), href: `/${currentLocale}/activites/shopping` },
+        { label: t("shopping"), href: `/${currentLocale}/manger-sortir/shopping` },
       ],
     },
     {

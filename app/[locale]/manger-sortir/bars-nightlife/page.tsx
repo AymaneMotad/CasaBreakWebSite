@@ -26,7 +26,7 @@ export default function BarsNightlifePage() {
         const { data, error } = await supabase
           .from('venues')
           .select('*')
-          .eq('category', 'bars-nightlife')
+          .eq('place_category', 'bars-nightlife')
           .eq('is_published', true)
           .order('is_featured', { ascending: false })
 

@@ -56,8 +56,8 @@ export default function ShoppingPage() {
         <div className="max-w-7xl mx-auto px-6 lg:px-12">
           <Breadcrumb 
             items={[
-              { label: t("activities"), href: `/${locale}/activites/shopping` },
-              { label: t("shopping"), href: `/${locale}/activites/shopping` }
+              { label: t("foodFun"), href: `/${locale}/manger-sortir/restaurants` },
+              { label: t("shopping"), href: `/${locale}/manger-sortir/shopping` }
             ]}
           />
         </div>
@@ -140,7 +140,7 @@ export default function ShoppingPage() {
 
                     {/* Read More Button */}
                     <Link
-                      href={`/${locale}/manger-sortir/shopping/${venue.slug}`}
+                      href={`/${locale}/manger-sortir/restaurants/${venue.slug}`}
                       className="inline-flex items-center text-teal-600 hover:text-teal-700 font-medium text-sm transition-colors"
                     >
                       Lire la suite

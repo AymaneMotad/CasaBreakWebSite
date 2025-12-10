@@ -29,7 +29,7 @@ export default function RestaurantDetailPage() {
           .from('venues')
           .select('*')
           .eq('slug', slug)
-          .eq('category', 'restaurants')
+          .eq('place_category', 'restaurants')
           .eq('is_published', true)
           .single()
 

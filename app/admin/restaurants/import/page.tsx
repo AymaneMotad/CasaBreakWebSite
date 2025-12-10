@@ -121,7 +121,7 @@ export default function ImportRestaurantsPage() {
           const jsonbData = {
             id: restaurant.id,
             name: restaurant.name,
-            category: restaurant.category || 'restaurants',
+            category: restaurant.category || null, // JSON category (francais, asiatique, etc.) - keep as is
             description: restaurant.description || '',
             address: restaurant.address || '',
             district: restaurant.district || '',
@@ -136,7 +136,8 @@ export default function ImportRestaurantsPage() {
           // Prepare insert data
           const insertData: any = {
             slug,
-            category: 'restaurants',
+            category: restaurant.category || null, // JSON category (francais, asiatique, etc.) - keep from JSON
+            place_category: 'restaurants', // venue_category enum - determines which page (restaurants, bars-nightlife, shopping, hebergement)
             name_fr: restaurant.name,
             description_fr: restaurant.description || '',
             short_description_fr: restaurant.description 

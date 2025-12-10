@@ -57,8 +57,8 @@ export default function RestaurantsPage() {
         // Fetch ALL restaurants (both old ones without JSONB and new ones with JSONB)
         const { data, error } = await supabase
           .from('venues')
-          .select('id, slug, name_fr, description_fr, short_description_fr, main_image, data_jsonb, average_rating, price_range, cuisine_types, website, phone')
-          .eq('category', 'restaurants')
+          .select('id, slug, name_fr, description_fr, short_description_fr, main_image, data_jsonb, average_rating, price_range, cuisine_types, website, phone, category, place_category')
+          .eq('place_category', 'restaurants')
           .eq('is_published', true)
           .order('average_rating', { ascending: false })
 

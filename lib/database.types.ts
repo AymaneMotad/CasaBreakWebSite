@@ -29,6 +29,8 @@ export type ActivityCategory =
 export type VenueCategory = 
   | 'restaurants'          // Cafés & Restaurants
   | 'bars-nightlife'       // Bars & Nightlife
+  | 'shopping'             // Shopping
+  | 'hebergement'          // Hébergement (appears in Planifier, not Gastronomie)
   | 'centres-commerciaux'  // Shopping Malls
   | 'souks-artisanat';     // Souks & Crafts
 

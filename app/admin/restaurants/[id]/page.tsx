@@ -21,6 +21,8 @@ export default function EditRestaurantPage() {
     short_description_fr: "",
     main_image: "",
     website: "",
+    category: "", // JSON category (francais, asiatique, etc.) - from JSON import
+    place_category: "restaurants", // venue_category enum - determines which page (restaurants, bars-nightlife, shopping, hebergement)
     price_range: "$$",
     average_rating: 0,
     is_published: true,
@@ -73,6 +75,8 @@ export default function EditRestaurantPage() {
         short_description_fr: data.short_description_fr || "",
         main_image: imageUrl,
         website: data.website || jsonData.website || "",
+        category: jsonData?.category || data.category || "", // JSON category (francais, asiatique, etc.)
+        place_category: (data as any).place_category || data.category || "restaurants", // venue_category enum - determines page
         price_range: data.price_range || "$$",
         average_rating: jsonData.rating || data.average_rating || 0,
         is_published: data.is_published ?? true,
@@ -226,6 +230,7 @@ export default function EditRestaurantPage() {
       const jsonbData = {
         id: formData.slug,
         name: formData.name_fr,
+        category: formData.category || null, // JSON category (francais, asiatique, etc.) - keep as is
         description: formData.description_fr,
         address: formData.address,
         district: formData.district,
@@ -235,7 +240,6 @@ export default function EditRestaurantPage() {
         photo_url: imageUrl, // Always set to same value as main_image
         website: formData.website || null,
         tags: formData.tags,
-        category: "asiatique",
         subtype: formData.cuisine_types[0] || "fusion",
       }
 
@@ -250,7 +254,8 @@ export default function EditRestaurantPage() {
         average_rating: formData.average_rating,
         is_published: formData.is_published,
         cuisine_types: formData.cuisine_types,
-        category: "restaurants",
+        category: formData.category || null, // JSON category (francais, asiatique, etc.) - from JSON import
+        place_category: formData.place_category, // venue_category enum - determines which page (restaurants, bars-nightlife, shopping, hebergement)
         data_jsonb: jsonbData, // This includes photo_url set to same imageUrl
       }
       
@@ -325,7 +330,7 @@ export default function EditRestaurantPage() {
           Back
         </button>
         <h2 className="text-2xl font-bold text-gray-900">
-          {isNew ? "Create Restaurant" : "Edit Restaurant"}
+          {isNew ? "Create Place" : "Edit Place"}
         </h2>
       </div>
 
@@ -360,6 +365,42 @@ export default function EditRestaurantPage() {
                   required
                   className="w-full px-4 py-2 border border-gray-300 rounded-lg focus:ring-2 focus:ring-teal-500 focus:border-transparent"
                 />
+              </div>
+
+              <div>
+                <label className="block text-sm font-medium text-gray-700 mb-2">
+                  Place Category (Page Location) *
+                  <span className="text-gray-400 text-xs ml-2">(determines which navbar section)</span>
+                </label>
+                <select
+                  value={formData.place_category}
+                  onChange={(e) => setFormData({ ...formData, place_category: e.target.value })}
+                  required
+                  className="w-full px-4 py-2 border border-gray-300 rounded-lg focus:ring-2 focus:ring-teal-500 focus:border-transparent"
+                >
+                  <option value="restaurants">Cafés & Restaurants</option>
+                  <option value="bars-nightlife">Bars & Nightlife</option>
+                  <option value="shopping">Shopping</option>
+                  <option value="hebergement">Hébergement</option>
+                  <option value="sport-bien-etre">Sport & Bien-être</option>
+                </select>
+              </div>
+
+              <div>
+                <label className="block text-sm font-medium text-gray-700 mb-2">
+                  Category
+                  <span className="text-gray-400 text-xs ml-2">(from JSON: francais, asiatique, etc.)</span>
+                </label>
+                <input
+                  type="text"
+                  value={formData.category}
+                  onChange={(e) => setFormData({ ...formData, category: e.target.value })}
+                  placeholder="e.g., francais, asiatique, marocain"
+                  className="w-full px-4 py-2 border border-gray-300 rounded-lg focus:ring-2 focus:ring-teal-500 focus:border-transparent"
+                />
+                <p className="mt-1 text-xs text-gray-500">
+                  JSON category field - used for filtering/displaying within the page. Set automatically from JSON import.
+                </p>
               </div>
 
               <div>
@@ -639,7 +680,7 @@ export default function EditRestaurantPage() {
             ) : (
               <>
                 <Save className="w-5 h-5" />
-                Save Restaurant
+                Save Place
               </>
             )}
           </button>
