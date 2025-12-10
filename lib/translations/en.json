@@ -880,6 +880,19 @@
       "description": "Discover green spaces, parks and outdoor activities in Casablanca"
     },
     "activities": {
+      "zoo": {
+        "title": "Ain Sebaa Zoo",
+        "description": "Ain Sebaa Zoo is a recently renovated zoological park located in Casablanca. Spanning 13 hectares, with 10 dedicated to animals, the zoo hosts more than 300 animals representing 45 different species, distributed across three thematic zones inspired by Africa, Asia, and America. An ideal place to discover wildlife with the family.",
+        "badge": "Must see",
+        "location": "Location",
+        "address": "Ain Sebaa, Casablanca",
+        "hours": "Hours",
+        "hoursDetail": "Open daily",
+        "species": "Species",
+        "speciesDetail": "300+ animals, 45 species",
+        "perfectFor": "Perfect for",
+        "highlights": "Family, Discovery, Education, Photos, Outdoor outing"
+      },
       "anfa": {
         "title": "Anfa Park",
         "description": "A vast modern park in the heart of Casa Anfa: large lawns for picnics, walking trails & cycle paths, sports areas & family zones, a calm and green environment. Perfect for: jogging, yoga, picnics, relaxation."
