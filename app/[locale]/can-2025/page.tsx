@@ -202,9 +202,9 @@ export default function Can2025Page() {
   const locale = useLocale()
   
   const hostCities = [
-    { city: 'Casablanca', stadium: 'Stade Mohammed V', image: '/stadiums/mohammed-v-casablanca.jpg', capacity: '67 000', matches: '8 matchs', accentColor: '#00a346' },
-    { city: 'Rabat', stadium: 'Complexe Sportif Prince Moulay Abdellah', image: 'https://www.cafonline.com/media/1q3p4e13/b25iefrm0951.jpg?rmode=max&width=1000&height=667', capacity: '68 000', matches: 'Finale', accentColor: '#c10000' },
-    { city: 'Rabat', stadium: 'Stade Annexe Olympique – Complexe Sportif Prince Moulay Abdellah', image: 'https://www.cafonline.com/media/xtqighxf/b25gznr0906.jpg?rmode=max&width=1000&height=667', capacity: '21 000', matches: '4 matchs', accentColor: '#c10000' },
+    { city: 'Casablanca', stadium: 'Stade Mohammed V', image: 'https://sonarges.ma/wp-content/uploads/2024/12/WhatsApp-Image-2024-12-16-at-17.03.16-1.jpeg', capacity: '45 000', matches: '8 matchs', accentColor: '#00a346' },
+    { city: 'Rabat', stadium: 'Complexe Sportif Prince Moulay Abdellah', image: 'https://www.cafonline.com/media/1q3p4e13/b25iefrm0951.jpg?rmode=max&width=1000&height=667', capacity: '68 000', matches: '7 matchs', accentColor: '#c10000' },
+    { city: 'Rabat', stadium: 'Stade Annexe Olympique – Complexe Sportif Prince Moulay Abdellah', image: 'https://www.cafonline.com/media/xtqighxf/b25gznr0906.jpg?rmode=max&width=1000&height=667', capacity: '21 000', matches: '3 matchs', accentColor: '#c10000' },
     { city: 'Rabat', stadium: 'Complexe Sportif Prince Héritier Moulay El Hassan', image: 'https://www.cafonline.com/media/efsjavli/b25kpnr1401.jpg?rmode=max&width=1000&height=667', capacity: '22 000', matches: '4 matchs', accentColor: '#c10000' },
     { city: 'Rabat', stadium: 'Stade El Barid', image: 'https://www.cafonline.com/media/ctzp5cej/b25kmnr1221.jpg?rmode=max&width=1000&height=667', capacity: '18 000', matches: '4 matchs', accentColor: '#c10000' },
     { city: 'Marrakech', stadium: 'Grand Stade de Marrakech', image: '/stadiums/marrakech.jpg', capacity: '45 240', matches: '8 matchs', accentColor: '#ffd700' },
