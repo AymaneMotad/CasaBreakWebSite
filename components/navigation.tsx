@@ -72,6 +72,7 @@ export function Navigation() {
         { label: t("outdoorSea"), href: `/${currentLocale}/activites/plein-air-mer` },
         { label: t("familyKids"), href: `/${currentLocale}/activites/famille-enfants` },
         { label: t("sportWellness"), href: `/${currentLocale}/activites/sport-bien-etre` },
+        { label: t("cinema"), href: `/${currentLocale}/activites/cinema` },
       ],
     },
     {

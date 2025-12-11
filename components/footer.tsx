@@ -158,8 +158,13 @@ export function Footer() {
                 </a>
               </li>
               <li>
-                <a href={`/${currentLocale}/activites/shopping`} className="text-slate-400 hover:text-[#c10000] transition-colors duration-200 text-sm">
+                <a href={`/${currentLocale}/activites/sport-bien-etre`} className="text-slate-400 hover:text-[#c10000] transition-colors duration-200 text-sm">
                   {t("sportWellness")}
+                </a>
+              </li>
+              <li>
+                <a href={`/${currentLocale}/activites/cinema`} className="text-slate-400 hover:text-[#c10000] transition-colors duration-200 text-sm">
+                  {t("cinema")}
                 </a>
               </li>
             </ul>
