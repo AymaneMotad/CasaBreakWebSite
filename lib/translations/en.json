@@ -1178,8 +1178,7 @@
           "items": [
             "Currency: Moroccan dirham (MAD)",
             "Bank cards accepted in most shops",
-            "ATMs available throughout the city",
-            "Tips: 10% in restaurants"
+            "ATMs available throughout the city"
           ]
         },
         "telecom": {
@@ -1214,7 +1213,6 @@
           "items": [
             "220V / 50Hz",
             "Type C and E sockets (European)",
-            "Adapters available in shops",
             "Rare but possible power cuts"
           ]
         }
