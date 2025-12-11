@@ -82,9 +82,7 @@ export default function EvenementsSportifsPage() {
     return date.toLocaleDateString('fr-FR', { 
       day: 'numeric', 
       month: 'long', 
-      year: 'numeric',
-      hour: '2-digit',
-      minute: '2-digit'
+      year: 'numeric'
     })
   }
 
