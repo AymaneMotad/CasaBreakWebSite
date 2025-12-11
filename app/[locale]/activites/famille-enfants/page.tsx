@@ -30,7 +30,7 @@ export default function FamilleEnfantsPage() {
     },
     {
       name: "Dream World",
-      image: "https://yzgvfaxalzubsmmqmswx.supabase.co/storage/v1/object/public/casabreak/public_stuff/Dream%20world%20.jpeg",
+      image: "https://yzgvfaxalzubsmmqmswx.supabase.co/storage/v1/object/public/casabreak/public_stuff/dreammm.jpeg",
       description: "Plonge dans l'univers immersif de Dream World : un espace où la réalité virtuelle te transporte dans des mondes extraordinaires, où le cinéma 6D t'offre des sensations inédites, où les défis sportifs et les jeux vidéo iconiques prennent vie, et où un espace entièrement pensé pour les plus petits garantit amusement et émerveillement pour toute la famille."
     },
     {
