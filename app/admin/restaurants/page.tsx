@@ -66,7 +66,7 @@ export default function AdminRestaurantsPage() {
       console.log("Fetching from venues and activities...")
       
       // Fetch venues
-      let query = supabase.from("venues").select("*")
+      let query = supabase.from("venues").select("*").eq("is_published", true)
       if (categoryFilter !== "all") {
         query = query.eq("place_category", categoryFilter)
       }
@@ -158,7 +158,11 @@ export default function AdminRestaurantsPage() {
 
   const filteredRestaurants = restaurants.filter((restaurant) => {
     const matchesSearch = restaurant.name_fr.toLowerCase().includes(searchTerm.toLowerCase())
-    const placeCategory = (restaurant as any).place_category || (restaurant.source === 'activity' ? 'sport-bien-etre' : 'restaurants')
+    // For activities, use place_category (which is mapped from category) or fall back to category
+    // For venues, use place_category
+    const placeCategory = (restaurant as any).place_category || 
+                         (restaurant.source === 'activity' ? (restaurant as any).category : null) ||
+                         'restaurants'
     const matchesCategory = categoryFilter === "all" || placeCategory === categoryFilter
     return matchesSearch && matchesCategory
   })
