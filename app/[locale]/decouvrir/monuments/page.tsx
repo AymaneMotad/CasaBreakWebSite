@@ -37,7 +37,7 @@ export default function MonumentsPage() {
       title: t("monuments.medina.title"),
       description: t("monuments.medina.description"),
       imageUrls: [
-        "https://aujourdhui.ma/wp-content/uploads/2016/02/lancienne-medina-de-casablanca.jpg"
+        "https://yzgvfaxalzubsmmqmswx.supabase.co/storage/v1/object/public/casabreak/public_stuff/ancienne%20medina.jpeg"
       ],
       color: "#c10000"
     },
@@ -75,7 +75,7 @@ export default function MonumentsPage() {
       title: t("monuments.mahkama.title"),
       description: t("monuments.mahkama.description"),
       imageUrls: [
-        "https://www.casablancacity.ma/couvertures/article/VHJxttdLS5Apk1JoMXG8q9LO05rEv6MPf2NynFhl.jpeg"
+        "https://yzgvfaxalzubsmmqmswx.supabase.co/storage/v1/object/public/casabreak/public_stuff/mahkama%20el%20pacha.jpeg"
       ],
       color: "#c10000"
     },
@@ -84,7 +84,7 @@ export default function MonumentsPage() {
       title: t("monuments.abattoirs.title"),
       description: t("monuments.abattoirs.description"),
       imageUrls: [
-        "https://www.casablancacity.ma/couvertures/article/anciens-abattoirs-casablanca.jpg"
+        "https://yzgvfaxalzubsmmqmswx.supabase.co/storage/v1/object/public/casabreak/public_stuff/les%20Anciens%20abattoirs%20.png"
       ],
       color: "#0066b2"
     },
@@ -93,7 +93,7 @@ export default function MonumentsPage() {
       title: t("monuments.judaisme.title"),
       description: t("monuments.judaisme.description"),
       imageUrls: [
-        "https://www.casablancacity.ma/couvertures/article/musee-judaisme-marocain.jpg"
+        "https://yzgvfaxalzubsmmqmswx.supabase.co/storage/v1/object/public/casabreak/public_stuff/Musee%20du%20Judaisme%20Marocain.jpg"
       ],
       color: "#00a346"
     },
@@ -102,7 +102,7 @@ export default function MonumentsPage() {
       title: t("monuments.rialto.title"),
       description: t("monuments.rialto.description"),
       imageUrls: [
-        "https://www.casablancacity.ma/couvertures/article/cinema-rialto-casablanca.jpg"
+        "https://yzgvfaxalzubsmmqmswx.supabase.co/storage/v1/object/public/casabreak/public_stuff/cinema%20realto.png"
       ],
       color: "#c10000"
     },
@@ -111,7 +111,7 @@ export default function MonumentsPage() {
       title: t("monuments.sqala.title"),
       description: t("monuments.sqala.description"),
       imageUrls: [
-        "https://www.casablancacity.ma/couvertures/article/sqala-casablanca.jpg"
+        "https://yzgvfaxalzubsmmqmswx.supabase.co/storage/v1/object/public/casabreak/public_stuff/Bastion%20La%20Sqala.jpg"
       ],
       color: "#0066b2"
     },
