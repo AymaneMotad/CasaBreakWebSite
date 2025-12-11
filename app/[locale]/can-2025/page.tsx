@@ -211,7 +211,7 @@ export default function Can2025Page() {
     { city: 'Marrakech', stadium: 'Grand Stade de Marrakech', image: '/stadiums/marrakech.jpg', capacity: '45 240', matches: '8 matchs', accentColor: '#ffd700' },
     { city: 'Tanger', stadium: 'Grand Stade de Tanger', image: '/stadiums/tanger.jpg', capacity: '68 000', matches: '6 matchs', accentColor: '#0066b2' },
     { city: 'Fès', stadium: 'Complexe Sportif de Fès', image: '/stadiums/fes.jpg', capacity: '45 000', matches: '4 matchs', accentColor: '#00a346' },
-    { city: 'Agadir', stadium: 'Grand Stade d\'Agadir', image: '/stadiums/agadir.jpg', capacity: '45 480', matches: '8 matchs', accentColor: '#c10000' },
+    { city: 'Agadir', stadium: 'Grand Stade d\'Agadir', image: 'https://yzgvfaxalzubsmmqmswx.supabase.co/storage/v1/object/public/casabreak/public_stuff/Grand%20Stade%20Agadi.png', capacity: '45 480', matches: '8 matchs', accentColor: '#c10000' },
   ]
 
   const teams = [
