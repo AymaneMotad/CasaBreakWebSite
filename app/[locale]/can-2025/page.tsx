@@ -1000,7 +1000,7 @@ export default function Can2025Page() {
             {/* Right - Bento Visual */}
             <div className="grid grid-cols-6 grid-rows-4 gap-3 h-[500px]">
               {/* Main Image */}
-              <div className="col-span-4 row-span-3 rounded-3xl overflow-hidden shadow-2xl">
+              <div className="col-span-6 row-span-3 rounded-3xl overflow-hidden shadow-2xl">
                 <img 
                   src="https://images.unsplash.com/photo-1696259629194-5411989d6675?w=800&q=80" 
                   alt="Mosquée Hassan II"
@@ -1008,23 +1008,14 @@ export default function Can2025Page() {
                 />
               </div>
               
-              {/* Side cards */}
-              <div className="col-span-2 row-span-2 rounded-2xl overflow-hidden shadow-xl">
-                <img 
-                  src="https://images.unsplash.com/photo-1539635278303-d4002c07eae3?w=400&q=80" 
-                  alt="Casablanca"
-                  className="w-full h-full object-cover hover:scale-110 transition-transform duration-500"
-                />
-              </div>
-              
-              <div className="col-span-2 row-span-2 rounded-2xl bg-gradient-to-br from-[#00a346] to-[#006633] flex items-center justify-center shadow-xl">
+              <div className="col-span-3 row-span-1 rounded-2xl bg-gradient-to-br from-[#00a346] to-[#006633] flex items-center justify-center shadow-xl">
                 <div className="text-center text-white p-4">
                   <div className="text-4xl font-black">+500</div>
                   <div className="text-sm opacity-80">Lieux à découvrir</div>
                 </div>
               </div>
               
-              <div className="col-span-4 row-span-1 rounded-2xl bg-gradient-to-r from-[#ffd700] to-[#ffb800] flex items-center justify-center shadow-xl">
+              <div className="col-span-3 row-span-1 rounded-2xl bg-gradient-to-r from-[#ffd700] to-[#ffb800] flex items-center justify-center shadow-xl">
                 <div className="flex items-center gap-4 text-gray-900">
                   <Star className="w-6 h-6" />
                   <span className="font-bold text-lg">La ville qui ne dort jamais</span>
