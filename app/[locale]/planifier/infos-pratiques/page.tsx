@@ -99,7 +99,6 @@ const emergencyContacts = [
         <div className="max-w-7xl mx-auto px-6 lg:px-12">
           <Breadcrumb 
             items={[
-              { label: t("planStay"), href: `/${locale}/planifier` },
               { label: t("practicalInfo"), href: `/${locale}/planifier/infos-pratiques` }
             ]}
           />

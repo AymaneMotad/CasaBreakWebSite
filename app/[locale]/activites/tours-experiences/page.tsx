@@ -19,7 +19,6 @@ export default function ToursExperiencesPage() {
         <div className="max-w-7xl mx-auto px-6 lg:px-12">
           <Breadcrumb 
             items={[
-              { label: "Activités", href: `/${locale}/activites/tours-experiences` },
               { label: "Tours & Expériences", href: `/${locale}/activites/tours-experiences` }
             ]} 
           />

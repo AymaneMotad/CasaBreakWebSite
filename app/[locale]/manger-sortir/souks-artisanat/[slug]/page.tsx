@@ -107,7 +107,6 @@ export default function SoukArtisanatDetailPage() {
         <div className="max-w-4xl mx-auto px-6 lg:px-12">
           <Breadcrumb 
             items={[
-              { label: t("foodFun"), href: `/${locale}/manger-sortir/restaurants` },
               { label: "Souks & Artisanat", href: `/${locale}/manger-sortir/souks-artisanat` },
               { label: (venue.data_jsonb as any)?.name || venue.name_fr, href: `/${locale}/manger-sortir/souks-artisanat/${slug}` }
             ]}

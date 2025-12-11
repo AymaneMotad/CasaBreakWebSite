@@ -83,8 +83,7 @@ export default function IndividuelsPage() {
         <div className="max-w-[1400px] mx-auto px-6 lg:px-12">
           <Breadcrumb 
             items={[
-              { label: t("breadcrumb.visit"), href: "/visiter/individuels" },
-              { label: t("breadcrumb.individuals"), href: "/visiter/individuels" }
+              { label: t("breadcrumb.individuals"), href: `/${locale}/visiter/individuels` }
             ]} 
           />
         </div>

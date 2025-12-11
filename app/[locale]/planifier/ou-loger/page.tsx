@@ -241,7 +241,6 @@ export default function OuLogerPage() {
         <div className="max-w-7xl mx-auto px-6 lg:px-12">
           <Breadcrumb 
             items={[
-              { label: t("planStay"), href: `/${locale}/planifier` },
               { label: t("whereToStay"), href: `/${locale}/planifier/ou-loger` }
             ]}
           />

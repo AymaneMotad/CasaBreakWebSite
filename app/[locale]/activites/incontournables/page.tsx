@@ -142,7 +142,6 @@ export default function IncontournablesPage() {
         <div className="max-w-7xl mx-auto px-6 lg:px-12">
           <Breadcrumb 
             items={[
-              { label: "Activités", href: `/${locale}/activites` },
               { label: "Incontournables", href: `/${locale}/activites/incontournables` }
             ]} 
           />

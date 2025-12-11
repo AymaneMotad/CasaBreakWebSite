@@ -134,7 +134,6 @@ export default function RestaurantsPage() {
         <div className="max-w-7xl mx-auto px-6 lg:px-12">
           <Breadcrumb 
             items={[
-              { label: t("foodFun"), href: `/${locale}/manger-sortir/restaurants` },
               { label: t("restaurants"), href: `/${locale}/manger-sortir/restaurants` }
             ]}
           />
@@ -331,13 +330,6 @@ export default function RestaurantsPage() {
                       </div>
                     )}
                     
-                    {/* Rating Badge */}
-                    {rating && (
-                      <div className="absolute top-4 right-4 bg-white/90 backdrop-blur-sm px-3 py-1 rounded-full flex items-center gap-1">
-                        <span className="text-yellow-500">★</span>
-                        <span className="font-semibold text-sm">{rating}</span>
-                      </div>
-                    )}
                   </div>
 
                   {/* Content */}

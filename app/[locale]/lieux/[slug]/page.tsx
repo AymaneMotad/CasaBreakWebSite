@@ -57,20 +57,20 @@ export default function VenueDetailPage() {
     }
   }, [slug])
 
-  // Get back link based on place_category
+  // Get back link and label based on place_category
   const getBackLink = () => {
-    if (!venue) return `/${locale}/manger-sortir/restaurants`
+    if (!venue) return { href: `/${locale}/manger-sortir/restaurants`, label: t("restaurants") }
     
     const placeCategory = (venue as any).place_category || 'restaurants'
-    const categoryMap: Record<string, string> = {
-      'restaurants': `/${locale}/manger-sortir/restaurants`,
-      'bars-nightlife': `/${locale}/manger-sortir/bars-nightlife`,
-      'shopping': `/${locale}/manger-sortir/shopping`,
-      'hebergement': `/${locale}/planifier/hebergement`,
-      'sport-bien-etre': `/${locale}/activites/sport-bien-etre`,
+    const categoryMap: Record<string, { href: string, label: string }> = {
+      'restaurants': { href: `/${locale}/manger-sortir/restaurants`, label: t("restaurants") },
+      'bars-nightlife': { href: `/${locale}/manger-sortir/bars-nightlife`, label: t("barsNightlife") },
+      'shopping': { href: `/${locale}/manger-sortir/shopping`, label: t("shopping") },
+      'hebergement': { href: `/${locale}/planifier/hebergement`, label: t("accommodation") },
+      'sport-bien-etre': { href: `/${locale}/activites/sport-bien-etre`, label: t("sportWellness") },
     }
     
-    return categoryMap[placeCategory] || `/${locale}/manger-sortir/restaurants`
+    return categoryMap[placeCategory] || { href: `/${locale}/manger-sortir/restaurants`, label: t("restaurants") }
   }
 
   if (loading) {
@@ -101,7 +101,7 @@ export default function VenueDetailPage() {
             <div className="text-center py-20">
               <p className="text-red-500 mb-4 text-lg">Erreur: {error || 'Lieu non trouvé'}</p>
               <Link
-                href={getBackLink()}
+                href={getBackLink().href}
                 className="inline-flex items-center text-teal-600 hover:text-teal-700 font-medium"
               >
                 <ArrowLeft className="w-4 h-4 mr-2" />
@@ -133,7 +133,7 @@ export default function VenueDetailPage() {
         <div className="max-w-4xl mx-auto px-6 lg:px-12">
           <Breadcrumb 
             items={[
-              { label: t("foodFun"), href: getBackLink() },
+              { label: getBackLink().label, href: getBackLink().href },
               { label: name, href: `/${locale}/lieux/${slug}` }
             ]}
           />

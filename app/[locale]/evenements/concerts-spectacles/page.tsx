@@ -88,7 +88,6 @@ export default function ConcertsSpectaclesPage() {
         <div className="max-w-7xl mx-auto px-6 lg:px-12">
           <Breadcrumb 
             items={[
-              { label: t("events"), href: `/${locale}/evenements` },
               { label: t("concertsShows"), href: `/${locale}/evenements/concerts-spectacles` }
             ]}
           />

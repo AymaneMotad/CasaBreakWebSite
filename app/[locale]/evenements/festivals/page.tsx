@@ -88,7 +88,6 @@ export default function FestivalsPage() {
         <div className="max-w-7xl mx-auto px-6 lg:px-12">
           <Breadcrumb 
             items={[
-              { label: t("events"), href: `/${locale}/evenements` },
               { label: t("festivals"), href: `/${locale}/evenements/festivals` }
             ]}
           />

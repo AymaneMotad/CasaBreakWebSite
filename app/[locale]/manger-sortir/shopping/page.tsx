@@ -107,7 +107,6 @@ export default function ShoppingPage() {
         <div className="max-w-7xl mx-auto px-6 lg:px-12">
           <Breadcrumb 
             items={[
-              { label: t("foodFun"), href: `/${locale}/manger-sortir/restaurants` },
               { label: t("shopping"), href: `/${locale}/manger-sortir/shopping` }
             ]}
           />

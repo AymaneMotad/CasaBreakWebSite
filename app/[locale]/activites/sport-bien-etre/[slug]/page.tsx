@@ -106,7 +106,6 @@ export default function SportBienEtreDetailPage() {
         <div className="max-w-4xl mx-auto px-6 lg:px-12">
           <Breadcrumb 
             items={[
-              { label: t("activities"), href: `/${locale}/activites/sport-bien-etre` },
               { label: t("sportWellness"), href: `/${locale}/activites/sport-bien-etre` },
               { label: activity.name_fr, href: `/${locale}/activites/sport-bien-etre/${slug}` }
             ]}

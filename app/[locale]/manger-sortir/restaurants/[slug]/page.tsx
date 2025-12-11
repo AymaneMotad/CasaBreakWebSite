@@ -107,7 +107,6 @@ export default function RestaurantDetailPage() {
         <div className="max-w-4xl mx-auto px-6 lg:px-12">
           <Breadcrumb 
             items={[
-              { label: t("foodFun"), href: `/${locale}/manger-sortir/restaurants` },
               { label: t("restaurants"), href: `/${locale}/manger-sortir/restaurants` },
               { label: (restaurant.data_jsonb as any)?.name || restaurant.name_fr, href: `/${locale}/manger-sortir/restaurants/${slug}` }
             ]}

@@ -126,7 +126,6 @@ export default function MonumentsPage() {
         <div className="max-w-7xl mx-auto px-6 lg:px-12">
           <Breadcrumb 
             items={[
-              { label: t("breadcrumb.discover"), href: `/${locale}/decouvrir/histoire` },
               { label: t("breadcrumb.monuments"), href: `/${locale}/decouvrir/monuments` }
             ]} 
           />

@@ -46,7 +46,6 @@ export default function ArchitecturePage() {
         <div className="max-w-[1400px] mx-auto px-6 lg:px-12">
           <Breadcrumb 
             items={[
-              { label: t("breadcrumb.discover"), href: `/${locale}/decouvrir/histoire` },
               { label: t("breadcrumb.architecture"), href: `/${locale}/decouvrir/architecture` }
             ]} 
           />

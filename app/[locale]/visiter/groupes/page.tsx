@@ -17,7 +17,6 @@ export default function GroupesPage() {
       <div className="pt-32 pb-8 bg-off-white">
         <div className="max-w-[1400px] mx-auto px-6 lg:px-12">
           <Breadcrumb items={[
-            { label: t("breadcrumb.visit"), href: `/${locale}/visiter/individuels` },
             { label: t("breadcrumb.groups"), href: `/${locale}/visiter/groupes` }
           ]} />
         </div>

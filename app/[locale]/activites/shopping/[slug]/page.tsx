@@ -107,7 +107,6 @@ export default function ShoppingDetailPage() {
         <div className="max-w-4xl mx-auto px-6 lg:px-12">
           <Breadcrumb 
             items={[
-              { label: t("activities"), href: `/${locale}/activites/shopping` },
               { label: t("shopping"), href: `/${locale}/activites/shopping` },
               { label: activity.name_fr, href: `/${locale}/activites/shopping/${slug}` }
             ]}

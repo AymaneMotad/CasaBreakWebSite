@@ -78,11 +78,6 @@ export default function FamilleEnfantsPage() {
       image: "https://yzgvfaxalzubsmmqmswx.supabase.co/storage/v1/object/public/casabreak/public_stuff/Tamaris%20Aquaparc%20&%20Bowling.jpeg",
       description: "Un complexe de loisirs complet combinant parc aquatique et bowling. Parfait pour une journée en famille avec des activités variées qui plaisent à tous les âges : glissades aquatiques, jeux de bowling et bien plus encore."
     },
-    {
-      name: "Yasmine Fun Park",
-      image: "https://yzgvfaxalzubsmmqmswx.supabase.co/storage/v1/object/public/casabreak/public_stuff/Yasmine%20Fun%20Park.jpeg",
-      description: "Un parc de loisirs familial offrant une multitude d'attractions et d'activités pour les enfants. Manèges, jeux, animations et espaces de détente se conjuguent pour offrir une expérience complète de divertissement."
-    }
   ]
 
   return (
@@ -94,7 +89,6 @@ export default function FamilleEnfantsPage() {
         <div className="max-w-7xl mx-auto px-6 lg:px-12">
           <Breadcrumb 
             items={[
-              { label: "Activités", href: `/${locale}/activites/famille-enfants` },
               { label: "Famille & Enfants", href: `/${locale}/activites/famille-enfants` }
             ]} 
           />

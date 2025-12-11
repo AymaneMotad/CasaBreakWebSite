@@ -88,7 +88,6 @@ export default function EvenementsSportifsPage() {
         <div className="max-w-7xl mx-auto px-6 lg:px-12">
           <Breadcrumb 
             items={[
-              { label: t("events"), href: `/${locale}/evenements` },
               { label: t("sportsEvents"), href: `/${locale}/evenements/evenements-sportifs` }
             ]}
           />

@@ -56,7 +56,6 @@ export default function BarsNightlifePage() {
         <div className="max-w-7xl mx-auto px-6 lg:px-12">
           <Breadcrumb 
             items={[
-              { label: t("foodFun"), href: `/${locale}/manger-sortir/bars-nightlife` },
               { label: t("barsNightlife"), href: `/${locale}/manger-sortir/bars-nightlife` }
             ]}
           />

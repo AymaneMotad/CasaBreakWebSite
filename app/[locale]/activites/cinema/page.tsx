@@ -86,7 +86,6 @@ export default function CinemaPage() {
         <div className="max-w-7xl mx-auto px-6 lg:px-12">
           <Breadcrumb 
             items={[
-              { label: t("activities"), href: `/${locale}/activites` },
               { label: t("cinema"), href: `/${locale}/activites/cinema` }
             ]} 
           />

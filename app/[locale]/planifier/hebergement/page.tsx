@@ -122,7 +122,6 @@ export default function HebergementPage() {
         <div className="max-w-7xl mx-auto px-6 lg:px-12">
           <Breadcrumb 
             items={[
-              { label: t("planStay"), href: `/${locale}/planifier/hebergement` },
               { label: t("accommodation"), href: `/${locale}/planifier/hebergement` }
             ]}
           />

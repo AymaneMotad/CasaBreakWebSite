@@ -83,7 +83,6 @@ export default function QuartiersPage() {
         <div className="max-w-7xl mx-auto px-6 lg:px-12">
           <Breadcrumb 
             items={[
-              { label: t("breadcrumb.discover"), href: `/${locale}/decouvrir/monuments` },
               { label: t("breadcrumb.quartiers"), href: `/${locale}/decouvrir/quartiers` }
             ]} 
           />

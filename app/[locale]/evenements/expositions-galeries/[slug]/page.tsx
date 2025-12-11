@@ -99,7 +99,6 @@ export default function EventDetailPage() {
       <div className="pt-24 pb-6">
         <div className="max-w-4xl mx-auto px-6 lg:px-12">
           <Breadcrumb items={[
-            { label: t("events"), href: `/${locale}/evenements` },
             { label: t("exhibitionsGalleries"), href: `/${locale}/evenements/expositions-galeries` },
             { label: event.name_fr, href: `/${locale}/evenements/expositions-galeries/${slug}` }
           ]} />

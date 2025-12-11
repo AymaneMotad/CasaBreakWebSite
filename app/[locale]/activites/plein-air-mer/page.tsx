@@ -38,7 +38,7 @@ const parksData = [
   },
   {
     id: 'isesco',
-    name: 'Parc ISESCO (ex Jardin Yasmina)',
+    name: 'Parc Murdoch (ISESCO)',
     district: 'Centre-ville',
     description: 'Espace vert central avec jeux et promenades familiales.',
     surface: '8 ha',
@@ -60,19 +60,6 @@ const parksData = [
     hours: '7h-20h',
     image: 'https://yzgvfaxalzubsmmqmswx.supabase.co/storage/v1/object/public/casabreak/public_stuff/Anfa%20Parc%20.png',
     address: 'Boulevard Sidi Abderrahmane, Casa-Anfa, Casablanca',
-    featured: false
-  },
-  {
-    id: 'mohammed_v',
-    name: 'Parc Jardin Mohammed V',
-    district: 'Centre-ville',
-    description: 'Jardin historique emblématique, havre de paix urbain.',
-    surface: '5 ha',
-    equipment: 'Bancs, fontaines',
-    coordinates: { lat: 33.5880, lng: -7.6100 },
-    hours: '24h',
-    image: 'https://yzgvfaxalzubsmmqmswx.supabase.co/storage/v1/object/public/casabreak/public_stuff/Parc-Jardin-Mohammed-V-scaled.jpg',
-    address: 'Secteur Avenue des FAR / Boulevard Rachidi, à proximité de la Place Mohammed V, Casablanca',
     featured: false
   },
   {
@@ -116,7 +103,7 @@ const parksData = [
   },
   {
     id: 'oulfa',
-    name: 'Lac de Oulfa',
+    name: 'Lac de l\'Oulfa',
     district: 'Oulfa',
     description: 'Étendue d\'eau aménagée pour promenade et observation nature.',
     surface: '4 ha',
@@ -405,7 +392,6 @@ export default function PleinAirMerPage() {
         <div className="max-w-7xl mx-auto px-6 lg:px-12">
           <Breadcrumb 
             items={[
-              { label: t("breadcrumb.activities"), href: `/${locale}/activites/incontournables` },
               { label: t("breadcrumb.pleinAirMer"), href: `/${locale}/activites/plein-air-mer` }
             ]} 
           />
