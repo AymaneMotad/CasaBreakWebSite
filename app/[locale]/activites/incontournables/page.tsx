@@ -56,7 +56,7 @@ export default function IncontournablesPage() {
       price: "Gratuit",
       notes: ["Espace calme + café", "Belles expos toute l'année"],
       highlights: ["Expo photo, peinture, sculpture marocaine contemporaine"],
-      image: "https://images.unsplash.com/photo-1519125323398-675f0ddb6308?w=800&q=80",
+      image: "https://yzgvfaxalzubsmmqmswx.supabase.co/storage/v1/object/public/casabreak/public_stuff/VILLA%20DES%20ARTS.jpeg",
       color: "#c10000"
     },
     {
@@ -80,7 +80,7 @@ export default function IncontournablesPage() {
       price: "Gratuit – repas poisson à petit prix sur place",
       notes: ["Y aller en matinée pour plus d'animation"],
       highlights: ["Griller son poisson directement sur place"],
-      image: "https://images.unsplash.com/photo-1556910103-1c02745aae4d?w=800&q=80",
+      image: "https://yzgvfaxalzubsmmqmswx.supabase.co/storage/v1/object/public/casabreak/public_stuff/MARCHE%20CENTRALE.jpg",
       color: "#0066b2"
     },
     {
@@ -92,7 +92,7 @@ export default function IncontournablesPage() {
       price: "Gratuit",
       notes: ["Idéale pour flâner, prendre des photos"],
       highlights: ["Fontaine musicale le soir", "Pigeons", "Architecture"],
-      image: "https://images.unsplash.com/photo-1519125323398-675f0ddb6308?w=800&q=80",
+      image: "https://yzgvfaxalzubsmmqmswx.supabase.co/storage/v1/object/public/casabreak/public_stuff/PLACE%20MOHAMED%205.jpg",
       color: "#c10000"
     },
     {
