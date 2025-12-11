@@ -4,6 +4,7 @@ import { Navigation } from "@/components/navigation"
 import { Footer } from "@/components/footer"
 import { Breadcrumb } from "@/components/breadcrumb"
 import { useTranslations, useLocale } from 'next-intl'
+import Image from "next/image"
 import { MapPin, Sparkles, ArrowRight, ShoppingBag, Coffee, Waves, Building2, History } from "lucide-react"
 
 export default function QuartiersPage() {
@@ -18,7 +19,8 @@ export default function QuartiersPage() {
       description: t("quartiers.maarif.description"),
       features: t("quartiers.maarif.features"),
       icon: ShoppingBag,
-      color: "#00a346"
+      color: "#00a346",
+      imageUrl: "https://yzgvfaxalzubsmmqmswx.supabase.co/storage/v1/object/public/casabreak/public_stuff/alpha-plus-3vGmCMgTdiA-unsplash.jpg"
     },
     {
       id: "gauthier",
@@ -27,7 +29,8 @@ export default function QuartiersPage() {
       description: t("quartiers.gauthier.description"),
       features: t("quartiers.gauthier.features"),
       icon: Coffee,
-      color: "#0066b2"
+      color: "#0066b2",
+      imageUrl: "https://yzgvfaxalzubsmmqmswx.supabase.co/storage/v1/object/public/casabreak/public_stuff/gauthier.jpeg"
     },
     {
       id: "racine",
@@ -36,7 +39,8 @@ export default function QuartiersPage() {
       description: t("quartiers.racine.description"),
       features: t("quartiers.racine.features"),
       icon: Building2,
-      color: "#c10000"
+      color: "#c10000",
+      imageUrl: "https://yzgvfaxalzubsmmqmswx.supabase.co/storage/v1/object/public/casabreak/public_stuff/racine.jpeg"
     },
     {
       id: "aindiab",
@@ -45,7 +49,8 @@ export default function QuartiersPage() {
       description: t("quartiers.aindiab.description"),
       features: t("quartiers.aindiab.features"),
       icon: Waves,
-      color: "#00a346"
+      color: "#00a346",
+      imageUrl: "https://yzgvfaxalzubsmmqmswx.supabase.co/storage/v1/object/public/casabreak/public_stuff/ain%20diab%20plage%201.jpeg"
     },
     {
       id: "medina",
@@ -54,7 +59,8 @@ export default function QuartiersPage() {
       description: t("quartiers.medina.description"),
       features: t("quartiers.medina.features"),
       icon: History,
-      color: "#0066b2"
+      color: "#0066b2",
+      imageUrl: "https://yzgvfaxalzubsmmqmswx.supabase.co/storage/v1/object/public/casabreak/public_stuff/ancienne%20medina.jpeg"
     },
     {
       id: "cfc",
@@ -63,7 +69,8 @@ export default function QuartiersPage() {
       description: t("quartiers.cfc.description"),
       features: t("quartiers.cfc.features"),
       icon: Building2,
-      color: "#c10000"
+      color: "#c10000",
+      imageUrl: "https://yzgvfaxalzubsmmqmswx.supabase.co/storage/v1/object/public/casabreak/public_stuff/cfc.jpeg"
     },
   ]
 
@@ -167,29 +174,31 @@ export default function QuartiersPage() {
                       </div>
                     </div>
                     
-                    {/* Icon Side */}
+                    {/* Image Side */}
                     <div className={`${index % 2 === 1 ? "md:order-1" : ""}`}>
-                      <div className="relative h-[400px] lg:h-[500px] rounded-2xl overflow-hidden shadow-xl border border-white/50 flex items-center justify-center"
-                        style={{ 
-                          background: `linear-gradient(135deg, ${quartier.color}15 0%, ${quartier.color}05 100%)` 
-                        }}
-                      >
-                        <div className="absolute inset-0 bg-gradient-to-br from-white/20 to-transparent" />
-                        <div 
-                          className="relative z-10 w-32 h-32 rounded-full flex items-center justify-center backdrop-blur-sm border-2 border-white/50 shadow-lg"
-                          style={{ backgroundColor: `${quartier.color}20` }}
-                        >
-                          <IconComponent 
-                            className="w-16 h-16" 
-                            style={{ color: quartier.color }}
+                      <div className="relative group/image rounded-2xl overflow-hidden shadow-xl border border-white/50">
+                        <div className="relative h-[400px] lg:h-[500px] xl:h-[550px]">
+                          <Image
+                            src={quartier.imageUrl}
+                            alt={quartier.title}
+                            fill
+                            className={`object-cover ${quartier.id === 'maarif' ? 'object-top' : ''} group-hover/image:scale-110 transition-transform duration-700`}
+                            unoptimized
+                          />
+                          {/* Gradient Overlay */}
+                          <div 
+                            className="absolute inset-0 bg-gradient-to-t opacity-0 group-hover/image:opacity-100 transition-opacity duration-500"
+                            style={{ 
+                              background: `linear-gradient(to top, ${quartier.color}40, transparent)` 
+                            }}
+                          />
+                          
+                          {/* Corner Accent */}
+                          <div 
+                            className="absolute top-4 right-4 w-16 h-16 rounded-full opacity-20 group-hover/image:opacity-40 transition-opacity blur-xl"
+                            style={{ backgroundColor: quartier.color }}
                           />
                         </div>
-                        
-                        {/* Corner Accent */}
-                        <div 
-                          className="absolute top-4 right-4 w-16 h-16 rounded-full opacity-20 group-hover:opacity-40 transition-opacity blur-xl"
-                          style={{ backgroundColor: quartier.color }}
-                        />
                       </div>
                     </div>
                   </div>
