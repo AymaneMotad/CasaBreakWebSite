@@ -206,7 +206,7 @@ export default function Can2025Page() {
     { city: 'Rabat', stadium: 'Complexe Sportif Prince Moulay Abdellah', image: 'https://www.cafonline.com/media/1q3p4e13/b25iefrm0951.jpg?rmode=max&width=1000&height=667', capacity: '68 000', matches: '7 matchs', accentColor: '#c10000' },
     { city: 'Rabat', stadium: 'Stade Annexe Olympique – Complexe Sportif Prince Moulay Abdellah', image: 'https://www.cafonline.com/media/xtqighxf/b25gznr0906.jpg?rmode=max&width=1000&height=667', capacity: '21 000', matches: '3 matchs', accentColor: '#c10000' },
     { city: 'Rabat', stadium: 'Complexe Sportif Prince Héritier Moulay El Hassan', image: 'https://www.cafonline.com/media/efsjavli/b25kpnr1401.jpg?rmode=max&width=1000&height=667', capacity: '22 000', matches: '4 matchs', accentColor: '#c10000' },
-    { city: 'Rabat', stadium: 'Stade El Barid', image: 'https://www.cafonline.com/media/ctzp5cej/b25kmnr1221.jpg?rmode=max&width=1000&height=667', capacity: '18 000', matches: '4 matchs', accentColor: '#c10000' },
+    { city: 'Rabat', stadium: 'Stade Al Medina', image: 'https://www.cafonline.com/media/ctzp5cej/b25kmnr1221.jpg?rmode=max&width=1000&height=667', capacity: '18 000', matches: '4 matchs', accentColor: '#c10000' },
     { city: 'Marrakech', stadium: 'Grand Stade de Marrakech', image: '/stadiums/marrakech.jpg', capacity: '45 240', matches: '8 matchs', accentColor: '#ffd700' },
     { city: 'Tanger', stadium: 'Grand Stade de Tanger', image: '/stadiums/tanger.jpg', capacity: '68 000', matches: '6 matchs', accentColor: '#0066b2' },
     { city: 'Fès', stadium: 'Complexe Sportif de Fès', image: '/stadiums/fes.jpg', capacity: '45 000', matches: '4 matchs', accentColor: '#00a346' },
@@ -279,7 +279,7 @@ export default function Can2025Page() {
       ]
     },
     {
-      stadium: 'Stade El Barid',
+      stadium: 'Stade Al Medina',
       city: 'Rabat',
       capacity: '18 000',
       accentColor: '#ffd700',
@@ -407,6 +407,7 @@ export default function Can2025Page() {
               <span className="block bg-gradient-to-r from-[#00a346] via-[#ffd700] to-[#c10000] bg-clip-text text-transparent">
                 DES NATIONS
               </span>
+              <span className="block text-gray-900">MAROC 2025</span>
             </h1>
             
             {/* Subtitle */}
@@ -592,7 +593,7 @@ export default function Can2025Page() {
               <StadiumBentoCard {...hostCities[3]} />
             </div>
             
-            {/* Stade El Barid */}
+            {/* Stade Al Medina */}
             <div className="col-span-6 lg:col-span-3 h-[250px] lg:h-[300px]">
               <StadiumBentoCard {...hostCities[4]} />
             </div>
@@ -955,11 +956,6 @@ export default function Can2025Page() {
           <div className="grid lg:grid-cols-2 gap-16 items-center">
             {/* Left - Text Content */}
             <div>
-              <div className="inline-flex items-center gap-2 px-4 py-2 rounded-full bg-[#00a346]/10 border border-[#00a346]/30 mb-6">
-                <Sparkles className="w-4 h-4 text-[#ffd700]" />
-                <span className="text-sm text-gray-700 font-bold">Ville Hôte de la Finale</span>
-              </div>
-              
               <h2 className="text-4xl lg:text-6xl font-black text-gray-900 mb-6 leading-tight">
                 Vivez la CAN à<br />
                 <span className="text-gradient-can">Casablanca</span>
@@ -1077,7 +1073,6 @@ export default function Can2025Page() {
                   alt={item.title}
                   className="w-full h-full object-cover group-hover:scale-110 transition-transform duration-500"
                 />
-                <div className="absolute inset-0 bg-gradient-to-t from-black/80 via-black/40 to-transparent" />
                 
                 {/* Icon badge */}
                 <div 

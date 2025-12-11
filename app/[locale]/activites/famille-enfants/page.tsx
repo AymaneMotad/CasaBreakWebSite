@@ -12,7 +12,7 @@ export default function FamilleEnfantsPage() {
 
   const activities = [
     {
-      name: "Sindibad Parc Zoologique Ain Sebaâ",
+      name: "Parc Zoologique Ain Sebaâ",
       image: "https://yzgvfaxalzubsmmqmswx.supabase.co/storage/v1/object/public/casabreak/public_stuff/zoo%20ain%20sbaa.jpg",
       description: "Vivez une immersion moderne et unique au Parc Zoologique Ain Sebaâ, portée par une passion pour la conservation et l'éducation.",
       link: "https://www.parcsindibad.ma/acces-au-parc"
@@ -23,6 +23,16 @@ export default function FamilleEnfantsPage() {
       description: "Avec un espace de près de 2000 m2 répartis sur 3 niveaux, l'Amuzeum invite les enfants de 18 mois à 12 ans à voyager dans le temps, dans les concepts et dans les savoirs pour qu'ils s'amusent en apprenant et apprennent en s'amusant. Ici à l'Amuzeum, les enfants ont le droit de toucher, de tester par eux-mêmes, d'essayer et de réessayer, de survoler, de creuser, de rebondir d'un sujet à un autre, d'explorer, de satisfaire leur curiosité, de rêver, de créer, de débattre, de philosopher… Bref, de jouer, de grandir à leur rythme et de s'épanouir en toute liberté."
     },
     {
+      name: "Dream World",
+      image: "https://yzgvfaxalzubsmmqmswx.supabase.co/storage/v1/object/public/casabreak/public_stuff/Dream%20world%20.jpeg",
+      description: "Plonge dans l'univers immersif de Dream World : un espace où la réalité virtuelle te transporte dans des mondes extraordinaires, où le cinéma 6D t'offre des sensations inédites, où les défis sportifs et les jeux vidéo iconiques prennent vie, et où un espace entièrement pensé pour les plus petits garantit amusement et émerveillement pour toute la famille."
+    },
+    {
+      name: "Fun Art Place",
+      image: "https://yzgvfaxalzubsmmqmswx.supabase.co/storage/v1/object/public/casabreak/public_stuff/Fun%20Art%20Place.png",
+      description: "Découvre Fun Art Place à AnfaPlace : un espace créatif et ludique où l'art, le jeu et l'imagination se rencontrent. Entre ateliers interactifs, activités manuelles, zones de dessin et d'expression libre, chaque enfant peut explorer son univers, créer, s'amuser et laisser parler sa créativité en toute liberté. Parfait pour éveiller la curiosité et vivre des moments joyeux en famille."
+    },
+    {
       name: "Game World",
       image: "https://yzgvfaxalzubsmmqmswx.supabase.co/storage/v1/object/public/casabreak/public_stuff/game%20word.png",
       description: "Grand centre de loisirs, intérieur, combinant jeux, activités variées pour enfants, parcours, trampolines, etc. Game World - Bon plan quand on cherche un lieu couvert, sécurisé et complet — idéal avec des enfants."
@@ -31,6 +41,41 @@ export default function FamilleEnfantsPage() {
       name: "Adventureland (Morocco Mall)",
       image: "https://yzgvfaxalzubsmmqmswx.supabase.co/storage/v1/object/public/casabreak/public_stuff/adventure%20land.jpg",
       description: "Aire de jeux + attractions + arcade + patinoire — très adapté aux enfants de 2 à 12 ans. Combine amusement, jeu et détente pour toute la famille."
+    },
+    {
+      name: "Aquadream",
+      image: "https://yzgvfaxalzubsmmqmswx.supabase.co/storage/v1/object/public/casabreak/public_stuff/aquadream.jpeg",
+      description: "Un parc aquatique moderne offrant une expérience rafraîchissante et amusante pour toute la famille. Avec ses toboggans, piscines et attractions aquatiques, Aquadream garantit des moments de détente et de plaisir inoubliables."
+    },
+    {
+      name: "Cocoon 9D",
+      image: "https://yzgvfaxalzubsmmqmswx.supabase.co/storage/v1/object/public/casabreak/public_stuff/Cocoon%209D.jpeg",
+      description: "Une expérience cinématographique révolutionnaire avec la technologie 9D. Plonge dans des aventures immersives où tous tes sens sont sollicités pour une expérience de divertissement unique et captivante."
+    },
+    {
+      name: "Jungle Park",
+      image: "https://yzgvfaxalzubsmmqmswx.supabase.co/storage/v1/object/public/casabreak/public_stuff/jungle%20park.jpeg",
+      description: "Un parc d'aventures en plein air où les enfants peuvent explorer, grimper, sauter et s'amuser dans un environnement sécurisé inspiré de la jungle. Parfait pour développer la motricité et l'esprit d'aventure."
+    },
+    {
+      name: "La Ferme Pédagogique",
+      image: "https://yzgvfaxalzubsmmqmswx.supabase.co/storage/v1/object/public/casabreak/public_stuff/La%20ferme%20pedagogique.png",
+      description: "Une ferme éducative où les enfants découvrent les animaux de la ferme, apprennent les valeurs de la nature et participent à des activités pédagogiques interactives. Une expérience enrichissante qui éveille la curiosité et le respect de l'environnement."
+    },
+    {
+      name: "Quartier Libre",
+      image: "https://yzgvfaxalzubsmmqmswx.supabase.co/storage/v1/object/public/casabreak/public_stuff/Quartier%20libre.jpeg",
+      description: "Un espace de liberté et de créativité où les enfants peuvent s'exprimer, jouer et explorer dans un environnement ouvert et stimulant. Idéal pour favoriser l'autonomie et l'épanouissement personnel."
+    },
+    {
+      name: "Tamaris Aquaparc & Bowling",
+      image: "https://yzgvfaxalzubsmmqmswx.supabase.co/storage/v1/object/public/casabreak/public_stuff/Tamaris%20Aquaparc%20&%20Bowling.jpeg",
+      description: "Un complexe de loisirs complet combinant parc aquatique et bowling. Parfait pour une journée en famille avec des activités variées qui plaisent à tous les âges : glissades aquatiques, jeux de bowling et bien plus encore."
+    },
+    {
+      name: "Yasmine Fun Park",
+      image: "https://yzgvfaxalzubsmmqmswx.supabase.co/storage/v1/object/public/casabreak/public_stuff/Yasmine%20Fun%20Park.jpeg",
+      description: "Un parc de loisirs familial offrant une multitude d'attractions et d'activités pour les enfants. Manèges, jeux, animations et espaces de détente se conjuguent pour offrir une expérience complète de divertissement."
     }
   ]
 
