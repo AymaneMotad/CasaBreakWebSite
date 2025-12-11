@@ -36,7 +36,7 @@ export default function CinemaPage() {
       description: "Le Pathé Californie est un multiplexe ultramoderne offrant une expérience cinéma haut de gamme à Casablanca. Situé dans le Californie Mall, il dispose de 8 salles équipées des dernières technologies (IMAX, 4DX, son Dolby Atmos) et propose des sièges grand confort, pour une immersion totale dans une ambiance familiale et moderne.",
       address: "Centre Commercial Californie (Aïn Chock), Casablanca",
       hours: "Ouvert tous les jours, premières séances vers 11h00 et dernières aux alentours de 23h00 (selon la programmation)",
-      image: "https://yzgvfaxalzubsmmqmswx.supabase.co/storage/v1/object/public/casabreak/public_stuff/cinema%20realto.png",
+      image: "https://yzgvfaxalzubsmmqmswx.supabase.co/storage/v1/object/public/casabreak/public_stuff/PATHE.jpeg",
       color: "#0066b2"
     },
     {
