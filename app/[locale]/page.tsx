@@ -491,7 +491,7 @@ export default function HomePage() {
           {/* Horizontal Scroll */}
           <div className="flex gap-6 overflow-x-auto pb-6 scrollbar-hide snap-x snap-mandatory -mx-6 px-6 lg:-mx-16 lg:px-16">
             {[
-              { icon: Camera, title: 'Incontournables', desc: 'Les must-do à Casa', href: `/${locale}/activites/incontournables`, color: '#00a346', image: 'https://images.unsplash.com/photo-1569383746724-6f1b882b8f46?w=500&q=80' },
+              { icon: Camera, title: 'Incontournables', desc: 'Les must-do à Casa', href: `/${locale}/activites/incontournables`, color: '#00a346', image: 'https://images.unsplash.com/photo-1696259629194-5411989d6675?w=500&q=80' },
               { icon: Waves, title: 'Plein air & Mer', desc: 'Surf, jet-ski, balades', href: `/${locale}/activites/plein-air-mer`, color: '#0066b2', image: 'https://images.unsplash.com/photo-1502680390469-be75c86b636f?w=500&q=80' },
               { icon: Compass, title: 'Tours & Expériences', desc: 'Visites guidées exclusives', href: `/${locale}/activites/tours-experiences`, color: '#c10000', image: 'https://images.unsplash.com/photo-1539635278303-d4002c07eae3?w=500&q=80' },
               { icon: Users, title: 'En famille', desc: 'Activités pour enfants', href: `/${locale}/activites/famille-enfants`, color: '#ffd700', image: 'https://images.unsplash.com/photo-1540479859555-17af45c78602?w=500&q=80' },
