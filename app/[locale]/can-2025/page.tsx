@@ -1063,7 +1063,7 @@ export default function Can2025Page() {
               { icon: Hotel, title: 'Hébergement', desc: 'Hôtels & Riads', href: `/${locale}/planifier/hebergement`, color: '#ffd700', image: '/hebergement.jpg' },
               { icon: Bus, title: 'Transports', desc: 'Se déplacer', href: `/${locale}/planifier/se-deplacer`, color: '#c10000', image: '/transports.png' },
               { icon: Camera, title: 'Monuments', desc: 'À ne pas manquer', href: `/${locale}/decouvrir/monuments`, color: '#00a346', image: 'https://images.unsplash.com/photo-1696259629194-5411989d6675?w=800&q=80' },
-              { icon: Waves, title: 'Plages', desc: 'Corniche & Ain Diab', href: `/${locale}/decouvrir/mer-plages`, color: '#0066b2', image: 'https://images.unsplash.com/photo-1505142468610-359e7d316be0?w=800&q=80' },
+              { icon: Waves, title: 'Plages', desc: 'Corniche & Ain Diab', href: `/${locale}/decouvrir/mer-plages`, color: '#0066b2', image: 'https://yzgvfaxalzubsmmqmswx.supabase.co/storage/v1/object/public/casabreak/public_stuff/ain%20diab%20plage%201.jpeg' },
               { icon: ShoppingBag, title: 'Shopping', desc: 'Malls & souks', href: `/${locale}/activites/shopping`, color: '#ffd700', image: '/shopping.jpg' },
               { icon: Music, title: 'Nightlife', desc: 'Bars & clubs', href: `/${locale}/manger-sortir/bars-nightlife`, color: '#c10000', image: '/nightlife.jpg' },
             ].map((item, i) => (

@@ -315,7 +315,7 @@ export default function HomePage() {
                 {/* Card 6 - Plages */}
                 <div className="col-span-4 row-span-2 group relative rounded-3xl overflow-hidden shadow-xl">
                   <img 
-                    src="https://images.unsplash.com/photo-1507525428034-b723cf961d3e?w=600&q=80" 
+                    src="https://yzgvfaxalzubsmmqmswx.supabase.co/storage/v1/object/public/casabreak/public_stuff/ain%20diab%20plage%201.jpeg" 
                     alt="Plage"
                     className="w-full h-full object-cover group-hover:scale-110 transition-transform duration-500"
                   />
@@ -427,7 +427,7 @@ export default function HomePage() {
               {/* Mer & Plages */}
               <Link href={`/${locale}/decouvrir/mer-plages`} className="group relative h-[280px] lg:h-[320px] rounded-[2rem] overflow-hidden shadow-xl">
                 <img 
-                  src="https://images.unsplash.com/photo-1507525428034-b723cf961d3e?w=600&q=80" 
+                  src="https://yzgvfaxalzubsmmqmswx.supabase.co/storage/v1/object/public/casabreak/public_stuff/ain%20diab%20plage%201.jpeg" 
                   alt="Plages"
                   className="w-full h-full object-cover object-center group-hover:scale-105 transition-transform duration-500"
                 />
