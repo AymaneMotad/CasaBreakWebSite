@@ -128,7 +128,7 @@ export default function IncontournablesPage() {
       price: "Entrée gratuite, attractions à petit prix",
       notes: ["Aquarium géant", "Fontaine musicale", "Adventureland", "Patinoire"],
       highlights: ["L'ascenseur dans l'aquarium", "Show nocturne"],
-      image: "https://images.unsplash.com/photo-1483985988355-763728e1935b?w=800&q=80",
+      image: "https://crtasablanca.s3.eu-west-1.amazonaws.com/content/uploads/20220728133423/hero_poi_morocco-mall.jpg",
       color: "#c10000"
     }
   ]
