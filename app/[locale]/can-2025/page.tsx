@@ -1018,7 +1018,7 @@ export default function Can2025Page() {
               
               <div className="col-span-2 row-span-2 rounded-2xl bg-gradient-to-br from-[#00a346] to-[#006633] flex items-center justify-center shadow-xl">
                 <div className="text-center text-white p-4">
-                  <div className="text-4xl font-black">500+</div>
+                  <div className="text-4xl font-black">+500</div>
                   <div className="text-sm opacity-80">Lieux à découvrir</div>
                 </div>
               </div>
@@ -1054,7 +1054,7 @@ export default function Can2025Page() {
           {/* Services Grid */}
           <div className="grid grid-cols-2 lg:grid-cols-4 gap-4 lg:gap-6">
             {[
-              { icon: Utensils, title: 'Restaurants', desc: '200+ adresses', href: `/${locale}/manger-sortir/restaurants`, color: '#00a346', image: '/restaurant.jpg' },
+              { icon: Utensils, title: 'Restaurants', desc: '+200 adresses', href: `/${locale}/manger-sortir/restaurants`, color: '#00a346', image: '/restaurant.jpg' },
               { icon: Coffee, title: 'Cafés', desc: 'Les meilleurs spots', href: `/${locale}/manger-sortir/cafes-brunchs`, color: '#0066b2', image: 'https://images.unsplash.com/photo-1501339847302-ac426a4a7cbb?w=800&q=80' },
               { icon: Hotel, title: 'Hébergement', desc: 'Hôtels & Riads', href: `/${locale}/planifier/hebergement`, color: '#ffd700', image: '/hebergement.jpg' },
               { icon: Bus, title: 'Transports', desc: 'Se déplacer', href: `/${locale}/planifier/se-deplacer`, color: '#c10000', image: '/transports.png' },

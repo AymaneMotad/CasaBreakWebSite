@@ -78,11 +78,11 @@ export function HeroSection() {
             {/* Stats */}
             <div className="grid grid-cols-3 gap-6 mt-12 pt-12 border-t border-gray-200/50 animate-fade-in-up" style={{ animationDelay: '0.4s' }}>
               <div className="text-center lg:text-left">
-                <div className="text-3xl lg:text-4xl font-bold text-gray-900 mb-1">500+</div>
+                <div className="text-3xl lg:text-4xl font-bold text-gray-900 mb-1">+500</div>
                 <div className="text-sm text-gray-600">Lieux</div>
               </div>
               <div className="text-center lg:text-left">
-                <div className="text-3xl lg:text-4xl font-bold text-gray-900 mb-1">50K+</div>
+                <div className="text-3xl lg:text-4xl font-bold text-gray-900 mb-1">+50K</div>
                 <div className="text-sm text-gray-600">Utilisateurs</div>
               </div>
               <div className="text-center lg:text-left">
@@ -161,7 +161,7 @@ export function HeroSection() {
               <div className="absolute -bottom-6 right-4 lg:right-0 animate-subtle-float" style={{ animationDelay: '0.5s' }}>
                 <div className="flex items-center gap-2 px-4 py-2 bg-[#00a346] rounded-full shadow-lg">
                   <div className="w-2 h-2 bg-white rounded-full animate-ping" />
-                  <span className="text-white text-sm font-medium">500+ lieux à découvrir</span>
+                  <span className="text-white text-sm font-medium">+500 lieux à découvrir</span>
                 </div>
               </div>
             </div>

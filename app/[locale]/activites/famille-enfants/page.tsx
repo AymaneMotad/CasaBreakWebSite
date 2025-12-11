@@ -12,6 +12,12 @@ export default function FamilleEnfantsPage() {
 
   const activities = [
     {
+      name: "Parc Sindibad",
+      image: "https://yzgvfaxalzubsmmqmswx.supabase.co/storage/v1/object/public/casabreak/public_stuff/WhatsApp%20Image%202025-12-11%20at%2012.04.31.jpeg",
+      description: "Situé face à l'océan Atlantique à Casablanca, le Parc Sindibad est une destination unique qui allie les sensations fortes d'un parc d'attractions, la magie d'un parc de loisirs et le charme d'un zoo. Que vous soyez en quête d'adrénaline pure, d'une sortie familiale relaxante ou d'une rencontre fascinante avec la faune sauvage, Sindibad offre une expérience inoubliable pour tous les âges. Préparez-vous à plonger dans un univers d'aventure inspiré des contes des Mille et Une Nuits.",
+      link: "https://www.parcsindibad.ma/acces-au-parc"
+    },
+    {
       name: "Parc Zoologique Ain Sebaâ",
       image: "https://yzgvfaxalzubsmmqmswx.supabase.co/storage/v1/object/public/casabreak/public_stuff/zoo%20ain%20sbaa.jpg",
       description: "Vivez une immersion moderne et unique au Parc Zoologique Ain Sebaâ, portée par une passion pour la conservation et l'éducation.",

@@ -147,7 +147,7 @@ export default function HomePage() {
                 </h1>
                 <p className="text-lg lg:text-xl text-[#555] max-w-md leading-relaxed">
                   La capitale économique du Maroc vous ouvre ses portes. 
-                  <span className="text-[#00a346] font-semibold"> 500+ lieux</span> à découvrir.
+                  <span className="text-[#00a346] font-semibold"> +500 lieux</span> à découvrir.
                 </p>
               </div>
               
@@ -172,9 +172,9 @@ export default function HomePage() {
               {/* Quick Stats */}
               <div className="flex items-center gap-8 pt-6">
                 {[
-                  { value: '500+', label: 'Lieux', color: '#00a346' },
-                  { value: '200+', label: 'Restos', color: '#c10000' },
-                  { value: '50K+', label: 'Visiteurs', color: '#0066b2' },
+                  { value: '+500', label: 'Lieux', color: '#00a346' },
+                  { value: '+200', label: 'Restos', color: '#c10000' },
+                  { value: '+50K', label: 'Visiteurs', color: '#0066b2' },
                 ].map((stat, i) => (
                   <div key={i} className="text-center">
                     <div className="text-2xl lg:text-3xl font-black" style={{ color: stat.color }}>{stat.value}</div>
@@ -266,7 +266,7 @@ export default function HomePage() {
                       <Utensils className="w-4 h-4 text-[#c10000]" />
                       <span className="text-white font-bold">Restaurants</span>
                     </div>
-                    <p className="text-white/60 text-xs">200+ adresses vérifiées</p>
+                    <p className="text-white/60 text-xs">+200 adresses vérifiées</p>
                   </div>
                   
                   <Link href={`/${locale}/manger-sortir/restaurants`} className="absolute inset-0" />
@@ -629,7 +629,7 @@ export default function HomePage() {
                 <img src="https://images.unsplash.com/photo-1555396273-367ea4eb4db5?w=600&q=80" alt="Nightlife" className="w-full h-full object-cover hover:scale-105 transition-transform duration-500" />
               </div>
               <div className="col-span-2 row-span-1 rounded-2xl bg-gradient-to-r from-[#00a346] to-[#008c3c] flex items-center justify-center shadow-xl">
-                <span className="text-white font-black text-lg">200+ spots</span>
+                <span className="text-white font-black text-lg">+200 spots</span>
               </div>
             </div>
           </div>

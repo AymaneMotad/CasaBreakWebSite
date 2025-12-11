@@ -72,7 +72,7 @@ export default function SeDeplacerPage() {
       stats: {
         passengers: "70 millions (2021)",
         fleet: "610 bus",
-        distance: "34+ millions de km"
+        distance: "+34 millions de km"
       }
     },
     {
