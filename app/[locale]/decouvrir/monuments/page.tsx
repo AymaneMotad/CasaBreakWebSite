@@ -66,7 +66,7 @@ export default function MonumentsPage() {
       title: t("monuments.slaoui.title"),
       description: t("monuments.slaoui.description"),
       imageUrls: [
-        "https://www.maroc-hebdo.press.ma/sites/default/files/styles/article/public/2023-11/musee-slaoui.jpg"
+        "https://yzgvfaxalzubsmmqmswx.supabase.co/storage/v1/object/public/casabreak/public_stuff/musee.jpg"
       ],
       color: "#00a346"
     },
