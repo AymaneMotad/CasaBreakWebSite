@@ -58,7 +58,7 @@ const parksData = [
     equipment: 'Sport, jeux, vélos',
     coordinates: { lat: 33.5800, lng: -7.6700 },
     hours: '7h-20h',
-    image: null, // No image provided
+    image: 'https://yzgvfaxalzubsmmqmswx.supabase.co/storage/v1/object/public/casabreak/public_stuff/Anfa%20Parc%20.png',
     address: 'Boulevard Sidi Abderrahmane, Casa-Anfa, Casablanca',
     featured: false
   },
@@ -97,7 +97,7 @@ const parksData = [
     equipment: 'Jeux, terrains sport',
     coordinates: { lat: 33.5200, lng: -7.5800 },
     hours: '7h-20h',
-    image: null, // No image provided
+    image: 'https://yzgvfaxalzubsmmqmswx.supabase.co/storage/v1/object/public/casabreak/public_stuff/pARC%20sBATA%20.jpg',
     address: 'Quartier Sbata, près de l\'avenue principale de Sbata, Casablanca',
     featured: false
   },
@@ -149,7 +149,7 @@ const parksData = [
     equipment: 'Pistes VTT, pédestre',
     coordinates: { lat: 33.4500, lng: -7.6500 },
     hours: 'Lever/coucher soleil',
-    image: null, // No image provided
+    image: 'https://yzgvfaxalzubsmmqmswx.supabase.co/storage/v1/object/public/casabreak/public_stuff/Foret%20Bouskoura%20.jpg',
     address: 'Forêt de Bouskoura-Meriam, Route de Bouskoura, au sud de Casablanca',
     featured: false
   },
