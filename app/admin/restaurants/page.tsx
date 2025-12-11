@@ -386,11 +386,19 @@ export default function AdminRestaurantsPage() {
                           )
                         })() : (
                           <a
-                            href={`/fr/lieux/${restaurant.slug}`}
+                            href={`/fr/lieux/${restaurant.slug ? encodeURIComponent(restaurant.slug) : ''}`}
                             target="_blank"
                             rel="noopener noreferrer"
                             className="text-blue-600 hover:text-blue-900"
-                            title="View on website"
+                            title={`View on website${restaurant.slug ? ` (slug: ${restaurant.slug})` : ' (no slug)'}`}
+                            onClick={(e) => {
+                              if (!restaurant.slug) {
+                                e.preventDefault()
+                                alert('No slug found for this place. Please edit and add a slug.')
+                              } else {
+                                console.log('🔍 Viewing venue with slug:', restaurant.slug, 'URL:', `/fr/lieux/${encodeURIComponent(restaurant.slug)}`)
+                              }
+                            }}
                           >
                             <Eye className="w-5 h-5" />
                           </a>

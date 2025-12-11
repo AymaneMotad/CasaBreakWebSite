@@ -26,15 +26,37 @@ export default function VenueDetailPage() {
     async function fetchVenue() {
       try {
         const supabase = createClient()
-        // Fetch venue by slug regardless of place_category
-        const { data, error } = await supabase
+        
+        // Decode URL-encoded slug first
+        const decodedSlug = decodeURIComponent(slug)
+        
+        // Try exact slug first (same pattern as working restaurant page)
+        let { data, error } = await supabase
           .from('venues')
           .select('*')
-          .eq('slug', slug)
+          .eq('slug', decodedSlug)
           .eq('is_published', true)
-          .single()
+          .maybeSingle()
 
-        if (error) {
+        // If not found, try sanitized version (spaces to hyphens)
+        if (!data && decodedSlug !== slug) {
+          const sanitizedSlug = decodedSlug.replace(/\s+/g, "-").replace(/[^a-z0-9-]/g, "").replace(/-+/g, "-").replace(/^-|-$/g, "")
+          if (sanitizedSlug && sanitizedSlug !== decodedSlug) {
+            const result = await supabase
+              .from('venues')
+              .select('*')
+              .eq('slug', sanitizedSlug)
+              .eq('is_published', true)
+              .maybeSingle()
+            
+            if (result.data) {
+              data = result.data
+              error = null
+            }
+          }
+        }
+
+        if (error && error.code !== 'PGRST116') {
           console.error('Supabase error:', error)
           throw new Error(error.message || 'Lieu non trouvé')
         }

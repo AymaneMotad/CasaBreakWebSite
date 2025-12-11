@@ -1,15 +1,17 @@
 "use client"
 
 import { useEffect, useState } from "react"
-import { useRouter, useParams } from "next/navigation"
+import { useRouter, useParams, usePathname } from "next/navigation"
 import { createClient } from "@/utils/supabase/client"
 import { ArrowLeft, Save, Upload, X, Loader2 } from "lucide-react"
 
 export default function EditRestaurantPage() {
   const router = useRouter()
   const params = useParams()
-  const id = params.id as string
-  const isNew = id === "new"
+  const pathname = usePathname()
+  const id = params.id as string | undefined
+  // Check if we're on the /new route or if id is undefined or "new"
+  const isNew = !id || id === "new" || pathname?.endsWith("/new")
   const [isActivity, setIsActivity] = useState(false) // Track if editing an activity
 
   const [loading, setLoading] = useState(!isNew)
@@ -37,7 +39,8 @@ export default function EditRestaurantPage() {
   })
 
   useEffect(() => {
-    if (!isNew) {
+    // Only fetch if we have a valid id and we're not creating a new item
+    if (!isNew && id && id !== "undefined" && id !== "null") {
       fetchRestaurant()
     }
   }, [id, isNew])
@@ -264,36 +267,64 @@ export default function EditRestaurantPage() {
         subtype: formData.cuisine_types[0] || "fusion",
       }
 
+      // Validate required fields
+      if (!formData.name_fr || !formData.name_fr.trim()) {
+        throw new Error('Name (French) is required')
+      }
+
       // Validate place_category is a valid enum value
       const validPlaceCategories = ['restaurants', 'bars-nightlife', 'shopping', 'hebergement', 'sport-bien-etre']
-      const placeCategory = validPlaceCategories.includes(formData.place_category) 
+      const placeCategory = (formData.place_category && validPlaceCategories.includes(formData.place_category))
         ? formData.place_category 
         : 'restaurants' // Default to restaurants if invalid
 
+      // Generate and sanitize slug - always sanitize even if user provides one
+      // This ensures slugs are URL-safe and consistent
+      const slugInput = (formData.slug?.trim() || formData.name_fr.trim()).toLowerCase()
+      const finalSlug = slugInput
+        .replace(/\s+/g, "-") // Replace spaces with hyphens
+        .replace(/[^a-z0-9-]/g, "") // Remove special characters
+        .replace(/-+/g, "-") // Replace multiple hyphens with single hyphen
+        .replace(/^-|-$/g, "") // Remove leading/trailing hyphens
+      
+      if (!finalSlug) {
+        throw new Error('Could not generate a valid slug from the name. Please provide a slug manually.')
+      }
+
+      // Ensure category is always a valid venue_category enum for venues
+      // For venues: category column is venue_category NOT NULL
+      // For activities: category is activity_category enum
+      const categoryValue = isActivity 
+        ? (validPlaceCategories.includes(formData.place_category) ? formData.place_category : 'sport-bien-etre')
+        : placeCategory // venues.category must be a valid venue_category enum
+
       // Unified structure - both activities and venues now have the same fields
       const updateData: any = {
-        slug: formData.slug || formData.name_fr.toLowerCase().replace(/\s+/g, "-"),
-        name_fr: formData.name_fr,
-        description_fr: formData.description_fr,
-        short_description_fr: formData.short_description_fr || formData.description_fr.substring(0, 200),
+        slug: finalSlug,
+        name_fr: formData.name_fr.trim(),
+        description_fr: formData.description_fr || null,
+        short_description_fr: formData.short_description_fr || (formData.description_fr ? formData.description_fr.substring(0, 200) : null),
         main_image: imageUrl,
-        website: formData.website || null,
-        price_range: formData.price_range,
-        average_rating: formData.average_rating,
-        is_published: formData.is_published,
-        cuisine_types: formData.cuisine_types,
-        // For venues: category column is venue_category NOT NULL, so use place_category value
-        // For activities: category is activity_category enum, use place_category if it matches
-        category: isActivity 
-          ? (validPlaceCategories.includes(formData.place_category) ? formData.place_category : 'sport-bien-etre')
-          : placeCategory, // venues.category must be a valid venue_category enum
+        website: formData.website?.trim() || null,
+        price_range: formData.price_range || null,
+        average_rating: formData.average_rating || 0,
+        is_published: formData.is_published ?? true,
+        cuisine_types: formData.cuisine_types || [],
+        category: categoryValue, // Required NOT NULL field - must be valid enum
         place_category: placeCategory, // venue_category enum - determines which page
         data_jsonb: jsonbData, // JSON category (asiatique, francais, etc.) stored here
-        address: formData.address || null, // Both tables now have address
-        district: formData.district || null, // Both tables now have district
-        phone: formData.phone || null, // Both tables have phone (also in data_jsonb for consistency)
+        address: formData.address?.trim() || null, // Both tables now have address
+        district: formData.district?.trim() || null, // Both tables now have district
+        phone: formData.phone?.trim() || null, // Both tables have phone (also in data_jsonb for consistency)
         location_id: null, // Explicitly set to null to avoid undefined UUID errors
       }
+
+      // Remove undefined values to avoid issues
+      Object.keys(updateData).forEach(key => {
+        if (updateData[key] === undefined) {
+          delete updateData[key]
+        }
+      })
 
       console.log(`💾 Saving ${isActivity ? 'activity' : 'venue'} with data:`, {
         id: isNew ? 'new' : id,
@@ -305,11 +336,39 @@ export default function EditRestaurantPage() {
 
       const tableName = isActivity ? "activities" : "venues"
 
-      if (isNew) {
+      // Double-check: if id is undefined or invalid, force isNew to true
+      const shouldInsert = isNew || !id || id === "undefined" || id === "null"
+
+      console.log(`💾 Attempting to ${shouldInsert ? 'insert' : 'update'} ${tableName} with data:`, {
+        id: id || 'new',
+        isNew,
+        shouldInsert,
+        ...updateData,
+        data_jsonb: jsonbData // Show JSONB separately for clarity
+      })
+
+      if (shouldInsert) {
         const { data: insertedData, error } = await supabase.from(tableName).insert(updateData).select()
         if (error) {
-          console.error('❌ Insert error:', error)
-          throw error
+          console.error('❌ Insert error details:', {
+            message: error.message,
+            code: error.code,
+            details: error.details,
+            hint: error.hint,
+            fullError: error
+          })
+          // Provide more helpful error message
+          let errorMessage = `Failed to create ${isActivity ? 'activity' : 'place'}: ${error.message}`
+          if (error.code === '23502') {
+            errorMessage += '\n\nMissing required field. Check that all required fields are filled.'
+          } else if (error.code === '23505') {
+            errorMessage += '\n\nDuplicate entry. The slug might already exist. Try a different slug.'
+          } else if (error.code === '23514') {
+            errorMessage += '\n\nInvalid enum value. Check that place_category is valid.'
+          } else if (error.code === 'PGRST301') {
+            errorMessage += '\n\nPermission denied. Check RLS policies.'
+          }
+          throw new Error(errorMessage)
         }
         console.log(`✅ ${isActivity ? 'Activity' : 'Place'} created:`, insertedData)
         if (insertedData && insertedData[0]) {
@@ -317,10 +376,29 @@ export default function EditRestaurantPage() {
           console.log('📸 Saved JSONB photo_url:', insertedData[0].data_jsonb?.photo_url)
         }
       } else {
+        // Ensure we have a valid id for update
+        if (!id || id === "undefined" || id === "null") {
+          throw new Error("Cannot update: Invalid or missing ID. Please create a new place instead.")
+        }
         const { data: updatedData, error } = await supabase.from(tableName).update(updateData).eq("id", id).select()
         if (error) {
-          console.error('❌ Update error:', error)
-          throw error
+          console.error('❌ Update error details:', {
+            message: error.message,
+            code: error.code,
+            details: error.details,
+            hint: error.hint,
+            fullError: error
+          })
+          // Provide more helpful error message
+          let errorMessage = `Failed to update ${isActivity ? 'activity' : 'place'}: ${error.message}`
+          if (error.code === '23502') {
+            errorMessage += '\n\nMissing required field. Check that all required fields are filled.'
+          } else if (error.code === '23514') {
+            errorMessage += '\n\nInvalid enum value. Check that place_category is valid.'
+          } else if (error.code === 'PGRST301') {
+            errorMessage += '\n\nPermission denied. Check RLS policies.'
+          }
+          throw new Error(errorMessage)
         }
         console.log(`✅ ${isActivity ? 'Activity' : 'Place'} updated:`, updatedData)
         if (updatedData && updatedData[0]) {
@@ -333,8 +411,9 @@ export default function EditRestaurantPage() {
       router.push("/admin/restaurants")
       router.refresh()
     } catch (error: any) {
-      console.error(`Error saving ${isActivity ? 'activity' : 'place'}:`, error)
-      alert(`Failed to save ${isActivity ? 'activity' : 'place'}: ` + (error.message || "Unknown error"))
+      console.error(`❌ Error saving ${isActivity ? 'activity' : 'place'}:`, error)
+      const errorMessage = error?.message || error?.toString() || "Unknown error"
+      alert(`Failed to save ${isActivity ? 'activity' : 'place'}:\n\n${errorMessage}\n\nCheck browser console (F12) for more details.`)
     } finally {
       setSaving(false)
     }
