@@ -275,7 +275,7 @@ export default function HomePage() {
                 {/* Card 4 - Quartiers */}
                 <div className="col-span-4 row-span-2 group relative rounded-3xl overflow-hidden shadow-xl">
                   <img 
-                    src="https://images.unsplash.com/photo-1539768942893-daf53e448371?w=600&q=80" 
+                    src="https://yzgvfaxalzubsmmqmswx.supabase.co/storage/v1/object/public/casabreak/public_stuff/alpha-plus-3vGmCMgTdiA-unsplash.jpg" 
                     alt="Quartier"
                     className="w-full h-full object-cover group-hover:scale-110 transition-transform duration-500"
                   />

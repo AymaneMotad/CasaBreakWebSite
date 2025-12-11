@@ -149,12 +149,13 @@ function StadiumBentoCard({ city, stadium, image, capacity, matches, isLarge = f
   accentColor?: string
   imageClass?: string
 }) {
+  const useContain = imageClass === 'object-contain'
   return (
-    <div className="group relative overflow-hidden rounded-3xl shadow-xl h-full">
+    <div className={`group relative overflow-hidden rounded-3xl shadow-xl h-full ${useContain ? 'bg-gray-900' : ''}`}>
       <img 
         src={image} 
         alt={stadium}
-        className={`w-full h-full object-cover group-hover:scale-110 transition-transform duration-700 ${imageClass}`}
+        className={`w-full h-full ${imageClass || 'object-cover'} group-hover:scale-110 transition-transform duration-700`}
       />
       
       {/* Gradient overlay */}
@@ -202,9 +203,9 @@ export default function Can2025Page() {
   const locale = useLocale()
   
   const hostCities = [
-    { city: 'Casablanca', stadium: 'Stade Mohammed V', image: 'https://sonarges.ma/wp-content/uploads/2024/12/WhatsApp-Image-2024-12-16-at-17.03.16-1.jpeg', capacity: '45 000', matches: '8 matchs', accentColor: '#00a346' },
+    { city: 'Casablanca', stadium: 'Stade Mohammed V', image: 'https://sonarges.ma/wp-content/uploads/2024/12/WhatsApp-Image-2024-12-16-at-17.03.16-1.jpeg', capacity: '45 000', matches: '8 matchs', accentColor: '#00a346', imageClass: 'object-contain' },
     { city: 'Rabat', stadium: 'Complexe Sportif Prince Moulay Abdellah', image: 'https://www.cafonline.com/media/1q3p4e13/b25iefrm0951.jpg?rmode=max&width=1000&height=667', capacity: '68 000', matches: '7 matchs', accentColor: '#c10000' },
-    { city: 'Rabat', stadium: 'Stade Annexe Olympique – Complexe Sportif Prince Moulay Abdellah', image: 'https://www.cafonline.com/media/xtqighxf/b25gznr0906.jpg?rmode=max&width=1000&height=667', capacity: '21 000', matches: '3 matchs', accentColor: '#c10000' },
+    { city: 'Rabat', stadium: 'Stade Olympique – Complexe Sportif Prince Moulay Abdellah', image: 'https://www.cafonline.com/media/xtqighxf/b25gznr0906.jpg?rmode=max&width=1000&height=667', capacity: '21 000', matches: '3 matchs', accentColor: '#c10000' },
     { city: 'Rabat', stadium: 'Complexe Sportif Prince Héritier Moulay El Hassan', image: 'https://www.cafonline.com/media/efsjavli/b25kpnr1401.jpg?rmode=max&width=1000&height=667', capacity: '22 000', matches: '4 matchs', accentColor: '#c10000' },
     { city: 'Rabat', stadium: 'Stade Al Medina', image: 'https://www.cafonline.com/media/ctzp5cej/b25kmnr1221.jpg?rmode=max&width=1000&height=667', capacity: '18 000', matches: '4 matchs', accentColor: '#c10000' },
     { city: 'Marrakech', stadium: 'Grand Stade de Marrakech', image: '/stadiums/marrakech.jpg', capacity: '45 240', matches: '8 matchs', accentColor: '#ffd700' },
@@ -256,7 +257,7 @@ export default function Can2025Page() {
       ]
     },
     {
-      stadium: 'Stade Annexe Olympique',
+      stadium: 'Stade Olympique',
       city: 'Rabat',
       capacity: '21 000',
       accentColor: '#00a346',
@@ -583,7 +584,7 @@ export default function Can2025Page() {
             </div>
             
             {/* Row 2 - Rabat Stadiums Grouped Together */}
-            {/* Stade Annexe Olympique */}
+            {/* Stade Olympique */}
             <div className="col-span-6 lg:col-span-3 h-[250px] lg:h-[300px]">
               <StadiumBentoCard {...hostCities[2]} />
             </div>
