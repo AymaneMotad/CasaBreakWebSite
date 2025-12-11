@@ -402,14 +402,14 @@ export default function HomePage() {
             </Link>
             
             {/* Stacked Cards - Right Side */}
-            <div className="col-span-12 lg:col-span-4 grid grid-rows-2 gap-4 lg:gap-6">
+            <div className="col-span-12 lg:col-span-4 flex flex-col gap-4 lg:gap-6">
               
               {/* Quartiers */}
-              <Link href={`/${locale}/decouvrir/quartiers`} className="group relative h-[200px] lg:h-auto rounded-[2rem] overflow-hidden shadow-xl">
+              <Link href={`/${locale}/decouvrir/quartiers`} className="group relative h-[280px] lg:h-[320px] rounded-[2rem] overflow-hidden shadow-xl">
                 <img 
-                  src="https://images.unsplash.com/photo-1558618666-fcd25c85cd64?w=600&q=80" 
+                  src="https://yzgvfaxalzubsmmqmswx.supabase.co/storage/v1/object/public/casabreak/public_stuff/alpha-plus-3vGmCMgTdiA-unsplash.jpg" 
                   alt="Quartiers"
-                  className="w-full h-full object-cover group-hover:scale-110 transition-transform duration-500"
+                  className="w-full h-full object-cover object-top group-hover:scale-105 transition-transform duration-500"
                 />
                 <div className="absolute inset-0 bg-gradient-to-t from-[#0066b2]/90 via-[#0066b2]/40 to-transparent" />
                 
@@ -425,11 +425,11 @@ export default function HomePage() {
               </Link>
               
               {/* Mer & Plages */}
-              <Link href={`/${locale}/decouvrir/mer-plages`} className="group relative h-[200px] lg:h-auto rounded-[2rem] overflow-hidden shadow-xl">
+              <Link href={`/${locale}/decouvrir/mer-plages`} className="group relative h-[280px] lg:h-[320px] rounded-[2rem] overflow-hidden shadow-xl">
                 <img 
                   src="https://images.unsplash.com/photo-1507525428034-b723cf961d3e?w=600&q=80" 
                   alt="Plages"
-                  className="w-full h-full object-cover group-hover:scale-110 transition-transform duration-500"
+                  className="w-full h-full object-cover object-center group-hover:scale-105 transition-transform duration-500"
                 />
                 <div className="absolute inset-0 bg-gradient-to-t from-[#c10000]/90 via-[#c10000]/40 to-transparent" />
                 
@@ -659,7 +659,7 @@ export default function HomePage() {
               { icon: Palette, title: 'Expos', desc: 'Art contemporain', href: `/${locale}/evenements/expositions-galeries`, color: '#0066b2' },
               { icon: PartyPopper, title: 'Festivals', desc: 'Événements annuels', href: `/${locale}/evenements/festivals`, color: '#00a346' },
               { icon: Trophy, title: 'Sports', desc: 'Matchs & compétitions', href: `/${locale}/evenements/evenements-sportifs`, color: '#ffd700' },
-              { icon: Building, title: 'Salons', desc: 'Foires & B2B', href: `/${locale}/evenements/foires-salons`, color: '#0066b2' },
+              { icon: Building, title: 'Salons', desc: 'Foires & Salons', href: `/${locale}/evenements/foires-salons`, color: '#0066b2' },
             ].map((item, i) => (
               <Link 
                 key={i}
