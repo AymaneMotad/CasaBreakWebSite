@@ -264,6 +264,12 @@ export default function EditRestaurantPage() {
         subtype: formData.cuisine_types[0] || "fusion",
       }
 
+      // Validate place_category is a valid enum value
+      const validPlaceCategories = ['restaurants', 'bars-nightlife', 'shopping', 'hebergement', 'sport-bien-etre']
+      const placeCategory = validPlaceCategories.includes(formData.place_category) 
+        ? formData.place_category 
+        : 'restaurants' // Default to restaurants if invalid
+
       // Unified structure - both activities and venues now have the same fields
       const updateData: any = {
         slug: formData.slug || formData.name_fr.toLowerCase().replace(/\s+/g, "-"),
@@ -276,12 +282,17 @@ export default function EditRestaurantPage() {
         average_rating: formData.average_rating,
         is_published: formData.is_published,
         cuisine_types: formData.cuisine_types,
-        category: formData.category || null, // JSON category (francais, asiatique, etc.) - from JSON import
-        place_category: formData.place_category, // venue_category enum - determines which page
-        data_jsonb: jsonbData, // Both tables now have data_jsonb
+        // For venues: category column is venue_category NOT NULL, so use place_category value
+        // For activities: category is activity_category enum, use place_category if it matches
+        category: isActivity 
+          ? (validPlaceCategories.includes(formData.place_category) ? formData.place_category : 'sport-bien-etre')
+          : placeCategory, // venues.category must be a valid venue_category enum
+        place_category: placeCategory, // venue_category enum - determines which page
+        data_jsonb: jsonbData, // JSON category (asiatique, francais, etc.) stored here
         address: formData.address || null, // Both tables now have address
         district: formData.district || null, // Both tables now have district
         phone: formData.phone || null, // Both tables have phone (also in data_jsonb for consistency)
+        location_id: null, // Explicitly set to null to avoid undefined UUID errors
       }
 
       console.log(`💾 Saving ${isActivity ? 'activity' : 'venue'} with data:`, {

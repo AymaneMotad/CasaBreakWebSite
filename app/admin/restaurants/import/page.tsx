@@ -145,7 +145,7 @@ export default function ImportRestaurantsPage() {
           // Prepare insert data
           const insertData: any = {
             slug,
-            category: restaurant.category || null, // JSON category (francais, asiatique, etc.) - keep from JSON
+            category: placeCategory, // venues.category must be a valid venue_category enum (NOT JSON category)
             place_category: placeCategory, // venue_category enum - from category_place field in JSON
             name_fr: restaurant.name,
             description_fr: restaurant.description || '',
@@ -158,7 +158,8 @@ export default function ImportRestaurantsPage() {
             price_range: priceRange,
             cuisine_types: cuisineTypes,
             is_published: true,
-            data_jsonb: jsonbData,
+            data_jsonb: jsonbData, // JSON category (francais, asiatique, etc.) stored here
+            location_id: null, // Explicitly set to null to avoid undefined UUID errors
           }
 
           // Insert or update (using upsert with slug as conflict target)
