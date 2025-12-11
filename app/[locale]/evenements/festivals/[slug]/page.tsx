@@ -47,7 +47,7 @@ export default function EventDetailPage() {
 
   const formatDate = (dateString: string) => {
     const date = new Date(dateString)
-    return date.toLocaleDateString('fr-FR', { day: 'numeric', month: 'long', year: 'numeric', hour: '2-digit', minute: '2-digit' })
+    return date.toLocaleDateString('fr-FR', { day: 'numeric', month: 'long', year: 'numeric' })
   }
 
   const formatPrice = (isFree: boolean, priceFrom: number | null, priceTo: number | null) => {

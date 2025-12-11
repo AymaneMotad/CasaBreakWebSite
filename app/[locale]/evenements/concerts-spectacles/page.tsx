@@ -6,7 +6,7 @@ import { Navigation } from "@/components/navigation"
 import { Footer } from "@/components/footer"
 import { Breadcrumb } from "@/components/breadcrumb"
 import { createClient } from "@/utils/supabase/client"
-import { Music, ChevronDown, ChevronUp, ChevronRight, Calendar, MapPin } from "lucide-react"
+import { Music, ChevronRight, Calendar, MapPin } from "lucide-react"
 import { useTranslations } from 'next-intl'
 import Link from 'next/link'
 
@@ -35,8 +35,6 @@ export default function ConcertsSpectaclesPage() {
   const [events, setEvents] = useState<EventData[]>([])
   const [loading, setLoading] = useState(true)
   const [error, setError] = useState<string | null>(null)
-  const [expandedCards, setExpandedCards] = useState<Set<string>>(new Set())
-
   useEffect(() => {
     async function fetchEvents() {
       try {
@@ -64,18 +62,6 @@ export default function ConcertsSpectaclesPage() {
 
     fetchEvents()
   }, [])
-
-  const toggleExpand = (id: string) => {
-    setExpandedCards(prev => {
-      const newSet = new Set(prev)
-      if (newSet.has(id)) {
-        newSet.delete(id)
-      } else {
-        newSet.add(id)
-      }
-      return newSet
-    })
-  }
 
   const formatDate = (dateString: string) => {
     const date = new Date(dateString)
@@ -144,10 +130,8 @@ export default function ConcertsSpectaclesPage() {
         ) : (
           <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-8">
             {events.map((event) => {
-              const isExpanded = expandedCards.has(event.id)
               const description = event.description_fr || event.short_description_fr || ''
               const shortDescription = description.length > 100 ? description.substring(0, 100) + '...' : description
-              const showExpandButton = description.length > 100
 
               return (
                 <article 
@@ -212,7 +196,7 @@ export default function ConcertsSpectaclesPage() {
                     {description && (
                       <div className="mb-4 flex-grow">
                         <p className="text-gray-600 text-sm leading-relaxed whitespace-pre-wrap">
-                          {isExpanded ? description : shortDescription}
+                          {shortDescription}
                         </p>
                       </div>
                     )}
@@ -224,34 +208,11 @@ export default function ConcertsSpectaclesPage() {
                       </div>
                     )}
 
-                    {/* Read More / Read Less Button & View Details Link */}
-                    <div className="flex items-center gap-3 mt-auto">
-                      {description && showExpandButton && (
-                        <button
-                          type="button"
-                          onClick={(e) => {
-                            e.preventDefault()
-                            e.stopPropagation()
-                            toggleExpand(event.id)
-                          }}
-                          className="inline-flex items-center text-purple-600 hover:text-purple-700 font-medium text-sm transition-colors cursor-pointer focus:outline-none focus:ring-2 focus:ring-purple-500 focus:ring-offset-2 rounded px-2 py-1 -ml-2"
-                        >
-                          {isExpanded ? (
-                            <>
-                              Lire moins
-                              <ChevronUp className="w-4 h-4 ml-1" />
-                            </>
-                          ) : (
-                            <>
-                              Lire la suite
-                              <ChevronDown className="w-4 h-4 ml-1" />
-                            </>
-                          )}
-                        </button>
-                      )}
+                    {/* View Details Link */}
+                    <div className="mt-auto">
                       <Link
                         href={`/${locale}/evenements/concerts-spectacles/${event.slug}`}
-                        className="inline-flex items-center text-purple-600 hover:text-purple-700 font-medium text-sm transition-colors ml-auto"
+                        className="inline-flex items-center text-purple-600 hover:text-purple-700 font-medium text-sm transition-colors"
                       >
                         Voir les détails
                         <ChevronRight className="w-4 h-4 ml-1" />
