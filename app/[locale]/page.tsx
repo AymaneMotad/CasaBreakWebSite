@@ -701,7 +701,7 @@ export default function HomePage() {
             {[
               { icon: Home, title: 'Hébergement', desc: 'Hôtels, riads', href: `/${locale}/planifier/hebergement`, color: '#00a346' },
               { icon: MapPin, title: 'Où loger ?', desc: 'Guide quartiers', href: `/${locale}/planifier/ou-loger`, color: '#0066b2' },
-              { icon: Route, title: 'Se déplacer', desc: 'Tram, taxi, VTC', href: `/${locale}/planifier/se-deplacer`, color: '#c10000' },
+              { icon: Route, title: 'Se déplacer', desc: 'Tram & taxi', href: `/${locale}/planifier/se-deplacer`, color: '#c10000' },
               { icon: Plane, title: 'Aéroport', desc: 'Transferts', href: `/${locale}/planifier/aeroport-centre-ville`, color: '#00a346' },
               { icon: Zap, title: 'Infos pratiques', desc: 'Conseils & astuces', href: `/${locale}/planifier/infos-pratiques`, color: '#0066b2' },
             ].map((item, i) => (
