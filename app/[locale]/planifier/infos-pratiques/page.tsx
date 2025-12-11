@@ -37,8 +37,7 @@ export default function InfosPratiquesPage() {
       items: [
         "Monnaie : Dirham marocain (MAD)",
         "Cartes bancaires acceptées dans la plupart des commerces",
-        "Distributeurs disponibles partout en ville",
-        "Pourboires : 10% dans les restaurants"
+        "Distributeurs disponibles partout en ville"
       ]
     },
     {
@@ -78,8 +77,7 @@ export default function InfosPratiquesPage() {
       color: "#0066b2",
       items: [
         "220V / 50Hz",
-        "Prises de type C et E (européennes)",
-        "Adaptateurs disponibles dans les commerces"
+        "Prises de type C et E (européennes)"
       ]
     }
   ]

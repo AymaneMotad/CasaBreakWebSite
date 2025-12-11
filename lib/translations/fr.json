@@ -1178,8 +1178,7 @@
           "items": [
             "Monnaie : Dirham marocain (MAD)",
             "Cartes bancaires acceptées dans la plupart des commerces",
-            "Distributeurs disponibles partout en ville",
-            "Pourboires : 10% dans les restaurants"
+            "Distributeurs disponibles partout en ville"
           ]
         },
         "telecom": {
@@ -1214,7 +1213,6 @@
           "items": [
             "220V / 50Hz",
             "Prises de type C et E (européennes)",
-            "Adaptateurs disponibles dans les commerces",
             "Coupures rares mais possibles"
           ]
         }
