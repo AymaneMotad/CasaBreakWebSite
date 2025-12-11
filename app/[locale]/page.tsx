@@ -9,7 +9,7 @@ import {
   MapPin, Utensils, Coffee, Camera, ShoppingBag, Calendar, Star, ArrowRight, 
   Compass, Heart, Building, Waves, Route, Music, Trophy, Plane, Home, Users, 
   PartyPopper, Palette, Store, Sparkles, Play, ChevronDown, Ticket, Clock,
-  ArrowUpRight, Zap
+  ArrowUpRight, Zap, Activity, UtensilsCrossed, Map
 } from "lucide-react"
 
 // Countdown Component - CAN 2025 Style
@@ -449,7 +449,7 @@ export default function HomePage() {
       </section>
       
       {/* ═══════════════════════════════════════════════════════════════
-          ACTIVITIES - HORIZONTAL SCROLL CARDS
+          EXPERIENCES UNIQUES - MAIN NAVBAR CATEGORIES
       ═══════════════════════════════════════════════════════════════ */}
       <section className="py-24 lg:py-32 relative overflow-hidden bg-gradient-to-br from-[#00533a] via-[#004d36] to-[#003d2b]">
         {/* Decorative background */}
@@ -475,27 +475,63 @@ export default function HomePage() {
             <div>
               <div className="inline-flex items-center gap-2 px-4 py-2 rounded-full bg-white/15 border border-white/25 mb-4">
                 <Star className="w-4 h-4 text-[#ffd700]" />
-                <span className="text-sm text-white font-bold">Activités</span>
+                <span className="text-sm text-white font-bold">Découvrez Casablanca</span>
               </div>
               <h2 className="text-4xl lg:text-6xl font-black text-white leading-tight">
                 Vivez des<br />
                 <span className="bg-gradient-to-r from-[#ffd700] via-white to-[#ffd700] bg-clip-text text-transparent">expériences uniques</span>
               </h2>
             </div>
-            <Link href={`/${locale}/activites/incontournables`} className="text-white/70 hover:text-white transition-colors flex items-center gap-2 text-sm group">
-              <span>Voir toutes les activités</span>
-              <ArrowRight className="w-4 h-4 group-hover:translate-x-1 transition-transform" />
-            </Link>
           </div>
           
-          {/* Horizontal Scroll */}
+          {/* Horizontal Scroll - Main Navbar Categories */}
           <div className="flex gap-6 overflow-x-auto pb-6 scrollbar-hide snap-x snap-mandatory -mx-6 px-6 lg:-mx-16 lg:px-16">
             {[
-              { icon: Camera, title: 'Incontournables', desc: 'Les must-do à Casa', href: `/${locale}/activites/incontournables`, color: '#00a346', image: 'https://images.unsplash.com/photo-1696259629194-5411989d6675?w=500&q=80' },
-              { icon: Waves, title: 'Plein air & Mer', desc: 'Surf, jet-ski, balades', href: `/${locale}/activites/plein-air-mer`, color: '#0066b2', image: 'https://images.unsplash.com/photo-1502680390469-be75c86b636f?w=500&q=80' },
-              { icon: Compass, title: 'Tours & Expériences', desc: 'Visites guidées exclusives', href: `/${locale}/activites/tours-experiences`, color: '#c10000', image: 'https://images.unsplash.com/photo-1539635278303-d4002c07eae3?w=500&q=80' },
-              { icon: Users, title: 'En famille', desc: 'Activités pour enfants', href: `/${locale}/activites/famille-enfants`, color: '#ffd700', image: 'https://images.unsplash.com/photo-1540479859555-17af45c78602?w=500&q=80' },
-              { icon: ShoppingBag, title: 'Shopping', desc: 'Malls & boutiques', href: `/${locale}/activites/shopping`, color: '#00a346', image: 'https://images.unsplash.com/photo-1441986300917-64674bd600d8?w=500&q=80' },
+              { 
+                icon: MapPin, 
+                title: 'Découvrir', 
+                desc: 'Monuments, quartiers & plages', 
+                href: `/${locale}/decouvrir/monuments`, 
+                color: '#00a346', 
+                image: 'https://images.unsplash.com/photo-1696259629194-5411989d6675?w=800&q=80',
+                badge: 'Découvrir'
+              },
+              { 
+                icon: Activity, 
+                title: 'Activités', 
+                desc: 'Incontournables & expériences', 
+                href: `/${locale}/activites/incontournables`, 
+                color: '#0066b2', 
+                image: '/onglet-activite.jpg',
+                badge: 'Activités'
+              },
+              { 
+                icon: UtensilsCrossed, 
+                title: 'Gastronomie & Shopping', 
+                desc: 'Restaurants, bars & shopping', 
+                href: `/${locale}/manger-sortir/restaurants`, 
+                color: '#c10000', 
+                image: '/onglet-gastronomie-shoppingg.jpg',
+                badge: 'Gastronomie'
+              },
+              { 
+                icon: Calendar, 
+                title: 'Événements', 
+                desc: 'Concerts, expositions & festivals', 
+                href: `/${locale}/evenements/concerts-spectacles`, 
+                color: '#ffd700', 
+                image: '/onglet-evenement.jpg',
+                badge: 'Événements'
+              },
+              { 
+                icon: Map, 
+                title: 'Planifier votre séjour', 
+                desc: 'Hébergement & infos pratiques', 
+                href: `/${locale}/planifier/hebergement`, 
+                color: '#00a346', 
+                image: '/planifier votre sejour.jpg',
+                badge: 'Planifier'
+              },
             ].map((item, i) => (
               <Link 
                 key={i} 
