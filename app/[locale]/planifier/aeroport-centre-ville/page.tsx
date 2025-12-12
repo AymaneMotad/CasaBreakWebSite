@@ -9,7 +9,7 @@ import {
   Plane, Bus, Car, Train, MapPin, Clock, 
   CreditCard, Users, Luggage, ArrowRight, 
   CheckCircle, Phone, Globe, Navigation as NavIcon,
-  Wifi, Coffee, ShoppingBag
+  Wifi, Coffee, ShoppingBag, Calendar, ExternalLink
 } from "lucide-react"
 
 export default function AeroportCentreVillePage() {
@@ -370,6 +370,43 @@ export default function AeroportCentreVillePage() {
                 <p className="text-gray-600 text-sm">{tip.content}</p>
               </div>
             ))}
+          </div>
+        </div>
+      </section>
+
+      {/* Flight Schedule Guide */}
+      <section className="py-16 bg-white">
+        <div className="max-w-7xl mx-auto px-6 lg:px-12">
+          <div className="max-w-4xl mx-auto">
+            <div className="group p-8 lg:p-12 rounded-3xl bg-gradient-to-br from-[#00a346]/10 via-[#0066b2]/10 to-[#c10000]/10 border-2 border-[#00a346]/20 hover:border-[#00a346]/40 hover:shadow-2xl transition-all">
+              <div className="flex flex-col md:flex-row items-start gap-8">
+                <div className="w-20 h-20 rounded-2xl bg-gradient-to-br from-[#00a346] to-[#0066b2] flex items-center justify-center flex-shrink-0 group-hover:scale-110 transition-transform shadow-lg">
+                  <Calendar className="w-10 h-10 text-white" />
+                </div>
+                <div className="flex-1">
+                  <div className="flex items-center gap-3 mb-4">
+                    <h2 className="text-3xl lg:text-4xl font-black text-[#1a1a1a]">
+                      Guide horaire des arrivées et des départs
+                    </h2>
+                    <ExternalLink className="w-5 h-5 text-gray-400 group-hover:text-[#00a346] transition-colors" />
+                  </div>
+                  <p className="text-lg text-gray-700 mb-6 leading-relaxed">
+                    Consultez en temps réel les horaires des vols arrivant et partant de l'aéroport Mohammed V. 
+                    Planifiez votre arrivée ou votre départ en toute sérénité.
+                  </p>
+                  <a
+                    href="https://www.aeroportcasablanca.ma/Nos-A%C3%A9roports/A%C3%A9roport-Casablanca-Mohammed-V/Informations-Vols/Guide-horaire"
+                    target="_blank"
+                    rel="noopener noreferrer"
+                    className="inline-flex items-center gap-3 px-8 py-4 bg-gradient-to-r from-[#00a346] to-[#0066b2] text-white rounded-2xl hover:shadow-xl transition-all font-bold group-hover:scale-105"
+                  >
+                    <Clock className="w-5 h-5" />
+                    Consulter le guide horaire
+                    <ArrowRight className="w-5 h-5 group-hover:translate-x-1 transition-transform" />
+                  </a>
+                </div>
+              </div>
+            </div>
           </div>
         </div>
       </section>

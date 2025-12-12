@@ -9,7 +9,8 @@ import {
   Info, Clock, Phone, CreditCard, MapPin, 
   Calendar, Sun, Moon, Umbrella, Wifi, Plug, 
   Utensils, ShoppingBag, Heart, AlertCircle, 
-  CheckCircle, Lightbulb, Users, Languages
+  CheckCircle, Lightbulb, Users, Languages,
+  Pill, CalendarClock, ExternalLink
 } from "lucide-react"
 import { CHPMap } from "@/components/chp-map"
 
@@ -195,6 +196,74 @@ const emergencyContacts = [
                 </p>
               </div>
             ))}
+          </div>
+        </div>
+      </section>
+
+      {/* Useful Links */}
+      <section className="py-16 bg-gradient-to-b from-white to-gray-50">
+        <div className="max-w-7xl mx-auto px-6 lg:px-12">
+          <div className="text-center mb-12">
+            <h2 className="text-3xl lg:text-4xl font-black text-[#1a1a1a] mb-4">
+              Liens utiles
+            </h2>
+            <p className="text-gray-600 max-w-2xl mx-auto">
+              Accès rapide aux services essentiels
+            </p>
+          </div>
+
+          <div className="grid md:grid-cols-2 gap-6 max-w-4xl mx-auto">
+            {/* Pharmacie de garde */}
+            <a
+              href="https://saydalia.ma/fr/pharmacies-de-garde/"
+              target="_blank"
+              rel="noopener noreferrer"
+              className="group p-8 rounded-3xl bg-white border-2 border-gray-100 hover:border-[#00a346] hover:shadow-xl transition-all"
+            >
+              <div className="flex items-start gap-6">
+                <div className="w-16 h-16 rounded-2xl bg-[#00a346]/15 flex items-center justify-center flex-shrink-0 group-hover:scale-110 transition-transform">
+                  <Pill className="w-8 h-8 text-[#00a346]" />
+                </div>
+                <div className="flex-1">
+                  <div className="flex items-center gap-2 mb-2">
+                    <h3 className="text-xl font-black text-[#1a1a1a]">Pharmacie de garde</h3>
+                    <ExternalLink className="w-4 h-4 text-gray-400 group-hover:text-[#00a346] transition-colors" />
+                  </div>
+                  <p className="text-gray-600 text-sm mb-4">
+                    Trouvez les pharmacies de garde ouvertes 24/7 à Casablanca
+                  </p>
+                  <p className="text-sm text-[#00a346] font-semibold group-hover:underline">
+                    Consulter les pharmacies de garde →
+                  </p>
+                </div>
+              </div>
+            </a>
+
+            {/* Horaires de prière */}
+            <a
+              href="https://priere.ma/horaire-priere-casablanca"
+              target="_blank"
+              rel="noopener noreferrer"
+              className="group p-8 rounded-3xl bg-white border-2 border-gray-100 hover:border-[#0066b2] hover:shadow-xl transition-all"
+            >
+              <div className="flex items-start gap-6">
+                <div className="w-16 h-16 rounded-2xl bg-[#0066b2]/15 flex items-center justify-center flex-shrink-0 group-hover:scale-110 transition-transform">
+                  <CalendarClock className="w-8 h-8 text-[#0066b2]" />
+                </div>
+                <div className="flex-1">
+                  <div className="flex items-center gap-2 mb-2">
+                    <h3 className="text-xl font-black text-[#1a1a1a]">Horaires de prière</h3>
+                    <ExternalLink className="w-4 h-4 text-gray-400 group-hover:text-[#0066b2] transition-colors" />
+                  </div>
+                  <p className="text-gray-600 text-sm mb-4">
+                    Consultez les horaires de prière à Casablanca
+                  </p>
+                  <p className="text-sm text-[#0066b2] font-semibold group-hover:underline">
+                    Voir les horaires de prière →
+                  </p>
+                </div>
+              </div>
+            </a>
           </div>
         </div>
       </section>
