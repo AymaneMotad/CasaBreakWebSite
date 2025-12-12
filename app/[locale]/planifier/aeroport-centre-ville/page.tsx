@@ -62,13 +62,14 @@ export default function AeroportCentreVillePage() {
       icon: Car,
       title: "Taxis",
       color: "#c10000",
-      description: "Transport pour plus de confort et flexibilité. Partagé avec d'autres passagers. Le prix est fixe par destination, veuillez consulter le panneau des tarifs affiché à l'aéroport.",
+      description: "Transport pour plus de confort et flexibilité",
       types: [
         {
           name: "Grands Taxis",
           details: [
             "Taxis collectifs depuis l'aéroport",
-            "Partagé avec d'autres passagers"
+            "Partagé avec d'autres passagers",
+            "Le prix est fixe par destination, veuillez consulter le panneau des tarifs affiché à l'aéroport"
           ],
           price: null
         }
