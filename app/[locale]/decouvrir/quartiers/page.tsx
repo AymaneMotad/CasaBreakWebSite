@@ -208,7 +208,12 @@ export default function QuartiersPage() {
                           <p className="text-sm font-semibold text-gray-700 mb-3">Comment s'y rendre :</p>
                           
                           {quartier.transport.tramway.length > 0 && (
-                            <div className="flex items-start gap-3 p-3 rounded-lg bg-white/60 backdrop-blur-sm border border-gray-200/50">
+                            <a 
+                              href="http://casatramway.ma/" 
+                              target="_blank" 
+                              rel="noopener noreferrer"
+                              className="flex items-start gap-3 p-3 rounded-lg bg-white/60 backdrop-blur-sm border border-gray-200/50 hover:opacity-80 transition-opacity cursor-pointer"
+                            >
                               <Train className="w-5 h-5 mt-0.5 flex-shrink-0 text-[#00a346]" />
                               <div className="flex-1">
                                 <p className="text-xs font-semibold text-gray-700 mb-1">Tramway</p>
@@ -220,7 +225,7 @@ export default function QuartiersPage() {
                                   ))}
                                 </div>
                               </div>
-                            </div>
+                            </a>
                           )}
                           
                           {quartier.transport.busway.length > 0 && (
@@ -240,7 +245,12 @@ export default function QuartiersPage() {
                           )}
                           
                           {quartier.transport.bus.length > 0 && (
-                            <div className="flex items-start gap-3 p-3 rounded-lg bg-white/60 backdrop-blur-sm border border-gray-200/50">
+                            <a 
+                              href="https://www.casabus.ma/" 
+                              target="_blank" 
+                              rel="noopener noreferrer"
+                              className="flex items-start gap-3 p-3 rounded-lg bg-white/60 backdrop-blur-sm border border-gray-200/50 hover:opacity-80 transition-opacity cursor-pointer"
+                            >
                               <Bus className="w-5 h-5 mt-0.5 flex-shrink-0 text-[#0066b2]" />
                               <div className="flex-1">
                                 <p className="text-xs font-semibold text-gray-700 mb-1">Bus</p>
@@ -252,7 +262,7 @@ export default function QuartiersPage() {
                                   ))}
                                 </div>
                               </div>
-                            </div>
+                            </a>
                           )}
                         </div>
                       )}
