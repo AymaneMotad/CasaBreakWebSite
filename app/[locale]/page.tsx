@@ -154,13 +154,6 @@ export default function HomePage() {
                   </h2>
                 </div>
                 
-                {/* Full Tamazight Sentence */}
-                <div className="mb-3">
-                  <p className="text-lg sm:text-xl text-[#00a346] font-bold" style={{ textShadow: '0 1px 3px rgba(0, 163, 70, 0.2)', direction: 'ltr' }}>
-                    ⴰⵏⵙⵓⴼ ⵉⵙⵡⵏ
-                  </p>
-                </div>
-                
                 {/* Welcome Messages in Multiple Languages */}
                 <div className="flex flex-wrap items-center gap-x-4 gap-y-2 text-sm sm:text-base">
                   <span className="text-[#00a346] font-semibold" style={{ textShadow: '0 1px 3px rgba(0, 163, 70, 0.2)' }}>Bienvenue</span>
