@@ -1000,6 +1000,67 @@ textarea:focus-visible {
   animation: badge-pulse 2s ease-in-out infinite;
 }
 
+/* Mascot Character Animations */
+@keyframes mascot-breathe {
+  0%, 100% { transform: scaleY(1); }
+  50% { transform: scaleY(1.015); }
+}
+
+@keyframes mascot-headFloat {
+  0%, 100% { transform: rotate(0deg) translateY(0); }
+  25% { transform: rotate(1.5deg) translateY(1px); }
+  75% { transform: rotate(-1.5deg) translateY(-1px); }
+}
+
+@keyframes mascot-blink {
+  0%, 96%, 100% { transform: scaleY(1); }
+  98% { transform: scaleY(0.1); }
+}
+
+@keyframes mascot-tasselSwing {
+  0%, 100% { transform: rotate(-5deg); }
+  50% { transform: rotate(5deg); }
+}
+
+@keyframes mascot-waveLeft {
+  0%, 100% { transform: translateY(0) rotate(0); }
+  50% { transform: translateY(-2px) rotate(1deg); }
+}
+
+@keyframes mascot-waveRight {
+  0%, 100% { transform: translateY(0); }
+  50% { transform: translateY(-1px); }
+}
+
+.anim-breathe {
+  animation: mascot-breathe 5s ease-in-out infinite;
+  transform-origin: bottom center;
+}
+
+.anim-head {
+  animation: mascot-headFloat 6s ease-in-out infinite;
+  transform-origin: 250px 250px;
+}
+
+.anim-blink {
+  animation: mascot-blink 4s infinite;
+}
+
+.anim-tassel {
+  animation: mascot-tasselSwing 3s ease-in-out infinite;
+  transform-origin: 275px 85px;
+}
+
+.anim-hand-left {
+  animation: mascot-waveLeft 5s ease-in-out infinite;
+  transform-origin: 160px 350px;
+}
+
+.anim-hand-right {
+  animation: mascot-waveRight 6s ease-in-out infinite;
+  transform-origin: 340px 350px;
+}
+
 /* Reduced Motion Support */
 @media (prefers-reduced-motion: reduce) {
   .animate-gentle-fade-in,
@@ -1012,7 +1073,13 @@ textarea:focus-visible {
   .animate-pulse-slow,
   .animate-gradient-shift,
   .animate-scroll-x,
-  .animate-fade-in-up {
+  .animate-fade-in-up,
+  .anim-breathe,
+  .anim-head,
+  .anim-blink,
+  .anim-tassel,
+  .anim-hand-left,
+  .anim-hand-right {
     animation: none;
     opacity: 1;
     transform: none;
