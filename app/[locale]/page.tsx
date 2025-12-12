@@ -137,6 +137,41 @@ export default function HomePage() {
                 <ArrowRight className="w-4 h-4 group-hover:translate-x-1 transition-transform" />
               </Link>
               
+              {/* Multilingual Welcome Banner */}
+              <div className="relative mb-6 py-4 px-6 rounded-2xl bg-gradient-to-r from-[#c10000]/10 via-[#c10000]/5 to-transparent border-l-4 border-[#00a346] backdrop-blur-sm">
+                {/* Main Slogan */}
+                <div className="mb-3">
+                  <h2 className="text-2xl sm:text-3xl lg:text-4xl font-black leading-tight" style={{
+                    background: 'linear-gradient(135deg, #00a346 0%, #008c3c 50%, #006633 100%)',
+                    WebkitBackgroundClip: 'text',
+                    WebkitTextFillColor: 'transparent',
+                    backgroundClip: 'text',
+                    textShadow: '0 2px 8px rgba(0, 163, 70, 0.25)',
+                    fontFamily: 'serif',
+                    letterSpacing: '0.02em'
+                  }}>
+                    We Can Africa
+                  </h2>
+                </div>
+                
+                {/* Full Tamazight Sentence */}
+                <div className="mb-3">
+                  <p className="text-lg sm:text-xl text-[#00a346] font-bold" style={{ textShadow: '0 1px 3px rgba(0, 163, 70, 0.2)', direction: 'ltr' }}>
+                    ⵉⵏⵙⵉⵎⵏ ⴰⵏⵙⵓⵎ
+                  </p>
+                </div>
+                
+                {/* Welcome Messages in Multiple Languages */}
+                <div className="flex flex-wrap items-center gap-x-4 gap-y-2 text-sm sm:text-base">
+                  <span className="text-[#00a346] font-semibold" style={{ textShadow: '0 1px 3px rgba(0, 163, 70, 0.2)' }}>Bienvenue</span>
+                  <span className="text-[#00a346] font-semibold" style={{ textShadow: '0 1px 3px rgba(0, 163, 70, 0.2)' }}>Bienvenidos</span>
+                  <span className="text-[#00a346] font-semibold" style={{ textShadow: '0 1px 3px rgba(0, 163, 70, 0.2)' }}>ⵉⵏⵙⵉⵎⵏ ⴰⵏⵙⵓⵎ</span>
+                  <span className="text-[#00a346] font-semibold" style={{ textShadow: '0 1px 3px rgba(0, 163, 70, 0.2)' }}>مرحبا بكم</span>
+                  <span className="text-[#00a346] font-semibold" style={{ textShadow: '0 1px 3px rgba(0, 163, 70, 0.2)' }}>Welcome</span>
+                  <span className="text-[#00a346] font-semibold" style={{ textShadow: '0 1px 3px rgba(0, 163, 70, 0.2)' }}>Bem-vindos</span>
+                </div>
+              </div>
+              
               {/* Main Title */}
               <div className="space-y-4">
                 <h1 className="text-5xl sm:text-6xl lg:text-7xl xl:text-8xl font-black leading-[0.9] tracking-tight">
