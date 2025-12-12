@@ -561,7 +561,7 @@ export default function Can2025Page() {
                 <span className="text-sm text-gray-700 font-bold">Villes Hôtes</span>
               </div>
               <h2 className="text-4xl lg:text-6xl font-black text-gray-900 leading-tight">
-                6 villes.<br />
+                6 villes,<br />
                 <span className="text-gradient-can">6 ambiances.</span>
               </h2>
             </div>
