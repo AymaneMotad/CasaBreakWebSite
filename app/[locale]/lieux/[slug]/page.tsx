@@ -142,7 +142,9 @@ export default function VenueDetailPage() {
   const description = jsonData?.description || venue.description_fr || venue.short_description_fr
   const tags = jsonData?.tags || []
   const phone = jsonData?.phone || (venue as any).phone || null
-  const address = jsonData?.address || null
+  const email = venue.email || null
+  const address = jsonData?.address || venue.address || null
+  const district = jsonData?.district || venue.district || null
   const website = venue.website || jsonData?.website || null
   const placeCategory = (venue as any).place_category || 'restaurants'
 
@@ -237,7 +239,7 @@ export default function VenueDetailPage() {
         )}
 
         {/* Contact Information */}
-        {(phone || address || website) && (
+        {(phone || email || address || district || website) && (
           <div className="bg-gray-50 rounded-2xl p-6 mb-8">
             <h2 className="text-2xl font-semibold text-gray-900 mb-6">Informations pratiques</h2>
             
@@ -249,6 +251,19 @@ export default function VenueDetailPage() {
                     <p className="text-sm text-gray-500 mb-1">Adresse</p>
                     <p className="text-gray-900 font-medium">
                       {address}
+                      {district && ` • ${district}`}
+                    </p>
+                  </div>
+                </div>
+              )}
+
+              {district && !address && (
+                <div className="flex items-start gap-3">
+                  <MapPin className="w-5 h-5 text-teal-600 mt-1 flex-shrink-0" />
+                  <div>
+                    <p className="text-sm text-gray-500 mb-1">Quartier</p>
+                    <p className="text-gray-900 font-medium">
+                      {district}
                     </p>
                   </div>
                 </div>
@@ -264,6 +279,21 @@ export default function VenueDetailPage() {
                       className="text-gray-900 font-medium hover:text-teal-600 transition-colors"
                     >
                       {phone}
+                    </a>
+                  </div>
+                </div>
+              )}
+
+              {email && (
+                <div className="flex items-start gap-3">
+                  <Mail className="w-5 h-5 text-teal-600 mt-1 flex-shrink-0" />
+                  <div>
+                    <p className="text-sm text-gray-500 mb-1">Email</p>
+                    <a 
+                      href={`mailto:${email}`}
+                      className="text-gray-900 font-medium hover:text-teal-600 transition-colors break-all"
+                    >
+                      {email}
                     </a>
                   </div>
                 </div>

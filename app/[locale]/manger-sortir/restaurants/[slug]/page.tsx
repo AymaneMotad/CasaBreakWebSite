@@ -233,9 +233,12 @@ export default function RestaurantDetailPage() {
             {/* Contact Information */}
             {(() => {
               const phone = jsonData?.phone || (restaurant as any).phone || null
-              const address = jsonData?.address || null
+              const email = restaurant.email || null
+              const website = restaurant.website || jsonData?.website || null
+              const address = jsonData?.address || restaurant.address || null
+              const district = jsonData?.district || restaurant.district || null
               
-              if (!phone && !address) {
+              if (!phone && !email && !website && !address && !district) {
                 return null
               }
               
@@ -251,6 +254,19 @@ export default function RestaurantDetailPage() {
                           <p className="text-sm text-gray-500 mb-1">Adresse</p>
                           <p className="text-gray-900 font-medium">
                             {address}
+                            {district && ` • ${district}`}
+                          </p>
+                        </div>
+                      </div>
+                    )}
+
+                    {district && !address && (
+                      <div className="flex items-start gap-3">
+                        <MapPin className="w-5 h-5 text-teal-600 mt-1 flex-shrink-0" />
+                        <div>
+                          <p className="text-sm text-gray-500 mb-1">Quartier</p>
+                          <p className="text-gray-900 font-medium">
+                            {district}
                           </p>
                         </div>
                       </div>
@@ -266,6 +282,39 @@ export default function RestaurantDetailPage() {
                             className="text-gray-900 font-medium hover:text-teal-600 transition-colors"
                           >
                             {phone}
+                          </a>
+                        </div>
+                      </div>
+                    )}
+
+                    {email && (
+                      <div className="flex items-start gap-3">
+                        <Mail className="w-5 h-5 text-teal-600 mt-1 flex-shrink-0" />
+                        <div>
+                          <p className="text-sm text-gray-500 mb-1">Email</p>
+                          <a 
+                            href={`mailto:${email}`}
+                            className="text-gray-900 font-medium hover:text-teal-600 transition-colors break-all"
+                          >
+                            {email}
+                          </a>
+                        </div>
+                      </div>
+                    )}
+
+                    {website && (
+                      <div className="flex items-start gap-3">
+                        <Globe className="w-5 h-5 text-teal-600 mt-1 flex-shrink-0" />
+                        <div>
+                          <p className="text-sm text-gray-500 mb-1">Site web</p>
+                          <a 
+                            href={website}
+                            target="_blank"
+                            rel="noopener noreferrer"
+                            className="inline-flex items-center gap-2 text-teal-600 hover:text-teal-700 font-medium transition-colors"
+                          >
+                            Visiter le site web
+                            <ExternalLink className="w-4 h-4" />
                           </a>
                         </div>
                       </div>

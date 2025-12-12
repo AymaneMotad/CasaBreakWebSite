@@ -7,7 +7,7 @@ import { Footer } from "@/components/footer"
 import { Breadcrumb } from "@/components/breadcrumb"
 import { createClient } from "@/utils/supabase/client"
 import type { Venue } from "@/lib/database.types"
-import { Phone, Mail, Globe, Wine, ArrowLeft, ExternalLink } from "lucide-react"
+import { Phone, Mail, Globe, Wine, ArrowLeft, ExternalLink, MapPin } from "lucide-react"
 import Link from "next/link"
 import { useTranslations } from 'next-intl'
 
@@ -152,59 +152,99 @@ export default function BarDetailPage() {
         )}
 
         {/* Contact Information */}
-        <div className="bg-gray-50 rounded-2xl p-6 mb-8">
-          <h2 className="text-2xl font-semibold text-gray-900 mb-6">Informations de contact</h2>
+        {(() => {
+          const jsonData = venue.data_jsonb as any
+          const phone = jsonData?.phone || venue.phone || null
+          const email = venue.email || null
+          const website = venue.website || jsonData?.website || null
+          const address = jsonData?.address || venue.address || null
+          const district = jsonData?.district || venue.district || null
           
-          <div className="grid md:grid-cols-2 gap-6">
-            {venue.phone && (
-              <div className="flex items-start gap-3">
-                <Phone className="w-5 h-5 text-teal-600 mt-1 flex-shrink-0" />
-                <div>
-                  <p className="text-sm text-gray-500 mb-1">Téléphone</p>
-                  <a 
-                    href={`tel:${venue.phone.replace(/\s/g, '')}`}
-                    className="text-gray-900 font-medium hover:text-teal-600 transition-colors"
-                  >
-                    {venue.phone}
-                  </a>
-                </div>
-              </div>
-            )}
+          if (!phone && !email && !website && !address && !district) {
+            return null
+          }
+          
+          return (
+            <div className="bg-gray-50 rounded-2xl p-6 mb-8">
+              <h2 className="text-2xl font-semibold text-gray-900 mb-6">Informations pratiques</h2>
+              
+              <div className="space-y-6">
+                {address && (
+                  <div className="flex items-start gap-3">
+                    <MapPin className="w-5 h-5 text-teal-600 mt-1 flex-shrink-0" />
+                    <div>
+                      <p className="text-sm text-gray-500 mb-1">Adresse</p>
+                      <p className="text-gray-900 font-medium">
+                        {address}
+                        {district && ` • ${district}`}
+                      </p>
+                    </div>
+                  </div>
+                )}
 
-            {venue.email && (
-              <div className="flex items-start gap-3">
-                <Mail className="w-5 h-5 text-teal-600 mt-1 flex-shrink-0" />
-                <div>
-                  <p className="text-sm text-gray-500 mb-1">Email</p>
-                  <a 
-                    href={`mailto:${venue.email}`}
-                    className="text-gray-900 font-medium hover:text-teal-600 transition-colors break-all"
-                  >
-                    {venue.email}
-                  </a>
-                </div>
-              </div>
-            )}
+                {district && !address && (
+                  <div className="flex items-start gap-3">
+                    <MapPin className="w-5 h-5 text-teal-600 mt-1 flex-shrink-0" />
+                    <div>
+                      <p className="text-sm text-gray-500 mb-1">Quartier</p>
+                      <p className="text-gray-900 font-medium">
+                        {district}
+                      </p>
+                    </div>
+                  </div>
+                )}
 
-            {venue.website && (
-              <div className="flex items-start gap-3 md:col-span-2">
-                <Globe className="w-5 h-5 text-teal-600 mt-1 flex-shrink-0" />
-                <div>
-                  <p className="text-sm text-gray-500 mb-1">Site web</p>
-                  <a 
-                    href={venue.website}
-                    target="_blank"
-                    rel="noopener noreferrer"
-                    className="inline-flex items-center gap-2 text-teal-600 hover:text-teal-700 font-medium transition-colors"
-                  >
-                    Visiter le site web
-                    <ExternalLink className="w-4 h-4" />
-                  </a>
-                </div>
+                {phone && (
+                  <div className="flex items-start gap-3">
+                    <Phone className="w-5 h-5 text-teal-600 mt-1 flex-shrink-0" />
+                    <div>
+                      <p className="text-sm text-gray-500 mb-1">Téléphone</p>
+                      <a 
+                        href={`tel:${phone.replace(/\s/g, '')}`}
+                        className="text-gray-900 font-medium hover:text-teal-600 transition-colors"
+                      >
+                        {phone}
+                      </a>
+                    </div>
+                  </div>
+                )}
+
+                {email && (
+                  <div className="flex items-start gap-3">
+                    <Mail className="w-5 h-5 text-teal-600 mt-1 flex-shrink-0" />
+                    <div>
+                      <p className="text-sm text-gray-500 mb-1">Email</p>
+                      <a 
+                        href={`mailto:${email}`}
+                        className="text-gray-900 font-medium hover:text-teal-600 transition-colors break-all"
+                      >
+                        {email}
+                      </a>
+                    </div>
+                  </div>
+                )}
+
+                {website && (
+                  <div className="flex items-start gap-3">
+                    <Globe className="w-5 h-5 text-teal-600 mt-1 flex-shrink-0" />
+                    <div>
+                      <p className="text-sm text-gray-500 mb-1">Site web</p>
+                      <a 
+                        href={website}
+                        target="_blank"
+                        rel="noopener noreferrer"
+                        className="inline-flex items-center gap-2 text-teal-600 hover:text-teal-700 font-medium transition-colors"
+                      >
+                        Visiter le site web
+                        <ExternalLink className="w-4 h-4" />
+                      </a>
+                    </div>
+                  </div>
+                )}
               </div>
-            )}
-          </div>
-        </div>
+            </div>
+          )
+        })()}
       </div>
 
       <Footer />

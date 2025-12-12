@@ -207,6 +207,10 @@ export interface Activity {
   // Location
   location_id: string | null;
   location?: Location;
+  address: string | null;
+  district: string | null;
+  place_category?: string | null;
+  data_jsonb?: Record<string, any> | null;
   
   // Contact & Booking
   phone: string | null;
@@ -309,6 +313,10 @@ export interface Venue {
   // Location
   location_id: string | null;
   location?: Location;
+  address: string | null;
+  district: string | null;
+  place_category?: string | null;
+  data_jsonb?: Record<string, any> | null;
   
   // Contact
   phone: string | null;
