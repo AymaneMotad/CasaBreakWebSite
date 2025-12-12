@@ -256,11 +256,11 @@ export function ChatbotWidget() {
 
       {/* Chat Window */}
       <div
-        className={`fixed bottom-0 right-0 sm:bottom-6 sm:right-6 z-50 w-full sm:w-[400px] h-[100dvh] sm:h-[600px] sm:max-h-[80vh] transition-all duration-300 ${isOpen ? 'translate-y-0 opacity-100' : 'translate-y-full sm:translate-y-8 opacity-0 pointer-events-none'}`}
+        className={`fixed bottom-0 right-0 sm:bottom-6 sm:right-6 z-50 w-full sm:w-[400px] h-[100dvh] sm:h-[600px] sm:max-h-[80vh] chat-mobile-fix transition-all duration-300 ${isOpen ? 'translate-y-0 opacity-100' : 'translate-y-full sm:translate-y-8 opacity-0 pointer-events-none'}`}
       >
         <div className="w-full h-full bg-[#030303]/95 backdrop-blur-xl sm:rounded-3xl border border-white/10 shadow-2xl shadow-black/50 flex flex-col overflow-hidden">
-          {/* Header */}
-          <div className="relative px-3 py-3 sm:px-4 sm:py-4 border-b border-white/10">
+          {/* Header - Sticky on mobile to stay visible when keyboard appears */}
+          <div className="relative px-3 py-3 sm:px-4 sm:py-4 border-b border-white/10 flex-shrink-0 bg-[#030303] sm:bg-[#030303]/95 backdrop-blur-xl z-20 chat-header-mobile">
             {/* Gradient background */}
             <div className="absolute inset-0 bg-gradient-to-r from-[#00a346]/10 via-[#0066b2]/5 to-[#c10000]/10" />
             
@@ -284,8 +284,8 @@ export function ChatbotWidget() {
             </div>
           </div>
 
-          {/* Messages */}
-          <div className="flex-1 overflow-y-auto p-3 sm:p-4 space-y-3 sm:space-y-4 scrollbar-thin scrollbar-thumb-white/10 scrollbar-track-transparent">
+          {/* Messages - Scrollable area that adjusts when keyboard appears */}
+          <div className="flex-1 overflow-y-auto p-3 sm:p-4 space-y-3 sm:space-y-4 scrollbar-thin scrollbar-thumb-white/10 scrollbar-track-transparent min-h-0">
             {messages.map((message) => (
               <div
                 key={message.id}
@@ -348,8 +348,8 @@ export function ChatbotWidget() {
             <div ref={messagesEndRef} />
           </div>
 
-          {/* Input */}
-          <div className="p-3 sm:p-4 border-t border-white/10">
+          {/* Input - Fixed at bottom, stays above keyboard */}
+          <div className="p-3 sm:p-4 border-t border-white/10 flex-shrink-0 bg-[#030303] sm:bg-[#030303]/95 backdrop-blur-xl z-20 chat-input-mobile">
             <form onSubmit={handleSubmit} className="flex gap-2">
               <input
                 ref={inputRef}

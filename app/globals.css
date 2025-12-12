@@ -1061,6 +1061,27 @@ textarea:focus-visible {
   transform-origin: 340px 350px;
 }
 
+/* Mobile Chat Keyboard Handling */
+@supports (height: 100dvh) {
+  .chat-mobile-fix {
+    height: 100dvh;
+    height: -webkit-fill-available;
+  }
+}
+
+/* Ensure chat header stays visible on mobile when keyboard appears */
+@media (max-width: 640px) {
+  .chat-header-mobile {
+    position: sticky;
+    top: 0;
+  }
+  
+  .chat-input-mobile {
+    position: sticky;
+    bottom: 0;
+  }
+}
+
 /* Reduced Motion Support */
 @media (prefers-reduced-motion: reduce) {
   .animate-gentle-fade-in,

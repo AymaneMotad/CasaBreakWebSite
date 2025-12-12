@@ -1,0 +1,298 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Moroccan Chatbot Mascot</title>
+    <style>
+        body {
+            margin: 0;
+            padding: 0;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            justify-content: center;
+            min-height: 100vh;
+            /* Modern Tech Background */
+            background: radial-gradient(circle at 50% 10%, #2b3544 0%, #111827 100%);
+            font-family: 'Segoe UI', system-ui, -apple-system, sans-serif;
+            overflow: hidden;
+        }
+
+        .mascot-container {
+            position: relative;
+            width: 500px;
+            height: 600px;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+        }
+
+        /* Ambient glow behind the character */
+        .glow-effect {
+            position: absolute;
+            width: 400px;
+            height: 400px;
+            background: radial-gradient(circle, rgba(20, 184, 166, 0.15) 0%, transparent 70%);
+            border-radius: 50%;
+            z-index: 0;
+            animation: pulseGlow 4s infinite alternate;
+        }
+
+        @keyframes pulseGlow {
+            0% { opacity: 0.5; transform: scale(0.9); }
+            100% { opacity: 1; transform: scale(1.1); }
+        }
+
+        svg {
+            z-index: 1;
+            filter: drop-shadow(0px 10px 20px rgba(0,0,0,0.3));
+        }
+
+        /* --- Animations --- */
+
+        .anim-breathe {
+            animation: breathe 5s ease-in-out infinite;
+            transform-origin: bottom center;
+        }
+
+        @keyframes breathe {
+            0%, 100% { transform: scaleY(1); }
+            50% { transform: scaleY(1.015); }
+        }
+
+        .anim-head {
+            animation: headFloat 6s ease-in-out infinite;
+            transform-origin: 250px 250px;
+        }
+
+        @keyframes headFloat {
+            0%, 100% { transform: rotate(0deg) translateY(0); }
+            25% { transform: rotate(1.5deg) translateY(2px); }
+            75% { transform: rotate(-1.5deg) translateY(-2px); }
+        }
+
+        .anim-blink {
+            animation: blink 4s infinite;
+        }
+
+        @keyframes blink {
+            0%, 96%, 100% { transform: scaleY(1); }
+            98% { transform: scaleY(0.1); }
+        }
+
+        .anim-tassel {
+            animation: tasselSwing 3s ease-in-out infinite;
+            transform-origin: 275px 85px; /* Pivot at the top of the hat */
+        }
+
+        @keyframes tasselSwing {
+            0%, 100% { transform: rotate(-5deg); }
+            50% { transform: rotate(5deg); }
+        }
+
+        .anim-hand-left {
+            animation: waveLeft 5s ease-in-out infinite;
+            transform-origin: 160px 350px;
+        }
+
+        @keyframes waveLeft {
+            0%, 100% { transform: translateY(0) rotate(0); }
+            50% { transform: translateY(-5px) rotate(2deg); }
+        }
+        
+        .anim-hand-right {
+            animation: waveRight 6s ease-in-out infinite;
+            transform-origin: 340px 350px;
+        }
+        @keyframes waveRight {
+            0%, 100% { transform: translateY(0); }
+            50% { transform: translateY(-3px); }
+        }
+
+    </style>
+</head>
+<body>
+
+    <div class="mascot-container">
+        <div class="glow-effect"></div>
+        
+        <svg width="500" height="600" viewBox="0 0 500 600" fill="none" xmlns="http://www.w3.org/2000/svg">
+            <defs>
+                <!-- Skin Gradients -->
+                <linearGradient id="skinBase" x1="0" y1="0" x2="1" y2="1">
+                    <stop offset="0%" stop-color="#EBC8A5"/>
+                    <stop offset="100%" stop-color="#C99E75"/>
+                </linearGradient>
+                <radialGradient id="cheekBlush" cx="0.5" cy="0.5" r="0.5">
+                    <stop offset="0%" stop-color="#EF4444" stop-opacity="0.15"/>
+                    <stop offset="100%" stop-color="#EF4444" stop-opacity="0"/>
+                </radialGradient>
+
+                <!-- Jellaba Gradients -->
+                <linearGradient id="jellabaCloth" x1="0" y1="0" x2="1" y2="0">
+                    <stop offset="0%" stop-color="#F9FAFB"/> <!-- Light Gray/White -->
+                    <stop offset="50%" stop-color="#FFFFFF"/>
+                    <stop offset="100%" stop-color="#E5E7EB"/> <!-- Shadow side -->
+                </linearGradient>
+                <linearGradient id="jellabaShadow" x1="0" y1="0" x2="0" y2="1">
+                    <stop offset="0%" stop-color="#000000" stop-opacity="0"/>
+                    <stop offset="100%" stop-color="#000000" stop-opacity="0.1"/>
+                </linearGradient>
+                
+                <!-- Embroidery (Sfifa) Gradient -->
+                <linearGradient id="goldThread" x1="0" y1="0" x2="1" y2="0">
+                    <stop offset="0%" stop-color="#B45309"/>
+                    <stop offset="50%" stop-color="#FCD34D"/>
+                    <stop offset="100%" stop-color="#B45309"/>
+                </linearGradient>
+
+                <!-- Fez Gradient -->
+                <linearGradient id="fezRed" x1="0" y1="0" x2="1" y2="0">
+                    <stop offset="0%" stop-color="#7F1D1D"/>
+                    <stop offset="40%" stop-color="#B91C1C"/>
+                    <stop offset="100%" stop-color="#7F1D1D"/>
+                </linearGradient>
+            </defs>
+
+            <!-- === BODY GROUP === -->
+            <g class="anim-breathe">
+                
+                <!-- Back part of Hood (Qob) visible behind neck -->
+                <path d="M190 230 C190 230 250 210 310 230 C310 230 320 250 330 260 L 170 260 C 180 250 190 230 190 230" fill="#E5E7EB"/>
+
+                <!-- Main Robe Body -->
+                <path d="M150 260 
+                         C150 260 120 400 110 550 
+                         L 390 550 
+                         C 380 400 350 260 350 260 
+                         Q 250 280 150 260 Z" 
+                      fill="url(#jellabaCloth)"/>
+                
+                <!-- Robe Shading Overlay -->
+                <path d="M150 260 C150 260 120 400 110 550 L 390 550 C 380 400 350 260 350 260 Q 250 280 150 260 Z" fill="url(#jellabaShadow)"/>
+
+                <!-- Left Arm (Sleeve) -->
+                <g class="anim-hand-left">
+                    <path d="M155 265 Q 110 280 90 380 L 140 400 Q 160 350 180 320" fill="url(#jellabaCloth)" stroke="#D1D5DB" stroke-width="1"/>
+                    <!-- Hand -->
+                    <path d="M90 380 Q 80 420 100 430 C 110 435 125 430 130 420 L 135 400" fill="url(#skinBase)"/>
+                </g>
+
+                <!-- Right Arm (Sleeve) -->
+                <g class="anim-hand-right">
+                    <path d="M345 265 Q 390 280 410 380 L 360 400 Q 340 350 320 320" fill="url(#jellabaCloth)" stroke="#D1D5DB" stroke-width="1"/>
+                    <!-- Hand -->
+                    <path d="M410 380 Q 420 420 400 430 C 390 435 375 430 370 420 L 365 400" fill="url(#skinBase)"/>
+                </g>
+
+                <!-- Central Embroidery (Sfifa) -->
+                <rect x="242" y="275" width="16" height="275" fill="#0D9488"/> <!-- Teal Base -->
+                <!-- Detailed Pattern on Sfifa -->
+                <path d="M250 275 L 250 550" stroke="url(#goldThread)" stroke-width="2" stroke-dasharray="4 4"/>
+                <path d="M244 275 L 244 550" stroke="rgba(0,0,0,0.1)" stroke-width="1"/>
+                <path d="M256 275 L 256 550" stroke="rgba(0,0,0,0.1)" stroke-width="1"/>
+
+                <!-- Neckline Detail -->
+                <path d="M220 268 Q 250 290 280 268" stroke="url(#goldThread)" stroke-width="4" fill="none"/>
+
+            </g> <!-- End Body -->
+
+            <!-- === HEAD GROUP === -->
+            <g class="anim-head">
+                
+                <!-- Neck -->
+                <rect x="225" y="220" width="50" height="50" rx="10" fill="url(#skinBase)"/>
+                <!-- Neck Shadow -->
+                <path d="M225 240 Q 250 250 275 240" fill="#000000" opacity="0.1"/>
+
+                <!-- Head Shape -->
+                <path d="M250 260 
+                         C 210 260 190 220 190 180 
+                         C 190 120 210 100 250 100 
+                         C 290 100 310 120 310 180 
+                         C 310 220 290 260 250 260 Z" 
+                      fill="url(#skinBase)"/>
+
+                <!-- Beard Shadow (Stubble) -->
+                <path d="M190 180 
+                         C 190 220 210 260 250 260 
+                         C 290 260 310 220 310 180
+                         Q 290 200 250 200
+                         Q 210 200 190 180 Z" 
+                      fill="#374151" opacity="0.1"/>
+
+                <!-- Ears -->
+                <path d="M190 180 C 180 180 180 210 192 210" fill="url(#skinBase)"/>
+                <path d="M310 180 C 320 180 320 210 308 210" fill="url(#skinBase)"/>
+
+                <!-- === FACE DETAILS === -->
+                
+                <!-- Cheeks -->
+                <circle cx="215" cy="200" r="15" fill="url(#cheekBlush)"/>
+                <circle cx="285" cy="200" r="15" fill="url(#cheekBlush)"/>
+
+                <!-- Nose -->
+                <path d="M250 180 L 245 205 Q 250 210 255 205 Z" fill="#C99E75"/>
+                <path d="M250 180 L 245 205 Q 250 210 255 205" stroke="#B08968" stroke-width="1" fill="none"/>
+
+                <!-- Mouth (Smile) -->
+                <path d="M225 225 Q 250 245 275 225" stroke="#A05A2C" stroke-width="3" fill="none" stroke-linecap="round"/>
+                <path d="M222 222 Q 225 228 228 222" stroke="#A05A2C" stroke-width="1.5" opacity="0.5"/> <!-- Dimple L -->
+                <path d="M272 222 Q 275 228 278 222" stroke="#A05A2C" stroke-width="1.5" opacity="0.5"/> <!-- Dimple R -->
+
+                <!-- Eyes Group -->
+                <g>
+                    <!-- Eyebrows -->
+                    <path d="M205 165 Q 220 155 235 168" stroke="#1F2937" stroke-width="4" stroke-linecap="round" fill="none"/>
+                    <path d="M265 168 Q 280 155 295 165" stroke="#1F2937" stroke-width="4" stroke-linecap="round" fill="none"/>
+
+                    <!-- Left Eye -->
+                    <g transform="translate(220, 180)" class="anim-blink">
+                        <ellipse cx="0" cy="0" rx="12" ry="8" fill="#FFFFFF"/> <!-- Sclera -->
+                        <circle cx="0" cy="0" r="5" fill="#4B5563"/> <!-- Iris -->
+                        <circle cx="0" cy="0" r="2.5" fill="#000000"/> <!-- Pupil -->
+                        <circle cx="2" cy="-2" r="1.5" fill="#FFFFFF" opacity="0.8"/> <!-- Highlight -->
+                    </g>
+
+                    <!-- Right Eye -->
+                    <g transform="translate(280, 180)" class="anim-blink">
+                        <ellipse cx="0" cy="0" rx="12" ry="8" fill="#FFFFFF"/>
+                        <circle cx="0" cy="0" r="5" fill="#4B5563"/>
+                        <circle cx="0" cy="0" r="2.5" fill="#000000"/>
+                        <circle cx="2" cy="-2" r="1.5" fill="#FFFFFF" opacity="0.8"/>
+                    </g>
+                </g>
+
+                <!-- === FEZ HAT (TARBOUCHE) === -->
+                <g transform="translate(0, -10)">
+                    <!-- Fez Shape (Truncated Cone) -->
+                    <path d="M215 110 L 220 60 Q 250 55 280 60 L 285 110 Q 250 125 215 110 Z" fill="url(#fezRed)"/>
+                    
+                    <!-- Top of Fez -->
+                    <ellipse cx="250" cy="60" rx="30" ry="8" fill="#7F1D1D"/>
+                    
+                    <!-- Fez Shadow/Gradient Overlay -->
+                    <path d="M215 110 L 220 60 Q 250 55 280 60 L 285 110 Q 250 125 215 110 Z" fill="url(#fezRed)" opacity="0.8"/>
+                    
+                    <!-- Tassel Pivot Group -->
+                    <g class="anim-tassel">
+                        <!-- Black String -->
+                        <path d="M250 60 Q 265 70 270 90" stroke="#111827" stroke-width="2" fill="none"/>
+                        <!-- Tassel Body -->
+                        <g transform="translate(270, 90)">
+                            <path d="M0 0 L -3 15 L 3 15 Z" fill="#111827"/>
+                            <!-- Tassel Fringes -->
+                            <line x1="0" y1="15" x2="-2" y2="25" stroke="#111827" stroke-width="1"/>
+                            <line x1="0" y1="15" x2="0" y2="28" stroke="#111827" stroke-width="1"/>
+                            <line x1="0" y1="15" x2="2" y2="25" stroke="#111827" stroke-width="1"/>
+                        </g>
+                    </g>
+                </g> <!-- End Fez -->
+
+            </g> <!-- End Head Group -->
+
+        </svg>
+    </div>
+</body>
+</html>
