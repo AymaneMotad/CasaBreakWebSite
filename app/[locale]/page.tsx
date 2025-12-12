@@ -157,7 +157,7 @@ export default function HomePage() {
                 {/* Full Tamazight Sentence */}
                 <div className="mb-3">
                   <p className="text-lg sm:text-xl text-[#00a346] font-bold" style={{ textShadow: '0 1px 3px rgba(0, 163, 70, 0.2)', direction: 'ltr' }}>
-                    ⵉⵏⵙⵉⵎⵏ ⴰⵏⵙⵓⵎ
+                    ⴰⵏⵙⵓⴼ ⵉⵙⵡⵏ
                   </p>
                 </div>
                 
@@ -165,8 +165,8 @@ export default function HomePage() {
                 <div className="flex flex-wrap items-center gap-x-4 gap-y-2 text-sm sm:text-base">
                   <span className="text-[#00a346] font-semibold" style={{ textShadow: '0 1px 3px rgba(0, 163, 70, 0.2)' }}>Bienvenue</span>
                   <span className="text-[#00a346] font-semibold" style={{ textShadow: '0 1px 3px rgba(0, 163, 70, 0.2)' }}>Bienvenidos</span>
-                  <span className="text-[#00a346] font-semibold" style={{ textShadow: '0 1px 3px rgba(0, 163, 70, 0.2)' }}>ⵉⵏⵙⵉⵎⵏ ⴰⵏⵙⵓⵎ</span>
                   <span className="text-[#00a346] font-semibold" style={{ textShadow: '0 1px 3px rgba(0, 163, 70, 0.2)' }}>مرحبا بكم</span>
+                  <span className="text-[#00a346] font-semibold" style={{ textShadow: '0 1px 3px rgba(0, 163, 70, 0.2)' }}>ⴰⵏⵙⵓⴼ ⵉⵙⵡⵏ</span>
                   <span className="text-[#00a346] font-semibold" style={{ textShadow: '0 1px 3px rgba(0, 163, 70, 0.2)' }}>Welcome</span>
                   <span className="text-[#00a346] font-semibold" style={{ textShadow: '0 1px 3px rgba(0, 163, 70, 0.2)' }}>Bem-vindos</span>
                 </div>
