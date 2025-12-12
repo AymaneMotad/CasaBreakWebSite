@@ -5,7 +5,7 @@ import { Footer } from "@/components/footer"
 import { Breadcrumb } from "@/components/breadcrumb"
 import { useTranslations, useLocale } from 'next-intl'
 import Image from "next/image"
-import { MapPin, Sparkles, ArrowRight, ShoppingBag, Coffee, Waves, Building2, History } from "lucide-react"
+import { MapPin, Sparkles, ArrowRight, ShoppingBag, Coffee, Waves, Building2, History, Train, Bus } from "lucide-react"
 
 export default function QuartiersPage() {
   const t = useTranslations('quartiers')
@@ -20,7 +20,12 @@ export default function QuartiersPage() {
       features: t("quartiers.maarif.features"),
       icon: ShoppingBag,
       color: "#00a346",
-      imageUrl: "https://yzgvfaxalzubsmmqmswx.supabase.co/storage/v1/object/public/casabreak/public_stuff/alpha-plus-3vGmCMgTdiA-unsplash.jpg"
+      imageUrl: "https://yzgvfaxalzubsmmqmswx.supabase.co/storage/v1/object/public/casabreak/public_stuff/alpha-plus-3vGmCMgTdiA-unsplash.jpg",
+      transport: {
+        tramway: ["T1 : Station Hassan 2"],
+        busway: [],
+        bus: ["L067", "L038", "L001"]
+      }
     },
     {
       id: "gauthier",
@@ -30,7 +35,12 @@ export default function QuartiersPage() {
       features: t("quartiers.gauthier.features"),
       icon: Coffee,
       color: "#0066b2",
-      imageUrl: "https://yzgvfaxalzubsmmqmswx.supabase.co/storage/v1/object/public/casabreak/public_stuff/gauthier.jpeg"
+      imageUrl: "https://yzgvfaxalzubsmmqmswx.supabase.co/storage/v1/object/public/casabreak/public_stuff/gauthier.jpeg",
+      transport: {
+        tramway: [],
+        busway: [],
+        bus: ["L067", "L060", "L050", "L038"]
+      }
     },
     {
       id: "racine",
@@ -40,7 +50,12 @@ export default function QuartiersPage() {
       features: t("quartiers.racine.features"),
       icon: Building2,
       color: "#c10000",
-      imageUrl: "https://yzgvfaxalzubsmmqmswx.supabase.co/storage/v1/object/public/casabreak/public_stuff/racine.jpeg"
+      imageUrl: "https://yzgvfaxalzubsmmqmswx.supabase.co/storage/v1/object/public/casabreak/public_stuff/racine.jpeg",
+      transport: {
+        tramway: [],
+        busway: [],
+        bus: ["L038", "L050", "L060", "L067", "L084", "L09E"]
+      }
     },
     {
       id: "aindiab",
@@ -50,7 +65,12 @@ export default function QuartiersPage() {
       features: t("quartiers.aindiab.features"),
       icon: Waves,
       color: "#00a346",
-      imageUrl: "https://yzgvfaxalzubsmmqmswx.supabase.co/storage/v1/object/public/casabreak/public_stuff/ain%20diab%20plage%201.jpeg"
+      imageUrl: "https://yzgvfaxalzubsmmqmswx.supabase.co/storage/v1/object/public/casabreak/public_stuff/ain%20diab%20plage%201.jpeg",
+      transport: {
+        tramway: ["T2 : Station Ain Diab Terminus"],
+        busway: [],
+        bus: ["L005"]
+      }
     },
     {
       id: "medina",
@@ -60,7 +80,12 @@ export default function QuartiersPage() {
       features: t("quartiers.medina.features"),
       icon: History,
       color: "#0066b2",
-      imageUrl: "https://yzgvfaxalzubsmmqmswx.supabase.co/storage/v1/object/public/casabreak/public_stuff/ancienne%20medina.jpeg"
+      imageUrl: "https://yzgvfaxalzubsmmqmswx.supabase.co/storage/v1/object/public/casabreak/public_stuff/ancienne%20medina.jpeg",
+      transport: {
+        tramway: ["T1 : Station des Nations unies"],
+        busway: [],
+        bus: ["L023", "L006", "L007", "L019", "L022", "L040", "L056", "L120", "L011", "L055", "L043", "L062", "L139", "L033", "L082"]
+      }
     },
     {
       id: "cfc",
@@ -70,7 +95,12 @@ export default function QuartiersPage() {
       features: t("quartiers.cfc.features"),
       icon: Building2,
       color: "#c10000",
-      imageUrl: "https://yzgvfaxalzubsmmqmswx.supabase.co/storage/v1/object/public/casabreak/public_stuff/cfc.jpeg"
+      imageUrl: "https://yzgvfaxalzubsmmqmswx.supabase.co/storage/v1/object/public/casabreak/public_stuff/cfc.jpeg",
+      transport: {
+        tramway: ["T2 : Station Place Financière"],
+        busway: ["BW2 : Station Aéropostale"],
+        bus: ["L109", "L072", "L306", "L050", "L007"]
+      }
     },
   ]
 
@@ -171,6 +201,61 @@ export default function QuartiersPage() {
                         <p className="text-sm text-gray-500 mb-2 font-medium">Ce qu'on y trouve :</p>
                         <p className="text-sm text-gray-600 leading-relaxed">{quartier.features}</p>
                       </div>
+                      
+                      {/* Transportation Info */}
+                      {(quartier.transport.tramway.length > 0 || quartier.transport.busway.length > 0 || quartier.transport.bus.length > 0) && (
+                        <div className="pt-4 space-y-3">
+                          <p className="text-sm font-semibold text-gray-700 mb-3">Comment s'y rendre :</p>
+                          
+                          {quartier.transport.tramway.length > 0 && (
+                            <div className="flex items-start gap-3 p-3 rounded-lg bg-white/60 backdrop-blur-sm border border-gray-200/50">
+                              <Train className="w-5 h-5 mt-0.5 flex-shrink-0 text-[#00a346]" />
+                              <div className="flex-1">
+                                <p className="text-xs font-semibold text-gray-700 mb-1">Tramway</p>
+                                <div className="flex flex-wrap gap-2">
+                                  {quartier.transport.tramway.map((line, idx) => (
+                                    <span key={idx} className="text-xs text-gray-600 bg-gray-100 px-2 py-1 rounded">
+                                      {line}
+                                    </span>
+                                  ))}
+                                </div>
+                              </div>
+                            </div>
+                          )}
+                          
+                          {quartier.transport.busway.length > 0 && (
+                            <div className="flex items-start gap-3 p-3 rounded-lg bg-white/60 backdrop-blur-sm border border-gray-200/50">
+                              <Bus className="w-5 h-5 mt-0.5 flex-shrink-0 text-[#0066b2]" />
+                              <div className="flex-1">
+                                <p className="text-xs font-semibold text-gray-700 mb-1">Busway</p>
+                                <div className="flex flex-wrap gap-2">
+                                  {quartier.transport.busway.map((line, idx) => (
+                                    <span key={idx} className="text-xs text-gray-600 bg-gray-100 px-2 py-1 rounded">
+                                      {line}
+                                    </span>
+                                  ))}
+                                </div>
+                              </div>
+                            </div>
+                          )}
+                          
+                          {quartier.transport.bus.length > 0 && (
+                            <div className="flex items-start gap-3 p-3 rounded-lg bg-white/60 backdrop-blur-sm border border-gray-200/50">
+                              <Bus className="w-5 h-5 mt-0.5 flex-shrink-0 text-[#0066b2]" />
+                              <div className="flex-1">
+                                <p className="text-xs font-semibold text-gray-700 mb-1">Bus</p>
+                                <div className="flex flex-wrap gap-2">
+                                  {quartier.transport.bus.map((line, idx) => (
+                                    <span key={idx} className="text-xs text-gray-600 bg-gray-100 px-2 py-1 rounded">
+                                      {line}
+                                    </span>
+                                  ))}
+                                </div>
+                              </div>
+                            </div>
+                          )}
+                        </div>
+                      )}
                     </div>
                     
                     {/* Image Side */}

@@ -4,7 +4,7 @@ import { Navigation } from "@/components/navigation"
 import { Footer } from "@/components/footer"
 import { Breadcrumb } from "@/components/breadcrumb"
 import { useTranslations, useLocale } from 'next-intl'
-import { Waves, Sparkles, ArrowRight, Umbrella, Sunset, TreePine } from "lucide-react"
+import { Waves, Sparkles, ArrowRight, Umbrella, Sunset, TreePine, Train, Bus } from "lucide-react"
 
 export default function MerPlagesPage() {
   const t = useTranslations('merPlages')
@@ -16,7 +16,12 @@ export default function MerPlagesPage() {
       title: t("sections.plageAinDiab.title"),
       description: t("sections.plageAinDiab.description"),
       icon: Waves,
-      color: "#00a346"
+      color: "#00a346",
+      transport: {
+        tramway: ["T2 : Station Ain Diab Terminus"],
+        busway: [],
+        bus: ["L005"]
+      }
     },
     {
       id: "beachClubs",
@@ -24,7 +29,12 @@ export default function MerPlagesPage() {
       description: t("sections.beachClubs.description"),
       addresses: t("sections.beachClubs.addresses"),
       icon: Umbrella,
-      color: "#0066b2"
+      color: "#0066b2",
+      transport: {
+        tramway: [],
+        busway: [],
+        bus: ["L005"]
+      }
     },
     {
       id: "surfSchools",
@@ -32,28 +42,48 @@ export default function MerPlagesPage() {
       description: t("sections.surfSchools.description"),
       schools: t("sections.surfSchools.schools"),
       icon: Waves,
-      color: "#c10000"
+      color: "#c10000",
+      transport: {
+        tramway: [],
+        busway: [],
+        bus: ["L005"]
+      }
     },
     {
       id: "corniche",
       title: t("sections.corniche.title"),
       description: t("sections.corniche.description"),
       icon: Waves,
-      color: "#00a346"
+      color: "#00a346",
+      transport: {
+        tramway: ["T2 : Station Ain Diab Terminus"],
+        busway: [],
+        bus: ["L005"]
+      }
     },
     {
       id: "parcs",
       title: t("sections.parcs.title"),
       description: t("sections.parcs.description"),
       icon: TreePine,
-      color: "#0066b2"
+      color: "#0066b2",
+      transport: {
+        tramway: [],
+        busway: [],
+        bus: ["L005"]
+      }
     },
     {
       id: "sunsets",
       title: t("sections.sunsets.title"),
       description: t("sections.sunsets.description"),
       icon: Sunset,
-      color: "#c10000"
+      color: "#c10000",
+      transport: {
+        tramway: ["T2 : Station Ain Diab Terminus"],
+        busway: [],
+        bus: ["L005"]
+      }
     },
   ]
 
@@ -149,6 +179,61 @@ export default function MerPlagesPage() {
                       <p className="text-sm text-gray-600">
                         {section.addresses || section.schools}
                       </p>
+                    </div>
+                  )}
+                  
+                  {/* Transportation Info */}
+                  {(section.transport.tramway.length > 0 || section.transport.busway.length > 0 || section.transport.bus.length > 0) && (
+                    <div className="pt-4 border-t border-gray-200 space-y-2">
+                      <p className="text-sm font-semibold text-gray-700 mb-2">Comment s'y rendre :</p>
+                      
+                      {section.transport.tramway.length > 0 && (
+                        <div className="flex items-start gap-2">
+                          <Train className="w-4 h-4 mt-0.5 flex-shrink-0 text-[#00a346]" />
+                          <div className="flex-1">
+                            <p className="text-xs font-semibold text-gray-700 mb-1">Tramway</p>
+                            <div className="flex flex-wrap gap-1.5">
+                              {section.transport.tramway.map((line, idx) => (
+                                <span key={idx} className="text-xs text-gray-600 bg-gray-100 px-2 py-0.5 rounded">
+                                  {line}
+                                </span>
+                              ))}
+                            </div>
+                          </div>
+                        </div>
+                      )}
+                      
+                      {section.transport.busway.length > 0 && (
+                        <div className="flex items-start gap-2">
+                          <Bus className="w-4 h-4 mt-0.5 flex-shrink-0 text-[#0066b2]" />
+                          <div className="flex-1">
+                            <p className="text-xs font-semibold text-gray-700 mb-1">Busway</p>
+                            <div className="flex flex-wrap gap-1.5">
+                              {section.transport.busway.map((line, idx) => (
+                                <span key={idx} className="text-xs text-gray-600 bg-gray-100 px-2 py-0.5 rounded">
+                                  {line}
+                                </span>
+                              ))}
+                            </div>
+                          </div>
+                        </div>
+                      )}
+                      
+                      {section.transport.bus.length > 0 && (
+                        <div className="flex items-start gap-2">
+                          <Bus className="w-4 h-4 mt-0.5 flex-shrink-0 text-[#0066b2]" />
+                          <div className="flex-1">
+                            <p className="text-xs font-semibold text-gray-700 mb-1">Bus</p>
+                            <div className="flex flex-wrap gap-1.5">
+                              {section.transport.bus.map((line, idx) => (
+                                <span key={idx} className="text-xs text-gray-600 bg-gray-100 px-2 py-0.5 rounded">
+                                  {line}
+                                </span>
+                              ))}
+                            </div>
+                          </div>
+                        </div>
+                      )}
                     </div>
                   )}
                 </div>

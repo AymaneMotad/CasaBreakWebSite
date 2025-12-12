@@ -5,7 +5,7 @@ import { Footer } from "@/components/footer"
 import { Breadcrumb } from "@/components/breadcrumb"
 import { useTranslations, useLocale } from 'next-intl'
 import Image from "next/image"
-import { Building, MapPin, Sparkles, ArrowRight } from "lucide-react"
+import { Building, MapPin, Sparkles, ArrowRight, Train, Bus } from "lucide-react"
 
 export default function MonumentsPage() {
   const t = useTranslations('monuments')
@@ -20,7 +20,12 @@ export default function MonumentsPage() {
         "https://upload.wikimedia.org/wikipedia/fr/f/fc/Mosqu%C3%A9e_Hassan_II_-_2016-04-13.jpg",
         "https://dynamic-media-cdn.tripadvisor.com/media/photo-o/05/4d/c3/07/ii.jpg?h=500&s=1&w=900"
       ],
-      color: "#00a346"
+      color: "#00a346",
+      transport: {
+        tramway: [],
+        busway: [],
+        bus: ["L005", "L011", "L043", "L055", "L056", "L060", "L062", "L067", "L139"]
+      }
     },
     {
       id: "habous",
@@ -30,7 +35,12 @@ export default function MonumentsPage() {
         "https://stayhere.ma/wp-content/uploads/2024/04/Quartier-Habous.jpeg",
         "https://www.casablancacity.ma/couvertures/article/VHJxttdLS5Apk1JoMXG8q9LO05rEv6MPf2NynFhl.jpeg"
       ],
-      color: "#0066b2"
+      color: "#0066b2",
+      transport: {
+        tramway: ["T3 : Station habous"],
+        busway: [],
+        bus: ["L006", "L040", "L056"]
+      }
     },
     {
       id: "medina",
@@ -39,7 +49,12 @@ export default function MonumentsPage() {
       imageUrls: [
         "https://yzgvfaxalzubsmmqmswx.supabase.co/storage/v1/object/public/casabreak/public_stuff/ancienne%20medina.jpeg"
       ],
-      color: "#c10000"
+      color: "#c10000",
+      transport: {
+        tramway: ["T1 : Station des nations unies", "T3 : Station Casaport"],
+        busway: [],
+        bus: ["L6", "L7", "L19", "L22", "L40", "L56", "L23", "L120", "L11", "L55", "L43", "L62", "L139", "L33", "L82"]
+      }
     },
     {
       id: "artdeco",
@@ -49,7 +64,12 @@ export default function MonumentsPage() {
         "https://moroccotravelblog.com/wp-content/uploads/2015/05/Art-Deco-Architecture-Casablanca-Morocco-Travel-Blog.png",
         "https://moroccotravelblog.com/wp-content/uploads/2015/05/Art-Deco-Building-Casablanca-Morocco-Travel-Blog-435x435.png"
       ],
-      color: "#00a346"
+      color: "#00a346",
+      transport: {
+        tramway: ["T1 : Station Marché central / station des nations unies"],
+        busway: [],
+        bus: []
+      }
     },
     {
       id: "sacrecoeur",
@@ -59,7 +79,12 @@ export default function MonumentsPage() {
         "https://upload.wikimedia.org/wikipedia/en/f/f1/Cath%C3%A9drale_Casablanca.jpg",
         "https://aemagazine.ma/wp-content/uploads/Eglise-du-Sacre-Coeur-4-scaled.jpg"
       ],
-      color: "#0066b2"
+      color: "#0066b2",
+      transport: {
+        tramway: ["T1 : Station place Mohammed V", "T4 : Station parc de la ligue arabe"],
+        busway: [],
+        bus: ["L056", "L043", "L139", "L001", "L082", "L033", "L120", "L062"]
+      }
     },
     {
       id: "slaoui",
@@ -68,7 +93,12 @@ export default function MonumentsPage() {
       imageUrls: [
         "https://yzgvfaxalzubsmmqmswx.supabase.co/storage/v1/object/public/casabreak/public_stuff/musee.jpg"
       ],
-      color: "#00a346"
+      color: "#00a346",
+      transport: {
+        tramway: ["T1 : Station place Mohammed V", "T4 : Station parc de la ligue arabe"],
+        busway: [],
+        bus: []
+      }
     },
     {
       id: "mahkama",
@@ -77,7 +107,12 @@ export default function MonumentsPage() {
       imageUrls: [
         "https://yzgvfaxalzubsmmqmswx.supabase.co/storage/v1/object/public/casabreak/public_stuff/mahkama%20el%20pacha.jpeg"
       ],
-      color: "#c10000"
+      color: "#c10000",
+      transport: {
+        tramway: ["T3 : Station habous"],
+        busway: [],
+        bus: ["L051", "L056", "L006", "L060", "L063"]
+      }
     },
     {
       id: "abattoirs",
@@ -86,7 +121,12 @@ export default function MonumentsPage() {
       imageUrls: [
         "https://yzgvfaxalzubsmmqmswx.supabase.co/storage/v1/object/public/casabreak/public_stuff/les%20Anciens%20abattoirs%20.png"
       ],
-      color: "#0066b2"
+      color: "#0066b2",
+      transport: {
+        tramway: ["T1 : Station des anciens abattoirs"],
+        busway: [],
+        bus: ["L001", "L005", "L006", "L007", "L011", "L013", "L019", "L020"]
+      }
     },
     {
       id: "judaisme",
@@ -95,7 +135,12 @@ export default function MonumentsPage() {
       imageUrls: [
         "https://yzgvfaxalzubsmmqmswx.supabase.co/storage/v1/object/public/casabreak/public_stuff/Musee%20du%20Judaisme%20Marocain.jpg"
       ],
-      color: "#00a346"
+      color: "#00a346",
+      transport: {
+        tramway: ["T1 : Station Gare Oasis (13 min de marche)"],
+        busway: [],
+        bus: ["L030", "L040"]
+      }
     },
     {
       id: "rialto",
@@ -104,7 +149,12 @@ export default function MonumentsPage() {
       imageUrls: [
         "https://yzgvfaxalzubsmmqmswx.supabase.co/storage/v1/object/public/casabreak/public_stuff/cinema%20realto.png"
       ],
-      color: "#c10000"
+      color: "#c10000",
+      transport: {
+        tramway: ["T1 : Station marché central"],
+        busway: [],
+        bus: ["L023"]
+      }
     },
     {
       id: "sqala",
@@ -113,7 +163,12 @@ export default function MonumentsPage() {
       imageUrls: [
         "https://yzgvfaxalzubsmmqmswx.supabase.co/storage/v1/object/public/casabreak/public_stuff/Bastion%20La%20Sqala.jpg"
       ],
-      color: "#0066b2"
+      color: "#0066b2",
+      transport: {
+        tramway: ["T3 : Station casaport"],
+        busway: [],
+        bus: ["L005"]
+      }
     },
   ]
 
@@ -207,6 +262,61 @@ export default function MonumentsPage() {
                     <p className="text-base lg:text-lg text-gray-600 leading-relaxed whitespace-pre-line">
                       {monument.description}
                     </p>
+                    
+                    {/* Transportation Info */}
+                    {(monument.transport.tramway.length > 0 || monument.transport.busway.length > 0 || monument.transport.bus.length > 0) && (
+                      <div className="pt-4 space-y-3">
+                        <p className="text-sm font-semibold text-gray-700 mb-3">Comment s'y rendre :</p>
+                        
+                        {monument.transport.tramway.length > 0 && (
+                          <div className="flex items-start gap-3 p-3 rounded-lg bg-white/60 backdrop-blur-sm border border-gray-200/50">
+                            <Train className="w-5 h-5 mt-0.5 flex-shrink-0 text-[#00a346]" />
+                            <div className="flex-1">
+                              <p className="text-xs font-semibold text-gray-700 mb-1">Tramway</p>
+                              <div className="flex flex-wrap gap-2">
+                                {monument.transport.tramway.map((line, idx) => (
+                                  <span key={idx} className="text-xs text-gray-600 bg-gray-100 px-2 py-1 rounded">
+                                    {line}
+                                  </span>
+                                ))}
+                              </div>
+                            </div>
+                          </div>
+                        )}
+                        
+                        {monument.transport.busway.length > 0 && (
+                          <div className="flex items-start gap-3 p-3 rounded-lg bg-white/60 backdrop-blur-sm border border-gray-200/50">
+                            <Bus className="w-5 h-5 mt-0.5 flex-shrink-0 text-[#0066b2]" />
+                            <div className="flex-1">
+                              <p className="text-xs font-semibold text-gray-700 mb-1">Busway</p>
+                              <div className="flex flex-wrap gap-2">
+                                {monument.transport.busway.map((line, idx) => (
+                                  <span key={idx} className="text-xs text-gray-600 bg-gray-100 px-2 py-1 rounded">
+                                    {line}
+                                  </span>
+                                ))}
+                              </div>
+                            </div>
+                          </div>
+                        )}
+                        
+                        {monument.transport.bus.length > 0 && (
+                          <div className="flex items-start gap-3 p-3 rounded-lg bg-white/60 backdrop-blur-sm border border-gray-200/50">
+                            <Bus className="w-5 h-5 mt-0.5 flex-shrink-0 text-[#0066b2]" />
+                            <div className="flex-1">
+                              <p className="text-xs font-semibold text-gray-700 mb-1">Bus</p>
+                              <div className="flex flex-wrap gap-2">
+                                {monument.transport.bus.map((line, idx) => (
+                                  <span key={idx} className="text-xs text-gray-600 bg-gray-100 px-2 py-1 rounded">
+                                    {line}
+                                  </span>
+                                ))}
+                              </div>
+                            </div>
+                          </div>
+                        )}
+                      </div>
+                    )}
                   </div>
                   
                   {/* Image Side */}
