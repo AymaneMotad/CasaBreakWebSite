@@ -26,9 +26,7 @@ export default function AeroportCentreVillePage() {
       details: [
         "Gare à l'aéroport Mohammed V",
         "Liaison directe vers Casa-Port (centre-ville)",
-        "Durée : environ 30 minutes",
-        "Départs fréquents toutes les heures",
-        "Confortable et ponctuel"
+        "Départs fréquents toutes les heures"
       ],
       pricing: [
         "2ème classe : 60 dirhams",
@@ -64,7 +62,7 @@ export default function AeroportCentreVillePage() {
       icon: Car,
       title: "Taxis",
       color: "#c10000",
-      description: "Transport pour plus de confort et flexibilité",
+      description: "Transport pour plus de confort et flexibilité. Partagé avec d'autres passagers. Le prix est fixe par destination, veuillez consulter le panneau des tarifs affiché à l'aéroport.",
       types: [
         {
           name: "Grands Taxis",

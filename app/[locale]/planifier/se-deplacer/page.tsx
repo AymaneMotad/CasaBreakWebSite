@@ -23,14 +23,71 @@ export default function SeDeplacerPage() {
       title: "Tramway (Casatramway)",
       color: "#00a346",
       description: "Réseau moderne et efficace pour se déplacer dans Casablanca",
-      features: [
-        "2 lignes en service couvrant la ville",
-        "151 stations au total",
-        "Fréquence : toutes les 8 minutes",
-        "Ticket unique : 6 dirhams",
-        "Valable sur tout le réseau",
-        "Accessible aux personnes à mobilité réduite"
+      tramwayLines: [
+        {
+          name: "T1",
+          route: "Lissasfa → Sidi Moumen",
+          schedules: {
+            first: "Premier départ de sidi moumen: 05h30",
+            last: "Dernier départ de sidi moumen : 22h30",
+            firstReverse: "Premier départ de Lissasfa : 06H00",
+            lastReverse: "Dernier départ de lissasfa : 22h30"
+          }
+        },
+        {
+          name: "T2",
+          route: "Sidi Bernoussi → Ain Diab Plage",
+          schedules: {
+            first: "Premier départ de sidi bernoussi: 05h30",
+            last: "Dernier départ de sidi bernoussi : 22h30",
+            firstReverse: "Premier départ de Ain diab : 06H00",
+            lastReverse: "Dernier départ de Ain diab : 22h30"
+          }
+        },
+        {
+          name: "T3",
+          route: "Casa Port → Hay Al Wahda",
+          schedules: {
+            first: "Premier départ de Hay Alwahda: 05h30",
+            last: "Dernier départ de Hay Alwahda : 22h30",
+            firstReverse: "Premier départ de Casaport : 06H00",
+            lastReverse: "Dernier départ de Casaport : 22h30"
+          }
+        },
+        {
+          name: "T4",
+          route: "Mohammed Erradi → Parc de la Ligue Arabe",
+          schedules: {
+            first: "Premier départ de Mohammed Erradi: 05h30",
+            last: "Dernier départ de Mohammed Erradi: 22h30",
+            firstReverse: "Premier départ de Parc de la ligue arabe:06H00",
+            lastReverse: "Dernier départ de Parc de la ligue arabe:22h30"
+          }
+        }
       ],
+      buswayLines: [
+        {
+          name: "BW1",
+          route: "Omar Al Khayam Terminus → Salmia 2 Terminus",
+          schedules: {
+            first: "Premier départ de Salmia 2 : 05h30",
+            last: "Dernier départ de Salmia 2 : 22h00",
+            firstReverse: "Premier départ de Omar Alkhayam : 06H00",
+            lastReverse: "Dernier départ de Omar Alkhayam : 22h30"
+          }
+        },
+        {
+          name: "BW2",
+          route: "Ouled Azzouz Terminus → Oulmes Terminus",
+          schedules: {
+            first: "Premier départ de Ouled Azzouz : 05h30",
+            last: "Dernier départ de Ouled Azzouz : 22h00",
+            firstReverse: "Premier départ de Oulmes : 06H00",
+            lastReverse: "Dernier départ de Oulmes : 22h30"
+          }
+        }
+      ],
+      networkMapLink: "https://www.casatramway.ma/se-deplacer/carte-reseau",
       contact: {
         phone: "+212 522 99 83 83",
         website: "www.casatramway.ma",
@@ -59,20 +116,11 @@ export default function SeDeplacerPage() {
         "Accessible aux personnes à mobilité réduite",
         "Flotte moderne et confortable"
       ],
-      pricing: [
-        "5 dirhams : trajets urbains",
-        "6 dirhams : trajets < 30 km",
-        "8 dirhams : trajets > 30 km"
-      ],
+      networkPlanLink: "https://www.casabus.ma/roulez-avec-nous/plan-du-reseau/",
       contact: {
         phone: "+212 520 55 20 55",
         website: "www.casabus.ma",
         hours: "7j/7 : 7h-21h"
-      },
-      stats: {
-        passengers: "70 millions (2021)",
-        fleet: "610 bus",
-        distance: "+34 millions de km"
       }
     },
     {
@@ -167,63 +215,119 @@ export default function SeDeplacerPage() {
                 {/* Content */}
                 <div className="p-8">
                   <div className="grid md:grid-cols-2 gap-8">
-                    {/* Features */}
+                    {/* Tramway/Busway Lines or Features */}
                     <div>
-                      <h3 className="text-xl font-black text-[#1a1a1a] mb-4 flex items-center gap-2">
-                        <CheckCircle className="w-5 h-5" style={{ color: option.color }} />
-                        Caractéristiques
-                      </h3>
-                      <ul className="space-y-3">
-                        {option.features?.map((feature, j) => (
-                          <li key={j} className="flex items-start gap-3 text-gray-700">
-                            <div className="w-2 h-2 rounded-full mt-2 flex-shrink-0" style={{ backgroundColor: option.color }} />
-                            <span>{feature}</span>
-                          </li>
-                        ))}
-                      </ul>
-
-                      {/* Pricing */}
-                      {option.pricing && (
-                        <div className="mt-6">
-                          <h4 className="text-lg font-bold text-[#1a1a1a] mb-3 flex items-center gap-2">
-                            <CreditCard className="w-5 h-5" style={{ color: option.color }} />
-                            Tarifs
-                          </h4>
-                          <ul className="space-y-2">
-                            {option.pricing.map((price, j) => (
-                              <li key={j} className="text-gray-700 flex items-center gap-2">
-                                <ArrowRight className="w-4 h-4" style={{ color: option.color }} />
-                                <span>{price}</span>
-                              </li>
+                      {/* Tramway Lines */}
+                      {option.tramwayLines && (
+                        <div className="mb-8">
+                          <h3 className="text-xl font-black text-[#1a1a1a] mb-4 flex items-center gap-2">
+                            <CheckCircle className="w-5 h-5" style={{ color: option.color }} />
+                            Lignes Tramway
+                          </h3>
+                          <div className="space-y-4">
+                            {option.tramwayLines.map((line, j) => (
+                              <div key={j} className="p-4 rounded-xl border-2" style={{ borderColor: `${option.color}30` }}>
+                                <div className="flex items-center gap-3 mb-3">
+                                  <div className="w-12 h-12 rounded-lg flex items-center justify-center font-black text-white text-lg" style={{ backgroundColor: option.color }}>
+                                    {line.name}
+                                  </div>
+                                  <div className="flex-1">
+                                    <div className="font-bold text-[#1a1a1a]">{line.name}</div>
+                                    <div className="text-sm text-gray-600">{line.route}</div>
+                                  </div>
+                                </div>
+                                <div className="space-y-2 text-sm text-gray-700">
+                                  <div>{line.schedules.first}</div>
+                                  <div>{line.schedules.last}</div>
+                                  <div>{line.schedules.firstReverse}</div>
+                                  <div>{line.schedules.lastReverse}</div>
+                                </div>
+                              </div>
                             ))}
-                          </ul>
+                          </div>
                         </div>
                       )}
 
-                      {/* Stats */}
-                      {option.stats && (
-                        <div className="mt-6 p-4 rounded-xl bg-gray-50">
-                          <h4 className="text-sm font-bold text-gray-500 mb-2">Statistiques 2021</h4>
-                          <div className="grid grid-cols-3 gap-4 text-center">
-                            <div>
-                              <div className="text-2xl font-black" style={{ color: option.color }}>
-                                {option.stats.passengers.split(' ')[0]}
+                      {/* Busway Lines */}
+                      {option.buswayLines && (
+                        <div className="mb-8">
+                          <h3 className="text-xl font-black text-[#1a1a1a] mb-4 flex items-center gap-2">
+                            <CheckCircle className="w-5 h-5" style={{ color: option.color }} />
+                            Lignes Busway
+                          </h3>
+                          <div className="space-y-4">
+                            {option.buswayLines.map((line, j) => (
+                              <div key={j} className="p-4 rounded-xl border-2" style={{ borderColor: `${option.color}30` }}>
+                                <div className="flex items-center gap-3 mb-3">
+                                  <div className="w-12 h-12 rounded-lg flex items-center justify-center font-black text-white text-lg" style={{ backgroundColor: option.color }}>
+                                    {line.name}
+                                  </div>
+                                  <div className="flex-1">
+                                    <div className="font-bold text-[#1a1a1a]">{line.name}</div>
+                                    <div className="text-sm text-gray-600">{line.route}</div>
+                                  </div>
+                                </div>
+                                <div className="space-y-2 text-sm text-gray-700">
+                                  <div>{line.schedules.first}</div>
+                                  <div>{line.schedules.last}</div>
+                                  <div>{line.schedules.firstReverse}</div>
+                                  <div>{line.schedules.lastReverse}</div>
+                                </div>
                               </div>
-                              <div className="text-xs text-gray-600">Passagers</div>
-                            </div>
-                            <div>
-                              <div className="text-2xl font-black" style={{ color: option.color }}>
-                                {option.stats.fleet.split(' ')[0]}
-                              </div>
-                              <div className="text-xs text-gray-600">Bus</div>
-                            </div>
-                            <div>
-                              <div className="text-2xl font-black" style={{ color: option.color }}>
-                                {option.stats.distance.split(' ')[0]}
-                              </div>
-                              <div className="text-xs text-gray-600">Km parcourus</div>
-                            </div>
+                            ))}
                           </div>
+                        </div>
+                      )}
+
+                      {/* Network Map Link for Tramway */}
+                      {option.networkMapLink && (
+                        <div className="mt-6">
+                          <a
+                            href={option.networkMapLink}
+                            target="_blank"
+                            rel="noopener noreferrer"
+                            className="inline-flex items-center gap-2 px-4 py-3 bg-white border-2 rounded-xl hover:shadow-lg transition-all font-bold"
+                            style={{ borderColor: option.color, color: option.color }}
+                          >
+                            <MapPin className="w-5 h-5" />
+                            La carte du réseau tramway et busway
+                            <ArrowRight className="w-4 h-4" />
+                          </a>
+                        </div>
+                      )}
+
+                      {/* Features (for Bus) */}
+                      {option.features && !option.tramwayLines && (
+                        <>
+                          <h3 className="text-xl font-black text-[#1a1a1a] mb-4 flex items-center gap-2">
+                            <CheckCircle className="w-5 h-5" style={{ color: option.color }} />
+                            Caractéristiques
+                          </h3>
+                          <ul className="space-y-3">
+                            {option.features.map((feature, j) => (
+                              <li key={j} className="flex items-start gap-3 text-gray-700">
+                                <div className="w-2 h-2 rounded-full mt-2 flex-shrink-0" style={{ backgroundColor: option.color }} />
+                                <span>{feature}</span>
+                              </li>
+                            ))}
+                          </ul>
+                        </>
+                      )}
+
+                      {/* Network Plan Link for Bus */}
+                      {option.networkPlanLink && (
+                        <div className="mt-6">
+                          <a
+                            href={option.networkPlanLink}
+                            target="_blank"
+                            rel="noopener noreferrer"
+                            className="inline-flex items-center gap-2 px-4 py-3 bg-white border-2 rounded-xl hover:shadow-lg transition-all font-bold"
+                            style={{ borderColor: option.color, color: option.color }}
+                          >
+                            <MapPin className="w-5 h-5" />
+                            Plan du réseau bus
+                            <ArrowRight className="w-4 h-4" />
+                          </a>
                         </div>
                       )}
                     </div>
