@@ -13,6 +13,58 @@ function MascotAvatar({ size = 72, className = "" }: { size?: number; className?
   return (
     <svg width={size} height={size} viewBox="0 0 500 600" fill="none" xmlns="http://www.w3.org/2000/svg" className={className} style={{ width: '100%', height: '100%' }}>
       <defs>
+        <style>{`
+          @keyframes mascot-breathe {
+            0%, 100% { transform: scaleY(1); }
+            50% { transform: scaleY(1.015); }
+          }
+          @keyframes mascot-headFloat {
+            0%, 100% { transform: rotate(0deg) translateY(0px); }
+            25% { transform: rotate(2deg) translateY(-2px); }
+            50% { transform: rotate(0deg) translateY(-1px); }
+            75% { transform: rotate(-2deg) translateY(-2px); }
+          }
+          @keyframes mascot-blink {
+            0%, 96%, 100% { transform: scaleY(1); }
+            98% { transform: scaleY(0.1); }
+          }
+          @keyframes mascot-tasselSwing {
+            0%, 100% { transform: rotate(-8deg); }
+            50% { transform: rotate(8deg); }
+          }
+          @keyframes mascot-waveLeft {
+            0%, 100% { transform: translateY(0) rotate(0deg); }
+            50% { transform: translateY(-4px) rotate(3deg); }
+          }
+          @keyframes mascot-waveRight {
+            0%, 100% { transform: translateY(0) rotate(0deg); }
+            50% { transform: translateY(-3px) rotate(-2deg); }
+          }
+          .anim-breathe {
+            animation: mascot-breathe 4s ease-in-out infinite;
+            transform-origin: 250px 550px;
+          }
+          .anim-head {
+            animation: mascot-headFloat 5s ease-in-out infinite;
+            transform-origin: 250px 250px;
+          }
+          .anim-blink {
+            animation: mascot-blink 3s infinite;
+            transform-origin: center;
+          }
+          .anim-tassel {
+            animation: mascot-tasselSwing 2.5s ease-in-out infinite;
+            transform-origin: 250px 60px;
+          }
+          .anim-hand-left {
+            animation: mascot-waveLeft 4s ease-in-out infinite;
+            transform-origin: 155px 265px;
+          }
+          .anim-hand-right {
+            animation: mascot-waveRight 4.5s ease-in-out infinite;
+            transform-origin: 345px 265px;
+          }
+        `}</style>
         <linearGradient id={`${uniqueId}-skinBase`} x1="0" y1="0" x2="1" y2="1">
           <stop offset="0%" stopColor="#EBC8A5"/>
           <stop offset="100%" stopColor="#C99E75"/>
@@ -76,13 +128,13 @@ function MascotAvatar({ size = 72, className = "" }: { size?: number; className?
                 <g>
                   <path d="M205 165 Q 220 155 235 168" stroke="#1F2937" strokeWidth="4" strokeLinecap="round" fill="none"/>
                   <path d="M265 168 Q 280 155 295 165" stroke="#1F2937" strokeWidth="4" strokeLinecap="round" fill="none"/>
-                  <g className="anim-blink">
+                  <g className="anim-blink" style={{ transformOrigin: '220px 180px' }}>
                     <ellipse cx="220" cy="180" rx="12" ry="8" fill="#FFFFFF"/>
                     <circle cx="220" cy="180" r="5" fill="#4B5563"/>
                     <circle cx="220" cy="180" r="2.5" fill="#000000"/>
                     <circle cx="222" cy="178" r="1.5" fill="#FFFFFF" opacity="0.8"/>
                   </g>
-                  <g className="anim-blink">
+                  <g className="anim-blink" style={{ transformOrigin: '280px 180px' }}>
                     <ellipse cx="280" cy="180" rx="12" ry="8" fill="#FFFFFF"/>
                     <circle cx="280" cy="180" r="5" fill="#4B5563"/>
                     <circle cx="280" cy="180" r="2.5" fill="#000000"/>
