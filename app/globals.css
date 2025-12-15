@@ -1007,9 +1007,10 @@ textarea:focus-visible {
 }
 
 @keyframes mascot-headFloat {
-  0%, 100% { transform: rotate(0deg) translateY(0); }
-  25% { transform: rotate(1.5deg) translateY(1px); }
-  75% { transform: rotate(-1.5deg) translateY(-1px); }
+  0%, 100% { transform: rotate(0deg) translateY(0px); }
+  25% { transform: rotate(2deg) translateY(-2px); }
+  50% { transform: rotate(0deg) translateY(-1px); }
+  75% { transform: rotate(-2deg) translateY(-2px); }
 }
 
 @keyframes mascot-blink {
@@ -1018,47 +1019,48 @@ textarea:focus-visible {
 }
 
 @keyframes mascot-tasselSwing {
-  0%, 100% { transform: rotate(-5deg); }
-  50% { transform: rotate(5deg); }
+  0%, 100% { transform: rotate(-8deg); }
+  50% { transform: rotate(8deg); }
 }
 
 @keyframes mascot-waveLeft {
-  0%, 100% { transform: translateY(0) rotate(0); }
-  50% { transform: translateY(-2px) rotate(1deg); }
+  0%, 100% { transform: translateY(0) rotate(0deg); }
+  50% { transform: translateY(-4px) rotate(3deg); }
 }
 
 @keyframes mascot-waveRight {
-  0%, 100% { transform: translateY(0); }
-  50% { transform: translateY(-1px); }
+  0%, 100% { transform: translateY(0) rotate(0deg); }
+  50% { transform: translateY(-3px) rotate(-2deg); }
 }
 
 .anim-breathe {
-  animation: mascot-breathe 5s ease-in-out infinite;
+  animation: mascot-breathe 4s ease-in-out infinite;
   transform-origin: bottom center;
 }
 
 .anim-head {
-  animation: mascot-headFloat 6s ease-in-out infinite;
+  animation: mascot-headFloat 5s ease-in-out infinite;
   transform-origin: 250px 250px;
 }
 
 .anim-blink {
-  animation: mascot-blink 4s infinite;
+  animation: mascot-blink 3s infinite;
+  transform-origin: center;
 }
 
 .anim-tassel {
-  animation: mascot-tasselSwing 3s ease-in-out infinite;
-  transform-origin: 275px 85px;
+  animation: mascot-tasselSwing 2.5s ease-in-out infinite;
+  transform-origin: 250px 60px;
 }
 
 .anim-hand-left {
-  animation: mascot-waveLeft 5s ease-in-out infinite;
-  transform-origin: 160px 350px;
+  animation: mascot-waveLeft 4s ease-in-out infinite;
+  transform-origin: 155px 265px;
 }
 
 .anim-hand-right {
-  animation: mascot-waveRight 6s ease-in-out infinite;
-  transform-origin: 340px 350px;
+  animation: mascot-waveRight 4.5s ease-in-out infinite;
+  transform-origin: 345px 265px;
 }
 
 /* Mobile Chat Keyboard Handling */

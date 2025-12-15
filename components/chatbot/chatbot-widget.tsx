@@ -73,22 +73,22 @@ function MascotAvatar({ size = 72, className = "" }: { size?: number; className?
         <path d="M225 225 Q 250 245 275 225" stroke="#A05A2C" strokeWidth="3" fill="none" strokeLinecap="round"/>
         <path d="M222 222 Q 225 228 228 222" stroke="#A05A2C" strokeWidth="1.5" opacity="0.5"/>
         <path d="M272 222 Q 275 228 278 222" stroke="#A05A2C" strokeWidth="1.5" opacity="0.5"/>
-        <g>
-          <path d="M205 165 Q 220 155 235 168" stroke="#1F2937" strokeWidth="4" strokeLinecap="round" fill="none"/>
-          <path d="M265 168 Q 280 155 295 165" stroke="#1F2937" strokeWidth="4" strokeLinecap="round" fill="none"/>
-          <g transform="translate(220, 180)" className="anim-blink">
-            <ellipse cx="0" cy="0" rx="12" ry="8" fill="#FFFFFF"/>
-            <circle cx="0" cy="0" r="5" fill="#4B5563"/>
-            <circle cx="0" cy="0" r="2.5" fill="#000000"/>
-            <circle cx="2" cy="-2" r="1.5" fill="#FFFFFF" opacity="0.8"/>
-          </g>
-          <g transform="translate(280, 180)" className="anim-blink">
-            <ellipse cx="0" cy="0" rx="12" ry="8" fill="#FFFFFF"/>
-            <circle cx="0" cy="0" r="5" fill="#4B5563"/>
-            <circle cx="0" cy="0" r="2.5" fill="#000000"/>
-            <circle cx="2" cy="-2" r="1.5" fill="#FFFFFF" opacity="0.8"/>
-          </g>
-        </g>
+                <g>
+                  <path d="M205 165 Q 220 155 235 168" stroke="#1F2937" strokeWidth="4" strokeLinecap="round" fill="none"/>
+                  <path d="M265 168 Q 280 155 295 165" stroke="#1F2937" strokeWidth="4" strokeLinecap="round" fill="none"/>
+                  <g className="anim-blink">
+                    <ellipse cx="220" cy="180" rx="12" ry="8" fill="#FFFFFF"/>
+                    <circle cx="220" cy="180" r="5" fill="#4B5563"/>
+                    <circle cx="220" cy="180" r="2.5" fill="#000000"/>
+                    <circle cx="222" cy="178" r="1.5" fill="#FFFFFF" opacity="0.8"/>
+                  </g>
+                  <g className="anim-blink">
+                    <ellipse cx="280" cy="180" rx="12" ry="8" fill="#FFFFFF"/>
+                    <circle cx="280" cy="180" r="5" fill="#4B5563"/>
+                    <circle cx="280" cy="180" r="2.5" fill="#000000"/>
+                    <circle cx="282" cy="178" r="1.5" fill="#FFFFFF" opacity="0.8"/>
+                  </g>
+                </g>
         <g transform="translate(0, -10)">
           <path d="M215 110 L 220 60 Q 250 55 280 60 L 285 110 Q 250 125 215 110 Z" fill={`url(#${uniqueId}-fezRed)`}/>
           <ellipse cx="250" cy="60" rx="30" ry="8" fill="#7F1D1D"/>
