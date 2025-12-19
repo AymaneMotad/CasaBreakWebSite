@@ -34,7 +34,7 @@ export default function EditRestaurantPage() {
     district: "",
     address: "",
     phone: "",
-    price_level: "€€",
+    price_level: "", // Deprecated, kept for backward compatibility
     tags: [] as string[],
   })
 
@@ -247,27 +247,7 @@ export default function EditRestaurantPage() {
         console.warn('⚠️ Warning: No image URL in formData.main_image')
       }
       
-      // Ensure photo_url is always set if main_image exists
-      const imageUrl = formData.main_image?.trim() || null
-      
-      // Both activities and venues now have data_jsonb with same structure
-      const jsonbData = {
-        id: formData.slug,
-        name: formData.name_fr,
-        category: formData.category || null, // JSON category (francais, asiatique, etc.) - keep as is
-        description: formData.description_fr,
-        address: formData.address,
-        district: formData.district,
-        phone: formData.phone,
-        rating: formData.average_rating,
-        price_level: formData.price_level,
-        photo_url: imageUrl, // Always set to same value as main_image
-        website: formData.website || null,
-        tags: formData.tags,
-        subtype: formData.cuisine_types[0] || "fusion",
-      }
-
-      // Validate required fields
+      // Validate required fields first
       if (!formData.name_fr || !formData.name_fr.trim()) {
         throw new Error('Name (French) is required')
       }
@@ -278,9 +258,9 @@ export default function EditRestaurantPage() {
         ? formData.place_category 
         : 'restaurants' // Default to restaurants if invalid
 
-      // Generate and sanitize slug - always sanitize even if user provides one
-      // This ensures slugs are URL-safe and consistent
-      const slugInput = (formData.slug?.trim() || formData.name_fr.trim()).toLowerCase()
+      // Generate and sanitize slug from name - always auto-generate from name
+      // Slug is kept in database but auto-generated, not shown in dashboard
+      const slugInput = formData.name_fr.trim().toLowerCase()
       const finalSlug = slugInput
         .replace(/\s+/g, "-") // Replace spaces with hyphens
         .replace(/[^a-z0-9-]/g, "") // Remove special characters
@@ -288,7 +268,27 @@ export default function EditRestaurantPage() {
         .replace(/^-|-$/g, "") // Remove leading/trailing hyphens
       
       if (!finalSlug) {
-        throw new Error('Could not generate a valid slug from the name. Please provide a slug manually.')
+        throw new Error('Could not generate a valid slug from the name. Please check the name field.')
+      }
+
+      // Ensure photo_url is always set if main_image exists
+      const imageUrl = formData.main_image?.trim() || null
+      
+      // Both activities and venues now have data_jsonb with same structure
+      const jsonbData = {
+        id: finalSlug,
+        name: formData.name_fr,
+        category: formData.category || null, // JSON category (francais, asiatique, etc.) - keep as is
+        description: formData.description_fr,
+        address: formData.address,
+        district: formData.district,
+        phone: formData.phone,
+        rating: formData.average_rating,
+        // price_level removed - not needed
+        photo_url: imageUrl, // Always set to same value as main_image
+        website: formData.website || null,
+        tags: formData.tags,
+        subtype: formData.cuisine_types[0] || "fusion",
       }
 
       // Ensure category is always a valid venue_category enum for venues
@@ -448,19 +448,11 @@ export default function EditRestaurantPage() {
           <div>
             <h3 className="text-lg font-semibold text-gray-900 mb-4">Basic Information</h3>
             <div className="grid grid-cols-1 gap-6">
-              <div>
-                <label className="block text-sm font-medium text-gray-700 mb-2">
-                  Slug *
-                </label>
-                <input
-                  type="text"
-                  value={formData.slug}
-                  onChange={(e) => setFormData({ ...formData, slug: e.target.value })}
-                  required
-                  className="w-full px-4 py-2 border border-gray-300 rounded-lg focus:ring-2 focus:ring-teal-500 focus:border-transparent"
-                  placeholder="restaurant-name"
-                />
-              </div>
+              {/* Slug is auto-generated from name, hidden from user */}
+              <input
+                type="hidden"
+                value={formData.slug}
+              />
 
               <div>
                 <label className="block text-sm font-medium text-gray-700 mb-2">
@@ -469,7 +461,20 @@ export default function EditRestaurantPage() {
                 <input
                   type="text"
                   value={formData.name_fr}
-                  onChange={(e) => setFormData({ ...formData, name_fr: e.target.value })}
+                  onChange={(e) => {
+                    const name = e.target.value
+                    // Auto-generate slug from name (kept in formData but hidden from user)
+                    let autoSlug = ""
+                    if (name.trim()) {
+                      const slugInput = name.trim().toLowerCase()
+                      autoSlug = slugInput
+                        .replace(/\s+/g, "-") // Replace spaces with hyphens
+                        .replace(/[^a-z0-9-]/g, "") // Remove special characters
+                        .replace(/-+/g, "-") // Replace multiple hyphens with single hyphen
+                        .replace(/^-|-$/g, "") // Remove leading/trailing hyphens
+                    }
+                    setFormData({ ...formData, name_fr: name, slug: autoSlug })
+                  }}
                   required
                   className="w-full px-4 py-2 border border-gray-300 rounded-lg focus:ring-2 focus:ring-teal-500 focus:border-transparent"
                 />
@@ -673,22 +678,6 @@ export default function EditRestaurantPage() {
 
               <div>
                 <label className="block text-sm font-medium text-gray-700 mb-2">
-                  Price Level
-                </label>
-                <select
-                  value={formData.price_level}
-                  onChange={(e) => setFormData({ ...formData, price_level: e.target.value })}
-                  className="w-full px-4 py-2 border border-gray-300 rounded-lg focus:ring-2 focus:ring-teal-500 focus:border-transparent"
-                >
-                  <option value="€">€</option>
-                  <option value="€€">€€</option>
-                  <option value="€€€">€€€</option>
-                  <option value="€€€€">€€€€</option>
-                </select>
-              </div>
-
-              <div>
-                <label className="block text-sm font-medium text-gray-700 mb-2">
                   Website
                 </label>
                 <input
@@ -702,7 +691,7 @@ export default function EditRestaurantPage() {
 
               <div>
                 <label className="block text-sm font-medium text-gray-700 mb-2">
-                  Published
+                  Visibility
                 </label>
                 <label className="flex items-center gap-2">
                   <input
@@ -711,8 +700,11 @@ export default function EditRestaurantPage() {
                     onChange={(e) => setFormData({ ...formData, is_published: e.target.checked })}
                     className="w-4 h-4 text-teal-600 border-gray-300 rounded focus:ring-teal-500"
                   />
-                  <span className="text-sm text-gray-700">Publish this restaurant</span>
+                  <span className="text-sm text-gray-700">Make visible on website</span>
                 </label>
+                <p className="mt-1 text-xs text-gray-500">
+                  When checked, this place will be visible on the website in its category page. Uncheck to hide it.
+                </p>
               </div>
             </div>
           </div>

@@ -191,13 +191,7 @@ export default function HebergementPage() {
                     </div>
                   )}
                   
-                  {/* Star rating */}
-                  {accommodation.star_rating && (
-                    <div className="absolute bottom-4 right-4 bg-white/90 backdrop-blur px-3 py-1 rounded-full text-sm font-medium flex items-center gap-1">
-                      <Star className="w-4 h-4 fill-amber-400 text-amber-400" />
-                      {accommodation.star_rating}
-                    </div>
-                  )}
+                  {/* Star rating removed */}
                 </div>
 
                 {/* Content */}

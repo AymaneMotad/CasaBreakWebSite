@@ -85,6 +85,7 @@ export default function BarsNightlifePage() {
         ) : error ? (
           <div className="text-center py-20">
             <p className="text-red-500 mb-4">Erreur: {error}</p>
+            <p className="text-gray-500">Vérifiez que la base de données est configurée.</p>
           </div>
         ) : venues.length === 0 ? (
           <div className="text-center py-20">
@@ -92,52 +93,59 @@ export default function BarsNightlifePage() {
           </div>
         ) : (
           <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-8">
-            {venues.map((venue) => (
-              <article 
-                key={venue.id}
-                className="group bg-white rounded-2xl overflow-hidden shadow-lg hover:shadow-2xl transition-all duration-300 border border-gray-100"
-              >
-                <div className="relative h-64 overflow-hidden">
-                  {venue.main_image ? (
-                    <img
-                      src={venue.main_image}
-                      alt={venue.name_fr}
-                      className="w-full h-full object-cover group-hover:scale-110 transition-transform duration-500"
-                      onError={(e) => {
-                        e.currentTarget.style.display = 'none'
-                        e.currentTarget.nextElementSibling?.classList.remove('hidden')
-                      }}
-                    />
-                  ) : null}
-                  <div className={`w-full h-full bg-gradient-to-br from-purple-100 to-pink-100 flex items-center justify-center ${venue.main_image ? 'hidden absolute inset-0' : ''}`}>
-                    <Wine className="w-16 h-16 text-gray-400" />
+            {venues.map((venue) => {
+              const jsonData = venue.data_jsonb as any
+              const imageUrl = jsonData?.photo_url || venue.main_image
+              const name = jsonData?.name || venue.name_fr
+              const description = jsonData?.description || venue.description_fr || venue.short_description_fr
+              
+              return (
+                <article 
+                  key={venue.id}
+                  className="group bg-white rounded-2xl overflow-hidden shadow-lg hover:shadow-2xl transition-all duration-300 border border-gray-100"
+                >
+                  <div className="relative h-64 overflow-hidden">
+                    {imageUrl ? (
+                      <img
+                        src={imageUrl}
+                        alt={name}
+                        className="w-full h-full object-cover group-hover:scale-110 transition-transform duration-500"
+                        onError={(e) => {
+                          e.currentTarget.style.display = 'none'
+                          e.currentTarget.nextElementSibling?.classList.remove('hidden')
+                        }}
+                      />
+                    ) : null}
+                    <div className={`w-full h-full bg-gradient-to-br from-purple-100 to-pink-100 flex items-center justify-center ${imageUrl ? 'hidden absolute inset-0' : ''}`}>
+                      <Wine className="w-16 h-16 text-gray-400" />
+                    </div>
                   </div>
-                </div>
 
-                <div className="p-6">
-                  <h2 className="text-xl font-bold text-gray-900 mb-3 group-hover:text-teal-600 transition-colors">
-                    {venue.name_fr}
-                  </h2>
-                  
-                  {(venue.description_fr || venue.short_description_fr) && (
-                    <p className="text-gray-600 text-sm mb-4 line-clamp-3">
-                      {venue.description_fr || venue.short_description_fr}
-                    </p>
-                  )}
+                  <div className="p-6">
+                    <h2 className="text-xl font-bold text-gray-900 mb-3 group-hover:text-teal-600 transition-colors">
+                      {name}
+                    </h2>
+                    
+                    {description && (
+                      <p className="text-gray-600 text-sm mb-4 line-clamp-3">
+                        {description}
+                      </p>
+                    )}
 
-                  {/* Read More Button */}
-                  <Link
-                    href={`/${locale}/manger-sortir/bars-nightlife/${venue.slug}`}
-                    className="inline-flex items-center text-teal-600 hover:text-teal-700 font-medium text-sm transition-colors"
-                  >
-                    Lire la suite
-                    <svg className="w-4 h-4 ml-1" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                      <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M9 5l7 7-7 7" />
-                    </svg>
-                  </Link>
-                </div>
-              </article>
-            ))}
+                    {/* Read More Button */}
+                    <Link
+                      href={`/${locale}/manger-sortir/bars-nightlife/${venue.slug}`}
+                      className="inline-flex items-center text-teal-600 hover:text-teal-700 font-medium text-sm transition-colors"
+                    >
+                      Lire la suite
+                      <svg className="w-4 h-4 ml-1" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                        <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M9 5l7 7-7 7" />
+                      </svg>
+                    </Link>
+                  </div>
+                </article>
+              )
+            })}
           </div>
         )}
       </div>
