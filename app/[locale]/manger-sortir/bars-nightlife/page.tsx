@@ -5,6 +5,9 @@ import { useParams } from "next/navigation"
 import { Navigation } from "@/components/navigation"
 import { Footer } from "@/components/footer"
 import { Breadcrumb } from "@/components/breadcrumb"
+import { SearchBar } from "@/components/search-bar"
+import { Pagination } from "@/components/pagination"
+import { usePaginationAndSearch } from "@/hooks/usePaginationAndSearch"
 import { createClient } from "@/utils/supabase/client"
 import type { Venue } from "@/lib/database.types"
 import { Wine } from "lucide-react"
@@ -47,6 +50,33 @@ export default function BarsNightlifePage() {
     fetchVenues()
   }, [])
 
+  // Pagination and search
+  const {
+    searchTerm,
+    setSearchTerm,
+    currentPage,
+    totalPages,
+    paginatedItems,
+    totalItems,
+    goToPage,
+    nextPage,
+    prevPage,
+    hasNextPage,
+    hasPrevPage,
+  } = usePaginationAndSearch<Venue>({
+    items: venues,
+    itemsPerPage: 7,
+    searchFunction: (venue, term) => {
+      const jsonData = venue.data_jsonb as any
+      const name = (jsonData?.name || venue.name_fr || '').toLowerCase()
+      const description = (jsonData?.description || venue.description_fr || venue.short_description_fr || '').toLowerCase()
+      const district = (jsonData?.district || (venue as any).district || '').toLowerCase()
+      const address = (jsonData?.address || (venue as any).address || '').toLowerCase()
+      
+      return name.includes(term) || description.includes(term) || district.includes(term) || address.includes(term)
+    },
+  })
+
   return (
     <main className="min-h-screen bg-white">
       <Navigation />
@@ -72,9 +102,18 @@ export default function BarsNightlifePage() {
       </div>
 
       <div className="max-w-7xl mx-auto px-6 lg:px-12 pb-20">
+        {/* Search Bar */}
+        {!loading && venues.length > 0 && (
+          <SearchBar
+            value={searchTerm}
+            onChange={setSearchTerm}
+            placeholder="Rechercher un bar..."
+          />
+        )}
+
         {loading ? (
           <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-8">
-            {[1, 2, 3].map((i) => (
+            {[1, 2, 3, 4, 5, 6, 7].map((i) => (
               <div key={i} className="animate-pulse">
                 <div className="bg-gray-200 h-64 rounded-2xl mb-4" />
                 <div className="bg-gray-200 h-6 rounded w-3/4 mb-2" />
@@ -87,13 +126,16 @@ export default function BarsNightlifePage() {
             <p className="text-red-500 mb-4">Erreur: {error}</p>
             <p className="text-gray-500">Vérifiez que la base de données est configurée.</p>
           </div>
-        ) : venues.length === 0 ? (
+        ) : totalItems === 0 ? (
           <div className="text-center py-20">
-            <p className="text-gray-500 text-lg">Aucun bar trouvé.</p>
+            <p className="text-gray-500 text-lg">
+              {searchTerm ? `Aucun bar trouvé pour "${searchTerm}".` : 'Aucun bar trouvé.'}
+            </p>
           </div>
         ) : (
-          <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-8">
-            {venues.map((venue) => {
+          <>
+            <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-8">
+              {paginatedItems.map((venue) => {
               const jsonData = venue.data_jsonb as any
               const imageUrl = jsonData?.photo_url || venue.main_image
               const name = jsonData?.name || venue.name_fr
@@ -145,8 +187,22 @@ export default function BarsNightlifePage() {
                   </div>
                 </article>
               )
-            })}
-          </div>
+              })}
+            </div>
+
+            {/* Pagination */}
+            <Pagination
+              currentPage={currentPage}
+              totalPages={totalPages}
+              onPageChange={goToPage}
+              onNext={nextPage}
+              onPrev={prevPage}
+              hasNext={hasNextPage}
+              hasPrev={hasPrevPage}
+              totalItems={totalItems}
+              itemsPerPage={7}
+            />
+          </>
         )}
       </div>
 

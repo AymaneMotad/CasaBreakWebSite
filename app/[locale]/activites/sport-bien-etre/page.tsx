@@ -5,6 +5,9 @@ import { useParams } from "next/navigation"
 import { Navigation } from "@/components/navigation"
 import { Footer } from "@/components/footer"
 import { Breadcrumb } from "@/components/breadcrumb"
+import { SearchBar } from "@/components/search-bar"
+import { Pagination } from "@/components/pagination"
+import { usePaginationAndSearch } from "@/hooks/usePaginationAndSearch"
 import { createClient } from "@/utils/supabase/client"
 import type { Activity, Venue } from "@/lib/database.types"
 import { Dumbbell } from "lucide-react"
@@ -98,6 +101,29 @@ export default function SportBienEtrePage() {
     fetchData()
   }, [])
 
+  // Pagination and search
+  const {
+    searchTerm,
+    setSearchTerm,
+    currentPage,
+    totalPages,
+    paginatedItems,
+    totalItems,
+    goToPage,
+    nextPage,
+    prevPage,
+    hasNextPage,
+    hasPrevPage,
+  } = usePaginationAndSearch<SportBienEtreDisplay>({
+    items: items,
+    itemsPerPage: 7,
+    searchFunction: (item, term) => {
+      const name = (item.data_jsonb?.name || item.name_fr || '').toLowerCase()
+      const description = (item.description_fr || item.short_description_fr || item.data_jsonb?.description || '').toLowerCase()
+      return name.includes(term) || description.includes(term)
+    },
+  })
+
   return (
     <main className="min-h-screen bg-white">
       <Navigation />
@@ -125,9 +151,18 @@ export default function SportBienEtrePage() {
 
       {/* Content */}
       <div className="max-w-7xl mx-auto px-6 lg:px-12 pb-20">
+        {/* Search Bar */}
+        {!loading && items.length > 0 && (
+          <SearchBar
+            value={searchTerm}
+            onChange={setSearchTerm}
+            placeholder="Rechercher une activité..."
+          />
+        )}
+
         {loading ? (
           <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-8">
-            {[1, 2, 3, 4, 5, 6].map((i) => (
+            {[1, 2, 3, 4, 5, 6, 7].map((i) => (
               <div key={i} className="animate-pulse">
                 <div className="bg-gray-200 h-64 rounded-2xl mb-4" />
                 <div className="bg-gray-200 h-6 rounded w-3/4 mb-2" />
@@ -140,14 +175,16 @@ export default function SportBienEtrePage() {
             <p className="text-red-500 mb-4">Erreur: {error}</p>
             <p className="text-gray-500">Vérifiez que la base de données est configurée.</p>
           </div>
-        ) : items.length === 0 ? (
+        ) : totalItems === 0 ? (
           <div className="text-center py-20">
-            <p className="text-gray-500 text-lg">Aucune activité trouvée.</p>
-            <p className="text-gray-400 mt-2">Utilisez le script de scraping pour ajouter des activités ou créez des lieux dans le dashboard.</p>
+            <p className="text-gray-500 text-lg">
+              {searchTerm ? `Aucune activité trouvée pour "${searchTerm}".` : 'Aucune activité trouvée.'}
+            </p>
           </div>
         ) : (
-          <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-8">
-            {items.map((item) => {
+          <>
+            <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-8">
+              {paginatedItems.map((item) => {
               const imageUrl = item.main_image || item.data_jsonb?.photo_url
               // Activities link to activity detail page, venues link to generic venue detail page
               const detailUrl = item.source === 'activity' 
@@ -207,8 +244,22 @@ export default function SportBienEtrePage() {
                   </div>
                 </article>
               )
-            })}
-          </div>
+              })}
+            </div>
+
+            {/* Pagination */}
+            <Pagination
+              currentPage={currentPage}
+              totalPages={totalPages}
+              onPageChange={goToPage}
+              onNext={nextPage}
+              onPrev={prevPage}
+              hasNext={hasNextPage}
+              hasPrev={hasPrevPage}
+              totalItems={totalItems}
+              itemsPerPage={7}
+            />
+          </>
         )}
       </div>
 

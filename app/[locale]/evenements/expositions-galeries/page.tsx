@@ -5,6 +5,9 @@ import { useParams } from "next/navigation"
 import { Navigation } from "@/components/navigation"
 import { Footer } from "@/components/footer"
 import { Breadcrumb } from "@/components/breadcrumb"
+import { SearchBar } from "@/components/search-bar"
+import { Pagination } from "@/components/pagination"
+import { usePaginationAndSearch } from "@/hooks/usePaginationAndSearch"
 import { createClient } from "@/utils/supabase/client"
 import { Palette, ChevronRight, Calendar, MapPin } from "lucide-react"
 import { useTranslations } from 'next-intl'
@@ -63,6 +66,31 @@ export default function ExpositionsGaleriesPage() {
     fetchEvents()
   }, [])
 
+  // Pagination and search
+  const {
+    searchTerm,
+    setSearchTerm,
+    currentPage,
+    totalPages,
+    paginatedItems,
+    totalItems,
+    goToPage,
+    nextPage,
+    prevPage,
+    hasNextPage,
+    hasPrevPage,
+  } = usePaginationAndSearch<EventData>({
+    items: events,
+    itemsPerPage: 7,
+    searchFunction: (event, term) => {
+      const name = (event.name_fr || '').toLowerCase()
+      const description = (event.description_fr || event.short_description_fr || '').toLowerCase()
+      const venue = (event.venue_name_fr || '').toLowerCase()
+      const organizer = (event.organizer_name || '').toLowerCase()
+      return name.includes(term) || description.includes(term) || venue.includes(term) || organizer.includes(term)
+    },
+  })
+
   const formatDate = (dateString: string) => {
     const date = new Date(dateString)
     return date.toLocaleDateString('fr-FR', { 
@@ -106,9 +134,18 @@ export default function ExpositionsGaleriesPage() {
 
       {/* Content */}
       <div className="max-w-7xl mx-auto px-6 lg:px-12 pb-20">
+        {/* Search Bar */}
+        {!loading && events.length > 0 && (
+          <SearchBar
+            value={searchTerm}
+            onChange={setSearchTerm}
+            placeholder="Rechercher une exposition..."
+          />
+        )}
+
         {loading ? (
           <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-8">
-            {[1, 2, 3].map((i) => (
+            {[1, 2, 3, 4, 5, 6, 7].map((i) => (
               <div key={i} className="animate-pulse">
                 <div className="bg-gray-200 h-64 rounded-2xl mb-4" />
                 <div className="bg-gray-200 h-6 rounded w-3/4 mb-2" />
@@ -121,14 +158,16 @@ export default function ExpositionsGaleriesPage() {
             <p className="text-red-500 mb-4">Erreur: {error}</p>
             <p className="text-gray-500">Vérifiez que la base de données est configurée.</p>
           </div>
-        ) : events.length === 0 ? (
+        ) : totalItems === 0 ? (
           <div className="text-center py-20">
-            <p className="text-gray-500 text-lg">Aucun événement trouvé.</p>
-            <p className="text-gray-400 mt-2">Créez des événements depuis le dashboard.</p>
+            <p className="text-gray-500 text-lg">
+              {searchTerm ? `Aucune exposition trouvée pour "${searchTerm}".` : 'Aucune exposition trouvée.'}
+            </p>
           </div>
         ) : (
-          <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-8">
-            {events.map((event) => {
+          <>
+            <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-8">
+              {paginatedItems.map((event) => {
               const description = event.description_fr || event.short_description_fr || ''
               const shortDescription = description.length > 100 ? description.substring(0, 100) + '...' : description
 
@@ -246,8 +285,22 @@ export default function ExpositionsGaleriesPage() {
                   </div>
                 </article>
               )
-            })}
-          </div>
+              })}
+            </div>
+
+            {/* Pagination */}
+            <Pagination
+              currentPage={currentPage}
+              totalPages={totalPages}
+              onPageChange={goToPage}
+              onNext={nextPage}
+              onPrev={prevPage}
+              hasNext={hasNextPage}
+              hasPrev={hasPrevPage}
+              totalItems={totalItems}
+              itemsPerPage={7}
+            />
+          </>
         )}
       </div>
 

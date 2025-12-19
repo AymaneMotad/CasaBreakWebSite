@@ -5,9 +5,12 @@ import { useParams } from "next/navigation"
 import { Navigation } from "@/components/navigation"
 import { Footer } from "@/components/footer"
 import { Breadcrumb } from "@/components/breadcrumb"
+import { SearchBar } from "@/components/search-bar"
+import { Pagination } from "@/components/pagination"
+import { usePaginationAndSearch } from "@/hooks/usePaginationAndSearch"
 import { createClient } from "@/utils/supabase/client"
 import type { Accommodation, Venue } from "@/lib/database.types"
-import { Star, Hotel } from "lucide-react"
+import { Hotel } from "lucide-react"
 import Link from "next/link"
 import { useTranslations } from 'next-intl'
 
@@ -101,6 +104,30 @@ export default function HebergementPage() {
     fetchAccommodations()
   }, [])
 
+  // Pagination and search
+  const {
+    searchTerm,
+    setSearchTerm,
+    currentPage,
+    totalPages,
+    paginatedItems,
+    totalItems,
+    goToPage,
+    nextPage,
+    prevPage,
+    hasNextPage,
+    hasPrevPage,
+  } = usePaginationAndSearch<AccommodationDisplay>({
+    items: accommodations,
+    itemsPerPage: 7,
+    searchFunction: (item, term) => {
+      const name = (item.name_fr || '').toLowerCase()
+      const description = (item.description_fr || '').toLowerCase()
+      const type = (item.type || '').toLowerCase()
+      return name.includes(term) || description.includes(term) || type.includes(term)
+    },
+  })
+
   const getTypeLabel = (type: string) => {
     const labels: Record<string, string> = {
       'hotel': 'Hôtel',
@@ -140,9 +167,18 @@ export default function HebergementPage() {
 
       {/* Content */}
       <div className="max-w-7xl mx-auto px-6 lg:px-12 pb-20">
+        {/* Search Bar */}
+        {!loading && accommodations.length > 0 && (
+          <SearchBar
+            value={searchTerm}
+            onChange={setSearchTerm}
+            placeholder="Rechercher un hébergement..."
+          />
+        )}
+
         {loading ? (
           <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-8">
-            {[1, 2, 3, 4, 5, 6].map((i) => (
+            {[1, 2, 3, 4, 5, 6, 7].map((i) => (
               <div key={i} className="animate-pulse">
                 <div className="bg-gray-200 h-64 rounded-2xl mb-4" />
                 <div className="bg-gray-200 h-6 rounded w-3/4 mb-2" />
@@ -155,14 +191,16 @@ export default function HebergementPage() {
             <p className="text-red-500 mb-4">Erreur: {error}</p>
             <p className="text-gray-500">Vérifiez que la base de données est configurée.</p>
           </div>
-        ) : accommodations.length === 0 ? (
+        ) : totalItems === 0 ? (
           <div className="text-center py-20">
-            <p className="text-gray-500 text-lg">Aucun hébergement trouvé.</p>
-            <p className="text-gray-400 mt-2">Utilisez le script de scraping pour ajouter des hébergements.</p>
+            <p className="text-gray-500 text-lg">
+              {searchTerm ? `Aucun hébergement trouvé pour "${searchTerm}".` : 'Aucun hébergement trouvé.'}
+            </p>
           </div>
         ) : (
-          <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-8">
-            {accommodations.map((accommodation) => (
+          <>
+            <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-8">
+              {paginatedItems.map((accommodation) => (
               <article 
                 key={accommodation.id}
                 className="group bg-white rounded-2xl overflow-hidden shadow-lg hover:shadow-2xl transition-all duration-300 border border-gray-100"
@@ -218,8 +256,22 @@ export default function HebergementPage() {
                   </Link>
                 </div>
               </article>
-            ))}
-          </div>
+              ))}
+            </div>
+
+            {/* Pagination */}
+            <Pagination
+              currentPage={currentPage}
+              totalPages={totalPages}
+              onPageChange={goToPage}
+              onNext={nextPage}
+              onPrev={prevPage}
+              hasNext={hasNextPage}
+              hasPrev={hasPrevPage}
+              totalItems={totalItems}
+              itemsPerPage={7}
+            />
+          </>
         )}
       </div>
 

@@ -3,10 +3,10 @@
 import type React from "react"
 
 import { useState, useEffect } from "react"
-import { Menu, X, ChevronDown, Ticket, ArrowRight, Home, Trophy, MapPin, Activity, UtensilsCrossed, Calendar, Map, Compass } from "lucide-react"
+import { Menu, X, ChevronDown, Ticket, ArrowRight, Home, Trophy, MapPin, Activity, UtensilsCrossed, Calendar, Map, Compass, Search } from "lucide-react"
 import Link from "next/link"
 import Image from "next/image"
-import { usePathname } from "next/navigation"
+import { usePathname, useRouter } from "next/navigation"
 import { LanguageSelector } from "./language-selector"
 import { useTranslations, useLocale } from 'next-intl'
 
@@ -23,8 +23,11 @@ function DropdownGlow() {
 export function Navigation() {
   const [isOpen, setIsOpen] = useState(false)
   const [openDropdown, setOpenDropdown] = useState<string | null>(null)
+  const [searchTerm, setSearchTerm] = useState('')
+  const [showSearch, setShowSearch] = useState(false)
   const pathname = usePathname()
   const locale = useLocale()
+  const router = useRouter()
   const t = useTranslations('navigation')
 
   // Fallback: Extract locale from pathname if useLocale() is not working
@@ -271,6 +274,53 @@ export function Navigation() {
               </div>
             ))}
 
+            {/* Global Search - Desktop */}
+            <div className="relative">
+              {showSearch ? (
+                <div className="flex items-center gap-2">
+                  <div className="relative">
+                    <Search className="absolute left-3 top-1/2 transform -translate-y-1/2 text-gray-400 w-4 h-4" />
+                    <input
+                      type="text"
+                      value={searchTerm}
+                      onChange={(e) => setSearchTerm(e.target.value)}
+                      onKeyDown={(e) => {
+                        if (e.key === 'Enter' && searchTerm.trim()) {
+                          router.push(`/${currentLocale}/recherche?q=${encodeURIComponent(searchTerm.trim())}`)
+                          setShowSearch(false)
+                          setSearchTerm('')
+                        }
+                        if (e.key === 'Escape') {
+                          setShowSearch(false)
+                          setSearchTerm('')
+                        }
+                      }}
+                      placeholder="Rechercher..."
+                      autoFocus
+                      className="pl-10 pr-4 py-2 w-64 text-sm border border-gray-300 rounded-lg focus:ring-2 focus:ring-teal-500 focus:border-transparent"
+                    />
+                  </div>
+                  <button
+                    onClick={() => {
+                      setShowSearch(false)
+                      setSearchTerm('')
+                    }}
+                    className="text-gray-500 hover:text-gray-700"
+                  >
+                    <X className="w-5 h-5" />
+                  </button>
+                </div>
+              ) : (
+                <button
+                  onClick={() => setShowSearch(true)}
+                  className="p-2 text-gray-700 hover:text-gray-900 transition-colors"
+                  aria-label="Rechercher"
+                >
+                  <Search className="w-5 h-5" />
+                </button>
+              )}
+            </div>
+
             <a
               href="https://casawe.ma"
               target="_blank"
@@ -320,6 +370,27 @@ export function Navigation() {
           </div>
           
           <div className="relative z-10 px-4 sm:px-6 py-6 pb-32 w-full">
+            {/* Mobile Search */}
+            <div className="mb-6 pb-6 border-b border-gray-200/50">
+              <div className="relative">
+                <Search className="absolute left-3 top-1/2 transform -translate-y-1/2 text-gray-400 w-5 h-5" />
+                <input
+                  type="text"
+                  value={searchTerm}
+                  onChange={(e) => setSearchTerm(e.target.value)}
+                  onKeyDown={(e) => {
+                    if (e.key === 'Enter' && searchTerm.trim()) {
+                      router.push(`/${currentLocale}/recherche?q=${encodeURIComponent(searchTerm.trim())}`)
+                      setIsOpen(false)
+                      setSearchTerm('')
+                    }
+                  }}
+                  placeholder="Rechercher..."
+                  className="w-full pl-10 pr-4 py-3 border border-gray-300 rounded-lg focus:ring-2 focus:ring-teal-500 focus:border-transparent"
+                />
+              </div>
+            </div>
+
             {navItems.map((item) => (
               <div key={item.label} className="border-b border-gray-200/50 last:border-b-0 w-full">
                 {item.submenu ? (
