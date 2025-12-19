@@ -65,8 +65,8 @@ export default function AdminRestaurantsPage() {
       // Fetch from both venues and activities tables
       console.log("Fetching from venues and activities...")
       
-      // Fetch venues
-      let query = supabase.from("venues").select("*").eq("is_published", true)
+      // Fetch venues - show ALL (including unpublished) for admin management
+      let query = supabase.from("venues").select("*")
       if (categoryFilter !== "all") {
         query = query.eq("place_category", categoryFilter)
       }
@@ -80,7 +80,6 @@ export default function AdminRestaurantsPage() {
       let activitiesQuery = supabase
         .from("activities")
         .select("*")
-        .eq("is_published", true)
       
       // Filter activities by category if categoryFilter is set
       if (categoryFilter !== "all") {

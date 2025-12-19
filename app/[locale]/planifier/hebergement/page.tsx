@@ -214,10 +214,7 @@ export default function HebergementPage() {
 
                   {/* Read More Button */}
                   <Link
-                    href={accommodation.source === 'accommodations' 
-                      ? `/${locale}/planifier/hebergement/${accommodation.slug}`
-                      : `/${locale}/manger-sortir/restaurants/${accommodation.slug}`
-                    }
+                    href={`/${locale}/planifier/hebergement/${accommodation.slug}`}
                     className="inline-flex items-center text-teal-600 hover:text-teal-700 font-medium text-sm transition-colors"
                   >
                     Lire la suite
