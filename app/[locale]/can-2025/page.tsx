@@ -231,7 +231,7 @@ export default function Can2025Page() {
       capacity: '45 000',
       accentColor: '#00a346',
       matches: [
-        { date: '22 décembre', time: '15h00', team1: 'Mali', team2: 'Zambie', group: 'Groupe A', type: 'Phase de groupes' },
+        { date: '22 décembre', time: '15h00', team1: 'Mali', team2: 'Zambie', group: 'Groupe A', type: 'Phase de groupes', score: '1 - 1' },
         { date: '24 décembre', time: '13h30', team1: 'Burkina Faso', team2: 'Guinée équatoriale', group: 'Groupe E', type: 'Phase de groupes' },
         { date: '26 décembre', time: '18h30', team1: 'Zambie', team2: 'Comores', group: 'Groupe A', type: 'Phase de groupes' },
         { date: '28 décembre', time: '16h00', team1: 'Guinée équatoriale', team2: 'Soudan', group: 'Groupe E', type: 'Phase de groupes' },
@@ -325,7 +325,7 @@ export default function Can2025Page() {
       capacity: '45 240',
       accentColor: '#ffd700',
       matches: [
-        { date: '22 décembre', time: '18h00', team1: 'Afrique du Sud', team2: 'Angola', group: 'Groupe B', type: 'Phase de groupes' },
+        { date: '22 décembre', time: '18h00', team1: 'Afrique du Sud', team2: 'Angola', group: 'Groupe B', type: 'Phase de groupes', score: '2 - 1' },
         { date: '24 décembre', time: '18h30', team1: 'Côte d\'Ivoire', team2: 'Mozambique', group: 'Groupe F', type: 'Phase de groupes' },
         { date: '26 décembre', time: '13h30', team1: 'Angola', team2: 'Zimbabwe', group: 'Groupe B', type: 'Phase de groupes' },
         { date: '28 décembre', time: '21h00', team1: 'Côte d\'Ivoire', team2: 'Cameroun', group: 'Groupe F', type: 'Phase de groupes' },
