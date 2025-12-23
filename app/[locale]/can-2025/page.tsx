@@ -247,7 +247,7 @@ export default function Can2025Page() {
       capacity: '68 000',
       accentColor: '#c10000',
       matches: [
-        { date: '21 décembre', time: '20h00', team1: 'Maroc', team2: 'Comores', group: 'Groupe A', type: 'Phase de groupes' },
+        { date: '21 décembre', time: '20h00', team1: 'Maroc', team2: 'Comores', group: 'Groupe A', type: 'Phase de groupes', score: '2 - 0' },
         { date: '26 décembre', time: '13h00', team1: 'Maroc', team2: 'Mali', group: 'Groupe A', type: 'Phase de groupes' },
         { date: '29 décembre', time: '18h30', team1: 'Zambie', team2: 'Maroc', group: 'Groupe A', type: 'Phase de groupes' },
         { date: '4 janvier', time: '18h00', team1: '1er Groupe A', team2: '3 Groupe C/D/2', group: '8es de finale', type: 'Élimination directe' },
@@ -804,7 +804,11 @@ export default function Can2025Page() {
                             <div className="font-bold text-gray-700 mb-1">{match.date}</div>
                             <div className="text-[10px] text-gray-500 mb-1">{match.time}</div>
                             <div className="font-bold text-gray-900 truncate text-[10px]">{match.team1}</div>
-                            <div className="text-[9px] text-gray-400 text-center">vs</div>
+                            {match.score ? (
+                              <div className="text-[9px] text-center font-bold" style={{ color: stadium.accentColor }}>{match.score}</div>
+                            ) : (
+                              <div className="text-[9px] text-gray-400 text-center">vs</div>
+                            )}
                             <div className="font-bold text-gray-900 truncate text-[10px]">{match.team2}</div>
                           </div>
                         ))}
@@ -894,7 +898,11 @@ export default function Can2025Page() {
                               {/* Teams - Compact */}
                               <div className="space-y-1 pt-1">
                                 <div className="text-sm font-bold text-gray-900 truncate">{match.team1}</div>
-                                <div className="text-xs text-gray-500 text-center font-bold">VS</div>
+                                {match.score ? (
+                                  <div className="text-sm text-center font-black" style={{ color: stadium.accentColor }}>{match.score}</div>
+                                ) : (
+                                  <div className="text-xs text-gray-500 text-center font-bold">VS</div>
+                                )}
                                 <div className="text-sm font-bold text-gray-900 truncate">{match.team2}</div>
                               </div>
 
