@@ -803,13 +803,29 @@ export default function Can2025Page() {
                           >
                             <div className="font-bold text-gray-700 mb-1">{match.date}</div>
                             <div className="text-[10px] text-gray-500 mb-1">{match.time}</div>
-                            <div className="font-bold text-gray-900 truncate text-[10px]">{match.team1}</div>
-                            {match.score ? (
-                              <div className="text-[9px] text-center font-bold" style={{ color: stadium.accentColor }}>{match.score}</div>
-                            ) : (
-                              <div className="text-[9px] text-gray-400 text-center">vs</div>
+                            {match.score ? (() => {
+                              const [score1, score2] = match.score.split('-').map(s => parseInt(s.trim()))
+                              const isDraw = score1 === score2
+                              const team1Wins = score1 > score2
+                              return (
+                                <>
+                                  <div className="flex items-center justify-between gap-2">
+                                    <span className="font-bold text-gray-900 truncate text-[10px] flex-1">{match.team1}</span>
+                                    <span className={`text-[11px] font-black flex-shrink-0 ${team1Wins ? '' : isDraw ? '' : 'text-gray-400'}`} style={team1Wins ? { color: stadium.accentColor } : isDraw ? { color: stadium.accentColor } : {}}>{score1}</span>
+                                  </div>
+                                  <div className="flex items-center justify-between gap-2">
+                                    <span className="font-bold text-gray-900 truncate text-[10px] flex-1">{match.team2}</span>
+                                    <span className={`text-[11px] font-black flex-shrink-0 ${!team1Wins && !isDraw ? '' : isDraw ? '' : 'text-gray-400'}`} style={!team1Wins && !isDraw ? { color: stadium.accentColor } : isDraw ? { color: stadium.accentColor } : {}}>{score2}</span>
+                                  </div>
+                                </>
+                              )
+                            })() : (
+                              <>
+                                <div className="font-bold text-gray-900 truncate text-[10px]">{match.team1}</div>
+                                <div className="text-[9px] text-gray-400 text-center">vs</div>
+                                <div className="font-bold text-gray-900 truncate text-[10px]">{match.team2}</div>
+                              </>
                             )}
-                            <div className="font-bold text-gray-900 truncate text-[10px]">{match.team2}</div>
                           </div>
                         ))}
                         {stadium.matches.length > 4 && (
@@ -896,14 +912,30 @@ export default function Can2025Page() {
                               </div>
 
                               {/* Teams - Compact */}
-                              <div className="space-y-1 pt-1">
-                                <div className="text-sm font-bold text-gray-900 truncate">{match.team1}</div>
-                                {match.score ? (
-                                  <div className="text-sm text-center font-black" style={{ color: stadium.accentColor }}>{match.score}</div>
-                                ) : (
-                                  <div className="text-xs text-gray-500 text-center font-bold">VS</div>
+                              <div className="space-y-2 pt-1">
+                                {match.score ? (() => {
+                                  const [score1, score2] = match.score.split('-').map(s => parseInt(s.trim()))
+                                  const isDraw = score1 === score2
+                                  const team1Wins = score1 > score2
+                                  return (
+                                    <>
+                                      <div className="flex items-center justify-between gap-3">
+                                        <span className="text-sm font-bold text-gray-900 truncate flex-1">{match.team1}</span>
+                                        <span className={`text-lg font-black flex-shrink-0 ${team1Wins ? '' : isDraw ? '' : 'text-gray-400'}`} style={team1Wins ? { color: stadium.accentColor } : isDraw ? { color: stadium.accentColor } : {}}>{score1}</span>
+                                      </div>
+                                      <div className="flex items-center justify-between gap-3">
+                                        <span className="text-sm font-bold text-gray-900 truncate flex-1">{match.team2}</span>
+                                        <span className={`text-lg font-black flex-shrink-0 ${!team1Wins && !isDraw ? '' : isDraw ? '' : 'text-gray-400'}`} style={!team1Wins && !isDraw ? { color: stadium.accentColor } : isDraw ? { color: stadium.accentColor } : {}}>{score2}</span>
+                                      </div>
+                                    </>
+                                  )
+                                })() : (
+                                  <>
+                                    <div className="text-sm font-bold text-gray-900 truncate">{match.team1}</div>
+                                    <div className="text-xs text-gray-500 text-center font-bold">VS</div>
+                                    <div className="text-sm font-bold text-gray-900 truncate">{match.team2}</div>
+                                  </>
                                 )}
-                                <div className="text-sm font-bold text-gray-900 truncate">{match.team2}</div>
                               </div>
 
                               {/* Group info */}
