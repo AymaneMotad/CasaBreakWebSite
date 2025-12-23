@@ -313,7 +313,7 @@ export default function Can2025Page() {
       capacity: '45 000',
       accentColor: '#00a346',
       matches: [
-        { date: '23 décembre', time: '18h30', team1: 'Nigeria', team2: 'Tanzanie', group: 'Groupe C', type: 'Phase de groupes' },
+        { date: '23 décembre', time: '18h30', team1: 'Nigeria', team2: 'Tanzanie', group: 'Groupe C', type: 'Phase de groupes', score: '2 - 1' },
         { date: '27 décembre', time: '21h00', team1: 'Nigeria', team2: 'Tunisie', group: 'Groupe C', type: 'Phase de groupes' },
         { date: '29 décembre', time: '17h00', team1: 'Ouganda', team2: 'Nigeria', group: 'Groupe C', type: 'Phase de groupes' },
         { date: '5 janvier', time: '20h00', team1: '1er C', team2: '3e A/B/F', group: '8es de finale', type: 'Élimination directe' },
