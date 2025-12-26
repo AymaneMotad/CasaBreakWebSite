@@ -299,7 +299,7 @@ export default function Can2025Page() {
       matches: [
         { date: '22 décembre', time: '21h00', team1: 'Égypte', team2: 'Zimbabwe', group: 'Groupe B', type: 'Phase de groupes', score: '2 - 1' },
         { date: '24 décembre', time: '21h00', team1: 'Cameroun', team2: 'Gabon', group: 'Groupe F', type: 'Phase de groupes', score: '1 - 0' },
-        { date: '26 décembre', time: '16h00', team1: 'Égypte', team2: 'Afrique du Sud', group: 'Groupe B', type: 'Phase de groupes' },
+        { date: '26 décembre', time: '16h00', team1: 'Égypte', team2: 'Afrique du Sud', group: 'Groupe B', type: 'Phase de groupes', score: '1 - 0' },
         { date: '28 décembre', time: '13h30', team1: 'Gabon', team2: 'Mozambique', group: 'Groupe F', type: 'Phase de groupes' },
         { date: '29 décembre', time: '17h00', team1: 'Angola', team2: 'Égypte', group: 'Groupe B', type: 'Phase de groupes' },
         { date: '31 décembre', time: '20h00', team1: 'Mozambique', team2: 'Cameroun', group: 'Groupe F', type: 'Phase de groupes' },
