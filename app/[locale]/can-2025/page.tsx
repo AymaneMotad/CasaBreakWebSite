@@ -263,7 +263,7 @@ export default function Can2025Page() {
       accentColor: '#00a346',
       matches: [
         { date: '23 décembre', time: '21h00', team1: 'Tunisie', team2: 'Ouganda', group: 'Groupe C', type: 'Phase de groupes', score: '3 - 1' },
-        { date: '27 décembre', time: '13h30', team1: 'Bénin', team2: 'Botswana', group: 'Groupe D', type: 'Phase de groupes' },
+        { date: '27 décembre', time: '13h30', team1: 'Bénin', team2: 'Botswana', group: 'Groupe D', type: 'Phase de groupes', score: '1 - 0' },
         { date: '30 décembre', time: '17h00', team1: 'Tanzanie', team2: 'Tunisie', group: 'Groupe C', type: 'Phase de groupes' },
       ]
     },
