@@ -286,7 +286,7 @@ export default function Can2025Page() {
       accentColor: '#ffd700',
       matches: [
         { date: '23 décembre', time: '13h30', team1: 'RD Congo', team2: 'Bénin', group: 'Groupe D', type: 'Phase de groupes', score: '1 - 0' },
-        { date: '27 décembre', time: '18h30', team1: 'Ouganda', team2: 'Tanzanie', group: 'Groupe C', type: 'Phase de groupes' },
+        { date: '27 décembre', time: '18h30', team1: 'Ouganda', team2: 'Tanzanie', group: 'Groupe C', type: 'Phase de groupes', score: '1 - 1' },
         { date: '30 décembre', time: '20h00', team1: 'Botswana', team2: 'RD Congo', group: 'Groupe D', type: 'Phase de groupes' },
         { date: '4 janvier', time: '20h00', team1: '2e Groupe B', team2: '2e Groupe F', group: '8es de finale', type: 'Élimination directe' },
       ]
@@ -300,7 +300,7 @@ export default function Can2025Page() {
         { date: '22 décembre', time: '21h00', team1: 'Égypte', team2: 'Zimbabwe', group: 'Groupe B', type: 'Phase de groupes', score: '2 - 1' },
         { date: '24 décembre', time: '21h00', team1: 'Cameroun', team2: 'Gabon', group: 'Groupe F', type: 'Phase de groupes', score: '1 - 0' },
         { date: '26 décembre', time: '16h00', team1: 'Égypte', team2: 'Afrique du Sud', group: 'Groupe B', type: 'Phase de groupes', score: '1 - 0' },
-        { date: '28 décembre', time: '13h30', team1: 'Gabon', team2: 'Mozambique', group: 'Groupe F', type: 'Phase de groupes' },
+        { date: '28 décembre', time: '13h30', team1: 'Gabon', team2: 'Mozambique', group: 'Groupe F', type: 'Phase de groupes', score: '2 - 3' },
         { date: '29 décembre', time: '17h00', team1: 'Angola', team2: 'Égypte', group: 'Groupe B', type: 'Phase de groupes' },
         { date: '31 décembre', time: '20h00', team1: 'Mozambique', team2: 'Cameroun', group: 'Groupe F', type: 'Phase de groupes' },
         { date: '5 janvier', time: '17h00', team1: '1er B', team2: '3e A/C/D', group: '8es de finale', type: 'Élimination directe' },
@@ -314,7 +314,7 @@ export default function Can2025Page() {
       accentColor: '#00a346',
       matches: [
         { date: '23 décembre', time: '18h30', team1: 'Nigeria', team2: 'Tanzanie', group: 'Groupe C', type: 'Phase de groupes', score: '2 - 1' },
-        { date: '27 décembre', time: '21h00', team1: 'Nigeria', team2: 'Tunisie', group: 'Groupe C', type: 'Phase de groupes' },
+        { date: '27 décembre', time: '21h00', team1: 'Nigeria', team2: 'Tunisie', group: 'Groupe C', type: 'Phase de groupes', score: '3 - 2' },
         { date: '29 décembre', time: '17h00', team1: 'Ouganda', team2: 'Nigeria', group: 'Groupe C', type: 'Phase de groupes' },
         { date: '5 janvier', time: '20h00', team1: '1er C', team2: '3e A/B/F', group: '8es de finale', type: 'Élimination directe' },
       ]
