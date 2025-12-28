@@ -328,7 +328,7 @@ export default function Can2025Page() {
         { date: '22 décembre', time: '18h00', team1: 'Afrique du Sud', team2: 'Angola', group: 'Groupe B', type: 'Phase de groupes', score: '2 - 1' },
         { date: '24 décembre', time: '18h30', team1: 'Côte d\'Ivoire', team2: 'Mozambique', group: 'Groupe F', type: 'Phase de groupes', score: '1 - 0' },
         { date: '26 décembre', time: '13h30', team1: 'Angola', team2: 'Zimbabwe', group: 'Groupe B', type: 'Phase de groupes', score: '1 - 1' },
-        { date: '28 décembre', time: '21h00', team1: 'Côte d\'Ivoire', team2: 'Cameroun', group: 'Groupe F', type: 'Phase de groupes' },
+        { date: '28 décembre', time: '21h00', team1: 'Côte d\'Ivoire', team2: 'Cameroun', group: 'Groupe F', type: 'Phase de groupes', score: '1 - 1' },
         { date: '29 décembre', time: '17h00', team1: 'Zimbabwe', team2: 'Afrique du Sud', group: 'Groupe B', type: 'Phase de groupes' },
         { date: '31 décembre', time: '20h00', team1: 'Gabon', team2: 'Côte d\'Ivoire', group: 'Groupe F', type: 'Phase de groupes' },
         { date: '6 janvier', time: '20h00', team1: '1er F', team2: '2e E', group: '8es de finale', type: 'Élimination directe' },
