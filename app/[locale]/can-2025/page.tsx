@@ -235,7 +235,7 @@ export default function Can2025Page() {
         { date: '24 décembre', time: '13h30', team1: 'Burkina Faso', team2: 'Guinée équatoriale', group: 'Groupe E', type: 'Phase de groupes', score: '2 - 1' },
         { date: '26 décembre', time: '18h30', team1: 'Zambie', team2: 'Comores', group: 'Groupe A', type: 'Phase de groupes', score: '0 - 0' },
         { date: '28 décembre', time: '16h00', team1: 'Guinée équatoriale', team2: 'Soudan', group: 'Groupe E', type: 'Phase de groupes', score: '0 - 1' },
-        { date: '29 décembre', time: '20h00', team1: 'Comores', team2: 'Mali', group: 'Groupe A', type: 'Phase de groupes' },
+        { date: '29 décembre', time: '20h00', team1: 'Comores', team2: 'Mali', group: 'Groupe A', type: 'Phase de groupes', score: '0 - 0' },
         { date: '31 décembre', time: '17h00', team1: 'Soudan', team2: 'Burkina Faso', group: 'Groupe E', type: 'Phase de groupes' },
         { date: '3 janvier', time: '20h00', team1: '2e A', team2: '2e C', group: '8es de finale', type: 'Élimination directe' },
         { date: '17 janvier', time: '17h00', team1: 'TBD', team2: 'TBD', group: 'Match pour la 3e place', type: 'Petite finale' },
@@ -249,7 +249,7 @@ export default function Can2025Page() {
       matches: [
         { date: '21 décembre', time: '20h00', team1: 'Maroc', team2: 'Comores', group: 'Groupe A', type: 'Phase de groupes', score: '2 - 0' },
         { date: '26 décembre', time: '21h00', team1: 'Maroc', team2: 'Mali', group: 'Groupe A', type: 'Phase de groupes', score: '1 - 1' },
-        { date: '29 décembre', time: '20h00', team1: 'Zambie', team2: 'Maroc', group: 'Groupe A', type: 'Phase de groupes' },
+        { date: '29 décembre', time: '20h00', team1: 'Zambie', team2: 'Maroc', group: 'Groupe A', type: 'Phase de groupes', score: '0 - 3' },
         { date: '4 janvier', time: '17h00', team1: '1er Groupe A', team2: '3 Groupe C/D/2', group: '8es de finale', type: 'Élimination directe' },
         { date: '9 janvier', time: '20h00', team1: 'TBD', team2: 'TBD', group: 'Quart de finale', type: 'Élimination directe' },
         { date: '14 janvier', time: '21h00', team1: 'TBD', team2: 'TBD', group: '1/2 finale', type: 'Élimination directe' },
