@@ -264,7 +264,7 @@ export default function Can2025Page() {
       matches: [
         { date: '23 décembre', time: '21h00', team1: 'Tunisie', team2: 'Ouganda', group: 'Groupe C', type: 'Phase de groupes', score: '3 - 1' },
         { date: '27 décembre', time: '13h30', team1: 'Bénin', team2: 'Botswana', group: 'Groupe D', type: 'Phase de groupes', score: '1 - 0' },
-        { date: '30 décembre', time: '17h00', team1: 'Tanzanie', team2: 'Tunisie', group: 'Groupe C', type: 'Phase de groupes' },
+        { date: '30 décembre', time: '17h00', team1: 'Tanzanie', team2: 'Tunisie', group: 'Groupe C', type: 'Phase de groupes', score: '1 - 1' },
       ]
     },
     {
@@ -315,7 +315,7 @@ export default function Can2025Page() {
       matches: [
         { date: '23 décembre', time: '18h30', team1: 'Nigeria', team2: 'Tanzanie', group: 'Groupe C', type: 'Phase de groupes', score: '2 - 1' },
         { date: '27 décembre', time: '21h00', team1: 'Nigeria', team2: 'Tunisie', group: 'Groupe C', type: 'Phase de groupes', score: '3 - 2' },
-        { date: '29 décembre', time: '17h00', team1: 'Ouganda', team2: 'Nigeria', group: 'Groupe C', type: 'Phase de groupes' },
+        { date: '29 décembre', time: '17h00', team1: 'Ouganda', team2: 'Nigeria', group: 'Groupe C', type: 'Phase de groupes', score: '1 - 3' },
         { date: '5 janvier', time: '20h00', team1: '1er C', team2: '3e A/B/F', group: '8es de finale', type: 'Élimination directe' },
       ]
     },
