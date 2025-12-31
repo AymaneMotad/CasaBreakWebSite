@@ -236,7 +236,7 @@ export default function Can2025Page() {
         { date: '26 décembre', time: '18h30', team1: 'Zambie', team2: 'Comores', group: 'Groupe A', type: 'Phase de groupes', score: '0 - 0' },
         { date: '28 décembre', time: '16h00', team1: 'Guinée équatoriale', team2: 'Soudan', group: 'Groupe E', type: 'Phase de groupes', score: '0 - 1' },
         { date: '29 décembre', time: '20h00', team1: 'Comores', team2: 'Mali', group: 'Groupe A', type: 'Phase de groupes', score: '0 - 0' },
-        { date: '31 décembre', time: '17h00', team1: 'Soudan', team2: 'Burkina Faso', group: 'Groupe E', type: 'Phase de groupes' },
+        { date: '31 décembre', time: '17h00', team1: 'Soudan', team2: 'Burkina Faso', group: 'Groupe E', type: 'Phase de groupes', score: '0 - 2' },
         { date: '3 janvier', time: '20h00', team1: '2e A', team2: '2e C', group: '8es de finale', type: 'Élimination directe' },
         { date: '17 janvier', time: '17h00', team1: 'TBD', team2: 'TBD', group: 'Match pour la 3e place', type: 'Petite finale' },
       ] 
