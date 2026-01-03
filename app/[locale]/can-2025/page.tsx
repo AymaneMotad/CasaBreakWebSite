@@ -344,7 +344,7 @@ export default function Can2025Page() {
         { date: '23 décembre', time: '16h00', team1: 'Sénégal', team2: 'Botswana', group: 'Groupe D', type: 'Phase de groupes', score: '3 - 0' },
         { date: '27 décembre', time: '16h00', team1: 'Sénégal', team2: 'RD Congo', group: 'Groupe D', type: 'Phase de groupes', score: '1 - 1' },
         { date: '30 décembre', time: '20h00', team1: 'Bénin', team2: 'Sénégal', group: 'Groupe D', type: 'Phase de groupes', score: '0 - 3' },
-        { date: '3 janvier', time: '17h00', team1: '1er D', team2: '3e B/E/F', group: '8es de finale', type: 'Élimination directe' },
+        { date: '3 janvier', time: '17h00', team1: 'Sénégal', team2: 'Soudan', group: '8es de finale', type: 'Élimination directe', score: '3 - 1' },
         { date: '9 janvier', time: '17h00', team1: 'TBD', team2: 'TBD', group: 'Quart de finale', type: 'Élimination directe' },
         { date: '14 janvier', time: '18h00', team1: 'TBD', team2: 'TBD', group: 'Demi-finale', type: 'Élimination directe' },
       ]
