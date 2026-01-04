@@ -288,7 +288,7 @@ export default function Can2025Page() {
         { date: '23 décembre', time: '13h30', team1: 'RD Congo', team2: 'Bénin', group: 'Groupe D', type: 'Phase de groupes', score: '1 - 0' },
         { date: '27 décembre', time: '18h30', team1: 'Ouganda', team2: 'Tanzanie', group: 'Groupe C', type: 'Phase de groupes', score: '1 - 1' },
         { date: '30 décembre', time: '20h00', team1: 'Botswana', team2: 'RD Congo', group: 'Groupe D', type: 'Phase de groupes', score: '0 - 3' },
-        { date: '4 janvier', time: '20h00', team1: '2e Groupe B', team2: '2e Groupe F', group: '8es de finale', type: 'Élimination directe' },
+        { date: '4 janvier', time: '20h00', team1: 'Cameroun', team2: 'Afrique du Sud', group: '8es de finale', type: 'Élimination directe', score: '2 - 1' },
       ]
     },
     {
