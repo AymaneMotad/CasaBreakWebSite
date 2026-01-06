@@ -276,7 +276,7 @@ export default function Can2025Page() {
         { date: '24 décembre', time: '16h00', team1: 'Algérie', team2: 'Soudan', group: 'Groupe E', type: 'Phase de groupes', score: '3 - 0' },
         { date: '28 décembre', time: '18h30', team1: 'Algérie', team2: 'Burkina Faso', group: 'Groupe E', type: 'Phase de groupes', score: '1 - 0' },
         { date: '31 décembre', time: '17h00', team1: 'Guinée équatoriale', team2: 'Algérie', group: 'Groupe E', type: 'Phase de groupes', score: '1 - 3' },
-        { date: '6 janvier', time: '17h00', team1: 'Algérie', team2: 'RD Congo', group: '8es de finale', type: 'Élimination directe', score: '0 - 0 (1-0)' },
+        { date: '6 janvier', time: '17h00', team1: 'Algérie', team2: 'RD Congo', group: '8es de finale', type: 'Élimination directe', score: '1 - 0' },
       ]
     },
     {
