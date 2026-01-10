@@ -332,7 +332,7 @@ export default function Can2025Page() {
         { date: '29 décembre', time: '17h00', team1: 'Zimbabwe', team2: 'Afrique du Sud', group: 'Groupe B', type: 'Phase de groupes', score: '2 - 3' },
         { date: '31 décembre', time: '20h00', team1: 'Gabon', team2: 'Côte d\'Ivoire', group: 'Groupe F', type: 'Phase de groupes', score: '2 - 3' },
         { date: '6 janvier', time: '20h00', team1: 'Côte d\'Ivoire', team2: 'Burkina Faso', group: '8es de finale', type: 'Élimination directe', score: '3 - 0' },
-        { date: '10 janvier', time: '17h00', team1: 'TBD', team2: 'TBD', group: 'Quart de finale', type: 'Élimination directe' },
+        { date: '10 janvier', time: '17h00', team1: 'Égypte', team2: 'Côte d\'Ivoire', group: 'Quart de finale', type: 'Élimination directe', score: '3 - 2' },
       ]
     },
     {
