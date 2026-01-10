@@ -132,7 +132,7 @@ function MoroccanPatternBg() {
               <path d="M14 0L28 7V21L14 28L0 21V7Z" fill="#0066b2"/>
             </svg>
           )}
-        </div>
+        </div> 
       ))}
     </div>
   )
