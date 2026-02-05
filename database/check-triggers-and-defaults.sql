@@ -50,3 +50,4 @@ ORDER BY table_name, column_name;
 -- INSERT INTO venues (slug, category, name_fr, location_id) 
 -- VALUES ('test-insert', 'restaurants', 'Test Restaurant', NULL)
 -- RETURNING id, slug, name_fr, location_id;
+

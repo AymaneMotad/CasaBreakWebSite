@@ -53,7 +53,8 @@ export function Footer() {
             <div className="lg:max-w-md">
               <div className="mb-8">
                 <Image 
-                  src="/casa break and casa can.svg" 
+                  src="/casa-break-logo.svg" 
+                  // src="/casa break and casa can.svg" 
                   alt="Casabreak & Casa Can" 
                   width={987} 
                   height={881}

@@ -73,3 +73,4 @@ SELECT
 -- ✓ idx_venues_place_category index should exist
 -- ✓ All venues should have a place_category set (NULL count should be 0)
 -- ✓ sport-bien-etre should exist in the enum
+

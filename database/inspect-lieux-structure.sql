@@ -147,3 +147,4 @@ JOIN information_schema.constraint_column_usage AS ccu
 WHERE tc.constraint_type = 'FOREIGN KEY'
     AND (tc.table_name = 'venues' OR tc.table_name = 'activities')
     AND kcu.column_name = 'location_id';
+

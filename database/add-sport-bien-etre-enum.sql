@@ -43,3 +43,4 @@ GROUP BY typname;
 -- - Update any place_category values
 -- - Affect any existing venues
 -- It ONLY adds the new enum value so you can use it when creating new places
+

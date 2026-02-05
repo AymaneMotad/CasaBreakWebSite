@@ -92,7 +92,7 @@ export function Navigation() {
 
   const navItems = useMemo(() => [
     { label: t("home"), href: `/${currentLocale}`, icon: Home },
-    { label: "Can 2025", href: `/${currentLocale}/can-2025`, icon: Trophy },
+    // { label: "Can 2025", href: `/${currentLocale}/can-2025`, icon: Trophy },
     {
       label: t("discover"),
       href: "#",
@@ -185,7 +185,8 @@ export function Navigation() {
             
             <Link href={`/${currentLocale}`} className="flex-shrink-0 transition-transform hover:scale-105 active:scale-95">
               <Image 
-                src="/casa break and casa can.svg" 
+                src="/casa-break-logo.svg" 
+                // src="/casa break and casa can.svg" 
                 alt="Logo" 
                 width={130} 
                 height={45}

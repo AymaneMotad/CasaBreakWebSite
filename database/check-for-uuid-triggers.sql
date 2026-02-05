@@ -54,3 +54,4 @@ WHERE table_schema = 'public'
   AND column_default IS NOT NULL
   AND (column_default LIKE '%location%' OR column_default LIKE '%uuid%')
 ORDER BY table_name, column_name;
+

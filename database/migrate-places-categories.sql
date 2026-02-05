@@ -95,3 +95,4 @@ FROM venues
 GROUP BY category, place_category
 ORDER BY place_category, count DESC
 LIMIT 20;
+

@@ -79,3 +79,4 @@ INSERT INTO venues (
     NULL
 ) RETURNING id, slug, name_fr, location_id;
 */
+

@@ -61,3 +61,4 @@ WHERE table_name = 'venues'
   AND column_name IN ('address', 'district')
   AND table_schema = 'public'
 ORDER BY column_name;
+

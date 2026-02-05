@@ -50,3 +50,4 @@ The script ends with a SELECT query that shows you what columns exist, so you ca
 ## Bottom Line:
 
 **This script is READ-ONLY for existing data** - it only ADDS new columns and COPIES data from `data_jsonb` to those columns. It never deletes, overwrites, or modifies existing data. You can run it safely!
+

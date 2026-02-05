@@ -123,7 +123,7 @@ export default function HomePage() {
             {/* Left - Main Content (5 cols) */}
             <div className="lg:col-span-5 space-y-8">
               {/* CAN 2025 Live Badge */}
-              <Link 
+              {/* <Link 
                 href={`/${locale}/can-2025`}
                 className="group inline-flex items-center gap-3 px-5 py-2.5 rounded-full bg-gradient-to-r from-[#00a346] to-[#006633] text-white shadow-lg shadow-[#00a346]/25 hover:shadow-[#00a346]/40 transition-all hover:scale-105"
               >
@@ -135,11 +135,10 @@ export default function HomePage() {
                 <div className="h-4 w-px bg-white/30" />
                 <MiniCountdown />
                 <ArrowRight className="w-4 h-4 group-hover:translate-x-1 transition-transform" />
-              </Link>
+              </Link> */}
               
               {/* Multilingual Welcome Banner */}
-              <div className="relative mb-6 py-4 px-6 rounded-2xl bg-gradient-to-r from-[#c10000]/10 via-[#c10000]/5 to-transparent border-l-4 border-[#00a346] backdrop-blur-sm">
-                {/* Main Slogan */}
+              {/* <div className="relative mb-6 py-4 px-6 rounded-2xl bg-gradient-to-r from-[#c10000]/10 via-[#c10000]/5 to-transparent border-l-4 border-[#00a346] backdrop-blur-sm">
                 <div className="mb-3">
                   <h2 className="text-2xl sm:text-3xl lg:text-4xl font-black leading-tight" style={{
                     background: 'linear-gradient(135deg, #00a346 0%, #008c3c 50%, #006633 100%)',
@@ -154,7 +153,6 @@ export default function HomePage() {
                   </h2>
                 </div>
                 
-                {/* Welcome Messages in Multiple Languages */}
                 <div className="flex flex-wrap items-center gap-x-4 gap-y-2 text-sm sm:text-base">
                   <span className="text-[#00a346] font-semibold" style={{ textShadow: '0 1px 3px rgba(0, 163, 70, 0.2)' }}>Bienvenue</span>
                   <span className="text-[#00a346] font-semibold" style={{ textShadow: '0 1px 3px rgba(0, 163, 70, 0.2)' }}>Bienvenidos</span>
@@ -163,7 +161,7 @@ export default function HomePage() {
                   <span className="text-[#00a346] font-semibold" style={{ textShadow: '0 1px 3px rgba(0, 163, 70, 0.2)' }}>Welcome</span>
                   <span className="text-[#00a346] font-semibold" style={{ textShadow: '0 1px 3px rgba(0, 163, 70, 0.2)' }}>Bem-vindos</span>
                 </div>
-              </div>
+              </div> */}
               
               {/* Main Title */}
               <div className="space-y-4">
@@ -181,14 +179,14 @@ export default function HomePage() {
               
               {/* CTAs */}
               <div className="flex flex-wrap gap-4">
-                <Link
+                {/* <Link
                   href={`/${locale}/can-2025`}
                   className="group px-8 py-4 bg-gradient-to-r from-[#00a346] to-[#006633] text-white font-bold rounded-2xl hover:shadow-lg hover:shadow-[#00a346]/30 transition-all flex items-center gap-3 shadow-xl"
                 >
                   <Trophy className="w-5 h-5 text-[#ffd700]" />
                   <span>Guide CAN 2025</span>
                   <ArrowUpRight className="w-4 h-4 group-hover:translate-x-0.5 group-hover:-translate-y-0.5 transition-transform" />
-                </Link>
+                </Link> */}
                 <Link
                   href={`/${locale}/decouvrir/monuments`}
                   className="px-8 py-4 bg-white/80 backdrop-blur-sm border-2 border-[#00a346]/20 text-[#00533a] font-bold rounded-2xl hover:border-[#00a346]/50 hover:bg-white transition-all"
@@ -249,7 +247,7 @@ export default function HomePage() {
                 </div>
                 
                 {/* Card 2 - CAN 2025 Promo */}
-                <div className="col-span-5 row-span-2 group relative rounded-3xl overflow-hidden bg-gradient-to-br from-[#00a346] via-[#008c3c] to-[#006633] shadow-xl">
+                {/* <div className="col-span-5 row-span-2 group relative rounded-3xl overflow-hidden bg-gradient-to-br from-[#00a346] via-[#008c3c] to-[#006633] shadow-xl">
                   <div className="absolute inset-0 opacity-20">
                     <svg className="w-full h-full" viewBox="0 0 100 100" preserveAspectRatio="none">
                       <pattern id="zelij" width="20" height="20" patternUnits="userSpaceOnUse">
@@ -278,10 +276,10 @@ export default function HomePage() {
                   </div>
                   
                   <Link href={`/${locale}/can-2025`} className="absolute inset-0" />
-                </div>
+                </div> */}
                 
                 {/* Card 3 - Restaurants */}
-                <div className="col-span-5 row-span-2 group relative rounded-3xl overflow-hidden shadow-xl">
+                <div className="col-span-5 row-span-2 row-start-1 col-start-8 group relative rounded-3xl overflow-hidden shadow-xl">
                   <img 
                     src="https://images.unsplash.com/photo-1552566626-52f8b828add9?w=600&q=80" 
                     alt="Restaurant"
@@ -301,7 +299,7 @@ export default function HomePage() {
                 </div>
                 
                 {/* Card 4 - Quartiers */}
-                <div className="col-span-4 row-span-2 group relative rounded-3xl overflow-hidden shadow-xl">
+                <div className="col-span-5 row-span-2 row-start-3 col-start-8 group relative rounded-3xl overflow-hidden shadow-xl">
                   <img 
                     src="https://yzgvfaxalzubsmmqmswx.supabase.co/storage/v1/object/public/casabreak/public_stuff/alpha-plus-3vGmCMgTdiA-unsplash.jpg" 
                     alt="Quartier"
@@ -321,7 +319,7 @@ export default function HomePage() {
                 </div>
                 
                 {/* Card 5 - Nightlife */}
-                <div className="col-span-4 row-span-2 group relative rounded-3xl overflow-hidden shadow-xl">
+                <div className="col-span-4 row-span-2 row-start-5 col-start-1 group relative rounded-3xl overflow-hidden shadow-xl">
                   <img 
                     src="https://images.unsplash.com/photo-1514933651103-005eec06c04b?w=600&q=80" 
                     alt="Bar"
@@ -341,7 +339,7 @@ export default function HomePage() {
                 </div>
                 
                 {/* Card 6 - Plages */}
-                <div className="col-span-4 row-span-2 group relative rounded-3xl overflow-hidden shadow-xl">
+                <div className="col-span-3 row-span-2 row-start-5 col-start-5 group relative rounded-3xl overflow-hidden shadow-xl">
                   <img 
                     src="https://yzgvfaxalzubsmmqmswx.supabase.co/storage/v1/object/public/casabreak/public_stuff/ain%20diab%20plage%201.jpeg" 
                     alt="Plage"
@@ -752,12 +750,12 @@ export default function HomePage() {
       {/* ═══════════════════════════════════════════════════════════════
           FINAL CTA - CAN 2025 STYLE
       ═══════════════════════════════════════════════════════════════ */}
-      <section className="py-32 relative overflow-hidden">
+      {/* <section className="py-32 relative overflow-hidden">
         {/* Rich gradient background - Moroccan inspired warm tones */}
-        <div className="absolute inset-0 bg-gradient-to-br from-[#7c1d1d] via-[#991b1b] to-[#b91c1c]" />
+        {/* <div className="absolute inset-0 bg-gradient-to-br from-[#7c1d1d] via-[#991b1b] to-[#b91c1c]" /> */}
         
         {/* Moroccan pattern overlay */}
-        <div className="absolute inset-0 opacity-15">
+        {/* <div className="absolute inset-0 opacity-15">
           <svg className="w-full h-full" viewBox="0 0 100 100" preserveAspectRatio="none">
             <pattern id="zelij-cta" width="40" height="40" patternUnits="userSpaceOnUse">
               <path d="M20 0L40 20L20 40L0 20Z" fill="none" stroke="#ffd700" strokeWidth="0.5"/>
@@ -766,10 +764,10 @@ export default function HomePage() {
             </pattern>
             <rect width="100%" height="100%" fill="url(#zelij-cta)"/>
           </svg>
-        </div>
+        </div> */}
         
         {/* Gradient orbs */}
-        <div className="absolute top-0 left-1/4 w-[400px] h-[400px] bg-[#ffd700]/25 rounded-full blur-[150px]" />
+        {/* <div className="absolute top-0 left-1/4 w-[400px] h-[400px] bg-[#ffd700]/25 rounded-full blur-[150px]" />
         <div className="absolute bottom-0 right-1/4 w-[400px] h-[400px] bg-[#00a346]/25 rounded-full blur-[150px]" />
         
         <div className="max-w-4xl mx-auto px-6 text-center relative z-10">
@@ -797,7 +795,7 @@ export default function HomePage() {
             </Link>
           </div>
         </div>
-      </section>
+      </section> */}
       
       <Footer />
       
