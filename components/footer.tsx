@@ -110,8 +110,8 @@ export function Footer() {
                 </a>
               </li>
               <li>
-                <a href={`/${currentLocale}/can-2025`} className="text-white/60 hover:text-[#00a346] transition-colors duration-200 text-sm">
-                  Can 2025
+                <a href={`/${currentLocale}/world-cup-2026`} className="text-white/60 hover:text-[#00a346] transition-colors duration-200 text-sm">
+                  {t("worldCup")} 2026
                 </a>
               </li>
             </ul>

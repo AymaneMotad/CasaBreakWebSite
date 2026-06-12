@@ -92,7 +92,7 @@ export function Navigation() {
 
   const navItems = useMemo(() => [
     { label: t("home"), href: `/${currentLocale}`, icon: Home },
-    // { label: "Can 2025", href: `/${currentLocale}/can-2025`, icon: Trophy },
+    { label: t("worldCup"), href: `/${currentLocale}/world-cup-2026`, icon: Trophy, isWorldCup: true },
     {
       label: t("discover"),
       href: "#",
@@ -221,7 +221,9 @@ export function Navigation() {
                       className={cn(
                         "px-3.5 py-2 rounded-xl text-[13px] font-semibold transition-all duration-300 flex items-center gap-1.5",
                         isActive(item.href) || isParentActive(item.submenu) 
-                          ? "text-[#00a346] bg-[#00a346]/10" 
+                          ? item.isWorldCup 
+                            ? "text-[#ffd700] bg-[#ffd700]/10" 
+                            : "text-[#00a346] bg-[#00a346]/10" 
                           : "text-slate-600 hover:bg-slate-100/80 hover:text-slate-900"
                       )}
                     >
@@ -230,9 +232,10 @@ export function Navigation() {
                           {item.label}
                           <ChevronDown className="h-3.5 w-3.5 transition-transform duration-300 group-hover:rotate-180 opacity-70" />
                         </>
-                      ) : item.label === "Can 2025" ? (
-                        <Link href={item.href} className="flex items-center">
-                          <span className="text-[#c1272d]">Can</span>&nbsp;<span className="text-[#006233]">2025</span>
+                      ) : 'isWorldCup' in item && item.isWorldCup ? (
+                        <Link href={item.href} className="flex items-center gap-1">
+                          <span className="text-[#ffd700]">{t("worldCup")}</span>
+                          <span className="text-[#0066b2]">2026</span>
                         </Link>
                       ) : (
                         <Link href={item.href}>{item.label}</Link>
@@ -428,7 +431,7 @@ export function Navigation() {
                         <div className={`w-11 h-11 rounded-2xl flex items-center justify-center ${isActive(item.href) ? 'bg-[#00a346]/10' : 'bg-slate-100'}`}>
                           <item.icon className="w-5 h-5" />
                         </div>
-                        {item.label === "Can 2025" ? <><span className="text-[#c1272d]">Can</span> <span className="text-[#006233]">2025</span></> : item.label}
+                        {'isWorldCup' in item && item.isWorldCup ? <><span className="text-[#ffd700]">{t("worldCup")}</span> <span className="text-[#0066b2]">2026</span></> : item.label}
                       </span>
                     </Link>
                   )}
