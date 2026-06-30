@@ -11,7 +11,7 @@ import { ArrowRight, Calendar, Globe2, Trophy, Users } from "lucide-react"
 import { getTeamDisplayName, getTeamFlagUrl } from "@/lib/world-cup/countries"
 import type { WorldCupData, WorldCupMatch } from "@/lib/world-cup/types"
 
-const POLL_INTERVAL_MS = 60_000
+const POLL_INTERVAL_MS = 30_000
 
 function useWorldCup() {
   const [data, setData] = useState<WorldCupData | null>(null)
@@ -19,7 +19,7 @@ function useWorldCup() {
 
   const load = useCallback(async () => {
     try {
-      const res = await fetch("/api/world-cup")
+      const res = await fetch("/api/world-cup", { cache: "no-store" })
       if (!res.ok) throw new Error(`status ${res.status}`)
       setData(await res.json())
       setFailed(false)

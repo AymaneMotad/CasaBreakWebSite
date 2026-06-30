@@ -1,14 +1,14 @@
 import { NextResponse } from 'next/server'
 import { getWorldCupData } from '@/lib/world-cup/service'
 
-export const revalidate = 300
+export const dynamic = 'force-dynamic'
 
 export async function GET() {
   try {
     const data = await getWorldCupData()
     return NextResponse.json(data, {
       headers: {
-        'Cache-Control': 'public, s-maxage=300, stale-while-revalidate=600',
+        'Cache-Control': 'no-store, no-cache, must-revalidate',
       },
     })
   } catch (error) {

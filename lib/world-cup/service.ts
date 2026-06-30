@@ -1,7 +1,6 @@
 import type { MatchStage, MatchStatus, WorldCupData, WorldCupMatch, WorldCupStadium } from './types'
 
 const API_BASE = 'https://worldcup26.ir/get'
-const REVALIDATE_SECONDS = 300
 
 interface ApiStadium {
   id: string
@@ -91,7 +90,7 @@ function normalizeMatch(game: ApiGame, stadiumMap: Map<string, WorldCupStadium>)
 
 async function fetchJson<T>(path: string): Promise<T> {
   const res = await fetch(`${API_BASE}/${path}`, {
-    next: { revalidate: REVALIDATE_SECONDS },
+    cache: 'no-store',
   })
   if (!res.ok) throw new Error(`World Cup API error: ${res.status}`)
   return res.json()
